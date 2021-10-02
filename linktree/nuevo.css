@@ -49,6 +49,10 @@ body {
         width: 310;
         height: 175;
     }
+    source {
+        width: 310;
+        height: 175;
+    }
     .popup-nuevo {
         z-index: 10;
         width: 310px;
@@ -94,6 +98,10 @@ body {
         width: 515;
         height: 290;
     }
+    source {
+        width: 515;
+        height: 290;
+    }
     .popup-nuevo {
         z-index: 10;
         width: 600px;
@@ -136,6 +144,10 @@ body {
         display: none!important
     }
     .img-pup-iris {
+        width: 607;
+        height: 342;
+    }
+    source {
         width: 607;
         height: 342;
     }

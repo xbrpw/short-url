@@ -13819,9 +13819,9 @@ https://github.com/twbs/bootstrap/issues/11292
         font-family: "Montserrat", sans-serif;
         color: black;
         border: solid 3px black;
-        font-size: 25px;
+        font-size: 20px;
         background-color: black;
-        width: 310px;
+        width: auto;
         height: 50px;
         border-radius: 30px;
         justify-content: space-around;
@@ -13869,9 +13869,9 @@ https://github.com/twbs/bootstrap/issues/11292
         font-family: "Montserrat", sans-serif;
         color: black;
         border: solid 3px black;
-        font-size: 25px;
+        font-size: 20px;
         background-color: rgb(173, 9, 9);
-        width: 310px;
+        width: auto;
         height: 50px;
         border-radius: 30px;
         justify-content: space-around;
@@ -13922,7 +13922,7 @@ https://github.com/twbs/bootstrap/issues/11292
         border: solid 3px black;
         font-size: 020px;
         background-color: rgb(12, 77, 73);
-        width: 310px;
+        width: auto;
         height: 50px;
         border-radius: 30px;
         justify-content: space-around;
@@ -13940,7 +13940,7 @@ https://github.com/twbs/bootstrap/issues/11292
     }
     
     .btn-tripadvisor:before {
-        content: "Tripadvisor ";
+        content: "Cuéntanos tu experiencia";
         position: absolute;
         left: 50%;
         top: 50%;
@@ -13963,6 +13963,312 @@ https://github.com/twbs/bootstrap/issues/11292
     }
     
     .btn-tripadvisor:hover:before {
+        top: -50%;
+    }
+    /* googleMaps */
+    
+    .btn-googleMaps {
+        font-family: "Montserrat", sans-serif;
+        color: rgb(255, 255, 255);
+        border: solid 3px black;
+        font-size: 020px;
+        background-color: rgb(22, 53, 158);
+        width: auto;
+        height: 50px;
+        border-radius: 30px;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: #000000;
+    }
+    
+    .btn-googleMaps p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .btn-googleMaps:before {
+        content: "Danos 5 estrellitas";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        background-color: rgb(22, 53, 158);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    
+    .btn-googleMaps:hover {
+        background-color: rgb(9, 43, 155);
+        color: white;
+    }
+    
+    .btn-googleMaps:hover:before {
+        top: -50%;
+    }
+    /* twitter */
+    
+    .btn-twitter {
+        font-family: "Montserrat", sans-serif;
+        color: rgb(255, 255, 255);
+        border: solid 3px black;
+        font-size: 020px;
+        background-color: rgb(48, 100, 212);
+        width: auto;
+        height: 50px;
+        border-radius: 30px;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: #000000;
+    }
+    
+    .btn-twitter p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .btn-twitter:before {
+        content: "Twitter";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        background-color: rgb(48, 100, 212);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    
+    .btn-twitter:hover {
+        background-color: rgb(37, 83, 182);
+        color: white;
+    }
+    
+    .btn-twitter:hover:before {
+        top: -50%;
+    }
+    /* youtube */
+    
+    .btn-youtube {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        border: solid 3px black;
+        font-size: 20px;
+        background-color: rgb(216, 2, 2);
+        width: auto;
+        height: 50px;
+        border-radius: 30px;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: #000000;
+    }
+    
+    .btn-youtube p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .btn-youtube:before {
+        content: "Youtube";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        background-color: rgb(216, 2, 2);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    
+    .btn-youtube:hover {
+        background-color: rgb(241, 1, 1);
+        color: white;
+    }
+    
+    .btn-youtube:hover:before {
+        top: -50%;
+    }
+    /* instagram */
+    
+    .btn-instagram {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        border: solid 3px black;
+        font-size: 20px;
+        background-color: rgb(134, 79, 15);
+        width: auto;
+        height: 50px;
+        border-radius: 30px;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: #000000;
+    }
+    
+    .btn-instagram p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .btn-instagram:before {
+        content: "Instagram";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        background-color: rgb(134, 79, 15);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    
+    .btn-instagram:hover {
+        background-color: rgb(150, 86, 14);
+        color: white;
+    }
+    
+    .btn-instagram:hover:before {
+        top: -50%;
+    }
+    /* tepoz */
+    
+    .btn-tepoz {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        border: solid 3px black;
+        font-size: 20px;
+        background-color: rgb(86, 15, 134);
+        width: auto;
+        height: 50px;
+        border-radius: 30px;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: #000000;
+    }
+    
+    .btn-tepoz p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .btn-tepoz:before {
+        content: "Viaje a Tepozspa";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        background-color: rgb(86, 15, 134);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    
+    .btn-tepoz:hover {
+        background-color: rgb(70, 4, 114);
+        color: white;
+    }
+    
+    .btn-tepoz:hover:before {
+        top: -50%;
+    }
+    /* Facebook */
+    
+    .btn-Facebook {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        border: solid 3px black;
+        font-size: 20px;
+        background-color: rgb(15, 27, 134);
+        width: auto;
+        height: 50px;
+        border-radius: 30px;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: #000000;
+    }
+    
+    .btn-Facebook p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .btn-Facebook:before {
+        content: "Facebook";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        background-color: rgb(15, 27, 134);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    
+    .btn-Facebook:hover {
+        background-color: rgb(5, 14, 97);
+        color: white;
+    }
+    
+    .btn-Facebook:hover:before {
         top: -50%;
     }
     

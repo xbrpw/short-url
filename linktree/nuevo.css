@@ -7,8 +7,8 @@ body {
 
 .popup-nuevo {
     z-index: 10;
-    width: 450px;
-    height: 580px;
+    width: 310px;
+    height: 400px;
     position: relative;
     margin: 20px auto;
     display: block;
@@ -36,6 +36,141 @@ body {
     animation: iconosani 1.2s forwards;
     -moz-animation: iconosani 1.2s forwards;
     -o-animation: iconosani 1.2s forwards;
+}
+
+
+/* small */
+
+@media (max-width:600px) {
+    .susan-storm-small {
+        display: none!important
+    }
+    .img-pup-iris {
+        width: 310;
+        height: 175;
+    }
+    .popup-nuevo {
+        z-index: 10;
+        width: 310px;
+        height: 400px;
+        position: relative;
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        -moz-background-clip: padding;
+        -o-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        /* prevents bg color from leaking outside the border */
+        background-color: #fff;
+        /* layer fill content */
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -o-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -webkit-transform-origin: top center;
+        -moz-transform-origin: top center;
+        -o-transform-origin: top center;
+        transform-origin: top center;
+        -webkit-animation: iconosani 1.2s forwards;
+        animation: iconosani 1.2s forwards;
+        -moz-animation: iconosani 1.2s forwards;
+        -o-animation: iconosani 1.2s forwards;
+    }
+}
+
+
+/* medium */
+
+@media (max-width:992px) and (min-width:601px) {
+    .susan-storm-medium {
+        display: none!important
+    }
+    .img-pup-iris {
+        width: 515;
+        height: 290;
+    }
+    .popup-nuevo {
+        z-index: 10;
+        width: 600px;
+        height: 600px;
+        position: relative;
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        -moz-background-clip: padding;
+        -o-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        /* prevents bg color from leaking outside the border */
+        background-color: #fff;
+        /* layer fill content */
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -o-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -webkit-transform-origin: top center;
+        -moz-transform-origin: top center;
+        -o-transform-origin: top center;
+        transform-origin: top center;
+        -webkit-animation: iconosani 1.2s forwards;
+        animation: iconosani 1.2s forwards;
+        -moz-animation: iconosani 1.2s forwards;
+        -o-animation: iconosani 1.2s forwards;
+    }
+}
+
+
+/* large */
+
+@media (min-width:993px) {
+    .susan-storm-large {
+        display: none!important
+    }
+    .img-pup-iris {
+        width: 607;
+        height: 342;
+    }
+    .popup-nuevo {
+        z-index: 10;
+        width: 993px;
+        height: 600px;
+        position: relative;
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        -moz-background-clip: padding;
+        -o-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        /* prevents bg color from leaking outside the border */
+        background-color: #fff;
+        /* layer fill content */
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -o-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+        /* drop shadow */
+        -webkit-transform-origin: top center;
+        -moz-transform-origin: top center;
+        -o-transform-origin: top center;
+        transform-origin: top center;
+        -webkit-animation: iconosani 1.2s forwards;
+        animation: iconosani 1.2s forwards;
+        -moz-animation: iconosani 1.2s forwards;
+        -o-animation: iconosani 1.2s forwards;
+    }
 }
 
 @-webkit-keyframes iconosani {
@@ -111,9 +246,9 @@ body {
 
 .boxi {
     display: inline-block;
-    width: 169px;
+    width: auto;
     line-height: 42px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-align: center;
     text-decoration: none;
     -webkit-transition: all 0.1s linear;
@@ -308,8 +443,3 @@ input.email-form:focus {
 
 
 /* POPUP */
-
-
-/*****************
-Section 
-******************/

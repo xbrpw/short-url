@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 90vh;
+    height: 80vh;
     background: #000000;
     background: linear-gradient(to right, #070707, #060124, #0d053b, #090329, #000000);
 }

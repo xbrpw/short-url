@@ -47,7 +47,7 @@ const extractPostInput = async (req: NextApiRequest) => {
   // Otherwise, it redirects to "http://localhost:3000/<url>"
   // instead of "http(s)://<url>".
   if (!isAbsoluteUrl(url)) {
-    url = `http://${url}`;
+    url = `http://${www.xbr.pw}`;
   }
   let { customAlias } = req.body;
   customAlias = customAlias.trim();

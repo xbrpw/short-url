@@ -143,6 +143,38 @@
         }
     </style>
 
+    <style>
+        .shake {
+            position: relative;
+            color: #fff;
+            -webkit-animation: custom-shake 3s ease-in-out 5s infinite;
+            animation: custom-shake 3s ease-in-out 3s infinite;
+            -webkit-transform: translate(0) rotate(0deg);
+            -webkit-transform-origin: bottom;
+            transform: translate(0) rotate(0deg);
+            transform-origin: bottom;
+            text-align: center;
+        }
+        
+        @keyframes custom-shake {
+            0% {
+                transform: rotate(0deg);
+            }
+            80% {
+                transform: rotate(0deg);
+            }
+            85% {
+                transform: rotate(1deg);
+            }
+            95% {
+                transform: rotate(-1deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -224,7 +256,7 @@
     <center>
         <div class="w3-row w3-container w3-centered w3-center">
 
-            <div class="btn-xiib" onclick="myFunction('googleMaps')" style="background-color: rgb(22, 53, 158);">
+            <div class="btn-xiib shake" onclick="myFunction('googleMaps')" style="background-color: rgb(22, 53, 158);">
                 Califícanos con 5 estrellas
             </div>
             <div id="googleMaps" class="w3-hide w3-container">

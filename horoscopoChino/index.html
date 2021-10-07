@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Find out your zodiac sign  &amp; chinese horoscope</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="wheel.css">
+    </head>
+    <body>
+      <h2>Find out your zodiac sign and chinese horoscope</h2>
+      <h3>Enter your birth year, month and day</h3>
+<!--       <p>Your chinese horoscope will rotate to the 12 o'clock position</p> -->
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12">  
+            <div class="col-xs-4 col-lg-2 col-lg-push-3"><input class="col-xs-12" type="text" id="year" placeholder="yyyy"></div>
+            <div class="col-xs-4 col-lg-2 col-lg-push-3"><input class="col-xs-12" type="text" id="month" placeholder="mm"></div>
+            <div class="col-xs-4 col-lg-2 col-lg-push-3"><input class="col-xs-12" type="text" id="day" placeholder="dd"></div>
+              </div>
+          </div></br>
+            <div class="row">
+                <div class="col-xs-8 col-xs-push-2">
+                <button class="col-xs-4 col-xs-push-4 btn btn-default" type="submit" id="submit" onClick="birthDate()"><span class="glyphicon glyphicon-ok"></span></button>
+                </div>
+            </div>  
+          <br/>
+      <div class="row">
+          <div class="col-xs-12">        
+            <h4 class="col-xs-12 col-lg-8 col-lg-push-2 rwd-break" id="display">Your chinese horoscope will rotate to the 12 o'clock position and your zodiac sign will be displayed in the middle on the wheel</h4>
+          </div>
+      </div>
+      <div>
+          <img id="horoscope" src="https://res.cloudinary.com/cecilia/image/upload/v1462334970/horoscope_aozz1c.gif">
+          <img id="zodiac" src="https://cdn0.iconfinder.com/data/icons/astronomical-signs/16/Neptune_astronomical_astrology_horoscope_zodiac_sign_symbol-64.png" alt="your sign">
+      </div>
+          </div>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="wheel.js"></script>
+    </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

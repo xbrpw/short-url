@@ -1,0 +1,108 @@
+body{
+  margin-top:5%;
+  text-align:center;
+}
+h2, h3, h4,p{
+  color:dimgrey;
+  margin-bottom: 1%;
+  font-family: Courier;
+  font-weight: bold;
+}
+#year, #month, #day{
+  border:#404040;
+  color:dimgray;
+  background-color:pink;
+  min-height:50px;
+  font-family: Courier;
+  font-weight: bold;
+  border-radius: 5px; 
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+}
+input[placeholder]{
+    text-align: center;
+    font-family: Courier;
+    font-weight: bold;
+    color: dimgray;
+}
+#display{
+  border:#404040;
+  color:dimgray;
+  background-color:#b3d9ff;
+/*  width:35%;*/
+  padding-top:5%;
+  padding-bottom:5%;
+  text-align:center;
+  font-family: Courier;
+  font-weight: bold;
+  border-radius: 20px; 
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -o-border-radius:20px;
+}
+@media screen and (max-width:480px){
+  #display.rwd-break{
+    display:block;
+  }
+}
+#submit{
+  border:#404040;
+  color:#fff;
+  margin-top:3%;
+/*  width:8%;*/
+  text-align:center;
+  background-color: silver;
+  font-family: Courier;
+  font-weight: bold;
+  border-radius: 20px; 
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -o-border-radius:20px;
+  outline:none;
+}
+#submit:hover{
+  background-color:slategrey;
+}
+input{
+/*  text-align:right;*/
+/*  width:8%;*/
+}
+div{
+  position:relative;
+  text-align:center;
+}
+/*
+#image{
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('http://www.astrosage.com/2015/images/chinese-astrology-2015.jpg');
+}
+*/
+#horoscope{
+  -webkit-transform:rotate();
+  transform:rotate();
+  -ms-transform:rotate();
+  margin-top:10%;
+/*  margin-left:4%;*/
+    width:50%;
+    height: 50%;
+    height: auto;
+  position:relative;
+    top:0;
+    left:0;
+  z-index:1;
+}
+#zodiac{
+  position:absolute;
+  
+  z-index:2;
+  width:10%;
+/*
+  margin-left:auto;
+  margin-right:auto;
+*/
+  top:48%;
+  left:45%;  
+}

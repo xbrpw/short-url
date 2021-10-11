@@ -1,0 +1,214 @@
+<!-- 
+	⊙⩌⨀
+    2006 2021 © hiHello.monster! Marketing Technology Stack
+    2012 2021 © Xiiber! Experiencias y Viajes Gay México
+        
+	   ˆ⩌ˆ
+    ⪘ ¿Quién hizo todo esto? 
+       »  http://twitter.com/luisangelmaciel 
+    ⪘ Para Xiiber
+       »  http://twitter.com/XiiberTravel      
+-->
+
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <title>Suscripción para el grupo VIP </title>
+
+    <!-- HiHello.monster -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Language" content="es-mx">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible " content="IE=edge ">
+
+    <link rel="icon" href="https://www.xiiber.com/favicon.png" sizes="192x192">
+    <link rel="stylesheet" href="w3.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Paytone+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.xiiber.com/css/style_xiiber.css">
+
+
+    <!-- Modal -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+    <style>
+        .box-input {
+            border-bottom: 2px solid #adadad;
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .box-input input {
+            font-size: 16px;
+            color: #333;
+            border: none;
+            width: 100%;
+            outline: none;
+            background: none;
+            padding: 0 5px;
+            height: 40px;
+        }
+        
+        .box-input span::before {
+            content: attr(data-placeholder);
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            color: #adadad;
+            transform: translateY(-50%);
+            z-index: -1;
+            transition: .5s;
+        }
+        
+        .box-input span::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(120deg, #3498db, #8e44ad);
+            transition: .5s;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --gold: #ffb338;
+            --light-shadow: #77571d;
+            --dark-shadow: #3e2904;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .wrapper {
+            display: grid;
+            grid-template-areas: 'overlap';
+            place-content: center;
+        }
+        
+        .wrapper>div {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: #363833;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: clamp( 3em, 18vw, 15rem);
+            grid-area: overlap;
+            letter-spacing: 1px;
+            -webkit-text-stroke: 4px transparent;
+        }
+        
+        div.bg {
+            background-image: repeating-linear-gradient( 105deg, var(--gold) 0%, var(--dark-shadow) 5%, var(--gold) 12%);
+            color: transparent;
+            filter: drop-shadow(5px 15px 15px black);
+            transform: scaleY(1.05);
+            transform-origin: top;
+        }
+        
+        div.fg {
+            background-image: repeating-linear-gradient( 5deg, var(--gold) 0%, var(--light-shadow) 23%, var(--gold) 31%);
+            color: #1e2127;
+            transform: scale(1);
+        }
+    </style>
+
+</head>
+
+<body style="background: radial-gradient(#272727, #1b1b1b);">
+
+    <div class="wrapper">
+        <div class="bg"> Grupo VIP </div>
+        <div class="fg"> Grupo VIP </div>
+    </div>
+    <div class="w3-main w3-container w3-center ">
+        <!-- The Contact Section -->
+        <div class="w3-container w3-content w3-text-white " style="max-width:800px ">
+            <br>
+            <p class=" w3-center "><b>Ser especial nunca había sido tan cool <br>El grupo VIP tiene beneficios y exclusivas</b>
+                <br> <br>Déjamos tus datos para conocer el próximo viaje con un precio de preventa especial</p>
+            <form id="formulario" class="formulario">
+                <div class="box-input">
+                    <input name="nombre" id="nombre" type="text" required>
+                    <span data-placeholder="Nombre"></span>
+                </div>
+                <div class="box-input">
+                    <input name="email" id="email" type="email" required>
+                    <span data-placeholder="Email"></span>
+                </div>
+                <div class="box-input">
+                    <input name="apellidos" id="apellidos" type="text" required>
+                    <span data-placeholder="Fecha de cumpleaños"></span>
+                </div>
+
+                <button class="button w3-border w3-round-large" style="vertical-align:middle" id="submit" type="submit" onclick="alert( 'A continuación se abrira whatsapp, solo dale enviar al mensaje que tendrá los datos que acabas de llenar. Gracias') "><i class="fab fa-whatsapp"></i> <span><b>Enviar por WhatsApp</b> </span></button><br>
+            </form>
+            <br>
+
+            <br>
+            <p class="w3-opacity w3-center w3-text-white">
+                <b>Xiiber Travel</b><br>
+                <i>¿Listo? Vámonos de viaje</i></p>
+        </div>
+
+    </div>
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+
+    <script>
+        function isMobile() {
+            if (sessionStorage.desktop)
+                return false;
+            else if (localStorage.mobile)
+                return true;
+            var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
+            for (var i in mobile)
+                if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+            return false;
+        }
+
+        const formulario = document.querySelector('#formulario');
+        const buttonSubmit = document.querySelector('#submit');
+        const urlDesktop = 'https://web.whatsapp.com/';
+        const urlMobile = 'whatsapp://';
+        const telefono = '525539793727';
+
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault()
+            buttonSubmit.innerHTML = '<i class="fas fa-circle-notch fa-spin "></i>'
+            buttonSubmit.disabled = true
+            setTimeout(() => {
+                let nombre = document.querySelector('#nombre').value
+                let apellidos = document.querySelector('#apellidos').value
+                let email = document.querySelector('#email').value
+                let mensaje = 'send?phone=' + telefono + '&text=*Hola, estos son mis datos para pertenecer al grupo VIP. ¡Gracias!*%0A*Mi nombre es*%0A' + nombre + '%0A*Mi email*%0A' + email + '%0A*Cumplo años el*%0A' + apellidos + ''
+                if (isMobile()) {
+                    window.open(urlMobile + mensaje, '_blank')
+                } else {
+                    window.open(urlDesktop + mensaje, '_blank')
+                }
+                buttonSubmit.innerHTML = '<i class="fab fa-whatsapp "></i> Enviar WhatsApp'
+                buttonSubmit.disabled = false
+            }, 3000);
+        });
+    </script>
+
+</html>

@@ -2443,6 +2443,22 @@ a {
     .susan-storm-small {
         display: none!important
     }
+    .btn-xiib {
+        border: solid 3px black;
+        font-size: 18px;
+        color: white;
+        width: auto;
+        height: 50px;
+        border-radius: 30px;
+        padding: 8px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bold;
+        white-space: nowrap;
+    }
     .img-pup-iris {
         width: 310;
         height: 175;

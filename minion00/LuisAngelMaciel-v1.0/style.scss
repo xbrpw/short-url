@@ -1,0 +1,225 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kt0y7f');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kt0y7f#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?kt0y7f') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?kt0y7f') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?kt0y7f##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-avatar .path1 {
+  &:before {
+    content: $icon-avatar-path1;  
+    color: rgb(0, 56, 113);
+  }
+}
+.icon-avatar .path2 {
+  &:before {
+    content: $icon-avatar-path2;  
+    margin-left: -1em;  
+    color: rgb(23, 8, 47);
+  }
+}
+.icon-avatar .path3 {
+  &:before {
+    content: $icon-avatar-path3;  
+    margin-left: -1em;  
+    color: rgb(62, 64, 149);
+  }
+}
+.icon-avatar .path4 {
+  &:before {
+    content: $icon-avatar-path4;  
+    margin-left: -1em;  
+    color: rgb(63, 46, 100);
+  }
+}
+.icon-pokebola {
+  &:before {
+    content: $icon-pokebola; 
+  }
+}
+.icon-tepozspa-locker {
+  &:before {
+    content: $icon-tepozspa-locker; 
+  }
+}
+.icon-tepozspa-vestidor {
+  &:before {
+    content: $icon-tepozspa-vestidor; 
+  }
+}
+.icon-xiiber-logo-horizontal-color .path1 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path1;  
+    color: rgb(0, 56, 113);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path2 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path2;  
+    margin-left: -3.34375em;  
+    color: rgb(0, 56, 113);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path3 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path3;  
+    margin-left: -3.34375em;  
+    color: rgb(23, 8, 47);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path4 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path4;  
+    margin-left: -3.34375em;  
+    color: rgb(232, 68, 59);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path5 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path5;  
+    margin-left: -3.34375em;  
+    color: rgb(0, 77, 253);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path6 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path6;  
+    margin-left: -3.34375em;  
+    color: rgb(254, 237, 1);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path7 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path7;  
+    margin-left: -3.34375em;  
+    color: rgb(255, 139, 0);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path8 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path8;  
+    margin-left: -3.34375em;  
+    color: rgb(118, 7, 137);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path9 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path9;  
+    margin-left: -3.34375em;  
+    color: rgb(0, 129, 37);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path10 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path10;  
+    margin-left: -3.34375em;  
+    color: rgb(62, 64, 149);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path11 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path11;  
+    margin-left: -3.34375em;  
+    color: rgb(63, 46, 100);
+  }
+}
+.icon-xiiber-logo-horizontal-color .path12 {
+  &:before {
+    content: $icon-xiiber-logo-horizontal-color-path12;  
+    margin-left: -3.34375em;  
+    color: rgb(96, 96, 98);
+  }
+}
+.icon-xiiber-travel-log .path1 {
+  &:before {
+    content: $icon-xiiber-travel-log-path1;  
+    color: rgb(0, 56, 113);
+  }
+}
+.icon-xiiber-travel-log .path2 {
+  &:before {
+    content: $icon-xiiber-travel-log-path2;  
+    margin-left: -2.537109375em;  
+    color: rgb(0, 56, 113);
+  }
+}
+.icon-xiiber-travel-log .path3 {
+  &:before {
+    content: $icon-xiiber-travel-log-path3;  
+    margin-left: -2.537109375em;  
+    color: rgb(23, 8, 47);
+  }
+}
+.icon-xiiber-travel-log .path4 {
+  &:before {
+    content: $icon-xiiber-travel-log-path4;  
+    margin-left: -2.537109375em;  
+    color: rgb(62, 64, 149);
+  }
+}
+.icon-xiiber-travel-log .path5 {
+  &:before {
+    content: $icon-xiiber-travel-log-path5;  
+    margin-left: -2.537109375em;  
+    color: rgb(63, 46, 100);
+  }
+}
+.icon-xiib {
+  &:before {
+    content: $icon-xiib; 
+  }
+}
+.icon-logo-dragvesti {
+  &:before {
+    content: $icon-logo-dragvesti; 
+  }
+}
+.icon-logo-dragvesti-negro {
+  &:before {
+    content: $icon-logo-dragvesti-negro; 
+  }
+}
+.icon-logo-dragvesti-blanco-letras {
+  &:before {
+    content: $icon-logo-dragvesti-blanco-letras;     
+    color: #fefefe;
+  }
+}
+.icon-viajero {
+  &:before {
+    content: $icon-viajero; 
+  }
+}
+.icon-bus {
+  &:before {
+    content: $icon-bus; 
+  }
+}
+.icon-ayuda {
+  &:before {
+    content: $icon-ayuda; 
+  }
+}
+

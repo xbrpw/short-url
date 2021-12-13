@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'LuisAngelMaciel';
+  src:  url('fonts/LuisAngelMaciel.eot?kt0y7f');
+  src:  url('fonts/LuisAngelMaciel.eot?kt0y7f#iefix') format('embedded-opentype'),
+    url('fonts/LuisAngelMaciel.ttf?kt0y7f') format('truetype'),
+    url('fonts/LuisAngelMaciel.woff?kt0y7f') format('woff'),
+    url('fonts/LuisAngelMaciel.svg?kt0y7f#LuisAngelMaciel') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'LuisAngelMaciel' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-avatar .path1:before {
+  content: "\e900";
+  color: rgb(0, 56, 113);
+}
+.icon-avatar .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(23, 8, 47);
+}
+.icon-avatar .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(62, 64, 149);
+}
+.icon-avatar .path4:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(63, 46, 100);
+}
+.icon-pokebola:before {
+  content: "\e904";
+}
+.icon-tepozspa-locker:before {
+  content: "\e905";
+}
+.icon-tepozspa-vestidor:before {
+  content: "\e906";
+}
+.icon-xiiber-logo-horizontal-color .path1:before {
+  content: "\e907";
+  color: rgb(0, 56, 113);
+}
+.icon-xiiber-logo-horizontal-color .path2:before {
+  content: "\e908";
+  margin-left: -3.34375em;
+  color: rgb(0, 56, 113);
+}
+.icon-xiiber-logo-horizontal-color .path3:before {
+  content: "\e909";
+  margin-left: -3.34375em;
+  color: rgb(23, 8, 47);
+}
+.icon-xiiber-logo-horizontal-color .path4:before {
+  content: "\e90a";
+  margin-left: -3.34375em;
+  color: rgb(232, 68, 59);
+}
+.icon-xiiber-logo-horizontal-color .path5:before {
+  content: "\e90b";
+  margin-left: -3.34375em;
+  color: rgb(0, 77, 253);
+}
+.icon-xiiber-logo-horizontal-color .path6:before {
+  content: "\e90c";
+  margin-left: -3.34375em;
+  color: rgb(254, 237, 1);
+}
+.icon-xiiber-logo-horizontal-color .path7:before {
+  content: "\e90d";
+  margin-left: -3.34375em;
+  color: rgb(255, 139, 0);
+}
+.icon-xiiber-logo-horizontal-color .path8:before {
+  content: "\e90e";
+  margin-left: -3.34375em;
+  color: rgb(118, 7, 137);
+}
+.icon-xiiber-logo-horizontal-color .path9:before {
+  content: "\e90f";
+  margin-left: -3.34375em;
+  color: rgb(0, 129, 37);
+}
+.icon-xiiber-logo-horizontal-color .path10:before {
+  content: "\e910";
+  margin-left: -3.34375em;
+  color: rgb(62, 64, 149);
+}
+.icon-xiiber-logo-horizontal-color .path11:before {
+  content: "\e911";
+  margin-left: -3.34375em;
+  color: rgb(63, 46, 100);
+}
+.icon-xiiber-logo-horizontal-color .path12:before {
+  content: "\e912";
+  margin-left: -3.34375em;
+  color: rgb(96, 96, 98);
+}
+.icon-xiiber-travel-log .path1:before {
+  content: "\e913";
+  color: rgb(0, 56, 113);
+}
+.icon-xiiber-travel-log .path2:before {
+  content: "\e914";
+  margin-left: -2.537109375em;
+  color: rgb(0, 56, 113);
+}
+.icon-xiiber-travel-log .path3:before {
+  content: "\e915";
+  margin-left: -2.537109375em;
+  color: rgb(23, 8, 47);
+}
+.icon-xiiber-travel-log .path4:before {
+  content: "\e916";
+  margin-left: -2.537109375em;
+  color: rgb(62, 64, 149);
+}
+.icon-xiiber-travel-log .path5:before {
+  content: "\e917";
+  margin-left: -2.537109375em;
+  color: rgb(63, 46, 100);
+}
+.icon-xiib:before {
+  content: "\f0b5";
+}
+.icon-logo-dragvesti:before {
+  content: "\f257";
+}
+.icon-logo-dragvesti-negro:before {
+  content: "\ea4f";
+}
+.icon-logo-dragvesti-blanco-letras:before {
+  content: "\ea50";
+  color: #fefefe;
+}
+.icon-viajero:before {
+  content: "\ea68";
+}
+.icon-bus:before {
+  content: "\ea6c";
+}
+.icon-ayuda:before {
+  content: "\ea72";
+}

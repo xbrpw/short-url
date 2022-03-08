@@ -175,6 +175,8 @@
         }
     </style>
 
+
+
 </head>
 
 <body>
@@ -195,7 +197,7 @@
                                     <strong style=" font-size: 18px;">Xiiber Travel</strong>   
                             </span>
                             <br> Organizamos experiencias y viajes en grupo para hombres gay. Lo que pasa en el viaje, se queda en el viaje.
-                            <!--     <span style="color: grey ; font-size: 15px;">#VisitMexicoGay </span> -->
+                            <span style="color: grey ; font-size: 15px;">#VisitMexicoGay </span>
                         </p>
                     </div>
                 </div>
@@ -260,7 +262,7 @@
                 Califícanos con 5 estrellas
             </div>
             <div id="googleMaps" class="w3-hide w3-container">
-                <a href="https://www.google.com/maps?q=xiiber&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjS_6Ll9cTwAhUOKqwKHRq3CLUQ_AUoAXoECAEQAw" target="_new">
+                <a href="https://www.google.com/maps?q=xiiber&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjS_6Ll9cTwAhUOKqwKHRq3CLUQ_AUoAXoECAEQAw" target="_new"><br>
                     <p>Y comparte detalles de tu experiencia de viaje. <br> <span style="color: #595959">Los viajeros confían en las buenas reseñas como las tuyas para ir a los mejores viajes y experiencias </span>
                     </p>
                 </a>
@@ -269,19 +271,69 @@
             <div class="btn-xiib " onclick="myFunction( 'tripadvisor') " style="background-color: green; ">
                 Cuéntanos tu experiencia
             </div>
-            <div id="tripadvisor" class="w3-hide w3-container ">
+            <div id="tripadvisor" class="w3-hide w3-container "><br>
                 <a href="https://www.tripadvisor.com.mx/Attraction_Review-g150800-d21347352-Reviews-Xiiber-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_new">
-                    <p>¿Tienes alguna recomendación?<br> <span style="color: #595959">Escribe una reseña y hazle saber a todos los viajeros</span></p>
+                    <p>¿Tienes alguna recomendación?<br> <span style="color: #595959">Escribe una reseña y hazle saber a todos los viajeros en Tripadvisor</span> </p>
                 </a>
+                <button onclick="on()">ℹ️</button>
+
+                <style>
+                    #overlay {
+                        position: fixed;
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(0, 0, 0, 08);
+                        z-index: 2;
+                        cursor: pointer;
+                    }
+                    
+                    #text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        font-size: 18px;
+                        color: white;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                    }
+                </style>
+
+                <div id="overlay" onclick="off()">
+                    <div id="text">
+                        Resume tu visita o destaca un detalle importante. <br>Cuentales a los demás acerca de tu experiencia, el bus, el servicio, el ambiente.
+                        <br>
+                        <a href="https://www.tripadvisor.com.mx/Attraction_Review-g150800-d21347352-Reviews-Xiiber-Mexico_City_Central_Mexico_and_Gulf_Coast.html" target="_new" style="color: white;">
+                            <br>
+                            <i class="fa fa-tripadvisor" aria-hidden="true"> Hazla en Tripadvisor</i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <script>
+                    function on() {
+                        document.getElementById("overlay").style.display = "block";
+                    }
+
+                    function off() {
+                        document.getElementById("overlay").style.display = "none";
+                    }
+                </script>
+
             </div>
             <br>
             <div class="btn-xiib " onclick="myFunction( 'viaje-a-tepozspa') " style="background-color: red; ">
                 Viaje a Tepozspa
             </div>
             <div id="viaje-a-tepozspa" class="w3-hide w3-container ">
-                <a href="https://tepozspa.xiiber.com/" target="_new">
+                <a href="https://tepozspa.xiiber.com/" target="_new"><br>
                     <p>Viaje en grupo
-                        <br>
+                        <br><br>
                         <span style="color: #595959">
                             <img src="tepozspa-locker.svg" alt="Tepozspa, reserva tu lugar con locker "  loading="lazy " class="lazy " width="50 " height="50 "> 
                             Reserva locker</span> <span style="color: #595959">
@@ -555,5 +607,7 @@
                         <script src="https://luisangelmaciel.github.io/Toxel/js/script.js "></script>
 
 </body>
+
+</html>
 
 </html>

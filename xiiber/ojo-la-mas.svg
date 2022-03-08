@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="87.283mm" height="60.039mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8728.3 6003.9"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#373435;stroke-width:20;stroke-miterlimit:22.9256}
+    .str1 {stroke:#1A0F1C;stroke-width:20;stroke-miterlimit:22.9256}
+    .str4 {stroke:#373435;stroke-width:200;stroke-linecap:round;stroke-miterlimit:22.9256}
+    .str2 {stroke:#373435;stroke-width:200;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .str3 {stroke:#373435;stroke-width:150;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil0 {fill:#1A0F1C}
+    .fil2 {fill:#E9E4D8}
+    .fil5 {fill:#F9F8FD}
+    .fil4 {fill:url(#id0)}
+    .fil3 {fill:url(#id1)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="3912.12" y1="2175.85" x2="4558.8" y2="1463.4">
+   <stop offset="0" style="stop-opacity:1; stop-color:#FE30EE"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#E9427B"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="4076.53" y1="3458.24" x2="5022.51" y2="2408.76">
+   <stop offset="0" style="stop-opacity:1; stop-color:#37CDF8"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#5CC6D0"/>
+  </linearGradient>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2666178416624">
+   <polygon class="fil0 str0" points="5404.68,2254.65 8728.29,3150.78 5404.68,2626.76 "/>
+   <polygon class="fil0 str0" points="5376.67,2492.68 8126.2,4200.94 5376.67,2864.79 "/>
+   <polygon class="fil0 str0" points="5306.66,2758.71 7300.08,4677.01 5306.66,3130.82 "/>
+   <polygon class="fil0 str0" points="5404.68,1904.6 8728.29,2114.63 5404.68,2276.71 "/>
+   <polygon class="fil0 str0" points="3323.61,1932.6 -0,2142.63 3323.61,2304.71 "/>
+   <polygon class="fil0 str1" points="3323.61,2282.65 -0,3178.78 3323.61,2654.76 "/>
+   <polygon class="fil0 str0" points="3351.62,2520.68 602.09,4228.94 3351.62,2892.79 "/>
+   <polygon class="fil0 str0" points="3421.63,2786.71 1428.21,4705.01 3421.63,3158.82 "/>
+   <g>
+    <path class="fil1 str2" d="M1713.8 2609.03c1615.42,-1836.69 3247.95,-1654.62 4892.96,0l0 77.67c-1660.11,1601.46 -3292.02,1653.12 -4892.96,0l0 -77.67z"/>
+    <path id="1" class="fil2" d="M1713.8 2609.03c1615.42,-1836.69 3247.95,-1654.62 4892.96,0l0 77.67c-1660.11,1601.46 -3292.02,1653.12 -4892.96,0l0 -77.67z"/>
+   </g>
+   <g>
+    <path class="fil1 str3" d="M4176.92 1815.18c496.34,0 898.71,402.37 898.71,898.7 0,496.34 -402.37,898.71 -898.71,898.71 -496.33,0 -898.7,-402.37 -898.7,-898.71 0,-496.33 402.37,-898.7 898.7,-898.7z"/>
+    <path id="1" class="fil3" d="M4176.92 1815.18c496.34,0 898.71,402.37 898.71,898.7 0,496.34 -402.37,898.71 -898.71,898.71 -496.33,0 -898.7,-402.37 -898.7,-898.71 0,-496.33 402.37,-898.7 898.7,-898.7z"/>
+   </g>
+   <circle class="fil0" cx="4147.94" cy="2790.85" r="439.51"/>
+   <g>
+    <path class="fil1 str4" d="M1713.8 2609.03c1615.42,-1836.69 3247.95,-1654.62 4892.96,0l0 77.67c-1720.35,-700.02 -3350.12,-690.57 -4892.96,0l0 -77.67z"/>
+    <path id="1" class="fil4" d="M1713.8 2609.03c1615.42,-1836.69 3247.95,-1654.62 4892.96,0l0 77.67c-1720.35,-700.02 -3350.12,-690.57 -4892.96,0l0 -77.67z"/>
+   </g>
+   <circle class="fil5" cx="3799.63" cy="2522.78" r="219.75"/>
+  </g>
+ </g>
+</svg>

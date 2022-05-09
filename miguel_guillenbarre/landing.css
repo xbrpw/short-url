@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,900;1,500&display=swap');
+body {
+    font-family: "Muli";
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #ffffff;
+    overflow: auto position: fixed;
+    font-size: 20pt;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 6px 0;
+    transition: all 0.3s ease;
+    color: #bfbfbf;
+    background-color: #ffffff;
+}
+
+.footerx {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 4em 0 0;
+}
+
+.contact-footer {
+    padding: 1em 0;
+    border: 1px solid #000;
+}
+
+.contact-footer:last-child {
+    border-left: 0;
+}
+
+.contact-footer:hover {
+    background-color: #e0e7f3;
+}
+
+.contact-tel {
+    flex: 1 0 50%;
+}
+
+.contact-email {
+    flex: 1 0 50%;
+}
+
+.copy-wrapper a {
+    font-weight: 700;
+}

@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+}
+h2 {
+    font-size: 72px;
+}
+button {
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    line-height: 38px;
+}
+.emoji {
+    text-align: center;
+    font-size: 60px;
+}

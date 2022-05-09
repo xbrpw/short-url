@@ -1,0 +1,247 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+code,
+small,
+strike,
+strong,
+sub,
+sup,
+b,
+u,
+i {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font: normal 0.9em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+strong {
+    font-weight: 700;
+}
+
+#frame {
+    max-width: 620px;
+    width: auto;
+    background: #fff;
+    padding: 10px;
+    margin: 3px;
+}
+
+h1 {
+    font: normal bold 2em/1.8em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    border-bottom: 1px solid #999;
+    padding: 0;
+    width: auto
+}
+
+h2 {
+    font: italic bold 1.3em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+p.pager {
+    margin: 5px 0 5px;
+    font: bold 1em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #999;
+}
+
+img.question-image {
+    display: block;
+    max-width: 250px;
+    margin: 10px auto;
+    width: 100%;
+    height: auto;
+}
+
+#choice-block {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#submitbutton {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 15px rgba(223, 216, 216, 0.1);
+    border-radius: 45px;
+    border-color: none;
+}
+
+#submitbutton:hover {
+    color: rgb(255, 0, 0);
+}
+
+#explanation {
+    margin: 0 auto;
+    padding: 20px;
+    width: 75%;
+}
+
+.choice-box {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    margin: 8px 4%;
+    padding: 10px 0;
+    border: 1px solid #666;
+    border-color: none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#submitbutton {
+    width: 85%;
+    margin-left: 4%;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.progressBar {
+    float: right;
+    margin: 5px;
+    height: 20px;
+    width: 300px;
+}
+
+#progressBar {
+    width: 90%;
+    margin: 10px auto;
+    height: 22px;
+    background-color: #0A5F44;
+}
+
+#progressBar div {
+    height: 100%;
+    text-align: right;
+    padding: 0 10px;
+    line-height: 22px;
+    /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: #CBEA00;
+    box-sizing: border-box;
+}
+
+#secBar {
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.choice {
+    background-color: #fff;
+    color: black;
+    border-color: none;
+}
+
+.choice:after {
+    content: &#162;
+}
+
+.choice:hover {
+    background-color: #5ea1ff;
+    border-color: none;
+    color: white;
+}
+
+.choice:clicked {
+    background-color: blue;
+    border-color: none;
+}
+
+#imageLogo {
+    width: 85%;
+    margin-bottom: 20px;
+}
+
+#descQuiz {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#buttonStart {
+    padding: 10px;
+    width: 20%;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 15px rgba(223, 216, 216, 0.1);
+    border-radius: 45px;
+    border-color: none;
+}
+
+#textlogosplash {
+    border: none;
+}
+
+#splashdiv {
+    text-align: center;
+}
+
+.leadRow div {
+    display: inline-block;
+    width: 30%;
+    font-size: 100%;
+    padding: 5px;
+}
+
+.oddRows {
+    background-color: cornflowerblue;
+}
+
+#leadbTitle {
+    border-top: 2px solid #8c8585;
+}
+
+#descRow {
+    background-color: darkcyan;
+    font-weight: 700;
+}
+
+#greetings {
+    text-align: center;
+    font-size: 2em;
+}

@@ -1,0 +1,13 @@
+body{
+  text-align: center;
+}
+
+h2{
+  font-size: 72px;
+}
+
+button{
+  padding: 30px;
+  margin: 20px;
+  font-size: 14px;
+}

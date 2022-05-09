@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Guillen Barre - Caso Miguel, CDMX. 44 años</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css'>
+    <link rel="stylesheet" href="./landing.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <style>
+        @media (max-width: 767px) {
+            .modal-fullscreen-xs-down {
+                padding: 0 !important;
+            }
+            .modal-fullscreen-xs-down .modal-dialog {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .modal-fullscreen-xs-down .modal-content {
+                height: auto;
+                min-height: 100%;
+                border: 0 none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .modal-fullscreen-sm-down {
+                padding: 0 !important;
+            }
+            .modal-fullscreen-sm-down .modal-dialog {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .modal-fullscreen-sm-down .modal-content {
+                height: auto;
+                min-height: 100%;
+                border: 0 none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 1199px) {
+            .modal-fullscreen-md-down {
+                padding: 0 !important;
+            }
+            .modal-fullscreen-md-down .modal-dialog {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .modal-fullscreen-md-down .modal-content {
+                height: auto;
+                min-height: 100%;
+                border: 0 none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+        
+        .modal-fullscreen {
+            padding: 0 !important;
+        }
+        
+        .modal-fullscreen .modal-dialog {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .modal-fullscreen .modal-content {
+            height: auto;
+            min-height: 100%;
+            border: 0 none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        
+        .btn-open-modal {
+            margin-bottom: 0.5em;
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+
+    <div class="flex flex-wrap">
+
+        <div class="w-full sm:w-8/12 mb-10">
+
+            <div class="container mx-auto h-full sm:p-10">
+
+                <nav class="flex px-4 justify-between items-center">
+
+                    <div class="text-4xl font-bold">
+                        <br> Luchadores
+                        <span class="text-blue-700">.</span>
+                    </div>
+                    <div>
+                        <!--   <img src="https://image.flaticon.com/icons/svg/497/497348.svg" alt="" class="w-8"> -->
+                    </div>
+                </nav>
+                <header class="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+                    <div class="w-full">
+                        <h1 class="text-4xl lg:text-6xl font-bold">Directorio de <span class="text-blue-700">terapeutas</span> en la CDMX</h1>
+                        <div class="w-20 h-2 bg-blue-700 my-4"></div>
+                        <p class="mb-10" style="font-size: larger;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae maiores neque eaque ea odit placeat, tenetur illum distinctio nulla voluptatum a corrupti beatae tempora aperiam quia id aliquam possimus aut.</p>
+                        <button class="bg-blue-500 text-white text-2xl font-medium px-4 py-2 rounded shadow">Ver más</button>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <img src="https://netmd.org/images/00guillian-barre.png" alt="Leafs" class="w-full h-48 object-cover sm:h-screen sm:w-4/12">
+
+        <div class="footerx ">
+            <div class="icon-bar ">
+                <a href="#"><i class="bi bi-three-dots"  data-toggle="modal" data-target="#modal-fullscreen"></i></a>
+                <a href="#"><i class=""  ></i></a>
+                <a href="miguel.html"><i class="bi bi-chevron-double-left "  ></i>
+                <a href="miguel.html"><i class="bi bi-house-door "  ></i></a>
+                </a> <a href="sobrevivientes_y_luchadores.html"><i class="bi bi-chevron-double-right " ></i></a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal Fullscreen -->
+    <div class="modal fade modal-fullscreen" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <ul class="menu">
+                        <h3>
+                            <b>
+                             <br>
+                       
+                             <img id="header-img" src="https://pbs.twimg.com/media/EvhoW6GXAAAN77v?format=png&name=small" alt="Aquí nadie se rinde - Guillain-Barré" style="width:200px;height:75px;" class="center">
+                             <br><hr><br>
+                            <li><a class="nav-link" href="#featured" >Casos de Sobrevivientes y luchadores</a></li><br>
+                                                        <li>
+                                <a class="nav-link" href="#about">Terapias</a>
+                            </li><br>
+                            <li><a class="nav-link" href="#contact">Directorio</a></li><br>
+
+                            <div class="wrapper">
+                                <!-- <ul class="social-menu">
+                                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                </ul> -->
+                                <hr>
+                                <a class="" href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                                <a class="" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                            </div>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </b>
+                        </h3>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- partial -->
+    <script src="./landing.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+</body>
+
+</html>

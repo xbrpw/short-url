@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dino game</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div id='game_box'>
+        <div id='bg_box'>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id='game_console'>
+            <div id='bones_display'>
+                <div id='game_bones0'></div>
+                <div id='game_bones1'></div>
+                <div id='game_bones2'></div>
+                <div id='game_bones3'></div>
+            </div>
+        </div>
+        <button class='game_button button_left'>L</button>
+        <button class='game_button button_top'>U</button>
+        <button class='game_button button_right'>R</button>
+        <button class='game_button button_bottom'>D</button>
+
+        <div id='start_screen'>
+            <h1>Dino Dig</h1>
+            <img src='https://contentservice.mc.reyrey.net/image_v1.0.0/?id=407bf997-1474-5193-9131-de99e18b484b&637678338299747408' alt='' />
+            <h2>TAP TO START</h2>
+            arrow keys to move &bull; collect the bones &bull; watch for falling rocks
+        </div>
+        <div id='win_screen'>
+            <div>
+                <h1>CONGRATS!</h1>
+                <h2 id='game_cont'>CONTINUE</h2>
+                <h2 id='game_offers'>JUMP TO OFFER(S)</h2>
+            </div>
+        </div>
+    </div>
+    <p>.</p>
+
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    <!-- partial -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

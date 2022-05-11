@@ -1,0 +1,26 @@
+figure {
+    background-image: url("ja-face-bg-full.png");
+    background-size: contain;
+    background-position: center;
+    margin: 0;
+}
+
+figure,
+canvas {
+    width: 400px;
+    height: 334px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #fff;
+    overflow: hidden;
+}

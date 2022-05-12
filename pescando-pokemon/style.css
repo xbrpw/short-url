@@ -1,0 +1,253 @@
+:root {
+  --fish1:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=8afee98e-ebcc-56a1-96e0-55e36a46264b&637413072121907329');
+  --fish2:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=1fa86086-fd43-50c4-b38e-dfc9a84d03df&637413072212638614');
+  --fish3:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=561f985c-44f0-568e-8e4c-ae5ebcd6158d&637413072301078491');
+  --fish4:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=6c13e190-095b-56b0-bdfa-ffc742d7523f&637413072385902356');
+  --fish5:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=84222f0f-d43e-53ea-be16-ce670d1b2f51&637413072488561394');
+  --fish6:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=1c662cbd-9c36-58b3-b107-7f6831d029cd&637413072568720353');
+  --fish7:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=c7f12a90-8954-5789-a0d5-ecb2025afef4&637413072660755362');
+  --hook:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=cbf58c7c-80f7-506c-b1fb-ec9fd0ef20d1&637413991691740886');
+}
+
+body {
+  margin:0;
+  padding:0;
+  font-family:'Montserrat', sans-serif;
+  font-weight:300;
+  text-align:center;
+  background:dodgerblue;
+}
+body:after {
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  background:dodgerblue;
+  background-size:cover;
+  background-position:50% 50%;  
+}
+#console {
+  width:320px;
+  height:480px;
+  margin:50px auto;
+  position:relative;
+  overflow:hidden;
+  background:radial-gradient(circle at 50% 25%, gold, tomato 50%);
+  background-position: 90% 0;
+  background-repeat:no-repeat;
+  box-sizing:border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family:'Montserrat', sans-serif;
+  font-weight:300;
+  text-align:center;
+  border-radius:5px;
+  border:1px solid black;  
+}
+
+#start_btn {
+  width:100%;
+  box-sizing:border-box;
+  padding:10px;
+  position:absolute;
+  left:0;
+  top:300px;
+  transition:.5s;  
+}
+#start_btn h3 {
+  background:white;
+  max-width:50%;
+  margin:10px auto;
+  padding:10px;
+  border-radius:5px;
+}
+
+#svgContainer {
+  position:absolute;
+  left:259px;
+  top:168px;
+  left:0;
+  z-index:9999;
+  pointer-events:none;
+}
+
+.hide_start {
+  opacity:0;
+  pointer-events:none;
+}
+
+#hook {
+  width:40px;
+  height:40px;
+  border-radius:0 0 50px 50px;
+  background:var(--hook);  
+  position:absolute;
+  left:238px;
+  top:390px;
+  filter:drop-shadow(0px 0px 5px rgba(0,0,0,.5));
+}
+
+#water_box {
+  width:100%;
+  height:2000px;
+  background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=ea58492a-0558-5bdb-b3c2-3f092c6c3198&637413978761314100'), url('https://mms.aimdatabase.com/Images/Dealer01/Global/DealOfTheDay19-Hero-Waves-600x13-TR.png'), url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=de72c229-9b8b-5935-be6d-90619b508fc0&637413979954443073'), linear-gradient(to bottom,#4fadb0, #001);
+  background-repeat:no-repeat,no-repeat, repeat, repeat;
+  background-position:0% 100%, 0% 0%;
+  background-size:contain;  
+  position:absolute;
+  bottom:-1800px;
+}
+#water_box:before {
+  content:'';
+  width:100%;
+  height:280px;
+  background:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=499d9fe0-9477-52e1-bd1f-0e50339f26ee&637413962418559361');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:0 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translateY(-100%);
+}
+
+/* water_box animations */
+.hook_down #water_box {
+  animation:water_hook_down 3s linear .5s forwards;
+}
+@keyframes water_hook_down {
+  100% { bottom:0; }
+}
+
+.hook_up #water_box {
+  animation:water_hook_up 10s linear forwards;
+}
+@keyframes water_hook_up {
+  0% { bottom:0; }
+  100% { bottom:-1800px; }
+}
+
+/* hook animations */
+.hook_down #hook {
+  animation:hook_hook_down .33s linear .5s forwards;
+}
+@keyframes hook_hook_down {
+  100% { top: 220px; }
+}
+
+.hook_up #hook {
+  top:220px;
+  animation: hook_hook_up .33s linear 9.66s forwards;
+}
+@keyframes hook_hook_up {
+  100% { top: 390px; left:238px; }
+}
+
+/* svg animations */
+.hook_down #svgContainer {
+  animation:svg_hook_down .33s linear .5s forwards;
+}
+@keyframes svg_hook_down {
+  100% { top:0; }
+}
+.hook_up #svgContainer {
+  top:0;
+  animation:svg_hook_up .33s linear 9.5s forwards;
+}
+@keyframes svg_hook_up {
+  100% { top:168px; }
+}
+
+#score {
+  position:absolute;
+  right:10px;
+  top:10px;  
+  z-index:999999;
+  /*   pointer-events:none; */
+  user-select:none;
+}
+
+.fish {
+  filter:drop-shadow(0px 15px 5px rgba(0,0,0,.25));
+  animation:swim 10s linear infinite;
+}
+@keyframes swim {
+  22% { transform:translateX(75px)}
+  25% { transform:translateX(75px) scaleX(-1) }
+  72% { transform:translateX(-75px) scaleX(-1) }
+  75% { transform:translateX(-75px) scaleX(1) }
+}
+
+.left {
+  animation:swimLeft 10s linear infinite;
+  transform:scaleX(-1);
+}
+@keyframes swimLeft {
+  22% { transform:translateX(-75px) scaleX(-1) }
+  25% { transform:translateX(-75px) scaleX(1) }
+  72% { transform:translateX(75px) scaleX(1) }
+  75% { transform:translateX(75px) scaleX(-1) }
+}
+
+.fish1 {
+  background:var(--fish1);
+}
+.fish2 {
+  background:var(--fish2);
+}
+.fish3 {
+  background:var(--fish3);
+}
+.fish4 {
+  background:var(--fish4);
+}
+.fish5 {
+  background:var(--fish5);
+}
+.fish6 {
+  background:var(--fish6);
+}
+.fish7 {
+  background:var(--fish7);
+}
+
+#hook_hitbox {
+  width:100%;
+  height:15px;
+  /*     background:red; */
+  position:absolute;
+  bottom:-3px;
+  opacity:.5;
+}
+
+.hitbox {
+  width:25%;
+  height:100%;
+  /*     background:red; */
+  position:absolute;
+  right:0;
+  opacity:.5;
+}
+
+#hook .fish {
+  position: absolute !important;
+  top: 0px !important;
+  left: 25px !important;
+  transform-origin: right !important;
+  filter:none !important;
+  transform: translateX(-100%) rotate(-90deg);
+  /*     animation: none !important; */
+  animation: wiggle 3s linear infinite !important;
+}
+@keyframes wiggle {
+  25% { transform: translateX(-100%) rotate(-85deg) }
+  75% { transform: translateX(-100%) rotate(-95deg) }
+}

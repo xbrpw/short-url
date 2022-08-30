@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria de fotos</title>
+
+<style>
+body {
+  background: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding:10px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.wave {
+  float: left;
+  margin: 20px;
+  animation: wave  ease-in-out 0.5s infinite alternate;
+  transform-origin: center -20px;
+}
+
+.wave:hover {
+  animation-play-state: paused;
+}
+
+.wave img {
+  border: 5px solid #f8f8f8;
+  display: block;
+  width: 200px;
+  height: 250px;
+}
+
+.wave figcaption {
+  text-align: center;
+}
+
+.wave:after{
+  content: '';
+  position: absolute;
+  width: 20px; 
+  height: 20px;
+  border: 1.5px solid #ffffff;
+  top: -10px; 
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+       
+.wave:before{
+  content: '';
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  display: block;
+  height: 44px;
+  width: 47px;
+  background-image: url(https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  z-index: 16;
+}
+        
+@keyframes wave {
+  0% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+</style>
+
+</head>
+<body>
+
+<div style="margin-top: 20px;">
+
+  <figure class="wave">
+    <img src="https://pbs.twimg.com/profile_images/1295581953333383168/eycuAhWy_400x400.png" alt="rajni"></img>
+    <figcaption>Puerto Vallarta</figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://pbs.twimg.com/profile_images/1295581953333383168/eycuAhWy_400x400.png" alt="chuck"></img>
+    <figcaption>Tepoztlan</figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://pbs.twimg.com/profile_images/1295581953333383168/eycuAhWy_400x400.png" alt="chan"></img>
+    <figcaption>Acapulco</figcaption>
+  </figure>
+
+  <figure class="wave">
+    <img src="https://pbs.twimg.com/profile_images/1295581953333383168/eycuAhWy_400x400.png" alt="bean"></img>
+    <figcaption>CDMX</figcaption>
+  </figure>
+
+</div>
+
+  
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wte</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="application/json" src="jqjs.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#div4").load("boton-modal.html");
+        });
+    </script>
+
+</head>
+
+
+<!-- <div id="div4"> </div> -->
+
+
+<body>
+    <div class=" w3-container ">
+        <div id="div4"> </div>
+        <div class="w3-col m3 w3-center ">
+            <p>
+
+            </p>
+        </div>
+
+        <div class="w3-col m6  ">
+
+            <!-- Image header -->
+            <header class="w3-display-container w3-wide" id="home">
+                <img class="w3-image" src="https://www.w3schools.com/w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Jane's</h1>
+                    <h1 class="w3-jumbo w3-text-white "><b>FASHION BLOG</b></h1>
+                </div>
+            </header>
+
+
+            <div class="w3-container w3-text-grey" id="jeans">
+                <p>8 items</p>
+            </div>
+
+            <!-- Product grid -->
+            <div class="w3-row w3-grayscale">
+                <div class="w3-col l3 s6">
+                    <div class="w3-container">
+                        <img src="https://www.w3schools.com/w3images/jeans1.jpg" style="width:100%">
+                        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+                    </div>
+                    <div class="w3-container">
+                        <img src="https://www.w3schools.com/w3images/jeans3.jpg" style="width:100%">
+                        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+                    </div>
+                </div>
+
+                <div class="w3-col l3 s6">
+                    <div class="w3-container">
+                        <div class="w3-display-container">
+                            <img src="https://www.w3schools.com/w3images/jeans2.jpg" style="width:100%">
+                            <span class="w3-tag w3-display-topleft">New</span>
+                            <div class="w3-display-middle w3-display-hover">
+                                <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+                    </div>
+                    <div class="w3-container">
+                        <img src="https://www.w3schools.com/w3images/jeans3.jpg" style="width:100%">
+                        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+                    </div>
+                </div>
+
+                <div class="w3-col l3 s6">
+                    <div class="w3-container">
+                        <img src="https://www.w3schools.com/w3images/jeans3.jpg" style="width:100%">
+                        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+                    </div>
+                    <div class="w3-container">
+                        <div class="w3-display-container">
+                            <img src="https://www.w3schools.com/w3images/jeans1.jpg" style="width:100%">
+                            <span class="w3-tag w3-display-topleft">Sale</span>
+                            <div class="w3-display-middle w3-display-hover">
+                                <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
+                    </div>
+                </div>
+
+                <div class="w3-col l3 s6">
+                    <div class="w3-container">
+                        <img src="https://www.w3schools.com/w3images/jeans4.jpg" style="width:100%">
+                        <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
+                    </div>
+                    <div class="w3-container">
+                        <img src="https://www.w3schools.com/w3images/jeans3.jpg" style="width:100%">
+                        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Subscribe section -->
+            <div class="w3-container w3-black w3-padding-32">
+                <h1>Subscribe</h1>
+                <p>To get special offers and VIP treatment:</p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+                <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+            </div>
+
+        </div>
+
+        <div class="w3-col m3 w3-center ">
+            <p>.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+    <script>
+        // Side navigation
+        function w3_open() {
+            var x = document.getElementById("mySidebar");
+            x.style.width = "100%";
+            x.style.fontSize = "40px";
+            x.style.paddingTop = "10%";
+            x.style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+        // Tabs
+        function openCity(evt, cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            var activebtn = document.getElementsByClassName("testbtn");
+            for (i = 0; i < x.length; i++) {
+                activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " w3-dark-grey";
+        }
+
+        var mybtn = document.getElementsByClassName("testbtn")[0];
+        mybtn.click();
+
+        // Accordions
+        function myAccFunc(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // Slideshows
+        var slideIndex = 1;
+
+        function plusDivs(n) {
+            slideIndex = slideIndex + n;
+            showDivs(slideIndex);
+        }
+
+        function showDivs(n) {
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        showDivs(1);
+
+        // Progress Bars
+        function move() {
+            var elem = document.getElementById("myBar");
+            var width = 5;
+            var id = setInterval(frame, 10);
+
+            function frame() {
+                if (width == 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width * 1 + '%';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

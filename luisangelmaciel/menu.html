@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Luis Angel Maciel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+
+
+    <div id="Button-explosive" class="fas fa-bars"></div>
+    <div class="Nav-explosive">
+
+
+
+        <p class="a-explosive"><span class="fas fa-home"></span></p>
+        <p class="a-explosive"><span class="fas fa-user"></span></p>
+        <p class="a-explosive"><span class="fas fa-hashtag"></span></p>
+        <p class="a-explosive"><span class="fas fa-gifts"></p>
+
+            
+        <div onclick="typeWriter() " style="  color: #323b3f;  " class="a-explosive">
+            Hecho con<span class="heartbeat">❤</span> y mucho código <small id="powered ">   </small>
+    </div>
+
+
+    </div>
+
+
+    <script>
+        var i = 0;
+        var txt = 'designer luisangel.maciel';
+        var speed = 65;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("powered ").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+    <canvas></canvas>
+
+    <style>
+        [class*="fontawesome-"]:before {
+            font-family: 'FontAwesome', sans-serif;
+        }
+        
+        #Button-explosive {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 60px;
+            height: 60px;
+            font-size: 18px;
+            text-align: center;
+            line-height: 60px;
+            background: #0000002a;
+            border-radius: 50%;
+            color: #ececec;
+            z-index: 1;
+        }
+        
+        .Nav-explosive {
+            position: fixed;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 302px;
+            height: 302px;
+            font-size: 0;
+            transform: scale(0);
+            transition: transform 0.8s;
+            box-shadow: 0px 0px 10px #999;
+            z-index: 1;
+        }
+        
+        .a-explosive {
+            width: 10px;
+            height: 10px;
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            /*   text-shadow: 2px 2px 4px #666;  */
+            color: rgb(0, 0, 0);
+        }
+        
+        .active {
+            transform: scale(1);
+        }
+        
+        canvas {
+            position: fixed;
+        }
+        
+        .bg-black-negro {
+            background-color: rgb(2, 9, 27);
+        }
+    </style>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'>
+    </script>
+    <script src="js/menu-explosivo.js"></script>
+    <script src="https://kit.fontawesome.com/1d9115e34a.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/bg.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <header id="rand-images">
+        <h1>Random</h1>
+        <h2>Backgrounds</h2>
+    </header>
+    <!-- partial -->
+    <script src="js/backgrounds.js"></script>
+
+   
+
+    <div class="container">
+        <p class="wrap-top">
+            <span id="quote"> </span>
+
+            <ins class="wrap-mid">
+                <span class="tweet">Twitt </span>
+                <span id="new-quote"> | New</span>       
+            </ins>
+        </p>
+    </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="js/random.js"></script>
+
+
+    <style>
+        details>summary {
+            transition: color 1s;
+            color: black;
+        }
+        
+        details[open]>summary {
+            color: rgb(1, 1, 31);
+        }
+    </style>
+    <details onclick="elSaludo(saludo)">
+        <summary>
+            <span class="copyYear"></span><a href="https://www.luisangelmaciel.one/" target="_blank">@luisangelmaciel</a>
+            <script>
+                var elements = {
+                    copyYear: document.querySelector('.copyYear')
+                };
+                var footerRandom = [
+                    new Date().getFullYear() + ' ツ  ',
+                    new Date().getFullYear() + ' ㋡ ',
+                    new Date().getFullYear() + ' ☺ ',
+                    new Date().getFullYear() + ' © ',
+                    new Date().getFullYear() + ' 😊 ',
+                    new Date().getFullYear() + ' 🙂 ',
+                    new Date().getFullYear() + ' 😏 ',
+                    new Date().getFullYear() + ' 🙃 ',
+                    new Date().getFullYear() + ' 🙃 '
+                ];
+                var rand = Math.floor(Math.random() * footerRandom.length);
+                elements.copyYear.innerHTML += footerRandom[rand];
+
+                reset();
+            </script>
+        </summary>
+
+      
+
+    <p id="saludo"></p>
+
+    <script>
+        function elSaludo() {
+            var greeting;
+            var time = new Date().getHours();
+            if (time < 10) {
+                greeting = "¡Buenos días, te deseo tengas un buen día!";
+            } else if (time < 20) {
+                greeting = "Hola, ¿Cómo va tu día?";
+            } else {
+                greeting = "Buenas noches, ¿Qué tal tu día?";
+            }
+            document.getElementById("saludo").innerHTML = greeting;
+        }
+    </script>
+
+        <p>
+            Gracias por <mark>su visita número </mark>
+            <span id="count"></span>
+        </p>
+        <script>
+            if (!localStorage.pageLoadCount)
+                localStorage.pageLoadCount = 0;
+            localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+            document.getElementById('count').textContent = localStorage.pageLoadCount;
+        </script>
+        <p>
+            Actualemnte, este documento muestra
+            <del datetime="2006-01-05T13:00:00Z" cite="politica-de-modificacion-de-ejemplos">1 ejemplo</del>
+            <ins datetime="2006-01-05T13:00:00Z" cite="politica-de-modificacion-de-ejemplos">2 ejemplos</ins>.
+        </p>
+    </details>
+
+
+
+
+
+    <dialog>
+
+        <template id="element-details-template">
+        <style>
+          details {font-family: "Open Sans Light",Helvetica,Arial}
+          .name {font-weight: bold; color: #217ac0; font-size: 120%}
+          h4 { margin: 10px 0 -8px 0; }
+          h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
+          h4 span { border: 1px solid #cee9f9; border-radius: 4px }
+          h4 span { color: white }
+          .attributes { margin-left: 22px; font-size: 90% }
+          .attributes p { margin-left: 16px; font-style: italic }
+        </style>
+        <details>
+          <summary>
+            <span>
+              <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+              <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+            </span>
+          </summary>
+          <div class="attributes">
+            <h4><span>Attributes</span></h4>
+            <slot name="attributes"><p>None</p></slot>
+          </div>
+        </details>
+        <hr>
+      </template>
+
+
+
+        <section>
+            <hgroup>
+                <h1>Primera sección de nivel 1</h1>
+                <h2>Breve descripción de la sección de nivel 1</h2>
+            </hgroup>
+            <p>En esta nueva sección hablaremos de bla bla bla y de blu blu blu. Bla bli blo blu...</p>
+            <p> Texto normal y... <s>Texto tachado</s> </p>
+            <p>We <em>had</em> to do something about it.</p>
+
+            Este atributo es <del cite="ref/atributos-desaprobados">perfectamente válido</del> <ins>desaprobado</ins>.
+            <p lang="en" xml:lang="en">This is a paragraph in English.</p>
+            <p lang="es" xml:lang="es">Este es un párrafo en español.</p>
+
+            <br>
+            <p>My <em>favorite</em> book of all time has <em>got</em> to be
+                <cite>A Cat's Life</cite>. It is a book by P. Rahmel that talks about the <i lang="la">Felis catus</i> in modern human society.IMPORTANTE
+            </p>
+        </section>
+
+
+        <style>
+            details>summary {
+                transition: color 1s;
+                color: black;
+            }
+            
+            details[open]>summary {
+                color: rgb(1, 1, 31);
+            }
+        </style>
+        <details>
+            <summary>Details + Summary // dl+dt+dd</summary>
+            Actualemnte, este documento muestra <del datetime="2006-01-05T13:00:00Z" cite="politica-de-modificacion-de-ejemplos">1 ejemplo</del> <ins datetime="2006-01-05T13:00:00Z" cite="politica-de-modificacion-de-ejemplos">2 ejemplos</ins>.
+        </details>
+    </dialog>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

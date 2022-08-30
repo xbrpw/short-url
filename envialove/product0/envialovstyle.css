@@ -1,0 +1,691 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap");
+@font-face {
+  font-family: "Intro";
+  src: url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Bold-Alt.eot?#iefix") format("embedded-opentype"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Bold-Alt.woff") format("woff"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Bold-Alt.ttf") format("truetype"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Bold-Alt.svg#Intro-Bold-Alt") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Intro";
+  src: url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Black-Alt.eot?#iefix") format("embedded-opentype"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Black-Alt.otf") format("opentype"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Black-Alt.woff") format("woff"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Black-Alt.ttf") format("truetype"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Black-Alt.svg#Intro-Black-Alt") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Intro";
+  src: url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Light-Alt.eot?#iefix") format("embedded-opentype"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Light-Alt.woff") format("woff"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Light-Alt.ttf") format("truetype"), url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/fonts/Intro-Light-Alt.svg#Intro-Light-Alt") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+.carousel-heading {
+  color: #323232;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  padding: 0 0 0 30px;
+  position: relative;
+}
+.carousel-heading span {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #75c01c;
+}
+.carousel-heading::before, .carousel-heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  transform: translateY(-50%);
+}
+.carousel-heading::before {
+  left: 0;
+  width: 11px;
+  height: 24px;
+  background-color: #75c01c;
+}
+.carousel-heading::after {
+  left: 11px;
+  border-left: 8px solid #75c01c;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.carousel-products {
+  display: block;
+  height: 480px;
+  width: 100%;
+}
+.carousel-products .owl-nav button.owl-prev, .carousel-products .owl-nav button.owl-next {
+  background-color: #fff !important;
+  border: solid 1px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px;
+  outline: 0 !important;
+  position: absolute !important;
+  top: 40% !important;
+}
+.carousel-products .owl-nav button.owl-prev i, .carousel-products .owl-nav button.owl-next i {
+  background: none !important;
+  height: auto !important;
+  margin: 15px 10px !important;
+  width: auto !important;
+}
+.carousel-products .owl-nav button.owl-prev:hover, .carousel-products .owl-nav button.owl-next:hover {
+  background-color: #cacaca !important;
+}
+.carousel-products .owl-nav button.owl-prev {
+  left: 0 !important;
+}
+.carousel-products .owl-nav button.owl-next {
+  right: 0 !important;
+}
+
+.carousel-product-wrapper {
+  display: block;
+  font-family: "Ubuntu", Arial, sans-serif;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.carousel-product-wrapper a:link, .carousel-product-wrapper a:visited, .carousel-product-wrapper a:active, .carousel-product-wrapper a:hover {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #d8d8d8;
+  color: #78b800;
+  display: block;
+  margin: 5px 10px;
+  min-height: 480px;
+  padding: 15px;
+  text-decoration: none;
+}
+.carousel-product-wrapper a:hover {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #d8d8d8;
+  color: #78b800;
+  display: block;
+  margin: 5px 10px;
+  min-height: 480px;
+  padding: 15px;
+  text-decoration: none;
+}
+.carousel-product-wrapper a:hover .product-actions .cta-buy-now {
+  background-color: #000;
+}
+.carousel-product-wrapper .product-heading {
+  background-color: #000000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 10px 25px;
+  position: relative;
+  border-radius: 4px;
+}
+.carousel-product-wrapper .product-heading:before {
+  background-color: #fff;
+  left: 0;
+  width: 6px;
+  height: 18px;
+}
+.carousel-product-wrapper .product-heading:after {
+  border-left: 4px solid #fff;
+  left: 6px;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  transform: translateY(-50%);
+}
+.carousel-product-wrapper .product-heading:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  transform: translateY(-50%);
+}
+.carousel-product-wrapper .product-description {
+  position: relative;
+  max-width: 215px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #4c4c4c;
+  padding: 0 0 15px 15px;
+  margin-top: 15px;
+  width: 100%;
+  z-index: 10;
+}
+.carousel-product-wrapper .product-image {
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center center;
+  background-size: auto 100%;
+  display: block;
+  text-align: center;
+  height: 180px;
+}
+.carousel-product-wrapper .product-image.product-image-landsacpe {
+  background-size: 100% auto;
+}
+.carousel-product-wrapper .product-actions {
+  top: 430px;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+.carousel-product-wrapper .product-actions .cta-buy-now {
+  background-color: #4c4c4c;
+  border-radius: 20px;
+  color: #fff;
+  display: inline-block;
+  font-family: "Ubuntu", Arial, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  min-width: 180px;
+}
+.carousel-product-wrapper .price-tags {
+  top: 325px;
+  left: 5%;
+  position: absolute;
+  text-align: center;
+  width: 90%;
+}
+.carousel-product-wrapper .price-tags .price-tag-wrapper {
+  display: inline-block;
+  margin: 0 5px;
+}
+.carousel-product-wrapper .price-tag-wrapper {
+  display: block;
+  margin: 10px 0 0;
+  perspective: 1000px;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag-outer {
+  border-radius: 5px;
+  height: 80px;
+  transition: 0.6s;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  position: relative;
+  width: 140px;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag-cover {
+  background-color: #fff;
+  background-image: url("https://www.tottus.com.pe/static/carrito/tottus-carrito-flotante-final-peru/images/icono-tottus.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  font-family: "Ubuntu", Arial, sans-serif;
+  height: 100%;
+  position: absolute;
+  transform: rotateX(0deg);
+  width: 100%;
+  z-index: 20;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag {
+  background-color: #fff;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  font-family: "Ubuntu", Arial, sans-serif;
+  font-size: 12px;
+  display: block;
+  height: 100%;
+  position: absolute;
+  transform: rotateX(180deg);
+  z-index: 10;
+  width: 100%;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-inner {
+  display: block;
+  overflow: hidden;
+  padding: 6px 10px;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-heading {
+  color: #888383;
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 2px;
+  letter-spacing: -0.03em;
+  line-height: 1.3em;
+  padding: 0;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-list {
+  color: #f00;
+  display: block;
+  font-weight: 700;
+  font-size: 2.6em;
+  letter-spacing: -0.03em;
+  line-height: 1em;
+  text-align: center;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-list > span {
+  display: inline-block;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-list .price-tag-list-meta .price-tag-list-factor, .carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-list .price-tag-list-meta .price-tag-list-curr {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1em;
+  margin-right: 3px;
+  text-align: right;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-list .price-tag-list-meta .price-tag-list-factor {
+  background-color: #046a38;
+  border-radius: 2px;
+  color: white;
+  font-size: 0.36em;
+  line-height: 1.3em;
+  padding: 0 4px 0 2px;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-list .price-tag-list-decimal {
+  font-size: 0.6em;
+  line-height: 1em;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag .price-tag-regular {
+  color: #888383;
+  display: block;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: line-through;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag.price-tag-imbatible .price-tag-inner {
+  background-image: url("https://www.tottus.com.pe/static/2019/landing/05/28/images/imbatible-tag-trans.png");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: 70px auto;
+  display: block;
+  padding-top: 17px;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag.price-tag-dscto .price-tag-list {
+  font-size: 3.4em;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag.price-tag-dscto .price-tag-list .price-tag-list-meta .price-tag-list-factor, .carousel-product-wrapper .price-tag-wrapper .price-tag.price-tag-dscto .price-tag-list .price-tag-list-meta .price-tag-list-curr {
+  background-color: transparent;
+  color: #f00;
+  display: block;
+  font-size: 0.5em;
+  line-height: 1em;
+  margin-right: 3px;
+  text-align: left;
+}
+.carousel-product-wrapper .price-tag-wrapper .price-tag.price-tag-dscto .price-tag-list .price-tag-list-meta .price-tag-list-factor {
+  font-size: 0.3em;
+}
+
+.carousel-see-more:link, .carousel-see-more:visited, .carousel-see-more:active, .carousel-see-more:hover {
+  background-color: #333;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #d8d8d8;
+  color: #333;
+  display: block;
+  font-family: "Intro", sans-serif;
+  margin: 1px 0;
+  min-height: 480px;
+  padding: 15px;
+  text-decoration: none;
+}
+.carousel-see-more:link .btn-text-seemore, .carousel-see-more:visited .btn-text-seemore, .carousel-see-more:active .btn-text-seemore, .carousel-see-more:hover .btn-text-seemore {
+  display: none;
+}
+.carousel-see-more:link .btn-text-heading, .carousel-see-more:visited .btn-text-heading, .carousel-see-more:active .btn-text-heading, .carousel-see-more:hover .btn-text-heading {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin-top: 150px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.carousel-see-more:link .btn-text-heading .btn-text-heading-category, .carousel-see-more:visited .btn-text-heading .btn-text-heading-category, .carousel-see-more:active .btn-text-heading .btn-text-heading-category, .carousel-see-more:hover .btn-text-heading .btn-text-heading-category {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+.carousel-see-more:link .btn-text-cta, .carousel-see-more:visited .btn-text-cta, .carousel-see-more:active .btn-text-cta, .carousel-see-more:hover .btn-text-cta {
+  color: #333;
+  display: block;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+}
+
+@media (max-width: 991px) {
+  .carousel-product-wrapper .price-tags {
+    text-align: center;
+    width: 90%;
+  }
+  .carousel-product-wrapper .price-tags .price-tag-wrapper {
+    display: inline-block;
+    font-size: 11px;
+    margin: 0 5px;
+  }
+  .carousel-product-wrapper .price-tags.reverse {
+    bottom: 3%;
+    width: auto;
+  }
+  .carousel-product-wrapper .price-tags.reverse .price-tag-wrapper {
+    display: block;
+    margin: 5px 0 0;
+  }
+  .carousel-product-wrapper .price-tags.xs-price-tags {
+    left: 0;
+    transform: scale(0.6) translateY(22%);
+  }
+
+  .carousel-see-more:link .btn-text-heading, .carousel-see-more:visited .btn-text-heading, .carousel-see-more:active .btn-text-heading, .carousel-see-more:hover .btn-text-heading {
+    font-size: 16px;
+  }
+  .carousel-see-more:link .btn-text-heading .btn-text-heading-category, .carousel-see-more:visited .btn-text-heading .btn-text-heading-category, .carousel-see-more:active .btn-text-heading .btn-text-heading-category, .carousel-see-more:hover .btn-text-heading .btn-text-heading-category {
+    font-size: 32px;
+  }
+  .carousel-see-more:link .btn-text-cta, .carousel-see-more:visited .btn-text-cta, .carousel-see-more:active .btn-text-cta, .carousel-see-more:hover .btn-text-cta {
+    font-size: 52px;
+  }
+}
+@media (max-width: 767px) {
+  .carousel-products {
+    height: 490px;
+  }
+
+  .carousel-see-more:link, .carousel-see-more:visited, .carousel-see-more:active, .carousel-see-more:hover {
+    background-image: none;
+    background-color: #046938;
+    border: 0;
+    border-radius: 20px;
+    font-family: "Ubuntu", sans-serif;
+    margin: 10px 15px;
+    min-height: 40px;
+  }
+  .carousel-see-more:link .btn-text-heading, .carousel-see-more:link .btn-text-cta {
+    display: none;
+  }
+  .carousel-see-more:visited .btn-text-heading, .carousel-see-more:visited .btn-text-cta {
+    display: none;
+  }
+  .carousel-see-more:active .btn-text-heading, .carousel-see-more:active .btn-text-cta {
+    display: none;
+  }
+  .carousel-see-more:hover .btn-text-heading, .carousel-see-more:hover .btn-text-cta {
+    display: none;
+  }
+  .carousel-see-more:link .btn-text-seemore, .carousel-see-more:visited .btn-text-seemore, .carousel-see-more:active .btn-text-seemore {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .carousel-see-more:hover {
+    background-color: #69a915;
+  }
+  .carousel-see-more:hover .btn-text-seemore {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.flip-price .price-tag-outer {
+  -webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-5-29 14:11:50
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation flip-horizontal-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+@keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+}
+.carousel-green-1 .carousel-product-wrapper a:hover {
+  box-shadow: 0 0 0 1px #75c01c;
+}
+.carousel-green-1 .carousel-see-more:link, .carousel-green-1 .carousel-see-more:visited, .carousel-green-1 .carousel-see-more:active, .carousel-green-1 .carousel-see-more:hover {
+  background-color: #f5f5f5;
+  background-image: url("https://www.tottus.com.pe/static/2019/snippets/gondolas-tt/images/bg-btn-2.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.carousel-green-1 .carousel-see-more:link .btn-text-seemore, .carousel-green-1 .carousel-see-more:visited .btn-text-seemore, .carousel-green-1 .carousel-see-more:active .btn-text-seemore, .carousel-green-1 .carousel-see-more:hover .btn-text-seemore {
+  display: none;
+}
+.carousel-green-1 .carousel-see-more:link .btn-text-heading, .carousel-green-1 .carousel-see-more:visited .btn-text-heading, .carousel-green-1 .carousel-see-more:active .btn-text-heading, .carousel-green-1 .carousel-see-more:hover .btn-text-heading {
+  color: #fff;
+  margin-top: 140px;
+}
+.carousel-green-1 .carousel-see-more:link .btn-text-heading .btn-text-heading-category, .carousel-green-1 .carousel-see-more:visited .btn-text-heading .btn-text-heading-category, .carousel-green-1 .carousel-see-more:active .btn-text-heading .btn-text-heading-category, .carousel-green-1 .carousel-see-more:hover .btn-text-heading .btn-text-heading-category {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+.carousel-green-1 .carousel-see-more:link .btn-text-cta, .carousel-green-1 .carousel-see-more:visited .btn-text-cta, .carousel-green-1 .carousel-see-more:active .btn-text-cta, .carousel-green-1 .carousel-see-more:hover .btn-text-cta {
+  color: #7ba52a;
+  margin: 45px 0;
+  text-shadow: none;
+}
+
+.carousel-dark-1 .carousel-heading span {
+  color: #050886;
+}
+.carousel-dark-1 .carousel-heading::before {
+  background-color: #050886;
+}
+.carousel-dark-1 .carousel-heading::after {
+  border-left: 8px solid #050886;
+}
+.carousel-dark-1 .carousel-product-wrapper a:hover {
+  box-shadow: 0 0 0 1px #050886;
+}
+.carousel-dark-1 .carousel-product-wrapper .product-heading {
+  background: #050886;
+  background: linear-gradient(90deg, #050886 0%, #470098 100%);
+}
+.carousel-dark-1 .carousel-see-more:link, .carousel-dark-1 .carousel-see-more:visited, .carousel-dark-1 .carousel-see-more:active, .carousel-dark-1 .carousel-see-more:hover {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4e018d+0,09021a+100 */
+  background: #4e018d;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #4e018d 0%, #09021a 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #4e018d 0%, #09021a 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #4e018d 0%, #09021a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4e018d", endColorstr="#09021a",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #d8d8d8;
+  color: #78b800;
+  display: block;
+  font-family: "Intro", sans-serif;
+  margin: 1px 0;
+  min-height: 480px;
+  padding: 15px;
+  text-decoration: none;
+}
+.carousel-dark-1 .carousel-see-more:link .btn-text-seemore, .carousel-dark-1 .carousel-see-more:visited .btn-text-seemore, .carousel-dark-1 .carousel-see-more:active .btn-text-seemore, .carousel-dark-1 .carousel-see-more:hover .btn-text-seemore {
+  display: none;
+}
+.carousel-dark-1 .carousel-see-more:link .btn-text-heading, .carousel-dark-1 .carousel-see-more:visited .btn-text-heading, .carousel-dark-1 .carousel-see-more:active .btn-text-heading, .carousel-dark-1 .carousel-see-more:hover .btn-text-heading {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin-top: 150px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.carousel-dark-1 .carousel-see-more:link .btn-text-heading .btn-text-heading-category, .carousel-dark-1 .carousel-see-more:visited .btn-text-heading .btn-text-heading-category, .carousel-dark-1 .carousel-see-more:active .btn-text-heading .btn-text-heading-category, .carousel-dark-1 .carousel-see-more:hover .btn-text-heading .btn-text-heading-category {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+.carousel-dark-1 .carousel-see-more:link .btn-text-cta, .carousel-dark-1 .carousel-see-more:visited .btn-text-cta, .carousel-dark-1 .carousel-see-more:active .btn-text-cta, .carousel-dark-1 .carousel-see-more:hover .btn-text-cta {
+  color: #390c91;
+  display: block;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+}
+
+.carousel-dark-2 .carousel-heading span {
+  color: #925f04;
+}
+.carousel-dark-2 .carousel-heading::before {
+  background-color: #925a06;
+}
+.carousel-dark-2 .carousel-heading::after {
+  border-left: 8px solid #925a06;
+}
+.carousel-dark-2 .carousel-product-wrapper a:hover {
+  box-shadow: 0 0 0 1px #050886;
+}
+.carousel-dark-2 .carousel-product-wrapper .product-heading {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1b0d03+0,906103+100 */
+  background: #1b0d03;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #1b0d03 0%, #906103 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1b0d03 0%, #906103 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1b0d03 0%, #906103 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1b0d03", endColorstr="#906103",GradientType=1 );
+  /* IE6-9 */
+}
+.carousel-dark-2 .carousel-see-more:link, .carousel-dark-2 .carousel-see-more:visited, .carousel-dark-2 .carousel-see-more:active, .carousel-dark-2 .carousel-see-more:hover {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#906103+0,1b0d03+100 */
+  background: #906103;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #906103 0%, #1b0d03 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #906103 0%, #1b0d03 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #906103 0%, #1b0d03 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#906103", endColorstr="#1b0d03",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  border: 3px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #d8d8d8;
+  color: #78b800;
+  display: block;
+  font-family: "Intro", sans-serif;
+  margin: 1px 0;
+  min-height: 480px;
+  padding: 15px;
+  text-decoration: none;
+}
+.carousel-dark-2 .carousel-see-more:link .btn-text-seemore, .carousel-dark-2 .carousel-see-more:visited .btn-text-seemore, .carousel-dark-2 .carousel-see-more:active .btn-text-seemore, .carousel-dark-2 .carousel-see-more:hover .btn-text-seemore {
+  display: none;
+}
+.carousel-dark-2 .carousel-see-more:link .btn-text-heading, .carousel-dark-2 .carousel-see-more:visited .btn-text-heading, .carousel-dark-2 .carousel-see-more:active .btn-text-heading, .carousel-dark-2 .carousel-see-more:hover .btn-text-heading {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin-top: 150px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.carousel-dark-2 .carousel-see-more:link .btn-text-heading .btn-text-heading-category, .carousel-dark-2 .carousel-see-more:visited .btn-text-heading .btn-text-heading-category, .carousel-dark-2 .carousel-see-more:active .btn-text-heading .btn-text-heading-category, .carousel-dark-2 .carousel-see-more:hover .btn-text-heading .btn-text-heading-category {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+.carousel-dark-2 .carousel-see-more:link .btn-text-cta, .carousel-dark-2 .carousel-see-more:visited .btn-text-cta, .carousel-dark-2 .carousel-see-more:active .btn-text-cta, .carousel-dark-2 .carousel-see-more:hover .btn-text-cta {
+  color: #925a06;
+  display: block;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+}
+
+.carousel-dark-3 .carousel-heading span {
+  color: #7d002b;
+}
+.carousel-dark-3 .carousel-heading::before {
+  background-color: #7d002b;
+}
+.carousel-dark-3 .carousel-heading::after {
+  border-left: 8px solid #7d002b;
+}
+.carousel-dark-3 .carousel-product-wrapper a:hover {
+  box-shadow: 0 0 0 1px #7d002b;
+}
+.carousel-dark-3 .carousel-product-wrapper .product-heading {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1c0316+0,8f0246+100 */
+  background: #1c0316;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #1c0316 0%, #8f0246 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1c0316 0%, #8f0246 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1c0316 0%, #8f0246 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1c0316", endColorstr="#8f0246",GradientType=1 );
+  /* IE6-9 */
+}
+.carousel-dark-3 .carousel-see-more:link, .carousel-dark-3 .carousel-see-more:visited, .carousel-dark-3 .carousel-see-more:active, .carousel-dark-3 .carousel-see-more:hover {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8f0246+0,1c0316+100 */
+  background: #8f0246;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #8f0246 0%, #1c0316 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #8f0246 0%, #1c0316 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #8f0246 0%, #1c0316 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#8f0246", endColorstr="#1c0316",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  color: #7c002a;
+}
+.carousel-dark-3 .carousel-see-more:link .btn-text-cta, .carousel-dark-3 .carousel-see-more:visited .btn-text-cta, .carousel-dark-3 .carousel-see-more:active .btn-text-cta, .carousel-dark-3 .carousel-see-more:hover .btn-text-cta {
+  color: #7c002a;
+}

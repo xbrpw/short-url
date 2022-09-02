@@ -1,0 +1,23 @@
+body {
+  background:#1d1d1d;
+  font-family:Arial,"Liberation Sans",sans-serif;
+}
+
+
+h1, p {
+  margin:25px;
+  color:#efefef;
+  margin-bottom:10px;
+}
+
+p {
+  padding-bottom:25px;
+  color:#cdcdcd;
+
+}
+
+x-meme {
+  display:block;
+  margin:0 auto;
+  width:600px;
+}

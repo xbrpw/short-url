@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Uploading Images</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<! DOCTYPE Html>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Uploading Images</title>
+  </head>
+
+  <body>
+    <script src="https://www.dukelearntoprogram.com//course1/common/js/image/SimpleImage.js">
+    </script>
+    <h1>Upload Image Prototype</h1>
+    <canvas id="can">
+
+    </canvas>
+    <canvas id="can2">
+    </canvas>
+    <div>
+      foreground Image :
+      <input type="file" id="fginput" multiple="false" accept="image/*" onchange="uploadfg()">
+      <br>
+      Background Image :
+      <input type="file" id="bginput" multiple="false" accept="image/*" onchange="uploadbg()">
+      <br>
+      <input type="button" value="Composite Image" onclick="composite()">
+      <input type="button" value="Clear Canvases" onclick="clearCan()">
+
+    </div>
+  </body>
+
+  </html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

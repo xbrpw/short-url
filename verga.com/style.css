@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+canvas {
+  margin: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Math Game</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <!--Game intro and instructions-->
+    <section class='intro'>
+        <h1 class='heading'>One Minute<br>Multiplication</h1>
+      <p class='intro-p'>Are you a timestables <em>ninja?</em><br>
+            Solve as many as you can in one minute!</p>
+        <p class='intro-p'>Type your answer and hit the ENTER button or key.</p>
+    </section>
+
+
+    <!--Container for numbers/question-->
+    <div id='num-display' class='num-display'>
+
+<button id='start-btn' class='start-btn' display='block'>NEW GAME</button>
+    </div>
+
+
+
+    <!--Container for answer field & buttons-->
+    <div class='game-controls'>
+        <!--Container for input & enter button-->
+        <div class='input-go'>
+           
+                <input id='answer-input' class='answer-input'  type='text' maxlength='3'>
+            
+            <button id='enter-btn' class='enter-btn' type='button'name='enter-btn'>ENTER
+            </button>
+        </div>
+        <button type='button' id='restart-btn' class='restart-btn'>RESTART</button>
+    </div>
+    <!--Score-->
+  <div class='timer-score'>
+    <div id='score' class='score'>
+        <!--Append score here-->
+    </div>
+    <!--Game timer-->
+    <div id='timer' class='timer'>Time:<span class='seconds' id='seconds-display'></span>
+        <!--Append timer here-->
+    </div>
+  </div>
+
+    <!-- <footer class='footer'>Made by <a href='https://laurenmayers.github.io/'>Lauren Mayers</a> 2018</footer> -->
+
+       
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

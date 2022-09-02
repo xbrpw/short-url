@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>SorJuanaPedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container text-center">
+  <div class="wrapper">
+    <div class="content-header">
+      <div id="circle"><img class="image-responsive" src="sorjuana.jpg" alt="bust image of Jargan"/></div>
+      <h1 class="me">J<small>arganPedi</small>a</h1>
+    </div>
+    <div id="searchIt">
+      <input id="searchBox" type="text" name="search" placeholder="Buscar Wiki"/>
+    </div><a class="btn btn-primary" onClick="randomWiki()">Random Wiki</a><a class="btn btn-danger" onClick="makeSearch()">Buscar</a>
+    <div id="here"></div>
+    <div>
+      <ul class="animated" id="there"></ul>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

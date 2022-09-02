@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Input</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input</title>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+  <header class="bg-white p-t-1 p-x-1">
+
+    <!--font-->
+
+    <select data-pop="font" class="bg-white p-05 scombobox m-r-05 m-b-1 d-inline-block bg-dark-05 br" lineheight="15" title="Font" fontsize="13">
+      <option value="1" font="1">Arial</option>
+      <option value="2" font="2">Comic Sans</option>
+      <option value="3" font="3">Courier</option>
+      <option value="4" font="4">Impact</option>
+      <option value="5" font="5">Tahoma</option>
+      <option value="6" font="6">Times New Roman</option>
+      <option value="7" font="7">Trebuchet</option>
+    </select>
+
+    <!--font-size-->
+
+    <div class="bg-white d-inline-block m-r-05 m-b-1 bg-dark-05 br" lineheight="15" title="Font Size" fontsize="13">
+      <div class="d-table">
+        <i class="material-icons p-l-05" fontsize="13">format_size</i>
+        <select data-pop="fontsize" class="p-05 scombobox ">
+          <option value="6" fontsize="6">6</option>
+          <option value="8" fontsize="8">8</option>
+          <option value="9" fontsize="9">9</option>
+          <option value="10" fontsize="10">10</option>
+          <option value="11" fontsize="11">11</option>
+          <option value="12" fontsize="12">12</option>
+          <option value="14" fontsize="14">14</option>
+          <option value="15" fontsize="15">15</option>
+          <option value="16" fontsize="16">16</option>
+          <option value="18" fontsize="18">18</option>
+          <option value="20" fontsize="20">20</option>
+          <option value="22" fontsize="22">22</option>
+          <option value="24" fontsize="24">24</option>
+        </select>
+      </div>
+    </div>
+
+    <!--line height-->
+
+    <div class="d-inline-block bg-white m-r-05 m-b-1 bg-dark-05 br" title="Line Height">
+      <div class="d-table">
+        <i class="material-icons p-l-05" fontsize="13">format_line_spacing</i>
+        <select data-pop="lineheight" class="p-05 scombobox" fontsize="13">
+          <option lineheight="10" value="10">1em</option>
+          <option lineheight="11" value="11">1.1em</option>
+          <option lineheight="12" value="12">1.2em</option>
+          <option lineheight="13" value="13">1.3em</option>
+          <option lineheight="14" value="14">1.4em</option>
+          <option lineheight="15" value="15">1.5em</option>
+          <option lineheight="16" value="16">1.6em</option>
+          <option lineheight="17" value="17">1.7em</option>
+          <option lineheight="18" value="18">1.8em</option>
+          <option lineheight="19" value="19">1.9em</option>
+          <option lineheight="19" value="19">2em</option>
+        </select>
+      </div>
+    </div>
+
+    <!--buttons-->
+
+    <label title="Bold">
+    <input type="checkbox" data-pop="textb" data-value="yes" class="hide"/>
+      <i class="material-icons p-05 p-x-1 br m-r-05 bg-dark-05 m-b-1" fontsize="13" lineheight="14">format_bold</i>
+    </label>
+
+    <label title="Italic">
+    <input type="checkbox" data-pop="texti" data-value="yes" class="hide" />
+      <i class="material-icons p-05 p-x-1 br m-r-05 bg-dark-05 m-b-1" fontsize="13" lineheight="14">format_italic</i>
+    </label>
+
+    <label title="Left Align">
+      <input type="radio" data-pop="textalign" data-value="left" class="hide" name="alignment" checked/>
+      <i class="material-icons p-05 p-x-1 br m-r-05 bg-dark-05 m-b-1" lineheight="14" fontsize="13">format_align_left</i>
+    </label>
+    <label title="Centre Align">
+      <input type="radio" data-pop="textalign" data-value="centre" class="hide" name="alignment" />
+      <i class="material-icons p-05 p-x-1 br m-r-05 bg-dark-05 m-b-1" lineheight="14" fontsize="13">format_align_center</i>
+    </label>
+    <label title="Right Align">
+      <input type="radio" data-pop="textalign" data-value="right" class="hide" name="alignment" />
+      <i class="material-icons p-05 p-x-1 br m-r-05 bg-dark-05 m-b-1" lineheight="14" fontsize="13">format_align_right</i>
+    </label>
+
+    <!--column-->
+
+    <select data-pop="columns" class="bg-white p-05 scombobox m-r-05 m-b-1 d-inline-block bg-dark-05 br" title="Columns">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <button class="p-05 p-x-1 br m-r-05 bg-dark-05 m-b-1" data-function="logout">
+      <i class="material-icons" fontsize="13" lineheight="14" title="Clear All">delete_forever</i>
+    </button>
+
+  </header>
+  <main class="bg-dark-1 p-1">
+    <page>
+      <div class="bg-white p-3">
+        <!--<textarea data-pop="textarea1"></textarea>-->
+        <content class="d-block relative">
+          <row>
+            <textframe data-pop="textarea1" contenteditable="true" draggable="true"></textframe>
+            <textframe data-pop="textarea2" contenteditable="true" draggable="true"></textframe>
+            <textframe data-pop="textarea3" contenteditable="true" draggable="true"></textframe>
+            <textframe data-pop="textarea4" contenteditable="true" draggable="true"></textframe>
+            <textframe data-pop="textarea5" contenteditable="true" draggable="true"></textframe>
+            <textframe data-pop="textarea6" contenteditable="true" draggable="true"></textframe>
+          </row>
+        </content>
+      </div>
+    </page>
+  </main>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

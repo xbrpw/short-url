@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Meme Generator Custom Element in Polymer</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/platform.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.3.4/polymer.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+
+<polymer-element name="x-meme" attributes="src text">
+  <template>
+    <style>
+      :host div {
+        position: relative;
+        margin: 0;
+        display: inline-block;
+      }
+
+      :host p {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 20pt;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 4px rgba(150, 150, 150, 1);
+        text-align: center;
+        position: absolute;
+        margin: 0;
+        color: #ffffff;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+      }
+      
+      :host img {
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+      }
+    </style>
+
+    <div>
+      <img src="{{src}}" style="width:{{width}}; height:{{height}};" />
+      <p style="top:{{top}}; left:{{left}};">{{text}}</p>
+    </div>
+  </template>
+  <script>
+    Polymer('x-meme', {
+      created: function() {
+        // An instance of the element is created. Initialize attributes with
+        // default values. This also hints at the "type" for these attributes.
+        this.src = 'http://placekitten.com/100/100';
+        this.text = '';
+        this.width = 'auto';
+        this.height = 'auto';
+        this.top = '0';
+        this.left = '0';
+      },
+      ready: function() {
+        // The element was created and fully prepared (eg shadow DOM, event 
+        // listeners etc). #Polymer only, not part of W3C specification.
+      },
+      attached: function () {
+        // Element instance was attached to DOM.
+        this.src = this.getAttribute('src');
+        this.text = this.getAttribute('text');
+        var w = this.getAttribute('width');
+        this.width = (w !== null) ? w + 'px' : 'auto';
+        var h = this.getAttribute('height');
+        this.height = (h !== null) ? h + 'px' : 'auto';
+        this.top = this.getAttribute('top') + 'px';
+        this.left = this.getAttribute('left') + 'px';
+      },
+      domReady: function() {
+        // Elements children are also now guaranteed to exist.
+        // #Polymer only, not part of specification.
+      },
+      detached: function() {
+        // Element is removed from the DOM.
+      },
+      attributeChanged: function(attrName, oldVal, newVal) {
+        // Be notified when an attribute on the element changes.
+        if (attrName === 'height' || attrName === 'width' || attrName === 'top' ||
+            attrName === 'left') {
+          this[attrName] = newVal + 'px';
+        } else {
+          this[attrName] = newVal;
+        }
+      }
+    });
+  </script>
+</polymer-element><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Polymer based Meme Generator</h1>
+<p>A simple meme generator showing the power of using Custom Elements with Polymer. Features data binding for attributes so everything updates in real time. No more photoshop needed for creating your memes! These ones are searchable, indexable for SEO, and updateable on the fly.</p>
+
+<x-meme src="http://www.jasonmayes.com/presentations/webComponents/exampleCode/4/oneday.jpg" width="600" text="One day, all of this will make sense" top="10" left="80"></x-meme>
+
+<x-meme src="http://www.jasonmayes.com/presentations/webComponents/exampleCode/4/allthistime.jpg" width="600" text="All this time I have been using Photoshop to make memes" top="200" left="350"></x-meme>
+
+<x-meme src="http://www.jasonmayes.com/presentations/webComponents/exampleCode/4/notsure.jpg" width="600" text="Not sure if native HTML or web component" top="10" left="50"></x-meme>
+
+<x-meme src="http://www.jasonmayes.com/presentations/webComponents/exampleCode/4/allthethings.jpg" width="600" text="Polymer all the things!" top="375" left="150"></x-meme>
+
+<x-meme src="http://www.jasonmayes.com/presentations/webComponents/exampleCode/4/mallard.jpg" width="600" text="Wise mallard asks: What will you make?" top="370" left="60"></x-meme>
+
+<x-meme src="http://www.jasonmayes.com/presentations/webComponents/exampleCode/4/understood.jpg" width="600" text="I finally get what this guy is talking about" top="60" left="275"></x-meme>
+<!-- partial -->
+  
+</body>
+</html>

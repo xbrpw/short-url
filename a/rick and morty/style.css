@@ -1,0 +1,461 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
+
+textarea:focus, input:focus{outline: none;}
+*:focus {outline: none;}
+
+body {
+	width: 40%;
+	height: 40%;
+	font-family: 'Metal Mania', cursive;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.1;
+ 	background-color: #131313;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0px;
+	font-family: 'Metal Mania', cursive;
+	font-weight: 300;
+	font-style: normal; 
+	line-height: 1.3;
+}
+
+h1 {font-size: 30px;}
+h2 {font-size: 22px;}
+h3 {font-size: 18px;}
+h4 {font-size: 16px;}
+h5 {font-size: 14px;}
+h6 {font-size: 12px;}
+
+.normal {font-weight: 400;}
+.semibold {font-weight: 600;}
+.bold {font-weight: 700;}
+
+p {
+	font-family: 'Metal Mania', cursive;
+	font-weight: 300;
+	line-height: 1.3;
+	font-size: 16px;
+}
+
+b, strong {font-weight: bold;}
+i {font-style: italic;}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+input {-webkit-appearance: none;}
+
+
+.wrapper {
+	width: 30%;
+	float: centert;
+}
+
+.full-width {
+	width: 60%;
+	float: left;
+	box-sizing: border-box;
+}
+.fixed-width {
+	width: 500px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+
+
+
+
+.console {
+	width: 500px;
+	padding: 0 0 30px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+.console h1 {
+	margin: 30px 0 10px 0;
+	font-size: 60px;
+	color: #00B0C7;
+}
+.console button {
+	color: #B3D54D;
+	border: 1px solid #B3D54D;
+	padding: 5px 20px;
+	background: none;
+	cursor: pointer;
+	font-family: 'Metal Mania', cursive;
+	font-weight: 300;
+	font-size: 24px;
+	-moz-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+.console button:hover,
+.rick .console button#rick,
+.morty .console button#morty {
+	background: #B3D54D;
+	color: #131313;
+}
+
+.stage {
+	width: 500px;
+	margin: 0 auto;
+}
+.main-stage {
+	width: 500px;
+	height: 500px;
+	position: relative;
+	background-size: cover;
+}
+
+.stage-quote {
+	position: relative;
+	margin-bottom: 100px;
+}
+.stage-quote h2 {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #00B0C7;
+	-moz-transition: 2s ease-in-out;
+	-o-transition: 2s ease-in-out;
+	-webkit-transition: 2s ease-in-out;
+	transition: 2s ease-in-out;
+}
+.rick .quote-rick,
+.morty .quote-morty {
+	visibility: visible;
+	opacity: 1;
+}
+
+.triangle {
+	position: absolute;
+	width: 100%; 
+	height: 100%;
+}
+
+.t-1,.t-31 {transition: 1.05s ease-out;}
+.t-2,.t-32 {transition: 1.1s ease-out;}
+.t-3,.t-33 {transition: 1.15s ease-out;}
+.t-4,.t-34 {transition: 1.2s ease-out;}
+.t-5,.t-35 {transition: 1.25s ease-out;}
+.t-6,.t-36 {transition: 1.3s ease-out;}
+.t-7,.t-37 {transition: 1.35s ease-out;}
+.t-8,.t-38 {transition: 1.4s ease-out;}
+.t-9,.t-39 {transition: 1.45s ease-out;}
+.t-10,.t-40 {transition: 1.5s ease-out;}
+
+.t-11,.t-41 {transition: 1.55s ease-out;}
+.t-12,.t-42 {transition: 1.6s ease-out;}
+.t-13,.t-43 {transition: 1.65s ease-out;}
+.t-14,.t-44 {transition: 1.7s ease-out;}
+.t-15,.t-45 {transition: 1.75s ease-out;}
+.t-16,.t-46 {transition: 1.8s ease-out;}
+.t-17,.t-47 {transition: 1.85s ease-out;}
+.t-18,.t-48 {transition: 1.9s ease-out;}
+.t-19,.t-49 {transition: 1.95s ease-out;}
+.t-20,.t-50 {transition: 2s ease-out;}
+
+.t-21,.t-51 {transition: 2.05s ease-out;}
+.t-22,.t-52 {transition: 2.1s ease-out;}
+.t-23,.t-53 {transition: 2.15s ease-out;}
+.t-24,.t-54 {transition: 2.2s ease-out;}
+.t-25,.t-55 {transition: 2.25s ease-out;}
+.t-26,.t-56 {transition: 2.3s ease-out;}
+.t-27,.t-57 {transition: 2.35s ease-out;}
+.t-28,.t-58 {transition: 2.4s ease-out;}
+.t-29,.t-59 {transition: 2.45s ease-out;}
+.t-30,.t-60 {transition: 2.5s ease-out;}
+
+
+
+/* Rick */
+
+.rick .t-1 {-webkit-clip-path: polygon(56% 5%, 41% 31%, 61% 33%);}
+.rick .t-2 {-webkit-clip-path: polygon(26% 9%, 34% 40%, 47% 29%);}
+.rick .t-3 {-webkit-clip-path: polygon(10% 28%, 32% 52%, 38% 34%)}
+.rick .t-4 {-webkit-clip-path: polygon(14% 44%, 32% 59%, 32% 46%);}
+.rick .t-5 {-webkit-clip-path: polygon(16% 59%, 33% 67%, 32% 52%);}
+
+.rick .t-6 {-webkit-clip-path: polygon(22% 72%, 33% 69%, 32% 54%);}
+.rick .t-7 {-webkit-clip-path: polygon(30% 79%, 35% 75%, 33% 65%);}
+.rick .t-8 {-webkit-clip-path: polygon(76% 19%, 55% 29%, 67% 42%);}
+.rick .t-9 {-webkit-clip-path: polygon(86% 42%, 68% 50%, 64% 36%);}
+.rick .t-10 {-webkit-clip-path: polygon(82% 57%, 68% 63%, 68% 47%);}
+
+.rick .t-11 {-webkit-clip-path: polygon(78% 69%, 66% 70%, 68% 56%);}
+.rick .t-12 {-webkit-clip-path: polygon(72% 76%, 64% 75%, 67% 63%);}
+.rick .t-13 {-webkit-clip-path: polygon(50% 57%, 45% 28%, 55% 28%);}
+.rick .t-14 {-webkit-clip-path: polygon(50% 56%, 45% 28%, 38% 33%);}
+.rick .t-15 {-webkit-clip-path: polygon(50% 56%, 55% 28%, 62% 33%);}
+
+.rick .t-16 {-webkit-clip-path: polygon(51% 57%, 33% 39%, 38% 33%);}
+.rick .t-17 {-webkit-clip-path: polygon(49% 57%, 67% 39%, 62% 33%);}
+.rick .t-18 {-webkit-clip-path: polygon(50% 55%, 33% 39%, 31% 46%);}
+.rick .t-19 {-webkit-clip-path: polygon(50% 55%, 67% 39%, 69% 46%);}
+.rick .t-20 {-webkit-clip-path: polygon(53% 56%, 31% 56%, 31% 46%);}
+
+.rick .t-21 {-webkit-clip-path: polygon(47% 56%, 69% 56%, 69% 46%);}
+.rick .t-22 {-webkit-clip-path: polygon(50% 56%, 31% 56%, 33% 69%);}
+.rick .t-23 {-webkit-clip-path: polygon(50% 56%, 69% 56%, 67% 69%);}
+.rick .t-24 {-webkit-clip-path: polygon(50% 55%, 36% 77%, 33% 69%);}
+.rick .t-25 {-webkit-clip-path: polygon(50% 55%, 64% 77%, 67% 69%);}
+
+.rick .t-26 {-webkit-clip-path: polygon(53% 49%, 36% 77%, 40% 82%);}
+.rick .t-27 {-webkit-clip-path: polygon(47% 49%, 64% 77%, 60% 82%);}
+.rick .t-28 {-webkit-clip-path: polygon(50% 55%, 44% 85%, 40% 82%);}
+.rick .t-29 {-webkit-clip-path: polygon(50% 55%, 56% 85%, 60% 82%);}
+.rick .t-30 {-webkit-clip-path: polygon(50% 50%, 44% 85%, 56% 85%);}
+
+.rick .t-31 {-webkit-clip-path: polygon(50% 86%, 44% 85%, 56% 85%);}
+.rick .t-32 {-webkit-clip-path: polygon(34% 50%, 41% 48%, 38% 56%);}
+.rick .t-33 {-webkit-clip-path: polygon(45% 56%, 41% 48%, 38% 56%);}
+.rick .t-34 {-webkit-clip-path: polygon(41% 48%, 49% 49%, 45% 56%);}
+.rick .t-35 {-webkit-clip-path: polygon(47% 54%, 49% 49%, 45% 56%);}
+
+.rick .t-36 {-webkit-clip-path: polygon(34% 50%, 35% 53%, 38% 56%);}
+.rick .t-37 {-webkit-clip-path: polygon(44% 48.4%, 41% 48%, 42.2% 51%);}
+.rick .t-38 {-webkit-clip-path: polygon(52% 50%, 59% 48%, 56% 56%);}
+.rick .t-39 {-webkit-clip-path: polygon(63% 56%, 59% 48%, 56% 56%);}
+.rick .t-40 {-webkit-clip-path: polygon(59% 48%, 67% 49%, 63% 56%);}
+
+.rick .t-41 {-webkit-clip-path: polygon(65% 54%, 67% 49%, 63% 56%);}
+.rick .t-42 {-webkit-clip-path: polygon(52% 50%, 53% 53%, 56% 56%);}
+.rick .t-43 {-webkit-clip-path: polygon(56% 48.8%, 59% 48%, 58.2% 51%);}
+.rick .t-44 {-webkit-clip-path: polygon(32% 59%, 27% 63%, 33% 66%);}
+.rick .t-45 {-webkit-clip-path: polygon(68% 59%, 73% 63%, 67% 66%);}
+
+.rick .t-46 {-webkit-clip-path: polygon(36% 39%, 39% 38%, 39% 41%);}
+.rick .t-47 {-webkit-clip-path: polygon(54% 39%, 39% 38%, 39% 41%);}
+.rick .t-48 {-webkit-clip-path: polygon(54% 39%, 59% 41%, 39% 41%);}
+.rick .t-49 {-webkit-clip-path: polygon(54% 39%, 59% 38%, 61% 42%);}
+.rick .t-50 {-webkit-clip-path: polygon(64% 39%, 59% 38%, 61% 42%);}
+
+.rick .t-51 {-webkit-clip-path: polygon(64% 39%, 64% 42%, 61% 42%);}
+.rick .t-52 {-webkit-clip-path: polygon(48% 77%, 54% 76%, 51% 80%);}
+.rick .t-53 {-webkit-clip-path: polygon(48% 77%, 49% 81%, 51% 80%);}
+.rick .t-54 {-webkit-clip-path: polygon(50% 36%, 44% 36%, 57% 34%);}
+.rick .t-55 {-webkit-clip-path: polygon(50% 34%, 44% 34%, 54% 32%);}
+
+.rick .t-56 {-webkit-clip-path: polygon(50% 74%, 54% 76%, 55% 74%);}
+.rick .t-57 {-webkit-clip-path: polygon(50% 74%, 54% 76%, 46% 74.3%);}
+.rick .t-58 {-webkit-clip-path: polygon(48% 77%, 54% 76%, 46% 74.3%);}
+.rick .t-59 {-webkit-clip-path: polygon(50% 73%, 41% 75%, 50% 74%);}
+.rick .t-60 {-webkit-clip-path: polygon(50% 73%, 59% 75%, 50% 74%);}
+
+
+.rick .t-1,
+.rick .t-2,
+.rick .t-3,
+.rick .t-4,
+.rick .t-5,
+.rick .t-6,
+.rick .t-7,
+.rick .t-8,
+.rick .t-9,
+.rick .t-10,
+.rick .t-11,
+.rick .t-12,
+.rick .t-46,
+.rick .t-47,
+.rick .t-48,
+.rick .t-49,
+.rick .t-50,
+.rick .t-51 {background-color: #B5E5FC;}
+
+.rick .t-13,
+.rick .t-14,
+.rick .t-15,
+.rick .t-16,
+.rick .t-17,
+.rick .t-18,
+.rick .t-19,
+.rick .t-20,
+.rick .t-21,
+.rick .t-22,
+.rick .t-23,
+.rick .t-24,
+.rick .t-25,
+.rick .t-26,
+.rick .t-27,
+.rick .t-28,
+.rick .t-29,
+.rick .t-30,
+.rick .t-31,
+.rick .t-44,
+.rick .t-45 {background-color: #EBD9CE;}
+
+.rick .t-32,
+.rick .t-33,
+.rick .t-34,
+.rick .t-35,
+.rick .t-36,
+.rick .t-38,
+.rick .t-39,
+.rick .t-40,
+.rick .t-41,
+.rick .t-42 {background-color: #FFFFFF;}
+
+.rick .t-37,
+.rick .t-43,
+.rick .t-54,
+.rick .t-55,
+.rick .t-59,
+.rick .t-60 {background-color: #000000;}
+
+.rick .t-52,
+.rick .t-53,
+.rick .t-56,
+.rick .t-57,
+.rick .t-58 {background-color: #DFF4CD;}
+
+
+/* Morty */
+
+.morty .t-1 {-webkit-clip-path: polygon(50% 29%, 44% 19%, 56% 19%);}
+.morty .t-2 {-webkit-clip-path: polygon(75% 30%, 49% 30%, 56% 19%);}
+.morty .t-3 {-webkit-clip-path: polygon(75% 30%, 50% 29%, 78% 37%);}
+.morty .t-4 {-webkit-clip-path: polygon(71% 40%, 65% 33%, 78% 37%);}
+.morty .t-5 {-webkit-clip-path: polygon(70% 40%, 79% 49%, 78% 37%);}
+
+.morty .t-6 {-webkit-clip-path: polygon(72% 41%, 79% 49%, 74% 48%);}
+.morty .t-7 {-webkit-clip-path: polygon(51% 30%, 44% 19%, 33% 22%);}
+.morty .t-8 {-webkit-clip-path: polygon(50% 29%, 27% 26%, 33% 22%);}
+.morty .t-9 {-webkit-clip-path: polygon(52% 29%, 27% 26%, 24% 32%);}
+.morty .t-10 {-webkit-clip-path: polygon(41% 30%, 27% 40%, 24% 32%);}
+
+.morty .t-11 {-webkit-clip-path: polygon(24% 49%, 28% 40%, 24% 32%);}
+.morty .t-12 {-webkit-clip-path: polygon(24% 49%, 20% 43%, 24% 32%);}
+.morty .t-13 {-webkit-clip-path: polygon(25% 49%, 20% 43%, 21% 50%);}
+.morty .t-14 {-webkit-clip-path: polygon(50% 57%, 46% 29%, 54% 29%);}
+.morty .t-15 {-webkit-clip-path: polygon(50% 53%, 46% 29%, 40% 30%);}
+
+.morty .t-16 {-webkit-clip-path: polygon(50% 53%, 54% 29%, 60% 30%);}
+.morty .t-17 {-webkit-clip-path: polygon(51% 54%, 34% 33%, 40% 30%);}
+.morty .t-18 {-webkit-clip-path: polygon(49% 54%, 66% 33%, 60% 30%);}
+.morty .t-19 {-webkit-clip-path: polygon(51% 53%, 34% 33%, 28% 39%);}
+.morty .t-20 {-webkit-clip-path: polygon(49% 53%, 66% 33%, 72% 39%);}
+
+.morty .t-21 {-webkit-clip-path: polygon(52% 53%, 24% 48%, 28% 39%);}
+.morty .t-22 {-webkit-clip-path: polygon(48% 53%, 76% 48%, 72% 39%);}
+.morty .t-23 {-webkit-clip-path: polygon(51% 52%, 24% 48%, 25% 62%);}
+.morty .t-24 {-webkit-clip-path: polygon(49% 52%, 76% 48%, 75% 62%);}
+.morty .t-25 {-webkit-clip-path: polygon(52% 51%, 29% 71%, 25% 62%);}
+
+.morty .t-26 {-webkit-clip-path: polygon(48% 51%, 71% 71%, 75% 62%);}
+.morty .t-27 {-webkit-clip-path: polygon(51% 51%, 29% 71%, 34% 76%);}
+.morty .t-28 {-webkit-clip-path: polygon(49% 51%, 71% 71%, 66% 76%);}
+.morty .t-29 {-webkit-clip-path: polygon(50% 52%, 43% 80%, 34% 76%);}
+.morty .t-30 {-webkit-clip-path: polygon(50% 52%, 57% 80%, 66% 76%);}
+
+.morty .t-31 {-webkit-clip-path: polygon(50% 50%, 43% 80%, 57% 80%);}
+.morty .t-32 {-webkit-clip-path: polygon(25% 58%, 20% 49%, 25% 48%);}
+.morty .t-33 {-webkit-clip-path: polygon(75% 58%, 80% 49%, 75% 48%);}
+.morty .t-34 {-webkit-clip-path: polygon(26% 59%, 20% 49%, 19% 52%);}
+.morty .t-35 {-webkit-clip-path: polygon(74% 59%, 80% 49%, 81% 52%);}
+
+.morty .t-36 {-webkit-clip-path: polygon(26% 58%, 21% 56%, 19% 52%);}
+.morty .t-37 {-webkit-clip-path: polygon(74% 58%, 79% 56%, 81% 52%);}
+.morty .t-38 {-webkit-clip-path: polygon(65% 41%, 62% 49%, 59% 41%);}
+.morty .t-39 {-webkit-clip-path: polygon(35% 41%, 38% 49%, 41% 41%);}
+.morty .t-40 {-webkit-clip-path: polygon(53% 46%, 62% 49%, 59% 41%);}
+
+.morty .t-41 {-webkit-clip-path: polygon(47% 46%, 38% 49%, 41% 41%);}
+.morty .t-42 {-webkit-clip-path: polygon(53% 46%, 62% 49%, 53% 52%);}
+.morty .t-43 {-webkit-clip-path: polygon(47% 46%, 38% 49%, 47% 52%);}
+.morty .t-44 {-webkit-clip-path: polygon(56% 56%, 62% 49%, 53% 52%);}
+.morty .t-45 {-webkit-clip-path: polygon(44% 56%, 38% 49%, 47% 52%);}
+
+.morty .t-46 {-webkit-clip-path: polygon(56% 56%, 62% 49%, 68% 56%);}
+.morty .t-47 {-webkit-clip-path: polygon(44% 56%, 38% 49%, 32% 56%);}
+.morty .t-48 {-webkit-clip-path: polygon(56% 56%, 62% 58%, 68% 56%);}
+.morty .t-49 {-webkit-clip-path: polygon(44% 56%, 38% 58%, 32% 56%);}
+.morty .t-50 {-webkit-clip-path: polygon(71% 52%, 62% 49%, 68% 56%);}
+
+.morty .t-51 {-webkit-clip-path: polygon(29% 52%, 38% 49%, 32% 56%);}
+.morty .t-52 {-webkit-clip-path: polygon(71% 52%, 62% 49%, 71% 46%);}
+.morty .t-53 {-webkit-clip-path: polygon(29% 52%, 38% 49%, 29% 46%);}
+.morty .t-54 {-webkit-clip-path: polygon(65% 41%, 62% 49%, 71% 46%);}
+.morty .t-55 {-webkit-clip-path: polygon(35% 41%, 38% 49%, 29% 46%);}
+
+.morty .t-56 {-webkit-clip-path: polygon(60% 51%, 62% 48%, 64% 51%);}
+.morty .t-57 {-webkit-clip-path: polygon(40% 51%, 38% 48%, 36% 51%);}
+.morty .t-58 {-webkit-clip-path: polygon(50% 69%, 44% 70%, 56% 70%);}
+.morty .t-59 {-webkit-clip-path: polygon(43% 72%, 44% 70%, 47% 70%);}
+.morty .t-60 {-webkit-clip-path: polygon(57% 72%, 56% 70%, 53% 70%);}
+
+
+.morty .t-1,
+.morty .t-2,
+.morty .t-3,
+.morty .t-4,
+.morty .t-5,
+.morty .t-6,
+.morty .t-7,
+.morty .t-8,
+.morty .t-9,
+.morty .t-10,
+.morty .t-11,
+.morty .t-12,
+.morty .t-13 {background-color: #8A4C13;}
+
+.morty .t-14,
+.morty .t-15,
+.morty .t-16,
+.morty .t-17,
+.morty .t-18,
+.morty .t-19,
+.morty .t-20,
+.morty .t-21,
+.morty .t-22,
+.morty .t-23,
+.morty .t-24,
+.morty .t-25,
+.morty .t-26,
+.morty .t-27,
+.morty .t-28,
+.morty .t-29,
+.morty .t-30,
+.morty .t-31,
+.morty .t-32,
+.morty .t-33,
+.morty .t-34,
+.morty .t-35,
+.morty .t-36,
+.morty .t-37 {background-color: #FDD2A8;}
+
+.morty .t-38,
+.morty .t-39,
+.morty .t-40,
+.morty .t-41,
+.morty .t-42,
+.morty .t-43,
+.morty .t-44,
+.morty .t-45,
+.morty .t-46,
+.morty .t-47,
+.morty .t-48,
+.morty .t-49,
+.morty .t-50,
+.morty .t-51,
+.morty .t-52,
+.morty .t-53,
+.morty .t-54,
+.morty .t-55 {background-color: #FFFFFF;}
+
+.morty .t-56,
+.morty .t-57,
+.morty .t-58,
+.morty .t-59,
+.morty .t-60 {background-color: #000000;}

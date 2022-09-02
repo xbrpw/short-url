@@ -1,0 +1,173 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #239DFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #e1e1e1;
+}
+
+.screen {
+	_border: 2px solid #333;
+	_max-width: 600px;
+	_max-height: 568px;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	_border-radius: 4px;
+	background-color: #333;
+	display: flex;
+	background: yellow;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	_box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.4);
+}
+.flickity-viewport {
+	height: 100% !important;
+}
+
+.flickity-page-dots {
+	display: flex;
+	justify-content: center;
+	bottom: 24px;
+	overflow: hidden;
+	_background: red;
+}
+.flickity-page-dots .dot {
+	background-color: #000 !important;
+	opacity: 0.2;
+	_flex: 1;
+	margin: 0px 10px;
+	border-radius: 50%;
+	width: 14px;
+	height: 14px;
+}
+.flickity-page-dots .dot.is-selected {
+	opacity: 1;
+	background-color: #fff !important;
+}
+
+.flickity-prev-next-button {
+	z-index: 1;
+	bottom: 10px;
+	top: auto;
+	background-color: #fff;
+	transition: all 0.3s ease;
+	border-radius: 4px;
+	transform: translateY(0px);
+	_width: calc(50% - 15px) !important;
+}
+.flickity-prev-next-button:disabled {
+	opacity: 0 !important;
+	transform: translateY(50px);
+}
+
+.carousel {
+	_position: fixed;
+	_top: 0;
+	_left: 0;
+	width: 100%;
+	height: 100%;
+	min-height:100%;
+	_perspective: 300px;
+}
+.carousel .page {
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+	_display: flex;
+	_flex-direction: column;
+	_justify-content: center;
+	_align-items: center;
+	color: #fff;
+	transition: transform 0.3s ease;
+	  background-position: center center;
+  background-size: cover;
+}
+
+.carousel .page  p{
+	font-size:5vh;
+	text-overflow: ellipsis;
+	_background:red;
+	height:70vh;
+	overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.red {
+	background-color: #D75A4A;
+}
+
+.green {
+	background-color: #8EE177;
+}
+
+.yellow {
+	background-color: #FFD045;
+}
+.blue {
+	background-color: #5599F0;
+}
+
+button.button {
+	background-color: #fff;
+	border-radius: 3px;
+	border: none;
+	padding: 10px;
+	margin: 10px 0px;
+	flex: 1;
+	width: 280px;
+	height: 40px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+	transform:translate3d(0,100%,0);
+  transition: all 2.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+		transform:translate3d(0,0,0);
+
+}
+
+.is--black {
+	color:#000;
+}
+
+.is-clicked {
+  background: red !important;
+}
+
+.is-clicked img.test {
+	transform:translate3d(0,0,0);
+  transition: all 2.4s;
+}
+
+img.test {
+	transform:translate3d(0,100%,0);
+  transition: all 2.4s;
+}
+
+.logger {
+  font-size: 22px;
+  background: #FAFAFA;
+  padding: 10px;
+  text-align: center;
+}

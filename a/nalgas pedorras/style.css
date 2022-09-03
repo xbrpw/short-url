@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+@property --width {
+  syntax: '<length>';
+  initial-value: 12vh;
+  inherits: false;
+}
+
+@property --toot {
+  syntax: '<color>';
+  initial-value: #080;
+  inherits: false;
+}
+
+@property --size {
+  syntax: '<length>';
+  initial-value: 5vh;
+  inherits: false;
+}
+
+@property --pos {
+  syntax: '<length>';
+  initial-value: 28vh;
+  inherits: false;
+}
+
+audio {
+  --width: 12vh;
+  --toot: #080;
+  --size: 5vh;
+  --pos: 28vh;
+  transition: all 0.5s;
+  width: 60vh;
+  height: 100vh;
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(1.5px) contrast(1.5);
+  box-shadow: 5vmin 0 white;
+  background:
+    
+    radial-gradient(farthest-side at 100% 50%, white calc(99.9% - 1.5vh), black 0 99.9%, transparent 0) calc(37.5vh - var(--width)) 15vh / var(--width) 25vh,
+    
+    radial-gradient(var(--toot) 60%, transparent 0) var(--pos) calc(28vh - var(--size) / 2) / var(--size) var(--size),
+    radial-gradient(var(--toot) 60%, transparent 0) calc(var(--pos) + var(--size) / 2) calc(25vh - var(--size) / 2) / var(--size) var(--size),
+    radial-gradient(var(--toot) 60%, transparent 0) calc(var(--pos) + var(--size) / 2) calc(31vh - var(--size) / 2) / var(--size) var(--size),
+    
+    radial-gradient(farthest-side at 100% 50%, white calc(99.9% - 1.5vh), black 0 99.9%, transparent 0) calc(26.5vh - var(--width)) 15vh / var(--width) 25vh,
+    linear-gradient(black, black) 37vh 38.5vh / 1.5vh 40vh,
+    linear-gradient(black, black) 36vh 1vh / 1vh 7vh,
+    linear-gradient(white, white) 26.4vh 0 / 32.2vh 100vh, 
+    linear-gradient(to right, black 1.5vh, transparent 0 calc(100% - 1.5vh), black 0) 25vh 0 / 35vh 60vh
+    ;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+
+@keyframes toot {
+  0% {
+    --width: 12vh;
+    --toot: #080f;
+    --size: 5vh;
+    --pos: 28vh;
+  }
+  20% {
+    --width: 10vh;
+    --toot: #080f;
+    --size: 5vh;
+    --pos: 28vh;
+  }
+  45% {
+    --width: 12vh;
+  }
+  100% {
+    --width: 12vh;
+    --toot: #0800;
+    --size: 15vh;
+    --pos: 0;
+  }
+}
+
+audio:focus {
+  animation: toot 1s 1 forwards;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Editor2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css'>
+  <style>.w3-hide{display:none!important}</style>
+  <style>
+    body { overflow: hidden;}
+
+    @-webkit-keyframes typing { from { width: 0; } }
+      @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+      
+      .typing { 
+        border-right: .1em solid black;
+        width: auto; 
+        width: 35ch;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-animation: typing 3s steps(35, end),
+                  blink-caret .5s step-end infinite alternate;
+      }
+ 
+    /* MODAL  */
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: auto;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+    /* Modal Content */
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    /* The Close Button */
+    
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+      .modal2-input {
+          display: none;
+      }
+      
+      .modal2-input:checked+.modal2 {
+          visibility: visible;
+          opacity: 1;
+      }
+      
+      .modal2 {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          visibility: hidden;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+          background-color: #fff;
+      }
+      
+      .modal2-close {
+          position: fixed;
+          right: 10%;
+          font-size: 3rem;
+          line-height: 2;
+      }
+  </style>
+
+ 
+
+<templete hidden>
+  <label for="modal-2">2</label>
+  <label for="modal-3">3</label>
+
+  <input id="modal-2" name="modal" type="checkbox" class="modal-input" />
+  <div class="modal"><br><br>
+      <label for="modal-2" class="modal-close">&times;</label>
+      <div class="content">
+          2 </div>
+  </div>
+
+
+  <input id="modal-3" name="modal" type="checkbox" class="modal-input" />
+  <div class="modal">
+      <label for="modal-3" class="modal-close">&times;</label>
+      <div class="content">
+          3</div>
+  </div>
+</templete>
+
+
+<body>
+
+<div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="container app">
+  <h1 class="txt-graydarker txtdswh typing">Editor Sor Juana</h1>
+  <template hidden> <button ng-click="disabled = !disabled" unselectable>Disable text-angular Toggle</button></template>  
+  <div style="padding: 1em;  background: #f5f5f5;" text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled' ></div>
+  <br>
+  
+  <div style="padding: 1em;  background: #f5f5f5;">     
+    <input type="button" id="myBtnx" value="Guardar como"/>
+    <label class="btn" type="button" for="modal2-1">Vista previa</label>
+    <input type="button"  value="Vista previa"/>
+  </div>
+
+<!-- Modal Vista Previa -->
+
+<input id="modal2-1" name="modal2" type="checkbox" class="modal2-input" />
+<div class="modal2">
+    <label for="modal2-1" class="modal2-close">&times;</label>
+    <div style="padding: 20 20 20 20">      
+      <div ng-bind-html="htmlcontent" ></div>   
+    </div>
+</div>
+
+    <template hidden>
+        <!-- Lo descarga, pero sin personalizar nombre -->
+        <input type="button" id="dwn-btn" value="Download"/>
+    </template>
+
+  <textarea  ng-model="htmlcontent" style="width: 100%" id="text-val" rows="4" class="w3-hide"></textarea>
+  <textarea id="inputTextToSave" ng-model="htmlcontent" style="width: 100%" rows="4" class="w3-hide"></textarea>
+  
+  <template hidden>
+    <h3>Bound with ta-bind, our internal html-binding directive</h3>
+    <div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div>
+    <button type="button" ng-click="htmlcontent = orightml">Reset</button>
+    <p>Note: although we support classes and styles, angularjs' ng-bind-html directive will strip out all style attributes.</p> 
+    <h3>Option to masquerade as a fancy text-area - complete with form submission and optional ngModel</h3>
+    <text-angular name="htmlcontent"><p>Any <b>HTML</b> we put in-between the text-angular tags gets automatically put into the editor if there <strong style="font-size: 12pt;"><u><em>is not</em></u></strong> a ngModel</p></text-angular>
+  </template>
+
+</div>
+
+
+
+  <!-- The Modal Guardar y descargar -->
+  <div id="myMenuModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>        <br>          
+          Guardar Como<br ><br> 
+          <input id="txtFileName" style="width: 100%; align-items: center;" placeholder="Nombre del archivo"></input><br><br style=" line-height: 1em;"> 
+          <button onclick="saveTextAsFile()" style=" float: right;">Guardar y descargar</button> <br style=" line-height: 1em;"> 
+      </div>
+  </div>
+
+
+
+  <script>
+      // MODAL MENU 
+      // Get the modal Menu 
+      var modal = document.getElementById("myMenuModal");
+      // var modal = document.getElementById("myMenuModal2");
+      
+
+      // Get the button that opens the modal Menu 
+      var btn = document.getElementById("myBtnx");    
+      // var btn = document.getElementById("myBtnVista");    
+      
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script  src="./nombra.js"></script>
+  <script src='angular.min.js'></script>
+  <script src='angular-sanitize.min.js'></script>
+  <script src='textAngular.min.js'></script>
+  <script  src="./script.js"></script>
+  <script  src="./generate-text-file.js"></script>
+
+</body>
+
+</html>
+

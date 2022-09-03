@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+:root {
+  --bg: #141414;
+  --size: 50vmin;
+  --height: var(--size);
+  --width: calc(0.6875 * var(--size));
+  --font-size: calc(0.74 * var(--size));
+  --gap: calc(0.22 * var(--size));
+}
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-family: 'Roboto', sans-serif;
+}
+.top-picks {
+  max-width: 100%;
+  padding: 0 2rem;
+}
+.top-picks__track {
+  height: var(--height);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  padding: 0 var(--gap);
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  counter-reset: index;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+.top-picks__title {
+  color: #fff;
+  font-size: clamp(1.2rem, 5vmin, 3rem);
+  font-weight: 700;
+}
+.top-picks__item {
+  overflow: hidden;
+  width: calc(var(--width) + var(--gap));
+  flex: 0 0 calc(var(--width) + var(--gap));
+  position: relative;
+  list-style: none;
+  counter-increment: index;
+  padding-left: var(--gap);
+  scroll-snap-align: center;
+}
+.top-picks__item.item:hover img {
+  filter: saturate(100%);
+}
+.top-picks__item .item__card {
+  width: var(--width);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 2vmin;
+  background: #242424;
+  overflow-x: hidden;
+}
+.top-picks__item .item__card:after {
+  position: absolute;
+  content: '';
+  bottom: 1rem;
+  right: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url("https://assets.codepen.io/605876/avatar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.top-picks__item .item__card img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.2s;
+  filter: saturate(50%);
+}
+.top-picks__item .item__card span {
+  text-decoration: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  max-width: 50%;
+  text-align: right;
+  color: #fff;
+  font-weight: bold;
+  font-size: clamp(1rem, 2vmin, 2rem);
+  text-shadow: 0.5vmin 0 2vmin var(--bg);
+}
+.top-picks__item:after {
+  content: counter(index);
+  position: absolute;
+  color: var(--bg);
+  font-size: var(--font-size);
+  line-height: 0.7;
+  bottom: 0;
+  font-weight: bold;
+  letter-spacing: -5vmin;
+  left: 0;
+  -webkit-text-stroke: 0.5vmin #fff;
+  text-shadow: 1vmin 0 4vmin var(--bg);
+  transform: translate(-14%, 0);
+}

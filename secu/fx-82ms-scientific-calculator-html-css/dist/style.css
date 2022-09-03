@@ -1,0 +1,289 @@
+body {
+    background: linear-gradient(135deg, #FAD7A1 10%, #E96D71 100%);
+}
+
+.calculator {
+    width: 18rem;
+    height: 35rem;
+    background: hsl(208, 28%, 35%);
+    background: linear-gradient(to top, hsl(208, 30%, 35%), hsl(208, 30%, 40%));
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 100px 30px;
+    border-bottom-right-radius: 100px 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translatex(-50%);
+    left: 50%;
+    padding: 1.5rem;
+    color: hsl(225, 20%, 84%);
+    font-family: Helvetica;
+    box-shadow: 0 0 50px 5px hsla(0, 0%, 0%, .5);
+}
+
+.logo, .model, .svpam {
+    font-size: 90%;
+}
+
+.logo {
+    font-family: 'Eurostile Extended', Impact;
+    text-transform: uppercase;
+}
+
+.model {
+    float: right;
+    font-style: italic;
+    font-family: CMU;
+}
+
+.svpam {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    color: hsl(353, 50%, 70%);
+    margin-top: .75em;
+    font-family: pirulen;
+}
+
+.screen {
+    width: 100%;
+    height: 4rem;
+    background: hsl(190, 20%, 88%);
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px black;
+    margin: 1em 0;
+    color: black;
+}
+
+.screen .input {
+    font-family: 'Scientific Calculator LCD', monospace;
+    font-size: 1rem;
+    position: relative;
+    top: 12px;
+    left: 12px;
+}
+
+.screen .main-display {
+    font-family: 'Segment7Standard', monospace;
+    font-size: 2rem;
+    text-align: right;
+    vertical-align: bottom;
+    width: 275.2px;
+    display: block;
+    position: absolute;
+    padding: .4rem;
+    overflow-x: hidden;
+}
+
+button {
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    border: 0 white none;
+    box-sizing: border-box;
+    color: hsl(225, 20%, 84%);
+    position: relative;
+    box-shadow: 2px 2px 5px 0 hsla(0, 0%, 0%, .75);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+}
+
+.modifiers {
+    margin: 1.5rem 0 1.75rem 0;
+}
+
+.modifiers button {
+    width: 2.35rem;
+    height: 1.25rem;
+    border-radius: 15px;
+    position: relative;
+    margin-right: .75rem;
+    background: hsl(221, 14%, 66%);
+    background: linear-gradient(to top, hsl(221, 14%, 66%), hsl(221, 14%, 71%));
+}
+
+.modifiers button::before, .modifiers button::after {
+    text-transform: uppercase;
+}
+
+.mode::before, .on::before {
+    color: hsl(225, 20%, 84%);
+}
+
+.shift {
+    left: 0;
+}
+
+.alpha {
+    top: 5px;
+}
+
+.mode {
+    float: right;
+    top: 11px;
+}
+
+.on {
+    float: right;
+    right: 0;
+    margin-right: .5em!important;
+}
+
+.shift::before {content: "Shift";}
+.alpha::after {content: "Alpha";}
+.mode::before {content: "Mode"; left: -9px}
+.mode::after {content: "CLR"; right: -9px; color: hsl(34, 68%, 72%);}
+.on::before {content: "ON";}
+
+.replay {
+    background: linear-gradient(to top, hsl(221, 14%, 66%), hsl(221, 14%, 71%));
+    width: 78px;
+    height: 70px;
+    line-height: 70px;
+    position: absolute;
+    left: 38%;
+    top: 30%;
+    border-radius: 125px;
+    text-transform: uppercase;
+    font-size: 9px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 2px 2px 5px 0 hsla(0, 0%, 0%, .75);
+}
+
+button.nav {
+    position: absolute;
+    background: none;
+    box-shadow: none;
+}
+
+.function-keys {
+    margin: 1.5rem 0 .75rem 0;
+}
+
+.function-keys button {
+    background: hsl(198, 39%, 23%);
+    background: linear-gradient(to top, hsl(198, 39%, 23%), hsl(198, 39%, 28%));
+    font-size: small;
+    width: 2.25rem;
+    height: 1.5rem;
+    border-radius: 5px;
+}
+
+.function-keys td {
+    padding-bottom: 1rem;
+    padding-right: .25rem;
+}
+
+.basic-keys {}
+.basic-keys button {
+    width: 2.5rem;
+    height: 1.75rem;
+    background: hsl(221, 14%, 66%);
+    background: linear-gradient(to top, hsl(221, 14%, 66%), hsl(221, 14%, 71%));
+    border-radius: 3px 3px 7px 7px;
+}
+
+.basic-keys td {
+    padding-bottom: 1rem;
+    padding-right: .25rem;
+}
+
+.basic-keys tr:last-child td {
+    padding-bottom: 0;
+}
+
+button.pink {
+    background: hsl(353, 50%, 70%);
+    background: linear-gradient(to top, hsl(353, 50%, 70%), hsl(353, 50%, 75%));
+}
+
+button::before, button::after {
+    position: absolute;
+    font-size: 9px;
+    top: -13px;
+    display: block;
+    width: 100%;
+    display: inline-block;
+}
+
+/* shift */
+button::before {
+    color: hsl(34, 68%, 72%);
+    left: 0;
+    text-align: left;
+}
+
+/* alpha */
+button::after {
+    color: hsl(353, 50%, 70%);
+    right: 0;
+    text-align: right;
+}
+
+.center-shift::before, .center-alpha::after {
+    text-align: center;
+}
+
+.del::before {content: "INS";}
+.ac::before {content: "OFF";}
+.reciprocal::before {content: "x!";}
+.combin::before {content: "nPr";}
+.pol::before {content: "Rec(";}
+.pol::after {content: ":";}
+.cube::before {content: "\221b";}
+.frac::before {content: "d/c";}
+.pow::before {content: "ˣ \221A"}
+.log::before {content: "10 ˣ";}
+.ln::before {content: "e ˣ";}
+.ln::after {content: "e";}
+.minus::before {content: "";}
+.minus::after {content: "A";}
+.deg::before {content: "\2190";}
+.deg::after {content: "B";}
+.hyp::after {content: "C";}
+.sin::before {content: "sin \207b\b9";}
+.cos::before {content: "cos \207b\b9";}
+.tan::before {content: "tan \207b\b9";}
+.sin::after {content: "D";}
+.cos::after {content: "E";}
+.tan::after {content: "F";}
+.rcl::before {content: "STO";}
+.eng::before {content: "\2190";}
+.close::paren:after {content: "X";}
+.comma::before {content: ";";}
+.comma::after {content: "Y";}
+.mem-plus::before {content: "M-";}
+.mem-plus::after {content: "M";}
+.zero::before {content: "Rnd";}
+.period::before {content: "Ran#";}
+.exp::before {content: "\03c0";}
+.ans::before {content: "DRG\25ba";}
+.equals::before {content: "%";}
+.one::before {content: "S-SUM"; font-size: 8px; top: -10px}
+.two::before {content: "S-VAR"; font-size: 8px; top: -10px}
+
+/* jazzy 'x' */
+/* .reciprocal, .square {} */
+
+button span.sup {
+    font-size: xx-small!important; 
+    vertical-align: super;
+}
+
+.sub {
+    font-size: xx-small; 
+    vertical-align: bottom;
+}
+
+.xxs {
+    font-size: xx-small;
+}

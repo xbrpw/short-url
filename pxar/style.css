@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: lightblue;
+}
+
+.lamp{
+  position: relative;
+  top: 0%;
+  left: -34%;
+  /*background-color: #88ce02;*/
+  background-image: url('https://i.ibb.co/dbcVpLd/lamp-60.png');
+  width: 104px;
+  height: 94px;
+  /*animation: move 5s linear;
+  animation-fill-mode: forwards;*/
+}
+@keyframes move{
+  0%{
+    position: relative;
+    top: 0%;
+    left: 0%;
+  }
+  50%{
+    position: relative;
+    top: 10%;
+    left: -35%;
+  }
+}
+h1{
+  position: relative;
+  top: 15px;
+  font-family: 'Merriweather', serif;
+  font-size: 80px;
+  letter-spacing: 60px;
+}
+h1:before{
+  content: "PIXAR";
+  animation: remove 4000ms linear;
+  animation-fill-mode: forwards;
+}
+@keyframes remove{
+  from{
+    content: "PIXAR";
+  }
+  to{
+    content: "P XAR";
+  }
+}

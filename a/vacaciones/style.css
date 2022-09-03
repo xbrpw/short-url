@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --image:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=67c66b04-d28d-599e-a003-8323bafa7d31&637527978504464951');
+}
+
+html {
+  display:grid;
+  place-items:center;
+  min-height:98vh;
+  font-family:'Quicksand',sans-serif;
+  background:
+    url('https://mms.aimdatabase.com/Images/Dealer01/Global/PalmBranches-BG-620.png'),    
+    url("https://www.transparenttextures.com/patterns/sandpaper.png"), Burlywood;
+  background-repeat:repeat-x, repeat;
+  background-size:25% auto, auto auto;
+  overflow-x:hidden;
+}
+body {
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+#wave {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  font-size:0;
+  z-index:1;
+  transform:translateY(100%);
+}
+#wave svg {
+  filter:drop-shadow(0 -25px rgba(255,255,255,.25));
+}
+#wave div {
+  width:100%;
+  height:100%;
+  background:#0099ff;
+  transform:translateY(-10px);
+}
+
+.run_wave {
+  animation:wave 3s ease-out forwards;
+}
+.run_wave svg {
+  animation:wavy 1.5s linear infinite;
+}
+@keyframes wavy {
+  50% { transform:scaleX(2); }
+}
+
+@keyframes wave {
+  50% { transform:translateY(0%); }
+}
+
+/* sandy-text */
+#sandy_text {  
+  position:relative;
+  display:none;  
+  height:300px;
+}
+@keyframes sandy {
+  0% { opacity:0; }
+}
+.text1, .text2 {
+  width:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  font-family:'Quicksand', sans-serif;
+  font-size:150px;  
+  line-height:90%;
+  font-weight:900;
+  text-align:center;
+  margin:0 auto;
+  animation:sandy 1.5s linear forwards;
+}
+#sandy_text .text1 span, #sandy_text .text2 span {
+  display:block;
+  font-size:100px;
+  line-height:100%;
+}
+#sandy_text .text1 {
+  color:transparent;
+  text-shadow:
+    10px 10px 5px peru,
+    -10px -10px 5px white;
+  filter:blur(1px);
+  opacity:.25;
+}
+#sandy_text .text2 {
+  background-color: peru;
+  background-image:url('https://www.transparenttextures.com/patterns/sandpaper.png');
+  color: transparent;
+  text-shadow: 3px 3px 4px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+/* sandy text end*/
+
+#console_contain {
+  width:100%;
+  display:none;
+}
+#console {
+  width:100%;
+  max-width:1000px;
+  height:300px;
+  text-align:center;
+  font-size:0;
+/*   overflow:hidden; */
+  box-sizing:border-box;
+  border-radius:5px;
+  cursor:pointer;
+  position:relative;
+  margin:0 auto;
+}
+
+#find_me {
+  width:fit-content;
+  text-align:center;
+  padding:20px;
+  margin:20px auto;
+  box-sizing:border-box;
+  background:rgba(255,255,255,.25);
+  border-radius:5px;
+}
+
+.find_item, .game_block {
+  background:var(--image);
+  background-size:360px 360px;
+  display:inline-block;
+  position:relative;
+  border-radius:50%;
+}
+.game_block {  
+  opacity:0;
+  animation:fade-in 1s linear forwards;
+}
+@keyframes fade-in {
+  100% { opacity:1; }
+}
+
+.game_block:hover {
+}
+
+.found {
+}
+
+.found:after {
+  content:'\2713';
+  font-size:28px;
+  font-weight:900;
+  line-height:50px;
+  color:white;
+  width:50px;
+  height:50px;  
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform-origin:center center;
+  transform:scale(.75) translate(-60%,-60%);
+  background:limegreen;
+  box-shadow:0 0 5px black;
+  box-sizing:border-box;
+}
+
+#something_amazing {
+  padding: 20px;
+  box-sizing:border-box;
+  color: white;
+  width: fit-content;
+  margin: 50px auto;
+  text-align: center;
+  transition: 1s;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position:relative;
+}
+.show_something_amazing {
+  display:block !important;
+  pointer-events:auto !important;
+  animation:show_awesome 1s linear forwards !important;
+}
+@keyframes show_awesome {
+  100% { opacity:1; }
+}
+
+/* offer styles */
+.sh-offer {
+  width:95%;
+  max-width:600px;
+  min-height:auto;
+  margin:50px auto;
+  position:relative;
+  box-shadow: 
+    -1px 2px 0px #630,
+    -2px 4px 0px #630,
+    -3px 6px 0px #630,
+    -4px 8px 0px #630,
+    -5px 10px 0px #630;
+  background-color: #630;
+  background-image: url(https://www.transparenttextures.com/patterns/tileable-wood-colored.png);
+  background-blend-mode: hard-light;
+  transform: rotate(-2deg);
+}
+
+.sh-offer:nth-child(even) {
+  transform:rotate(2deg);
+}
+
+.offerBlock {
+  box-sizing:border-box;
+  padding:30px;
+}
+
+#si-offer {
+  text-align:center;
+  border-radius:25px;
+}
+
+.si-offer-inner {
+  width:100%;
+  padding:10px 0px;
+  text-align:center;
+  font-weight:400;
+  color:var(--colorAccent);
+}
+
+#si-price {
+  font-size:55px;
+  line-height:36px;
+  font-weight:600;
+}
+#si-info {
+  font-size:18px;
+  padding-bottom:40px;
+}
+#si-btn {
+  width:100%;
+  max-width:350px;
+  margin:0 auto;
+  background:white;
+  color:saddleBrown !important;
+  color:#444;
+  border:2px solid var(--colorAccent);
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing:2px;
+  padding:0px;
+  transition:.25s;
+  position:relative;  
+}
+
+/* #si-btn:hover {
+  transform:scale(.98);
+} */
+
+#si-btn a {
+  color:inherit;
+  text-decoration:none;
+  display:block;
+  padding:20px 0px;
+}
+#si-disc {
+  padding-top:20px;
+  padding-bottom:0;
+  font-size:10px;
+}

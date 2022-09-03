@@ -1,0 +1,401 @@
+@import "compass/css3";
+
+/* -------------------
+*Author:			Brady Sammons		
+*Version:			1.0.0		
+*Website:			bradysammons.com		
+-------------------- */
+@import "compass/reset";
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Tauri);
+
+/* -------------------
+	Variables
+-------------------- */
+// Element Colors
+$metal:#939393;
+$alkali-metal:#98AD2C;
+$alkali-earth-metal:#44B981;
+$transition-metal:#4BB0FD;
+$lanthoid:#D3C100;
+$actinoid:#E09D00;
+$metalloid:#D33636;
+
+//gradients
+@mixin metal-grad(){
+	@include background-image(linear-gradient(left top, lighten($metal, 20%), darken($metal,5%))); 
+}
+@mixin alkali-metal-grad(){
+	@include background-image(linear-gradient(left top, lighten($alkali-metal, 20%), darken($alkali-metal,5%))); 
+}
+@mixin alkali-earth-metal-grad(){
+	@include background-image(linear-gradient(left top, lighten($alkali-earth-metal, 20%), darken($alkali-earth-metal,5%))); 
+}
+@mixin transition-metal-grad(){
+	@include background-image(linear-gradient(left top, lighten($transition-metal, 20%), darken($transition-metal,5%))); 
+}
+@mixin lanthoid-grad(){
+	@include background-image(linear-gradient(left top, lighten($lanthoid, 20%), darken($lanthoid,5%))); 
+}
+@mixin actinoid-grad(){
+	@include background-image(linear-gradient(left top, lighten($actinoid, 20%), darken($actinoid,5%))); 
+}	
+@mixin metalloid-grad(){
+	@include background-image(linear-gradient(left top, lighten($metalloid, 20%), darken($metalloid,5%))); 
+}
+@mixin non-metal-grad(){
+	@include background-image(linear-gradient(left top, lighten($non-metal, 20%), darken($non-metal,5%))); 
+}
+@mixin halogen-grad(){
+	@include background-image(linear-gradient(left top, lighten($halogen, 20%), darken($halogen,5%))); 
+}
+@mixin noble-gas-grad(){
+	@include background-image(linear-gradient(left top, lighten($noble-gas, 20%), darken($noble-gas,5%))); 
+}
+@mixin clearfix(){
+	&:after{
+		content:'';
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+}
+//non-metals
+$non-metal:#6D828A;
+$halogen: #A1823B;
+$noble-gas:#6767BA;
+
+$blank:transparent;
+$element-size:55px;
+html{
+	min-height: 100%;
+	//height: 100%;
+	@include background-image(linear-gradient(#555, #222)); 
+	background-repeat: no-repeat;
+}
+body{
+	font-size:100%;
+	font-family: helvetica, arial, sans-serif;
+}
+h1,h3{
+	font-family: 'Tauri', sans-serif;
+	letter-spacing: -.05em;
+}
+h1{
+	font-size: 2em;
+	margin-top: 30px;
+	color: #eee;
+	text-transform: uppercase;
+	text-shadow:1px 1px 0 #333, 2px 2px 0 #999 ;
+}
+h3{
+	margin:10px 0 20px 0;
+	color: #888;
+	font-weight: normal;
+}
+span.swatch{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: #eee;
+	margin-right: 10px;
+}
+#key{
+	position: absolute;
+	left:165px;
+	z-index: 100;
+	margin-top:55px;
+	ul{
+		float: left;
+		margin-right: 40px;
+		li{
+			line-height: 1.5em;
+			font-size: .8em;
+			color: #B6B6B6;
+		}
+	}
+	
+}
+#wrapper{
+	width: 990px;
+	margin: 0 auto 30px auto;
+	height: 600px;
+	position: relative;
+}
+[class^="element-"]{
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	color:#333;
+	@include box-sizing(border-box);
+	width: $element-size;
+	height: $element-size;
+	font-size: 12px;
+	display:block;
+	float: left;
+	@include perspective(1000);
+	.chip{
+		width: 100%;
+		height: 100%;
+		@include transform-style(preserve-3d);
+		@include transition-property(all);
+		@include transition-duration(.5s);
+		@include transition-timing-function(ease-out);
+		&.long{
+			.front{
+				strong{
+					margin-top: 8px;
+					font-size:1.38em;
+				}
+			}
+			.back{
+				p{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	&:hover .chip{
+		@include rotateY(180deg);
+	}
+	.face{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		@include backface-visibility(hidden);
+		&.front, &.back{
+			@include box-sizing(border-box);
+		}
+		&.front{
+			padding: 4px;
+			i{
+				display: block;
+				font-size: .8em;
+			}
+			strong{
+				font-size:2.2em;
+				display: block;
+				font-weight: bold;
+				text-shadow:0 1px 0 rgba(255,255,255,.2);
+				text-align: center;
+				margin-top: 4px;
+				background: rgba(0,0,0,.1);
+			}
+			@include box-shadow(
+			inset 0 1px 0 rgba(255,255,255,.4), 
+			inset 0 -1px 0 rgba(0,0,0,.3),
+			inset 1px 0 0 rgba(255,255,255,.2),
+			inset -1px 0 0 rgba(0,0,0,.15));
+		}
+		&.back{
+			display: block;
+			@include rotateY(180deg);
+			@include box-sizing(border-box);
+			background: #eee;
+			color: #111;
+			//padding: 5px;
+			p{
+				margin-top: 16px;
+				line-height: 1.2;
+				text-align: center;
+				font-size:.7em;
+				font-weight: 600;
+
+				span{
+					display: block;
+				}
+			}
+		}
+	}
+}
+/* -------------------
+	Elements
+-------------------- */
+span.swatch{
+	&.element-metal{
+		@include metal-grad();
+	}
+	&.element-non-metal{
+		@include non-metal-grad();
+	}
+	&.element-alkali-metal{
+		@include alkali-metal-grad();
+	}
+	&.element-alkali-earth-metal{
+		@include alkali-earth-metal-grad();
+	}
+	&.element-transition-metal{
+		@include transition-metal-grad();
+	}
+	&.element-lanthoid{
+		@include lanthoid-grad();
+	}
+	&.element-actinoid{
+		@include actinoid-grad();
+	}
+	&.element-metalloid{
+		@include metalloid-grad();
+	}
+	&.element-halogen{
+		@include halogen-grad();
+	}
+	&.element-noble-gas{
+		@include noble-gas-grad();
+	}
+
+}
+.element-metal{
+	.front{
+		color: darken($metal,40%);
+		@include metal-grad();
+	}
+	.face.back{
+		background-color: lighten($metal,20%);
+	}
+}
+.element-alkali-metal{ 
+	.front{
+		color: darken($alkali-metal,26%);
+		@include alkali-metal-grad();
+	}
+	.face.back{
+		background-color: lighten($alkali-metal,30%);
+	}
+}
+.element-alkali-earth-metal{ 
+	.front{
+		color: darken($alkali-earth-metal,36%);
+		@include alkali-earth-metal-grad(); 
+	}
+	.face.back{
+		background-color: lighten($alkali-earth-metal,30%);
+	}
+}
+.element-transition-metal{ 
+	.front{
+		color: darken($transition-metal,50%);
+		@include transition-metal-grad(); 
+	}
+	.face.back{
+		background-color: lighten($transition-metal,20%);
+	}
+
+}
+.element-lanthoid{
+	.front{
+		color: darken($lanthoid,28%);
+		@include lanthoid-grad();
+	}
+	.face.back{
+		background-color: lighten($lanthoid,20%);
+	}
+}
+.element-actinoid{
+	.front{
+		color: darken($actinoid,40%);
+		@include actinoid-grad();
+	}
+	.face.back{
+		background-color: lighten($actinoid,20%);
+	}
+
+}
+.element-metalloid{ 
+	.front{
+		color: darken($metalloid,40%);
+		@include metalloid-grad();
+	}
+	.face.back{
+		background-color: lighten($metalloid,20%);
+	}
+}
+.element-non-metal{ 
+	.front{
+		color: darken($non-metal,40%);
+		@include non-metal-grad();
+	}
+	.face.back{
+		background-color: lighten($non-metal,27%);
+	}
+}
+.element-halogen{ 
+	.front{
+		color: darken($halogen,40%);
+		@include halogen-grad();
+	}
+	.face.back{
+		background-color: lighten($halogen,27%);
+	}
+}
+.element-noble-gas{
+	.front{
+		color: darken($noble-gas,40%);
+		@include noble-gas-grad();
+	}
+	.face.back{
+		background-color: lighten($noble-gas,20%);
+	}
+}
+.element-lanthanoid-transitional-metal{
+	.front{
+		color: darken($noble-gas,40%);
+		@include background-image(linear-gradient(left top, $transition-metal, $lanthoid)); 
+	}
+	.face.back{
+		background-color: lighten($transition-metal,20%);
+	}
+}
+.element-actinoid-transitional-metal{
+	.front{
+		color: darken($noble-gas,40%);
+		@include background-image(linear-gradient(left top, $transition-metal, $actinoid)); 
+	}
+	.face.back{
+		background-color: lighten($transition-metal,20%);
+	}
+}
+
+.element-blank{
+	background: $blank;
+	//background: red;
+	cursor: auto;
+	//@include box-shadow(none);
+	&.full{
+		height: $element-size /2;
+		clear: both;
+		width: 100%;
+	}
+}
+
+/* -------------------
+	Media Queries
+-------------------- */
+@media screen and (max-width:989px) {
+	#wrapper{
+		width: 90%;
+		.element-blank{
+			display: none;
+		}
+	}
+	#key{
+		position: static;
+		width: 100%;
+		left:165px;
+		z-index: 100;
+		margin-top:20px;
+		@include clearfix();
+		margin-bottom: 10px;
+		ul{
+			width: 28%;
+			min-width:150px;
+			margin-right: 5%;
+			&:nth-of-type(3){
+				margin-right: 0;
+			}
+		}
+	}
+}

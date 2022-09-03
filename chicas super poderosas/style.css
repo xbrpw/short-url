@@ -1,0 +1,634 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: rgb(240	,183	,71	);
+  overflow: hidden;
+}
+
+.bubbles {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 500;
+}
+
+.bubbles .face {
+  width: 220px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: rgb(251	,210,	190	);
+  border: 5px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubbles .eye {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.bubbles .eye:nth-child(1) {
+  top: 0px;
+  left: -35px;
+  border-radius: 20% 70% 50% 70%;
+  background-image: 
+    radial-gradient(
+      circle at 72% 57%,
+      white 9%,
+      transparent 9%	
+    ),
+    radial-gradient(
+      circle at 65% 52%,
+      black 33%,
+      transparent 33%	
+    ),
+    radial-gradient(
+      circle at 60% 52%,
+      rgb(61,	166,	204) 50%,
+      transparent 50%	
+    );
+}
+.bubbles .eye:nth-child(2) {
+  top: 0px;
+  right: -35px;
+  border-radius: 70% 20% 70% 50%;
+  background-position: 
+    72% 55%,
+    65% 50%,
+    60% 50%;
+  background-image: 
+    radial-gradient(
+      circle at 27% 57%,
+      white 9%,
+      transparent 9%	
+    ),
+    radial-gradient(
+      circle at 35% 52%,
+      black 33%,
+      transparent 33%	
+    ),
+    radial-gradient(
+      circle at 40% 52%,
+      rgb(61,	166,	204) 50%,
+      transparent 50%	
+    );
+}
+
+.bubbles .hair::before {
+  content: '';
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: rgb(255,	240,	70	);
+  transform: rotateZ(-20deg);
+  top: -50px;
+  left: -55px;
+}
+
+.bubbles .hair .mid {
+  content: '';
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(255,	240,	70	);
+  transform: rotateZ(-20deg);
+  top: -50px;
+  left: -55px;
+  z-index: 100;
+}
+
+.bubbles .hair::after {
+  content: '';
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: rgb(255,	240,	70	);
+  transform: rotateZ(20deg);
+  top: -50px;
+  right: -55px;
+}
+
+.bubbles .mouth {
+  width: 25px;
+  height: 35px;
+  border-radius: 45%;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translate(-50%);
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.bubbles .pony::before {
+  content: '';
+  width: 70px;
+  height: 70px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: rgb(255,	240,	70	);
+  border: 5px solid black;
+  position: absolute;
+  top: 20px;
+  left: -50px;
+  transform: rotateZ(60deg);
+} 
+
+.bubbles .pony::after {
+  content: '';
+  width: 70px;
+  height: 70px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: rgb(255,	240,	70	);
+  border: 5px solid black;
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  transform: rotateZ(30deg);
+}
+
+.professor {
+  bottom: 0;
+  left: 0;
+  width: 550px;
+  height: 585px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.professor .head {
+  top: 0;
+  right: 60px;
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  border: 5px solid black;
+  background-color: white;
+  box-shadow: inset -35px 0px 0px 0px black;
+}
+
+.professor .head .hair {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  transform: scaleX(1.6);
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  top: -5px;
+  left: -15px;
+  position: absolute;
+}
+
+.professor .head .eye {
+  top: 55px;
+  left: 5px;
+  position: absolute;
+  width: 10px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 45%;
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.professor .head .eyebrow {
+  top: 50px;
+  left: -1px;
+  position: absolute;
+  width: 27px;
+  height: 8px;
+  background-color: black;
+
+  transform: rotateZ(-20deg) skewX(-20deg);
+}
+
+.professor .head .eye.right {
+  left: 40px;
+  transform: scaleX(-1);
+}
+
+.professor .head .eyebrow.right {
+  left: 40px;
+  transform: rotateZ(20deg) skewX(20deg);
+}
+
+.professor .head .nouse {
+  top: 45px;
+  left: 23px;
+  position: absolute;
+}
+
+.professor .head .nouse::before {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 8px;
+  height: 60px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: skewY(-15deg);
+}
+
+.professor .head .nouse::after {
+  content: '';
+  top: 48px;
+  left: 8px;
+  position: absolute;
+  width: 40px;
+  height: 18px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: skewY(-30deg);
+}
+
+.professor .head .neck {
+  top: 100%;
+  right: -5px;
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+  background-color: white;
+  box-shadow: inset -22px 0px 0px 0px black;
+}
+
+.professor .body {
+  bottom: 0;
+  right: 0;
+  width: 210px;
+  height: 360px;
+  position: absolute;
+  perspective: 1000px;
+}
+
+.professor .body .chest {
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 350px;
+  overflow: hidden;
+  position: absolute;
+  border: 5px solid black;
+  background-color: white;
+  box-shadow: inset -100px 0px 0px 0px black;
+}
+
+.professor .body .tie {
+  top: 0;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 2px solid black;
+  transform: scaleX(.5) rotate(45deg);
+  background-image: linear-gradient(black, black);
+  background-size: 50px 50px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.professor .body .arm-left {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.professor .body .arm-left .arm {
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 50px;
+  position: absolute;
+  border: 5px solid black;
+  background-color: white;
+  background-image: linear-gradient(
+    to right,
+    white 15px,
+    black 15px,
+    black 20px,
+    white 20px
+  );
+  transform-origin: top right;
+}
+
+.professor .body .arm-left .hands {
+  top: -25px;
+  right: 355px;
+  position: absolute;
+  transform: perspective(2000px);
+}
+
+.professor .body .arm-left .hands .fists {
+  width: 40px;
+  height: 110px;
+  position: absolute;
+  background-color: white;
+  border: 5px solid black;
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent 18px,
+      black 18px,
+      black 20px,
+      transparent 20px,
+      transparent 38px,
+      black 38px,
+      black 40px,
+      transparent 40px
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 18px,
+      black 18px,
+      black 20px,
+      transparent 20px,
+      transparent 38px,
+      black 38px,
+      black 40px,
+      transparent 40px
+    ),
+    linear-gradient(
+      to bottom,
+      white 52.5px,
+      black 52.5px,
+      black 57.5px,
+      white 57.5px
+    );
+  background-size: 
+    70% 50%,
+    70% 50%,
+    100% 100%;
+  background-position: 
+    0% 0%,
+    100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 100;
+}
+
+.professor .body .arm-left .hands .fists::before {
+  content: '';
+  top: -5px;
+  left: -18px;
+  width: 10px;
+  height: 35px;
+  position: absolute;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.professor .body .arm-left .hands .fists::after {
+  content: '';
+  top: 50%;
+  right: -18px;
+  width: 10px;
+  height: 35px;
+  position: absolute;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.professor .body .arm-left .hands .stick {
+  top: -60%;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 500px;
+  position: absolute;
+  background-color: black;
+}
+
+.professor .body .arm-right {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.professor .body .arm-right .arm {
+  top: 20px;
+  right: -5px;
+  width: 160px;
+  height: 60px;
+  position: absolute;
+  background-color: black;
+  transform-origin: top right;
+  z-index: -100;
+}
+
+.pot {
+  width: 700px;
+  height: 573px;
+  top: 80%;
+  left: -50%;
+  position: absolute;
+  background-color: black;
+  border-radius: 0 50px 0 0;
+  z-index: 1000;
+  transform: skewX(-15deg) translateX(-100px);
+}
+
+.bubble {
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #69F060;
+  position: absolute;
+  z-index: 1000;
+  border: 5px solid #48a341;
+  box-shadow:
+    inset 0px 0px 20px 5px #56c44e;
+  filter: url(#turbulence);
+}
+
+.bubble::before {
+  content: '';
+  top: 120px;
+  right: 50px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 100% 50% 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.bubble::after {
+  content: '';
+  top: 30px;
+  right: 80px;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50% 100% 50% 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.bubbles.silhouette .face {
+  background-color: #69F060;
+  border-color: #61dd58;
+}
+.bubbles.silhouette .pony::before, .bubbles.silhouette .pony::after {
+  background-color: #69F060;
+  border-color: #61dd58;
+}
+
+.particle {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 500;
+}
+
+.lab {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.lab .desk {
+  width:800px;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+}
+
+.lab .desk .beaker {
+  width: 60px;
+  height: 80px;
+  background-color: white;
+  bottom: 100%;
+  left: 200px;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+}
+.lab .desk .beaker::after {
+  content: '';
+  width: 50px;
+  height: 30px;
+  background-color: black;
+  bottom: 5px;
+  left: 50%;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+
+.lab .desk .v-flask {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  bottom: 100%;
+  left: 600px;
+  border-radius: 50%;
+}
+.lab .desk .v-flask::after {
+  content: '';
+  width: 20px;
+  height: 60px;
+  background-color: white;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+.lab .desk .v-flask::before {
+  content: '';
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0% 20%, 100% 20%, 100% 100%, 0% 100%);
+}
+
+.lab .desk .e-flask {
+  width: 60px;
+  height: 110px;
+  background-color: white;
+  position: absolute;
+  bottom: 100%;
+  left: 350px;
+  border-radius: 0 0 10px 10px;
+  clip-path: polygon(40% 0%, 60% 0%, 60% 40%, 100% 100%, 0% 100%, 40% 40%);
+}
+.lab .desk .e-flask::after {
+  content: '';
+  width: 45px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 0 0 5px 5px;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.lab .desk .tubes {
+  width: 100px;
+  height: 50px;
+  border: 5px solid black;
+  position: absolute;
+  bottom: calc(100% - 10px);
+  left: 450px;
+}
+
+.lab .desk .tube {
+  width: 20px;
+  height: 80px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.lab .desk .tube::after {
+  content: '';
+  width: 10px;
+  height: 50px;
+  background-color: black;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.lab .desk .tube:nth-child(1) {
+  left: 10px;
+}
+.lab .desk .tube:nth-child(2) {
+  left: 40px;
+}
+.lab .desk .tube:nth-child(3) {
+  left: 70px;
+}
+
+.lab .desk .tube:nth-child(1)::after {
+  height: 40px;
+}
+.lab .desk .tube:nth-child(2)::after {
+  height: 20px;
+}
+.lab .desk .tube:nth-child(3)::after {
+  height: 60px;
+}

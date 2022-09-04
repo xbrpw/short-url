@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Math Game</title>
+  <title>Juego de multiplicaciones resuelve tantos como puedas en un minuto</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
 
 </head>
-<body>
+
 <!-- partial:index.partial.html -->
 <body>
+  <!--Right-Align Links <b>☰</b>   -->
+  <div class="w3-block w3-light-grey w3-padding">
+    <span class="w3-xlarge" onclick="document.location='./././index.html'">&#10094; Preguntas frecuentes </span>
+  </div>
+<!--Right-Align Links -->
+
     <!--Game intro and instructions-->
     <section class='intro'>
-        <h1 class='heading'>One Minute<br>Multiplication</h1>
-      <p class='intro-p'>Are you a timestables <em>ninja?</em><br>
-            Solve as many as you can in one minute!</p>
-        <p class='intro-p'>Type your answer and hit the ENTER button or key.</p>
+        <h1 class='heading'>Un minuto de multiplicaciones</h1>
+      <p class='intro-p'>Resuelve tantas como puedas en un minuto</p>
+        <p class='intro-p'>Escriba su respuesta y presione el botón o la tecla ENTER.</p>
     </section>
 
 
     <!--Container for numbers/question-->
     <div id='num-display' class='num-display'>
 
-<button id='start-btn' class='start-btn' display='block'>NEW GAME</button>
+<button id='start-btn' class='start-btn' display='block'>A jugar</button>
     </div>
 
 
@@ -33,10 +40,10 @@
            
                 <input id='answer-input' class='answer-input'  type='text' maxlength='3'>
             
-            <button id='enter-btn' class='enter-btn' type='button'name='enter-btn'>ENTER
+            <button id='enter-btn' class='enter-btn' type='button'name='enter-btn'>Enter
             </button>
         </div>
-        <button type='button' id='restart-btn' class='restart-btn'>RESTART</button>
+        <button type='button' id='restart-btn' class='restart-btn'>Reiniciar el juego</button>
     </div>
     <!--Score-->
   <div class='timer-score'>
@@ -44,13 +51,12 @@
         <!--Append score here-->
     </div>
     <!--Game timer-->
-    <div id='timer' class='timer'>Time:<span class='seconds' id='seconds-display'></span>
+    <div id='timer' class='timer'>Tiempo:<span class='seconds' id='seconds-display'></span>
         <!--Append timer here-->
     </div>
   </div>
 
-    <!-- <footer class='footer'>Made by <a href='https://laurenmayers.github.io/'>Lauren Mayers</a> 2018</footer> -->
-
+  
        
 </body>
 <!-- partial -->

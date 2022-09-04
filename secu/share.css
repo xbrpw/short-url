@@ -1,0 +1,190 @@
+/*html,
+body {
+  width: 100%;
+  height: 100%;
+  display: table;
+  background: white;
+  overflow: hidden;
+}*/
+
+@-webkit-keyframes ripple {
+  to {
+    -webkit-transform: scale(1.8);
+    opacity: 0;
+  }
+}
+@-moz-keyframes ripple {
+  to {
+    -moz-transform: scale(1.8);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  to {
+    -webkit-transform: scale(1.8);
+    -moz-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.main-ctr {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.screen-ctr {
+  background: white;
+  width: 360px;
+  height: 500px;
+  /*border: 1px solid #ddd;*/
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.screen-ctr .ripple {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-animation: 1.5s ripple ease infinite;
+  -moz-animation: 1.5s ripple ease infinite;
+  animation: 1.5s ripple ease infinite;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #4285F4;
+  box-sizing: border-box;
+}
+.screen-ctr .ripple.off {
+  opacity: 0;
+}
+.screen-ctr .par-ctr {
+  margin-bottom: 30px;
+}
+.screen-ctr .par {
+  background: #eee;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.screen-ctr .par.half {
+  width: 50%;
+}
+.screen-ctr .img {
+  width: 100%;
+  height: 200px;
+  background: #eee;
+  margin-bottom: 30px;
+}
+.screen-ctr .img:last-child {
+  margin-bottom: 0;
+}
+.screen-ctr .nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+}
+.screen-ctr .nav.active {
+  overflow: hidden;
+}
+.screen-ctr .fab-ctr {
+  z-index: 9;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transform: rotate(0) translateX(0) translateY(0);
+  -moz-transform: rotate(0) translateX(0) translateY(0);
+  -ms-transform: rotate(0) translateX(0) translateY(0);
+  -o-transform: rotate(0) translateX(0) translateY(0);
+  transform: rotate(0) translateX(0) translateY(0);
+  padding: 10px;
+  will-change: transform;
+  transition: 0.25s all ease-in-out;
+}
+.screen-ctr .fab-ctr.active {
+  -webkit-transform: rotate(-45deg) translateX(-142.5px) translateY(7px);
+  -moz-transform: rotate(-45deg) translateX(-142.5px) translateY(7px);
+  -ms-transform: rotate(-45deg) translateX(-142.5px) translateY(7px);
+  -o-transform: rotate(-45deg) translateX(-142.5px) translateY(7px);
+  transform: rotate(-45deg) translateX(-142.5px) translateY(7px);
+}
+.screen-ctr .fab-ctr.active .fab {
+  color: transparent;
+  box-shadow: none;
+}
+.screen-ctr .fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #4285F4;
+  float: right;
+  will-change: transform;
+  transition: 0.25s all ease-in-out;
+  cursor: pointer;
+  z-index: 999;
+  color: white;
+  line-height: 60px;
+  font-size: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+}
+.screen-ctr .fab:hover {
+  background: #5a95f5;
+}
+.screen-ctr .fab.active {
+  -webkit-transform: scale(6.5);
+  -moz-transform: scale(6.5);
+  -ms-transform: scale(6.5);
+  -o-transform: scale(6.5);
+  transform: scale(6.5);
+  transition: 0.25s all ease-in-out;
+  pointer-events: none;
+}
+.screen-ctr .links {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s all ease;
+  color: white;
+}
+.screen-ctr .links.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+.screen-ctr .links li {
+  width: 25%;
+  height: 80px;
+  float: left;
+  background: transparent;
+  text-align: center;
+  line-height: 80px;
+  font-size: 26px;
+}
+.screen-ctr .links li.close {
+  cursor: pointer;
+}

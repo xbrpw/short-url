@@ -42,8 +42,8 @@ function interval() {
       secondsDisplay.textContent = `${secs}`;
     } else {
       clearInterval();
-      numContainer.innerHTML = `Times up!<br>Score: ${currentScore}`;
-      numContainer.style = 'font-size: 3em';
+      numContainer.innerHTML = `Se acabo el tiempo!<br>Score: ${currentScore}`;
+      numContainer.style = 'font-size: 1em';
     }
   }, 1000);
 }

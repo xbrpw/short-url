@@ -1,443 +1,338 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Horizontal Scroll Containers Mobile &amp; Desktop - Spotify Style</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+<html>
+<title>Escuela Secundaria Oficial No. 514  Sor Juana Ines de la Cruz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style-footer.css">
+<!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+<script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel="stylesheet" href="./share.css">
+<script  src="./share.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-</head>
+<style>
+.mySlides {display:none;}
+
+a:link {
+    color: #000;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+}
+
+
+a:hover {
+    color: #0677FF;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+}
+
+
+a:active {
+    color: #0677FF;
+    text-decoration: none;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+  }
+
+
+
+</style>
 <body>
-<!-- partial:index.partial.html -->
-<div class="container">
-  <div class="hs__wrapper">
-    <div class="hs__header">
-      <h2 class="hs__headline">Headline 1
-      </h2>
-      <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a class="arrow arrow-next"></a></div>
-    </div>
-    <ul class="hs">
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/112/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 1</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/122/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 2</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/132/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 3</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/142/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 4</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/152/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 5</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/162/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 6</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/172/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 7</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/182/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 8</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/192/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 9</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1102/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 10</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1112/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 11</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1122/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 12</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1132/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 13</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1142/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 14</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1152/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 15</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1162/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 16</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1172/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 17</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1182/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 18</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1192/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 19</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1202/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 20</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-    </ul>
-  </div>
-  <div class="hs__wrapper">
-    <div class="hs__header">
-      <h2 class="hs__headline">Headline 2
-      </h2>
-      <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a class="arrow arrow-next"></a></div>
-    </div>
-    <ul class="hs">
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/103/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 0</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/113/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 1</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/123/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 2</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/133/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 3</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/143/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 4</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/153/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 5</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/163/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 6</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/173/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 7</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/183/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 8</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/193/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 9</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1103/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 10</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1113/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 11</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1123/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 12</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1133/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 13</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1143/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 14</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1153/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 15</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1163/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 16</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1173/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 17</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1183/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 18</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1193/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 19</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1203/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 20</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-    </ul>
-  </div>
-  <div class="hs__wrapper">
-    <div class="hs__header">
-      <h2 class="hs__headline">Headline 3
-      </h2>
-      <div class="hs__arrows"><a class="arrow disabled arrow-prev"></a><a class="arrow arrow-next"></a></div>
-    </div>
-    <ul class="hs">
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/104/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 0</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/114/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 1</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/124/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 2</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/134/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 3</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/144/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 4</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/154/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 5</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/164/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 6</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/174/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 7</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/184/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 8</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/194/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 9</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1104/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 10</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1114/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 11</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1124/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 12</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1134/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 13</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1144/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 14</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1154/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 15</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1164/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 16</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1174/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 17</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1184/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 18</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1194/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 19</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-      <li class="hs__item"> 
-        <div class="hs__item__image__wrapper">
-          <!--img.hs__item__image(src="https://source.unsplash.com/random/300×300/?album&sig"+[n]+[i], alt="")--><img class="hs__item__image" src="https://picsum.photos/id/1204/300/300" alt=""/>
-        </div>
-        <div class="hs__item__description"><span class="hs__item__title">Amazing title 20</span><span class="hs__item__subtitle">some subtitle</span></div>
-      </li>
-    </ul>
-  </div>
+
+
+<template hidden>
+<!--Right-Align Links <b>☰</b>   -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-block w3-light-grey w3-padding">
+  <span class="w3-xlarge">Home</span>
+  <span class="w3-right w3-xlarge " onclick="document.location='login.html'"><b>
+    <i class="fa fa-sign-in  w3-xlarge "></i></b></span>
 </div>
-<div class="description">
-  <h3>Description</h3>
-  <p> <strong>Work in progress – </strong>Horizontal scroll containers are hyped right now. Whether you browse the Appstore, search for articles on Medium or set some filters in Instagram. Many apps use this kind of pattern. But most of them are very touch and mobile oriented. So I wondered how to make it nice on touch AND desktop.</p>
-  <p>Depending on your desktop layout, you probably don't want the cards to run over the edge of the screen. Let's take a look at the "Home" section of Spotify. On the desktop, they show 4 to 6 cards in a slider with arrows at the top. And with touch/mobile they use the horizontal overflow scrolling.</p>
-  <p>So let's recreate exactly this behaviour for responsive web use.</p>
-  <p>Things already achieved:</p>
-  <ol>
-    <li>4 column grid on desktop. Tease the 4th on touch.</li>
-    <li>Hide arrows on touch</li>
-    <li>Disable corresponding arrow when end or start has been reached</li>
-    <li>(As suggested) - Toggle arrow state on drag and scroll as well</li>
-    <li>Always keep left and right spacings</li>
-    <li>No ugly scrollbars on any browser</li>
-    <li>Horizontal scrolling, dragging or arrow-click</li>
-    <li>Multiple instances</li>
-    <li>CSS Grid and CSS Vars are nice, but let's make this work on IE11 as well</li>
-  </ol>
-  <p>Todo / open (feel free to left suggestions in the comments)
-    <ol> 
-      <li>If you click an arrow after box has been dragged / scrolled, it is not snapping to the grid anymore.</li>
-      <li>Get rid of jQuery</li>
-    </ol>
-  </p>
-  <p> <strong>BONUS – </strong>I made another alternative version here: <a href="https://codepen.io/kilianso/pen/WqdVLx?editors=1010" target="_blank">https://codepen.io/kilianso/pen/WqdVLx</a></p>
+<!--Right-Align Links -->
+</template>
+
+<!--Right-Align Links <b>☰</b>   -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div  style="display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#f1f1f1!important">
+  <span style="font-size:24px!important">Home</span> 
+  <span style="float:right!important; font-size:24px!important" onclick="document.location='login.html'"><b>
+    <i class="fa fa-sign-in" ></i></b></span>
+</div>
+<!--Right-Align Links -->
+
+
+<!-- intro -->
+<div class="w3-container w3-cell w3-cell-middle">
+ <div class=" ">
+  <ul class="w3-ul ">
+    <li class="w3-bar" onclick="document.location='faq/index.html'">     
+      <img src="./img/sor-juana-ines-de-la-cruz-icon.svg" class="w3-bar-item w3-circle " style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Preguntas frecuentes</span>
+      </div>
+    </li>
+
+    <li class="w3-bar" onclick="document.location='SorJuanaPedia/index.html'">
+      <img src="./img/sor-juana-ines-de-la-cruz-rojo.svg" class="w3-bar-item w3-circle " style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">SorJuanaPedia</span>
+      </div>
+    </li>
+
+    <li class="w3-bar" onclick="document.location='game/multiplicaciones/index.html'">
+      <img src="./img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-bar-item w3-circle" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Un minuto para multiplicar</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      <img src="./img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-bar-item w3-circle" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large"  onclick="document.location='app/calculadora/index.html'">Calculadora</span><br>        
+        <span class="w3-large"  onclick="document.location='app/calculadora-exponencial/index.html'">Calculadora Exponencial </span><br>
+        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica/index.html'">Calculadora Cientifica Pro</span><br>
+        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Blue</span><br>
+        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Red</span><br>
+        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Pink</span><br>
+        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Basic</span><br>
+
+        <span class="w3-large"  onclick="document.location='app/contador-de-palabras/index.html'">Contador de palabras</span><br>
+        <span class="w3-large"  onclick="document.location='app/convertidor-numero-romano/index.html'">Contador de palabras</span><br>
+
+        <span class="w3-large"  onclick="document.location='app/tabla-periodica-de-los-elementos-quimicos-v1/index.html'">Tabla periodica</span><br>
+        <span class="w3-large"  onclick="document.location='app/tabla-periodica-de-los-elementos-quimicos-v2/index.html'">Tabla periodica</span><br>
+        <span class="w3-large"  onclick="document.location='app/tabla-periodica/index.html'">Tabla periodica</span><br>
+
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- partial:index.partial.html -->
+<div class="screen-ctr">    
+  <!-- nav-->
+  <div class="nav">
+    <div class="fab-ctr">
+      <div class="fab ion-android-share-alt"></div>
+    </div>
+  </div>
+  <!-- ripple-->
+  <div class="ripple"></div>
+  <!-- links-->
+  <ul class="links">
+    <li class="ion-social-twitter"></li>
+    <li class="ion-social-facebook"></li>
+    <li class="ion-social-googleplus"></li>
+    <li class="close ion-android-close"></li>
+  </ul>
 </div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+
+
+</div>
+<!-- intro -->
+
+
+
+
+
+
+<!--  Slideshow -->
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="./img/600x400.jpg" style="width:100%">
+  <img class="mySlides" src="./img/600x400-2.jpg" style="width:100%">
+  <img class="mySlides" src="./img/600x400-1.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%">
+  <img class="mySlides" src="hhttps://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lgbti-1554457457.jpg?crop=1xw:1xh;center,top&resize=320:*" >
+
+  <span class="w3-margin-left w3-display-left w3-xxlarge" onclick="plusDivs(-1)">&#10094;</span>
+  <span class="w3-margin-right w3-display-right w3-xxlarge" onclick="plusDivs(1)">&#10095;</span>
+</div>
+<!--  Slideshow -->
+<br><br><br>
+<!-- nav footer -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="w3-light-grey  w3-button w3-block  " style="overflow: hidden; position: fixed; bottom: 0; width: 100%;">
+  <div class="w3-bar-item w3-button "><i class="fa fa-home w3-xlarge"></i></div>  
+  <div class="w3-bar-item w3-button "><i class="fa fa-bell w3-xlarge"></i></div>  
+  <div class="w3-bar-item w3-button "><i class="fa fa-calendar-alt w3-xlarge"></i></div>  
+  <div class="w3-bar-item w3-button "><i class="fa fa-envelope w3-xlarge"></i></div>
+  <div class="w3-bar-item w3-button "><i class="fa fa-tools w3-xlarge"></i></div>
+</div>
+<!-- nav footer -->
+
+
+
+
+
+
+
+<!-- <script type="application/ld+json">
+  {"@context":
+  "https://schema.org",
+  "@type":"NewsArticle",
+  "mainEntityOfPage":
+  {"@type":"WebPage",
+  "@id":"https://www.xbr.pw/NewsArticle.html"},
+  "headline":"Primera linea, igual a lo que llega siendo la descripción",
+  "image":{"@type":"ImageObject",
+  "url":"https://www.xbr.pw/NewsArticle.png",
+  "width":1200,"height":652},
+  "datePublished":"2022-06-03T19:37:58-05:00",
+  "dateModified":"2022-06-03T19:58:44-05:00",
+  "author":{"@type":"Person",
+  "name":"Alonso Rodriguez",
+  "url":"https://xbr.pw/author/luisangelmaciel"},
+  "publisher":{
+    "@type":"Organization",
+    "name":"xbr.pw",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://www.xbr.pw/NewsArticle.png"}}}
+</script>
+-->
+
+
+
+<!-- Progreess -->
+<div style=" width: 100%; height: 8px; background: rgb(255, 255, 255); position: fixed; bottom: 0; width: 100%; margin: 0; overflow: hidden; position: fixed; bottom: 0; ">
+  <div id="myBar " style=" height: 8px; width: 0%; background: linear-gradient( to right, #18487D, #18487D, #005677, #18487D, #18487D, #005677, #18487D, #18487D, #005677); background-position: center 0%; animation: background-slide 25s infinite linear; "></div>
+</div>
+<!--  Progreess -->
+
+<div id="footer" style="text-align: center;">
+
+  <a href="card.html">   <img class="help-img-icon" width="150" height="auto" src="img/logo.png"></img>  </a>
+  <div id="utility-links">
+
+   <div class="help">    
+
+   <ul>
+
+   
+
+     <h3 class="left">Necesitas ayuda</h3>
+     <li><a href="#">C. La Paz 1A, Villa San Agustin Atlapulco, 56346 Chimalhuacán, Méx.</a></li>
+     <li><a href="#"></a></li>
+     <li><img class="help-img-icon" width="18" height="14" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469462241/msg_jn0whe.svg"></img><a href="#">Chat</a></li>
+     <li><img class="help-img-icon" width="15" height="15" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469462243/phone_zfj4ey.svg"></img><a href="#">55 2846 1839</a></li>
+   </ul>
+     </div>
+ 
+  
+    <div class="rectangle"></div>
+
+   <div class="about">
+        <ul>
+          <h3 class="left">CICLO ESCOLAR</h3>
+          <li><a href="#">  2021-2022  </a></li>
+          <li><a href="#">          TURNO MATUTINO      </a></li>
+       </ul>
+       </div>
+  
+    <div class="rectangle"></div>
+  
+  <div class="card">
+        <ul>
+          <h3 class="left">La docencia para la comunidad en el siglo XXI en la Nueva Escuela Mexicana</h3>
+          <li><a href="#">Profr. Jorge Mejía Salinas, Director </a></li>
+          <li><a href="#">Francisco Escamilla, Profesor</a></li>
+       </ul>
+   </div>
+</div>  
+  
+<div id="newsletter-social">  
+    <div id="newsletter">
+    <h3 class="center"> CICLO ESCOLAR: 2021-2022</h3>
+    <p class="deals">Recibe el calendario escolar en tu email</p>
+    <form>
+    <input type="text" placeholder="Enter">
+    <input type="submit" value="Registrar">
+    </form>
+</div>  
+    
+    
+ <div id="social">
+    <a href="https://facebook.com/academy" target="_blank">
+    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/facebook_khedl5.svg"></a></img>
+
+    <a href="https://twitter.com/academy" target="_blank">
+    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/twitter_fu5ejk.svg"></a></img>
+
+    <a href="hhttps://pinterest.com/academy/" target="_blank">
+    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/pinterest_kahh1i.svg"></a></img>
+
+    <a href="https://www.youtube.com/user/academydotcom" target="_blank">
+    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/youtube_xrntt3.svg"></a></img>
+
+    <a href="http://instagram.com/academy" target="_blank">
+    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/instagram_ugek0w.svg"></a></img>
+
+  </div>  
+</div>  
+     
+<div class="rectangle-horiz"></div>
+
+<div id="copyright">
+<ul>
+  <li class="copy">© 2022</li>
+  <li class="copy">Privacy Policy | Terms + Conditions | Sitemap</li>
+  <li class="copy">CALLE LA PAZ SN OTRO CONGLOMERADO 4</li>  
+</div>  
+   </div><i class="fas fa-users-cog"></i><i class="fas fa-user-check"></i><i class="fas fa-file-download"></i><i class="fas fa-file-export"></i>
+   &#10550;  <br><br><br><br>
+</footer>
+<!-- footer -->
+
+<script>
+  // When the user scrolls the page, execute myFunction 
+  window.onscroll = function() {
+      myFunction()
+  };
+
+  function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar ").style.width = scrolled + "% ";
+  }
+</script>
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 </body>
 </html>

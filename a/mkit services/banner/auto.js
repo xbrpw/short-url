@@ -37,8 +37,8 @@ var photo = document.createElement("img");
 link.appendChild(photo);
 
 photo.src =
-    "https://luisangelmaciel.github.io/luisangelmaciel/logos/lamp-developer-products-and-experience.png";
-photo.alt = "luisangelmaciel";
+    
+    "https://www.luisangelmaciel.one/img/lamp-1.svg";
 
 photo.style =
     "border-radius:50%;position:fixed;bottom:20px;right:20px;transition:all 0.5s ease";

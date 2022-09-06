@@ -116,6 +116,14 @@ body {
 	background-color: #5599F0;
 }
 
+.blanco {
+	background-color: #ffffff;
+}
+
+.skyblue {
+	background-color: skyblue;
+}
+
 button.button {
 	background-color: #fff;
 	border-radius: 3px;

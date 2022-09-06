@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Blog Concept Pure CSS + tab + modal + menu efect </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#menuhtml").load("expanding-menu-concept/menu.html");
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="menuhtml"> </div>
+
+    <!-- partial:index.partial.html -->
+    <header class="header">
+        <h1>Simple Blog Concept Pure CSS</h1>
+        <h4>By: <a href="#" target="_blank">Me and Kely and you</a></h4>
+    </header>
+
+
+    <a href="#" class="menu">
+        <div class="pix"></div>
+        <div class="pix"></div>
+        <div class="pix"></div>
+        <div class="pix"></div>
+        <div class="pix"></div>
+        <div class="pix"></div>
+        <div class="pix"></div>
+        <div class="pix"></div>
+        <div class="pix"></div>
+    </a>
+
+
+
+
+    <div>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Raleway:300);
+            @import url(https://fonts.googleapis.com/css?family=Raleway:300);
+            @import url(https://fonts.googleapis.com/css?family=Raleway:300);
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            
+            html {
+                padding-top: 50px;
+                font-family: "Raleway", Helvetica, arial, sans-serif;
+                background-color: #eeeeee;
+            }
+            
+            .header {
+                text-align: center;
+            }
+            
+            .header a {
+                text-decoration: none;
+                color: #b578bd;
+            }
+            /*-------------------------------------------------------------------*/
+            
+            .wrapper {
+                width: 100%;
+                max-width: 75rem;
+                margin: 0 auto;
+                padding: 2rem;
+                text-align: center;
+            }
+            
+            .modal-input {
+                display: none;
+            }
+            
+            .modal-input:checked+.modal {
+                visibility: visible;
+                opacity: 1;
+            }
+            
+            .modal {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                visibility: hidden;
+                padding: 3rem 2rem;
+                background: white;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+            }
+            
+            .modal-close {
+                position: absolute;
+                top: 0;
+                right: 1rem;
+                font-size: 3rem;
+                line-height: 1;
+            }
+            
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            
+            html {
+                padding-top: 50px;
+                font-family: "Raleway", Helvetica, arial, sans-serif;
+                text-align: center;
+                background-color: #eeeeee;
+            }
+            
+            .header {
+                text-align: center;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #bc648b;
+            }
+            /*-------------------------------------------------------------------*/
+            
+            .menu {
+                position: relative;
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin: 2rem auto 0 auto;
+            }
+            
+            .menu .pix {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color: #bc648b;
+                border-radius: 100%;
+                transition: 0.2s ease-in-out;
+            }
+            
+            .menu .pix:nth-of-type(1) {
+                transform: translate(0px, 0px);
+            }
+            
+            .menu .pix:nth-of-type(2) {
+                transform: translate(16px, 0px);
+            }
+            
+            .menu .pix:nth-of-type(3) {
+                transform: translate(32px, 0px);
+            }
+            
+            .menu .pix:nth-of-type(4) {
+                transform: translate(0px, 16px);
+            }
+            
+            .menu .pix:nth-of-type(5) {
+                transform: translate(16px, 16px);
+            }
+            
+            .menu .pix:nth-of-type(6) {
+                transform: translate(32px, 16px);
+            }
+            
+            .menu .pix:nth-of-type(7) {
+                transform: translate(0px, 32px);
+            }
+            
+            .menu .pix:nth-of-type(8) {
+                transform: translate(16px, 32px);
+            }
+            
+            .menu .pix:nth-of-type(9) {
+                transform: translate(32px, 32px);
+            }
+            
+            .menu:hover .pix {
+                background-color: #8d4b68;
+            }
+            
+            .menu:hover .pix:nth-of-type(1) {
+                transform: translate(-8px, -8px);
+            }
+            
+            .menu:hover .pix:nth-of-type(3) {
+                transform: translate(40px, -8px);
+            }
+            
+            .menu:hover .pix:nth-of-type(7) {
+                transform: translate(-8px, 40px);
+            }
+            
+            .menu:hover .pix:nth-of-type(9) {
+                transform: translate(40px, 40px);
+            }
+            
+            .menu.active .pix:nth-of-type(1) {
+                transform: translate(0, 0);
+            }
+            
+            .menu.active .pix:nth-of-type(2) {
+                transform: translate(8px, 8px);
+            }
+            
+            .menu.active .pix:nth-of-type(3) {
+                transform: translate(32px, 0);
+            }
+            
+            .menu.active .pix:nth-of-type(4) {
+                transform: translate(8px, 24px);
+            }
+            
+            .menu.active .pix:nth-of-type(6) {
+                transform: translate(24px, 8px);
+            }
+            
+            .menu.active .pix:nth-of-type(7) {
+                transform: translate(0, 32px);
+            }
+            
+            .menu.active .pix:nth-of-type(8) {
+                transform: translate(24px, 24px);
+            }
+            
+            .menu.active .pix:nth-of-type(9) {
+                transform: translate(32px, 32px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(1) {
+                transform: translate(-8px, -8px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(2) {
+                transform: translate(4px, 4px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(3) {
+                transform: translate(40px, -8px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(4) {
+                transform: translate(4px, 28px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(6) {
+                transform: translate(28px, 4px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(7) {
+                transform: translate(-8px, 40px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(8) {
+                transform: translate(28px, 28px);
+            }
+            
+            .menu.active:hover .pix:nth-of-type(9) {
+                transform: translate(40px, 40px);
+            }
+            
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            
+            html {
+                padding-top: 50px;
+                font-family: "Raleway", Helvetica, arial, sans-serif;
+                background-color: #eeeeee;
+            }
+            
+            .header {
+                text-align: center;
+            }
+            
+            .header a {
+                text-decoration: none;
+                color: #899c9e;
+            }
+            /*-------------------------------------------------------------------*/
+            
+            .wrapper {
+                width: 100%;
+                max-width: 75rem;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+            
+            .tab-controls {
+                text-align: center;
+                width: 100%;
+                margin: 0;
+                padding: 0 0 1rem;
+                border-bottom: 1px solid #fefefe;
+            }
+            
+            @media (min-width: 40rem) {
+                .tab-controls {
+                    display: inline-block;
+                    padding: 0;
+                    border: none;
+                }
+            }
+            
+            .tab-controls li {
+                display: block;
+            }
+            
+            @media (min-width: 40rem) {
+                .tab-controls li {
+                    position: relative;
+                    display: inline-block;
+                    padding: 0 1rem;
+                }
+                .tab-controls li:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    width: 2px;
+                    height: 15px;
+                    background: #fefefe;
+                    transform: translateY(-50%);
+                }
+                .tab-controls li:last-of-type:after {
+                    content: none;
+                }
+            }
+            
+            .tab-controls label {
+                font-size: 1.2rem;
+                color: #677577;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            
+            .tab-controls label:hover {
+                color: #a7b5b6;
+            }
+            
+            .tab-input {
+                display: none;
+            }
+            
+            .tab-item {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            
+            .tab-input:checked+.tab-item {
+                position: static;
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+                transition: 0.3s ease-in-out;
+            }
+            
+            @media (min-width: 40rem) {
+                .tab-item {
+                    font-size: 1.2rem;
+                    line-height: 2;
+                }
+            }
+        </style>
+
+        <div class="wrapper">
+            <ul class="tab-controls">
+                <li><label for="tab-1">Retro</label></li>
+                <li><label for="tab-2">Humblebrag</label></li>
+                <li><label for="tab-3">Playlist</label></li>
+            </ul>
+
+            <div class="tab-content">
+                <input id="tab-1" name="tab" type="radio" class="tab-input" checked />
+                <div class="tab-item">
+                    <p>
+                        Health goth direct trade cornhole beard, gentrify knausgaard man bun tattooed cray. Lo-fi pug intelligentsia, mustache salvia church-key yr leggings food truck squid. Butcher raw denim chartreuse forage, tattooed occupy bitters church-key. Marfa meggings
+                        farm-to-table selfies, art party PBR&amp;B shoreditch dreamcatcher.
+                    </p>
+                </div>
+
+                <input id="tab-2" name="tab" type="radio" class="tab-input" />
+                <div class="tab-item">
+                    <p>
+                        Dreamcatcher affogato leggings fanny pack. Umami readymade selvage brooklyn vice. Thundercats williamsburg drinking vinegar, synth four dollar toast twee everyday carry. Hella small batch narwhal, tilde kitsch salvia ethical mustache iPhone williamsburg
+                        fap vegan.
+                    </p>
+                </div>
+
+                <input id="tab-3" name="tab" type="radio" class="tab-input" />
+                <div class="tab-item">
+                    <p>
+                        Tote bag chillwave messenger bag, single-origin coffee schlitz +1 thundercats lomo. Selvage try-hard viral, pug tattooed tote bag actually typewriter normcore four dollar toast lumbersexual. Put a bird on it mixtape single-origin coffee food truck biodiesel,
+                        bicycle rights butcher deep v. Narwhal 90's swag authentic. Kombucha everyday carry cronut fanny pack keytar next level.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- partial -->
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        <script src="./script.js"></script>
+    </div>
+
+    <div class="wrapper">
+        <p>
+            <label for="modal-1">Lyft Organic</label>
+
+            <label for="modal-2"><b>DIY Artisan</b></label>
+
+            <label for="modal-3">Hexagon Vegan</label>
+        </p>
+    </div>
+
+
+    <input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-1" class="modal-close">&times;</label>
+        <div class="content">
+
+            <h3>Lyft Organic</h3>
+            <p>
+                Before they sold out, raclette helvetica paleo vinyl hexagon literally skateboard stumptown post-ironic. Austin jean shorts green juice, banh mi fixie venmo viral. Fixie raclette deep v, small batch sustainable direct trade humblebrag. Truffaut irony
+                try-hard tousled messenger bag, craft beer godard etsy semiotics brooklyn viral. Small batch 90's polaroid organic, austin vinyl farm-to-table bespoke green juice DIY. Authentic humblebrag polaroid, meh selvage kale chips helvetica austin
+                woke chambray vexillologist raw denim. Meditation brunch mustache bespoke put a bird on it, banjo authentic listicle roof party tbh raw denim mixtape asymmetrical freegan.
+            </p>
+        </div>
+    </div>
+
+    <input id="modal-2" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal"><br><br>
+        <label for="modal-2" class="modal-close">&times;</label>
+        <div class="content">
+            <h3>DIY Artisan</h3>
+            <p>
+                Irony tofu activated charcoal salvia schlitz next level echo park. Skateboard etsy polaroid, quinoa pabst 8-bit you probably haven't heard of them cornhole tattooed activated charcoal cold-pressed wolf street art blog. Fingerstache pok pok iPhone, plaid
+                normcore viral tumeric cray tumblr next level kale chips. Vice banh mi church-key beard cornhole meh pitchfork, pabst lo-fi dreamcatcher edison bulb. Mustache gluten-free lomo before they sold out fam, raclette drinking vinegar pickled.
+                Typewriter gluten-free ramps, wayfarers church-key hoodie polaroid drinking vinegar gentrify next level swag. Butcher af williamsburg seitan food truck, vinyl copper mug marfa man braid bespoke swag waistcoat la croix.
+            </p>
+        </div>
+        <label for="modal-2" class="modal-close">&times;</label>
+    </div>
+
+    <input id="modal-3" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-3" class="modal-close">&times;</label>
+        <div class="content">
+            <h3>Hexagon Vegan</h3>
+            <p>
+
+                Chicharrones godard tofu, wayfarers selvage organic echo park. Tumblr cardigan, master cleanse pok pok marfa jean shorts kale chips pabst ugh slow-carb gluten-free meditation. Williamsburg gluten-free fixie thundercats, bespoke lo-fi poke. DIY vexillologist
+                locavore etsy twee. Jianbing art party 3 wolf moon slow-carb. Tofu succulents messenger bag 8-bit man bun, selfies banh mi fixie tacos echo park. Selvage ugh roof party, fanny pack hashtag schlitz bitters pickled banh mi lomo VHS.
+            </p>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

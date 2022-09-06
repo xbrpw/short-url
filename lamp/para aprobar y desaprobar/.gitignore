@@ -1,0 +1,21 @@
+*~
+*.swp
+.DS_Store
+*.swo
+node_modules/
+.env
+.sass-cache/
+npm-debug.log
+.grunt/
+_SpecRunner.html
+reports/
+coverage/
+._*
+local.log
+browserstack.err
+
+# IDE
+.idea/
+package-lock.json
+
+

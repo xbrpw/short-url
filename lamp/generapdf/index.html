@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Two tables and header with jspdf-autotable</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button onclick="generate()">Generate PDF</button>
+
+<table id="basic-table" style="display: none;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Country</th>
+      <th>IP-address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="right">1</td>
+      <td>Donna</td>
+      <td>Moore</td>
+      <td>dmoore0@furl.net</td>
+      <td>China</td>
+      <td>211.56.242.221</td>
+    </tr>
+    <tr>
+      <td align="right">2</td>
+      <td>Janice</td>
+      <td>Henry</td>
+      <td>jhenry1@theatlantic.com</td>
+      <td>Ukraine</td>
+      <td>38.36.7.199</td>
+    </tr>
+    <tr>
+      <td align="right">3</td>
+      <td>Ruth</td>
+      <td>Wells</td>
+      <td>rwells2@constantcontact.com</td>
+      <td>Trinidad and Tobago</td>
+      <td>19.162.133.184</td>
+    </tr>
+    <tr>
+      <td align="right">4</td>
+      <td>Jason</td>
+      <td>Ray</td>
+      <td>jray3@psu.edu</td>
+      <td>Brazil</td>
+      <td>10.68.11.42</td>
+    </tr>
+    <tr>
+      <td align="right">5</td>
+      <td>Jane</td>
+      <td>Stephens</td>
+      <td>jstephens4@go.com</td>
+      <td>United States</td>
+      <td>47.32.129.71</td>
+    </tr>
+    <tr>
+      <td align="right">6</td>
+      <td>Adam</td>
+      <td>Nichols</td>
+      <td>anichols5@com.com</td>
+      <td>Canada</td>
+      <td>18.186.38.37</td>
+    </tr>
+  </tbody>
+</table>
+<!-- partial -->
+  <script src='https://cdn.rawgit.com/simonbengtsson/jsPDF/requirejs-fix-dist/dist/jspdf.debug.js'></script>
+<script src='https://unpkg.com/jspdf-autotable@2.3.2'></script><script  src="./script.js"></script>
+
+</body>
+</html>

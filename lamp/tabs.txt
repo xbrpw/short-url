@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title>9 tabs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="TABS">
+
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" onclick="openCity('1')">1</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('2')">2</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('3')">3</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('4')">4</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('5')">5</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('6')">6</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('7')">7</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('8')">8</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('9')">9</button>
+</div>
+
+
+<div id="1" class="w3-container city">
+  <h2>1</h2>
+</div>
+
+<div id="2" class="w3-container city" style="display:none">
+  <h2>2</h2>
+</div>
+
+<div id="3" class="w3-container city" style="display:none">
+  <h2>3</h2>
+</div>
+
+<div id="4" class="w3-container city" style="display:none">
+  <h2>4</h2>
+</div>
+
+<div id="5" class="w3-container city" style="display:none">
+  <h2>5</h2>
+</div>
+
+<div id="6" class="w3-container city" style="display:none">
+  <h2>6</h2>
+</div>
+
+<div id="7" class="w3-container city" style="display:none">
+  <h2>7</h2>
+</div>
+
+<div id="8" class="w3-container city" style="display:none">
+  <h2>8</h2>
+</div>
+
+
+<div id="9" class="w3-container city" style="display:none">
+  <h2>9</h2>
+</div>
+
+
+<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+</body>
+</html>

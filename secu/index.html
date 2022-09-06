@@ -7,11 +7,13 @@
 <link rel="stylesheet" href="style-footer.css">
 <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
 <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-<link rel="stylesheet" href="./share.css">
-<script  src="./share.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.cssx">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.cssx">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="loopple.css">
+
+<link rel="icon" type="image/x-icon" href="img/favicon.svg" sizes="192x192" id="favicon" />
 
 <style>
 .mySlides {display:none;}
@@ -49,13 +51,167 @@ a:active {
 
 
 </style>
+<style>
+    /* ================================= *
+  * Card Styling + Default
+  ==================================== */
+  .card {
+    z-index: 1;
+    cursor: pointer;
+    display: inline-block;
+    position: static;
+    text-align: left;
+    width: 89%;
+    height: 400px;
+    max-height: 400px;
+    border-radius: 10px;
+    margin: 15px 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.10),
+      0px 1px 20px 0px rgba(0, 0, 0, 0.10);
+    transform-origin: center;
+    transition: transform, width, height, border-radius, top, left;
+      transition-duration: 500ms;
+      transition-timing-function: ease-in-out;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
+  }
+  .card .wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: table; 
+  }
+  .card h6,
+  .card p {
+    margin: 4px 0;
+  }
+  .card h6,
+  .card p {
+    color: #8f8f91;
+  }
+  .card h6 {
+    text-transform: uppercase;
+  }
+  .card img {
+    display: table-cell;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .card > .wrapper > footer{
+    display: table-cell;
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+  .card > .wrapper > footer{
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .card:active {
+    transform: scale(0.97);
+  }
+
+  /* Card Style: x */
+  /* Card Style: v */
+
+  /* Card Style: i */
+  /* Card Style~input styling*/
+  input[type="button"].concord{
+    cursor: pointer;
+    position: absolute;
+    height: auto;
+    width: auto;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    color: rgba(28, 80, 245, 0.98);
+    text-align: left;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 4.4px 13px;
+    margin: 0;
+    right: 20px;
+    bottom: 19px;
+    box-sizing: border-box;
+  }
+  input[type="button"].concord:active{
+    color: rgba(28, 80, 245, 0.48);
+  }
+  input[type="button"].concord.exit{
+    display: none;
+    z-index: 99;
+    top: 15px;
+    right: 20px;
+    bottom: initial;
+    padding: 2px 6px;
+    font-size: 1.2em;
+    line-height: 1em;
+    color: rgba(255,255,255,0.75);
+    background: rgba(20,20,25,0.65);
+  }
+  /* Card State: Content and Card active Styling*/
+
+
+  @media screen and (min-width: 530px){
+    .card{
+      width: 75%;
+    }
+  }
+  @media screen and (min-width: 600px){
+    .card{
+      max-width:340px;
+      width: 65%;
+    }
+  }
+  @media screen and (min-width: 730px){
+    .card{
+      max-width:340px;
+      width: 40%;
+    }
+  }
+  @media screen and (min-width: 1000px){
+    .card{
+      width: 340px;
+    }
+    .card.xl{
+      width: 600px;
+      max-width: 600px;
+    }
+  }
+
+</style>
 <body>
 
+  <div class="row removable">
+    <div class="col-lg-8"></div>
+    <div class="col-lg-4"></div>
+</div>
+<div class="row removable">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-8"></div>
+</div>
+<div class="row removable">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4"></div>
+</div>
 
 <template hidden>
 <!--Right-Align Links <b>☰</b>   -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<div class="w3-block w3-light-grey w3-padding">
+<div class="w3-block w3-light-grey w3-padding" >
   <span class="w3-xlarge">Home</span>
   <span class="w3-right w3-xlarge " onclick="document.location='login.html'"><b>
     <i class="fa fa-sign-in  w3-xlarge "></i></b></span>
@@ -65,147 +221,396 @@ a:active {
 
 <!--Right-Align Links <b>☰</b>   -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<div  style="display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#f1f1f1!important">
+<div  style="display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#f1f1f1!important; ">
   <span style="font-size:24px!important">Home</span> 
   <span style="float:right!important; font-size:24px!important" onclick="document.location='login.html'"><b>
     <i class="fa fa-sign-in" ></i></b></span>
 </div>
 <!--Right-Align Links -->
 
-
-<!-- intro -->
-<div class="w3-container w3-cell w3-cell-middle">
- <div class=" ">
-  <ul class="w3-ul ">
-    <li class="w3-bar" onclick="document.location='faq/index.html'">     
-      <img src="./img/sor-juana-ines-de-la-cruz-icon.svg" class="w3-bar-item w3-circle " style="width:85px">
-      <div class="w3-bar-item">
-        <span class="w3-large">Preguntas frecuentes</span>
+  <!-- <script type="application/ld+json">
+            {"@context":
+            "https://schema.org",
+            "@type":"NewsArticle",
+            "mainEntityOfPage":
+            {"@type":"WebPage",
+            "@id":"https://www.xbr.pw/NewsArticle.html"},
+            "headline":"Primera linea, igual a lo que llega siendo la descripción",
+            "image":{"@type":"ImageObject",
+            "url":"https://www.xbr.pw/NewsArticle.png",
+            "width":1200,"height":652},
+            "datePublished":"2022-06-03T19:37:58-05:00",
+            "dateModified":"2022-06-03T19:58:44-05:00",
+            "author":{"@type":"Person",
+            "name":"Alonso Rodriguez",
+            "url":"https://xbr.pw/author/luisangelmaciel"},
+            "publisher":{
+                "@type":"Organization",
+                "name":"xbr.pw",
+                "logo":{
+                "@type":"ImageObject",
+                "url":"https://www.xbr.pw/NewsArticle.png"}}}
+            </script>
+            -->
+            
+        <!--  Slideshow -->
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="./img/600x400.jpg" style="width:100%">
+          <img class="mySlides" src="./img/600x400-2.jpg" style="width:100%">
+          <img class="mySlides" src="./img/600x400-1.jpg" style="width:100%">
+          <img class="mySlides" src="https://demos.creative-tim.com/get-shit-done/assets/img/carousel_green.png" style="width:100%">
+          
+          <span class="w3-margin-left w3-display-left w3-xxlarge" onclick="plusDivs(-1)">&#10094;</span>
+          <span class="w3-margin-right w3-display-right w3-xxlarge" onclick="plusDivs(1)">&#10095;</span>
       </div>
-    </li>
+      <!--  Slideshow -->
+      <br><br>
 
-    <li class="w3-bar" onclick="document.location='SorJuanaPedia/index.html'">
-      <img src="./img/sor-juana-ines-de-la-cruz-rojo.svg" class="w3-bar-item w3-circle " style="width:85px">
-      <div class="w3-bar-item">
-        <span class="w3-large">SorJuanaPedia</span>
+      <header class="btn-default">
+        <div class="page-header min-vh-75">
+            <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n8" style="background-image:url(https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/curved-images/curved11.jpg)"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+                        <h1 class="text-gradientx text-primary">Proyecto Escolar</h1>
+                        <h1 class="mb-4">Incorporado por UNESCO</h1>
+                        <p class="lead pe-5 me-5">El proyecto importante del ciclo escolar 2023-2023, es un proyecto realizado con la finalidad y por el profesor tal. </p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+
+    <div class="row removable">
+      <div class="col-lg-4">      
+        <div class="card">
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+            <rect width="100%" height="100%" fill="#868e96"></rect>
+            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Historia del escudo</text>
+          </svg>  
+          <div class="card-body">
+            <h4 class="card-title">Historia </h4>
+            <h6 class="card-subtitle mb-2 text-muted">del escudo del Estado de México</h6>
+            <p class="card-text">El escudo del Estado de México fue diseñado por el pintor mexiquense Pastor Velázquez <span> <br><b>Leer nota</b></span></p>                       <br>
+          </div>          
+        </div>
       </div>
-    </li>
-
-    <li class="w3-bar" onclick="document.location='game/multiplicaciones/index.html'">
-      <img src="./img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-bar-item w3-circle" style="width:85px">
-      <div class="w3-bar-item">
-        <span class="w3-large">Un minuto para multiplicar</span>
+      <div class="col-lg-4">
+          <div class="card  onclick="document.location='faq/index.html'"">
+            <input type="button" class="concord exit" value="×"/>
+            <section class="wrapper">
+            <img style="background-image: url(./img/600x400-1.jpg)" alt=""></img>
+            <footer class="card-footer">
+                <h6>Sor Juana Ines de La Cruz</h6>
+                <h4>La docencia para la comunidad en el siglo XXI en la Nueva Escuela Mexicana</h4>
+                <p>ESCUELA SECUNDARIA OFIC NO 0514
+                </p>
+            </footer>
+            </section>
+          </div>
       </div>
-    </li>
-
-    <li class="w3-bar">
-      <img src="./img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-bar-item w3-circle" style="width:85px">
-      <div class="w3-bar-item">
-        <span class="w3-large"  onclick="document.location='app/calculadora/index.html'">Calculadora</span><br>        
-        <span class="w3-large"  onclick="document.location='app/calculadora-exponencial/index.html'">Calculadora Exponencial </span><br>
-        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica/index.html'">Calculadora Cientifica Pro</span><br>
-        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Blue</span><br>
-        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Red</span><br>
-        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Pink</span><br>
-        <span class="w3-large"  onclick="document.location='app/calculadora-cientifica-v1/index.html'">Calculadora Cientifica Basic</span><br>
-
-        <span class="w3-large"  onclick="document.location='app/contador-de-palabras/index.html'">Contador de palabras</span><br>
-        <span class="w3-large"  onclick="document.location='app/convertidor-numero-romano/index.html'">Contador de palabras</span><br>
-
-        <span class="w3-large"  onclick="document.location='app/tabla-periodica-de-los-elementos-quimicos-v1/index.html'">Tabla periodica</span><br>
-        <span class="w3-large"  onclick="document.location='app/tabla-periodica-de-los-elementos-quimicos-v2/index.html'">Tabla periodica</span><br>
-        <span class="w3-large"  onclick="document.location='app/tabla-periodica/index.html'">Tabla periodica</span><br>
-
+      <div class="col-lg-4">
+        <div class="card  onclick="document.location='faq/index.html'"">
+          <input type="button" class="concord exit" value="×"/>
+          <section class="wrapper">
+          <img style="background-image: url(./img/600x400-3.jpg)" alt=""></img>
+          <footer class="card-footer">
+              <h6>Sor Juana Ines de La Cruz</h6>
+              <h4>La docencia para la comunidad en el siglo XXI en la Nueva Escuela Mexicana</h4>
+              <p>ESCUELA SECUNDARIA OFIC NO 0514
+              </p>
+          </footer>
+          </section>
+        </div>
       </div>
-    </li>
-  </ul>
-</div>
-
-<!-- partial:index.partial.html -->
-<div class="screen-ctr">    
-  <!-- nav-->
-  <div class="nav">
-    <div class="fab-ctr">
-      <div class="fab ion-android-share-alt"></div>
-    </div>
   </div>
-  <!-- ripple-->
-  <div class="ripple"></div>
-  <!-- links-->
-  <ul class="links">
-    <li class="ion-social-twitter"></li>
-    <li class="ion-social-facebook"></li>
-    <li class="ion-social-googleplus"></li>
-    <li class="close ion-android-close"></li>
-  </ul>
-</div>
-<!-- partial -->
 
 
+  
 
-</div>
-<!-- intro -->
+    <section class="py-4">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <h3 class="text-gradient text-primary mb-0 mt-2"></h3>
+                  <h3>Proyecto escolar 2022-2023</h3>
+                  <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <a href="javascript:;" class="text-primary icon-move-right">Conoce más
+                      <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                  </a>
+              </div>
+              <div class="col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0">
+                  <div class="p-3 info-horizontal">
+                      <div class="icon icon-shape rounded-circle bg-gradient-primarys shadow text-center" style="background-color:black">
+                          <i class="fas fa-handshake opacity-10  w3-large" aria-hidden="true"></i>
+                      </div>
+                      <div class="description ps-3">
+                          <p class="mb-0">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                      </div>
+                  </div>
+
+                  <div class="p-3 info-horizontal">
+                      <div class="icon icon-shape rounded-circle bg-gradient-primaryx shadow text-center"  style="background-color:black">
+                          <i class="fas fa-handshake opacity-10  w3-large" aria-hidden="true"></i>
+                      </div>
+                      <div class="description ps-3">
+                          <p class="mb-0">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                      </div>
+                  </div>
+                  <div class="p-3 info-horizontal">
+                      <div class="icon icon-shape rounded-circle bg-gradient-primaryx shadow text-center"  style="background-color:black">
+                          <i class="fas fa-handshake opacity-10 w3-large" aria-hidden="true"></i>
+                      </div>
+                      <div class="description ps-3">
+                          <p class="mb-0">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  
+
+<template hidden>
+  <footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-5 mb-lg-0">
+                <h6 class="text-uppercase mb-2">Escuela Secundaria Oficial No. 514  </h6>
+                <p class="mb-4 pb-2">
+                   <b> Sor Juana Ines de la Cruz</b><br>
+                    La docencia para la comunidad en el siglo XXI en la Nueva Escuela Mexicana
+                </p>
+                <p class="mb-4 pb-2">
+                 
+              </p>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                    <span class="text-lg fab fa-facebook" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                    <span class="text-lg fab fa-twitter" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                    <span class="text-lg fab fa-instagram" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                    <span class="text-lg fab fa-pinterest" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                    <span class="text-lg fab fa-github" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="col-md-2 col-6 ms-lg-auto mb-md-0 mb-4">
+                <h6 class="text-sm">Sobre la escuela</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:void(0);">
+                            Valores
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Historia
+                        </a>
+                    </li>                       
+                </ul>
+            </div>
+
+            <div class="col-md-2 col-6 mb-md-0 mb-4">
+                <h6 class="text-sm">Herramientas</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Calculadora cientifica
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Tabla periodica de los elementos quimicos
+                        </a>
+                    </li>                       
+                </ul>
+            </div>
+        <templete hidden>
+            
+            <div class="col-md-2 col-6 mb-md-0 mb-4">
+                <h6 class="text-sm">Ciclo escolar 2022-2023</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Calendario Escoclar
+                        </a>
+                    </li>
+                   
+            </div>
+
+            <div class="col-md-2 col-6 mb-md-0 mb-4">
+                <h6 class="text-sm">Necesitas ayuda</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                          C. La Paz 1A, Villa San Agustin Atlapulco, 56346 Chimalhuacán, Méx.
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                           55 2846 1839
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Conoce a los docentes y personal administrativo
+                        </a>
+                    </li>
+
+                   
+                </ul>
+            </div><templete>
+        </div>
+        <hr class="horizontal dark mt-lg-5 mt-4 mb-sm-4 mb-1">
+        <div class="row">
+            <div class="col-8 mx-lg-auto text-lg-center">
+                <p class="text-sm text-secondary">
+                    Elaborado por lamP! diseño y mercadotecnia
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 text-start">
+              <h4>Get tips &amp; tricks every week</h4>
+              <p class="mb-0">The latest news, articles and resources sent to your inbox weekely.</p>
+          </div>
+          <div class="col-lg-5 ms-auto text-end mt-4 mt-lg-0">
+              <div class="row">
+                  <div class="col-lg-8 col-md-4 col-7">
+                      <div class="form-group mb-0">
+                          <div class="input-group">
+                              <div class="input-group">
+                                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                  <input class="form-control" placeholder="Your Email" type="email">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-5 text-start">
+                      <button type="button" class="btn bg-gradient-primary mb-0 h-100">Subscribe</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div> 
+
+</template>
+
+    <br><br><br><br>
+
+          <div id="footer" style="text-align: center;">
+
+          <a href="card.html">   <img class="help-img-icon" width="150" height="auto" src="img/logo.png"></img>  </a>
+          <div id="utility-links">
+
+          <div class="help">    
+
+          <ul>
+              <h3 class="left">Necesitas ayuda</h3>
+              <li><a href="#">C. La Paz 1A, Villa San Agustin Atlapulco, 56346 Chimalhuacán, Méx.</a></li>
+              <li><a href="#"></a></li>
+              <li><img class="help-img-icon" width="18" height="14" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469462241/msg_jn0whe.svg"></img><a href="#">Chat</a></li>
+              <li><img class="help-img-icon" width="15" height="15" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469462243/phone_zfj4ey.svg"></img><a href="#">55 2846 1839</a></li>
+          </ul>
+              </div>  
+          
+              <div class="rectangle"></div>
+
+          <div class="about">
+                  <ul>
+                  <h3 class="left">CICLO ESCOLAR</h3>
+                  <li><a href="#">  2021-2022  </a></li>
+                  <li><a href="#">          TURNO MATUTINO      </a></li>
+              </ul>
+              </div>
+          
+              <div class="rectangle"></div>
+          
+          <div class="cardfooter">
+                  <ul>
+                  <h3 class="left">La docencia para la comunidad en el siglo XXI en la Nueva Escuela Mexicana</h3>
+                  <li><a href="#">Profr. Jorge Mejía Salinas, Director </a></li>
+                  <li><a href="#">Francisco Escamilla, Profesor</a></li>
+              </ul>
+          </div>
+          </div>  
+          
+          <div id="newsletter-social">  
+              <div id="newsletter">
+              <h3 class="center"> Ciclo escolar 2022-2023</h3>
+              <p class="deals">Recibe el calendario escolar en tu email</p>
+              <form>
+              <input type="text" placeholder="Email">
+              <input type="submit" value="Enviar">
+              </form>
+          </div>  
+                  
+          <div id="social">
+              <a href="https://facebook.com/" target="_blank">
+              <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/facebook_khedl5.svg"></a></img>
+
+              <a href="https://twitter.com" target="_blank">
+              <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/twitter_fu5ejk.svg"></a></img>
+
+              <a href="hhttps://pinterest.com/" target="_blank">
+              <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/pinterest_kahh1i.svg"></a></img>
+
+              <a href="https://www.youtube.com/" target="_blank">
+              <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/youtube_xrntt3.svg"></a></img>
+
+              <a href="http://instagram.com/" target="_blank">
+              <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/instagram_ugek0w.svg"></a></img>
+
+          </div>  
+          </div>  
+              
+          <div class="rectangle-horiz"></div>
+
+          <div id="copyright">
+          <ul>  
+          <li class="copy"  onclick="document.location='mapa-de-sitio.html'">Mapa de sitio</li>
+          <li class="copy">Codificado por lamp! © 2022</li>  
+          </div>  
+              <br><br>
+          </footer>
+          <!-- footer -->
+<br>
 
 
+      
 
 
-
-
-<!--  Slideshow -->
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="./img/600x400.jpg" style="width:100%">
-  <img class="mySlides" src="./img/600x400-2.jpg" style="width:100%">
-  <img class="mySlides" src="./img/600x400-1.jpg" style="width:100%">
-  <img class="mySlides" src="https://www.w3schools.com/w3css/img_snowtops.jpg" style="width:100%">
-  <img class="mySlides" src="hhttps://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lgbti-1554457457.jpg?crop=1xw:1xh;center,top&resize=320:*" >
-
-  <span class="w3-margin-left w3-display-left w3-xxlarge" onclick="plusDivs(-1)">&#10094;</span>
-  <span class="w3-margin-right w3-display-right w3-xxlarge" onclick="plusDivs(1)">&#10095;</span>
-</div>
-<!--  Slideshow -->
-<br><br><br>
 <!-- nav footer -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="w3-light-grey  w3-button w3-block  " style="overflow: hidden; position: fixed; bottom: 0; width: 100%;">
-  <div class="w3-bar-item w3-button "><i class="fa fa-home w3-xlarge"></i></div>  
-  <div class="w3-bar-item w3-button "><i class="fa fa-bell w3-xlarge"></i></div>  
-  <div class="w3-bar-item w3-button "><i class="fa fa-calendar-alt w3-xlarge"></i></div>  
-  <div class="w3-bar-item w3-button "><i class="fa fa-envelope w3-xlarge"></i></div>
-  <div class="w3-bar-item w3-button "><i class="fa fa-tools w3-xlarge"></i></div>
+  <div class="w3-bar-item w3-button "  onclick="document.location='index.html'"><i class="fa fa-home w3-xxlarge"></i></div>  
+  <div class="w3-bar-item w3-button "  onclick="document.location='notificaciones.html'"><i class="fa fa-bell w3-xxlarge"></i></div>  
+  <div class="w3-bar-item w3-button "  onclick="document.location='calendario.html'"><i class="fa fa-calendar-alt w3-xxlarge"></i></div>  
+  <div class="w3-bar-item w3-button "  onclick="document.location='proyecto.html'"><i class="fa fa-folder-open w3-xxlarge"></i></div>
+  <div class="w3-bar-item w3-button "  onclick="document.location='herramientas.html'"><i class="fa fa-tools w3-xxlarge"></i></div>
 </div>
 <!-- nav footer -->
-
-
-
-
-
-
-
-<!-- <script type="application/ld+json">
-  {"@context":
-  "https://schema.org",
-  "@type":"NewsArticle",
-  "mainEntityOfPage":
-  {"@type":"WebPage",
-  "@id":"https://www.xbr.pw/NewsArticle.html"},
-  "headline":"Primera linea, igual a lo que llega siendo la descripción",
-  "image":{"@type":"ImageObject",
-  "url":"https://www.xbr.pw/NewsArticle.png",
-  "width":1200,"height":652},
-  "datePublished":"2022-06-03T19:37:58-05:00",
-  "dateModified":"2022-06-03T19:58:44-05:00",
-  "author":{"@type":"Person",
-  "name":"Alonso Rodriguez",
-  "url":"https://xbr.pw/author/luisangelmaciel"},
-  "publisher":{
-    "@type":"Organization",
-    "name":"xbr.pw",
-    "logo":{
-      "@type":"ImageObject",
-      "url":"https://www.xbr.pw/NewsArticle.png"}}}
-</script>
--->
-
 
 
 <!-- Progreess -->
@@ -214,89 +619,7 @@ a:active {
 </div>
 <!--  Progreess -->
 
-<div id="footer" style="text-align: center;">
-
-  <a href="card.html">   <img class="help-img-icon" width="150" height="auto" src="img/logo.png"></img>  </a>
-  <div id="utility-links">
-
-   <div class="help">    
-
-   <ul>
-
-   
-
-     <h3 class="left">Necesitas ayuda</h3>
-     <li><a href="#">C. La Paz 1A, Villa San Agustin Atlapulco, 56346 Chimalhuacán, Méx.</a></li>
-     <li><a href="#"></a></li>
-     <li><img class="help-img-icon" width="18" height="14" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469462241/msg_jn0whe.svg"></img><a href="#">Chat</a></li>
-     <li><img class="help-img-icon" width="15" height="15" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469462243/phone_zfj4ey.svg"></img><a href="#">55 2846 1839</a></li>
-   </ul>
-     </div>
- 
-  
-    <div class="rectangle"></div>
-
-   <div class="about">
-        <ul>
-          <h3 class="left">CICLO ESCOLAR</h3>
-          <li><a href="#">  2021-2022  </a></li>
-          <li><a href="#">          TURNO MATUTINO      </a></li>
-       </ul>
-       </div>
-  
-    <div class="rectangle"></div>
-  
-  <div class="card">
-        <ul>
-          <h3 class="left">La docencia para la comunidad en el siglo XXI en la Nueva Escuela Mexicana</h3>
-          <li><a href="#">Profr. Jorge Mejía Salinas, Director </a></li>
-          <li><a href="#">Francisco Escamilla, Profesor</a></li>
-       </ul>
-   </div>
-</div>  
-  
-<div id="newsletter-social">  
-    <div id="newsletter">
-    <h3 class="center"> CICLO ESCOLAR: 2021-2022</h3>
-    <p class="deals">Recibe el calendario escolar en tu email</p>
-    <form>
-    <input type="text" placeholder="Enter">
-    <input type="submit" value="Registrar">
-    </form>
-</div>  
-    
-    
- <div id="social">
-    <a href="https://facebook.com/academy" target="_blank">
-    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/facebook_khedl5.svg"></a></img>
-
-    <a href="https://twitter.com/academy" target="_blank">
-    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/twitter_fu5ejk.svg"></a></img>
-
-    <a href="hhttps://pinterest.com/academy/" target="_blank">
-    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/pinterest_kahh1i.svg"></a></img>
-
-    <a href="https://www.youtube.com/user/academydotcom" target="_blank">
-    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/youtube_xrntt3.svg"></a></img>
-
-    <a href="http://instagram.com/academy" target="_blank">
-    <img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/instagram_ugek0w.svg"></a></img>
-
-  </div>  
-</div>  
-     
-<div class="rectangle-horiz"></div>
-
-<div id="copyright">
-<ul>
-  <li class="copy">© 2022</li>
-  <li class="copy">Privacy Policy | Terms + Conditions | Sitemap</li>
-  <li class="copy">CALLE LA PAZ SN OTRO CONGLOMERADO 4</li>  
-</div>  
-   </div><i class="fas fa-users-cog"></i><i class="fas fa-user-check"></i><i class="fas fa-file-download"></i><i class="fas fa-file-export"></i>
-   &#10550;  <br><br><br><br>
-</footer>
-<!-- footer -->
+<script src="loopple.js"></script>
 
 <script>
   // When the user scrolls the page, execute myFunction 
@@ -311,8 +634,6 @@ a:active {
       document.getElementById("myBar ").style.width = scrolled + "% ";
   }
 </script>
-
-
 
 <script>
 var slideIndex = 1;

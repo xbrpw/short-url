@@ -46,7 +46,7 @@ ctx.fillText('👍', 85, 700);
 // More text
 ctx.font = '700 95px Inter';
 ctx.fillStyle = 'white';
-let wrappedText = wrapText(ctx, "Download this Canvas", 85, 753, 1200, 100);
+let wrappedText = wrapText(ctx, "memeGenerator! ", 85, 753, 1200, 100);
 wrappedText[0].forEach(function(item) {
     ctx.fillText(item[0], item[1], item[2] - wrappedText[1] - (200)); // 200 is height of emoji
 })
@@ -54,7 +54,7 @@ wrappedText[0].forEach(function(item) {
 // And more
 ctx.font = '200 50px Inter';
 ctx.fillStyle = 'rgba(255,255,255,0.8)';
-ctx.fillText("HTML", 85, 553 - wrappedText[1] - 100); // 853 - 200 for emoji, -100 for line height of 1
+ctx.fillText("Twittbanner v1.1", 85, 553 - wrappedText[1] - 100); // 853 - 200 for emoji, -100 for line height of 1
 
 document.getElementById('download').addEventListener('click', function(e) {
   let canvasUrl = canvas.toDataURL("image/jpeg", 0.5);

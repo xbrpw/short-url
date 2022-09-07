@@ -37,7 +37,7 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(https://unsplash.it/1920/1080?image=337);
+  background-image: url(https://www.xbr.pw/600/400?image=337);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,30 +99,30 @@ main {
 @-webkit-keyframes background_image {
   0% {
     opacity: 1;
-    background-image: url(https://unsplash.it/1920/1080?image=337);
+    background-image: url(https://www.xbr.pw/600/400?image=337);
   }
   33.3% {
     opacity: 1;
-    background-image: url(https://unsplash.it/1920/1080?image=110);
+    background-image: url(https://www.xbr.pw/600/400?image=110);
   }
   66.6% {
     opacity: 1;
-    background-image: url(https://unsplash.it/1920/1080?image=212);
+    background-image: url(https://www.xbr.pw/600/400?image=212);
   }
 }
 
 @keyframes background_image {
   0% {
     opacity: 1;
-    background-image: url(https://unsplash.it/1920/1080?image=337);
+    background-image: url(https://www.xbr.pw/600/400?image=337);
   }
   33.3% {
     opacity: 1;
-    background-image: url(https://unsplash.it/1920/1080?image=110);
+    background-image: url(https://www.xbr.pw/600/400?image=110);
   }
   66.6% {
     opacity: 1;
-    background-image: url(https://unsplash.it/1920/1080?image=212);
+    background-image: url(https://www.xbr.pw/600/400?image=212);
   }
 }
 

@@ -1,3 +1,20 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
 :root {
 	--color: #406fd2;
     font-size: 18px;
@@ -12,7 +29,7 @@ body, button, input {
 	line-height: 1.5;
 }
 body {
-	background: #ddd;
+	/*background: rgb(255, 255, 255);*/
 }
 a {
 	color: var(--color);
@@ -24,7 +41,38 @@ a {
 	position: relative;
 	height: 568px;
 	width: 320px;
+
+	
 }
+
+@media (max-width:600px) {
+	.app {
+		height: 600px;
+		width: 320px;
+	}
+}
+
+@media (min-width:993px) {
+	.app {
+		height: 693px;
+		width: 400px;
+	}
+}
+
+@media (max-width:992px) and (min-width:601px) {
+	.app {
+		height: 693px;
+		width: 400px;
+	}
+}
+
+.centerr {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+  }
+  
 .app-name {
 	color: #fff;
 	font-size: 1.5em;

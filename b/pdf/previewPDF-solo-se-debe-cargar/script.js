@@ -19,7 +19,7 @@ $("#myPdf").on("change", function(e){
 			  pdf.getPage(pageNumber).then(function(page) {
 				console.log('Page loaded');
 				
-				var scale = 5.5;
+				var scale = 0.8;
 				var viewport = page.getViewport({scale: scale});
 
 				// Prepare canvas using PDF page dimensions

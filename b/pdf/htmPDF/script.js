@@ -19,7 +19,7 @@ $(document).ready(function() {
       function(dispose) {
         // dispose: object with X, Y of the last line add to the PDF
         //          this allow the insertion of new lines after html
-        doc.save("Test.pdf");
+        doc.save("orden-de-compra-test.pdf");
       },
       margins
     );

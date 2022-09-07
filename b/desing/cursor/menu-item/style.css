@@ -1,4 +1,4 @@
-#container {
+#container-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,6 +18,6 @@ a:hover {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: red;
+  background: rgb(85, 0, 0);
   transition: left 1s, top 0.25s;
 }

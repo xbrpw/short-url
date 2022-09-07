@@ -111,10 +111,10 @@ border-radius: 10px;
   
   
   #reverse {
-    color: #ffffff;
+    color: inherit;
   }
   #clear {
-    color: #a00;
+    color: inherit;
   }
   
   img {

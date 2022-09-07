@@ -1,5 +1,5 @@
 let allWords
-fetch("https://escapeachamber.com/json/")
+fetch("https://www.xbr.pw/json/")
 .then((r) => r.json())
 .then((json) => {
   allWords = json.dictionary.toLowerCase().split(" ")
@@ -7,7 +7,7 @@ fetch("https://escapeachamber.com/json/")
   
 
 
-const audio = new Audio('https://escapeachamber.com/pi/pig.mp3');
+const audio = new Audio('m4a/eevee-ringtone.m4a');
 
 let muted = false;
 
@@ -131,7 +131,7 @@ reverse.onclick = () => {
   var answer = pigArray.join(" ").toLowerCase();
   var final = answer.charAt(0).toUpperCase() + answer.slice(1);
 
-   document.getElementById("x").innerHTML = "<div style='font-size: 18px'>eso se traduce como:</div><textarea id='translation'></textarea><button onclick='copyIt()' style='display:block; margin: auto;'>Copiar</button>";
+   document.getElementById("x").innerHTML = "<div style='font-size: 18px'>eso se traduce como:</div><textarea id='translation'></textarea><button onclick='copyIt()' style='display:block; margin: auto;  background-color: #fff1ac; border: none; color: #ba5400; padding: 14px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; font-weight: 600;'>Copiar</button>";
    document.getElementById('translation').value = final;
 
    document.getElementById("x").innerHTML = "<div style='font-size: 18px'>eso se traduce como:</div><textarea id='translation'></textarea><button onclick='copyIt()' style='display:block; margin: auto;'>Copiar</button>";

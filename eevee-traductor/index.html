@@ -3,39 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Traductor de Eevee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"
+  ><link rel="stylesheet" href="css/style.css">
 <style>
-  #container-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 24px;
-}
 
-a {
-  padding: 6px;
-  color: #fff1ac;
-}
-
-a:hover {
-  cursor: pointer;
-  color:#ba5400;
-  
-}
-
-#dot {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #fff1ac;
-  transition: left 1s, top 0.25s;
-}
 </style>
+
 </head>
+
 <div id="container">
   <h1 style="color: #fff1ac;">Traductor de Eevee</h1>
-    <img id="igpay" src="quien-es-ese-pokemon-es-eevee.png">
+    <img id="igpay" src="img/quien-es-ese-pokemon-es-eevee.png">
   <form>
   <input type="text" id="sentence" placeholder="Qué quieres traducir.">
   <input type="submit" onclick="handleClick()" value="Traducir" id="translate">
@@ -47,11 +25,9 @@ a:hover {
   </div>
   <div id="dot"></div>
 
-    <br><br>
-    <span id="myBtn"> ¿Quién es ese Pokémon? </span>
-    
-    
-    
+  <br><br>
+  <span id="myBtn"> ¿Quién es ese Pokémon? </span>
+      
   
   <!-- The Modal -->
   <div id="myModal" class="modal">
@@ -59,10 +35,10 @@ a:hover {
     <!-- Modal content -->
     <div class="modal-content">
       <span id="close">&times;</span>
-      <p><h2 class="left">Eevee</h2>
+      <p><h2 class="left">Eevee</h2>
       <h2 class="right">Traductor</h2>
-      <img src="quien-es-ese-bebe-fiu-fiu.png">
-      <a href="https://es.wikipedia.org/wiki/Eevee" target="_blank">¿Quién es ese Pokémon?</a> 
+      <img src="./img/quien-es-ese-bebe-fiu-fiu.png">
+      <a href="https://es.wikipedia.org/wiki/Eevee" target="_blank" style="color:black">¿Quién es ese Pokémon?</a> 
       El nombre de Eevee proviene de la palabra inglesa evolution, que significa evolución en español, debido a la multitud de 
       evoluciones que posee. Aunque al principio se pensó en llamarlo Eon, este nombre quedó finalmente sólo como la parte 
       final en los nombres de sus 8 evoluciones; esta terminación puede provenir de la combinación de caracteres de la palabra 
@@ -72,18 +48,15 @@ a:hover {
       tiene gran similitud con un perro de raza pomerania: ambos poseen mucho pelo en cuello y cola, así como un comportamiento que
        lo hace ideal como mascota. Posee largas orejas puntiagudas y una cola en forma de pincel. Su cuerpo, de constitución física 
        ágil y flexible, está adaptado a la velocidad y la agilidad.</p>
-    </div>
-  
+    </div>  
   </div>
-  <div id='x'/>
-  
-  </div>
-  
+  <div id='x'/></div>  
 
 </div>
-<!-- partial -->
-<script  src="./menu-item.js"></script>
-  <script src='https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js'></script><script  src="./script.js"></script>
+
+  <script src='js/menu-item.js'></script>
+  <script src='js/autosize.min.js'></script>
+  <script src='js/script.js'></script>
 
 </body>
 </html>

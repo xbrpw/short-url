@@ -4,10 +4,11 @@ html, body {
   width: 100%;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 15px;
   display: flex;
@@ -185,7 +186,7 @@ html, body {
 
 .cart-btn {
   display: inline-block;
-  background-color: #7DC855;
+  background-color: #017db0;
   border-radius: 6px;
   font-size: 16px;
   color: #FFFFFF;
@@ -194,7 +195,7 @@ html, body {
   transition: all .5s;
 }
 .cart-btn:hover {
-  background-color: #64af3d;
+  background-color: #0f4f99;
 }
 
 /* Responsive */

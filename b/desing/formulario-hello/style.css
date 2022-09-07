@@ -86,10 +86,10 @@ form input[type=text]:valid, form input[type=text]:focus, form input[type=email]
   border: 0;
 }
 form input[type=text] {
-  font-size: 45px;
+  font-size: 35px;
 }
 form input[type=email] {
-  font-size: 22px;
+  font-size: 28px;
   margin-top: 7px;
 }
 

@@ -10,6 +10,7 @@ html, body {
   align-items: center;
   background-color: #eeeeee;
   background: radial-gradient(ellipse at center, #f7fbfc 0%, #d9edf2 40%, #add9e4 100%);
+  font-size: 2r;  
 }
 
 .🤚 {

@@ -112,18 +112,3 @@ body {
   justify-content: center;
   align-items: center;
 }
-body .dribbble {
-  position: fixed;
-  display: block;
-  right: 20px;
-  bottom: 20px;
-  opacity: 0.5;
-  transition: all 0.4s ease;
-}
-body .dribbble:hover {
-  opacity: 1;
-}
-body .dribbble img {
-  display: block;
-  height: 36px;
-}

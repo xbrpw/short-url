@@ -44,8 +44,8 @@ html body {
 }
 
 .card {
-  width: 50vmin;
-  height: 75vmin;
+  width: 60vmin;
+  height: 85vmin;
   padding: 1rem;
   border: solid var(--borderWidth) transparent;
   border-radius: 1rem;

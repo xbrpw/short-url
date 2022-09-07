@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display:700,700i|Oswald:400&display=swap';
+
+body {background-color: #fff1ac;
+font-family: oswald;}
+
+h1 { font-weight: 100;
+  line-height: 1.25;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 2rem;}
+
+#container {
+  margin-top: 50px;
+  flex: 1 0 auto;
+border-radius: 10px;
+  padding-top: 5%;
+  padding-bottom: 1px;
+  background-color: #ba5400;
+  box-shadow: #000000;
+  }
+  
+  * {
+    text-align: center;
+  }
+  
+  #x{margin: 20px 0px 100px 0px;
+  font-size: 30px;}
+  
+  input{
+    text-align: left;
+  }
+  input:focus {
+      outline: none;
+  }
+  
+  
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+     
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+      background-color: #fefefe;
+      box-shadow: #000000;
+      border-radius: 10px;
+      margin: 5% auto; /* 15% from the top and centered */
+      padding: 20px;
+      width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  #close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  #sentence{
+      border-top: 6px solid;
+      border-color: #f2e6d9; 
+      border-radius: 3px;
+      color: black;
+      width: 40%;
+      height: 42px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      min-width: 175px;
+  }
+  
+  #translate{
+    background-color: #fff1ac;
+      border: none;
+      color: #ba5400;
+      padding: 14px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+  }
+  
+  button {
+    margin-top: 8px;
+    color: rgb(0, 51, 128);
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+  }
+  
+  
+  #reverse {
+    color: #ffffff;
+  }
+  #clear {
+    color: #a00;
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+    height: 150px;
+  }
+  
+  .left{
+    float: left;
+    margin-left: 20%;
+    color: rgb(211, 190, 200);
+  }
+  
+  .right{
+    float: right;
+    margin-right: 20%;
+    color: #ba5400;
+  }
+  
+  textarea{
+    width: 80%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 24px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+      textarea {
+          width: 100%;
+          font-size: 18px;
+      }
+  }
+  
+  #igpay {
+    margin-bottom: -20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .wiggle{
+    animation-name: wiggle;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes wiggle {
+       0%  {transform: rotate(0deg);}
+      25%  {transform: rotate(6deg);}
+      75%  {transform: rotate(-6deg);}
+      100% {transform: rotate(0deg);}
+  }
+  
+  #mute{
+    color: black;
+  }
+  
+  

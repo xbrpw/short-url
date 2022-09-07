@@ -1,0 +1,65 @@
+body, html {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  overflow: hidden;
+  background-color: #1F1140;
+  width: 360px;
+  height: 640px;
+  border-radius: 2.5rem;
+}
+
+.slider-cards {
+  position: relative;
+  width: 900px;
+  margin: 20px 50px;  
+  z-index: 1; /* cards above the big card */
+}
+.slider-card {
+  display: inline-block;
+  background-color: grey;
+  overflow: hidden;
+  width: 260px;
+  height: 360px;
+  margin-right: 30px;
+  border-radius: 12px;
+  box-shadow:0px 60px 20px -20px rgba(0, 0, 0, 0.3)
+}
+
+.slider-info {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  margin-top: -200px;
+  margin-left: 30px;
+  padding: 200px 20px 0;
+  width: 260px;
+  height: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+.slider-info h1 {
+  font-family: Arial Black, Gadget, sans-serif;
+  line-height: 25px;
+  font-size: 23px;
+}
+.slider-info p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.slider-button {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  border: none;
+  color: white;
+  background-color: #E71284;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}

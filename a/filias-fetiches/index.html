@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="./style.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+
+    <!-- Logo -->
+    <div class="header__brand">
+      <h2 class="logo flt-left">Diccionario</h2>
+      <button class="btn-bookmark flt-right"><i class="material-icons">bookmark_border</i></button>
+    </div>
+
+    <!-- Search -->
+    <div class="header__search">
+      <input type="search" id="inputVal" placeholder="Filia y fetiches" autofocus/>
+      <span>
+				<button id="searchBtn"><i class="material-icons">search</i></button>
+			</span>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="wrapper">
+    <div class="result">
+      <p class="keyword flt-left"></p>
+      <button id="bookmarkBtn" class="flt-right" style="display: none;">
+				Bookmark
+			</button>
+      <div class="result-list"></div>
+    </div>
+  </div>
+
+  <!-- Bookmark Sidebar right-->
+  <div class="bookmark">
+    <div class="bookmark__heading">Bookmarks</div>
+    <ul class="bookmark__list">
+    </ul>
+  </div>
+  
+
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar.." title="Filias y fetiches">
+
+<ul id="myUL">
+  <li><a href="cards.html">Sado. Filia del dolor</a></li>
+  <li><a href="#">Filia</a></li>
+
+  <li><a href="#">Leather</a></li>
+  <li><a href="#">Ruber</a></li>
+
+  <li><a href="#">Lenceria</a></li>
+  <li><a href="#">Pies</a></li>
+  <li><a href="#">Axilas</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+
+
+
+
+
+
+<!--  Script  -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

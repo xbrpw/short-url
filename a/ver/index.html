@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - card-slider hard tutorial vue</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app" class="slider" @mouseMove="mouseMoving" @mouseLeave="stopDrag">
+    <div class="slider-cards" :style="`transform: translate3d(${cardsX}px, 0, 0)`">
+      <div 
+           @mouseDown="startDrag" 
+           @mouseUp="stopDrag" 
+           v-for="(slide, index) in slides" 
+           :key="index" 
+           class="slider-card">
+        <img :src="slide.image" :alt="slide.title" draggable="false"> <!-- draggable false -->
+      </div>
+    </div>
+    <div class="slider-info">
+      <h1>{{selectedSlide.title}}</h1>
+      <p>{{selectedSlide.description}}</p>
+      <button class="slider-button">BOOK</button>
+    </div>
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

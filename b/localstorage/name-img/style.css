@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700')
+
+html
+  height: 100%
+  
+body
+  height: 100%
+  margin: 0
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-image: radial-gradient(#79F1A4, #0E5CAD)
+  
+#app
+  font-family: 'Quicksand', sans-serif
+  display: flex
+  justify-content: center
+  margin: 100px 0 30px 0
+  
+.comments
+  width: 500px
+  max-width: 80%
+  background: #fff
+  padding: 20px 30px
+  border-radius: 5px
+  
+.comments-form
+  ul
+    list-style: none
+    margin-left: -40px
+    li
+      margin-bottom: 15px
+      input[type='submit']
+        border: 0
+        border-radius: 5px
+        padding: 10px 15px
+        background: #448ef6
+        color: #fff
+        font-family: 'Quicksand'
+        font-weight: bold
+      input[type='text'], textarea
+        padding: 10px
+        border: 1px solid #ccc
+        border-radius: 5px
+        background: #f5f5f5
+        &::placeholder
+          font-family: 'Quicksand', sans-serif
+        &:focus
+          background: #fff
+      textarea
+        width: 80%
+        height: 80px
+        resize: none
+
+.comments-list
+  margin-top: 30px
+
+.comment
+  position: relative
+  border-top: 1px dotted #bbb
+  padding: 10px 20px
+  .comment-time
+    position: absolute
+    top: 2px
+    right: 20px
+    color: #777
+  h4
+    margin-top: 10px
+    
+footer
+  float: right
+  color: #777
+  font-size: 0.8em

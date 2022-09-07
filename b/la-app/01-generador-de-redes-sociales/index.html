@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Custom Social Sharing Links</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="site-header">
+  <h1>Social Links Generator</h1>
+  <p>Enter some info about the page you're sharing, auto-generate the markup</p>
+</header>
+
+<form id="page-info">
+  <header class="form__header">
+    <h1>Enter the page details below</h1>
+  </header>
+  <fieldset class="form__fields"id="page-info">
+    <article class="field">
+      <label>Title</label>
+      <input id="title" name="title" type="text" value="Test Title Here" required>
+    </article>
+    <article class="field">
+      <label>URL</label>
+      <input id="url" name="url" type="url" value="http://test.com" required>
+    </article>
+    <article class="field">
+      <label>Description</label>
+      <textarea id="description" name="description">Here is the start of a test description.  It's pretty great!</textarea>
+    </article>
+    <article class="field">
+      <label>Image URL (Required for Facebook &amp; Pinterest)</label>
+      <input id="image-url" name="image-url" type="url">
+    </article>
+    <article class="field">
+      <label>Site Name (Required for Facebook &amp; Google)</label>
+      <input id="site-name" name="site-name" type="text">
+    </article>
+    <article class="field">
+      <label>Hastags (Optional for Twitter)</label>
+      <input id="hashtags" name="hashtags" type="text">
+    </article>
+  </fieldset>
+  <fieldset class="form__fields" id="sites">
+    <article class="field">
+      <label>Choose your sites</label>
+      <ul id="your-sites" class="block-list">
+        <li><label for="facebook"><input type="checkbox" name="facebook" id="facebook"/>Facebook</label></li>
+        <li><label for="twitter"><input type="checkbox" name="twitter" id="twitter"/>Twitter</label></li>
+        <li><label for="tumblr"><input type="checkbox" name="tumblr" id="tumblr"/>Tumblr</label></li>
+        <li><label for="pinterest"><input type="checkbox" name="pinterest" id="pinterest"/>Pinterest</label></li>
+        <li><label for="googleplus"><input type="checkbox" name="googleplus" id="googleplus"/>Google+</label></li>
+        <li><label for="reddit"><input type="checkbox" name="reddit" id="reddit"/>Reddit</label></li>
+        <li><label for="email"><input type="checkbox" name="email" id="email"/>Email</label></li>
+      </ul>
+    </article>
+  </fieldset>
+  <footer class="form__footer">
+    <input type="submit" value="Gimme Code">
+  </footer>
+</form>
+  
+
+<section id="generated-code">
+  <textarea class="code-to-copy">
+  </textarea>
+</section>
+
+
+<section id="test-code">
+  <div class="code-in-action"></div>
+</section>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

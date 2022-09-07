@@ -1,0 +1,23 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+a {
+  padding: 6px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: red;
+  transition: left 1s, top 0.25s;
+}

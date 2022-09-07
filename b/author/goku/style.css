@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url(https://images.unsplash.com/photo-1593536488613-96a13eb77077?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=800);
+  background-size: cover;
+}
+body::before, body::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+body::before {
+  top: -10vmin;
+  right: -10vmin;
+  bottom: -10vmin;
+  left: -10vmin;
+  background-image: url(https://i.pinimg.com/736x/4f/ac/43/4fac43bd286fdacbeff185bfcad222b0.jpg);
+  background-size: cover;
+  opacity: 0.7;
+  transform-origin: left bottom;
+  -webkit-animation: breeze 3s ease-in-out alternate infinite;
+          animation: breeze 3s ease-in-out alternate infinite;
+}
+body::after {
+  top: 10vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(goku.png?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=transparent&auto=null&fm=png&ixlib=js-2.2.1&s=436072bf8ea5b7f257f3787ba20f0133);
+  background-position: 60% bottom;
+  background-size: auto 100%;
+}
+
+@-webkit-keyframes breeze {
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes breeze {
+  to {
+    transform: rotate(2deg);
+  }
+}

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+* {
+  box-sizing: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:root {
+  --backgroundColor: #000;
+  --borderWidth: 2px;
+  --gradient: linear-gradient(to bottom right,
+  	hsl(0deg, 100%, 60%),
+  	hsl(120deg, 100%, 60%),
+  	hsl(240deg, 100%, 60%),
+  	hsl(360deg, 100%, 60%),
+  	hsl(240deg, 100%, 60%),
+  	hsl(120deg, 100%, 60%),
+  	hsl(0deg, 100%, 60%),
+  	hsl(120deg, 100%, 60%),
+  	hsl(240deg, 100%, 60%),
+  	hsl(360deg, 100%, 60%),
+  	hsl(240deg, 100%, 60%),
+  	hsl(120deg, 100%, 60%),
+  	hsl(0deg, 100%, 60%)
+  );
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+html body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backgroundColor);
+  overflow: hidden;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+}
+
+.card {
+  width: 50vmin;
+  height: 75vmin;
+  padding: 1rem;
+  border: solid var(--borderWidth) transparent;
+  border-radius: 1rem;
+  position: relative;
+  background-color: var(--backgroundColor);
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card::after, .card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(var(--borderWidth) * -1);
+  left: calc(var(--borderWidth) * -1);
+  right: calc(var(--borderWidth) * -1);
+  bottom: calc(var(--borderWidth) * -1);
+  margin: calc(var(--borderWidth) * -1);
+  border-radius: inherit;
+  background-image: var(--gradient);
+  background-size: 200% 200%;
+  background-position: center;
+  animation: roll 4s infinite linear;
+}
+.card::after {
+  z-index: -1;
+}
+.card::before {
+  z-index: -2;
+  filter: blur(2rem);
+  opacity: 0.7;
+}
+.card p {
+  margin: 0;
+  color: transparent;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding: 2vmin;
+  font-size: calc(1.25vmin + 1.25rem);
+  text-align: center;
+  text-overflow: ellipsis;
+  background-image: var(--gradient);
+  background-size: 200% 200%;
+  background-position: center;
+  animation: roll 4s infinite linear;
+  font-size: xx-large;
+}
+
+@keyframes roll {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}

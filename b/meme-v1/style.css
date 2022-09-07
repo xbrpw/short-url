@@ -1,0 +1,17 @@
+body {
+  background: #151515;
+  padding: 20px;
+  margin: 0;
+}
+
+.panel {
+  width: 600px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control,
+.custom-file {
+  width: 230px;
+}

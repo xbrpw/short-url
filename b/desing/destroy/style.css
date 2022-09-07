@@ -1,0 +1,129 @@
+.deleteList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.deleteList li {
+  margin: 8px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.deleteList li .item {
+  line-height: 24px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.deleteList li .item span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.deleteList li .item:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s ease;
+  background: linear-gradient(-90deg, white, rgba(255, 255, 255, 0));
+}
+.deleteList li .item canvas {
+  position: absolute;
+  z-index: 2;
+  left: 100%;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  margin: -100px 0 0 -100px;
+}
+.deleteList li .item.slide:after {
+  opacity: 1;
+  visibility: visible;
+}
+.deleteList li .item.hide {
+  opacity: 0;
+}
+.deleteList li .delete {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translate(4px, 0);
+}
+@media (hover: none) {
+  .deleteList li .delete {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+}
+.deleteList li .delete:before, .deleteList li .delete:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 2px;
+  background: #000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  transition: all 0.4s ease;
+}
+.deleteList li .delete:before {
+  width: 10px;
+  height: 2px;
+}
+.deleteList li .delete:after {
+  height: 10px;
+  width: 2px;
+}
+.deleteList li .delete.active:before, .deleteList li .delete.active:after {
+  left: -10px;
+  opacity: 0;
+}
+.deleteList li .delete.active:before {
+  width: 0;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.deleteList li .delete.active:after {
+  height: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.deleteList li:hover .delete {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+body {
+  min-height: 100vh;
+  font-family: Lato, Arial;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+body .dribbble:hover {
+  opacity: 1;
+}
+body .dribbble img {
+  display: block;
+  height: 36px;
+}

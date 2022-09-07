@@ -1,0 +1,106 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: radial-gradient(#F97794, #623AA2);
+}
+
+#app {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 100px 0 30px 0;
+}
+
+.comments {
+  width: 500px;
+  max-width: 80%;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.comments h2 {
+  font-size: 2.3em;
+  margin-bottom: 0;
+}
+
+.comments-form {
+  border-bottom: 1px solid #ccc;
+}
+.comments-form ul {
+  list-style: none;
+  margin-left: -40px;
+}
+.comments-form ul li {
+  margin-bottom: 15px;
+}
+.comments-form ul li input[type=submit] {
+  border: 0;
+  border-radius: 30px;
+  padding: 7px 16px;
+  background: #448ef6;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.comments-form ul li input[type=text], .comments-form ul li textarea {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+.comments-form ul li input[type=text]::-moz-placeholder, .comments-form ul li textarea::-moz-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+.comments-form ul li input[type=text]:-ms-input-placeholder, .comments-form ul li textarea:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+.comments-form ul li input[type=text]::placeholder, .comments-form ul li textarea::placeholder {
+  font-family: "Rubik", sans-serif;
+}
+.comments-form ul li input[type=text]:focus, .comments-form ul li textarea:focus {
+  background: #fff;
+}
+.comments-form ul li textarea {
+  width: 80%;
+  height: 80px;
+  resize: none;
+}
+
+.comments-list {
+  margin-top: 20px;
+}
+
+.comment {
+  position: relative;
+  padding: 10px 20px;
+  background: #efefef;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.comment .timestamp {
+  color: #777;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.comment h4, .comment p {
+  margin: 10px;
+}
+
+footer {
+  float: right;
+  color: #777;
+  font-size: 0.8em;
+  margin-top: 15px;
+}

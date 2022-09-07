@@ -8,7 +8,7 @@ $('.js-toggle').on('click', function(){
 const artyom = new Artyom();
 var commands = [
  {
-	 indexes:["up to no good"],
+	 indexes:["eso no es bueno"],
 	 action:function() {
 		 $('.map-base').addClass('active');
 	 }
@@ -17,7 +17,12 @@ var commands = [
 	 action:function() {
 		 $('.map-base').removeClass('active');
 	 }
- }
+ }, {
+    indexes:["cerrar mapa"],
+    action:function() {
+        $('.map-base').removeClass('active');
+    }
+}
 ]
 
 artyom.addCommands(commands);
@@ -27,12 +32,12 @@ function startContinuousArtyom(){
 
     setTimeout(function(){
          artyom.initialize({
-            lang:"en-GB",
+            lang:"es-MX",
             continuous:true,
             listen:true, 
             speed:1
         }).then(function(){
-            console.log("Ready to work !");
+            console.log("Listo, vamos!");
         });
     },250);
 }

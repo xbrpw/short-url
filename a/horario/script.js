@@ -49,19 +49,19 @@ $(document).ready(function() {
     if (openFor === 0) {
       $(".info").html("<h1>Estaremos dando servicio por " + minFrom60 + " minutos</h1>");
     } else if (openFor === 1) {
-      $(".info").html("<h1>We're open for another 1 hour and " + minFrom60 + " minutes</h1>");
+      $(".info").html("<h1>We're open for another 1 hour and " + minFrom60 + " minutos</h1>");
     } else {
-      $(".info").html("<h1>We're open for another " + openFor + " hours and " + minFrom60 + " minutes</h1>");
+      $(".info").html("<h1>We're open for another " + openFor + " hours and " + minFrom60 + " minutos</h1>");
     }
   } else {
     $("span").html(closed);
     $("body").css("background", "#5D414D");
     if (closedFor === 0) {
-      $(".info").html("<h1>We'll be closed for another " + minFrom60 + " minutes</h1>");
+      $(".info").html("<h1>Estaremos cerrados por otras" + minFrom60 + " minutos</h1>");
     } else if (closedFor === 1) {
-      $(".info").html("<h1>We'll be closed for another 1 hour and " + minFrom60 + " minutes</h1>");
+      $(".info").html("<h1>Estaremos cerrados por otra hora y " + minFrom60 + " minutos</h1>");
     } else {
-      $(".info").html("<h1>We'll be closed for another " + closedFor + " hours and " + minFrom60 + " minutes</h1>");
+      $(".info").html("<h1>Estaremos cerrados por otras" + closedFor + " horas y " + minFrom60 + " minutos</h1>");
     }
   }
 

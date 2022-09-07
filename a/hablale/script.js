@@ -23,14 +23,14 @@ const INDICATE_START = () => {
     console.info('starting recording neat...');
     STATE.RUNNING = true;
     document.documentElement.style.setProperty('--text', 'var(--gray-0)');
-    document.querySelector('main').innerHTML = '<span class="instruction">Say "Hey Smashing"!</span>';
+    document.querySelector('main').innerHTML = '<span class="instruction">Di "Hola celular"!</span>';
     document.documentElement.style.setProperty('--recording', 1);
   }
 };
 
 let deactiveTimer;
 const TIMER = 5000;
-const KEY_PHRASE = "Hey Smashing";
+const KEY_PHRASE = "Hola celular";
 
 const DEACTIVATE = () => {
   STATE.ACTIVE = false;
@@ -96,7 +96,7 @@ MUTE_TOGGLE.addEventListener('click', () => {
     STATE.RUNNING = false;
     CLEAN_UP();
     document.documentElement.style.setProperty('--text', 'var(--adaptive)');
-    document.querySelector('main').innerHTML = '<span class="instruction">Brother is not listening...</span>';
+    document.querySelector('main').innerHTML = '<span class="instruction">¿Qué crees?<br> ¡No te escucho! <br> ¡Habla más fuerte! </span>';
     document.documentElement.style.setProperty('--recording', 0);
   } else genProcessor(BUTTON.matches('[aria-pressed="false"]') ? true : false);
   MUTE_TOGGLE.setAttribute('aria-pressed', PRESSED);

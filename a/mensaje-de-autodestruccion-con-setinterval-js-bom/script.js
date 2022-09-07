@@ -37,7 +37,7 @@ var photo = document.createElement("img");
 link.appendChild(photo);
 
 photo.src =
-    "https://luisangelmaciel.github.io/luisangelmaciel/logos/lamp-developer-products-and-experience.png";
+    "https://www.luisangelmaciel.one/img/lamp-1.svg";
 photo.alt = "luisangelmaciel";
 
 photo.style =

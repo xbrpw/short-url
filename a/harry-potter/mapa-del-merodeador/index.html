@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Satisfy|
-Lobster+Two" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Satisfy|Lobster+Two" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css'><link rel="stylesheet" href="./style.css">
 
@@ -77,6 +77,50 @@ Lobster+Two" rel="stylesheet">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/artyom.js'></script>
 <script  src="./script.js"></script>
+<!-- el original 
 
+<script>
+  //toggle button
+$('.js-toggle').on('click', function(){
+	$('.map-base').toggleClass('active');
+});
+
+
+//initialization of speech recognition starts here
+const artyom = new Artyom();
+var commands = [
+ {
+	 indexes:["up to no good"],
+	 action:function() {
+		 $('.map-base').addClass('active');
+	 }
+ }, {
+	 indexes:["mischief managed"],
+	 action:function() {
+		 $('.map-base').removeClass('active');
+	 }
+ }
+]
+
+artyom.addCommands(commands);
+
+function startContinuousArtyom(){
+    artyom.fatality();
+
+    setTimeout(function(){
+         artyom.initialize({
+            lang:"en-GB",
+            continuous:true,
+            listen:true, 
+            speed:1
+        }).then(function(){
+            console.log("Ready to work !");
+        });
+    },250);
+}
+
+startContinuousArtyom();
+</script>
+-->
 </body>
 </html>

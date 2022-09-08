@@ -1,0 +1,111 @@
+<main>
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="settings" aria-labelledby="offcanvasWithBothOptionsLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasLabel"><?php echo L::settings;?></h5>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<div class="p-3 my-3">
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="header" checked>
+						<label class="form-check-label" for="header">Header</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="Paragrahps" class="form-label">
+						Paragrahps
+					</label>
+					<input id="paragrahps" class="form-control" type="number" placeholder="Paragrahps" aria-label="Paragrahps" value="4" />
+				</div>
+				<div class="mb-3">
+					<label for="size" class="form-label">Size</label>
+					<select name="size" id="size" class="form-control">
+						<option value="short">Short</option>
+						<option value="medium">Medium</option>
+						<option value="long">Long</option>
+
+					</select>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="decorate" checked>
+						<label class="form-check-label" for="decorate">Decorate</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="link">
+						<label class="form-check-label" for="link">Link</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="ul" checked>
+						<label class="form-check-label" for="ul">Ul</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="ol">
+						<label class="form-check-label" for="ol">ol</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="dl" checked>
+						<label class="form-check-label" for="dl">dl</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="bq" checked>
+						<label class="form-check-label" for="bq">Blockquotes</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="code">
+						<label class="form-check-label" for="code">code</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="prude">
+						<label class="form-check-label" for="prude">prude</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="text">
+						<label class="form-check-label" for="text">Text</label>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="allcaps">
+						<label class="form-check-label" for="allcaps">ALL CAPS</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<button id="generate" class="btn btn-sm btn-primary">
+						Generate
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- container -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<button class="btn m-2 btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#settings" aria-controls="settings">
+					<i class="bi bi-layout-sidebar-inset"></i>
+				</button> <span class="text-dark p-2 fw-bold">Lorem ipsum generator</span>
+				<iframe src="" id="output" frameborder="0" class="p-3 mb-3 bg-white border border-light shadow-sm"></iframe>
+			</div>
+		</div>
+	</div>
+</main>

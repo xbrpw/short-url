@@ -194,6 +194,17 @@ a:active {
 
 </style>
 
+ <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#navBottom").load("navBottom.html");
+        });
+    </script>
+
+    <!-- <div id="navBottom"> </div> -->
+
 <body>
 
   <div class="row removable">
@@ -214,17 +225,43 @@ a:active {
 <!--Right-Align Links <b>☰</b>   -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="w3-block w3-light-grey w3-padding" >
-  <span class="w3-xlarge">Home</span>
+  <span class="w3-xlarge" onclick="w3_open()">☰</span>
   <span class="w3-right w3-xlarge " onclick="document.location='login.html'"><b>
     <i class="fa fa-sign-in  w3-xlarge "></i></b></span>
 </div>
 <!--Right-Align Links -->
 </template>
 
+
+
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right w3-animate-left w3-animate-fading" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-button">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button w3-padding">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding">Link 3</a>
+</div>
+
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<!-- Sidebar -->
+
+
+
 <!--Right-Align Links <b>☰</b>   -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div  style="display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#f1f1f1!important; ">
-  <span style="font-size:24px!important">Home</span> 
+  <span style="font-size:24px!important" onclick="w3_open()">☰</span> 
   <span style="float:right!important; font-size:24px!important" onclick="document.location='login.html'"><b>
     <i class="fa fa-sign-in" ></i></b></span>
 </div>
@@ -595,11 +632,11 @@ a:active {
           <!-- footer -->
 <br>
 
-
+<div id="navBottom"> </div>
       
 
 
-<!-- nav footer -->
+<!-- nav footer 
 <div class="w3-light-grey  w3-button w3-block  " style="overflow: hidden; position: fixed; bottom: 0; width: 100%;">
   <div class="w3-bar-item w3-button "  onclick="document.location='index.html'"><i class="fa fa-home w3-xxlarge"></i></div>  
   <div class="w3-bar-item w3-button "  onclick="document.location='notificaciones.html'"><i class="fa fa-bell w3-xxlarge"></i></div>  
@@ -607,30 +644,18 @@ a:active {
   <div class="w3-bar-item w3-button "  onclick="document.location='proyecto.html'"><i class="fa fa-folder-open w3-xxlarge"></i></div>
   <div class="w3-bar-item w3-button "  onclick="document.location='herramientas.html'"><i class="fa fa-tools w3-xxlarge"></i></div>
 </div>
-<!-- nav footer -->
+nav footer -->
 
 
-<!-- Progreess -->
+<!-- Progreess 
 <div style=" width: 100%; height: 8px; background: rgb(255, 255, 255); position: fixed; bottom: 0; width: 100%; margin: 0; overflow: hidden; position: fixed; bottom: 0; ">
   <div id="myBar " style=" height: 8px; width: 0%; background: linear-gradient( to right, #18487D, #18487D, #005677, #18487D, #18487D, #005677, #18487D, #18487D, #005677); background-position: center 0%; animation: background-slide 25s infinite linear; "></div>
 </div>
-<!--  Progreess -->
+Progreess -->
 
 <script src="loopple.js"></script>
 
-<script>
-  // When the user scrolls the page, execute myFunction 
-  window.onscroll = function() {
-      myFunction()
-  };
 
-  function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar ").style.width = scrolled + "% ";
-  }
-</script>
 
 <script>
 var slideIndex = 1;

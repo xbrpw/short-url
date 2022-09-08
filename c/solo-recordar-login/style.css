@@ -1,0 +1,32 @@
+#container {
+  position: relative;
+  padding: 25px;
+  margin: auto;
+  max-width: 300px;
+}
+
+.field input:first-child {
+  margin-top: -1px;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.remember_me {
+  padding: 10px 0;
+}
+
+.alert {
+  display: none;
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 0 !important;
+}
+
+.login_phase_two {
+  display: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Ajax Login Flow with &quot;remember me&quot; functionality</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+    <div id="accountLogin" class="login_phase_one">
+        <form id="loginForm" novalidate>
+            <fieldset>
+                <div class="field">
+                    <input id="loginEmail" class="form-control" type="email" name="email" placeholder="Email" spellcheck="false" tabindex="1" autofocus />
+                </div>
+                <div class="field">
+                    <input id="loginPW" class="form-control" type="password" name="password" placeholder="Password" tabindex="2" />
+                </div>
+                <p class="form_error loginError"></p>
+                <div class="login_submit">
+                    <div class="remember_me">
+                        <input type="checkbox" tabindex="3" value="remember-me" id="remember_me">Remember Me
+                    </div>
+                    <button id="loginButton" class="btn btn-primary btn-md" type="submit" tabindex="4">Log In</button>
+                    <br />
+                    <div class="alert alert-danger" role="alert">
+                        <p id="passwordError" class="form_error"></p>
+                        <p id="emailError" class="form_error"></p>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="login_phase_two">
+        <div class="alert alert-success" role="alert"> <strong>Success!</strong> You have logged into nothing! </div>
+    </div>
+</div>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

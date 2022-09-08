@@ -1,0 +1,321 @@
+@charset "UTF-8";
+body {
+  background-color: #e1e1e1;
+  color: #232527;
+  line-height: 1.4;
+  font-family: 'Average Sans', sans-serif;
+  padding-bottom: 40px;
+}
+
+header {
+  height: 160px;
+  padding: 20px 20px 20px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+header h2 {
+  font-size: 3.2em;
+  padding: 0;
+  margin-bottom: 0.2em;
+  color: #3b3f42;
+  float: left;
+}
+@media screen and (max-width: 360px) {
+  header h2 {
+    font-size: 2.6em;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 0 20px 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+* {
+  outline: 0;
+}
+
+.row {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  margin-bottom: 30px;
+  opacity: 0.8;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.row.lastone {
+  background-color: gainsboro;
+}
+.row .col {
+  float: left;
+  width: 47.5%;
+}
+.row .col:first-child {
+  margin-right: 5%;
+}
+@media screen and (max-width: 720px) {
+  .row .col {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5%;
+  }
+}
+.row .col::after {
+  clear: both;
+}
+.row:hover {
+  opacity: 1;
+}
+
+.radioset {
+  width: 47.5%;
+  margin-right: 5%;
+  font-size: 1.4em;
+}
+.radioset div > span input {
+  float: left;
+  width: 0;
+  height: 0;
+}
+.radioset div > span input:active::after, .radioset div > span input:checked::after {
+  color: #6b7278;
+  margin-left: 10px;
+  line-height: 2;
+  content: "✓";
+}
+.radioset div > span > label {
+  background-color: #e6ecc4;
+  display: block;
+  padding: 6px 12px 6px 40px;
+  margin-bottom: 4px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.radioset div > span > label:hover {
+  background-color: #D6E09D;
+}
+
+.tableset {
+  width: 100%;
+}
+.tableset th {
+  text-align: left;
+}
+.tableset thead {
+  background-color: #e6ecc4;
+}
+.tableset thead td {
+  width: 14%;
+  padding: 6px;
+  color: #3b3f42;
+  text-align: center;
+}
+.tableset tbody tr:nth-child(even) td {
+  background-color: #e8e8e8;
+}
+.tableset tbody th {
+  background-color: #f0f4db;
+  padding: 6px 4px 6px 12px;
+}
+.tableset tbody tr:hover td {
+  background-color: #f0f4db;
+}
+.tableset tbody tr:nth-child(even) th {
+  background-color: #e6ecc4;
+}
+.tableset tbody tr:hover:nth-child(even) td {
+  background-color: #e6ecc4;
+}
+.tableset tbody tr:hover input::after {
+  color: #adb1b5;
+}
+@media screen and (max-width: 720px) {
+  .tableset tbody th label span {
+    display: block;
+    font-size: 90%;
+  }
+  .tableset tbody th label span > span {
+    display: none;
+  }
+}
+.tableset tbody td {
+  text-align: center;
+}
+.tableset tbody td label {
+  padding: 12px;
+  display: block;
+  width: 100%;
+}
+.tableset tbody td input::after {
+  color: #f5f5f5;
+  font-family: 'fontelico', sans-serif;
+}
+.tableset tbody td:nth-child(2) input::after {
+  content: '\e802';
+}
+.tableset tbody td:nth-child(2) input:checked::after {
+  color: #9C270C;
+}
+.tableset tbody td:nth-child(3) input::after {
+  content: '\e80a';
+}
+.tableset tbody td:nth-child(3) input:checked::after {
+  color: #9C8B0C;
+}
+.tableset tbody td:nth-child(4) input::after {
+  content: '\e800';
+}
+.tableset tbody td:nth-child(4) input:checked::after {
+  color: #0C6C9C;
+}
+.tableset tbody td:nth-child(5) input::after {
+  content: '\e80c';
+}
+.tableset tbody td:nth-child(5) input:checked::after {
+  color: #869C0C;
+}
+.tableset tbody td input {
+  float: left;
+  width: 100%;
+  height: 0;
+  text-align: center;
+  /*&:checked::after {
+    color:lighten($color, 30%);
+    font-size:20px;
+    margin-left:5px;
+    content: "✓";
+  }*/
+}
+
+input {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: 0;
+  padding: 2px 4px;
+  border-bottom: 2px dotted darkgray;
+}
+
+.btn {
+  background-color: #e6ecc4;
+  padding: 12px 16px;
+  font-size: 120%;
+  text-align: center;
+  font-weight: bold;
+  color: #53585d;
+  border: 1px solid #dbe4a9;
+  border-bottom: 10px solid #dbe4a9;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn:active {
+  margin-top: 7px;
+  border-bottom: 3px solid #dbe4a9;
+}
+
+blockquote {
+  margin-top: 40px;
+  float: right;
+  position: relative;
+  font-size: 1.3em;
+  padding: 20px 0px 0px 60px;
+  width: 100%;
+  max-width: 240px;
+  font-style: italic;
+  color: #53585d;
+}
+@media screen and (max-width: 720px) {
+  blockquote {
+    /* display:none; */
+    max-width: 80%;
+  }
+}
+blockquote::before {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 3.3em;
+  font-family: Georgia, serif;
+  font-style: italic;
+  content: "\201C";
+}
+blockquote aside {
+  color: #6b7278;
+  line-height: 2.6em;
+  font-size: 0.8em;
+  float: right;
+}
+
+h3.question {
+  font-size: 24px;
+  padding: 0;
+  padding-bottom: 16px;
+  margin: 0;
+  color: #2f3234;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+big {
+  font-size: 24px;
+}
+big input.nospin {
+  width: 90px;
+  text-align: right;
+}
+big select {
+  width: 100%;
+  padding: 4px 6px;
+}
+big input {
+  width: 99%;
+  padding: 4px 6px;
+}
+
+.infos label {
+  display: block;
+  color: #6b7278;
+  margin-bottom: 4px;
+}
+.infos input {
+  width: 98%;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.infos input[name="Field105"] {
+  width: 39%;
+  float: left;
+  margin-right: 2%;
+}
+.infos input[name="Field106"] {
+  width: 56%;
+  float: left;
+}
+
+[class*="fontelico-"]::before {
+  font-family: 'fontelico', sans-serif;
+}

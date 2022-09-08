@@ -1,0 +1,50 @@
+body{ 
+  font-family: "Dosis"; 
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+.headline{
+  font-size: 2em;
+  text-align: center;
+}
+
+#wrapper {
+  width: 600px;
+  background: #FFF;
+  padding: 1em;
+  margin: 1em auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
+button {
+  border: none;
+  padding: 0.8em;
+  background: #F96;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 1em;
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+#editor {
+  padding: 1em;
+  background: #E6E6E6;
+  border-radius: 3px;
+}
+
+#editor:focus {
+  background: #FFF;
+  border-color: #69c773;
+}
+
+[contenteditable="true"] {
+  font-family: "Rajdhani";
+  color: #C00;
+}

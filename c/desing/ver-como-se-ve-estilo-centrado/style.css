@@ -1,0 +1,35 @@
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.grid .cell {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.grid .cell .text {
+  font-size: 50px;
+  position: relative;
+  z-index: 1;
+}
+.grid .cell .blur {
+  font-size: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(20px) opacity(0.4);
+}

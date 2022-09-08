@@ -1,0 +1,398 @@
+<div id="gallerylamp">
+    <style>
+        /* The Modal (background) */
+        
+        .modalFull {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+        /* Modal Content */
+        
+        .modalFull-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+        /* The Close Button */
+        
+        .closeFull {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        .closeFull:hover,
+        .closeFull:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .mySlidesFull {
+            display: none;
+        }
+        
+        .cursorFull {
+            cursor: pointer;
+        }
+        /* nextFull & prevFullious buttons */
+        
+        .prevFull,
+        .nextFull {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        /* Position the "nextFull button" to the right */
+        
+        .nextFull {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prevFull:hover,
+        .nextFull:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertextFull {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        img {
+            margin-bottom: -4px;
+        }
+        
+        .captionFull-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+        
+        .demoFull {
+            opacity: 0.6;
+        }
+        
+        .activeFull,
+        .demoFull:hover {
+            opacity: 1;
+        }
+        
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+        
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+
+
+
+
+    <div id="myModalFull" class="modalFull">
+        <span class="closeFull cursorFull" onclick="closeModalFull()">&times;</span>
+        <div class="modalFull-content">
+
+            <div class="mySlidesFull">
+                <div class="numbertextFull">1 / 4</div>
+                <img src="https://www.xiiber.com/img/photo-preview.webp" style="width:100%">
+            </div>
+
+            <div class="mySlidesFull">
+                <div class="numbertextFull">2 / 4</div>
+                <img src="https://www.xiiber.com/img/photo-preview-00.webp" style="width:100%">
+            </div>
+
+            <div class="mySlidesFull">
+                <div class="numbertextFull">3 / 4</div>
+                <img src="https://www.xiiber.com/img/photo-preview-01.webp" style="width:100%">
+            </div>
+
+            <div class="mySlidesFull">
+                <div class="numbertextFull">4 / 4</div>
+                <img src="https://www.xiiber.com/img/photo-preview-02.webp" style="width:100%">
+            </div>
+
+            <a class="prevFull" onclick="plusSlidesFull(-1)">&#10094;</a>
+            <a class="nextFull" onclick="plusSlidesFull(1)">&#10095;</a>
+
+            <div class="captionFull-container">
+                <p id="captionFull"></p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script>
+        function openModalFull() {
+            document.getElementById("myModalFull").style.display = "block";
+        }
+
+        function closeModalFull() {
+            document.getElementById("myModalFull").style.display = "none";
+        }
+
+        var slideIndexFull = 1;
+        showSlidesFull(slideIndexFull);
+
+        function plusSlidesFull(n) {
+            showSlidesFull(slideIndexFull += n);
+        }
+
+        function currentSlide(n) {
+            showSlidesFull(slideIndexFull = n);
+        }
+
+        function showSlidesFull(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidesFull");
+            var dots = document.getElementsByClassName("demoFull");
+            var captionText = document.getElementById("captionFull");
+            if (n > slides.length) {
+                slideIndexFull = 1
+            }
+            if (n < 1) {
+                slideIndexFull = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" activeFull", "");
+            }
+            slides[slideIndexFull - 1].style.display = "block";
+            dots[slideIndexFull - 1].className += " activeFull";
+            captionText.innerHTML = dots[slideIndexFull - 1].alt;
+        }
+    </script>
+
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        /* Position the image container (needed to position the left and right arrows) */
+        
+        .container {
+            position: relative;
+        }
+        /* Hide the images by default */
+        
+        .mySlides {
+            display: none;
+        }
+        /* Add a pointer when hovering over the thumbnail images */
+        
+        .cursor {
+            cursor: pointer;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* Container for image text */
+        
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Six columns side by side */
+        
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+        /* Add a transparency effect for thumnbail images */
+        
+        .demo {
+            opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
+
+
+
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="https://www.xiiber.com/img/photo-preview.webp" style="width:100%" onclick="openModalFull();currentSlide(1)" class="hover-shadow cursorFull">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="https://www.xiiber.com/img/photo-preview-00.webp" style="width:100%" onclick="openModalFull();currentSlide(2)" class="hover-shadow cursorFull">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="https://www.xiiber.com/img/photo-preview-01.webp" style="width:100%" onclick="openModalFull();currentSlide(3)" class="hover-shadow cursorFull">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="https://www.xiiber.com/img/photo-preview-02.webp" style="width:100%" onclick="openModalFull();currentSlide(4)" class="hover-shadow cursorFull">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%" onclick="openModalFull();currentSlide(5)" class="hover-shadow cursorFull">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%" onclick="openModalFull();currentSlide(6)" class="hover-shadow cursorFull">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="https://www.xiiber.com/img/photo-preview.webp" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://www.xiiber.com/img/photo-preview-00.webp" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://www.xiiber.com/img/photo-preview-01.webp" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://www.xiiber.com/img/photo-preview-02.webp" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="https://www.w3schools.com/howto/img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+</div>

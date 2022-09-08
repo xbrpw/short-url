@@ -1,0 +1,41 @@
+body {
+  font-family: "proxima-nova", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: black;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 0.95;
+  color: white;
+  position: relative;
+  
+}
+h1 span {
+  font-size: 0.5em;
+  display: block;
+}
+
+#target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://assets.codepen.io/314556/nebula-stardust.jpg");
+  background-size: cover;
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 150% 100%);
+}

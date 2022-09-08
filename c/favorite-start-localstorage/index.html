@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Favorite Links List with jQuery &amp; Local Storage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+  <div id="header">
+    <h2>
+      My Favorite Links
+    </h2>
+    <small>save your best links</small>
+  </div>
+  <div id="content">
+    <ul id="favorite-links">
+      <li>
+        <a href="http://artslab.info">Artslab</a><button class="removebtn">x</button>
+      </li>
+      <li>
+        <a href="https://codepen.io">Codepen</a><button class="removebtn">x</button>
+      </li>
+      <li>
+        <a href="http://thenews.im/">The News</a><button class="removebtn">x</button>
+      </li>
+    </ul>
+    <div id="new-link-button">
+      <button>Add New Link</button>
+    </div>
+  </div>
+  <div id="add-link-form">
+    <label>Title</label><br /><input id="title" placeholder="Title here" /><br /><label>URL</label><br /><input id="url" value="http://" /><br /><button id="add">Save Link</button>
+  </div>
+</div>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  margin: 50px;
+  font-family: 'Lato';
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: green;
+  font-weight: 900;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Clean Form of Fantasy ~ Rodeo 008</title>
+  <link href='https://fonts.googleapis.com/css?family=Mate|Average+Sans' rel='stylesheet' type='text/css'>
+<link href='http://weloveiconfonts.com/api/?family=fontelico' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+
+  <form>
+    <header>
+      <h2>A Form of Fantasy</h2>
+    </header>
+
+    <div class="row">
+      <div class="radioset col">
+        <h3 class="question">Which is better?</h3>
+        <div>
+          <span>
+            <input id="Field1_0" name="Field1" type="radio" class="field radio" value="Fantasty" checked="checked" />
+            <label class="choice" for="Field1_0" >
+              Fantasty
+            </label>
+          </span>
+          <span>
+            <input id="Field1_1" name="Field1" type="radio" class="field radio" value="Sci-Fi" />
+            <label class="choice" for="Field1_1" >
+              Sci-Fi
+            </label>
+          </span>
+          <span>
+            <input id="Field1_2" name="Field1" type="radio" class="field radio" value="Don&#039;t make me choose!" />
+            <label class="choice" for="Field1_2" >
+              Don't make me choose!
+            </label>
+          </span>
+          <span>
+            <input id="Field1_3" name="Field1" type="radio" class="field radio" value="I don&#039;t like either" />
+            <label class="choice" for="Field1_3" >
+              I don't like either
+            </label>
+          </span>
+        </div>
+      </div>
+
+      <div class="col">
+        <blockquote>"The gift of fantasy has meant more to me than my talent for absorbing positive knowledge."<aside> - Albert Einstein</aside></blockquote>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+
+    <div class="row">
+      <label for="Field2">
+        <h3 class="question">
+          How much would you donate to a Kickstarter to bring back Firefly?</h3>
+        </label>
+        <div class="right moneyQuestion">
+          <big>
+          <span class="symbol">$</span>
+          <span>
+            <input id="Field2" name="Field2" type="text" class="field text currency nospin" value="" size="8" />
+            <label for="Field2">Dollars</label>
+          </span>
+          <span class="symbol radix">.</span>
+          <span class="cents">
+            <input id="Field2-1" name="Field2-1" type="text" class="field text nospin" placeholder="2" value="" size="2" maxlength="2" />
+            <label for="Field2-1">Cents</label>
+          </span>
+          </big>
+        </div>
+      </div>
+
+    <div class="row">
+      <h3 class="question">
+        Rate the Star Wars movies
+      </h3>
+      <table cellspacing="0" class="tableset">
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <td>Didn't Like At All</td>
+            <td>Meh</td>
+            <td>Kinda Liked</td>
+            <td>Loved!</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="statement3">
+            <th>
+              <label for="Field3">Episode I<span> <span>- </span>The Phantom Menace</span></label>
+            </th>
+            <td title="Didn&#039;t Like At All">
+              <input id="Field3_1" name="Field3" type="radio" value="Didn&#039;t Like At All" />
+              <label for="Field3_1"></label>
+            </td>
+            <td title="Meh">
+              <input id="Field3_2" name="Field3" type="radio" value="Meh" />
+              <label for="Field3_2"></label>
+            </td>
+            <td title="Kinda Liked">
+              <input id="Field3_3" name="Field3" type="radio" value="Kinda Liked" />
+              <label for="Field3_3"></label>
+            </td>
+            <td title="Loved!">
+              <input id="Field3_4" name="Field3" type="radio" value="Loved!" />
+              <label for="Field3_4"></label>
+            </td>
+          </tr>
+          <tr class="alt statement4">
+            <th>
+              <label for="Field4">Episode II<span> <span>- </span>Attack of the Clones</span></label>
+            </th>
+            <td title="Didn&#039;t Like At All">
+              <input id="Field4_1" name="Field4" type="radio" value="Didn&#039;t Like At All" />
+              <label for="Field4_1"></label>
+            </td>
+            <td title="Meh">
+              <input id="Field4_2" name="Field4" type="radio" value="Meh" />
+              <label for="Field4_2"></label>
+            </td>
+            <td title="Kinda Liked">
+              <input id="Field4_3" name="Field4" type="radio" value="Kinda Liked" />
+              <label for="Field4_3"></label>
+            </td>
+            <td title="Loved!">
+              <input id="Field4_4" name="Field4" type="radio" value="Loved!" />
+              <label for="Field4_4"></label>
+            </td>
+          </tr>
+          <tr class="statement5">
+            <th><label for="Field5">Episode III<span> <span>- </span>Revenge of the Sith</span></label></th>
+            <td title="Didn&#039;t Like At All">
+              <input id="Field5_1" name="Field5" type="radio" value="Didn&#039;t Like At All" />
+              <label for="Field5_1"></label>
+            </td>
+            <td title="Meh">
+              <input id="Field5_2" name="Field5" type="radio" value="Meh" />
+              <label for="Field5_2"></label>
+            </td>
+            <td title="Kinda Liked">
+              <input id="Field5_3" name="Field5" type="radio" value="Kinda Liked" />
+              <label for="Field5_3"></label>
+            </td>
+            <td title="Loved!">
+              <input id="Field5_4" name="Field5" type="radio" value="Loved!" />
+              <label for="Field5_4"></label>
+            </td>
+          </tr>
+          <tr class="alt statement6">
+            <th>
+              <label for="Field6">Episode IV<span> <span>- </span>A New Hope</span></label>
+            </th>
+            <td title="Didn&#039;t Like At All">
+              <input id="Field6_1" name="Field6" type="radio" value="Didn&#039;t Like At All" />
+              <label for="Field6_1"></label>
+            </td>
+            <td title="Meh">
+              <input id="Field6_2" name="Field6" type="radio" value="Meh" />
+              <label for="Field6_2"></label>
+            </td>
+            <td title="Kinda Liked">
+              <input id="Field6_3" name="Field6" type="radio" value="Kinda Liked" />
+              <label for="Field6_3"></label>
+            </td>
+            <td title="Loved!">
+              <input id="Field6_4" name="Field6" type="radio" value="Loved!" />
+              <label for="Field6_4"></label>
+            </td>
+          </tr>
+          <tr class="statement7">
+            <th>
+              <label for="Field7">Episode V<span> <span>- </span>The Empire Strikes Back</span></label>
+            </th>
+            <td title="Didn&#039;t Like At All">
+              <input id="Field7_1" name="Field7" type="radio" value="Didn&#039;t Like At All" />
+              <label for="Field7_1"></label>
+            </td>
+            <td title="Meh">
+              <input id="Field7_2" name="Field7" type="radio" value="Meh" />
+              <label for="Field7_2"></label>
+            </td>
+            <td title="Kinda Liked">
+              <input id="Field7_3" name="Field7" type="radio" value="Kinda Liked" />
+              <label for="Field7_3"></label>
+            </td>
+            <td title="Loved!">
+              <input id="Field7_4" name="Field7" type="radio" value="Loved!" />
+              <label for="Field7_4"></label>
+            </td>
+          </tr>
+          <tr class="alt statement8">
+            <th>
+              <label for="Field8">Episode VI<span> <span>- </span>Return of the Jedi</span></label>
+            </th>
+            <td title="Didn&#039;t Like At All">
+              <input id="Field8_1" name="Field8" type="radio" value="Didn&#039;t Like At All" />
+              <label for="Field8_1"></label>
+            </td>
+            <td title="Meh">
+              <input id="Field8_2" name="Field8" type="radio" value="Meh" />
+              <label for="Field8_2"></label>
+            </td>
+            <td title="Kinda Liked">
+              <input id="Field8_3" name="Field8" type="radio" value="Kinda Liked" />
+              <label for="Field8_3"> </label>
+            </td>
+            <td title="Loved!">
+              <input id="Field8_4" name="Field8" type="radio" value="Loved!" />
+              <label for="Field8_4"></label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+
+      <div class="row">  
+        <label for="Field104">
+          <h3 class="question">
+            Are you caught up on Game of Thrones?
+          </h3>
+        </label>
+        <div>
+          <big>
+            <select id="Field104" name="Field104" class="field select medium" tabindex="31" > 
+            <option value="Never seen it" selected="selected">
+             Never seen it
+           </option>
+           <option value="Yep, totally caught up" >
+             Yep, totally caught up
+           </option>
+           <option value="I&#039;ve seen some but I&#039;m not caught up" >
+             I've seen some but I'm not caught up
+           </option>
+         </select>
+          </big>
+       </div>
+     </div>
+
+
+     <div class="row">
+      <label for="Field107">
+        <h3 class="question">
+          What is your favorite Fantasty or Sci-Fi movie of all time?
+        </h3>
+      </label>
+      <div>
+        <big><input id="Field107" name="Field107" type="text" class="field text medium" value="" placeholder="Firefly, Game of Thrones, ..." maxlength="255" tabindex="32" onkeyup="" /></big>
+      </div>
+    </div>
+    
+    
+    <div class="row infos">
+      <h3 class="question">Your Information</h3>
+      
+      <div>
+      <label class="desc" id="title105" for="Field105">
+        Name <small>&nbsp;&nbsp;First / Last</small>
+      </label>
+      <span>
+        <input id="Field105" name="Field105" type="text" class="field text fn" value="" size="8" placeholder="Hugo" tabindex="33" />
+        <input id="Field106" name="Field106" type="text" class="field text ln" value="" placeholder="Mustermann" size="14" placeholder="" tabindex="34" />
+      </span>
+      <div>
+        
+        <div class="clearfix"></div>
+        
+      <div>
+        <label class="desc" id="title110" for="Field110">
+          Email
+        </label>
+        <input id="Field110" name="Field110" placeholder="email@example.com" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" /> 
+      </div>
+    
+        <div class="clearfix"></div>
+        
+      <div>
+        <label class="desc" id="title117" for="Field117">
+          Website
+        </label>
+        <input id="Field117" placeholder="http://example.com" name="Field117" type="url" class="field text medium" value="" maxlength="255" tabindex="36" /> 
+      </div>
+    </div>
+      </div></div>
+    
+    <div class="row" style="height:100px;">
+      <input id="saveForm" name="saveForm" class="btn submit" 
+        type="submit" value="Submit"
+     />
+    </div>
+    
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

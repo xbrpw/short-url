@@ -1,0 +1,105 @@
+.offerBtn {
+  background-color: rgb(56, 154, 220);
+  box-shadow: inset 0px 5px 0px 0px rgba(255, 255, 255, 0.15);
+  width: 420px;
+  height: 100px;
+  z-index: 82;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Raleway', sans;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.offerBtn:hover {
+  background: #3CBD45;
+}
+.offerBtn:active {
+box-shadow: 0px 0px 15px 0px rgba(27,199,0,1);
+}
+.offerBtn img {
+  height: 80px;
+  top: 10px;
+  position: absolute;
+  left: -5px;
+  opacity: .15;
+}
+
+.offerBtn span {
+  position: absolute;
+}
+
+.btnIcon {
+  top: 24px;
+  left: 50px;
+}
+
+.st0 {
+  fill: #FFFFFF;
+}
+
+.st1 {
+  fill: #FFFFFF;
+  fill-opacity: 0.5;
+}
+
+.text1,
+.text2,
+.text3 {
+  color: #FFF;
+  font-weight: 800;
+}
+
+.offerBtn:before {
+  content: '';
+  display: block;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, .15);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: -200px;
+  left: -330px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.offerBtn:hover:before {
+  left: -300px;
+}
+
+.text1 {
+  font-size: 36px;
+  line-height: 1em;
+  left: 25px;
+  top: 13px;
+}
+
+.text2 {
+  font-weight: 300;
+  right: 42px;
+  bottom: 10px;
+}
+
+.text3 {
+  top: -5px;
+  right: 40px;
+  font-size: 70px;
+  font-family: 'Open Sans', sans;
+  font-weight: 400;
+  letter-spacing: -4px;
+}
+
+.text4 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  right: -39px;
+  top: 37px;
+  background: yellow;
+  padding: 7px 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+}

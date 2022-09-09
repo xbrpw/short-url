@@ -56,7 +56,7 @@ a:visited {
 
 .wrapper {
   margin: 0 auto;
-  /*padding: 0.5rem;*/
+  padding: 1.2rem;
   display: grid;
   justify-content: start;
   align-content: start;
@@ -66,7 +66,7 @@ a:visited {
 .wrapper .main-head {
   grid-area: header;
   font-size: 1.2rem;
-  /*padding: 1rem 0;*/
+  padding: 1rem 0;
 
 }
 .wrapper .main-head h1 {
@@ -77,11 +77,11 @@ a:visited {
 }
 .wrapper .head-widgets {
   grid-area: widgets;
-  /*padding: 1rem 0;*/
+  padding: 1rem 0;
 }
 .wrapper .content {
   grid-area: content;
-  /*padding-bottom: 2rem;*/
+  padding-bottom: 2rem;
 }
 .wrapper .side {
   grid-area: sidebar;
@@ -91,7 +91,7 @@ a:visited {
 }
 .wrapper .main-footer {
   grid-area: footer;
-/*  padding: 2rem 0;*/
+  padding: 2rem 0;
   text-align: center;
   border-top: 1px solid;
   font-size: 0.9rem;

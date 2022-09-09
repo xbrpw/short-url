@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!-- ⊙⩌⨀
+    2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack    
+	    ¿Quién hizo todo esto? 
+        http://twitter.com/luisangelmaciel -->
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+ 
+<script>
+    $(document).ready(function() {
+        $("#div4").load("div4.html");
+    });
+</script>
+
+<!-- <div id="div4"> </div> -->
+
+<style>a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: inherit; 
+    text-decoration: none;
+}
+
+
+a:active {
+    color: inherit; 
+    text-decoration: none;
+  }
+</style>
+
+    <script>
+        function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+                }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+            }
+        }
+        };
+    </script>
+
+<body>
+    
+<div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
+
+<div class="w3-bar w3-black w3-center">
+  <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav01')">
+  <i class="fa fa-bars w3-xlarge w3-text-white"></i></a>
+  <a class="w3-bar-item w3-padding-16 " style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav03')">
+  <i class="fa fa-file w3-xlarge w3-text-white"></i></a>
+  <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav02')">
+  <i class="fa fa-camera w3-xlarge w3-text-white"></i></a>
+</div>
+
+<div id="nav01" class="w3-bar-block">
+  <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" href="javascript:void(0)" onclick="w3_close()">×</a>
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="https://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>
+  <a class="w3-bar-item w3-button" href="#AutomaticSlideshow">Automatic Slideshow</a>
+  <a class="w3-bar-item w3-button" href="#usarjQuery">UsarjQuery</a>  
+  <a class="w3-bar-item w3-button" href="#paraA">a</a>
+  <a class="w3-bar-item w3-button" href="#incluirHtml">Incluir html</a>
+  <a class="w3-bar-item w3-button" href="#"></a>
+  <a class="w3-bar-item w3-button" href="#"></a>
+</div>
+
+<div id="nav02">
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
+</div>
+
+<div id="nav03">
+  <div class="w3-container w3-border-bottom">
+    <h1 class="w3-text-theme">Todo en uno</h1>
+  </div>
+  <ul class="w3-ul w3-large">  
+   <li  class="w3-bar-item ">CSS</li>
+   <li  class="w3-bar-item "><a href="https://www.xbr.pw/secu/editor/index2.html" target="iframe_a">Editor</a></li>
+   <li class="w3-bar-item "><a href="https://www.w3schools.com/howto/default.asp">W3S How to</a></li>
+   <li class="w3-bar-item "><a href="https://www.w3schools.com/w3css/default.asp">W3S CSS</a></li>
+   <li  class="w3-bar-item "><a href="https://getbootstrap.com/docs/5.1/examples/" target="iframe_a">Bootstrap</a></li>   
+   <li class="w3-bar-item "><a href="https://www.quackit.com/" target="iframe_a">Quickit</a></li>
+   <li  class="w3-bar-item "><a href="https://www.html-code-generator.com/html/" target="iframe_a">CodeGenerator</a></li>
+
+   <li  class="w3-bar-item ">IMG</li>
+   <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a></li>
+   <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/compress-png-jpg-webp-gif" target="iframe_a">Comprimir img</a></li>
+   <li  class="w3-bar-item "><a href="https://photoswipe.com/" target="iframe_a">Photoswipe</a></li>
+   <li  class="w3-bar-item "><a href="https://icomoon.io/app/#/select" >Icomoon</a></li>
+   
+   <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
+   <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
+   <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
+
+   <div w3-include-html=""></div> 
+
+  </ul>
+</div>
+</div>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:300px;"> 
+
+<div class="w3-top w3-theme w3-large w3-hide-large">
+  <i class="fa fa-bars w3-button w3-teal w3-xlarge" onclick="w3_open()"></i>
+</div>
+
+
+
+<iframe src="https://www.xbr.pw/secu/editor/" name="iframe_a" height="650px " width="100% " title="Iframe Example" style="border:none;" allowfullscreen=" " frameborder="0 " style="border:0; "  style="overflow:hidden"></iframe>
+
+
+
+
+
+
+
+
+<header class="w3-container w3-theme w3-padding-64 w3-center">
+  <h1 class="w3-xxxlarge w3-padding-16">xbr.pw</h1>
+</header>
+
+
+<!-- -->
+<div class="w3-container w3-padding-large w3-section w3-light-grey" >
+    <h1 class="w3-jumbo">Fragmentos</h1>
+    <p class="w3-xlarge">The Language for Programming Web Pages</p>
+    <p>¡Más muy pronto!</p>
+    <p> Se agregarán más ejemplos para ayudar a cualquiera a comenzar o familiarizarse más con el funcionamiento de Skeleton. El objetivo es la educación. Si está más interesado en ejemplos reales y en vivo de sitios de Skeleton, ¡pronto crearé una lista de "Construidos en Skeleton"!</p> </p>
+    <a href="" class="w3-button w3-theme w3-hover-white">LEARN JS</a>
+    <a href="" class="w3-button w3-theme w3-hover-white">JS REFERENCE</a>
+    <p>Patrones comunes para crear sitios y aplicaciones que se basan en componentes y utilidades existentes con CSS personalizado y más.</p>
+  
+</div>
+<!--  -->
+
+    <templete hidden>
+    <!--  -->
+    <div class="w3-container w3-padding-large w3-section  w3-light-grey">
+        <h2 id=""></h2>
+        <p></p>
+        <div class="w3-code htmlHigh notranslate green-border" >
+            &lt;   <
+            &quot; "
+            &lt;button onclick=&quot;myFunction()&quot;&gt;Click Me!&lt;/button&gt;<br><br>                   
+        </div>
+    </div>
+    <!--  -->    
+    </templete>
+
+    
+
+
+    <!-- Usar jQuery -->  
+        <div class=" grey-color w3-card-2 w3-round" style="padding:16px;">
+        <h2  id="usarjQuery">Para armar la web</h2>
+        <p>Para darle cuerpo al html sin tener que tener tanto codig usar jQuery</p>        
+        
+        
+    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="line-height: 19px;"><div><span style="color: #808080;">&lt;</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div><div>&nbsp; &nbsp; <span style="color: #dcdcaa;">$</span>(<span style="color: #9cdcfe;">document</span>).<span style="color: #dcdcaa;">ready</span>(<span style="color: #569cd6;">function</span>() {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #dcdcaa;">$</span>(<span style="color: #ce9178;">"#div4"</span>).<span style="color: #dcdcaa;">load</span>(<span style="color: #ce9178;">"div4.html"</span>);</div><div>&nbsp; &nbsp; });</div><div><span style="color: #808080;">&lt;/</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div></div></div></pre> 
+
+    <h2 id="paraA">a</h2>
+    <pre style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="line-height: 19px;"><div><span style="color: #d7ba7d;">a:link</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">#000</span>;</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>}</div><br><div><span style="color: #d7ba7d;">a:visited</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">#000</span>;</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>}</div><br><br><div><span style="color: #d7ba7d;">a:hover</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">inherit</span>; </div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>}</div><br><br><div><span style="color: #d7ba7d;">a:active</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">inherit</span>; </div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>&nbsp; }</div></div></pre>
+
+
+            <div class="w3-code notranslate green-border">
+                <div class="htmlHigh">
+                    &lt;script src="jquery.min.js" type="text/javascript" charset="utf-8"> &lt;/script><br>
+                    &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'> &lt;/script>  <br><br>
+                    &lt;script><br>
+                     &nbsp;$(document).ready(function() {<br>
+                     &nbsp;$("#div4").load("div4.html"); <br>
+                     &nbsp;});<br>
+                    &lt;/script&gt;                  
+                </div>
+            </div>
+
+            <div class="w3-code htmlHigh notranslate green-border" >                               
+                &lt;div id="div4">  &lt;/div>
+            </div>
+
+            <div class="w3-code cssHigh notranslate green-border">
+                body {<br>
+                &nbsp; background-color: lightblue;<br>}<br><br>
+                h1 {<br>
+                &nbsp; color: white;<br>
+                &nbsp; text-align: center;<br>}<br><br>p {<br>&nbsp; font-family: verdana;<br>}
+            </div>         
+
+        </div>
+    <!-- Usar jQuery -->
+  
+
+    <!-- Automatic Slideshow -->
+    <div class="w3-container w3-padding-large w3-section  w3-light-grey">
+        <h2 id="AutomaticSlideshow">Automatic Slideshow</h2>
+        <p>Change image every 2 seconds:</p>
+
+        <style>
+            * {box-sizing: border-box;}
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+            
+            /* Slideshow container */
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            }
+            
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            /*padding: 8px 12px;*/
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            }
+            
+            
+            /* The dots/bullets/indicators */
+            .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+            
+            .active {
+            background-color: #717171;
+            }
+            
+            /* Fading animation */
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+            
+            @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+            }
+            
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+            }
+        </style>
+
+        <div class="slideshow-container ">
+
+        <div class="mySlides fade">
+        <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+        <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        </div>
+    </div>
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+    <!-- Automatic Slideshow -->
+
+    <!-- incluide html -->
+    <div class="w3-container w3-padding-large w3-section  w3-light-grey">
+        <h2 id="incluirHtml">Incluir html</h2>
+        <p>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2</p>        
+    </div>    
+    <!-- incluide html -->
+    <h2 id="onclickpage">En vez de a ref usar onclick</h2>
+    <pre style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><span style="color: #9cdcfe;">onclick</span>=<span style="color: #ce9178;">"</span><span style="color: #9cdcfe;">document</span><span style="color: #ce9178;">.</span><span style="color: #9cdcfe;">location</span>=<span style="color: #ce9178;">'herramientas.html'</span><span style="color: #ce9178;">"</span></pre>
+
+    <br>
+    <h2 id="efectoTyping">Efecto typing 1</h2>
+    <pre><div style="background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="color: rgb(212, 212, 212);">&lt;style&gt;</div><div style="color: rgb(212, 212, 212);"><span style="color: #c586c0;">@-webkit-keyframes</span> <span style="color: #9cdcfe;">typing</span> { from { <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">0</span>; } }</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #c586c0;">@-webkit-keyframes</span> <span style="color: #9cdcfe;">blink-caret</span> { 50% { <span style="color: #9cdcfe;">border-color</span>: <span style="color: #ce9178;">transparent</span>; } }</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; </div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #d7ba7d;">.typing</span> { </div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">border-right</span>: <span style="color: #b5cea8;">.1em</span> <span style="color: #ce9178;">solid</span> <span style="color: #ce9178;">black</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #ce9178;">auto</span>; </div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">35ch</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">white-space</span>: <span style="color: #ce9178;">nowrap</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">overflow</span>: <span style="color: #ce9178;">hidden</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">-webkit-animation</span>: typing <span style="color: #b5cea8;">3s</span> <span style="color: #dcdcaa;">steps</span>(<span style="color: #b5cea8;">35</span>, end),</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; blink-caret <span style="color: #b5cea8;">.5s</span> <span style="color: #ce9178;">step-end</span> <span style="color: #ce9178;">infinite</span> <span style="color: #ce9178;">alternate</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; }</div><div style="color: rgb(212, 212, 212);">&lt;/style&gt;</div><div style="color: rgb(212, 212, 212);">&nbsp;</div><div style=""><div style="line-height: 19px;"><span style="color: rgb(128, 128, 128);">&lt;</span><font color="#569cd6">div</font><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">class</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"typing"</span><span style="color: rgb(128, 128, 128);">&gt;</span><font color="#d4d4d4">Editor Sor Juana</font><span style="color: rgb(128, 128, 128);">&lt;/</span><font color="#569cd6">div</font><span style="color: rgb(128, 128, 128);">&gt;</span></div></div><div style="color: rgb(212, 212, 212);"><br></div><div style="color: rgb(212, 212, 212);">&lt;script&gt;</div><div style="color: rgb(212, 212, 212);"><div style="line-height: 19px;"><div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">saveTextAsFile</span>()</div><div>{ &nbsp; &nbsp; &nbsp;</div><div><span style="color: #6a9955;">// grab the content of the form field and place it into a variable</span></div><div>&nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">textToWrite</span> = <span style="color: #9cdcfe;">document</span>.<span style="color: #dcdcaa;">getElementById</span>(<span style="color: #ce9178;">"inputTextToSave"</span>).<span style="color: #9cdcfe;">value</span>;</div><div>&nbsp; &nbsp; <span style="color: #6a9955;">//var textToWrite2 = document.getElementById("inputTextToSave2").value;</span></div><div><span style="color: #6a9955;">// &nbsp;create a new Blob (html5 magic) that conatins the data from your form feild</span></div><div>&nbsp; &nbsp; <span style="color: #6a9955;">//var textFileAsBlob = new Blob([textToWrite," ",textToWrite2], {type:'text/plain'});</span></div><div>&nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">textFileAsBlob</span> = <span style="color: #569cd6;">new</span> <span style="color: #4ec9b0;">Blob</span>([<span style="color: #9cdcfe;">textToWrite</span>,<span style="color: #ce9178;">" "</span>], {<span style="color: #9cdcfe;">type</span><span style="color: #9cdcfe;">:</span><span style="color: #ce9178;">'text/plain'</span>});</div><div><span style="color: #6a9955;">// Specify the name of the file to be saved</span></div><div>&nbsp; &nbsp;<span style="color: #6a9955;">// var fileNameToSaveAs = "myNewFile.txt";</span></div><div>&nbsp; &nbsp; </div><div><span style="color: #6a9955;">// Optionally allow the user to choose a file name by providing </span></div><div><span style="color: #6a9955;">// an imput field in the HTML and using the collected data here</span></div><div>&nbsp;<span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">fileNameToSaveAs</span> = <span style="color: #9cdcfe;">txtFileName</span>.<span style="color: #9cdcfe;">value</span>;</div><br><div><span style="color: #6a9955;">// create a link for our script to 'click'</span></div><div>&nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">downloadLink</span> = <span style="color: #9cdcfe;">document</span>.<span style="color: #dcdcaa;">createElement</span>(<span style="color: #ce9178;">"a"</span>);</div><div><span style="color: #6a9955;">// &nbsp;supply the name of the file (from the var above).</span></div><div><span style="color: #6a9955;">// you could create the name here but using a var</span></div><div><span style="color: #6a9955;">// allows more flexability later.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #9cdcfe;">download</span> = <span style="color: #9cdcfe;">fileNameToSaveAs</span>;</div><div><span style="color: #6a9955;">// provide text for the link. This will be hidden so you</span></div><div><span style="color: #6a9955;">// can actually use anything you want.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #9cdcfe;">innerHTML</span> = <span style="color: #ce9178;">"My Hidden Link"</span>;</div><div>&nbsp; &nbsp; </div><div><span style="color: #6a9955;">// allow our code to work in webkit &amp; Gecko based browsers</span></div><div><span style="color: #6a9955;">// without the need for a if / else block.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">URL</span> = <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">URL</span> || <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">webkitURL</span>;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div><div><span style="color: #6a9955;">// Create the link Object.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #9cdcfe;">href</span> = <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">URL</span>.<span style="color: #dcdcaa;">createObjectURL</span>(<span style="color: #9cdcfe;">textFileAsBlob</span>);</div><div><span style="color: #6a9955;">// when link is clicked call a function to remove it from</span></div><div><span style="color: #6a9955;">// the DOM in case user wants to save a second file.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #dcdcaa;">onclick</span> = <span style="color: #dcdcaa;">destroyClickedElement</span>;</div><div><span style="color: #6a9955;">// make sure the link is hidden.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #4fc1ff;">style</span>.<span style="color: #9cdcfe;">display</span> = <span style="color: #ce9178;">"none"</span>;</div><div><span style="color: #6a9955;">// add the link to the DOM</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">document</span>.<span style="color: #9cdcfe;">body</span>.<span style="color: #dcdcaa;">appendChild</span>(<span style="color: #9cdcfe;">downloadLink</span>);</div><div>&nbsp; &nbsp; </div><div><span style="color: #6a9955;">// click the new link</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #dcdcaa;">click</span>();</div><div>}</div><br><div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">destroyClickedElement</span>(<span style="color: #9cdcfe;">event</span>)</div><div>{</div><div><span style="color: #6a9955;">// remove the link from the DOM</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">document</span>.<span style="color: #9cdcfe;">body</span>.<span style="color: #dcdcaa;">removeChild</span>(<span style="color: #9cdcfe;">event</span>.<span style="color: #9cdcfe;">target</span>);</div><div>}</div><div>&lt;/script&gt;<br></div></div></div></div></pre>
+  
+    <br>
+    <h2 id="ConAmorTypiwriter">Efecto typing 2</h2>
+    <pre><div style="background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="color: rgb(212, 212, 212);"><span style="color: #808080;"><br></span></div><div style="color: rgb(212, 212, 212);"><span style="color: #808080;"><br></span></div><div style="color: rgb(212, 212, 212);"><span style="color: #808080;">  &lt;</span><span style="color: #f44747;">center</span><span style="color: #808080;">&gt;</span></div><div style=""><font color="#d4d4d4">   </font><span style="color: rgb(128, 128, 128);">&lt;</span><span style="color: rgb(86, 156, 214);">div</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">onclick</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"</span><span style="color: rgb(220, 220, 170);">typeWriter</span><span style="color: rgb(206, 145, 120);">() </span><span style="color: rgb(206, 145, 120);">"</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">style</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"</span><span style="color: rgb(206, 145, 120);"> &nbsp;color: #323b3f;</span><span style="color: rgb(206, 145, 120);">"</span><span style="color: rgb(128, 128, 128);">&gt;</span></div><div style="color: rgb(212, 212, 212);">     Hecho con<span style="color: rgb(128, 128, 128);">&lt;</span><span style="color: rgb(86, 156, 214);">span</span> <span style="color: rgb(156, 220, 254);">class</span>=<span style="color: rgb(206, 145, 120);">"heartbeat"</span><span style="color: rgb(128, 128, 128);">&gt;</span>❤<span style="color: rgb(128, 128, 128);">&lt;/</span><span style="color: rgb(86, 156, 214);">span</span><span style="color: rgb(128, 128, 128);">&gt;</span> y mucho código</div><div style=""><font color="#d4d4d4">     </font><span style="color: rgb(128, 128, 128);">&lt;</span><span style="color: rgb(86, 156, 214);">a</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">id</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"powered "</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">href</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"https://luisangelmaciel.github.io/ "</span><font color="#d4d4d4"> </font><span style="color: rgb(128, 128, 128);">&gt;</span><span style="color: rgb(128, 128, 128);">&lt;/</span><span style="color: rgb(86, 156, 214);">a</span><span style="color: rgb(128, 128, 128);">&gt;</span><font color="#d4d4d4"> </font></div><div style=""><font color="#d4d4d4">   </font><span style="color: rgb(128, 128, 128);">&lt;/</span><span style="color: rgb(86, 156, 214);">div</span><span style="color: rgb(128, 128, 128);">&gt;</span></div><div style=""><span style="color: rgb(128, 128, 128);">  &lt;/</span><span style="color: rgb(244, 71, 71);">center</span><span style="color: rgb(128, 128, 128);">&gt;</span></div><font color="#d4d4d4"><br></font><div style="color: rgb(212, 212, 212);">&nbsp; <span style="color: #808080;">&lt;</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">i</span> = <span style="color: #b5cea8;">0</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">txt</span> = <span style="color: #ce9178;">'designer luisangel.maciel'</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">speed</span> = <span style="color: #b5cea8;">65</span>;</div><font color="#d4d4d4"><br></font><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">typeWriter</span>() {</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #c586c0;">if</span> (<span style="color: #9cdcfe;">i</span> &lt; <span style="color: #9cdcfe;">txt</span>.<span style="color: #9cdcfe;">length</span>) {</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">document</span>.<span style="color: #dcdcaa;">getElementById</span>(<span style="color: #ce9178;">"powered "</span>).<span style="color: #9cdcfe;">innerHTML</span> += <span style="color: #9cdcfe;">txt</span>.<span style="color: #dcdcaa;">charAt</span>(<span style="color: #9cdcfe;">i</span>);</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">i</span>++;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #dcdcaa;">setTimeout</span>(<span style="color: #dcdcaa;">typeWriter</span>, <span style="color: #9cdcfe;">speed</span>);</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; }</div><div style="color: rgb(212, 212, 212);">&nbsp; <span style="color: #808080;">&lt;/</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div><div style="color: rgb(212, 212, 212);"><span style="color: #808080;"><br></span></div><font color="#d4d4d4"><br></font></div></pre>
+
+    <br>
+    <h2 id="firmaLamp">Firma lamp!</h2>
+    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div><span style="color: #6a9955;"><br></span></div><div><span style="color: #6a9955;">  &lt;!-- ⊙⩌⨀</span></div><div><span style="color: #6a9955;">  &nbsp; &nbsp; 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack &nbsp; &nbsp;</span></div><div><span style="color: #6a9955;">&nbsp; &nbsp; &nbsp; ¿Quién hizo todo esto? </span></div><div><span style="color: #6a9955;">&nbsp; &nbsp; &nbsp; http://twitter.com/luisangelmaciel </span></div><div><span style="color: rgb(106, 153, 85);">  --&gt;</span></div><div><span style="color: #6a9955;"><br></span></div></div></pre>
+    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div><span style="color: #808080;"><br></span></div><div><span style="color: #808080;">     &lt;</span><span style="color: #569cd6;">style</span> <span style="color: #9cdcfe;">media</span>=<span style="color: #ce9178;">"screen"</span><span style="color: #808080;">&gt;</span> &nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ <span style="color: #d7ba7d;">code</span> &amp; travel &lt;/<span style="color: #d7ba7d;">style</span>&gt; </div><div><br></div></div></pre>
+    <style media="screen">  
+        ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮
+        ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
+        ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃
+        ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃
+        ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮
+        ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯
+        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ code & travel </style> 
+
+    <br>
+    <h2 id="googleSheetMaster">  html-form-to-google-sheet-master</h2>
+
+    <br>
+    <h2 id="tamanosResponsive">Tamaños responsivos</h2>
+    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div>&nbsp;<span style="color: rgb(197, 134, 192);">@media</span> <span style="color: rgb(206, 145, 120);">screen</span> and (<span style="color: rgb(156, 220, 254);">min-width</span>: <span style="color: rgb(181, 206, 168);">530px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">75%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">600px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>:<span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">65%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">730px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>:<span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">40%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">1000px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card.xl</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">600px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>: <span style="color: #b5cea8;">600px</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div></div></pre>
+
+    <br>
+    <h2 id=""></h2>
+  
+
+    <br>
+    <h2 id=""></h2>
+
+    <br>
+    <h2 id=""></h2>
+
+    <footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
+    <p><nav>
+    <a href="" target="_blank">FORUM</a> |
+    <a href="" target="_top">ABOUT</a>
+    </nav></p>
+    </footer>
+
+
+
+    <script>
+    function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+    }
+
+    openNav("nav01");
+    function openNav(id) {
+    document.getElementById("nav01").style.display = "none";
+    document.getElementById("nav02").style.display = "none";
+    document.getElementById("nav03").style.display = "none";
+    document.getElementById(id).style.display = "block";
+    }
+    </script>
+
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+
+    <script>
+        includeHTML();
+    </script>
+    
+
+    </body>
+    </html> 

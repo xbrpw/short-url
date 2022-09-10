@@ -108,11 +108,11 @@ aside:after {
   transition: 0.3s opacity ease;
   animation: 0.5s shadow infinite alternate-reverse;
 }
-aside iframe {
+aside header {
   position: relative;
   display: block;
 }
-aside iframe:before {
+aside header:before {
   content: "";
   position: absolute;
   left: 0;
@@ -122,7 +122,7 @@ aside iframe:before {
   background-size: cover;
   transform: translate3d(0, -100%, 0);
 }
-aside iframe:after {
+aside header:after {
   content: "";
   position: absolute;
   top: 0;

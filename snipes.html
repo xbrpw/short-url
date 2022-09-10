@@ -121,9 +121,25 @@ a:active {
    <li  class="w3-bar-item "><a href="https://photoswipe.com/" target="iframe_a">Photoswipe</a></li>
    <li  class="w3-bar-item "><a href="https://icomoon.io/app/#/select" >Icomoon</a></li>
    
+   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/oNYxgyX" target="iframe_a">Gradients</a></li>
+   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/ZEBWYxm" target="iframe_a">CSS Filter playground</a></li>
+   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/BaQKyxd" target="iframe_a">Box Shadow </a></li>
+   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/mdOPyxO" target="iframe_a">CSS Cursor Property</a></li>
+   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/EWerRM" target="iframe_a">Para que sea banco de indexación </a></li>
+   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/LzWgyJ" target="iframe_a">Digital assets</a></li>
+   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/VMePLV" target="iframe_a">background patterns</a></li>
    <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
    <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
-   <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
+   
+
+
+
+
+
+
+
+
+
 
    <div w3-include-html=""></div> 
 
@@ -284,6 +300,8 @@ a:active {
             @media only screen and (max-width: 300px) {
             .text {font-size: 11px}
             }
+
+            
         </style>
 
         <div class="slideshow-container ">
@@ -371,14 +389,80 @@ a:active {
 
     <br>
     <h2 id="tamanosResponsive">Tamaños responsivos</h2>
+    <p>Ver el style de abajo</p>
     <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div>&nbsp;<span style="color: rgb(197, 134, 192);">@media</span> <span style="color: rgb(206, 145, 120);">screen</span> and (<span style="color: rgb(156, 220, 254);">min-width</span>: <span style="color: rgb(181, 206, 168);">530px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">75%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">600px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>:<span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">65%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">730px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>:<span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">40%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">1000px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card.xl</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">600px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>: <span style="color: #b5cea8;">600px</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div></div></pre>
+        <style>
+            /* On smaller screens, decrease text size */
+                    @media only screen and (max-width: 300px) {
+                    .text {font-size: 11px}
+                    }
 
+                    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+        }
+        @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+        }
+        @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+        }
+
+        @-ms-viewport {
+        width: device-width;
+        }
+        </style>
     <br>
     <h2 id="bgimgUrl">background image url</h2>
     <pre> &lt;img style="background-image: url(./img/600x400-1.jpg)" alt=""&gt;&lt;/img&gt;<br></pre>
 
     <br>
-    <h2 id=""></h2>
+    <h2 id="">Linea degradada</h2>
+    <div style="  display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 430px;
+    height: 170px;
+    padding: 26.66667px 0;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;"></div>
+    
+   
+    
+   
+
+    <br>
+    <h2 id="datanosnippet">data-nosnippet</h2>
+    <span data-nosnippet></span>
+    <br>
+    <h2 id=""> Síganos</h2>   
+    Suscríbase a nuestro boletín y reciba correos electrónicos extremadamente raros de nosotros. En el lado positivo, se le notificará cada vez que se escriba una nueva publicación en el blog.
+    https://allurewebsolutions.com/ 
+    <br>
+    <h2 id="">Informar de un error</h2>
+    https://codelabs.developers.google.com/codelabs/sheets-api/?hl=es#0
+    bug_report 
+    <br>
+    <h2 id="">ul sin estilo</h2>
+    <style>
+        ul.demo {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        </style>
+        <ul class="demo">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Coca Cola</li>
+        </ul>
 
     <br>
     <h2 id=""></h2>

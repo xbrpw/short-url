@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<title>Toxel | .container-domain-user</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=Pn94Jv5_9Pny7TBMZy8RA3HTLAQqx-XBjo4J2ashM9jfKSLSQA_dxeNgt9AR1WTRpKYzpvD-eIq1TJA0MCXnyA" charset="UTF-8"></script><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=JdmI4QlcMEYpSXxHP2NVJmqzyWqpMMYewvnvKtdI-a897epq9VwtT42odEoYDfdpjtogZl9sqvCYwS2_YTSI-g" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9sdWlzYW5nZWxtYWNpZWwudzNzcGFjZXMuY29tL29uZS5odG1s"/><style>
+    .mySlides {
+        display: none;
+    }
+    iframe {border: none}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,700&display=swap" rel="stylesheet">
+
+
+
+<body>
+
+
+
+    <div class="w3-content w3-display-container">
+     <!--    <div class="w3-container mySlides" style="width:100%">
+
+
+            <h2 class="w3-center">.container-domain-user</h2>
+
+            <iframe src="" width="100%" height="50px"></iframe>
+
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>HTML Example</h4>
+                <div class="w3-code htmlHigh notranslate">
+                    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"&gt;<br><br> &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js'&gt;&lt;/script&gt;
+                    <br><br> &lt;script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js'&gt;&lt;/script&gt; <br> <br> &lt;body class="body"&gt;<br> &lt;div class="container-domain-user"&gt;<br> &lt;span class="domain"&gt;www.codepen.io/&lt;/span&gt;&lt;span
+                    class="txt2"&gt;luisangelmaciel&lt;/span&gt;
+                    <br> &lt;div class="bar-domain-user"&gt;&lt;/div&gt;<br> &lt;/body&gt;
+                </div>
+
+
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h4>CSS Example</h4>
+
+                    <div class="w3-code cssHigh notranslate">
+                        .body {<br> width: 100%;<br> height: 50%;<br> /* background: #000; */<br> position: absolute;<br> overflow: hidden;<br> }
+                        <br>
+                        <br> .container-domain-user {<br> font-size: 40px;<br> font-family: 'Red Hat Display', sans-serif;<br> letter-spacing: 1.5px;<br> position: absolute;<br> top: 50%;<br> left: 50%;<br> transform: translate(-50%, -50%);<br> width:
+                        600px;
+                        <br> height: 80px;<br> }
+                        <br>
+                        <br> .container-domain-user * {<br> display: inline-block;<br> overflow: hidden;<br> position: absolute;<br> }
+                        <br>
+                        <br> .bar-domain-user {<br> width: 3px;<br> height: 49px;<br> position: absolute;<br> top: -1px;<br> }
+                    </div>
+                </div>
+
+
+                <div class="w3-panel w3-card w3-light-grey">
+                    <h4>JavaScript Example</h4>
+                    <div class="w3-code jsHigh notranslate">
+                        var t2 = new SplitText('.txt2').chars,<br> color2 = '#17c0fd',<br> color1 = '#000',<br> moveBar = () => { gsap.set('.bar-domain-user', { left: gsap.getProperty('.domain', 'width') + 1 }) };<br><br><br> gsap.timeline({ delay: 0.2
+                        })
+                        <br> .set('.domain', { color: color1, fontWeight: 'regular' })<br> .set('.txt2', { color: color2, fontWeight: 'bold', opacity: 0, x: gsap.getProperty('.domain', 'width') - 2, immediateRender: true })<br> .set('.bar-domain-user',
+                        { left: 1, backgroundColor: color1, immediateRender: true })<br><br><br> .to('.bar-domain-user', { duration: 0.1, opacity: 0, ease: Expo.easeIn, yoyo: true, repeat: 5, repeatDelay: 0.3 }, 0)<br> .from('.domain', { duration: 1.1,
+                        width: 0, ease: SteppedEase.config(14), onUpdate: moveBar }, 2.5)<br> .to('.bar-domain-user', { duration: 0.05, backgroundColor: color2 }, '+=0.15')<br> .to('.bar-domain-user', { duration: 1.0, width: 290, ease: Power4.easeInOut
+                        }, '+=0.1')<br> .from('.container', { duration: 1.0, x: 135, ease: Power4.easeInOut }, '-=1.0')<br> .to('.txt2', { duration: 0.01, opacity: 1 }, '-=0.1')<br> .to('.bar-domain-user', { duration: 0.4, x: 290, width: 0, ease: Power4.easeIn
+                        })
+                        <br> .from(t2, { duration: 0.6, opacity: 0, ease: Power3.easeInOut, stagger: 0.02 }, '-=0.5')<br> .to('.domain', { duration: 1.5, opacity: 0.25, ease: Power3.easeInOut }, '-=1.2')<br> .timeScale(1.45)
+
+                    </div>
+                </div>
+            </div>
+        </div>
+ -->
+
+        <iframe class="mySlides" src="https://luisangelmaciel.w3spaces.com/animation-shadow.html" width="100%" height="750px" ></iframe>
+        
+
+        <iframe class="mySlides" src="https://luisangelmaciel.w3spaces.com/Highlight-CSS-HTML-JavaScript-Code.html" width="100%" height="750px" ></iframe>
+
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+
+
+</body>
+
+</html>

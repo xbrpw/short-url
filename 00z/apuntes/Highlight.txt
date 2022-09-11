@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<title>Highlight CSS, HTML y JavaScript Code</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body class="w3-container w3-row-padding "><script type="text/javascript" src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=H26lh8oybeMrgK1_MnVfowXZTkS1Qhc0Rer_4M7lzOfC8Ri1u7rt4Wve6OZWs8vZc-3X8ahK9cZO3rDIjyRFbyQrIwV9nvNvzXEN47u5gfwCQtiM4fe8jIGhJwF1u7bU" charset="UTF-8"></script><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=RAlsclTv4nwGMRzmXiOc_HDbYPuJvtqI2ni-rdbmdYoa0TU3yRpekwUNwfyP7hmZyqWLAFYC1Ka6HO6krgvlzf0DhvVxwB-c64qJYVPtf8uH7fZOfAs6woFOMBdrJWRC" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9sdWlzYW5nZWxtYWNpZWwudzNzcGFjZXMuY29tL0hpZ2hsaWdodC1DU1MtSFRNTC1KYXZhU2NyaXB0LUNvZGUuaHRtbA"/>
+
+    <h2>Highlight CSS, HTML y JavaScript Code</h2>
+    <p>W3Schools provides a JavaScript library for displaying colored code.</p>
+
+
+    <div class="w3-panel w3-card w3-light-grey ">
+        <h4>HTML Example</h4>
+        <div class="w3-code htmlHigh notranslate">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br> &lt;title&gt;HTML Tutorial&lt;/title&gt;<br> &lt;body&gt;
+            <br><br> &lt;h1&gt;This is a heading&lt;/h1&gt;<br> &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br> &lt;/body&gt;
+            <br> &lt;/html&gt;
+        </div>
+    </div>
+
+
+    <div class="w3-panel w3-card w3-light-grey">
+        <h4>CSS Example</h4>
+
+        <div class="w3-code cssHigh notranslate">
+            body {<br> background-color: #d0e4fe;<br> }
+            <br><br> h1 {<br> color: orange;<br> text-align: center;<br> }
+            <br><br> p {<br> font-family: "Times New Roman";<br> font-size: 20px;<br> }
+        </div>
+    </div>
+
+
+    <div class="w3-panel w3-card w3-light-grey">
+        <h4>JavaScript Example</h4>
+        <div class="w3-code jsHigh notranslate">
+            fruits[0] = "Banana";<br> fruits[1] = "Apple";<br> fruits[2] = "Mango";<br> fruits[3] = "Plum";<br>
+        </div>
+    </div>
+
+
+
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+    <script>
+        w3CodeColor();
+    </script>
+
+</body>
+
+</html>

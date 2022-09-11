@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+CSS Layout Templates
+We have created some responsive starter templates with CSS.
+You are free to modify, save, share, and use them in all your projects.
+
+
+<h1>Responsive image</h1>
+
+
+<h2>Responsive image.</h2>
+<h3>Opción 1</h3>
+Con style dentro de img, solo hara los cambios para esa unica imagen. 
+ 
+<img src="https://www.w3schools.com/css/img_chania.jpg" width="460" height="345" style="max-width: 100%;  height: auto;">
+<p>Resize the browser window to see how the image will scale when the width is less than 460px.</p>
+
+<h3>Opción 2</h3>
+Darle los valores a img directamente y aplica para todas las imagenes que pueda ver dentro de la página. 
+
+
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
+
+<img src="https://www.w3schools.com/css/img_chania.jpg" width="460" height="345">
+<p>Resize the browser window to see how the image will scale when the width is less than 460px.</p>
+
+
+
+<h3>Opción 3</h3>
+Como class="" y se puede aplicar para cualquier imagen que se requiera. 
+
+
+<style>
+.imgResponsive {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
+
+<img src="https://www.w3schools.com/css/img_chania.jpg" width="460" height="345" class="imgResponsive">
+<p>Resize the browser window to see how the image will scale when the width is less than 460px.</p>
+
+
+<h2>Calculate the total width: 350px general </h2>
+If the browser window is 600px or smaller Devices 
+
+<img src="https://www.w3schools.com/css/klematis4_big.jpg" width="350" height="263" alt="Klematis">
+<div style="div width: 320px;padding: 10px;border: 5px solid gray;margin: 0;" >The picture above is 350px wide. The total width of this element is also 350px.</div>
+
+
+
+<style>
+.example {
+  padding: 20px;
+  color: white;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}
+</style>
+
+
+
+<h2>Typical Media Query Breakpoints</h2>
+<p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
+<p class="example">There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device. To keep things simple you could target five groups:</p>
+
+
+
+<h1>CSS Image Sprites</h1>
+Create a navigation list
+
+
+<def lang="en">sprite<def> significa <span lang="es-MX">duende<span> y para el mundo del digital se traduce como un gráfico de computadora que se puede mover en la pantalla y puede  manipular de otra manera como una sola entidad.
+
+
+
+<style>
+#navlist {
+  position: relative;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+
+#home {
+  left: 0px;
+  width: 46px;
+  background: url('https://www.w3schools.com/css/img_navsprites.gif') 0 0;
+}
+
+#prev {
+  left: 63px;
+  width: 43px;
+  background: url('https://www.w3schools.com/css/img_navsprites.gif') -47px 0;
+}
+
+#next {
+  left: 129px;
+  width: 43px;
+  background: url('https://www.w3schools.com/css/img_navsprites.gif') -91px 0;
+}
+
+#home a:hover {
+  background: url('https://www.w3schools.com/css/img_navsprites.gif') 0 -45px;
+}
+
+#prev a:hover {
+  background: url('https://www.w3schools.com/css/img_navsprites.gif') -47px -45px;
+}
+
+#next a:hover {
+  background: url('https://www.w3schools.com/css/img_navsprites.gif') -91px -45px;
+}
+</style>
+
+<h2> Image sprites - Hover effect</h2>
+
+<ul id="navlist">
+  <li id="home"><a href="default.asp"></a></li>
+  <li id="prev"><a href="css_intro.asp"></a></li>
+  <li id="next"><a href="css_syntax.asp"></a></li>
+</ul>
+
+
+
+
+
+
+</body>
+</html>
+
+

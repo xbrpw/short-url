@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=yt5Z4vi7d-Iof1IkoX7IrY-I4bLpLYsPbhSyPSkGtHAB4he9muoGYey7j2xbpCw-Ty9RGEzZQpVkPP5G2mO_NevtJJJj4S8fszLQ6hAvvMI" charset="UTF-8"></script><script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=hOkKRSRKF6-6uk3aJ9czoTqn1KWRDtLR6hkZsBpHTCX17iOwnwRAwPOCwJjK4xOpJl7KKwGX9x4KRxd6bbL1tEuR835i6ec3qFymz_zbHrc" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9sdWlzYW5nZWxtYWNpZWwudzNzcGFjZXMuY29tL0ZhZGUtaW4tT3ZlcmxheS5odG1s"/><style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+</head>
+<body>
+
+<h2>Fade in Overlay</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+  <img src="https://steamcdn-a.akamaihd.net/steam/clusters/sale_summer2019_daily/18d8d68fa619439a7df750c7/hero_814380_english.png?t=1561508447" alt="Avatar" class="image">
+  <div class="overlay">
+  
+     <img src="https://media.giphy.com/media/23eIaiNQAMZ9UBJ1Hh/giphy.gif" alt="Avatar" class="image ">
+     
+     <div class="text"><br><br><br><br><br><br>Sekiro
+     
+     
+     
+     
+     <div id="Typing-name">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+       
+        
+        .type-animation {
+            display: inline-flex;
+            width: 0;
+            overflow: hidden;
+            padding-right: 0.03em;
+            position: relative;
+            color: rgba(0, 0, 0, 0.788);
+        }
+        
+        .type-animation:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -0.02em;
+            bottom: -0.02em;
+            width: 0.06em;
+            border-right: 2px solid transparent;
+        }
+        
+        .type-animation.animating {
+            -webkit-animation: type 1620ms;
+            animation: type 1620ms;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+        
+        .type-animation.animating:after {
+            -webkit-animation: cursor 320ms 8.625 ease-in-out;
+            animation: cursor 320ms 8.625 ease-in-out;
+        }
+        
+        @-webkit-keyframes cursor {
+            0%,
+            100% {
+                border-color: #f7f3ff;
+            }
+            50% {
+                border-color: #241b5b;
+            }
+            100% {
+                width: 0;
+            }
+        }
+        
+        @keyframes cursor {
+            0%,
+            100% {
+                border-color: #f7f3ff;
+            }
+            50% {
+                border-color: #241b5b;
+            }
+            100% {
+                width: 0;
+            }
+        }
+        
+        @-webkit-keyframes type {
+            11.1111111111% {
+                width: 0.49em;
+            }
+            22.2222222222% {
+                width: 0.98em;
+            }
+            33.3333333333% {
+                width: 1.47em;
+            }
+            44.4444444444% {
+                width: 1.96em;
+            }
+            55.5555555556% {
+                width: 2.45em;
+            }
+            66.6666666667% {
+                width: 2.94em;
+            }
+            77.7777777778% {
+                width: 3.43em;
+            }
+            88.8888888889% {
+                width: 3.92em;
+            }
+            100% {
+                width: 3.92em;
+                padding-right: 0;
+            }
+        }
+        
+        @keyframes type {
+            11.1111111111% {
+                width: 0.49em;
+            }
+            22.2222222222% {
+                width: 0.98em;
+            }
+            33.3333333333% {
+                width: 1.47em;
+            }
+            44.4444444444% {
+                width: 1.96em;
+            }
+            55.5555555556% {
+                width: 2.45em;
+            }
+            66.6666666667% {
+                width: 2.94em;
+            }
+            77.7777777778% {
+                width: 3.43em;
+            }
+            88.8888888889% {
+                width: 3.92em;
+            }
+            100% {
+                width: 3.30em;
+                padding-right: 0;
+            }
+        }
+    </style>
+
+    <div class="bodyfirma">
+        <h3>Sekiro<span class="type-animation animating"><small>Shadows</small></span>twice</h3>
+    </div>
+
+</div>
+
+
+</div>
+ 
+ 
+        
+
+  </div>
+</div>
+
+</body>
+</html>

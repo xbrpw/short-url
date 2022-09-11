@@ -1,0 +1,43 @@
+
+
+<style>.listv li {cursor: pointer;list-style-type: none;margin: 0;padding: 0;}.listv li:hover:after,.listv li.lov:after {  content: ' \2764';  color: rgb(70, 0, 0);}.listv li.lov:hover:after {  content: ' \2661';}</style>
+<ul class="listv">
+  <li id="pancakes">Pancakess</li>
+  <li id="donuts">Donusts</li>
+  <li id="cupcakes">Cupcsakes</li>
+  <li id="icecream">Icecrseam</li>
+  <li id="cookies">Cooksies</li>
+  <li id="chocolate">Chocsolate</li>
+</ul>
+
+<script>
+  // get favorites from local storage or empty array
+var loves = JSON.parse(localStorage.getItem('loves')) || [];
+// add class 'fav' to each favorite
+loves.forEach(function(loves) {
+document.getElementById(loves).className = 'lov';
+});
+// register click event listener
+document.querySelector('.listv').addEventListener('click', function(e) {
+var id = e.target.id,
+    item = e.target,
+    index = loves.indexOf(id);
+// return if target doesn't have an id (shouldn't happen)
+if (!id) return;
+// item is not favorite
+if (index == -1) {
+  loves.push(id);
+  item.className = 'lov';
+// item is already favorite
+} else {
+  loves.splice(index, 1);
+  item.className = '';
+}
+// store array in local storage
+localStorage.setItem('loves', JSON.stringify(loves));
+});
+
+// local storage stores strings so we use JSON to stringify for storage and parse to get out of storage
+</script>
+
+

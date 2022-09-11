@@ -16,16 +16,7 @@
 <!-- <body style="background: #111;"> -->
 </head>
 
-<body style="background: rgb(255, 255, 255);" >
-
-  <div  class="border0" style="  margin:0; display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#f1f1f1!important">
-    <span style="font-size:24px!important" ><strong>Hola Sor Juana Ines</strong></span> 
-    <span style="float:right!important; font-size:24px!important">
-      <span> <mark style="background:transparent;color:#000"><i class="fa fa-tools" ></i></mark></span> 
-    </span>
-  </div>
-  <img src="img/sor-juana-ines-de-la-cruz-icon.svg" alt="SorJuanApp" hidden>
-  <script src="nombre.js"></script>
+<body style="background: rgba(237, 242, 247, 0.87)" >
 
 
   <!-- partial:index.partial.html -->
@@ -66,26 +57,55 @@
     <div class="circle"> <i class="fa fa-magic"></i></div>
     <div class="ribbon">Ecología</div>
   </div>
-</div>
 
-<templete hidden>
   <div class="badge orange" >
     <div class="circle"> <i class="fa fa-wheelchair-alt"></i></div>
-    <div class="ribbon">Historia</div>
+    <div class="ribbon">Tareas</div>
   </div>
+
+
+  
+
+</div>
+<!-- 
+<div id="more" style="display:none">
+  
   <div class="badge purple">
     <div class="circle"> <i class="fa fa-anchor"></i></div>
-    <div class="ribbon">Tecnología</div>
+    <div class="ribbon">Wiki SorJuana</div>
   </div>
   <div class="badge silver">
     <div class="circle"> <span class="font">AFK</span></div>
-    <div class="ribbon">Carry</div>
+    <div class="ribbon">Calculadora Cientifica</div>
   </div>
   <div class="badge blue-dark">
     <div class="circle"> <i class="fa fa-rocket"></i></div>
-    <div class="ribbon">Escape</div>
+    <div class="ribbon">Convertidor Romano</div>
   </div>
-</templete>
+
+</div>
+
+<p>
+  <a href="#" data-target="#more">Recursos academicos</a>
+</p>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script>
+$('[data-target]').on('click', function(e) {
+  e.preventDefault();
+  var target_selector = $(this).data('target');
+  var target_element = $(target_selector);
+
+  if (target_element.css('paddingTop') == '0px')
+      target_element.css({paddingTop: '1px'});
+
+  if (target_element.css('paddingBottom') == '0px')
+      target_element.css({paddingBottom: '1px'});
+
+  target_element.slideToggle(500);
+});
+</script> -->
+
 
   
 </body>

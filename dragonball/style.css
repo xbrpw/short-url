@@ -1,0 +1,617 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+
+.goku {
+  height: 632px;
+  width: 617px;
+  position: relative;
+}
+.goku .head {
+  height: 537px;
+  width: 617px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.goku .head .face {
+  height: 260px;
+  width: 240px;
+  position: absolute;
+  top: 277px;
+  left: 200px;
+  background-image: linear-gradient(#fecfb5 85%, #f000 0);
+  clip-path: polygon(100% 0, 100% 53%, 95% 59%, 89% 85%, 89% 100%, 11% 100%, 11% 85%, 4% 59%, 0% 53%, 0 0);
+}
+.goku .head .face::after {
+  height: 120px;
+  width: 200px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  left: 20px;
+  background-color: #fecfb5;
+  clip-path: polygon(100% 0, 100% 68%, 64% 100%, 36% 100%, 0% 68%, 0 0);
+}
+.goku .head::before {
+  height: 135px;
+  width: 124px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  bottom: -8px;
+  left: 258px;
+  background-color: #fecfb5;
+}
+.goku .head .ear {
+  height: 142px;
+  width: 70px;
+  position: absolute;
+  top: 340px;
+  left: 160px;
+  border-radius: 50%;
+  background-color: #fecfb5;
+  transform: rotate(-30deg);
+}
+.goku .head .ear .shadow {
+  height: 50px;
+  width: 30px;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  border-radius: 50% 50% 45% 45%/60% 60% 40% 40%;
+  background-color: #fbc2a4;
+}
+.goku .head .ear.right {
+  transform: rotate(30deg);
+  left: 410px;
+}
+.goku .head .ear.right .shadow {
+  left: 35%;
+}
+.goku .head .hair {
+  height: 475px;
+  width: 617px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.goku .head .hair .hair-center {
+  height: 300px;
+  width: 290px;
+  position: absolute;
+  top: 181px;
+  left: 174px;
+  background-color: #14130f;
+  border-radius: 50%;
+  clip-path: polygon(100% 0, 100% 100%, 87% 84%, 90% 74%, 82% 77%, 87.03% 66%, 85% 54%, 80% 47%, 31% 47%, 12% 59%, 14% 70%, 18% 77%, 10% 74%, 13% 84%, 0 100%, 0 0);
+}
+.goku .head .hair .fringe-1 {
+  height: 229px;
+  width: 99px;
+  position: absolute;
+  top: 251px;
+  left: 261px;
+  background-color: #14130f;
+  border-radius: 50%;
+  clip-path: polygon(100% 0, 100% 29%, 0 75%, 0 0);
+}
+.goku .head .hair .fringe-2 {
+  height: 230px;
+  width: 142px;
+  position: absolute;
+  top: 303px;
+  left: 323px;
+  box-shadow: inset 1px 4px #14130f;
+  clip-path: polygon(50% 0, 0px 40%, 0 0);
+  border-radius: 50%;
+}
+.goku .head .hair .fringe-3 {
+  height: 116px;
+  width: 71px;
+  position: absolute;
+  top: 306px;
+  left: 357px;
+  background-color: #14130f;
+  clip-path: polygon(100% 0, 100% 29%, 0 100%, 6% 18%, 0 0);
+}
+.goku .head .hair .lock-1 {
+  height: 24px;
+  width: 95px;
+  position: absolute;
+  top: 435px;
+  left: 120px;
+  background-color: #14130f;
+  clip-path: polygon(100% 0px, 100% 100%, 0 20%);
+  z-index: -1;
+}
+.goku .head .hair .lock-2 {
+  height: 93px;
+  width: 160px;
+  position: absolute;
+  top: 367px;
+  left: 72px;
+  background-color: #14130f;
+  clip-path: polygon(100% 0px, 100% 100%, 0 50%);
+  z-index: -1;
+}
+.goku .head .hair .lock-3 {
+  height: 170px;
+  width: 236px;
+  position: absolute;
+  top: 256px;
+  left: 0;
+  background-color: #14130f;
+  clip-path: polygon(100% 0, 100% 100%, 0 50%);
+  z-index: -1;
+}
+.goku .head .hair .lock-4 {
+  height: 70px;
+  width: 50px;
+  position: absolute;
+  top: 340px;
+  left: 146px;
+  background-color: #14130f;
+  clip-path: polygon(100% 0, 100% 100%, 20% 0);
+}
+.goku .head .hair .lock-5 {
+  height: 174px;
+  width: 351px;
+  position: absolute;
+  top: 257px;
+  left: -100px;
+  background-color: #f000;
+  border-radius: 50%;
+  box-shadow: inset -18px 2px #14130f;
+  clip-path: polygon(100% 0, 100% 100%, 20% 0);
+  z-index: -1;
+}
+.goku .head .hair .lock-6 {
+  height: 154px;
+  width: 233px;
+  position: absolute;
+  top: 142px;
+  left: 9px;
+  background-color: #14130f;
+  border-radius: 58% 44% 0% 0%/22% 40% 0% 10%;
+  clip-path: polygon(100% 0%, 100% 100%, 78% 100%, 69% 79%, 0 0, 59% 0);
+}
+.goku .head .hair .lock-7 {
+  height: 299px;
+  width: 186px;
+  position: absolute;
+  top: 7px;
+  left: 183px;
+  background-color: #14130f;
+  border-radius: 0% 100% 0% 0%/0% 70% 0% 0%;
+  clip-path: polygon(100% 18%, 100% 100%, 37% 100%, 26% 45%, 0 0, 59% 0);
+}
+.goku .head .hair .lock-8 {
+  height: 332px;
+  width: 194px;
+  position: absolute;
+  top: 10px;
+  left: 182px;
+  background-color: #f000;
+  border-radius: 50%;
+  box-shadow: inset -10px 2px #14130f;
+  clip-path: polygon(100% 0, 100% 100%, 74% 10%, 65% 0);
+  z-index: -1;
+}
+.goku .head .hair .lock-9 {
+  height: 148px;
+  width: 285px;
+  position: absolute;
+  top: 252px;
+  left: 413px;
+  background-color: #f000;
+  border-radius: 50%;
+  box-shadow: inset 20px 2px #14130f;
+  clip-path: polygon(100% 0px, 0 30%, 0 0);
+  z-index: 1;
+}
+.goku .head .hair .lock-10 {
+  height: 66px;
+  width: 159px;
+  position: absolute;
+  top: 284px;
+  left: 450px;
+  background-color: #14130f;
+  clip-path: polygon(100% 14px, 32% 100%, 1% 100%, 0 5%, 17% 0%, 52% 6%);
+  z-index: -1;
+}
+.goku .head .hair .lock-11 {
+  height: 89px;
+  width: 174px;
+  position: absolute;
+  top: 344px;
+  left: 443px;
+  background-color: #14130f;
+  clip-path: polygon(100% 26px, 70% 59%, 32% 100%, 1% 100%, 0px 5%, 17% 0%, 42% 0);
+  z-index: -1;
+}
+.goku .head .hair .lock-12 {
+  height: 42px;
+  width: 155px;
+  position: absolute;
+  top: 432px;
+  left: 391px;
+  background-color: #14130f;
+  clip-path: polygon(100% 38%, 72% 61%, 19% 90%, 40% 3%, 70% 0, 78% 8%);
+  z-index: -1;
+}
+.goku .head .hair .lock-13 {
+  height: 70px;
+  width: 20px;
+  position: absolute;
+  top: 325px;
+  left: 443px;
+  transform: rotate(20deg);
+  border-radius: 8px;
+  background-color: #14130f;
+  z-index: 1;
+}
+.goku .head .eye {
+  height: 73px;
+  width: 76px;
+  position: absolute;
+  top: 397px;
+  left: 240px;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  clip-path: polygon(100% 60%, 100% 100%, 0% 100%, 0 0, 24% 0%);
+}
+.goku .head .eye::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  background-color: #fecfb5;
+  animation: blink 3s linear infinite;
+}
+.goku .head .eye::before {
+  height: 26px;
+  width: 14px;
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 55px;
+  background-color: #14130f;
+  border-radius: 50%;
+}
+.goku .head .eye.right {
+  left: 335px;
+  clip-path: polygon(100% 5%, 100% 100%, 0% 100%, 0% 66%, 35% 39%);
+}
+.goku .head .eye.right::before {
+  left: 8px;
+}
+.goku .head .nouse {
+  height: 10px;
+  width: 12px;
+  position: absolute;
+  top: 473px;
+  left: 317px;
+  border: 3px solid red;
+  border-radius: 9px 8px 0;
+  border-color: #f3b699 #0000 #0000 #f3b699;
+}
+.goku .head .mouth-container {
+  height: 7px;
+  width: 46px;
+  position: absolute;
+  top: 498px;
+  left: 300px;
+}
+.goku .head .mouth-container::after {
+  height: 2px;
+  width: 6px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f3b699;
+  top: -1px;
+  left: 0;
+  transform: rotate(5deg);
+}
+.goku .head .mouth-container::before {
+  height: 3px;
+  width: 5px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f3b699;
+  top: -1px;
+  right: -2px;
+  transform: rotate(-25deg);
+}
+.goku .head .mouth-container .mouth {
+  height: 7px;
+  width: 46px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.goku .head .mouth-container .mouth::after {
+  height: 76px;
+  width: 86px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+  border: 3px solid #f3b699;
+  border-radius: 50%;
+}
+.goku .head .eyebrow {
+  height: 75px;
+  width: 90px;
+  position: absolute;
+  top: 369px;
+  left: 230px;
+  background-color: #14130f;
+  clip-path: polygon(100% 100%, 33% 40%, 0% 28%, 13% 0, 53% 24%);
+}
+.goku .head .eyebrow.right {
+  height: 62px;
+  width: 86px;
+  position: absolute;
+  top: 386px;
+  left: 331px;
+  clip-path: polygon(100% 21%, 37% 63%, 0 100%, 26% 55%, 50% 30%, 90% 0%, 96% 1%);
+}
+.goku .neck {
+  height: 37px;
+  width: 68px;
+  position: absolute;
+  top: 523px;
+  left: 287px;
+  background-color: #fecfb5;
+  z-index: -2;
+  overflow: hidden;
+}
+.goku .neck::before {
+  height: 135px;
+  width: 124px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  bottom: 7px;
+  left: -30px;
+  background-color: #fbc2a4;
+}
+.goku .body .chest {
+  height: 99px;
+  width: 192px;
+  position: absolute;
+  top: 533px;
+  left: 227px;
+  overflow: hidden;
+  z-index: -3;
+}
+.goku .body .chest::after {
+  height: 174px;
+  width: 192px;
+  content: "";
+  position: absolute;
+  background-color: #fecfb5;
+  border-radius: 50%;
+}
+.goku .body .clotes {
+  height: 94px;
+  width: 278px;
+  position: absolute;
+  top: 538px;
+  left: 180px;
+}
+.goku .body .clotes::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  background-color: #EA4800;
+  clip-path: polygon(100% 25%, 100% 79%, 96% 100%, 13% 100%, 14% 88%, 14% 63%, 9% 28%, 5% 28%, 0 46%, 0 36%, 2% 18%, 4% 12%, 27% 0, 33% 0, 43% 36%, 64% 86%, 70% 54%, 70% 22%, 68% 0, 88% 0, 94% 8%);
+}
+.goku .body .clotes::before {
+  height: 109px;
+  width: 156px;
+  content: "";
+  position: absolute;
+  background-color: #B23306;
+  border: 8px solid #EA4800;
+  border-radius: 50%;
+  top: -17px;
+  left: 69px;
+  z-index: -4;
+}
+.goku .body .clotes .logo {
+  height: 27px;
+  width: 47px;
+  position: absolute;
+  top: 67px;
+  left: 198px;
+  overflow: hidden;
+  z-index: 1;
+}
+.goku .body .clotes .logo::after {
+  height: 100%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  background-color: #14130f;
+  clip-path: polygon(66% 67%, 62% 89%, 72% 90%, 79% 85%, 78% 100%, 13% 100%, 28% 45%, 41% 43%, 22% 92%, 51% 89%, 56% 70%, 28% 76%, 30% 70%, 59% 62%, 64% 43%, 74% 56%);
+}
+.goku .body .clotes .logo::before {
+  height: 47px;
+  width: 47px;
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border: 5px solid #14130f;
+  border-radius: 50%;
+}
+.goku .body .clotes .fold {
+  height: 26px;
+  width: 22px;
+  position: absolute;
+  top: -5px;
+  left: 67px;
+  border-radius: 50%;
+  background-color: #EA4800;
+  transform: skewx(-10deg) skewy(-10deg);
+}
+.goku .body .arm.left {
+  height: 71px;
+  width: 110px;
+  position: absolute;
+  bottom: 0;
+  left: 130px;
+  overflow: hidden;
+}
+.goku .body .arm.left::after {
+  height: 102px;
+  width: 99px;
+  content: "";
+  position: absolute;
+  background-color: #fecfb5;
+  top: -7px;
+  left: 44px;
+  border-radius: 50%;
+}
+.goku .body .arm.left::before {
+  height: 82px;
+  width: 57px;
+  content: "";
+  position: absolute;
+  background-color: #fecfb5;
+  top: 38px;
+  left: 5px;
+  border-radius: 30%;
+  transform: rotate(45deg);
+}
+.goku .body .arm.right {
+  height: 80px;
+  width: 49px;
+  position: absolute;
+  bottom: 0;
+  left: 435px;
+  overflow: hidden;
+}
+.goku .body .arm.right::after {
+  height: 215px;
+  width: 133px;
+  content: "";
+  position: absolute;
+  background-color: #fecfb5;
+  top: -10px;
+  left: -83px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .goku {
+    transform: scale(0.5);
+    transform-origin: bottom;
+  }
+}
+.cloud-container {
+  height: 100px;
+  width: 450px;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  animation: cloud-fly 30s linear infinite;
+  z-index: -5;
+}
+.cloud-container .tail {
+  height: 15px;
+  width: 280px;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background: linear-gradient(45deg, skyblue 3%, #0000 70%), linear-gradient(#FBDF71 70%, #CC9022 85%);
+  animation: tail-size 0.7s linear alternate infinite;
+}
+.cloud-container .cloud {
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #FBDF71;
+  animation: cloud-size 0.5s linear alternate infinite;
+}
+.cloud-container .cloud::after {
+  height: 20px;
+  width: 30px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 10px;
+  color: #FBDF71;
+  box-shadow: 0px 70px 0, 20px 75px 0 6px, 100px 55px 0 20px, 85px 75px 0 15px, 50px 75px 0 10px, 110px 70px 0 10px, -20px 10px 0 6px, -25px 30px 0 6px, -22px 60px 0 8px, 20px 5px 0 6px, 50px -7px 0 9px, 90px -3px 0 9px, 130px -4px 0 20px, 150px 11px 0 20px, 150px 50px 0 30px, 80px 40px 0 20px;
+  background: #FBDF71;
+}
+.cloud-container .cloud::before {
+  height: 20px;
+  width: 30px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  left: 10px;
+  color: #CC9022;
+  box-shadow: 20px 5px 0 6px, 50px 7px 0 9px, 90px -4px 0 20px, 120px 1px 0 9px;
+  background: #CC9022;
+}
+
+@keyframes cloud-fly {
+  0%, 10% {
+    transform: translatex(-200%);
+  }
+  40%, 70% {
+    transform: translatex(calc(200% + 100vw));
+  }
+  80% {
+    transform: translatex(calc(200% + 100vw)) scalex(-1);
+  }
+  100% {
+    transform: translatex(-200%) scalex(-1);
+  }
+}
+@keyframes cloud-size {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes tail-size {
+  0% {
+    transform: scalex(1);
+  }
+  100% {
+    transform: scalex(2);
+  }
+}
+@keyframes blink {
+  0%, 45%, 55%, 100% {
+    transform: translatey(-100%);
+  }
+  50% {
+    transform: translatey(0);
+  }
+}

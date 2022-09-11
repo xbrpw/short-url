@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+<link rel="stylesheet" href="./style.css">
+
+<style>
+.border0{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit};
+</style>
+
+<!-- <body style="background: #111;"> -->
+</head>
+
+<body style="background: #E2E8F0;" >
+
+  <div  class="border0" style="  margin:0; display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#E2E8F0!important; box-shadow: #000;">
+    <span style="font-size:24px!important" ><a href="materias.html" target="iframe_a"><i class="fa fa-home" ></i> </a><strong> Hola Sor Juana Ines</strong></span> 
+    <span style="float:right!important; font-size:24px!important">
+      <span> <mark style="background:transparent;color:transparent"><i class="fa fa-cog" ></i></mark></span> 
+      <!-- <span> <mark style="background:transparent;color:#000"><a href="materias.html" target="iframe_a"><i class="fa fa-book" ></i></a></mark></span>  -->
+      <span> <mark style="background:transparent;color:#000"><a href="00-my-dashboard/index.html" target="iframe_a"><i class="fa fa-pencil" ></i></a></mark></span> 
+      <!-- <span> <mark style="background:transparent;color:#000"><a href="00-my-dashboard/index.html" target="iframe_a"><i class="fa fa-calculator" ></i></a></mark></span>  -->
+      <span> <mark style="background:transparent;color:#000"><a href="herramientas.html" target="iframe_a"><i class="fa fa-calculator" ></i></a></mark></span>       
+      
+    </span>
+  </div>
+  <img src="img/sor-juana-ines-de-la-cruz-icon.svg" alt="SorJuanApp" hidden>
+  <script src="nombre.js"></script>
+
+  
+<iframe src="materias.html" name="iframe_a" height="650px" width="100%" title="Iframe Example" style="border:none;"></iframe>
+<br><br>
+<center style="color: grey;">
+  www.eso154.edu.mx
+</center><br><br>
+  
+<style>
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+  }
+  
+  .alert.success {background-color: #04AA6D;}
+  .alert.info {background-color: #2196F3;}
+  .alert.warning {background-color: #ff9800;}
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  </style>
+  
+  
+  <templete hidden>
+  <div class="alert">
+    <span class="closebtn">&times;</span>  
+    <strong style="  font-size: 28px;">Danger!</strong> Indicates a dangerous or potentially negative action.
+  </div>
+  
+  <div class="alert success">
+    <span class="closebtn">&times;</span>  
+    <strong>Success!</strong> Indicates a successful or positive action.
+  </div>
+  <div class="alert warning">
+    <span class="closebtn">&times;</span>  
+    <strong>Warning!</strong> Indicates a warning that might need attention.
+  </div>
+</templete>
+  
+  <div class="alert info">
+    <span class="closebtn">&times;</span>  
+    <strong style="  font-size: 28px;   text-shadow: 2px 2px 5px rgb(0, 0, 0);">¡Importante!</strong> <br><br>
+    Recuerda participar en la retroalimentación de las actividades con un comentario , like y compartir. 
+    <br><br><span style="  font-size: 24px;">Gracias</span>
+  </div>
+  <br><br><br><br><p style="font-size:18; text-align: center;">Llegaste al final o al principio como lo quieras ver</p>
+  
+  <script>
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+  
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+      var div = this.parentElement;
+      div.style.opacity = "0";
+      setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+  }
+  </script>
+
+  
+</body>
+</html>

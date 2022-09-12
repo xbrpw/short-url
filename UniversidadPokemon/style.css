@@ -1,0 +1,154 @@
+.Header__shape {
+  animation-duration: 4s;
+  animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+  animation-fill-mode: backwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+body {
+  background: radial-gradient(#c2c2c2 8%, transparent 8%), white;
+  background-position: 0 0, 25px 25px;
+  background-size: 25px 25px;
+  min-height: 100vh;
+}
+
+.Header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header__svg {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  will-change: transform;
+}
+
+.Header__title {
+  font-family: Avenir, Futura, "Open Sans", "Gill Sans", "Helvetica Neue", Ariel, sans-serif;
+  font-weight: bold;
+  font-size: 6vw;
+  margin: 0;
+}
+
+.bigSquare {
+  animation-name: bigSquare;
+}
+
+@keyframes bigSquare {
+  from {
+    transform: translateY(10%) rotate(-80deg) scale(0);
+  }
+  to {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+.littleSquare {
+  animation-name: littleSquare;
+}
+
+@keyframes littleSquare {
+  from {
+    transform: translate(226%, 183%) rotate(140deg) scale(0);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+}
+.triangle {
+  animation-name: triangle;
+}
+
+@keyframes triangle {
+  from {
+    transform: rotate(-140deg) scale(0);
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+  }
+}
+.hoop {
+  animation-name: hoop;
+}
+
+@keyframes hoop {
+  from {
+    transform: translate(-160%, -33%) scale(0);
+  }
+  to {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+.bigCircle {
+  animation-name: bigCircle;
+}
+
+@keyframes bigCircle {
+  from {
+    transform: scale(0) translate(60%, 3%);
+  }
+  to {
+    transform: scale(1) translate(0%, 0%);
+  }
+}
+.littleCircle {
+  animation-name: littleCircle;
+}
+
+@keyframes littleCircle {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.Header__shape:nth-child(1) {
+  animation-delay: 0.16s;
+}
+
+.Header__shape:nth-child(2) {
+  animation-delay: 0.32s;
+}
+
+.Header__shape:nth-child(3) {
+  animation-delay: 0.48s;
+}
+
+.Header__shape:nth-child(4) {
+  animation-delay: 0.64s;
+}
+
+.Header__shape:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.Header__shape:nth-child(6) {
+  animation-delay: 0.96s;
+}
+
+.Header__shape:nth-child(7) {
+  animation-delay: 1.12s;
+}
+
+.Header__shape:nth-child(8) {
+  animation-delay: 1.28s;
+}
+
+.Header__shape:nth-child(9) {
+  animation-delay: 1.44s;
+}
+
+.Header__shape:nth-child(10) {
+  animation-delay: 1.6s;
+}
+
+.Header__shape:nth-child(11) {
+  animation-delay: 1.76s;
+}

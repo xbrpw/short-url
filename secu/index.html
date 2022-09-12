@@ -359,13 +359,17 @@ a:active {    color: #000000;    text-decoration: none;      font-weight: 500; }
 
 <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block w3-border-right w3-animate-left w3-animate-fading" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-button">Close &times;</button>
-  <a href="#" class="w3-bar-item w3-button w3-padding">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding">Link 3</a>
+  
+  <ul class="w3-ul w3-hoverable w3-left-align">
+    <li><span class="w3-large" onclick="w3_close()"><b>Cerrrar &times;</b> </span><br></li>  
+    <li><span class="w3-large"  onclick="document.location='index.html'">Sobre la escuela</span><br>        </li>
+    <li><span class="w3-large"  onclick="document.location='manual.html'">Manual de uso</span><br></li>
+    <li><span class="w3-large"  onclick="document.location='app'">Version 1.0 </span><br></li>    
+    
+</ul>    
 
   
-    <ul class="w3-ul ">
+   <!--  <ul class="w3-ul ">
       <li class="w3-bar" onclick="document.location='faq/index.html'">     
         <img src="./img/sor-juana-ines-de-la-cruz-icon.svg" class="w3-bar-item w3-circle " style="width:85px">
         <div class="w3-bar-item">
@@ -387,7 +391,7 @@ a:active {    color: #000000;    text-decoration: none;      font-weight: 500; }
           <span class="w3-large">Un minuto para multiplicar</span>
         </div>
       </li>       
-    </ul>
+    </ul> -->
   
 
 </div>
@@ -587,12 +591,25 @@ function w3_close() {
     </div>
     <!-- partial -->
       <script  src="./blogEntradas.js"></script>
-
+      
+      <form action="https://api.sheetmonkey.io/form/31gURbbKJftnLVWaA3u3Co" method="post">
+        <label>Nombre: <input type="text" name="Name" required /></label>
+        <label>Email: <input type="email" name="Email" required /></label>
+        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+        <input type="submit" value="Registrar" />
+      </form>
  
 
      
 
-
+      <div>  
+        <link rel="stylesheet" href="download-button.css">  
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Hind&amp;display=swap'>
+        <button type="button" data-dl class="button-download">
+        <span class="dl-icon"></span><span>&#x44;&#x6F;&#x77;&#x6E;&#x6C;&#x6F;&#x61;&#x64;</span>
+      
+        <script  src="download-button.js"></script>
+      </div>
 
 
 

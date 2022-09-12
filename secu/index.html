@@ -947,3 +947,56 @@ function showDivs(n) {
 
 -->
 
+
+<script>
+(async () => {
+    // create and show the notification
+    const showNotification = () => {
+        // create a new notification
+        const notification = new Notification('Descarga el nuevo calendario escolar 2022-2023 ', {
+            body: 'Y conoce a los maestros y personal de la ESO-154',
+            icon: 'https://www.xbr.pw/secu/img/sor-juana-ines-de-la-cruz-sextaedro.svg'
+        });
+
+        // close the notification after 10 seconds
+        setTimeout(() => {
+            notification.close();
+        }, 10 * 1000);
+
+        // navigate to a URL when clicked
+        notification.addEventListener('click', () => {
+
+            window.open('https://www.xbr.pw/secu/index.html', '_blank');
+        });
+    }
+
+    // show an error message
+    const showError = () => {
+        const error = document.querySelector('.error');
+        error.style.display = 'block';
+        error.textContent = 'Has bloqueado las notificaciones';
+    }
+
+    // check notification permission
+    let granted = false;
+
+    if (Notification.permission === 'granted') {
+        granted = true;
+    } else if (Notification.permission !== 'denied') {
+        let permission = await Notification.requestPermission();
+        granted = permission === 'granted' ? true : false;
+    }
+
+    // show notification or error
+    granted ? showNotification() : showError();
+
+})();
+
+</script>
+
+<div class="container">
+        <div class="error"></div>
+    </div>
+    
+    
+

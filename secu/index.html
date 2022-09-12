@@ -46,8 +46,8 @@
 .mySlides {display:none;} 
 
 a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;}
-a:hover {color: #000000;text-decoration: none;font-family: Helvetica, Arial, Sans-Serif;font-weight: 500;}
-a:active {    color: #000000;    text-decoration: none;    font-family: Helvetica, Arial, Sans-Serif;    font-weight: 500; }
+a:hover {color: #000000;text-decoration: none;font-weight: 500;}
+a:active {    color: #000000;    text-decoration: none;      font-weight: 500; }
 
     /* ================================= *
   * Card Styling + Default
@@ -188,6 +188,130 @@ a:active {    color: #000000;    text-decoration: none;    font-family: Helvetic
     }
   }
 
+  
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.html-entradas {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.body-entradas {
+  min-height: 100vh;
+  margin: 0;
+
+  font-weight: 400;
+  background: #f7f6fe;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container-entradas {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-entradas {
+  padding: 5px 50px 5px;
+}
+
+.header-title-entrada {
+  color: #343538;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.itemsEntrada {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0px 50px 40px 50px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  perspective: 500px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.itemsEntrada.active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.itemEntrada-image {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.itemEntrada {
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.01),0 1px 2px rgba(0,0,0,0.07),0 5px 15px rgba(0,0,0,0.03);
+  margin-right: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.itemEntrada-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 1.2rem;
+  width: 340px;
+}
+
+.item-title-h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343538;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.item-description {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #8a8a8a;
+  margin: 0 0 1rem;
+}
+
+.item-category-h5 {
+  display: inline-block;
+  color: #339999;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0.5rem 0 0rem;
+}
 
 </style>
 
@@ -319,10 +443,29 @@ function w3_close() {
             
         <!--  Slideshow -->
         <div class="w3-content w3-display-container">
+          <img class="mySlides" src="./img/600x400.svg" style="width:100%">  
           <img class="mySlides" src="./img/600x400.jpg" style="width:100%">
           <img class="mySlides" src="./img/600x400-2.jpg" style="width:100%">
           <img class="mySlides" src="./img/600x400-1.jpg" style="width:100%">
-          <img class="mySlides" src="https://demos.creative-tim.com/get-shit-done/assets/img/carousel_green.png" style="width:100%">
+          <img class="mySlides" src="./img/600x400-3.jpg" style="width:100%">
+          <img class="mySlides" src="./img/app-web.svg" style="width:100%">
+          <img class="mySlides" src="./img/og-editable.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-ines-de-la-cruz-gay-pride.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-ines-de-la-cruz-gris.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-ines-de-la-cruz-icon.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-ines-de-la-cruz-pensando.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-ines-de-la-cruz-rojo.svg" style="width:100%">
+          <img class="mySlides" src="./img//img/sor-juana-ines-de-la-cruz-sextaedro.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-ines-de-la-cruz-verde.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-la-ley.svg" style="width:100%">
+          <img class="mySlides" src="./img/sor-juana-ines-de-la-cruz.svg" style="width:100%">
+          <img class="mySlides" src="./img/error-404.svg" style="width:100%">
+          
+          <img class="mySlides" src="./img/escudo%20escuela%20secundaria%20oficial%200514%20sor%20juana%20ines%20de%20la%20cruz.jpg" style="width:100%">
+          <img class="mySlides" src="./img/" style="width:100%">
+          <img class="mySlides" src="./img/" style="width:100%">
+
+          
           
           <span class="w3-margin-left w3-display-left w3-xxlarge" onclick="plusDivs(-1)">&#10094;</span>
           <span class="w3-margin-right w3-display-right w3-xxlarge" onclick="plusDivs(1)">&#10095;</span>
@@ -347,7 +490,116 @@ function w3_close() {
             </div>
         </div>
     </header>
+
+    <div class="html-entradas">
+      <div class="body-entradas">
+        <div class="header-entradas">
+          <p class="header-title-entrada" id="modal">Esto te va a interesar</p>
+          <!-- <h3>Esto te va a interesar</h3> -->
+        </div>
+        <div class="container-entradas">
+          <div class="itemsEntrada">
+            <div class="itemEntrada" onclick="document.location='404/index.html'">
+              <img class="itemEntrada-image" src="img/error-404.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">404</h5>
+                <h4 class="item-title-h4">Página de error Error </h4>
+                <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor pretium cursus...</p>
+              </div>
+            </div>
+            <div class="itemEntrada"  onclick="document.location='404/index.html'">
+              <img class="itemEntrada-image" src="img/escudo%20escuela%20secundaria%20oficial%20514%20sor%20juana%20ines%20de%20la%20cruz.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Historia</h5>
+                <h4 class="item-title-h4">Historia del escudo del Estado de México</h4>
+                <p class="item-description"> Fue diseñado por el pintor mexiquense Pastor Velázquez <B>Leer nota...</B></p>
+              </div>
+            </div>
+            <div class="itemEntrada"  onclick="document.location='proyecto/index.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400-1.jpg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Proyecto</h5>
+                <h4 class="item-title-h4">Entrada de evidencias</h4>
+                <p class="item-description">Cada actividad tiene su area de de texto, foto y/o video, reacciones, muro de opiniones y commpartir. Así como el sumario de actividades. </p>
+              </div>
+            </div>
+            <div class="itemEntrada"  onclick="document.location='dashboard/index.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/sor%20juana%20ines%20de%20la%20cruz%20cantando%20la%20vida%20es%20mejor.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Actualización</h5>
+                <h4 class="item-title-h4">Cómo actualiza está sección</h4>
+                <p class="item-description">Desde el dashboard principal tiene el acceso a la solicitud. <b>Ver más Adelante</b></p>
+              </div>
+            </div>
+            <div class="itemEntrada" onclick="document.location='lista-de-utiles/index.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Material</h5>
+                <h4 class="item-title-h4">Lista de utiles escolares</h4>
+                <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor pretium cursus...</p>
+              </div>
+            </div>           
+            <div class="itemEntrada" onclick="document.location='herramientas.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/sor%20juana%20ines%20de%20la%20cruz%20empoderada%20y%20luchona.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Herramientas</h5>
+                <h4 class="item-title-h4">Recursos para los estudiantes</h4>
+                <p class="item-description">¿se te olvido la calculadora, pero tienes celular? Utiliza la calculadora de tu pagína escolar. <b>Ver más recursos</b></p>
+              </div>
+            </div>
+            <div class="itemEntrada"  onclick="document.location='herramientas.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Apps</h5>
+                <h4 class="item-title-h4">Calculadora Cientifica</h4>
+                <p class="item-description">Usa la que más se adapte a tu perzonalidad</p>
+              </div>
+            </div>
+
+            <div class="itemEntrada"  onclick="document.location='herramientas.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Directorio</h5>
+                <h4 class="item-title-h4">Conoce a tu comunidad</h4>
+                <p class="item-description">Conoce al personal docente y administrativo  <i class="fas fa-user-check"></i> </p>
+              </div>
+            </div>
+
+            <div class="itemEntrada"  onclick="document.location='herramientas.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Apps</h5>
+                <h4 class="item-title-h4">Calculadora Cientifica</h4>
+                <p class="item-description">Usa la que más se adapte a tu perzonalidad</p>
+              </div>
+            </div>
+            <div class="itemEntrada"  onclick="document.location='SorJuanaPedia/index.html'">
+              <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+              <div class="itemEntrada-content">
+                <h5 class="item-category-h5">Wikipedia</h5>
+                <h4 class="item-title-h4">SorJuanaPedia</h4>
+                <p class="item-description">Acceso directo a la biblioteca digital más grande del mundo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+      <script  src="./blogEntradas.js"></script>
+
  
+
+     
+
+
+
+
+
+
+
+
+
    
     <div class="row removable ">
       <div class="col-lg-4 ">      
@@ -434,7 +686,57 @@ function w3_close() {
       </div>
   </section>
 
+  <div class="py-5 draggable" draggable="true">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-start">
+        <h4>Calendario del ciclo escolar 2022-2023</h4>
+        <p class="mb-0">Descargalo y conoce los días festivos, de puente y evaluación.</p>
+      </div>
+      <div class="col-lg-5 ms-auto text-end mt-4 mt-lg-0">
+        <div class="row">
+          <div class="col-lg-8 col-md-4 col-7">
+            <div class="form-group mb-0">
+              <div class="input-group">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  <input class="form-control" placeholder="Your Email" type="email">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-5 text-start">
+            <button type="button" class="btn bg-gradient-primary mb-0 h-100" onclick="document.getElementById('id01').style.display='block'">Descargar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+<div class="container sizze ">
+  <div class="modal"  id="id01">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" style="color: #000000;">
+            <button style="color: #000000;" onclick="document.getElementById('id01').style.display='none'" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>             
+            Cerrar
+          </button></h5>  
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   
+
+
 
 
   <footer class="footer py-5">
@@ -613,3 +915,35 @@ function showDivs(n) {
 
 </body>
 </html>
+
+<!-- 
+<div class="builder-container builder-container-preview" style=" ">
+    
+            <div class="row removable"><div class="col-lg-4 drop-zone"></div><div class="col-lg-8 drop-zone"></div></div><section class="py-5 draggable" draggable="true">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-md-3">
+        <h1 class="text-gradient text-primary">323</h1>
+        <h5 class="mt-3">Projects</h5>
+        <p>Of “high-performing” level are led by a certified project manager</p>
+      </div>
+      <div class="col-md-3">
+        <h1 class="text-gradient text-primary">500+</h1>
+        <h5 class="mt-3">Hours</h5>
+        <p>That meets quality standards required by our users</p>
+      </div>
+      <div class="col-md-3">
+        <h1 class="text-gradient text-primary">24/7</h1>
+        <h5 class="mt-3">Support</h5>
+        <p>Actively engage team members that finishes on time</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+        </div>
+    
+
+
+-->
+

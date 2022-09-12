@@ -99,7 +99,7 @@
       <span class="close">&times;</span>        <br>          
         Guardar Como<br ><br> 
         <input id="txtFileName" style="width: 100%; align-items: center;" placeholder="Nombre del archivo"></input><br><br style=" line-height: 1em;"> 
-        <button onclick="saveTextAsFile()" style=" float: right;">Guardar y descargar</button> <br style=" line-height: 1em;"> 
+        <button onclick="saveTextAsFile()" style=" float: right;"><i class="fas fa-file-download"></i> Guardar y descargar</button> <br style=" line-height: 1em;"> 
     </div>
 </div>
 
@@ -109,13 +109,13 @@
 <body>
 
 <div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="container app">
-  <h1 class="txt-graydarker txtdswh typingxxx">Editor Sor Juana</h1>
+  <h1 class="txt-graydarker txtdswh typingxxx">Editor Sor Juana <span  id="myBtnx"><small><b>i</b></small></span></h1>
+  
   <template hidden> <button ng-click="disabled = !disabled" unselectable>Disable text-angular Toggle</button></template>  
   <div style="padding: 1em;  background: #f5f5f5;" text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled' ></div>
   <br>
   
-  <div style="padding: 1em;  background: #f5f5f5;">     
-    <input type="button" id="myBtnx" value="Guardar como"/><br><br>
+  <div style="padding: 1em;  background: #f5f5f5;">         
     Guardar Como: 
     <input id="txtFileName" style="width: 30%; align-items: center;" placeholder="Nombre del archivo"></input>
     <button onclick="saveTextAsFile()" >Guardar y descargar</button>

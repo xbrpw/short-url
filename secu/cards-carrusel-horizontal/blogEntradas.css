@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:400,600,700');
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -21,7 +20,7 @@
 .body-entradas {
   min-height: 100vh;
   margin: 0;
-  font-family: 'Hind', sans-serif;
+
   font-weight: 400;
   background: #f7f6fe;
   -webkit-font-smoothing: antialiased;

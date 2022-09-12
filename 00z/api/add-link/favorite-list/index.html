@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>.list li {cursor: pointer;list-style-type: none;margin: 0;padding: 0;}.list li:hover:after,.list li.fav:after {  content: ' \2605';  color: rgb(255, 203, 0);}.list li.fav:hover:after {  content: ' \2606';}</style>
+
+</head>
+<body>
+<ul class="list">
+  <li id="pancakes">Pancakes</li>
+  <li id="donuts">Donuts</li>
+  <li id="cupcakes">Cupcakes</li>
+  <li id="icecream">Icecream</li>
+  <li id="cookies">Cookies</li>
+  <li id="chocolate">Chocolate</li>
+</ul>
+
+  <script>
+        // get favorites from local storage or empty array
+    var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    // add class 'fav' to each favorite
+    favorites.forEach(function(favorite) {
+      document.getElementById(favorite).className = 'fav';
+    });
+    // register click event listener
+    document.querySelector('.list').addEventListener('click', function(e) {
+      var id = e.target.id,
+          item = e.target,
+          index = favorites.indexOf(id);
+      // return if target doesn't have an id (shouldn't happen)
+      if (!id) return;
+      // item is not favorite
+      if (index == -1) {
+        favorites.push(id);
+        item.className = 'fav';
+      // item is already favorite
+      } else {
+        favorites.splice(index, 1);
+        item.className = '';
+      }
+      // store array in local storage
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+    });
+
+    // local storage stores strings so we use JSON to stringify for storage and parse to get out of storage
+  </script>
+
+</body>
+</html>

@@ -10,6 +10,69 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+  <style>@import url('https://fonts.googleapis.com/css?family=Hind:400,600,700');
+
+    *, *:before, *:after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+    
+    .itemEntrada-image {
+      display: block;
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+    }
+    
+    .itemEntrada {
+      background: #fff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.01),0 1px 2px rgba(0,0,0,0.07),0 5px 15px rgba(0,0,0,0.03);
+      margin-right: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    
+    .itemEntrada-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex: 1;
+      flex: 1 0 auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 1.2rem;
+      width: 340px;
+    }
+    
+    .item-title-h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #343538;
+      margin: 0.5rem 0 0.5rem;
+    }
+    
+    .item-description {
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      color: #8a8a8a;
+      margin: 0 0 1rem;
+    }
+    
+    .item-category-h5 {
+      display: inline-block;
+      color: #339999;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin: 0.5rem 0 0rem;
+    }
+    </style>
 </head>
 
 <body>
@@ -24,9 +87,11 @@
 
     <!-- Search -->
     <div class="header__search">
-      <input type="search" id="inputVal" placeholder="Filia y fetiches" autofocus/>
+      <input type="search" id="myInput" onkeyup="myFunction()" placeholder="Buscar.." title="Filias y fetiches"  autofocus/>
+      
       <span>
 				<button id="searchBtn"><i class="material-icons">search</i></button>
+        
 			</span>
     </div>
   </div>
@@ -58,16 +123,16 @@
 }
 
 #myInput {
-  background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
 
+width: 100%;
+width: 100%;
+padding: 18px 15px;
+border: none;
+outline: none;
+font-size: 2em;
+font-weight: 300;
+display: table-cell;
+}
 #myUL {
   list-style-type: none;
   padding: 0;
@@ -88,38 +153,78 @@
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: inherit; 
+    text-decoration: none;
+}
+
+
+a:active {
+    color: inherit; 
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar.." title="Filias y fetiches">
 
-<ul id="myUL">
-  <li><a href="cards.html">Sado. Filia del dolor</a></li>
-  <li><a href="#">Filia</a></li>
 
-  <li><a href="#">Leather</a></li>
-  <li><a href="#">Ruber</a></li>
+<div id="myUL">
+  <li class="dic"><a  class="ff"href="cards.html">Sado. Filia del dolor</a></li>
+  <li class="dic"><a  class="ff"href="#">Filia</a></li>
 
-  <li><a href="#">Lenceria</a></li>
-  <li><a href="#">Pies</a></li>
-  <li><a href="#">Axilas</a></li>
-</ul>
+  <li class="dic"><a  class="ff"href="#">Leather</a></li>
+  <li class="dic"><a  class="ff"href="#">Ruber</a></li>
+
+  <li class="dic"><a  class="ff"href="#">Lenceria</a></li>
+  <li class="dic"><a  class="ff"href="#">Pies</a></li>
+  <li class="dic"><a  class="ff"href="#">Axilas</a></li>
+
+  <div class="itemEntrada" class="dic">
+    <img class="itemEntrada-image" src="https://www.w3schools.com/howto/img_snow_wide.jpg">
+    <div class="itemEntrada-content" class="ff">
+      <h5 class="item-category-h5"> <a  href="#">Filiatest</a></h5>
+      <h4 class="item-title-h4">Japanese Street Food</h4>
+      <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor pretium cursus...</p>
+    </div>
+  </div>
+
+  <div class="itemEntrada" class="dic">
+    <img class="itemEntrada-image" src="https://www.w3schools.com/howto/img_snow_wide.jpg">
+    <div class="itemEntrada-content" class="ff">
+      <h5 class="item-category-h5"> <a  href="#">Filiatest</a></h5> 
+      <h4 class="item-title-h4">Japanese Street Food</h4>
+      <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor pretium cursus...</p>
+    </div>
+  </div>
+
+</div>
 
 <script>
 function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, ul, dic, a, i, ff, div, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
+    div = document.getElementById("myUL");
+    dic = div.getElementsByClassName("dic");
+    for (i = 0; i < dic.length; i++) {
+        ff = dic[i].getElementsByClassName("ff")[0];
+        txtValue = ff.textContent || ff.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
+            dic[i].style.display = "";
         } else {
-            li[i].style.display = "none";
+            dic[i].style.display = "none";
         }
     }
 }

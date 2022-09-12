@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.jsx'></script>
  
 <script>
     $(document).ready(function() {
@@ -24,17 +24,7 @@
     text-decoration: none;
 }
 
-a:visited {
-    color: #000;
-    text-decoration: none;
-}
-
-
-a:hover {
-    color: inherit; 
-    text-decoration: none;
-}
-
+a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}
 
 a:active {
     color: inherit; 
@@ -76,14 +66,23 @@ a:active {
     
 <div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
 
-<div class="w3-bar w3-black w3-center">
-  <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav01')">
-  <i class="fa fa-bars w3-xlarge w3-text-white"></i></a>
-  <a class="w3-bar-item w3-padding-16 " style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav03')">
-  <i class="fa fa-file w3-xlarge w3-text-white"></i></a>
-  <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav02')">
-  <i class="fa fa-camera w3-xlarge w3-text-white"></i></a>
-</div>
+    <!-- nav -->
+    <div class="w3-bar w3-black w3-center">
+        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav01')">
+        <i class="fa fa-bars w3-xlarge w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16 " style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav03')">
+        <i class="fa fa-file w3-xlarge w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav02')">
+        <i class="fa fa-camera w3-xlarge w3-text-white"></i></a>
+ 
+        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav04')">
+        <i class="fa fa-heart w3-xlarge w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16 " style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav05')">
+        <i class="fa fa-eye w3-xlarge w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav06')">
+        <i class="fa fa-sitemap w3-xlarge w3-text-white"></i></a>
+    </div>
+  <!-- /nav -->
 
 <div id="nav01" class="w3-bar-block">
   <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" href="javascript:void(0)" onclick="w3_close()">×</a>
@@ -96,11 +95,13 @@ a:active {
   <a class="w3-bar-item w3-button" href="#"></a>
 </div>
 
+
 <div id="nav02">
   <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
   <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
   <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
 </div>
+
 
 <div id="nav03">
   <div class="w3-container w3-border-bottom">
@@ -128,8 +129,15 @@ a:active {
    <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/EWerRM" target="iframe_a">Para que sea banco de indexación </a></li>
    <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/LzWgyJ" target="iframe_a">Digital assets</a></li>
    <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/VMePLV" target="iframe_a">background patterns</a></li>
+   
+   
+   <li  class="w3-bar-item "><a href="https://seoinspector.pro/" target="iframe_a">Seo Inspector</a></li>
+   <li  class="w3-bar-item "><a href="https://codebeautify.org/responsive-website-tester" target="iframe_a">Responsive tester</a></li>
    <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
    <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
+   <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
+   <li  class="w3-bar-item "><a href="https://codebeautify.org/responsive-website-tester?&URL=https://www.luisangelmaciel.one&Size=11&Scr=deviceScreens" target="iframe_a"></a>Responsive</li>
+
    
 
 
@@ -145,7 +153,23 @@ a:active {
 
   </ul>
 </div>
+
+<div id="nav04">
+    <a href=" https://how-to-examples-js.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">howTo.js (hi)</a>
+    <a href=" https://how-to-examples-html.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">howTo.html (lamp)</a>
+    <a href=" https://how-to-examples-css.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><b>howTo.css</b> (lamacp)</a>
+    <a href="    https://how-to-examples-css.w3spaces.com/como-crear-un-efecto-de-movimiento-en-css.html " target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Efecto de ilusion</a>
 </div>
+
+<div id="nav05">    
+    <a href="https://codebeautify.org/source-code-viewer" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">view-source:</a>
+</div>
+
+<div id="nav06">
+    <a href="webamigas.txt" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Web amigas</a>
+</div>
+</div>
+
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
@@ -156,7 +180,7 @@ a:active {
 </div>
 
 
-
+<br>
 <iframe src="https://www.xbr.pw/secu/editor/" name="iframe_a" height="650px " width="100% " title="Iframe Example" style="border:none;" allowfullscreen=" " frameborder="0 " style="border:0; "  style="overflow:hidden"></iframe>
 
 
@@ -554,6 +578,9 @@ a:active {
     document.getElementById("nav01").style.display = "none";
     document.getElementById("nav02").style.display = "none";
     document.getElementById("nav03").style.display = "none";
+    document.getElementById("nav04").style.display = "none";
+    document.getElementById("nav05").style.display = "none";
+    document.getElementById("nav06").style.display = "none";
     document.getElementById(id).style.display = "block";
     }
     </script>

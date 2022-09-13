@@ -1,0 +1,50 @@
+body {
+  background: #020520;
+  perspective: 500px;
+  overflow-x: hidden;
+}
+
+figure {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+figure:nth-child(1) img {
+  transform: scale(0.6) rotate(-12.5deg);
+}
+figure:nth-child(2) img {
+  transform: scale(0.6) rotate(-9.7222222222deg);
+}
+figure:nth-child(3) img {
+  transform: scale(0.6) rotate(-6.9444444444deg);
+}
+figure:nth-child(4) img {
+  transform: scale(0.6) rotate(-4.1666666667deg);
+}
+figure:nth-child(5) img {
+  transform: scale(0.6) rotate(-1.3888888889deg);
+}
+figure:nth-child(6) img {
+  transform: scale(0.6) rotate(1.3888888889deg);
+}
+figure:nth-child(7) img {
+  transform: scale(0.6) rotate(4.1666666667deg);
+}
+figure:nth-child(8) img {
+  transform: scale(0.6) rotate(6.9444444444deg);
+}
+figure:nth-child(9) img {
+  transform: scale(0.6) rotate(9.7222222222deg);
+}
+figure:nth-child(10) img {
+  transform: scale(0.6) rotate(12.5deg);
+}
+figure img {
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 3px;
+}

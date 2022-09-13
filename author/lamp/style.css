@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Lato";
+  font-size: 16px;
+  padding: 3rem;
+  background: #8b95cb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.scene {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+  height: 440px;
+  border-bottom: 7px solid #23294d;
+}
+.scene::before, .scene::after {
+  content: "";
+  position: absolute;
+}
+
+.scene-bottom {
+  width: 400px;
+  max-width: 100%;
+  margin-top: 5px;
+  border-top: 7px dotted #23294d;
+}
+
+.lamp {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.lamp .base {
+  width: 15rem;
+  height: 2rem;
+  background: #424f94;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+}
+.lamp .base::before, .lamp .base::after {
+  content: "";
+  position: absolute;
+}
+.lamp .base::before, .lamp .base::after {
+  width: 40px;
+  height: 250px;
+  border: 2px solid #424f94;
+  border-radius: 40px;
+  transform-origin: center bottom;
+}
+.lamp .base::before {
+  bottom: 0;
+  left: 85px;
+  transform: rotate(25deg);
+}
+.lamp .base::after {
+  bottom: 195px;
+  right: 4px;
+  transform: rotate(-45deg);
+  background: #8b95cb;
+}
+.lamp .node {
+  position: relative;
+  z-index: 10;
+  position: absolute;
+  bottom: 188px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #424f94;
+}
+.lamp .node::before, .lamp .node::after {
+  content: "";
+  position: absolute;
+}
+.lamp .node::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: #8b95cb;
+}
+.lamp .top-join {
+  position: absolute;
+  bottom: 350px;
+  left: 0;
+  width: 100px;
+  height: 70px;
+  background: #424f94;
+  border-radius: 40px 40px 0 0;
+  transform: rotate(45deg);
+}
+.lamp .top {
+  position: absolute;
+  bottom: 150px;
+  left: -170px;
+  width: 250px;
+  height: 250px;
+  background: #757fb7;
+  border: 1px solid #424f94;
+  border-radius: 50%;
+}
+.lamp .top .wrap-bulb {
+  overflow: hidden;
+  position: absolute;
+  top: 75px;
+  left: -72px;
+  width: 265px;
+  height: 250px;
+  background: #8b95cb;
+  border-top: 10px solid #424f94;
+  border-bottom-left-radius: 50%;
+  transform: rotate(40deg);
+}
+.lamp .top .wrap-bulb .bulb {
+  position: relative;
+  position: absolute;
+  top: -75px;
+  left: 49%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.lamp .top .wrap-bulb .bulb::before, .lamp .top .wrap-bulb .bulb::after {
+  content: "";
+  position: absolute;
+}
+.lamp .top .wrap-bulb .bulb::before {
+  top: 65%;
+  left: 20%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+}
+.lamp .top .wrap-bulb .bulb::after {
+  top: 72%;
+  left: 37%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.plant {
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 100px;
+  height: 40px;
+  background: #C8C8A9;
+}
+.plant::before, .plant::after {
+  content: "";
+  position: absolute;
+}
+.plant::before {
+  top: -10px;
+  left: -10%;
+  width: 120%;
+  height: 10px;
+  background: #F9CDAE;
+}
+.plant::after {
+  top: 0;
+  right: 0;
+  border-top: 5px solid rgba(68, 68, 68, 0.25);
+  border-right: 100px solid rgba(68, 68, 68, 0.25);
+  border-bottom: 20px solid transparent;
+}
+.plant .flower {
+  position: relative;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.plant .flower::before, .plant .flower::after {
+  content: "";
+  position: absolute;
+}
+.plant .flower::before {
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: #83AE9B;
+  border-radius: 0 50% 50%;
+}
+.plant .flower2 {
+  position: relative;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 0;
+  border-radius: 0 0 40px 40px;
+}
+.plant .flower2::before, .plant .flower2::after {
+  content: "";
+  position: absolute;
+}
+.plant .flower2::before, .plant .flower2::after {
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: #83AE9B;
+  border-radius: 0 50% 50%;
+}
+.plant .flower2::after {
+  left: auto;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .scene {
+    transform: scale(0.5);
+  }
+
+  .scene-bottom {
+    display: none;
+  }
+}

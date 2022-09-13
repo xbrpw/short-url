@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/*
+-------------------
+Const
+-------------------
+*/
+body {
+  background-color: #EFEFEF;
+  direction: ltr;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+/*
+-------------------
+Header
+-------------------
+*/
+.header {
+  width: 100%;
+  height: 200px;
+  background-color: #8A7CC5;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.29);
+}
+.header h2 {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 86px;
+}
+.hold-img {
+  height: 200px;
+  position: relative;
+}
+.header img {
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width: 450px) {
+  .header h2 {
+    margin-top: 29px !important;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .hold-img {
+    height: 138px !important;
+  }
+  .header img {
+    height: 108px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/*
+-------------------
+Notes
+-------------------
+*/
+.notes {
+  margin: 45px 0 0;
+}
+/*-----Add Note-----*/
+.notes .single-note input {
+  width: 100%;
+  border: none;
+  background-color: unset;
+  position: relative;
+  margin-bottom: 10px;
+}
+.notes .single-note textarea::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+.notes .single-note textarea {
+  width: 100%;
+  margin-bottom: -10px !important;
+  background-color: unset;
+  resize: none;
+  border: none;
+  margin-top: -1px;
+}
+.notes .single-note input::placeholder {
+  color: rgba(0, 0, 0, 0.17);
+}
+.notes .single-note textarea::-webkit-scrollbar {
+  width: 7px;
+}
+.notes .single-note textarea::-webkit-scrollbar-thumb {
+  background-color: #7c7c7c;
+}
+.notes .single-note textarea::-webkit-scrollbar-track {
+  background-color: #cfcfcf;
+}
+/*-----Single Note-----*/
+.notes .single-note {
+  padding: 33px 33px 20px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.11);
+  transition: all 0.3s;
+  margin-bottom: 35px;
+}
+.notes .single-note:hover {
+  box-shadow: 2px 7px 9px rgba(0, 0, 0, 0.11);
+}
+.notes .single-note .notDone {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  top: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.notes .single-note h2,
+.notes .single-note input {
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
+  transition: all 0.3s;
+  margin-top: 0;
+}
+.notes .single-note .isDone {
+  text-decoration: line-through !important; 
+  color: rgba(0, 0, 0, 0.3607843137254902) !important;
+}
+.notes .single-note small {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+}
+.notes .single-note hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.17);
+  margin: 12px 0;
+}
+.notes .single-note textarea,
+.notes .single-note p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.69);
+  margin-bottom: 28px;
+  word-wrap: break-word;
+  height: 85px;
+  transition: all 0.3s ease-in-out;
+  overflow: auto;
+  line-height: 28px;
+}
+.expand {
+  height: auto !important;
+  overflow: unset !important;
+}
+.notes .single-note p::-webkit-scrollbar {
+  width: 7px;
+}
+.notes .single-note p::-webkit-scrollbar-thumb {
+  background-color: #7c7c7c;
+}
+.notes .single-note p::-webkit-scrollbar-track {
+  background-color: #cfcfcf;
+}
+.notes .single-note .meta {
+  margin: 25px auto 0;
+  display: table;
+}
+.notes .single-note .meta span {
+  margin: 0 12px;
+  font-size: 23px;
+  transition: all 0.2s;
+  color: hsla(0, 0%, 0%, 0.2);
+  cursor: pointer;
+}
+.notes .single-note .meta span:hover {
+  color: rgb(0, 0, 0, 0.4)
+}
+
+/*------Colors------*/
+.openDivs {
+  transform: translateX(-50%) scale(1) !important;
+}
+.colors,
+.copied {
+  display: -webkit-inline-box;
+  padding: 15px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 60px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.31);
+  left: 50%;
+  bottom: 60px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%) scale(0);
+}
+.copied {
+  padding: 6px 15px;
+  color: #fff;
+  background-color: #3e3e3e;
+  border-radius: 60px;
+  font-family: 'Poppins', sans-serif;
+  left: 50%;
+}
+.colors .circle {
+  width: 30px;
+  height: 30px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 50%; 
+}
+.colors .circle.selected {
+  border: 2px dashed #777;
+}
+.yellow {
+  background-color: #FFEDA5 !important;
+}
+.blue {
+  background-color: #BCE0FF !important;
+}
+.red {
+  background-color: #FFB2B2 !important;
+}
+.purple {
+  background-color: #B0A4E6 !important;
+}
+.white   {
+  background-color: #fff !important;
+}
+.whiteCircle   {
+  background-color: #fff !important;
+  border: 1px solid #ccc;
+}
+
+/*
+=====================
+Shared Note
+=====================
+*/
+.shared-note {
+  background-color: #2fa9d8;
+}
+.header.shared-note img {
+  position: absolute;
+  right: 20px;
+  width: 41%;
+  top: 14px;
+}
+.notes .single-note.shared p {
+  height: auto !important;
+  overflow: unset !important;
+}
+
+/*
+=====================
+#hash Notes
+=====================
+*/
+.hash {
+  background-color: #607D8B;
+}
+.hash img {
+  position: absolute;
+  right: 20px;
+  width: 28%;
+  top: 24px;
+}
+
+/*
+-----------------
+Footer
+-----------------
+*/
+footer {
+  margin: 0 0 40px;
+}
+footer span {
+  display: block;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #777;
+}
+footer span i {
+  color: tomato;
+}

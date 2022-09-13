@@ -1,0 +1,53 @@
+<script>
+(async () => {
+    // create and show the notification
+    const showNotification = () => {
+        // create a new notification
+        const notification = new Notification('Y así es como funciona API JavaScript ', {
+            body: 'Esta es una notificación de hecha con JavaScript',
+            icon: 'https://www.w3schools.com/howto/img_snow_wide.jpg'
+        });
+
+        // close the notification after 10 seconds
+        setTimeout(() => {
+            notification.close();
+        }, 10 * 1000);
+
+        // navigate to a URL when clicked
+        notification.addEventListener('click', () => {
+
+            window.open('https://www.xbr.pw/', '_blank');
+        });
+    }
+
+    // show an error message
+    const showError = () => {
+        const error = document.querySelector('.error');
+        error.style.display = 'block';
+        error.textContent = 'Has bloqueado las notificaciones';
+    }
+
+    // check notification permission
+    let granted = false;
+
+    if (Notification.permission === 'granted') {
+        granted = true;
+    } else if (Notification.permission !== 'denied') {
+        let permission = await Notification.requestPermission();
+        granted = permission === 'granted' ? true : false;
+    }
+
+    // show notification or error
+    granted ? showNotification() : showError();
+
+})();
+
+</script>
+
+<div class="container">
+        <h1>Como hacer una notificacion con JavaScript</h1>
+<p>JavaScript Notification API</p>
+        <div class="error"></div>
+    </div>
+    
+    

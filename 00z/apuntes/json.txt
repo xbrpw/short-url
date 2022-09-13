@@ -1,0 +1,48 @@
+-/scale_crop/1000x1000/smart/
+
+{
+    "datetime_removed": null,
+    "datetime_stored": "2022-09-12T22:43:23.534368Z",
+    "datetime_uploaded": "2022-09-12T22:43:23.475240Z",
+    "is_image": true,
+    "is_ready": true,
+    "mime_type": "image/svg+xml",
+    "original_file_url": "https://ucarecdn.com/f820ca5e-17cb-4343-9699-d7dd51d91d30/luisangelmaciel.svg",
+    "original_filename": "luisangelmaciel.svg",
+    "size": 4075,
+    "url": "https://api.uploadcare.com/files/f820ca5e-17cb-4343-9699-d7dd51d91d30/",
+    "uuid": "f820ca5e-17cb-4343-9699-d7dd51d91d30",
+    "variations": null,
+    "content_info": {
+        "mime": {
+            "mime": "image/svg+xml",
+            "type": "image",
+            "subtype": "svg+xml"
+        },
+        "image": {
+            "dpi": [
+                96,
+                96
+            ],
+            "width": 151,
+            "format": "SVG",
+            "height": 154,
+            "sequence": false,
+            "color_mode": "RGBA",
+            "orientation": null,
+            "geo_location": null,
+            "datetime_original": null
+        }
+    },
+    "metadata": {},
+    "appdata": {
+        "uc_clamav_virus_scan": {
+            "data": {
+                "infected": false
+            },
+            "datetime_created": "2022-09-12T22:43:23.912131Z",
+            "datetime_updated": "2022-09-12T22:43:23.912150Z",
+            "version": "0.105.1"
+        }
+    }
+}

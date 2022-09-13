@@ -1,0 +1,78 @@
+body,
+html {
+	font-size: 1.6rem;
+	height: 100%;
+	display: grid;
+	background: rgb(240, 69, 127);
+	background: radial-gradient(
+		circle,
+		rgba(240, 69, 127, 1) 0%,
+		rgba(136, 14, 79, 1) 100%
+	);
+}
+
+#cta_btn_wrapper {
+	margin: auto;
+	text-align: center;
+}
+
+.info {
+	color: #ffffff;
+	font-size: 0.8em;
+}
+
+button {
+	cursor: pointer;
+	background: #fff;
+	color: #757588;
+	margin: auto;
+	border: 1px solid #f8bbd0;
+	padding: 1em;
+	border-radius: 25px;
+}
+
+button:hover,
+button.special {
+	box-shadow: 8px 6px 10px -8px rgba(0, 0, 0, 0.5);
+}
+
+button:hover i:before,
+button.special i:before {
+	color: #e91e63;
+	font-size: 1.2em;
+	animation: heartbeat 1s infinite;
+}
+
+button.special i:before {
+	animation: none;
+}
+
+i:before {
+	font-family: fontawesome;
+	content: "\f004";
+	font-style: normal;
+	color: #f06292;
+	display: inline-block;
+}
+
+@keyframes heartbeat {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(0.75);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(0.75);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+*:focus {
+	outline: none;
+}

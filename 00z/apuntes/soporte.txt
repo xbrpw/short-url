@@ -1,0 +1,3 @@
+Algunos problemas fueron causados ​​por problema de conexión de red.
+Por favor, pulse   Ctrl + F5   clave en el teclado para recargar la página, a continuación, comprobar si el problema persiste.
+Si el problema persiste, por favor envíe un correo electrónico a decirnos, gracias.

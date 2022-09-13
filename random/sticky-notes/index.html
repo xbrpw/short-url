@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>sticky notes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<template id="single-note">
+  <section> 
+    <div class="col-md-4 col-sm-6" v-for="(oneNote, i) in allNotes" :key="oneNote.i">
+      <div v-if="oneNote.text.includes(searchKey)" class="single-note" v-bind:class="[oneNote.color]">
+        <span @click="finishTask(i)" class="notDone"><i :class="{far: !oneNote.completed, fas: oneNote.completed}" class="fa-check-square"></i></span>
+        <div v-if="edit && editId == i">
+          <input  type="text" autofocus="true" placeholder="Type a title ..." v-model="oneNote.title" />
+        </div>
+        <div v-else>
+          <h2  :class="{isDone: oneNote.completed}" >{{oneNote.title}} </h2>
+        </div>
+        
+        <small>Last update: {{oneNote.date}}</small>
+        <hr>
+        <textarea v-if="edit && editId == i" placeholder="Type a description ..." v-model="oneNote.text"></textarea>
+        <p v-else :class="{expand: idToExpand == i, isDone: oneNote.completed}" v-html="modifiedText(i)"></p>
+        <div class="meta">
+          <span v-if="edit && editId == i" @click="updateNote(i, oneNote)"><i class="fas fa-check"></i></span>
+          <span v-else @click=editNote(i)><i class="fas fa-pencil-alt"></i></span>
+          <span @click="toggleTransition(i)"><i class="fas fa-palette"></i></span>
+          <span @click="deleteNote(i)"><i class="far fa-trash-alt"></i></span>
+          <span v-if="oneNote.long" @click="expandNote(i)"><i class="fas fa-expand"></i></span>
+          <span @click="copyLink(i)"><i class="fas fa-link"></i></span>
+        </div>
+        <div class="colors" :class="{openDivs: currentID == i}">
+          <div @click="changeColor(i, 'blue')" class="circle blue" :class="{selected: oneNote.color == 'blue'}"></div>
+          <div @click="changeColor(i, 'yellow')" class="circle yellow" :class="{selected: oneNote.color == 'yellow'}"></div>
+          <div @click="changeColor(i, 'red')" class="circle red" :class="{selected: oneNote.color == 'red'}"></div>
+          <div @click="changeColor(i, 'purple')" class="circle purple" :class="{selected: oneNote.color == 'purple'}"></div>
+          <div @click="changeColor(i, 'white')" class="circle whiteCircle" :class="{selected: oneNote.color == 'white'}"></div>
+        </div>
+        <div class="copied" :class="{openDivs: idToCopy == i}">
+          link is copied !
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+<template id="shared-note">
+  <div class="col-md-offset-4 col-sm-offset-2 col-md-4 col-sm-8">
+    <div class="single-note shared" :class="[sharedNote.color]">
+      <h2>{{sharedNote.title}}</h2>
+      <small>The Date: {{sharedNote.date}}</small>
+      <hr>
+      <p v-html="sharedNote.text"></p>
+    </div>
+  </div>
+</template>
+<template id="sticky-notes">
+  <div>
+    <div class="col-md-4 col-sm-6">
+      <div class="single-note add-note" v-bind:class="[newNote.color]">
+        <input type="text" placeholder="Type a title ..." v-model="noteTitle">
+        <small>Today: {{ todayDate }}</small>
+        <hr>
+        <textarea placeholder="Type a description ..." v-model="noteText"></textarea>
+        <div class="meta">
+          <span @click="toggleTransition(-1)"><i class="fas fa-palette"></i></span>
+          <span @click="insertNote"><i class="fas fa-check"></i></span>
+        </div>
+        <div class="colors" :class="{openDivs: currentID == -1}">
+          <div @click="noteColor = 'blue'" class="circle blue" :class="{selected: newNote.color == 'blue'}"></div>
+          <div @click="noteColor = 'yellow'" class="circle yellow" :class="{selected: newNote.color == 'yellow'}"></div>
+          <div @click="noteColor = 'red'" class="circle red" :class="{selected: newNote.color == 'red'}"></div>
+          <div @click="noteColor = 'purple'" class="circle purple" :class="{selected: newNote.color == 'purple'}"></div>
+          <div @click="noteColor = 'white'" class="circle whiteCircle" :class="{selected: newNote.color == 'white'}"></div>
+        </div>
+      </div>
+    </div>
+    <single-note :all-notes="theNotes"></single-note>
+  </div>
+</template>
+
+<div id="app">
+  <div class="header" id="header" :class="{hash: isHashtag}">
+    <div class="container">
+      <div class="col-md-3 col-sm-5">
+        <a href="index.html">
+          <h2 v-if="isHashtag">#{{isHashtag}}</h2>
+          <h2 v-else>Sticky Notes</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="notes" class="notes">
+    <div class="container">
+      <sticky-notes />
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+<script src='https://use.fontawesome.com/0a2fc28216.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

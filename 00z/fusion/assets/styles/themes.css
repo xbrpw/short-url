@@ -45,6 +45,19 @@
     --color-secondary: #43a9a3;
 }
 
+
+[data-theme='dragonBall'] {
+    --color-bg: #1c4595;
+    --color-bg-offset: #1c4595;
+    --color-text: #b5afb8,;
+    --color-text-offset: #000000;
+    --color-border:  #9c94a0;
+    --color-primary: #e76a24;
+    --color-primary-offset: #ffca00;
+    --color-secondary: #bae8e8;
+}
+/* #1c4595 #e76a24 #01080a #e7e5e8 #fbbc42 */
+
 [data-theme='beach'] {
     --color-bg: #fffffe;
     --color-bg-offset: #e3f6f5;
@@ -132,6 +145,8 @@
     --color-primary-offset: #F56200;
     --color-secondary: #FF6600;
 }
+
+
 
 
 /* Rainbow Road Theme Extra Styles */

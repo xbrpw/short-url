@@ -1,0 +1,119 @@
+html,
+    body{
+      border: 0;
+      margin:0;
+      padding:0;
+      height: 100%;
+    }
+    body{
+      text-align: center;
+      background: #eee;
+    }
+    .container{
+      width: calc(1920px * 0.5);
+      display: inline-block;
+      padding: 20px;
+      margin: 20px;
+      text-align: left;
+      background: #fff;
+      box-shadow: 0 0 4px 2px #ccc;
+      font-family: Arial;
+    }
+    @media screen and (max-width:1200px) {
+      .container{
+        width: calc(1200px * 0.5);
+      }
+    }
+    @media screen and (max-width:900px) {
+      .container{
+        width: calc(100% - 20px * 2);
+        margin: 0;
+        box-shadow: none;
+      }
+      body{
+        background: #fff;
+      }
+    }
+    h1{
+      text-align: center;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+    .todo{
+      font-size: 30px;
+      padding: 0 10px;
+    }
+    .todo .list-item{
+      list-style: circle;
+      display: inline-block;
+      padding: 5px 10px;
+      width: 80%;
+      margin-left: 10px;
+    }
+    .todo .list-item::before{
+      content: "\f111";
+      font-family: "Font Awesome 5 Free";
+      /* margin-right: 10px; */
+      font-size: 14px;
+      vertical-align: middle;
+      margin: -7px;
+      position: relative;
+      left: -20px;
+    }
+    .list-item:nth-child(2n){
+      background: #eee;
+    }
+    .list-item .close{
+      float: right;
+    }
+    .list-item .close i{
+      transition: 0.3s;
+    }
+    .list-item .close i:hover{
+      color: red;
+    }
+    .todo:empty::before{
+      content: "Esta más vacia que el corazón de tu ex, empieza hacer una lista. ¡Venga vámos, dale!";
+      color: #000;
+      font-size: 20px;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      padding: 50px 0;
+    }
+    input{
+      width: 100%;
+      margin: 10px 0;
+    }
+    input[type=text]{
+      background: none;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      font-size: 20px;
+      width: calc(100% - 10px * 2);
+    }
+    input[type=button]{
+      color: #fff;
+      background: #75b7ef;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 20px;
+      border: 0;
+      text-align: center;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+    @media screen and (max-width:900px) {
+      .close{
+        position: absolute;
+      }
+    }
+    .close{
+      display: inline-block;
+      cursor: pointer;
+      text-align: right;
+      width: 10%;
+      vertical-align: middle;
+    }

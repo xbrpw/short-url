@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg);
+}
+
+.controls {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  display: flex;
+}
+
+.input,
+#btn {
+  background: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 6px;
+  color: #fff;
+  border-radius: 6px;
+  transition: background 100ms;
+}
+.input:focus,
+#btn:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.input {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  width: 180px;
+}
+.input::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#btn {
+  margin-left: 10px;
+  fill: #fff;
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+#btn svg {
+  width: 70%;
+  height: 70%;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.text,
+.offscreen-text {
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  position: absolute;
+  margin: 0;
+  z-index: 1;
+  letter-spacing: 2px;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  top: 100%;
+  left: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.offscreen-text {
+  text-align: center;
+  top: -9999px;
+}
+
+.text span {
+  position: absolute;
+  font-weight: 900;
+}
+
+.support {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  display: flex;
+}
+.support a {
+  margin: 0 10px;
+  color: #333333;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: all 150ms ease;
+}
+.support a:hover {
+  transform: scale(1.1);
+}

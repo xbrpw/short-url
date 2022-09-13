@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Luckiest+Guy'>
+<link rel='stylesheet' href='https://codepen.io/fchaussin/pen/dypOQBY.css'><link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button id="mute"></button>
+<div id="scene">
+	<div class="optionsbar" id="topbar">
+		<div class="left">
+			<div id="time"></div>
+		</div>
+		<div class="middle">
+		</div>
+		<div class="right">
+			<div id="score"></div>
+		</div>
+	</div>
+	<div id="talk"></div>
+	<main>
+		<div id="badman">
+			<div class="vest"></div>
+			<div class="head" style="filter: url('#swirl');"></div>
+		</div>
+		<div id="player">
+			<div class="weapons">
+				<div class="active" id="arms">
+					<div class="leftarm">
+						<div class="hand"></div>
+					</div>
+					<div class="rightarm">
+						<div class="hand"></div>
+					</div>
+				</div>
+				<div id="flashball">#soon</div>
+			</div>
+		</div>
+	</main>
+	<div class="optionsbar" id="bottombar">
+		<div class="left"><button id="punch-left" class="push--skeuo"></button></div>
+		<div class="middle"></div>
+		<div class="right"><button id="punch-right" class="push--skeuo"></button></div>
+	</div>
+</div>
+<div id="overlay">
+	<div class="start hidden">
+
+		<h1>Dale sus<br>putazos!</h1>
+		<p>haz que se calle la boca</p>
+		<div class="instructions">Para golpear usa [CTRL] </div>
+		<button id="start" class="">ZAZ!</button>
+	</div>
+	<div class="gameover hidden">
+		<h1>PERDIO</h1>
+		<h2 class="score"></h2>
+		<h3>siempre puedes esperar ganar..</h3>
+		<button id="reload" class="">Reiniciar</button>
+	</div>
+</div>
+
+<audio id="a_discour" controls src="https://assets.w23.fr/audio/mc.ogg" type="audio/ogg" preload="auto">
+	Su navegador no soporta el elemento<code>audio</code>.
+</audio>
+<audio id="a_punch" controls src="https://assets.w23.fr/audio/punch.ogg" type="audio/ogg" preload="auto">
+	Su navegador no soporta el elemento <code>audio</code>.
+</audio>
+
+<svg>
+	<filter id="swirl">
+		<feTurbulence baseFrequency="0.01" numOctaves="1" result="wrap" type="fractalNoise">
+		</feTurbulence>
+
+		<feDisplacementMap id="distord" class="liquid" in="SourceGraphic" in2="wrap" scale="0" xChannelSelector="R" yChannelSelector="B">
+		</feDisplacementMap>
+	</filter>
+</svg>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js'></script><script  src="script.js"></script>
+
+</body>
+</html>

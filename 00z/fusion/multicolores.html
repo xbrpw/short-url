@@ -10,12 +10,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title></title>
     
-   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'><link rel="stylesheet" href="./style.css">
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+   <link rel="stylesheet" href="./style.css">
 
-   <link rel="preload" href="https://mxb.dev/assets/fonts/noe-display-medium.woff2" as="font" type="font/woff2" crossorigin>
+   <link rel="preload" href="assets/fonts/noe-display-medium.woff2" as="font" type="font/woff2" crossorigin>
 <!--    <link rel="preconnect" href="https://webmention.iox"> -->
-   <link rel="stylesheet" href="https://mxb.dev/assets/styles/themes.css">
-   <link rel="stylesheet" href="https://mxb.dev/assets/styles/main.css">
+   <link rel="stylesheet" href="assets/styles/themes.css">
+   <link rel="stylesheet" href="assets/styles/main.css">
 <!-- view-source:https://www.jvt.me/ ver 
 
     <meta name="description" content="Forms on the web don't usually play nice with bad connections. If you try to submit a form while offline, you'll most likely just lose your input. Here's how we might fix that.">
@@ -33,23 +34,7 @@
     
     
     
-    <script type="application/ld+json">{
-          "name":"Max Böck",
-          "description":"Max Böck is a professional front-end developer based in Vienna, Austria.",
-          "author": {
-              "@type":"Person",
-              "name":"Max Böck"
-          },
-          "@type":"WebSite",
-          "url":"https://mxb.dev",
-          "image":"https://mxb.dev/assets/images/avatar2.jpg",
-          "headline":"Max Böck",
-          "sameAs":[
-              "https://twitter.com/mxbck",
-              "https://github.com/maxboeck"
-          ],
-          "@context":"http://schema.org"
-      }</script>
+   
       
       <link rel="apple-touch-icon" sizes="180x180" href="https://mxb.dev/assets/images/favicon/apple-touch-icon.png?v=1">
       <link rel="icon" type="image/png" href="https://mxb.dev/assets/images/favicon/favicon-32x32.png?v=1" sizes="32x32">
@@ -60,9 +45,10 @@
       <meta name="theme-color" content="#1a1a1a">
       <link type="application/atom+xml" rel="alternate" href="https://mxb.dev/feed.xml" title="Max Böck">
       <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-      <link rel="token_endpoint" href="https://tokens.indieauth.com/token">-->
+      <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
       <meta name="monetization" content="$ilp.uphold.com/7qZLaNKjDa87">
-      <link rel="pingback" href="https://webmention.io/mxb.dev/xmlrpc"><link rel="webmention" href="https://webmention.io/mxb.dev/webmention">
+      <link rel="pingback" href="https://webmention.io/mxb.dev/xmlrpc">
+      <link rel="webmention" href="https://webmention.io/mxb.dev/webmention"> --> 
       <script>(function() {
       var theme = localStorage.getItem('theme');
       window.metaColors = {'default':'#f7f7f9',
@@ -75,7 +61,8 @@
           document.documentElement.setAttribute('data-theme', theme);
           document.querySelector('meta[name="theme-color"]').setAttribute('content', window.metaColors[theme]);
       }
-  })();</script></head>
+  })();</script>
+  </head>
 
 <body>
     <a href="#main" class="sr-skip-link">skip to main content</a><div class="titlebar"><div class="titlebar__inner"></div></div><div class="hfeed layout" role="document"><div class="themepicker js-themepicker" data-nosnippet hidden>
@@ -165,11 +152,6 @@
                   <p style="text-align:center">Thank you for visiting!</p>
                 </footer>
               </div>
-
-
-
-
-[![forthebadge](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMTcuNTMiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAyMTcuNTMgMzUiPjxyZWN0IGNsYXNzPSJzdmdfX3JlY3QiIHg9IjAiIHk9IjAiIHdpZHRoPSIxNjIuODQiIGhlaWdodD0iMzUiIGZpbGw9IiMzMUM0RjMiLz48cmVjdCBjbGFzcz0ic3ZnX19yZWN0IiB4PSIxNjAuODQiIHk9IjAiIHdpZHRoPSI1Ni42OSIgaGVpZ2h0PSIzNSIgZmlsbD0iIzM4OUFENSIvPjxwYXRoIGNsYXNzPSJzdmdfX3RleHQiIGQ9Ik0xNS43MCAyMkwxNC4yMiAyMkwxNC4yMiAxMy40N0wxNS43MCAxMy40N0wxNS43MCAxNy4wMkwxOS41MSAxNy4wMkwxOS41MSAxMy40N0wyMC45OSAxMy40N0wyMC45OSAyMkwxOS41MSAyMkwxOS41MSAxOC4yMUwxNS43MCAxOC4yMUwxNS43MCAyMlpNMjUuNDYgMTguMDBMMjUuNDYgMTguMDBMMjUuNDYgMTcuNTJRMjUuNDYgMTYuMjggMjUuOTAgMTUuMzJRMjYuMzUgMTQuMzcgMjcuMTUgMTMuODZRMjcuOTYgMTMuMzUgMjkuMDAgMTMuMzVRMzAuMDQgMTMuMzUgMzAuODUgMTMuODVRMzEuNjUgMTQuMzUgMzIuMDkgMTUuMjlRMzIuNTMgMTYuMjMgMzIuNTQgMTcuNDhMMzIuNTQgMTcuNDhMMzIuNTQgMTcuOTZRMzIuNTQgMTkuMjEgMzIuMTEgMjAuMTZRMzEuNjcgMjEuMTAgMzAuODcgMjEuNjFRMzAuMDYgMjIuMTIgMjkuMDEgMjIuMTJMMjkuMDEgMjIuMTJRMjcuOTggMjIuMTIgMjcuMTYgMjEuNjFRMjYuMzUgMjEuMTAgMjUuOTEgMjAuMTdRMjUuNDcgMTkuMjMgMjUuNDYgMTguMDBaTTI2Ljk0IDE3LjQ2TDI2Ljk0IDE3Ljk2UTI2Ljk0IDE5LjM2IDI3LjQ5IDIwLjEzUTI4LjA0IDIwLjkwIDI5LjAxIDIwLjkwTDI5LjAxIDIwLjkwUTMwLjAwIDIwLjkwIDMwLjUzIDIwLjE1UTMxLjA2IDE5LjQwIDMxLjA2IDE3Ljk2TDMxLjA2IDE3Ljk2TDMxLjA2IDE3LjUxUTMxLjA2IDE2LjA5IDMwLjUyIDE1LjM0UTI5Ljk4IDE0LjU4IDI5LjAwIDE0LjU4TDI5LjAwIDE0LjU4UTI4LjA0IDE0LjU4IDI3LjUwIDE1LjMzUTI2Ljk2IDE2LjA5IDI2Ljk0IDE3LjQ2TDI2Ljk0IDE3LjQ2Wk0zOC4zOSAyMkwzNi40MiAxMy40N0wzNy44OSAxMy40N0wzOS4yMSAxOS44OEw0MC44NCAxMy40N0w0Mi4wOCAxMy40N0w0My43MCAxOS44OUw0NS4wMSAxMy40N0w0Ni40OCAxMy40N0w0NC41MSAyMkw0My4wOSAyMkw0MS40NyAxNS43N0wzOS44MSAyMkwzOC4zOSAyMlpNNTMuMTggMTguOTVMNTAuMTAgMTguOTVMNTAuMTAgMTcuODBMNTMuMTggMTcuODBMNTMuMTggMTguOTVaTTU5LjE2IDE0LjY2TDU2LjUyIDE0LjY2TDU2LjUyIDEzLjQ3TDYzLjI5IDEzLjQ3TDYzLjI5IDE0LjY2TDYwLjYzIDE0LjY2TDYwLjYzIDIyTDU5LjE2IDIyTDU5LjE2IDE0LjY2Wk02Ni43OCAxOC4wMEw2Ni43OCAxOC4wMEw2Ni43OCAxNy41MlE2Ni43OCAxNi4yOCA2Ny4yMiAxNS4zMlE2Ny42NiAxNC4zNyA2OC40NyAxMy44NlE2OS4yNyAxMy4zNSA3MC4zMSAxMy4zNVE3MS4zNiAxMy4zNSA3Mi4xNiAxMy44NVE3Mi45NyAxNC4zNSA3My40MSAxNS4yOVE3My44NSAxNi4yMyA3My44NSAxNy40OEw3My44NSAxNy40OEw3My44NSAxNy45NlE3My44NSAxOS4yMSA3My40MiAyMC4xNlE3Mi45OSAyMS4xMCA3Mi4xOCAyMS42MVE3MS4zOCAyMi4xMiA3MC4zMyAyMi4xMkw3MC4zMyAyMi4xMlE2OS4yOSAyMi4xMiA2OC40OCAyMS42MVE2Ny42NyAyMS4xMCA2Ny4yMiAyMC4xN1E2Ni43OCAxOS4yMyA2Ni43OCAxOC4wMFpNNjguMjYgMTcuNDZMNjguMjYgMTcuOTZRNjguMjYgMTkuMzYgNjguODEgMjAuMTNRNjkuMzUgMjAuOTAgNzAuMzMgMjAuOTBMNzAuMzMgMjAuOTBRNzEuMzEgMjAuOTAgNzEuODQgMjAuMTVRNzIuMzcgMTkuNDAgNzIuMzcgMTcuOTZMNzIuMzcgMTcuOTZMNzIuMzcgMTcuNTFRNzIuMzcgMTYuMDkgNzEuODQgMTUuMzRRNzEuMzAgMTQuNTggNzAuMzEgMTQuNThMNzAuMzEgMTQuNThRNjkuMzUgMTQuNTggNjguODEgMTUuMzNRNjguMjcgMTYuMDkgNjguMjYgMTcuNDZMNjguMjYgMTcuNDZaTTgwLjk0IDE4Ljk1TDc3Ljg3IDE4Ljk1TDc3Ljg3IDE3LjgwTDgwLjk0IDE3LjgwTDgwLjk0IDE4Ljk1Wk04Ni43MyAyMkw4NS4yNCAyMkw4NS4yNCAxMy40N0w4OC4yNCAxMy40N1E4OS43MiAxMy40NyA5MC41MiAxNC4xM1E5MS4zMyAxNC43OSA5MS4zMyAxNi4wNUw5MS4zMyAxNi4wNVE5MS4zMyAxNi45MCA5MC45MSAxNy40OFE5MC41MCAxOC4wNiA4OS43NiAxOC4zN0w4OS43NiAxOC4zN0w5MS42OCAyMS45Mkw5MS42OCAyMkw5MC4wOSAyMkw4OC4zOCAxOC43MUw4Ni43MyAxOC43MUw4Ni43MyAyMlpNODYuNzMgMTQuNjZMODYuNzMgMTcuNTJMODguMjUgMTcuNTJRODkuMDAgMTcuNTIgODkuNDIgMTcuMTVRODkuODQgMTYuNzcgODkuODQgMTYuMTFMODkuODQgMTYuMTFRODkuODQgMTUuNDMgODkuNDUgMTUuMDVRODkuMDYgMTQuNjggODguMjkgMTQuNjZMODguMjkgMTQuNjZMODYuNzMgMTQuNjZaTTk2LjUwIDIyTDk0Ljk2IDIyTDk4LjE4IDEzLjQ3TDk5LjUxIDEzLjQ3TDEwMi43NCAyMkwxMDEuMTkgMjJMMTAwLjUwIDIwLjAxTDk3LjE5IDIwLjAxTDk2LjUwIDIyWk05OC44NCAxNS4yOEw5Ny42MSAxOC44MkwxMDAuMDggMTguODJMOTguODQgMTUuMjhaTTEwOC4xOCAyMkwxMDYuNzAgMjJMMTA2LjcwIDEzLjQ3TDEwOC4xOCAxMy40N0wxMTEuOTkgMTkuNTRMMTExLjk5IDEzLjQ3TDExMy40NiAxMy40N0wxMTMuNDYgMjJMMTExLjk4IDIyTDEwOC4xOCAxNS45NUwxMDguMTggMjJaTTEyMC42NiAyMkwxMTguMjAgMjJMMTE4LjIwIDEzLjQ3TDEyMC43MiAxMy40N1ExMjEuODUgMTMuNDcgMTIyLjczIDEzLjk3UTEyMy42MSAxNC40OCAxMjQuMDkgMTUuNDBRMTI0LjU3IDE2LjMzIDEyNC41NyAxNy41MkwxMjQuNTcgMTcuNTJMMTI0LjU3IDE3Ljk1UTEyNC41NyAxOS4xNiAxMjQuMDggMjAuMDhRMTIzLjYwIDIxLjAwIDEyMi43MSAyMS41MFExMjEuODEgMjIgMTIwLjY2IDIyTDEyMC42NiAyMlpNMTE5LjY5IDE0LjY2TDExOS42OSAyMC44MkwxMjAuNjUgMjAuODJRMTIxLjgyIDIwLjgyIDEyMi40NCAyMC4wOVExMjMuMDcgMTkuMzYgMTIzLjA4IDE3Ljk5TDEyMy4wOCAxNy45OUwxMjMuMDggMTcuNTJRMTIzLjA4IDE2LjEzIDEyMi40NyAxNS40MFExMjEuODcgMTQuNjYgMTIwLjcyIDE0LjY2TDEyMC43MiAxNC42NkwxMTkuNjkgMTQuNjZaTTEyOC43NiAxOC4wMEwxMjguNzYgMTguMDBMMTI4Ljc2IDE3LjUyUTEyOC43NiAxNi4yOCAxMjkuMjAgMTUuMzJRMTI5LjY1IDE0LjM3IDEzMC40NSAxMy44NlExMzEuMjYgMTMuMzUgMTMyLjMwIDEzLjM1UTEzMy4zNCAxMy4zNSAxMzQuMTUgMTMuODVRMTM0Ljk2IDE0LjM1IDEzNS4zOSAxNS4yOVExMzUuODMgMTYuMjMgMTM1Ljg0IDE3LjQ4TDEzNS44NCAxNy40OEwxMzUuODQgMTcuOTZRMTM1Ljg0IDE5LjIxIDEzNS40MSAyMC4xNlExMzQuOTcgMjEuMTAgMTM0LjE3IDIxLjYxUTEzMy4zNiAyMi4xMiAxMzIuMzEgMjIuMTJMMTMyLjMxIDIyLjEyUTEzMS4yOCAyMi4xMiAxMzAuNDYgMjEuNjFRMTI5LjY1IDIxLjEwIDEyOS4yMSAyMC4xN1ExMjguNzcgMTkuMjMgMTI4Ljc2IDE4LjAwWk0xMzAuMjQgMTcuNDZMMTMwLjI0IDE3Ljk2UTEzMC4yNCAxOS4zNiAxMzAuNzkgMjAuMTNRMTMxLjM0IDIwLjkwIDEzMi4zMSAyMC45MEwxMzIuMzEgMjAuOTBRMTMzLjMwIDIwLjkwIDEzMy44MyAyMC4xNVExMzQuMzYgMTkuNDAgMTM0LjM2IDE3Ljk2TDEzNC4zNiAxNy45NkwxMzQuMzYgMTcuNTFRMTM0LjM2IDE2LjA5IDEzMy44MiAxNS4zNFExMzMuMjkgMTQuNTggMTMyLjMwIDE0LjU4TDEzMi4zMCAxNC41OFExMzEuMzQgMTQuNTggMTMwLjgwIDE1LjMzUTEzMC4yNiAxNi4wOSAxMzAuMjQgMTcuNDZMMTMwLjI0IDE3LjQ2Wk0xNDEuNzggMjJMMTQwLjMxIDIyTDE0MC4zMSAxMy40N0wxNDIuMjMgMTMuNDdMMTQ0LjY5IDIwLjAxTDE0Ny4xNCAxMy40N0wxNDkuMDYgMTMuNDdMMTQ5LjA2IDIyTDE0Ny41OCAyMkwxNDcuNTggMTkuMTlMMTQ3LjczIDE1LjQzTDE0NS4yMSAyMkwxNDQuMTUgMjJMMTQxLjY0IDE1LjQzTDE0MS43OCAxOS4xOUwxNDEuNzggMjJaIiBmaWxsPSIjRkZGRkZGIi8+PHBhdGggY2xhc3M9InN2Z19fdGV4dCIgZD0iTTE3NC42MCAxNy44MEwxNzQuNjAgMTcuODBRMTc0LjYwIDE2LjU0IDE3NS4yMCAxNS41NFExNzUuODAgMTQuNTUgMTc2Ljg1IDEzLjk5UTE3Ny45MCAxMy40MyAxNzkuMjIgMTMuNDNMMTc5LjIyIDEzLjQzUTE4MC4zNyAxMy40MyAxODEuMjkgMTMuODRRMTgyLjIyIDE0LjI1IDE4Mi44MyAxNS4wMkwxODIuODMgMTUuMDJMMTgxLjMyIDE2LjM5UTE4MC41MSAxNS40MCAxNzkuMzQgMTUuNDBMMTc5LjM0IDE1LjQwUTE3OC42NSAxNS40MCAxNzguMTIgMTUuNzBRMTc3LjU5IDE2IDE3Ny4yOSAxNi41NFExNzcuMDAgMTcuMDkgMTc3LjAwIDE3LjgwTDE3Ny4wMCAxNy44MFExNzcuMDAgMTguNTEgMTc3LjI5IDE5LjA1UTE3Ny41OSAxOS42MCAxNzguMTIgMTkuOTBRMTc4LjY1IDIwLjIwIDE3OS4zNCAyMC4yMEwxNzkuMzQgMjAuMjBRMTgwLjUxIDIwLjIwIDE4MS4zMiAxOS4yMkwxODEuMzIgMTkuMjJMMTgyLjgzIDIwLjU4UTE4Mi4yMiAyMS4zNSAxODEuMzAgMjEuNzZRMTgwLjM3IDIyLjE3IDE3OS4yMiAyMi4xN0wxNzkuMjIgMjIuMTdRMTc3LjkwIDIyLjE3IDE3Ni44NSAyMS42MVExNzUuODAgMjEuMDUgMTc1LjIwIDIwLjA1UTE3NC42MCAxOS4wNiAxNzQuNjAgMTcuODBaTTE4Ni43OCAyMS4yNEwxODYuNzggMjEuMjRMMTg3LjU2IDE5LjQ5UTE4OC4xMiAxOS44NiAxODguODcgMjAuMDlRMTg5LjYxIDIwLjMyIDE5MC4zMyAyMC4zMkwxOTAuMzMgMjAuMzJRMTkxLjcwIDIwLjMyIDE5MS43MCAxOS42NEwxOTEuNzAgMTkuNjRRMTkxLjcwIDE5LjI4IDE5MS4zMSAxOS4xMVExOTAuOTIgMTguOTMgMTkwLjA2IDE4Ljc0TDE5MC4wNiAxOC43NFExODkuMTEgMTguNTMgMTg4LjQ3IDE4LjMwUTE4Ny44NCAxOC4wNiAxODcuMzggMTcuNTVRMTg2LjkzIDE3LjAzIDE4Ni45MyAxNi4xNkwxODYuOTMgMTYuMTZRMTg2LjkzIDE1LjM5IDE4Ny4zNSAxNC43N1ExODcuNzcgMTQuMTUgMTg4LjYwIDEzLjc5UTE4OS40NCAxMy40MyAxOTAuNjQgMTMuNDNMMTkwLjY0IDEzLjQzUTE5MS40NyAxMy40MyAxOTIuMjcgMTMuNjJRMTkzLjA4IDEzLjgwIDE5My43MCAxNC4xN0wxOTMuNzAgMTQuMTdMMTkyLjk2IDE1LjkzUTE5MS43NiAxNS4yOCAxOTAuNjMgMTUuMjhMMTkwLjYzIDE1LjI4UTE4OS45MiAxNS4yOCAxODkuNjAgMTUuNDlRMTg5LjI4IDE1LjcwIDE4OS4yOCAxNi4wNEwxODkuMjggMTYuMDRRMTg5LjI4IDE2LjM3IDE4OS42NiAxNi41NFExOTAuMDUgMTYuNzEgMTkwLjkwIDE2Ljg5TDE5MC45MCAxNi44OVExOTEuODYgMTcuMTAgMTkyLjQ5IDE3LjMzUTE5My4xMiAxNy41NiAxOTMuNTggMTguMDdRMTk0LjA0IDE4LjU4IDE5NC4wNCAxOS40NkwxOTQuMDQgMTkuNDZRMTk0LjA0IDIwLjIxIDE5My42MiAyMC44M1ExOTMuMjAgMjEuNDQgMTkyLjM2IDIxLjgwUTE5MS41MiAyMi4xNyAxOTAuMzIgMjIuMTdMMTkwLjMyIDIyLjE3UTE4OS4zMCAyMi4xNyAxODguMzQgMjEuOTJRMTg3LjM4IDIxLjY3IDE4Ni43OCAyMS4yNFpNMTk4LjAzIDIxLjI0TDE5OC4wMyAyMS4yNEwxOTguODEgMTkuNDlRMTk5LjM3IDE5Ljg2IDIwMC4xMiAyMC4wOVEyMDAuODYgMjAuMzIgMjAxLjU4IDIwLjMyTDIwMS41OCAyMC4zMlEyMDIuOTUgMjAuMzIgMjAyLjk1IDE5LjY0TDIwMi45NSAxOS42NFEyMDIuOTUgMTkuMjggMjAyLjU2IDE5LjExUTIwMi4xNyAxOC45MyAyMDEuMzEgMTguNzRMMjAxLjMxIDE4Ljc0UTIwMC4zNiAxOC41MyAxOTkuNzIgMTguMzBRMTk5LjA5IDE4LjA2IDE5OC42MyAxNy41NVExOTguMTggMTcuMDMgMTk4LjE4IDE2LjE2TDE5OC4xOCAxNi4xNlExOTguMTggMTUuMzkgMTk4LjYwIDE0Ljc3UTE5OS4wMiAxNC4xNSAxOTkuODUgMTMuNzlRMjAwLjY5IDEzLjQzIDIwMS44OSAxMy40M0wyMDEuODkgMTMuNDNRMjAyLjcyIDEzLjQzIDIwMy41MiAxMy42MlEyMDQuMzMgMTMuODAgMjA0Ljk1IDE0LjE3TDIwNC45NSAxNC4xN0wyMDQuMjEgMTUuOTNRMjAzLjAxIDE1LjI4IDIwMS44OCAxNS4yOEwyMDEuODggMTUuMjhRMjAxLjE3IDE1LjI4IDIwMC44NSAxNS40OVEyMDAuNTMgMTUuNzAgMjAwLjUzIDE2LjA0TDIwMC41MyAxNi4wNFEyMDAuNTMgMTYuMzcgMjAwLjkxIDE2LjU0UTIwMS4zMCAxNi43MSAyMDIuMTUgMTYuODlMMjAyLjE1IDE2Ljg5UTIwMy4xMSAxNy4xMCAyMDMuNzQgMTcuMzNRMjA0LjM3IDE3LjU2IDIwNC44MyAxOC4wN1EyMDUuMjkgMTguNTggMjA1LjI5IDE5LjQ2TDIwNS4yOSAxOS40NlEyMDUuMjkgMjAuMjEgMjA0Ljg3IDIwLjgzUTIwNC40NSAyMS40NCAyMDMuNjEgMjEuODBRMjAyLjc3IDIyLjE3IDIwMS41NyAyMi4xN0wyMDEuNTcgMjIuMTdRMjAwLjU1IDIyLjE3IDE5OS41OSAyMS45MlExOTguNjMgMjEuNjcgMTk4LjAzIDIxLjI0WiIgZmlsbD0iI0ZGRkZGRiIgeD0iMTczLjg0Ii8+PC9zdmc+)](https://forthebadge.com)
 
 
 

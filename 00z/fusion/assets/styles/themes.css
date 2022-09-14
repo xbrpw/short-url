@@ -45,16 +45,22 @@
     --color-secondary: #43a9a3;
 }
 
+.blueg {color: #1c4595, #e76a24 #01080a #e7e5e8 #fbbc42}
+.blueg {color: #92b0eb, #6791e3, #3d72da, #1c4595, #131418, #0c1d3f,#29293e, #040914,  #131c2e;}
+.blueg {color:#fbe7dc, #f6c8ae, #f1a980, #e76a24, #c35415, #954010, #672c0b}
+.blueg {color:#149cc3, #0f7795, #0a5267, #01080a, #000000}
+.blueg {color:#ffffff, #e7e5e8, #cecad0, #b5afb8, #9c94a0}
+.blueg {color: #ffffff, #fef1d8, #fddfa6, #fbbc42, #faaa10, #d38c04, #a16b03}
 
 [data-theme='dragonBall'] {
-    --color-bg: #1c4595;
-    --color-bg-offset: #1c4595;
-    --color-text: #b5afb8,;
-    --color-text-offset: #000000;
-    --color-border:  #9c94a0;
+    --color-bg:#29293e;
+    --color-bg-offset:  #16161a;
+    --color-text: #fffffe;
+    --color-text-offset:  #e76a24;
+    --color-border: #383a61;
     --color-primary: #e76a24;
-    --color-primary-offset: #ffca00;
-    --color-secondary: #bae8e8;
+    --color-primary-offset: #954010;
+    --color-secondary: #0c1d3f
 }
 /* #1c4595 #e76a24 #01080a #e7e5e8 #fbbc42 */
 

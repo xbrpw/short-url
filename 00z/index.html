@@ -1,37 +1,9 @@
-<!DOCTYPE html>
-<!-- ⊙⩌⨀
-    2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack    
-	    ¿Quién hizo todo esto? 
-        http://twitter.com/luisangelmaciel -->
-<title></title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.jsx'></script>
- 
-<script>
-    $(document).ready(function() {
-        $("#div4").load("div4.html");
-    });
-</script>
-
-<!-- <div id="div4"> </div> -->
-
-<style>a:link {
-    color: #000;
-    text-decoration: none;
-}
-
-a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}
-
-a:active {
-    color: inherit; 
-    text-decoration: none;
-  }
-</style>
-
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
+<title>My Dashboard | xBr-lamp!</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+<style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.jsx'></script><script>$(document).ready(function() {$("#div4").load("div4.html");  });</script> <div id="div4"> </div> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function includeHTML() {
         var z, i, elmnt, file, xhttp;
@@ -40,7 +12,7 @@ a:active {
         for (i = 0; i < z.length; i++) {
             elmnt = z[i];
             /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
+            file = elmnt.getAttribute("incluye-html");
             if (file) {
             /*make an HTTP request using the attribute value as the file name:*/
             xhttp = new XMLHttpRequest();
@@ -49,7 +21,7 @@ a:active {
                 if (this.status == 200) {elmnt.innerHTML = this.responseText;}
                 if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}
                 /*remove the attribute, and call this function once more:*/
-                elmnt.removeAttribute("w3-include-html");
+                elmnt.removeAttribute("incluye-html");
                 includeHTML();
                 }
             }      
@@ -61,109 +33,117 @@ a:active {
         }
         };
     </script>
-
+<style>:root {--bg-color-initial: rgb(20, 20, 20); --card-color-initial: rgb(23, 23, 23);}</style>  
 <body>
+  
+<div class="w3-sidebar w3-collapse w3-white w3-animate-left " style="z-index:3;width:250px;" id="mySidebar">
+
+<div class="w3-bar w3-center " style="background-color: var(--bg-color-initial)">
+        <a class="w3-bar-item w3-padding-16" style="width:20%" href="javascript:void(0)" onclick="openNav('nav01')">
+        <i class="fa fa-bars  w3-text-white"></i><span  href="javascript:void(0)" onclick="w3_close()" class="w3-hide-large">x</span></a>
+        <a class="w3-bar-item w3-padding-16 " style="width:20%" href="javascript:void(0)" onclick="openNav('nav03')" title="CSS">
+        <i class="fa fa-link  w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:20%" href="javascript:void(0)" onclick="openNav('nav02')" title="Multimedia">
+        <i class="fa fa-camera  w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:20%" href="javascript:void(0)" onclick="openNav('nav04')" title="Proyectos">
+        <i class="fa fa-heart  w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16 " style="width:20%" href="javascript:void(0)" onclick="openNav('nav05')" title="¡Una idea, hazla!">
+        <i class="fa fa-code w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:20%" href="javascript:void(0)" onclick="openNav('nav06')" title="Full Mapa de sitio">
+        <i class="fa fa-sitemap  w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:20%" href="javascript:void(0)" onclick="openNav('nav07')" title="Snippes">
+        <i class="fa fa-book  w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16 " style="width:20%" href="javascript:void(0)" onclick="openNav('nav08')" title="Editar img">
+        <i class="fa fa-photo  w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:20%" href="javascript:void(0)" onclick="openNav('nav09')" title="CEO">
+        <i class="fa fa-check  w3-text-white"></i></a>
+        <a class="w3-bar-item w3-padding-16" style="width:20%" href="javascript:void(0)" onclick="openNav('nav10')" title="Metodología">
+        <i class="fa fa-chec  w3-text-white">💡</i>  </a>
+</div>
+<style> 
+    input[type=text] {
+        width: 100%;
+      box-sizing: border-box;
+      border: 2px solid #black;
+      border-radius: 0px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url('https://www.w3schools.com/howto/searchicon.png');
+      background-position: 10px 10px; 
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
     
-<div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
+    input[type=text]:focus {
+      width: 100%;
+    }
+    </style>
+    
+    
+    
+    <form>
+      <input type="text" name="search" placeholder="Search..">
+    </form>
 
-    <!-- nav -->
-    <div class="w3-bar w3-black w3-center">
-        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav01')">
-        <i class="fa fa-bars w3-xlarge w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16 " style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav03')">
-        <i class="fa fa-file w3-xlarge w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav02')">
-        <i class="fa fa-camera w3-xlarge w3-text-white"></i></a>
- 
-        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav04')">
-        <i class="fa fa-heart w3-xlarge w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16 " style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav05')">
-        <i class="fa fa-eye w3-xlarge w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav06')">
-        <i class="fa fa-sitemap w3-xlarge w3-text-white"></i></a>
 
-        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav07')">
-        <i class="fa fa-book w3-xlarge w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16 " style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav08')">
-        <i class="fa fa-eye w3-xlarge w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav09')">
-        <i class="fa fa-sitemap w3-xlarge w3-text-white"></i></a>
-
-    </div>
-  <!-- /nav -->
-
-<div id="nav01" class="w3-bar-block">
- 
-  <a class="w3-bar-item w3-button" href="#"></a>
-  <li  class="w3-bar-item "><a href="para-footer-random/index.html" target="iframe_a">para-footer-random</a></li>
-  <p><i class="fas fa-users-cog"></i> <br> 
-    <i class="fas fa-store"></i>
-    <i class="fas fa-share-alt"></i>
-    <i class="fas fa-upload"></i>
-    <i class="fas fa-bug"></i> <i class="fa fa-google-play"></i> 
-</p>
+<div id="nav01" class="w3-bar-block">      
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
+    <a href="https://hihellomonster.github.io/doble.pantalla/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Head Full </a> 
+  <a href="https://docs.google.com/spreadsheets/d/1KmhqJrukodoKtBbBUJ0sxppepEHQ4ROqENfEAWG2erI/edit#gid=1626759999" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Google</a> 
+  <a href="https://hihellomonster.github.io/doble.pantalla/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Doble View</a> 
+  <a href="https://hihellomonster.github.io/editor.online/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">LampCode </a> 
+    <a href="https://www.xbr.pw/secu/editor/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Editor</a>     
+    <a href="responsive.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Responsive </a>     
+    <a href="/fusion/multicolores.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Fusion </a> 
+    <a href="https://codebeautify.org/source-code-viewer" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">View Source</a>
+    <a href="api/extrae-color/index.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Extrae color</a>
+    <a href="https://dummyimage.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Dummy image</a>
+    <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "> Catálogo de iconos Fontawesome </a>
+  
 </div>
 
 
 <div id="nav02">
-  <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
+  <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/lamp-goku-style.svg" style="width:100%;"></a>
   <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
   <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
+  
+  <p style="color: #1c4595"><b>#1c4595 Blue+</b></p> 
+  <p style="color: #15c8"><b>#15c8 Blue</b></p> 
+  <p style="color: #e76a24 "> #e76a24+<b></b></p>
+  <p style="color: #f27a23"> #f27a23 Naranja</p>  
+  <p style="color: #000 "> #000 Negro</p>
+  <p style="color: #e7e5e8  "> <b>#e7e5e8  Gris</b></p>
+  <p style="color: #fbbc42  "> <b>#fbbc42 Amarillo</b></p>
+  <p style="color: black  "> <b></b></p>
 </div>
 
 
-<div id="nav03">
-  <div class="w3-container w3-border-bottom">
-    <h1 class="w3-text-theme">Todo en uno</h1>
-  </div>
-  <ul class="w3-ul w3-large">  
-   <li  class="w3-bar-item ">CSS</li>
-   <li  class="w3-bar-item "><a href="https://www.xbr.pw/secu/editor/index2.html" target="iframe_a">Editor</a></li>
+<div id="nav03">  
+  <ul class="w3-ul ">  
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
    <li class="w3-bar-item "><a href="https://www.w3schools.com/howto/default.asp">W3S How to</a></li>
    <li class="w3-bar-item "><a href="https://www.w3schools.com/w3css/default.asp">W3S CSS</a></li>
    <li  class="w3-bar-item "><a href="https://getbootstrap.com/docs/5.1/examples/" target="iframe_a">Bootstrap</a></li>   
-   <li class="w3-bar-item "><a href="https://www.quackit.com/" target="iframe_a">Quickit</a></li>
-   <li  class="w3-bar-item "><a href="https://www.html-code-generator.com/html/" target="iframe_a">CodeGenerator</a></li>
-
-   <li  class="w3-bar-item ">IMG</li>
-   <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a></li>
-   <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/compress-png-jpg-webp-gif" target="iframe_a">Comprimir img</a></li>
-   <li  class="w3-bar-item "><a href="https://photoswipe.com/" target="iframe_a">Photoswipe</a></li>
-   <li  class="w3-bar-item "><a href="https://icomoon.io/app/#/select" >Icomoon</a></li>
-   
+   <a href="https://github.com/luisangelmaciel?tab=repositories" target="_blank" class="w3-bar-item w3-button w3-left-align ">Codepen</a> 
    <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/oNYxgyX" target="iframe_a">Gradients</a></li>
    <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/ZEBWYxm" target="iframe_a">CSS Filter playground</a></li>
    <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/BaQKyxd" target="iframe_a">Box Shadow </a></li>
    <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/mdOPyxO" target="iframe_a">CSS Cursor Property</a></li>
    <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/EWerRM" target="iframe_a">Para que sea banco de indexación </a></li>
    <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/LzWgyJ" target="iframe_a">Digital assets</a></li>
-   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/VMePLV" target="iframe_a">background patterns</a></li>
-   
-   
-   <li  class="w3-bar-item "><a href="https://seoinspector.pro/" target="iframe_a">Seo Inspector</a></li>
-   <li  class="w3-bar-item "><a href="https://codebeautify.org/responsive-website-tester" target="iframe_a">Responsive tester</a></li>
+   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/VMePLV" target="iframe_a">Background patterns</a></li>  
    <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
    <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
-   <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>
-   <li  class="w3-bar-item "><a href="https://codebeautify.org/responsive-website-tester?&URL=https://www.luisangelmaciel.one&Size=11&Scr=deviceScreens" target="iframe_a"></a>Responsive</li>
-
-   
-
-
-
-
-
-
-
-
-
-
-   <div w3-include-html=""></div> 
-
+   <li  class="w3-bar-item "><a href="" target="iframe_a"></a></li>  
   </ul>
 </div>
 
 <div id="nav04">
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
     <a href=" https://how-to-examples-js.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">howTo.js (hi)</a>
     <a href=" https://how-to-examples-html.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">howTo.html (lamp)</a>
     <a href=" https://how-to-examples-css.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><b>howTo.css</b> (lamacp)</a>
@@ -171,446 +151,133 @@ a:active {
 </div>
 
 <div id="nav05">    
-    <a href="https://codebeautify.org/source-code-viewer" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">view-source:</a>
-    <a href="api/extrae-color/index.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">extrae-color</a>
-    <a href="api/add-link/index.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">add-link</a>
-    <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "> Catálogo de iconos Fontawesome </a>
-   
-
+    <a style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
 </div>
 
-<div id="nav06">
-    <a href="webamigas.txt" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Web amigas</a>
+<div id="nav06"><ul class="w3-ul ">  
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
+    <a href="webamigas.txt" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Web amigas</a></ul>
 </div>
 
 
-<div id="nav07">
-  <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" href="javascript:void(0)" onclick="w3_close()">×</a>
-  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img src="https://www.w3schools.com/images/w3schools.png" style="width:80%;"></a>
+<div id="nav07">  
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
   <a class="w3-bar-item w3-button" href="#AutomaticSlideshow">Automatic Slideshow</a>
   <a class="w3-bar-item w3-button" href="#usarjQuery">UsarjQuery</a>  
   <a class="w3-bar-item w3-button" href="#paraA">a</a>
   <a class="w3-bar-item w3-button" href="#incluirHtml">Incluir html</a>
+  <button onclick="window.location.href='https://w3docs.com';">Click Here</button>
   </div>
 
   
-<div id="nav08">
-    <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
-    <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
-    <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
-  </div>
+<div id="nav08"><ul class="w3-ul ">  
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
+    <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a></li>
+    <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/compress-png-jpg-webp-gif" target="iframe_a">Comprimir img</a></li>
+    <li  class="w3-bar-item "><a href="https://photoswipe.com/" target="iframe_a">Photoswipe +galerias</a></li>
+    <li  class="w3-bar-item "><a href="https://icomoon.io/app/#/select" >Icomoon</a></li>   </ul>
+</div>
 
   
-<div id="nav09">    
-    <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%;"></a>
-  </div>  
+<div id="nav09">    <ul class="w3-ul ">      
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
+    <li  class="w3-bar-item "><a href="https://seoinspector.pro/" target="iframe_a">Seo Inspector</a></li></ul>
+</div>  
+
+<div id="nav10">    <ul class="w3-ul ">      
+    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
+    <li  class="w3-bar-item "><a href="https://www.cleancss.com/css-minify/" target="iframe_a">CSS Minify</a></li>
+    <li  class="w3-bar-item "><a href="https://uncss-online.com/" target="iframe_a">UnCSS</a></li></ul>
+</div> 
 </div>
 
 
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div class="w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
-<div class="w3-main" style="margin-left:300px;"> 
+<div class="w3-main" style="margin-left:250px;"> 
 
-<div class="w3-top w3-theme w3-large w3-hide-large">
-  <i class="fa fa-bars w3-button w3-teal w3-xlarge" onclick="w3_open()"></i>
+<div class="w3-top w3-theme  w3-hide-large">
+  <i class="fa fa-bars w3-button " onclick="w3_open()"></i>
 </div>
 
-
-<br>
-<iframe src="https://www.xbr.pw/secu/editor/" name="iframe_a" height="650px " width="100% " title="Iframe Example" style="border:none;" allowfullscreen=" " frameborder="0 " style="border:0; "  style="overflow:hidden"></iframe>
-
-
-
-
-
-
-
-
-<header class="w3-container w3-theme w3-padding-64 w3-center">
-  <h1 class="w3-xxxlarge w3-padding-16">xbr.pw</h1>
-</header>
-
-
-<!-- -->
-<div class="w3-container w3-padding-large w3-section w3-light-grey" >
-    <h1 class="w3-jumbo">Fragmentos</h1>
-    <p class="w3-xlarge">The Language for Programming Web Pages</p>
-    <p>¡Más muy pronto!</p>
-    <p> Se agregarán más ejemplos para ayudar a cualquiera a comenzar o familiarizarse más con el funcionamiento de Skeleton. El objetivo es la educación. Si está más interesado en ejemplos reales y en vivo de sitios de Skeleton, ¡pronto crearé una lista de "Construidos en Skeleton"!</p> </p>
-    <a href="" class="w3-button w3-theme w3-hover-white">LEARN JS</a>
-    <a href="" class="w3-button w3-theme w3-hover-white">JS REFERENCE</a>
-    <p>Patrones comunes para crear sitios y aplicaciones que se basan en componentes y utilidades existentes con CSS personalizado y más.</p>
-  
-</div>
-<!--  -->
-
-    <templete hidden>
-    <!--  -->
-    <div class="w3-container w3-padding-large w3-section  w3-light-grey">
-        <h2 id=""></h2>
-        <p></p>
-        <div class="w3-code htmlHigh notranslate green-border" >
-            &lt;   <
-            &quot; "
-            &lt;button onclick=&quot;myFunction()&quot;&gt;Click Me!&lt;/button&gt;<br><br>                   
-        </div>
+ <div class="w3-top w3-theme w3-hide-large">
+      <i class="fa fa-bars w3-button " onclick="w3_open()"></i>
     </div>
-    <!--  -->    
-    </templete>
 
-    
+    <!-- Principal -->
+    <iframe src="inicio/index.html" name="iframe_a" height="730px " width="100% " title="Tu zona de trabajo" style="border:none;" allowfullscreen=" " frameborder="0 " style="border:0; "  style="overflow:hidden"></iframe>
+    <!-- /Principal -->
 
-
-    <!-- Usar jQuery -->  
-        <div class=" grey-color w3-card-2 w3-round" style="padding:16px;">
-        <h2  id="usarjQuery">Para armar la web</h2>
-        <p>Para darle cuerpo al html sin tener que tener tanto codig usar jQuery</p>        
-        
-        
-    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="line-height: 19px;"><div><span style="color: #808080;">&lt;</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div><div>&nbsp; &nbsp; <span style="color: #dcdcaa;">$</span>(<span style="color: #9cdcfe;">document</span>).<span style="color: #dcdcaa;">ready</span>(<span style="color: #569cd6;">function</span>() {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #dcdcaa;">$</span>(<span style="color: #ce9178;">"#div4"</span>).<span style="color: #dcdcaa;">load</span>(<span style="color: #ce9178;">"div4.html"</span>);</div><div>&nbsp; &nbsp; });</div><div><span style="color: #808080;">&lt;/</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div></div></div></pre> 
-
-    <h2 id="paraA">a</h2>
-    <pre style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="line-height: 19px;"><div><span style="color: #d7ba7d;">a:link</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">#000</span>;</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>}</div><br><div><span style="color: #d7ba7d;">a:visited</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">#000</span>;</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>}</div><br><br><div><span style="color: #d7ba7d;">a:hover</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">inherit</span>; </div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>}</div><br><br><div><span style="color: #d7ba7d;">a:active</span> {</div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">color</span>: <span style="color: #ce9178;">inherit</span>; </div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">text-decoration</span>: <span style="color: #ce9178;">none</span>;</div><div>&nbsp; }</div></div></pre>
-
-
-            <div class="w3-code notranslate green-border">
-                <div class="htmlHigh">
-                    &lt;script src="jquery.min.js" type="text/javascript" charset="utf-8"> &lt;/script><br>
-                    &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'> &lt;/script>  <br><br>
-                    &lt;script><br>
-                     &nbsp;$(document).ready(function() {<br>
-                     &nbsp;$("#div4").load("div4.html"); <br>
-                     &nbsp;});<br>
-                    &lt;/script&gt;                  
-                </div>
-            </div>
-
-            <div class="w3-code htmlHigh notranslate green-border" >                               
-                &lt;div id="div4">  &lt;/div>
-            </div>
-
-            <div class="w3-code cssHigh notranslate green-border">
-                body {<br>
-                &nbsp; background-color: lightblue;<br>}<br><br>
-                h1 {<br>
-                &nbsp; color: white;<br>
-                &nbsp; text-align: center;<br>}<br><br>p {<br>&nbsp; font-family: verdana;<br>}
-            </div>         
-
-        </div>
-    <!-- Usar jQuery -->
-  
-
-    <!-- Automatic Slideshow -->
-    <div class="w3-container w3-padding-large w3-section  w3-light-grey">
-        <h2 id="AutomaticSlideshow">Automatic Slideshow</h2>
-        <p>Change image every 2 seconds:</p>
-
-        <style>
-            * {box-sizing: border-box;}
-            .mySlides {display: none;}
-            img {vertical-align: middle;}
-            
-            /* Slideshow container */
-            .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-            }
-            
-            /* Caption text */
-            .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            /*padding: 8px 12px;*/
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-            }
-            
-            
-            /* The dots/bullets/indicators */
-            .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-            }
-            
-            .active {
-            background-color: #717171;
-            }
-            
-            /* Fading animation */
-            .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-            }
-            
-            @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-            }
-            
-            /* On smaller screens, decrease text size */
-            @media only screen and (max-width: 300px) {
-            .text {font-size: 11px}
-            }
-
-            
-        </style>
-
-        <div class="slideshow-container ">
-
-        <div class="mySlides fade">
-        <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
-        <div class="text">Caption Text</div>
-        </div>
-
-        <div class="mySlides fade">
-        <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
-        </div>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        </div>
-    </div>
-    <script>
-    let slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-    </script>
-    <!-- Automatic Slideshow -->
-
-    <!-- incluide html -->
+    <!-- header --><templete hidden> <header class="w3-container w3-theme w3-padding-64 w3-center">
+    <h1 class="w3-xxxlarge w3-padding-16">xbr.pw</h1></header> </templete><!-- /header -->
+    <!-- section -->
     <div class="w3-container w3-padding-large w3-section  w3-light-grey">
         <h2 id="incluirHtml">Incluir html</h2>
         <p>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2</p>        
-    </div>    
-    <!-- incluide html -->
-    <h2 id="onclickpage">En vez de a ref usar onclick</h2>
-    <pre style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><span style="color: #9cdcfe;">onclick</span>=<span style="color: #ce9178;">"</span><span style="color: #9cdcfe;">document</span><span style="color: #ce9178;">.</span><span style="color: #9cdcfe;">location</span>=<span style="color: #ce9178;">'herramientas.html'</span><span style="color: #ce9178;">"</span></pre>
+        <div class="w3-code htmlHigh notranslate green-border" >Espacio en blanco: <b><code>&#38;nbsp;</code></b> <br>": <b><code>&#38;#34;</code> </b> <br>  </div>
+    </div><!-- /section -->
+    <!-- code--><templete><!--  --><!--/  --><div class="w3-container w3-padding-large w3-section  w3-light-grey"><div class="w3-code htmlHigh notranslate green-border" >&lt;button onclick=&quot;document.location='index.html'&quot;&gt;Click Me!&lt;/button&gt;</div></div></templete><!-- /code-->
 
-    <br>
-    <h2 id="efectoTyping">Efecto typing 1</h2>
-    <pre><div style="background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="color: rgb(212, 212, 212);">&lt;style&gt;</div><div style="color: rgb(212, 212, 212);"><span style="color: #c586c0;">@-webkit-keyframes</span> <span style="color: #9cdcfe;">typing</span> { from { <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">0</span>; } }</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #c586c0;">@-webkit-keyframes</span> <span style="color: #9cdcfe;">blink-caret</span> { 50% { <span style="color: #9cdcfe;">border-color</span>: <span style="color: #ce9178;">transparent</span>; } }</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; </div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #d7ba7d;">.typing</span> { </div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">border-right</span>: <span style="color: #b5cea8;">.1em</span> <span style="color: #ce9178;">solid</span> <span style="color: #ce9178;">black</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #ce9178;">auto</span>; </div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">35ch</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">white-space</span>: <span style="color: #ce9178;">nowrap</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">overflow</span>: <span style="color: #ce9178;">hidden</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">-webkit-animation</span>: typing <span style="color: #b5cea8;">3s</span> <span style="color: #dcdcaa;">steps</span>(<span style="color: #b5cea8;">35</span>, end),</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; blink-caret <span style="color: #b5cea8;">.5s</span> <span style="color: #ce9178;">step-end</span> <span style="color: #ce9178;">infinite</span> <span style="color: #ce9178;">alternate</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; }</div><div style="color: rgb(212, 212, 212);">&lt;/style&gt;</div><div style="color: rgb(212, 212, 212);">&nbsp;</div><div style=""><div style="line-height: 19px;"><span style="color: rgb(128, 128, 128);">&lt;</span><font color="#569cd6">div</font><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">class</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"typing"</span><span style="color: rgb(128, 128, 128);">&gt;</span><font color="#d4d4d4">Editor Sor Juana</font><span style="color: rgb(128, 128, 128);">&lt;/</span><font color="#569cd6">div</font><span style="color: rgb(128, 128, 128);">&gt;</span></div></div><div style="color: rgb(212, 212, 212);"><br></div><div style="color: rgb(212, 212, 212);">&lt;script&gt;</div><div style="color: rgb(212, 212, 212);"><div style="line-height: 19px;"><div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">saveTextAsFile</span>()</div><div>{ &nbsp; &nbsp; &nbsp;</div><div><span style="color: #6a9955;">// grab the content of the form field and place it into a variable</span></div><div>&nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">textToWrite</span> = <span style="color: #9cdcfe;">document</span>.<span style="color: #dcdcaa;">getElementById</span>(<span style="color: #ce9178;">"inputTextToSave"</span>).<span style="color: #9cdcfe;">value</span>;</div><div>&nbsp; &nbsp; <span style="color: #6a9955;">//var textToWrite2 = document.getElementById("inputTextToSave2").value;</span></div><div><span style="color: #6a9955;">// &nbsp;create a new Blob (html5 magic) that conatins the data from your form feild</span></div><div>&nbsp; &nbsp; <span style="color: #6a9955;">//var textFileAsBlob = new Blob([textToWrite," ",textToWrite2], {type:'text/plain'});</span></div><div>&nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">textFileAsBlob</span> = <span style="color: #569cd6;">new</span> <span style="color: #4ec9b0;">Blob</span>([<span style="color: #9cdcfe;">textToWrite</span>,<span style="color: #ce9178;">" "</span>], {<span style="color: #9cdcfe;">type</span><span style="color: #9cdcfe;">:</span><span style="color: #ce9178;">'text/plain'</span>});</div><div><span style="color: #6a9955;">// Specify the name of the file to be saved</span></div><div>&nbsp; &nbsp;<span style="color: #6a9955;">// var fileNameToSaveAs = "myNewFile.txt";</span></div><div>&nbsp; &nbsp; </div><div><span style="color: #6a9955;">// Optionally allow the user to choose a file name by providing </span></div><div><span style="color: #6a9955;">// an imput field in the HTML and using the collected data here</span></div><div>&nbsp;<span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">fileNameToSaveAs</span> = <span style="color: #9cdcfe;">txtFileName</span>.<span style="color: #9cdcfe;">value</span>;</div><br><div><span style="color: #6a9955;">// create a link for our script to 'click'</span></div><div>&nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">downloadLink</span> = <span style="color: #9cdcfe;">document</span>.<span style="color: #dcdcaa;">createElement</span>(<span style="color: #ce9178;">"a"</span>);</div><div><span style="color: #6a9955;">// &nbsp;supply the name of the file (from the var above).</span></div><div><span style="color: #6a9955;">// you could create the name here but using a var</span></div><div><span style="color: #6a9955;">// allows more flexability later.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #9cdcfe;">download</span> = <span style="color: #9cdcfe;">fileNameToSaveAs</span>;</div><div><span style="color: #6a9955;">// provide text for the link. This will be hidden so you</span></div><div><span style="color: #6a9955;">// can actually use anything you want.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #9cdcfe;">innerHTML</span> = <span style="color: #ce9178;">"My Hidden Link"</span>;</div><div>&nbsp; &nbsp; </div><div><span style="color: #6a9955;">// allow our code to work in webkit &amp; Gecko based browsers</span></div><div><span style="color: #6a9955;">// without the need for a if / else block.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">URL</span> = <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">URL</span> || <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">webkitURL</span>;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div><div><span style="color: #6a9955;">// Create the link Object.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #9cdcfe;">href</span> = <span style="color: #9cdcfe;">window</span>.<span style="color: #4ec9b0;">URL</span>.<span style="color: #dcdcaa;">createObjectURL</span>(<span style="color: #9cdcfe;">textFileAsBlob</span>);</div><div><span style="color: #6a9955;">// when link is clicked call a function to remove it from</span></div><div><span style="color: #6a9955;">// the DOM in case user wants to save a second file.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #dcdcaa;">onclick</span> = <span style="color: #dcdcaa;">destroyClickedElement</span>;</div><div><span style="color: #6a9955;">// make sure the link is hidden.</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #4fc1ff;">style</span>.<span style="color: #9cdcfe;">display</span> = <span style="color: #ce9178;">"none"</span>;</div><div><span style="color: #6a9955;">// add the link to the DOM</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">document</span>.<span style="color: #9cdcfe;">body</span>.<span style="color: #dcdcaa;">appendChild</span>(<span style="color: #9cdcfe;">downloadLink</span>);</div><div>&nbsp; &nbsp; </div><div><span style="color: #6a9955;">// click the new link</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">downloadLink</span>.<span style="color: #dcdcaa;">click</span>();</div><div>}</div><br><div><span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">destroyClickedElement</span>(<span style="color: #9cdcfe;">event</span>)</div><div>{</div><div><span style="color: #6a9955;">// remove the link from the DOM</span></div><div>&nbsp; &nbsp; <span style="color: #9cdcfe;">document</span>.<span style="color: #9cdcfe;">body</span>.<span style="color: #dcdcaa;">removeChild</span>(<span style="color: #9cdcfe;">event</span>.<span style="color: #9cdcfe;">target</span>);</div><div>}</div><div>&lt;/script&gt;<br></div></div></div></div></pre>
+    <!-- code--><templete><div class="w3-container w3-padding-large w3-section  w3-light-grey"><div class="w3-code htmlHigh notranslate green-border" >&lt;!--   --> <br> &lt;!--/  --> <br>   </div></div></templete><!-- /code-->
+
+    
+     
+    <!-- centro centro --> <style>
+        .center-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+        }
+        </style>
+        <div class="center-center">
+         <button onclick="onlinenow()">Try it</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+        function onlinenow() {
+          var x = "Is the browser online? " + navigator.onLine;
+          document.getElementById("demo").innerHTML = x;
+        }
+        </script>
+        
+        </div>
+        
+        <div style="display: flex;justify-content: center;align-items: center;height: 200px">
+          <p>I am vertically and horizontally centered.</p>
+        </div><!-- /centro centro-->
+        
+
+<footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
+          <a href="https://twitter.com/luisangelmaciel" target="_blank" title="@_luisangelmaciel"><i class="fa fa-twitter fa-lg fa-fw"></i></a>
+    
+        <small>Built by <a href="https://luisangelmaciel.github.io/" target="_blank">luisAngel.maciel<b>!</b></a></small> <br><br> Contact me on the different platforms and social networks <br>
+
+        <p><b>xbr.pw</b> | Disclaimer | About  |  Privacy  |  Policy  |  Contact  |   History  |   Sitemap  |   Where am I right now? | Blog | Thank you for visiting! | 
+            Styleguide:Brand Materials & Logos <!-- web/style-guide/ https://www.11ty.dev/styleguide/--> | Boyificar un problema <!-- https://es.piliapp.com/emoji/list/heart/#:~:text=Notificar%20un%20problema -->
+        | PDF |  Obtener una copia | Tour <!-- https://stackoverflow.com/tour  --> </p>
+
+        <p>XIIBER IS SUPPORTED BY… <b>xbr.pw</b> Service for making ajax loaders / loading gifs / preloaders and animated icons, live background, animated text in GIF / SVG / APNG / CSS</p>
+
+        <p> Of course, this site is made with AMP!</p>
+
+        <p> A menos que se indique lo contrario, el contenido de esta página tiene una licencia Creative Commons Attribution-ShareAlike 3.0 License
+            <!-- https://creativecommons.org/licenses/by-sa/3.0/ --><p> 
+        
+         ❤🧡💛💚💙💜🤎🖤🤍💔❣💕💞💓💗💖💘💝💟❤️‍🔥❤️‍🩹🤟🫀👫💑💏💋♥😍😘😻🏩💒💌დღ♡❣❤❥❦❧♥          
+         <i class="fa fa-share-alt"></i>
+         <i class="fa fa-upload"></i>
+         <i class="fa fa-bug"></i>
+         <i class="fa fa-file"></i>    
+        
+</footer>
+</div><!-- /div principal-->
+
+
   
-    <br>
-    <h2 id="ConAmorTypiwriter">Efecto typing 2</h2>
-    <pre><div style="background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="color: rgb(212, 212, 212);"><span style="color: #808080;"><br></span></div><div style="color: rgb(212, 212, 212);"><span style="color: #808080;"><br></span></div><div style="color: rgb(212, 212, 212);"><span style="color: #808080;">  &lt;</span><span style="color: #f44747;">center</span><span style="color: #808080;">&gt;</span></div><div style=""><font color="#d4d4d4">   </font><span style="color: rgb(128, 128, 128);">&lt;</span><span style="color: rgb(86, 156, 214);">div</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">onclick</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"</span><span style="color: rgb(220, 220, 170);">typeWriter</span><span style="color: rgb(206, 145, 120);">() </span><span style="color: rgb(206, 145, 120);">"</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">style</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"</span><span style="color: rgb(206, 145, 120);"> &nbsp;color: #323b3f;</span><span style="color: rgb(206, 145, 120);">"</span><span style="color: rgb(128, 128, 128);">&gt;</span></div><div style="color: rgb(212, 212, 212);">     Hecho con<span style="color: rgb(128, 128, 128);">&lt;</span><span style="color: rgb(86, 156, 214);">span</span> <span style="color: rgb(156, 220, 254);">class</span>=<span style="color: rgb(206, 145, 120);">"heartbeat"</span><span style="color: rgb(128, 128, 128);">&gt;</span>❤<span style="color: rgb(128, 128, 128);">&lt;/</span><span style="color: rgb(86, 156, 214);">span</span><span style="color: rgb(128, 128, 128);">&gt;</span> y mucho código</div><div style=""><font color="#d4d4d4">     </font><span style="color: rgb(128, 128, 128);">&lt;</span><span style="color: rgb(86, 156, 214);">a</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">id</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"powered "</span><font color="#d4d4d4"> </font><span style="color: rgb(156, 220, 254);">href</span><font color="#d4d4d4">=</font><span style="color: rgb(206, 145, 120);">"https://luisangelmaciel.github.io/ "</span><font color="#d4d4d4"> </font><span style="color: rgb(128, 128, 128);">&gt;</span><span style="color: rgb(128, 128, 128);">&lt;/</span><span style="color: rgb(86, 156, 214);">a</span><span style="color: rgb(128, 128, 128);">&gt;</span><font color="#d4d4d4"> </font></div><div style=""><font color="#d4d4d4">   </font><span style="color: rgb(128, 128, 128);">&lt;/</span><span style="color: rgb(86, 156, 214);">div</span><span style="color: rgb(128, 128, 128);">&gt;</span></div><div style=""><span style="color: rgb(128, 128, 128);">  &lt;/</span><span style="color: rgb(244, 71, 71);">center</span><span style="color: rgb(128, 128, 128);">&gt;</span></div><font color="#d4d4d4"><br></font><div style="color: rgb(212, 212, 212);">&nbsp; <span style="color: #808080;">&lt;</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">i</span> = <span style="color: #b5cea8;">0</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">txt</span> = <span style="color: #ce9178;">'designer luisangel.maciel'</span>;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">var</span> <span style="color: #9cdcfe;">speed</span> = <span style="color: #b5cea8;">65</span>;</div><font color="#d4d4d4"><br></font><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">function</span> <span style="color: #dcdcaa;">typeWriter</span>() {</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #c586c0;">if</span> (<span style="color: #9cdcfe;">i</span> &lt; <span style="color: #9cdcfe;">txt</span>.<span style="color: #9cdcfe;">length</span>) {</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">document</span>.<span style="color: #dcdcaa;">getElementById</span>(<span style="color: #ce9178;">"powered "</span>).<span style="color: #9cdcfe;">innerHTML</span> += <span style="color: #9cdcfe;">txt</span>.<span style="color: #dcdcaa;">charAt</span>(<span style="color: #9cdcfe;">i</span>);</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">i</span>++;</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #dcdcaa;">setTimeout</span>(<span style="color: #dcdcaa;">typeWriter</span>, <span style="color: #9cdcfe;">speed</span>);</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</div><div style="color: rgb(212, 212, 212);">&nbsp; &nbsp; &nbsp; }</div><div style="color: rgb(212, 212, 212);">&nbsp; <span style="color: #808080;">&lt;/</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div><div style="color: rgb(212, 212, 212);"><span style="color: #808080;"><br></span></div><font color="#d4d4d4"><br></font></div></pre>
-
-    <br>
-    <h2 id="firmaLamp">Firma lamp!</h2>
-    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div><span style="color: #6a9955;"><br></span></div><div><span style="color: #6a9955;">  &lt;!-- ⊙⩌⨀</span></div><div><span style="color: #6a9955;">  &nbsp; &nbsp; 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack &nbsp; &nbsp;</span></div><div><span style="color: #6a9955;">&nbsp; &nbsp; &nbsp; ¿Quién hizo todo esto? </span></div><div><span style="color: #6a9955;">&nbsp; &nbsp; &nbsp; http://twitter.com/luisangelmaciel </span></div><div><span style="color: rgb(106, 153, 85);">  --&gt;</span></div><div><span style="color: #6a9955;"><br></span></div></div></pre>
-    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div><span style="color: #808080;"><br></span></div><div><span style="color: #808080;">     &lt;</span><span style="color: #569cd6;">style</span> <span style="color: #9cdcfe;">media</span>=<span style="color: #ce9178;">"screen"</span><span style="color: #808080;">&gt;</span> &nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ <span style="color: #d7ba7d;">code</span> &amp; travel &lt;/<span style="color: #d7ba7d;">style</span>&gt; </div><div><br></div></div></pre>
-    <style media="screen">  
-        ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮
-        ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
-        ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃
-        ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃
-        ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮
-        ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯
-        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
-        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ code & travel </style> 
-
-    <br>
-    <h2 id="googleSheetMaster">  html-form-to-google-sheet-master</h2>
-
-    <br>
-    <h2 id="tamanosResponsive">Tamaños responsivos</h2>
-    <p>Ver el style de abajo</p>
-    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div>&nbsp;<span style="color: rgb(197, 134, 192);">@media</span> <span style="color: rgb(206, 145, 120);">screen</span> and (<span style="color: rgb(156, 220, 254);">min-width</span>: <span style="color: rgb(181, 206, 168);">530px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">75%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">600px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>:<span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">65%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">730px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>:<span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">40%</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div><div>&nbsp; <span style="color: #c586c0;">@media</span> <span style="color: #ce9178;">screen</span> and (<span style="color: #9cdcfe;">min-width</span>: <span style="color: #b5cea8;">1000px</span>){</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">340px</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; &nbsp; <span style="color: #d7ba7d;">.card.xl</span>{</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">width</span>: <span style="color: #b5cea8;">600px</span>;</div><div>&nbsp; &nbsp; &nbsp; <span style="color: #9cdcfe;">max-width</span>: <span style="color: #b5cea8;">600px</span>;</div><div>&nbsp; &nbsp; }</div><div>&nbsp; }</div></div></pre>
-        <style>
-            /* On smaller screens, decrease text size */
-                    @media only screen and (max-width: 300px) {
-                    .text {font-size: 11px}
-                    }
-
-                    @media (min-width: 768px) {
-        .container {
-            width: 750px;
-        }
-        }
-        @media (min-width: 992px) {
-        .container {
-            width: 970px;
-        }
-        }
-        @media (min-width: 1200px) {
-        .container {
-            width: 1170px;
-        }
-        }
-
-        @-ms-viewport {
-        width: device-width;
-        }
-        </style>
-
-        <textarea>.col- (extra small devices - screen width less than 576px)
-            .col-sm- (small devices - screen width equal to or greater than 576px)
-            .col-md- (medium devices - screen width equal to or greater than 768px)
-            .col-lg- (large devices - screen width equal to or greater than 992px)
-            .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
-            .col-xxl- (xxlarge devices - screen width equal to or greater than 1400px)</textarea>
-    <br>
-    <h2 id="bgimgUrl">background image url</h2>
-    <pre> &lt;img style="background-image: url(./img/600x400-1.jpg)" alt=""&gt;&lt;/img&gt;<br></pre>
-
-    <br>
-    <h2 id="">Linea degradada</h2>
-    <div style="  display: block;
-    margin: auto;
-    width: 100%;
-    max-width: 430px;
-    height: 170px;
-    padding: 26.66667px 0;
-    text-align: center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
-    background-size: 100% 1px;
-    background-repeat: no-repeat;"></div>
-    
-   
-    
-    <h1>
-        <span style="  text-shadow: 2px 2px;">Text-shadow effect!</span><br><br>
-        
-        <span style=" text-shadow: 2px 2px red;">Text-shadow effect!</span>
-        
-        
-        <span style="  text-shadow: 2px 2px 5px green;">Text-shadow effect!</span><br><br>
-        
-        
-        <span style="  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;">Text-shadow with red and blue neon glow!</span><br><br>
-        
-        <span style="  color: white;
-        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Another text shadow effect</span>
-        <br>  <br>
-        
-        <span style="  color: coral;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Text shadow with border</span><br>  <br>
-        
-        <span style="  text-shadow: 0 0 3px #FF0000;">Text shadow with red neon glow</span><br>  <br>
-        
-        <span style="  color: white;
-        text-shadow: 2px 2px 4px #000000;">Text shadow on white text!</span><br>  <br>
-        
-        </h1>
-    
-   
-<a href="www.xbr.pw/00z/desing/ver-como-se-ve-estilo-centrado/index.html">1</a>
-<a href="www.xbr.pw/00z/desing/footer-new/index.html">3</a>
-<a href="www.xbr.pw/00z/0dashboard/index.html">4</a>
-<a href="www.xbr.pw/00z/author/texto-blanco-negro/index.html">5</a>
-<a href="www.xbr.pw/00z/dauthor/buuble/index.html">6</a>
-<a href="www.xbr.pw/00z/index/index.html">7</a>
-<a href="www.xbr.pw/00z/0para/magic-card--como-criccolo/index.html">8</a>
-<a href="www.xbr.pw/00z/0para/muro-cricoro/index.html">9</a>
-<a href="www.xbr.pw/00z/login-client/index.html">99</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/00-twitter-clone/index.html">11</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/00-5paginas-dinamicas/index.html">12</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/como-se-ve/index.html">13</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/efecto-tipo-reflejo-lampara/index.html">14</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/el-bg-rojo-azul-negro-wow/index.html">15</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/footer-new/index.html">16</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/social-cards-with-tailwind-css/index.html">17</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/crear-perfil-completo-paso-a-paso.html">18</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/img-4-2-1-colum.html">99</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/multicolores.html">20</a>
-<a href="www.xbr.pw/00z/acondicionar/desing/prueba-seccion-de-fotos.htmlv">20</a>
-<a href="www.xbr.pw/00z/00assets/css-GalleryResponsive-ImageModal">22</a>
-<a href="www.xbr.pw/00z/00assets/colum-gallery-big.html">23</a>
-<a href="www.xbr.pw/00z/00assets/img-4-2-1-colum.html">24</a>
-<a href="www.xbr.pw/00z/00assets/templete-oneone.html"></a>
-<a href="www.xbr.pw/00z/00assets/templete-twotwo/index.html">25</a>
-<a href="www.xbr.pw/00z/01-slider.index.html">6</a>
-<a href="www.xbr.pw/00z/acondicionar/00new-in/speak/index.html">7</a>
-<a href="www.xbr.pw/00z/apuntes/index.html">7</a>
-<a href="www.xbr.pw/fusion.index.html">7</a>
-<a href="www.xbr.pw/00z/que-pasa/index.html">7</a>
-<a href="www.xbr.pw/00z/fotos-agrupadas-dull-view.html">7</a>
-<a href="www.xbr.pw/00z/fondo-bl-buuble/index.html">7</a>
-<a href="www.xbr.pw/00z/carrusel/index.html">7</a>
-<a href="www.xbr.pw/00z/hablale/index.html">77</a>
-<a href="www.xbr.pw/00z/mobile.html">7</a>
-<a href="www.xbr.pw/dragonball/index.html">7</a>
-<a href="www.xbr.pw/eevee-traductor">evee</a>
-
-    <br>
-    <h2 id="datanosnippet">data-nosnippet</h2>
-    <span data-nosnippet></span>
-    <br>
-    <h2 id=""> Síganos</h2>   
-    Suscríbase a nuestro boletín y reciba correos electrónicos extremadamente raros de nosotros. En el lado positivo, se le notificará cada vez que se escriba una nueva publicación en el blog.
-    https://allurewebsolutions.com/ 
-    <br>
-    <h2 id="">Informar de un error</h2>
-    https://codelabs.developers.google.com/codelabs/sheets-api/?hl=es#0
-    bug_report 
-    <br>
-    <h2 id="">ul sin estilo</h2>
-    <style>
-        ul.demo {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-        }
-        </style>
-        <ul class="demo">
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Coca Cola</li>
-        </ul>
-
-    <br>
-    <h2 id=""></h2>
-
-    
-    <div style="position:relative;width:100%;overflow:hidden;padding-top:56.25%"><iframe style="position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%;border:none" allowfullscreen src=""></iframe></div>
-    <div style="width: 93%; overflow-x: visible;"> <div style="height: 50%; display:flex;"> <div style=" height: 100%; overflow-y: scroll; flex: 0 0 60%; padding-right: 15px; padding-left: 15px; ">Luis </div> <div style=" height: 100%; overflow-y: scroll; flex: 0 0 40%; padding-right: 15px; padding-left: 15px; ">50% </div> </div> </div>
-    
-
-
-    <footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
-    <p><nav>
-    <a href="" target="_blank">FORUM</a> |
-    <a href="" target="_top">ABOUT</a>
-    </nav></p>
-    </footer>
-
-
-    <script>
+  
+  <script>
     function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
@@ -621,31 +288,13 @@ a:active {
     document.getElementById("myOverlay").style.display = "none";
     }
 
-    openNav("nav01");
-    function openNav(id) {
-    document.getElementById("nav01").style.display = "none";
-    document.getElementById("nav02").style.display = "none";
-    document.getElementById("nav03").style.display = "none";
-    document.getElementById("nav04").style.display = "none";
-    document.getElementById("nav05").style.display = "none";
-    document.getElementById("nav06").style.display = "none";
-    document.getElementById("nav07").style.display = "none";
-    document.getElementById("nav08").style.display = "none";
-    document.getElementById("nav09").style.display = "none";
-    document.getElementById(id).style.display = "block";
-    }
-    </script>
-
-    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
-
-    <script>
-        w3CodeColor();
-    </script>
-
-    <script>
-        includeHTML();
-    </script>
-    
-
+    openNav("nav01");function openNav(id) {document.getElementById("nav01").style.display = "none";    document.getElementById("nav02").style.display = "none";    document.getElementById("nav03").style.display = "none";    document.getElementById("nav04").style.display = "none";    document.getElementById("nav05").style.display = "none";    document.getElementById("nav06").style.display = "none";    document.getElementById("nav07").style.display = "none";document.getElementById("nav08").style.display = "none";    document.getElementById("nav09").style.display = "none";
+    document.getElementById("nav10").style.display = "none";
+    document.getElementById(id).style.display = "block";}</script>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script><script>w3CodeColor();</script>
+    <div incluye-html=""></div> <script>includeHTML();</script> 
+    <!-- Para formulario de wp <script src='js/mrofppastaw.js'></script> -->
+     
     </body>
     </html> 
+

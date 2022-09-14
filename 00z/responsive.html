@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.col-container-view {
+  display: table;
+  width: 100%;
+}
+.col-view {
+  display: table-cell;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  .col-view { 
+    display: block;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="col-container-view">
+  <div class="col-view" style="background:orange">
+   <iframe src="https://www.xbr.pw/secu/00-my-dashboard/celular.html" height="300" width="300" title="Iframe Example"></iframe>
+  </div>
+
+  <div class="col-view" style="background:yellow">
+   <iframe src="https://www.xbr.pw/secu/00-my-dashboard/laptop.html" height="300" width="300" title="Iframe Example"></iframe>
+  </div>
+
+  <div class="col-view" style="background:orange">
+    <iframe src="https://www.xbr.pw/secu/00-my-dashboard/tablet.html" height="300" width="300" title="Iframe Example"></iframe>
+  </div>
+</div>
+
+</body>
+</html>

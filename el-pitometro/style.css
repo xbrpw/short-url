@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap");
+:root {
+  --color-bg: #d8e1fe;
+  --duration: .5s;
+  --easing: cubic-bezier(.2, 0, .8, 1);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vergometro {
+  line-height: 1;
+  font-size: 10vw;
+  font-weight: bold;
+  font-family: "Heebo", sans-serif;
+  display: flex;
+  align-items: flex-end;
+}
+#vergometro span {
+  display: inline-block;
+}
+
+.g {
+  width: 50vw;
+  height: 0.8em;
+  top: -0.185em;
+}
+.g .char {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.g .char-inner {
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 0.54em;
+}
+.g .char-inner > .markings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.g .char-inner > .markings:after {
+  -webkit-animation: move 3s ease infinite alternate;
+          animation: move 3s ease infinite alternate;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background-image: linear-gradient(to right, #FFF 1px, transparent 1px), linear-gradient(to right, #FFF 1px, transparent 1px);
+  background-size: 100px 60%, 10px 30%;
+  background-repeat: repeat-x;
+  background-position: bottom left;
+}
+@-webkit-keyframes move {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+@keyframes move {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+.g .char-inner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 0.1em;
+  background: black;
+  width: 100%;
+  height: 30%;
+}
+
+#resizer[data-state=small] .g {
+  width: 0.2em;
+}
+
+.res, .zer,
+.g, .char, .char-inner {
+  transition: transform var(--duration) var(--easing);
+}
+.res[data-flipping], .zer[data-flipping],
+.g[data-flipping], .char[data-flipping], .char-inner[data-flipping] {
+  transition: none;
+}
+
+.res[data-flipping], .zer[data-flipping] {
+  transform: translateX(calc(-1px * var(--dx,0)));
+}
+
+.g[data-flipping] {
+  transition: none;
+  transform: translateX(calc(-1px * var(--dx,0)));
+}
+
+.char {
+  transform: translateX(calc(-100% + var(--w,0) * 1px));
+}
+
+.char-inner {
+  transform: translateX(calc(100% - var(--w,0) * 1px));
+}

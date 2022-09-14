@@ -1,0 +1,13 @@
+ <h2 id="">Sin estilo en listas</h2>
+    <style>
+        ul.demo {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        </style>
+        <ul class="demo">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Coca Cola</li>
+        </ul>

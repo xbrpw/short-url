@@ -1,0 +1,25 @@
+<h2 id="firmaLamp">Firma lamp!</h2>
+    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div><span style="color: #6a9955;"><br></span></div><div><span style="color: #6a9955;">  &lt;!-- ⊙⩌⨀</span></div><div><span style="color: #6a9955;">  &nbsp; &nbsp; 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack &nbsp; &nbsp;</span></div><div><span style="color: #6a9955;">&nbsp; &nbsp; &nbsp; ¿Quién hizo todo esto? </span></div><div><span style="color: #6a9955;">&nbsp; &nbsp; &nbsp; http://twitter.com/luisangelmaciel </span></div><div><span style="color: rgb(106, 153, 85);">  --&gt;</span></div><div><span style="color: #6a9955;"><br></span></div></div></pre>
+    <pre><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div><span style="color: #808080;"><br></span></div><div><span style="color: #808080;">     &lt;</span><span style="color: #569cd6;">style</span> <span style="color: #9cdcfe;">media</span>=<span style="color: #ce9178;">"screen"</span><span style="color: #808080;">&gt;</span> &nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃</div><div>&nbsp; &nbsp; &nbsp; &nbsp; ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ <span style="color: #d7ba7d;">code</span> &amp; travel &lt;/<span style="color: #d7ba7d;">style</span>&gt; </div><div><br></div></div></pre>
+    <style media="screen">  
+        ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮
+        ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
+        ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃
+        ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃
+        ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮
+        ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯
+        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+        ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ code & travel </style> 
+
+   <br>
+    
+    <br>
+    <h2 id=""> Síganos</h2>   
+    Suscríbase a nuestro boletín y reciba correos electrónicos extremadamente raros de nosotros. En el lado positivo, se le notificará cada vez que se escriba una nueva publicación en el blog.
+    https://allurewebsolutions.com/ 
+    <br>
+    <h2 id="">Informar de un error</h2>
+    https://codelabs.developers.google.com/codelabs/sheets-api/?hl=es#0
+    bug_report 
+    <br>
+

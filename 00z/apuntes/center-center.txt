@@ -1,0 +1,15 @@
+<style>
+.center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+</style>
+<div class="center-center">
+  <p>I am vertically and horizontally centered.</p>
+</div>
+
+<div style="display: flex;justify-content: center;align-items: center;height: 200px">
+  <p>I am vertically and horizontally centered.</p>
+</div>

@@ -1,0 +1,137 @@
+:root {
+  --orange: #1c4595; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--orange);
+  overflow: hidden;
+}
+
+button {
+  position: relative;
+  border: none;
+  width: 180px;
+  height: 60px;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014), 0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.025), 0 22.3px 17.9px rgba(0, 0, 0, 0.03), 0 41.8px 33.4px rgba(0, 0, 0, 0.036), 0 100px 80px rgba(0, 0, 0, 0.05);
+}
+button .inner,
+button .send-text,
+button .sending-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+button .inner {
+  --size: 28px;
+  left: 18%;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--orange);
+  overflow: hidden;
+}
+button .inner .icon-container {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+}
+button .inner .icon-container .icon {
+  --icon-size: 14px;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+button .inner .icon-container .icon svg {
+  fill: white;
+  width: 100%;
+  height: 100%;
+}
+button .inner .icon-container .icon.check {
+  --icon-size: 28px;
+  transform: translate(-25%, -25%);
+}
+button .inner .icon-container .icon.check svg {
+  stroke: #fff;
+  stroke-width: 5px;
+}
+button .inner .icon-container .icon.check .checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+}
+button .send-text,
+button .sending-text,
+button .delivered-text {
+  color: #000;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin-left: 14px;
+}
+button .send-text {
+  left: 52%;
+}
+button .sending-text {
+  color: white;
+  opacity: 1;
+  width: 100%;
+  letter-spacing: 2px;
+}
+button .sending-text .char {
+  position: relative;
+}
+button .sending-text.__1 {
+  left: -25%;
+}
+button .sending-text.__2 {
+  left: -95%;
+}
+button .delivered-text {
+  opacity: 0;
+}
+button::-moz-focus-inner {
+  outline: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+
+.support {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px;
+  display: flex;
+}
+.support a {
+  margin: 0 10px;
+  color: #333333;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: all 150ms ease;
+}
+.support a:hover {
+  transform: scale(1.1);
+}

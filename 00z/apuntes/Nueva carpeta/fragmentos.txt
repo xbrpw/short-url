@@ -1,0 +1,12 @@
+<!-- -->
+<div class="w3-container w3-padding-large w3-section w3-light-grey" >
+    <h1 class="w3-jumbo">Fragmentos</h1>
+    <p class="w3-xlarge">The Language for Programming Web Pages</p>
+    <p>¡Más muy pronto!</p>
+    <p> Se agregarán más ejemplos para ayudar a cualquiera a comenzar o familiarizarse más con el funcionamiento de Skeleton. El objetivo es la educación. Si está más interesado en ejemplos reales y en vivo de sitios de Skeleton, ¡pronto crearé una lista de "Construidos en Skeleton"!</p> </p>
+    <a href="" class="w3-button w3-theme w3-hover-white">LEARN JS</a>
+    <a href="" class="w3-button w3-theme w3-hover-white">JS REFERENCE</a>
+    <p>Patrones comunes para crear sitios y aplicaciones que se basan en componentes y utilidades existentes con CSS personalizado y más.</p>
+  
+</div>
+<!--  -->

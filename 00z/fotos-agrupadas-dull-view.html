@@ -308,6 +308,7 @@
         width: 235px;
         position: relative;
         display: block;
+        position: relative;top: 50%;left: 50%;transform: translate(-50%, -50%);"
       }
       .blocky {
         border: 1px solid #fff;
@@ -491,8 +492,6 @@
 
 
 
-    <!-- Sidebar/menu -->
-
     <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey " style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
 
         <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
@@ -505,7 +504,7 @@
 
 
 
-    <!-- Top menu on small screens -->
+ 
 
     <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
 
@@ -517,19 +516,20 @@
 
 
 
-    <!-- Overlay effect when opening sidebar on small screens -->
+
 
     <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
     <br><br><br><br><br>
-    <div class="w3-container w3-margin-left w3-margin-right w3-center">
-    <span class="blocky_hold"> 
-  <span class="blocky pos1"><img src="https://dummyimage.com/235x201/000/fff.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></span>
-  <span class="blocky pos2"><img src="https://dummyimage.com/235x201/000/fff.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"></span>
-  <span class="blocky pos3"><img src="https://dummyimage.com/235x201/000/fff.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"></span>  
-  <span class="blocky main"><img src="https://dummyimage.com/235x201/000/fff.jpg" style="width:100%" class="hover-shadow cursor"></span>
-</span></div>
-
+   
+    <div style=" position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+        <span class="blocky_hold"> 
+            <span class="blocky pos1"><img src="https://dummyimage.com/600x400/000/fff&text=4" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow responsive" cursor"></span>
+            <span class="blocky pos2"><img src="https://dummyimage.com/600x400/000/fff&text=3" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow responsive cursor"></span>
+            <span class="blocky pos3"><img src="https://dummyimage.com/600x400/000/fff&text=2" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow responsive cursor"></span>  
+            <span class="blocky main"><img src="https://dummyimage.com/600x400/000/fff&text=1" style="width:100%" class="hover-shadow responsive cursor"></span>
+        </span>
+    </div>
 
 
 
@@ -903,9 +903,15 @@
 
                 <div class="mySlides">
 
-                    <div class="numbertext">1 / 4</div>
+                    <img src="https://dummyimage.com/600x400/000/fff&text=4"  loading="lazy" class="responsive">
 
-                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%" loading="lazy">
+                </div>
+
+
+                <div class="mySlides">
+
+
+                    <img src="https://dummyimage.com/600x400/000/fff&text=3" class="responsive" loading="lazy">
 
                 </div>
 
@@ -913,9 +919,8 @@
 
                 <div class="mySlides">
 
-                    <div class="numbertext">2 / 4</div>
 
-                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=2" class="responsive" loading="lazy">
 
                 </div>
 
@@ -923,9 +928,7 @@
 
                 <div class="mySlides">
 
-                    <div class="numbertext">2 / 4</div>
-
-                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=1" class="responsive" loading="lazy">
 
                 </div>
 

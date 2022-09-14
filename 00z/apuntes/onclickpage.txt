@@ -1,0 +1,3 @@
+    <!-- incluide html -->
+    <h2 id="onclickpage">En vez de a ref usar onclick</h2>
+    <pre style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><span style="color: #9cdcfe;">onclick</span>=<span style="color: #ce9178;">"</span><span style="color: #9cdcfe;">document</span><span style="color: #ce9178;">.</span><span style="color: #9cdcfe;">location</span>=<span style="color: #ce9178;">'herramientas.html'</span><span style="color: #ce9178;">"</span></pre>

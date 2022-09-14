@@ -1,0 +1,40 @@
+Hi Luis Ángel
+Tell us a little about yourself so we can create a better experience for you.
+What is your current professional role?
+Designer
+Developer
+PM/Stakeholder
+Other
+Marketer
+
+
+One small thing.
+This will help us tailor your experience better.
+How do we best identify you ?
+Designer
+Developer
+Marketer
+PM/Stakeholder
+Other
+Let's Go
+
+vectornator.io
+
+Support Inkscape
+Inkscape needs your help. Every user who can contribute to Inkscape's development is investing in the future of the project. Donations allow us to do so much within the project to continue providing you with new releases of Inkscape with better features and bug fixes.
+
+https://lottiefiles.com/120050-lamp-theme-dragonball
+Los superpoderes de Gmail están a solo un paso.
+Haz clic abajo para habilitar Right Inbox para tu Gmail.
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_nRWJV08H2t.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
+
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_nRWJV08H2t.json"  background="transparent"  speed="0.5"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
+
+
+Conexión segura
+Al activar, aceptas nuestros Términos and Política de Privacidad
+No activar Right Inbox para esta dirección de correo electrónico

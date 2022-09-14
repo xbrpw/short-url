@@ -1,0 +1,24 @@
+ <h1>
+        <span style="  text-shadow: 2px 2px;">Text-shadow effect!</span><br><br>
+        
+        <span style=" text-shadow: 2px 2px red;">Text-shadow effect!</span>
+        
+        
+        <span style="  text-shadow: 2px 2px 5px green;">Text-shadow effect!</span><br><br>
+        
+        
+        <span style="  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;">Text-shadow with red and blue neon glow!</span><br><br>
+        
+        <span style="  color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;">Another text shadow effect</span>
+        <br>  <br>
+        
+        <span style="  color: coral;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Text shadow with border</span><br>  <br>
+        
+        <span style="  text-shadow: 0 0 3px #FF0000;">Text shadow with red neon glow</span><br>  <br>
+        
+        <span style="  color: white;
+        text-shadow: 2px 2px 4px #000000;">Text shadow on white text!</span><br>  <br>
+        
+        </h1>

@@ -1,0 +1,2 @@
+<h2 id="bgimgUrl">background image url</h2>
+    <pre> &lt;img style="background-image: url(./img/600x400-1.jpg)" alt=""&gt;&lt;/img&gt;<br></pre>

@@ -43,9 +43,7 @@
 
 
 <style>
-.mySlides {display:none;} 
-
-a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;}
+.mySlides {display:none;} a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;}
 a:hover {color: #000000;text-decoration: none;font-weight: 500;}
 a:active {    color: #000000;    text-decoration: none;      font-weight: 500; }
 
@@ -369,30 +367,6 @@ a:active {    color: #000000;    text-decoration: none;      font-weight: 500; }
 </ul>    
 
   
-   <!--  <ul class="w3-ul ">
-      <li class="w3-bar" onclick="document.location='faq/index.html'">     
-        <img src="./img/sor-juana-ines-de-la-cruz-icon.svg" class="w3-bar-item w3-circle " style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Preguntas frecuentes</span><br>
-          <span class="">Noticifaciones</span>
-        </div>
-      </li>
-  
-      <li class="w3-bar" onclick="document.location='SorJuanaPedia/index.html'">
-        <img src="./img/sor-juana-ines-de-la-cruz-rojo.svg" class="w3-bar-item w3-circle " style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">SorJuanaPedia</span>
-        </div>
-      </li>
-  
-      <li class="w3-bar" onclick="document.location='game/multiplicaciones/index.html'">
-        <img src="./img/sor-juana-ines-de-la-cruz-verde.svg" class="w3-bar-item w3-circle" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Un minuto para multiplicar</span>
-        </div>
-      </li>       
-    </ul> -->
-  
 
 </div>
 
@@ -409,6 +383,118 @@ function w3_close() {
 </script>
 <!-- Sidebar -->
 
+    <!-- Automatic Slideshow -->
+    <div class="w3-container w3-padding-large w3-section  w3-light-grey">
+      <h2 id="AutomaticSlideshow">Automatic Slideshow</h2>
+      <p>Change image every 2 seconds:</p>
+
+      <style>
+          * {box-sizing: border-box;}
+          .mySlides {display: none;}
+          img {vertical-align: middle;}
+          
+          /* Slideshow container */
+          .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+          }
+          
+          /* Caption text */
+          .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          /*padding: 8px 12px;*/
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+          }
+          
+          
+          /* The dots/bullets/indicators */
+          .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+          }
+          
+          .active {
+          background-color: #717171;
+          }
+          
+          /* Fading animation */
+          .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+          }
+          
+          @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+          }
+          
+          /* On smaller screens, decrease text size */
+          @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+          }
+
+          
+      </style>
+
+      <div class="slideshow-container ">
+
+      <div class="mySlides fade">
+      <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+      <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+      <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+      </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      </div>
+  </div>
+  <script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+  <!-- Automatic Slideshow -->
+
 
 
 <!--Right-Align Links <b>☰</b>   -->
@@ -420,30 +506,7 @@ function w3_close() {
 </div>
 <!--Right-Align Links -->
 
-  <!-- <script type="application/ld+json">
-            {"@context":
-            "https://schema.org",
-            "@type":"NewsArticle",
-            "mainEntityOfPage":
-            {"@type":"WebPage",
-            "@id":"https://www.xbr.pw/NewsArticle.html"},
-            "headline":"Primera linea, igual a lo que llega siendo la descripción",
-            "image":{"@type":"ImageObject",
-            "url":"https://www.xbr.pw/NewsArticle.png",
-            "width":1200,"height":652},
-            "datePublished":"2022-06-03T19:37:58-05:00",
-            "dateModified":"2022-06-03T19:58:44-05:00",
-            "author":{"@type":"Person",
-            "name":"Alonso Rodriguez",
-            "url":"https://xbr.pw/author/luisangelmaciel"},
-            "publisher":{
-                "@type":"Organization",
-                "name":"xbr.pw",
-                "logo":{
-                "@type":"ImageObject",
-                "url":"https://www.xbr.pw/NewsArticle.png"}}}
-            </script>
-            -->
+  
             
         <!--  Slideshow -->
         <div class="w3-content w3-display-container">

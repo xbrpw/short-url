@@ -1,0 +1,36 @@
+
+    <!-- Usar jQuery -->  
+        <div class=" grey-color w3-card-2 w3-round" style="padding:16px;">
+        <h2  id="usarjQuery">Para armar la web</h2>
+        <p>Para darle cuerpo al html sin tener que tener tanto codig usar jQuery</p>        
+        
+        
+    <textarea><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><div style="line-height: 19px;"><div><span style="color: #808080;">&lt;</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div><div>&nbsp; &nbsp; <span style="color: #dcdcaa;">$</span>(<span style="color: #9cdcfe;">document</span>).<span style="color: #dcdcaa;">ready</span>(<span style="color: #569cd6;">function</span>() {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #dcdcaa;">$</span>(<span style="color: #ce9178;">"#div4"</span>).<span style="color: #dcdcaa;">load</span>(<span style="color: #ce9178;">"div4.html"</span>);</div><div>&nbsp; &nbsp; });</div><div><span style="color: #808080;">&lt;/</span><span style="color: #569cd6;">script</span><span style="color: #808080;">&gt;</span></div></div></div></textarea> 
+
+    
+            <div class="w3-code notranslate green-border">
+                <div class="htmlHigh">
+                    &lt;script src="jquery.min.js" type="text/javascript" charset="utf-8"> &lt;/script><br>
+                    &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'> &lt;/script>  <br><br>
+                    &lt;script><br>
+                     &nbsp;$(document).ready(function() {<br>
+                     &nbsp;$("#div4").load("div4.html"); <br>
+                     &nbsp;});<br>
+                    &lt;/script&gt;                  
+                </div>
+            </div>
+
+            <div class="w3-code htmlHigh notranslate green-border" >                               
+                &lt;div id="div4">  &lt;/div>
+            </div>
+
+            <div class="w3-code cssHigh notranslate green-border">
+                body {<br>
+                &nbsp; background-color: lightblue;<br>}<br><br>
+                h1 {<br>
+                &nbsp; color: white;<br>
+                &nbsp; text-align: center;<br>}<br><br>p {<br>&nbsp; font-family: verdana;<br>}
+            </div>         
+
+        </div>
+    <!-- Usar jQuery -->

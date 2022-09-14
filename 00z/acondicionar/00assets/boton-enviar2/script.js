@@ -1,4 +1,4 @@
-const button = document.querySelector('.button');
+const button = document.querySelector('.buttonenviar');
 const submit = document.querySelector('.submit');
 
 function toggleClass() {

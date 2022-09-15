@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+html, body {
+  background: #C5D4C4;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+nav {
+  align-items: center;
+  background: #090302;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  position: fixed;
+  width: 60px;
+}
+nav .top-nav {
+  text-align: center;
+}
+nav .top-nav i {
+  transform: scale(1.5);
+  padding-top: 30px;
+}
+nav .top-nav ul {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 0;
+  padding-left: 0;
+  transform: rotate(-90deg) translateX(-50%);
+}
+nav .top-nav ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+nav .top-nav ul li a {
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav .top-nav ul li a:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+nav .center-nav p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+}
+nav .bottom-nav ul {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 0;
+  padding-left: 0;
+  transform: rotate(-90deg) translateX(50%);
+}
+nav .bottom-nav ul li {
+  list-style: none;
+  padding-right: 20px;
+}
+nav .bottom-nav ul li a {
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav .bottom-nav ul li a:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.category {
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.lead {
+  font-family: "Playfair Display", serif;
+  opacity: 0.7;
+}
+
+.page-body {
+  margin-bottom: 20px;
+  height: 100vh;
+  margin-left: 60px;
+  width: calc(100vw - 60px);
+}
+
+.card-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 0.5rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  opacity: 1;
+}
+
+.desc {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    bottom: 0;
+    flex-direction: row;
+    height: 60px;
+    position: fixed;
+    align-items: end;
+    width: 100vw;
+    z-index: 1;
+  }
+  nav .top-nav {
+    flex-direction: row;
+    justify-content: center;
+    height: 60px;
+    width: 100vw;
+  }
+  nav .top-nav i {
+    display: none;
+  }
+  nav .top-nav ul {
+    align-items: center;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-around;
+    padding: 0 20px;
+    transform: none;
+  }
+  nav .center-nav {
+    display: none;
+  }
+  nav .bottom-nav {
+    display: none;
+  }
+
+  .page-body {
+    margin-left: 0;
+    width: 100vw;
+    height: 100%;
+    margin-bottom: 60px;
+  }
+  .page-body h1 {
+    font-size: 2rem;
+  }
+  .page-body .lead {
+    font-size: 1rem;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+}

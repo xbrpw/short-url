@@ -1,0 +1,468 @@
+
+//
+// Minimal header
+// Pensado en diseño responsive, interfaces minimalistas, limpias y sencillas
+//
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$color-dark:            #212529;
+$color-dark-hover:      #0a0c0e;
+$header-link-actibe-bg: hsla(0, 0%, 89%, 0.361);
+
+$search-input-bg:                 hsl(200, 6%, 90%);
+$search-input-focus-bg:           hsl(0, 0%, 100%);
+$search-input-focus-border-color: #000;
+$search-input-focus-box-shadow:   0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+
+// Grid breakpoints
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Rebot
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+$enable-body-flex: true;
+
+body{
+
+  @if( $enable-body-flex ){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    .footer{
+      margin-top: auto;
+    }
+  }
+  
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  color: $color-dark;
+  background-color: hsl(0, 0%, 100%);
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  &, &:link {
+    color: $color-dark;
+    text-decoration: none;
+    transition: .3s linear;
+  }
+  &:hover { color: $color-dark-hover }
+  &:focus { outline: none }
+}
+
+
+// Header
+
+.header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background-color: white;
+}
+
+
+// header logo
+
+.header-logo{
+  margin-right: auto;
+  
+  .header-brand{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &:hover{
+      text-decoration: none;
+    }
+
+    .brand-logo{
+      margin-right: 1rem;
+      border-radius: 50%;
+    }
+
+    .brand-text{
+      margin-right: 1rem;
+      display: none;
+      @media screen and (min-width: map-get($breakpoints, md)) {
+        display: inline-block;
+      }
+    }
+  }
+
+}
+
+
+// Hader nav
+
+.header-nav{
+  display: flex;
+  margin: 0 auto;
+
+  .nav{
+    
+    @media screen and (min-width: map-get($breakpoints, lg)){
+      display: flex;
+    }
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Hader nav items
+
+.header-nav{
+
+  .header-nav-item{
+    display: inline-block;
+  }
+
+  .header-nav-link{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .875rem;
+    padding: .7rem .85rem;
+    border-radius: 2rem;
+
+    &.active{
+      background: $header-link-actibe-bg;
+      color: $color-dark-hover;
+    }
+  }
+}
+
+// Header profile
+
+.header-profile{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: .4rem;
+
+  .hader-profile-links{
+    display: inline-flex;
+  }
+
+  .avatar{
+    border-radius: 50%;
+  }
+}
+
+
+// hader search
+
+.header-search-content{
+  margin: auto;
+}
+.header-search-input{
+  width: 100%;
+  height: 2.75rem;
+  border-radius: 50rem;
+  background: $search-input-bg;
+  border: 0;
+  box-sizing: border-box;
+  padding: .4rem 1.4rem .4rem 4.6rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  &:focus{
+    outline: 0;
+    background-color: $search-input-focus-bg;
+    box-shadow: $search-input-focus-box-shadow;
+    border-color: $search-input-focus-border-color;
+  }
+}
+
+// Search icon
+
+.search-form{
+  position: relative;
+  transition: all .3s ease-in-out;
+  margin-right: .5rem;
+
+  .header-search-input{
+    width: 100%;
+  }
+
+  .search-icon{
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+  }
+}
+
+// Back
+
+.header{
+  .header-back{
+    opacity: 0;
+    position: absolute;
+    left: 10px;
+    .icon-back{
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// Animation search
+
+.header.show{
+  .header-logo, .header-nav, .header-profile{
+    display: none;
+  }
+  .header-search-content{
+    width: 100%;
+    text-align: center;
+    @media screen and (min-width: map-get($breakpoints, md)){
+      width: 50%;
+    }
+    .search-form{
+      width: 80%;
+      margin-left: 10%;
+      @media screen and (min-width: map-get($breakpoints, md)){
+        width: 80%;
+      }
+    }
+  }
+
+  .header-back{
+    opacity: 100;
+    .icon-back{
+      transform: rotate(0deg);
+      transition: transform 0.5s cubic-bezier(0.42, 0, 0, 0.57);
+    }
+  }
+}
+
+// Search overlay
+
+.overlay-search {
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+  display: none;
+  &.show{
+    display: block;
+    opacity: 9;
+  }
+}
+
+// End header
+
+
+// Ripple 
+
+$ripple-color:         #495057;
+$ripple-border-radius: 50%;
+$ripple-default-size:  44;
+$ripple-transition:    all 0.3s ease-in-out;
+
+
+.ripple-container{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.ripple-effect {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 1px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.033);
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+  
+.ripple-effect.ripple-light {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ripple-effect.ripple-dark {
+  background-color: rgba(0, 0, 0, 0.103);
+}
+
+// Ripple-waves efect
+
+.ripple-grow{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ripple-grow{
+
+  .ripple-waves{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: $ripple-color;
+    outline: none;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &::before{
+      content: "";
+      border-radius: 50%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      position: absolute;
+      transform: scale(0);
+      transition:all 0.3s ease-in-out;
+      opacity: 0;
+    }
+  }
+}
+
+// Function
+@function rem($rem, $equivalent: 16) {
+  @return ($rem / $equivalent) * 1rem;
+}
+
+// Mixins
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin square($size){
+  width: $size;
+  height: $size;
+}
+
+.ripple-waves{
+  @include square(rem($ripple-default-size));
+  
+  .ripple-icon{
+    @include size(rem($ripple-default-size) / 1.80);
+  }
+}
+
+// Hover , active and focus
+
+.ripple-grow{
+  
+  &:hover{
+  
+    .ripple-waves{
+      &::before{
+        background-color: fade-out($color-dark, .2%);
+        opacity: .1;
+        animation: ripple-grow .3s linear;
+        transform: scale(1);
+      }
+    }
+    .ripple-icon{
+      color: $color-dark-hover;
+    }
+  }
+
+  &:focus, &:active, &.active{
+    .ripple-waves{
+      &::before{
+        background-color: fade-out($color-dark, .4%);
+        opacity: .2;
+        animation: ripple-grow .3s linear;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+
+// Keyframes
+
+@keyframes ripple-grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: .1;
+    transform: scale(1)
+  }
+}
+
+
+
+// Footer
+
+.footer{
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p{
+    margin: 0;
+    color: #777;
+  }
+  .yo-content{
+    margin-bottom: .3rem;
+    font-weight: 500;
+    color: #000;
+  }
+  .yo{
+    text-decoration: underline;
+  }
+  .footer-social{
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-social-link{
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem;
+    transition: .3s linear;
+    &:hover{
+      background-color: #ececec;
+    }
+  }
+}

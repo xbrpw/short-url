@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:900");
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  background: #111;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  height: 100vh;
+  width: 100vw;
+}
+.text {
+  font-size: 3rem;
+}
+@media (min-width: 768px) {
+  .text {
+    font-size: 8rem;
+  }
+}
+.text__wrap {
+  align-items: center;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.text--1 {
+  background: linear-gradient(45deg, #9a44d9, #3eca5f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.text--2 {
+  background: linear-gradient(45deg, #3eca5f, #9a44d9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.logo {
+  height: 44px;
+  width: 44px;
+  margin: 5px;
+}
+@media (min-width: 768px) {
+  .logo {
+    height: 72px;
+    width: 72px;
+  }
+}
+.mute {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+.mute--active:after {
+  content: '';
+  height: 100%;
+  width: 50%;
+  background: #111;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+}
+.mute__icon {
+  height: 44px;
+  width: 44px;
+}
+.replay {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 100%;
+}
+.replay__icon {
+  height: 44px;
+  width: 44px;
+}
+.replay--hidden {
+  display: none;
+}

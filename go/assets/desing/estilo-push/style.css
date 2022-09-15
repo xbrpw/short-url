@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 3.6vh;
+  font-weight: normal;
+}
+
+input[type=radio] {
+  position: fixed;
+  top: -10000px;
+  left: -10000px;
+}
+
+h1, h2 {
+  font-weight: 200;
+}
+
+header,
+section,
+section:before {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+header,
+section,
+section:before,
+nav,
+h1 {
+  position: absolute;
+}
+
+h1,
+nav {
+  top: 0;
+  z-index: 100;
+  line-height: 18vh;
+}
+
+nav {
+  right: 2vw;
+}
+
+h1 {
+  display: inline-block;
+  padding: 0 1vh;
+  left: 2vw;
+  font-size: 240%;
+}
+
+h2 {
+  font-size: 8vh;
+}
+
+label {
+  display: inline-block;
+  padding: 0 1vh;
+  position: relative;
+  font-size: 80%;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+label:hover {
+  color: white;
+}
+label::before, label::after {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  font-weight: bold;
+  text-align: center;
+  transition: 350ms 350ms;
+}
+label::before {
+  content: ",,,^._.^,,,";
+  top: -6vh;
+}
+label::after {
+  content: "''' U '''";
+  top: -2vh;
+}
+
+p,
+label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+img {
+  width: auto;
+  height: 36vh;
+  margin-bottom: -5vh;
+}
+
+section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+section:nth-of-type(1) {
+  background-color: MediumVioletRed;
+}
+section:nth-of-type(2) {
+  background-color: GoldenRod;
+}
+section:nth-of-type(3) {
+  background-color: DodgerBlue;
+}
+section:before {
+  content: "";
+  background-image: linear-gradient(160deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 100%);
+  background-size: 100vw 100vh;
+}
+
+section {
+  z-index: 10;
+  transform: translateX(-100vw);
+  transition: transform 0ms 3000ms;
+}
+section:before {
+  transform-origin: left bottom;
+  transform: translateY(100vh) rotate(30deg);
+  transition: 350ms 0ms cubic-bezier(0.25, 0, 0.75, 1);
+}
+section > * {
+  transform: translateY(-50vh);
+  opacity: 0;
+  text-align: center;
+  transition: 1s 0s;
+}
+section > *:nth-child(1) {
+  transition-delay: 0ms;
+}
+section > *:nth-child(2) {
+  transition-delay: 350ms;
+}
+section > *:nth-child(3) {
+  width: 45vw;
+  min-width: 280px;
+  transition-delay: 700ms;
+}
+input:checked + section {
+  transform: translateX(0);
+  transition: transform 1600ms 1000ms cubic-bezier(1, 0, 0.7, 1);
+  z-index: 50;
+}
+input:checked + section::before {
+  transform: translateY(0) rotate(0deg);
+  transition: 350ms 4000ms cubic-bezier(0.25, 0, 0.75, 1);
+}
+input:checked + section > * {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 450ms cubic-bezier(0.25, 0, 0.75, 1);
+}
+input:checked + section > *:nth-child(1) {
+  transition-delay: 3700ms;
+}
+input:checked + section > *:nth-child(2) {
+  transition-delay: 3350ms;
+}
+input:checked + section > *:nth-child(3) {
+  transition-delay: 3000ms;
+}
+input:checked + section ~ section {
+  transform: translateX(100vw);
+}
+
+#section1:checked ~ nav [for=section1],
+#section2:checked ~ nav [for=section2],
+#section3:checked ~ nav [for=section3] {
+  color: white;
+}
+#section1:checked ~ nav [for=section1]::before,
+#section2:checked ~ nav [for=section2]::before,
+#section3:checked ~ nav [for=section3]::before {
+  opacity: 1;
+  top: -3.5vh;
+}
+#section1:checked ~ nav [for=section1]::after,
+#section2:checked ~ nav [for=section2]::after,
+#section3:checked ~ nav [for=section3]::after {
+  opacity: 1;
+  top: 3.5vh;
+}

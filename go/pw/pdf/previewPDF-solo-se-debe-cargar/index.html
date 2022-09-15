@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es_MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Preview PDF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>/* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100;
+    }
+    .container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<input type="file" id="myPdf" /><br>
+
+
+
+ 
+    
+<canvas id="pdfViewer"   ></canvas>
+
+<center>Opción 2</center>
+
+<div class="container">
+<iframe class="responsive-iframe" src="test.pdf" name="iframe_a " height="650px " width="100% " title="Calendario escolar 2022-2023" allowfullscreen=" " frameborder="0 " style="border:0; " style="overflow:hidden"></iframe>
+</div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://mozilla.github.io/pdf.js/build/pdf.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+
+h1, body {
+    font-family: 'Oswald', sans-serif;
+    color: #555;
+}
+
+#signup-form {
+    margin-top: 50px;
+}
+
+#signup-form input[type="text"], #signup-form input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid #777;
+    box-shadow: none;
+    margin: 50px 0;
+    color: #1583cc;
+    font-size: 25px;
+}
+
+#status {
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 100px;
+    color: green;
+}
+

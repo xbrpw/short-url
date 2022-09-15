@@ -1,0 +1,44 @@
+body {
+  margin: 20px auto;
+  font-family: "Lato";
+  font-weight: 300;
+}
+
+a {
+  display: block;
+  margin: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+textarea {
+  margin: 2rem;
+  font-size: 1.5rem;
+  width: 36ch;
+  height: 10ch;
+  font-family: "Lato";
+  font-weight: bold;
+  max-width: 90%;
+}
+
+button.save-file {
+  background: blue;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  color: white;
+  margin-top: 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 2rem;
+  font-size: 2rem;
+  font-family: "Lato";
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+button.save-file:hover {
+  background: green;
+}

@@ -1,0 +1,149 @@
+.anxiety-box {
+  position: relative;
+  box-sizing: border-box;
+  width: 250px;
+  height: 250px;
+  background: lightblue;
+  margin: 250px auto;
+  padding: 25px;
+  font-family: "Caveat", cursive;
+  font-size: 28px;
+}
+.anxiety-box p {
+  width: 125%;
+  position: absolute;
+  top: -85%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 38px;
+  font-size: 32px;
+}
+.anxiety-box svg {
+  width: 100%;
+  fill: white;
+  transform: scale(0.8);
+  animation: lungAnimation 16s infinite;
+}
+
+.anxiety-box__top, .anxiety-box__right, .anxiety-box__bottom, .anxiety-box__left {
+  position: absolute;
+  font-weight: 700;
+}
+.anxiety-box__top {
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.anxiety-box__right {
+  top: 50%;
+  right: -54px;
+  transform: translateY(-50%) rotate(90deg);
+}
+.anxiety-box__bottom {
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.anxiety-box__left {
+  top: 50%;
+  left: -54px;
+  transform: translateY(-50%) rotate(-90deg);
+}
+.anxiety-box__dot {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: #7a8eff;
+  border-radius: 50%;
+  animation: dotAnimation 16s infinite;
+  animation-timing-function: cubic-bezier(0.57, 0.31, 0.8, 0.62);
+}
+
+@keyframes lungAnimation {
+  0% {
+    transform: scale(0.8);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@keyframes dotAnimation {
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+  25% {
+    top: -10px;
+    left: 240px;
+  }
+  50% {
+    top: 240px;
+    left: 240px;
+  }
+  75% {
+    top: 240px;
+    left: -10px;
+  }
+  100% {
+    top: -10px;
+    left: -10px;
+  }
+}
+body {
+  background: #f2f2f2;
+  color: #2d2d2d;
+}
+body:after {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3295693277) 0%, rgba(29, 49, 118, 0) 100%);
+  pointer-events: none;
+}
+
+.description {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 100px auto;
+}
+.description * {
+  font-size: 26px;
+  line-height: 38px;
+}
+.description p {
+  font-family: "Caveat", cursive;
+}
+.description p:not(:last-child) {
+  margin-bottom: 20px;
+}
+.description ul {
+  list-style: bullet;
+  padding-left: 30px;
+}
+.description ul li {
+  font-family: "Caveat", cursive;
+}
+.description:before {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: lightgrey;
+}

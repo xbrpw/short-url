@@ -1,0 +1,975 @@
+:root {
+  --canvasColor: #f9f9f9;
+}
+
+body {
+  background: var(--canvasColor);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  --neutralShade0: #f8f8f8;
+  --neutralShade1: #f2f2f2;
+  --neutralShade2: #e8e9e9;
+  --neutralShade3: #d1d3d4;
+  --neutralShade4: #babdbf;
+  --neutralShade5: #808488;
+  --neutralShade6: #666a6d;
+  --neutralShade7: #4d5052;
+  --neutralShade8: #212122;
+  --grayColor: #999;
+  --lightGrayColor: #ddd;
+  --borderRadius: 6px;
+  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+}
+
+/*overall layout*/
+main {
+  width: 90%;
+  margin: 3em auto 0;
+  max-width: 1300px;
+  color: var(--foregroundColor);
+  text-align: left;
+  background: var(--backgroundColor);
+  box-shadow: 0 3px 15px rgba(51, 51, 51, 0.2);
+  border-radius: 10px;
+}
+
+main section {
+  position: relative;
+}
+
+.body-text {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*typography*/
+strong {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
+}
+
+h1 {
+  font: 700 48px/1.2 "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font: 700 32px/1.2 "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font: 700 24px/1.2 "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font: 700 20px/1.2 "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font: 500 18px/1.2 "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font: 500 16px/1.2 "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+/*checkboxes*/
+input:disabled ~ * {
+  opacity: 0.3;
+  user-select: none;
+  pointer-events: none;
+}
+
+.well-cta--form {
+  display: grid;
+  grid-gap: 10px;
+  padding: 30px;
+  background: var(--primaryShade1);
+  border-radius: 10px;
+}
+.well-cta--form__text {
+  margin-bottom: 10px;
+}
+.well-cta--form h3 {
+  color: var(--primaryShade5);
+}
+
+@media (min-width: 768px) {
+  .well-cta--form {
+    grid-template-columns: 1fr auto;
+  }
+  .well-cta--form__text {
+    grid-column: span 2;
+  }
+}
+/*buttons & links*/
+a {
+  text-decoration: none;
+  color: var(--foregroundColor);
+}
+
+a.link {
+  display: inline;
+  border-bottom: 2px dashed;
+  font-weight: 500;
+  line-height: 2.5;
+  cursor: pointer;
+  color: var(--neutralShade5);
+}
+a.link:hover, a.link.hover {
+  color: var(--neutralShade6);
+  border-bottom: 2px solid;
+}
+a.link.primary {
+  color: var(--primaryColor);
+}
+a.link.primary:hover, a.link.primary.hover {
+  color: var(--primaryShade5);
+}
+a.link.secondary {
+  color: var(--secondaryColor);
+}
+a.link.secondary:hover, a.link.secondary.hover {
+  color: var(--secondaryShade5);
+}
+
+a.button,
+input.button,
+button {
+  outline: none;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  font: 500 16px/1 "Poppins", sans-serif;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  background: var(--primaryColor);
+  color: var(--backgroundColor);
+  position: relative;
+  top: 0;
+  transition: 0.2s ease;
+}
+a.button:hover, a.button.hover,
+input.button:hover,
+input.button.hover,
+button:hover,
+button.hover {
+  top: -3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+a.button:active, a.button.active,
+input.button:active,
+input.button.active,
+button:active,
+button.active {
+  background: var(--primaryShade4);
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+a.button.disabled,
+input.button.disabled,
+button.disabled {
+  opacity: 0.4;
+  user-select: none;
+  pointer-events: none;
+}
+a.button.medium,
+input.button.medium,
+button.medium {
+  padding: 15px 18px;
+  width: auto;
+}
+a.button.small,
+input.button.small,
+button.small {
+  padding: 10px 12px;
+  width: auto;
+  font-size: 14px;
+  font-weight: 500;
+}
+a.button.secondary,
+input.button.secondary,
+button.secondary {
+  background: var(--secondaryColor);
+}
+a.button.secondary:active, a.button.secondary:focus, a.button.secondary.active,
+input.button.secondary:active,
+input.button.secondary:focus,
+input.button.secondary.active,
+button.secondary:active,
+button.secondary:focus,
+button.secondary.active {
+  background: var(--secondaryShade4);
+  outline: none;
+}
+a.button.accent,
+input.button.accent,
+button.accent {
+  background: var(--accentColor);
+}
+a.button.accent:active, a.button.accent:focus, a.button.accent.active,
+input.button.accent:active,
+input.button.accent:focus,
+input.button.accent.active,
+button.accent:active,
+button.accent:focus,
+button.accent.active {
+  background: var(--accentShade4);
+}
+a.button.accent2,
+input.button.accent2,
+button.accent2 {
+  background: var(--accent2Color);
+}
+a.button.accent2:active, a.button.accent2:focus, a.button.accent2.active,
+input.button.accent2:active,
+input.button.accent2:focus,
+input.button.accent2.active,
+button.accent2:active,
+button.accent2:focus,
+button.accent2.active {
+  background: var(--accent2Shade4);
+}
+a.button.accent3,
+input.button.accent3,
+button.accent3 {
+  background: var(--accent3Color);
+}
+a.button.accent3:active, a.button.accent3:focus, a.button.accent3.active,
+input.button.accent3:active,
+input.button.accent3:focus,
+input.button.accent3.active,
+button.accent3:active,
+button.accent3:focus,
+button.accent3.active {
+  background: var(--accent3Shade4);
+}
+
+.input__wrapper {
+  margin-bottom: 30px;
+}
+
+.label-form {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input.input-form,
+select,
+textarea {
+  height: 50px;
+  font-size: 16px;
+  border: 2px solid var(--neutralShade3);
+  width: 100%;
+  padding: 12px;
+  font-family: "Poppins";
+  border-radius: var(--borderRadius);
+  color: var(--foregroundColor);
+  background: var(--backgroundColor);
+}
+input.input-form:focus, input.input-form.active,
+select:focus,
+select.active,
+textarea:focus,
+textarea.active {
+  outline: none;
+  border-color: var(--primaryColor);
+}
+input.input-form:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  background: var(--neutralShade1);
+  opacity: 0.6;
+}
+
+input.input-form.input--lg {
+  height: 56px;
+  font-size: 18px;
+  padding: 15px;
+}
+
+/*variations*/
+input.variation {
+  display: none;
+}
+input.variation + label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 30px 20px 0;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 6px solid #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 500px) {
+  input.variation + label {
+    margin: 70px 20px 20px;
+  }
+}
+#bluepurple + label {
+  background: linear-gradient(to left, #673ab7 50%, #03a9f4 50%);
+}
+#bluepurple:checked ~ main {
+  --backgroundColor: #fff;
+  --foregroundColor: #111;
+  --primaryColor: #03a9f4;
+  --primaryShade1: #e1f5fe;
+  --primaryShade2: #b3e5fc;
+  --primaryShade3: #4fc3f7;
+  --primaryShade4: #0288d1;
+  --primaryShade5: #0277bd;
+  --secondaryColor: #673ab7;
+  --secondaryShade1: #ede7f6;
+  --secondaryShade2: #d1c4e9;
+  --secondaryShade3: #9575cd;
+  --secondaryShade4: #512da8;
+  --secondaryShade5: #311b92;
+  --accentColor: #009688;
+  --accentShade1: #e0f2f1;
+  --accentShade2: #b2dfdb;
+  --accentShade3: #4db6ac;
+  --accentShade4: #00796b;
+  --accentShade5: #004d40;
+  --accent2Color: #8bc34a;
+  --accent2Shade1: #e7f6d5;
+  --accent2Shade2: #c5e1a5;
+  --accent2Shade3: #aed581;
+  --accent2Shade4: #689f38;
+  --accent2Shade5: #558b2f;
+  --accent3Color: #f44336;
+  --accent3Shade1: #ffdde0;
+  --accent3Shade2: #ffcdd2;
+  --accent3Shade3: #ef9a9a;
+  --accent3Shade4: #d32f2f;
+  --accent3Shade5: #b71c1c;
+}
+
+#sunset + label {
+  background: linear-gradient(to right, #ff9557 50%, #ffcc67 50%);
+}
+#sunset:checked ~ main {
+  --canvasColor: #f9f9f9;
+  --backgroundColor: #fff;
+  --foregroundColor: #111;
+  --primaryColor: #ff9557;
+  --primaryShade1: #ffe2d1;
+  --primaryShade2: #ffceb2;
+  --primaryShade3: #ffb184;
+  --primaryShade4: #e88850;
+  --primaryShade5: #d17a48;
+  --secondaryColor: #ffcc67;
+  --secondaryShade1: #fff1d5;
+  --secondaryShade2: #ffde9e;
+  --secondaryShade3: #ffd074;
+  --secondaryShade4: #e8ba5e;
+  --secondaryShade5: #ba954b;
+  --accentColor: #4e5166;
+  --accentShade1: #cecfd5;
+  --accentShade2: #aeafb9;
+  --accentShade3: #8e909d;
+  --accentShade4: #6e7081;
+  --accentShade5: #404354;
+  --accent2Color: #588b8b;
+  --accent2Shade1: #c2d4d4;
+  --accent2Shade2: #a3bfbf;
+  --accent2Shade3: #85aaaa;
+  --accent2Shade4: #507f7f;
+  --accent2Shade5: #497272;
+  --accent3Color: #fe5f55;
+  --accent3Shade1: #fec4c1;
+  --accent3Shade2: #fea7a2;
+  --accent3Shade3: #fe7c73;
+  --accent3Shade4: #e7574e;
+  --accent3Shade5: #b9463e;
+}
+
+#godiva + label {
+  background: linear-gradient(to right, #a05793 50%, #a3d858 50%);
+}
+#godiva:checked ~ main {
+  --canvasColor: #f9f9f9;
+  --backgroundColor: #fff;
+  --foregroundColor: #111;
+  --primaryColor: #a05793;
+  --primaryShade1: #e5d1e1;
+  --primaryShade2: #d3b2cd;
+  --primaryShade3: #b984b0;
+  --primaryShade4: #925086;
+  --primaryShade5: #834879;
+  --secondaryColor: #a3d858;
+  --secondaryShade1: #e5f4d1;
+  --secondaryShade2: #cce9a3;
+  --secondaryShade3: #bce285;
+  --secondaryShade4: #95c550;
+  --secondaryShade5: #779e41;
+  --accentColor: #245e71;
+  --accentShade1: #d7e1e5;
+  --accentShade2: #afc4cb;
+  --accentShade3: #7398a4;
+  --accentShade4: #4b7b8a;
+  --accentShade5: #1e4d5d;
+  --accent2Color: #2aa5a1;
+  --accent2Shade1: #d8eeed;
+  --accent2Shade2: #9ed6d4;
+  --accent2Shade3: #64bdba;
+  --accent2Shade4: #279693;
+  --accent2Shade5: #1f7976;
+  --accent3Color: #92374d;
+  --accent3Shade1: #ebdad3;
+  --accent3Shade2: #cda4ae;
+  --accent3Shade3: #af6d7d;
+  --accent3Shade4: #853246;
+  --accent3Shade5: #6b2939;
+}
+
+#dark + label {
+  background: linear-gradient(to right, #367bc3 50%, #38bfa7 50%);
+}
+#dark:checked ~ main {
+  --canvasColor: #2a313b;
+  --backgroundColor: #2a313b;
+  --foregroundColor: #ebe8d8;
+  --primaryColor: #367bc3;
+  --primaryShade5: #b5cfe9;
+  --primaryShade4: #91b7de;
+  --primaryShade3: #5a93cd;
+  --primaryShade2: #3270b2;
+  --primaryShade1: #285a8e;
+  --secondaryColor: #38bfa7;
+  --secondaryShade5: #c8ede7;
+  --secondaryShade4: #92dccf;
+  --secondaryShade3: #6ed0be;
+  --secondaryShade2: #33ae98;
+  --secondaryShade1: #2e9d89;
+  --accentColor: #586994;
+  --accentShade5: #d1d6e1;
+  --accentShade4: #a3adc4;
+  --accentShade3: #7684a7;
+  --accentShade2: #49567a;
+  --accentShade1: #39435f;
+  --accent2Color: #8fe1a2;
+  --accent2Shade5: #d6f4dd;
+  --accent2Shade4: #c1eecc;
+  --accent2Shade3: #a3e6b2;
+  --accent2Shade2: #82cd94;
+  --accent2Shade1: #76b985;
+  --accent3Color: #fe938c;
+  --accent3Shade5: #fee1df;
+  --accent3Shade4: #fec4c0;
+  --accent3Shade3: #fea6a0;
+  --accent3Shade2: #e78680;
+  --accent3Shade1: #b96b66;
+  color: #f1f2eb;
+  border-color: #f1f2eb;
+}
+#dark:checked ~ main > section {
+  border-color: #f1f2eb;
+}
+#dark:checked ~ main > section > h6 {
+  color: #f1f2eb;
+}
+
+#pinkaru + label {
+  background: linear-gradient(to right, #f95794 50%, #323da5 50%);
+}
+#pinkaru:checked ~ main {
+  border-color: #fff;
+  --canvasColor: #2a313b;
+  --backgroundColor: #2a313b;
+  --foregroundColor: #e3f2fd;
+  --primaryColor: #f95794;
+  --primaryShade5: #fdd1e1;
+  --primaryShade4: #fba3c4;
+  --primaryShade3: #fa75a7;
+  --primaryShade2: #e35087;
+  --primaryShade1: #b6406c;
+  --secondaryColor: #323da5;
+  --secondaryShade5: #c7cae6;
+  --secondaryShade4: #8f95cd;
+  --secondaryShade3: #6971bd;
+  --secondaryShade2: #2e3896;
+  --secondaryShade1: #293288;
+  --accentColor: #ffc729;
+  --accentShade5: #ffefc4;
+  --accentShade4: #ffe08a;
+  --accentShade3: #ffd14f;
+  --accentShade2: #e8b526;
+  --accentShade1: #d1a322;
+  --accent2Color: #53dd6c;
+  --accent2Shade5: #d0f5d6;
+  --accent2Shade4: #a1ecae;
+  --accent2Shade3: #72e386;
+  --accent2Shade2: #4cc963;
+  --accent2Shade1: #3da14f;
+  --accent3Color: #f52f57;
+  --accent3Shade5: #fcc6d1;
+  --accent3Shade4: #f98da3;
+  --accent3Shade3: #f65475;
+  --accent3Shade2: #df2b50;
+  --accent3Shade1: #b32340;
+}
+#pinkaru:checked ~ main > section {
+  border-color: #fff;
+}
+#pinkaru:checked ~ main > section > h6 {
+  color: #fff;
+}
+
+/*LOGO*/
+.logo {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  align-items: center;
+  grid-gap: 2px;
+  font: 55px/1 "Barriecito", cursive;
+  text-transform: uppercase;
+  color: var(--accentColor);
+}
+.logo .text {
+  display: none;
+}
+
+.dog {
+  position: relative;
+  transform: scale(0.8);
+}
+
+.ear {
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  left: 1px;
+  bottom: 100%;
+  background: var(--accentShade2);
+  margin-bottom: -5px;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  box-shadow: inset 6px 0 0 0px var(--accentColor);
+}
+.ear__right {
+  right: 1px;
+  left: auto;
+  transform: scaleX(-1);
+}
+
+.dog-face {
+  position: relative;
+  width: 70px;
+  height: 60px;
+  border: 5px solid var(--accentColor);
+  border-radius: 10px 10px 25px 25px;
+  overflow: hidden;
+}
+.dog-face .eye {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accentColor);
+  position: absolute;
+  left: 65%;
+  top: 15px;
+}
+.dog-face .eye__right {
+  right: 65%;
+  left: auto;
+}
+.dog-face .patch {
+  width: 37px;
+  height: 37px;
+  background: var(--accentShade2);
+  border-radius: 0 0 30px 0;
+  margin: -2px 0 0 -2px;
+}
+.dog-face .nose {
+  position: absolute;
+  background: var(--accentColor);
+  width: 12px;
+  height: 6px;
+  left: 50%;
+  margin-left: -6px;
+  bottom: 12px;
+  border-radius: 2px 2px 50% 50%;
+}
+.dog-face .nose:before {
+  content: "";
+  position: absolute;
+  background: var(--accentColor);
+  width: 4px;
+  top: 100%;
+  height: 12px;
+  left: 50%;
+  margin-left: -2px;
+}
+
+@media (min-width: 768px) {
+  .logo .text {
+    display: block;
+    margin-top: -15px;
+  }
+}
+/*NAVBAR*/
+section {
+  position: relative;
+}
+
+nav {
+  display: grid;
+  grid: auto auto/1fr max-content;
+  grid-template-areas: "logo profile" "links links";
+  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 8px -2px rgba(51, 51, 51, 0.2);
+  background: var(--backgroundColor);
+  border-radius: 10px 10px 0 0;
+}
+
+.logo {
+  grid-area: logo;
+  padding: 18px 0 5px 15px;
+}
+
+.navigation {
+  grid-area: links;
+  font-size: 20px;
+  align-self: end;
+  padding: 5px 0 0 15px;
+}
+.navigation a {
+  padding-bottom: 18px;
+  display: inline-block;
+  border-bottom: 5px solid transparent;
+  margin: 10px 15px 0;
+}
+.navigation a.active {
+  border-bottom: 5px solid var(--primaryColor);
+  font-weight: 500;
+  color: var(--primaryColor);
+}
+.navigation a:hover {
+  color: var(--primaryShade4);
+}
+
+.profile {
+  grid-area: profile;
+  font-weight: bold;
+  padding-right: 10px;
+}
+.profile a {
+  margin: 10px;
+}
+
+@media (min-width: 1200px) {
+  nav {
+    grid: auto/min-content 1fr max-content;
+    grid-template-areas: "logo links profile";
+  }
+
+  .navigation {
+    margin-left: 20px;
+  }
+}
+/*FOOTER*/
+.footer {
+  grid-template-columns: repeat(2, 1fr) 50%;
+  padding: 30px 30px 0;
+  grid-template-areas: "divider divider divider" "about adopt subscribe" "social social subscribe" "legal legal legal";
+}
+
+.subscription {
+  margin: 2em 0;
+}
+
+.divider {
+  grid-area: divider;
+  text-align: center;
+  margin-bottom: 2em;
+  position: relative;
+}
+.divider:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  border-top: 0.5px solid var(--lightGrayColor);
+}
+.divider .dog__wrapper {
+  display: inline-block;
+  position: relative;
+  background: var(--backgroundColor);
+  padding: 0 15px;
+}
+
+.footer__section {
+  margin: 2em 0;
+}
+.footer__section li a {
+  padding: 5px 0;
+  display: block;
+  color: var(--grayColor);
+}
+.footer__section li a:hover {
+  color: var(--primaryColor);
+}
+.footer__section p {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-list {
+  grid-area: about;
+}
+
+.adopt-list {
+  grid-area: adopt;
+}
+
+.subscription {
+  grid-area: subscribe;
+}
+
+.social-media {
+  grid-area: social;
+}
+.social-media p {
+  margin: 0 5px 0 0;
+}
+.social-media li {
+  display: inline-block;
+  vertical-align: middle;
+}
+.social-media li a {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.05);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 3px;
+  color: var(--grayColor);
+  text-align: center;
+  transition: 0.1s ease;
+}
+.social-media li a:hover {
+  color: var(--backgroundColor);
+  background: var(--secondaryColor);
+}
+
+.legal-stuff {
+  grid-area: legal;
+  padding: 25px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 0.5px solid var(--lightGrayColor);
+  color: var(--neutralShade5);
+}
+.legal-stuff span {
+  margin-right: 20px;
+}
+.legal-stuff a {
+  margin: 0 10px;
+  color: var(--neutralShade5);
+}
+.legal-stuff a:hover {
+  color: var(--secondaryColor);
+}
+
+@media (min-width: 992px) {
+  .footer {
+    display: grid;
+  }
+
+  .legal-stuff br {
+    display: none;
+  }
+
+  .subscription, .footer__section {
+    margin: 0;
+  }
+
+  .social-media {
+    margin-top: 2em;
+  }
+}
+#dark:checked ~ main a.button,
+#dark:checked ~ main input.button,
+#dark:checked ~ main button,
+#dark:checked ~ main .tooltip.dark:after,
+#pinkaru:checked ~ main a.button,
+#pinkaru:checked ~ main input.button,
+#pinkaru:checked ~ main button,
+#pinkaru:checked ~ main .tooltip.dark:after {
+  color: var(--foregroundColor);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+#dark:checked ~ main .button:active,
+#dark:checked ~ main .button.active,
+#pinkaru:checked ~ main .button:active,
+#pinkaru:checked ~ main .button.active {
+  background: var(--primaryShade1);
+}
+#dark:checked ~ main .button.secondary:active,
+#dark:checked ~ main .button.secondary.active,
+#pinkaru:checked ~ main .button.secondary:active,
+#pinkaru:checked ~ main .button.secondary.active {
+  background: var(--secondaryShade1);
+}
+#dark:checked ~ main a.link,
+#pinkaru:checked ~ main a.link {
+  color: var(--neutralShade2);
+}
+#dark:checked ~ main a.link:hover, #dark:checked ~ main a.link.hover,
+#pinkaru:checked ~ main a.link:hover,
+#pinkaru:checked ~ main a.link.hover {
+  color: var(--neutralShade1);
+  border-bottom: 2px solid;
+}
+#dark:checked ~ main a.link.primary,
+#pinkaru:checked ~ main a.link.primary {
+  color: var(--primaryShade4);
+}
+#dark:checked ~ main a.link.primary:hover, #dark:checked ~ main a.link.primary.hover,
+#pinkaru:checked ~ main a.link.primary:hover,
+#pinkaru:checked ~ main a.link.primary.hover {
+  color: var(--primaryShade5);
+}
+#dark:checked ~ main nav,
+#pinkaru:checked ~ main nav {
+  border-bottom: 0.5px solid var(--neutralShade6);
+}
+#dark:checked ~ main .navigation a,
+#pinkaru:checked ~ main .navigation a {
+  padding-bottom: 18px;
+  display: inline-block;
+  border-bottom: 5px solid transparent;
+  margin: 10px 15px 0;
+}
+#dark:checked ~ main .navigation a.active,
+#pinkaru:checked ~ main .navigation a.active {
+  border-bottom: 5px solid var(--primaryShade4);
+  color: var(--primaryShade4);
+}
+#dark:checked ~ main .navigation a:hover,
+#pinkaru:checked ~ main .navigation a:hover {
+  color: var(--primaryShade5);
+}
+#dark:checked ~ main .footer__section a,
+#pinkaru:checked ~ main .footer__section a {
+  color: var(--neutralShade3);
+}
+#dark:checked ~ main .footer__section a:hover,
+#pinkaru:checked ~ main .footer__section a:hover {
+  color: var(--primaryShade4);
+}
+#dark:checked ~ main .legal-stuff, #dark:checked ~ main .legal-stuff a, #dark:checked ~ main .divider:before,
+#pinkaru:checked ~ main .legal-stuff,
+#pinkaru:checked ~ main .legal-stuff a,
+#pinkaru:checked ~ main .divider:before {
+  border-color: var(--neutralShade6);
+  color: var(--neutralShade4);
+}
+#dark:checked ~ main .legal-stuff a:hover,
+#pinkaru:checked ~ main .legal-stuff a:hover {
+  color: var(--neutralShade3);
+}
+
+#sunset:checked ~ main .well-cta--form a,
+#godiva:checked ~ main .well-cta--form a {
+  color: var(--foregroundColor);
+}
+#sunset:checked ~ main .social-media a:hover,
+#godiva:checked ~ main .social-media a:hover {
+  color: var(--foregroundColor);
+}
+
+#dark:checked ~ main .logo {
+  color: var(--secondaryColor);
+}
+#dark:checked ~ main .ear {
+  background: var(--secondaryShade1);
+  box-shadow: inset 6px 0 0 0px var(--secondaryColor);
+}
+#dark:checked ~ main .dog-face {
+  border: 5px solid var(--secondaryColor);
+}
+#dark:checked ~ main .dog-face .eye {
+  background: var(--secondaryColor);
+}
+#dark:checked ~ main .dog-face .patch {
+  background: var(--secondaryShade1);
+}
+#dark:checked ~ main .dog-face .nose {
+  background: var(--secondaryColor);
+}
+#dark:checked ~ main .dog-face .nose:before {
+  background: var(--secondaryColor);
+}
+#dark:checked ~ main .social-media a:hover {
+  color: var(--foregroundColor);
+}
+
+#pinkaru:checked ~ main .ear {
+  background: var(--accentShade1);
+}
+#pinkaru:checked ~ main .dog-face .patch {
+  background: var(--accentShade1);
+}
+
+footer {
+  display: grid;
+  grid: min-content/1fr max-content;
+  text-align: left;
+  width: 90%;
+  margin: 5em auto 4em;
+  max-width: 1300px;
+  align-items: center;
+}
+footer a {
+  text-decoration: none;
+  color: #333;
+  padding: 3px 0;
+  border-bottom: 1px dashed;
+}
+footer a:hover {
+  border-bottom: 1px solid;
+}
+footer .social a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+footer .social a .icons {
+  display: inline-block;
+  font-size: 20px;
+}
+footer.dark, footer.dark a {
+  color: #f9f9f9;
+}

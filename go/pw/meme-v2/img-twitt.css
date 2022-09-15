@@ -1,0 +1,35 @@
+body {
+  background: rgb(15 19 22);
+  padding: 1rem;
+}
+canvas {
+  width: 700px;
+  height: 425px;
+  margin: 0 1rem 0 0;
+  border-radius: 10px;
+}
+
+button {
+    background: linear-gradient(45deg, #ff6d1b, #e0417f);
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    line-height: 1.5rem;
+    will-change: transform, filter;
+    margin: 0 0 1rem 0;
+    transition: all 0.15s ease-out;
+    cursor: pointer;
+    border-radius: 100px;
+    display: block;
+    display: block;
+    border: none;
+    color: white;
+    font-family: Inter, sans-serif;
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.3));
+    font-variation-settings: 'wght' 600;
+    perspective-origin: 0 0;
+    letter-spacing: 0;
+}
+
+button:hover {
+  transform: scale(1.04);
+}

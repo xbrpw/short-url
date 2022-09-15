@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Menu: Responsive Bottom Tab Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <style>
+        html,
+        body {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navResponsive {
+            align-items: center;
+            background: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: sticky;
+        }
+        
+        .navResponsive h2 a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .navResponsive h2 a:hover {
+            opacity: 0.8;
+        }
+        
+        .ulResponsive {
+            display: flex;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        .ulResponsive li {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .ulResponsive li a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .ulResponsive li a:hover {
+            opacity: 0.8;
+        }
+        
+        .ulResponsive li .showResponsive {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .navResponsive {
+                bottom: 0;
+                position: fixed;
+                width: 100vw;
+                left: 0;
+                padding: 0 0px;
+            }
+            .logoResponsive {
+                display: none;
+            }
+            .ulResponsive {
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .liREsponsive {
+                padding-right: 0;
+                padding-left: 0;
+                text-align: center;
+            }
+            .ulResponsive li .showResponsive {
+                display: block;
+            }
+            .ulResponsive li i {
+                padding: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <nav class="navResponsive">
+        <h2 class="logoResponsive"><a href="#">Logo</a></h2>
+        <ul class="ulResponsive">
+            <li id="myBtn" class="liREsponsive"><a href="#"><i class="fa fa-home showResponsive"></i>Home</a></li>
+            <li class="liREsponsive"><a href="#"><i class="fa fa-info showResponsive"></i>About</a></li>
+            <li class="liREsponsive"><a href="#"><i class="fa fa-briefcase showResponsive"></i>Work</a></li>
+            <li class="liREsponsive"><a href="#"><i class="fa fa-paper-plane showResponsive"></i>Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- partial -->
+
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1050;
+            display: none;
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            outline: 0
+        }
+        
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #999;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 6px;
+            outline: 0;
+            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+        }
+        
+        .close {
+            float: right;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            filter: alpha(opacity=20);
+            opacity: .2
+        }
+        
+        .close:focus,
+        .close:hover {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            filter: alpha(opacity=50);
+            opacity: .5
+        }
+        
+        .close {
+            -webkit-appearance: none;
+            padding: 0;
+            cursor: pointer;
+            background: 0 0;
+            border: 0
+        }
+        
+        .closeModal {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .closeModal:hover,
+        .closeModal:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .modal-dialog {
+            -webkit-transition: -webkit-transform .3s ease-out;
+            -o-transition: -o-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            -webkit-transform: translate(0, -25%);
+            -ms-transform: translate(0, -25%);
+            -o-transform: translate(0, -25%);
+            transform: translate(0, -25%)
+        }
+        
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: 10px
+        }
+        
+        .modal-body {
+            position: relative;
+            padding: 15px
+        }
+        
+        @media (min-width:768px) {
+            .modal-dialog {
+                width: 600px;
+                margin: 30px auto
+            }
+            .modal-content {
+                -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+            }
+        }
+        
+        @-ms-viewport {
+            width: device-width
+        }
+    </style>
+
+
+
+
+    <p>Modal Example</p>
+
+
+    <!-- Trigger/Open The Modal -->
+
+    <!-- <button id="myBtn" style="position:fixed;top:60px;right:40px; ">Menu</button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal fade">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-dialog">
+                    <span class="closeModal">&times;</span>
+                    <!-- <iframe src="https://dragvesti.xiiber.com/menu.html "  name="iframe_a " height="300px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("closeModal")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Visualizer</title><meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="wrapper">
+  <div id="drop-zone-wrapper">
+    <div id="drop-zone">
+      <div id="label"><i class="fa fa-cloud-upload"></i>
+        <h1>Drop MP3 Here</h1>
+      </div>
+    </div>
+    <div id="alternate-option"><i class="fa fa-music"></i>
+      <h1>Or Use Default Song</h1>
+    </div>
+  </div>
+  <div class="hidden" id="center-logo">
+    <div id="audio-canvas-wrapper">
+      <canvas id="audio-canvas"></canvas>
+    </div>
+    <div id="text">
+      <h1>MUSIC</h1>
+      <h1>XIIBER</h1>
+    </div>
+  </div>
+  <div class="particles" id="particles-slow"></div>
+  <div class="particles initial hidden" id="particles-fast"></div>
+  <div id="reset">
+    <h1>Reset</h1>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+<script src='https://codepen.io/Hyperplexed/pen/QOvrzd/0299c8b36352c72cbfe8df48b47b54ca.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

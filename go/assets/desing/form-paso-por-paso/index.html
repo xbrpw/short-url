@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container slider-one-active">
+  <div class="steps">
+    <div class="step step-one">
+      <div class="liner"></div>
+      <span>Hello!</span>
+    </div>
+    <div class="step step-two">
+      <div class="liner"></div>
+      <span>Rating</span>
+    </div>
+    <div class="step step-three">
+      <div class="liner"></div>
+      <span>Conclusion</span>
+    </div>
+  </div>
+  <div class="line">
+    <div class="dot-move"></div>
+    <div class="dot zero"></div>
+    <div class="dot center"></div>
+    <div class="dot full"></div>
+  </div>
+  <div class="slider-ctr">
+    <div class="slider">
+      <form class="slider-form slider-one">
+        <h2>Cuentános que te parecio la webapp</h2>
+        <label class="input">
+          <input type="text" class="name" placeholder="Cuál es tu nombre">
+        </label>
+        <button class="first next">Siguiente</button>
+      </form>
+      <form class="slider-form slider-two">
+        <h2>¿Está satisfecho con nuestro servicio?</h2>
+        <div class="label-ctr">
+          <label class="radio">
+            <input type="radio" value="happy" name="condition">
+            <div class="emot happy">
+              <div class="mouth sad"></div>
+            </div>
+          </label>
+          <label class="radio">
+            <input type="radio" value="happy" name="condition">
+            <div class="emot happy">
+              <div class="mouth smile"></div>
+            </div>
+          </label>
+        </div>
+        <button class="second next">Siguiente</button>
+      </form>
+      <div class="slider-form slider-three">
+        <h2>Hola, <span class="yourname"></span></h2>
+        <h3>Gracias!
+					</h3>        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='penformat.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

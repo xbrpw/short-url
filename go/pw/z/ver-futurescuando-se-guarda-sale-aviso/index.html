@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - localStorage Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="page-header">
+  <h1>localStorage <small>just a test...</small></h1>
+    <div class="alert alert-success" id="yay">Your browser supports Web Storage. Yay!</div>
+    <div class="alert alert-danger" id="ooh">Oooh... Your browser seems to be retarted. He can't use Web Storage.</div>
+</div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>save a value</h3>
+      <form action="#" class="form-inline">
+        <div class="form-group">
+          <input type="text" name="save" id="text" class="form-control" placeholder="save a value here...">
+        </div>
+        <button id="set" class="btn btn-primary">save</button>
+      </form>
+      <hr>
+      <h3>read the value</h3>
+      <div class="alert alert-info" id="val"><i>nothing saved...</i></div>
+      <button id="get" class="btn btn-success">get saved value</button>
+       <button id="remove" class="btn btn-danger">clear the value</button>
+    </div>
+    <div class="col-md-6">
+       <hr class="visible-sm visible-xs">
+      <h3>About</h3>
+      <b>Features:</b>
+        <ul>
+          <li>You can set, read and clear the value.</li>
+          <li>The saved value is saved on your device.</li>
+          <li>On a page refresh or browser restart there should be the last saved value.</li>
+          <li>Even on a reboot the value should be saved.</li>
+          <li>more information <a href="https://www.w3schools.com/html/html5_webstorage.asp" target="_top">here</a></li>
+        </ul>
+      <b>Everything tested and worked on:</b>
+      <ul>
+        <li>Google Chrome 30 on Mac OS X and on Win7</li>
+        <li>Mozilla Firefox 24 on Mac OS X and on Win7</li>
+        <li>IE9, IE10 on Win7</li>
+        <li><i>and if not supported - create a fallback to cookies.</i></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>

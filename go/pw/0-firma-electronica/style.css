@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Arapey:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+.hidden { display:none; }
+body { 
+    font-family: 'Libre Baskerville', serif; 
+    font-size:16px;
+    line-height:1.5em;
+    color:#000;
+    margin:0;
+    background:#efefef;
+}
+@media (max-width:600px) {
+  body { font-size:14px; }
+}
+@media (max-width:400px) {
+  #signature {
+    min-width:auto !important;
+    min-height: auto !important;
+  }
+}
+#content {
+    text-align: left;
+    max-width: 600px;
+    margin: 2em auto;
+    display: block;
+    background: #fff;
+    padding: 2em;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+strong {
+  font-weight:700;
+}
+a, a .icon { 
+  color:#136fd2; 
+  color:#0a3666;
+  color:#53777A;
+  fill:#0a3666;
+  color:#000;
+  text-decoration:none;
+  border-bottom:solid 1px transparent;
+  transition: all 300ms;
+}
+a:hover,
+a:hover .icon {
+  border-bottom:solid 1px #ccc;
+  padding-bottom:5px;
+}
+a:active {
+  color:#bf7883;
+  border-bottom:solid 1px #bf7883;
+  padding-bottom:0px;
+}
+.icon {
+  fill:#222;
+  width:12px; height:12px;
+  margin:.075em .1em;
+  margin-right:.2em;
+}
+
+h1 {
+    text-align:center;
+    font-size:2em; 
+    line-height:1.5em;
+    line-height: 1.2em;
+    letter-spacing:0.15em;
+    font-family:'Arapey', serif;
+    text-transform:uppercase;
+    font-weight:normal;
+    margin-top:0;
+    position:relative;
+}
+h2 {
+    font-size:1.2em;
+    line-height:1.2em;
+    letter-spacing:.05em;
+    font-family:'Open Sans Condensed',sans-serif;
+    font-weight:700;
+}
+
+label, #help {
+  font-family: "Open Sans", sans-serif;
+}
+
+/****** System styles ******/
+
+#signature {
+  width:auto;
+  box-shadow: 0 0 5px 1px #ddd inset;
+  border:dashed 2px #53777A;
+  border: dashed 1px #53777A;
+  margin:0;
+  text-align:center;
+  min-height:80px;
+  min-width:340px;
+  transition:.2s;
+}
+/*#signature:hover {
+  border-color:#54492a;
+}
+#signature:active {
+  border-color:#C02942;
+}*/
+
+/* Big Red Button  https://cdpn.io/MwoOeW/ */
+.big-red-button {
+  border:none;
+  outline:none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing:.1rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight:300;
+  width: 5rem;
+  height: 4rem;
+  line-height:4rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #f74d4d;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569));
+  box-shadow: 0 .4rem #e24f4f; 
+}
+.big-red-button:active {
+  box-shadow: 0 0 #e24f4f;
+  transform: translate(0px, .4rem);
+  transition: 0.1s all ease-out;
+}
+
+#reset { 
+  margin:1.5em auto; 
+}
+#signature_capture {
+  width:100%; 
+  height:7em; 
+
+}
+.footer {
+  text-align: right;
+  display: block;
+  margin-top: 0rem;
+  max-width: 600px;
+  margin:auto;
+}
+small.footer {
+  font-family: "Open Sans", sans-serif;
+}
+.url {
+  font-family:"Open Sans Condensed", sans-serif;
+  /*font-size:1.1em;*/
+}

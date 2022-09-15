@@ -1,0 +1,35 @@
+body {
+  color:#fff;
+}
+
+h1 {
+  bottom:1em;
+  font-size:3em;
+  margin:0;
+  position:absolute;
+  right:1em;
+}
+
+.dot {
+  animation:yellowWipeDown 5s ease-out;
+  background-color:#fc0;
+  box-shadow:none;
+  height:100vh;
+  left:0;
+  position:absolute;
+  right:0;
+  top:0;
+  width:100vw;
+  z-index:-1;
+}
+
+@keyframes yellowWipeDown {
+  0% {
+    box-shadow:0 0 1vmin 1vmin #fc0;
+    height:1vmin;
+  }
+  100% {
+    box-shadow:0 0 10vmin 10vmin #fc0;
+    height:100vh;
+  }
+}

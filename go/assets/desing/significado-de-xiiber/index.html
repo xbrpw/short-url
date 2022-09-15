@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Xiber significa</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        strong,
+        sup,
+        dl,
+        dt,
+        dd {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline
+        }
+        
+        body {
+            line-height: 1
+        }
+        
+        @charset "UTF-8";
+        .definition dt {
+            opacity: 0;
+            overflow-y: hidden;
+            animation: stagger-in 1s 1s ease forwards;
+        }
+        
+        .definition dt .bullet {
+            transform: scale(0);
+            animation: definition-appear 0.3333333333s 2.5s cubic-bezier(0.26, 0.15, 0.43, 1.42) forwards;
+        }
+        
+        .definition dt span:nth-child(3) {
+            position: absolute;
+            transform: translate(-10px);
+            animation: definition-slide-here 0.5s 2.2s ease forwards;
+        }
+        
+        .definition dt .pronunciation {
+            transform: translate(-75%);
+            animation: definition-slide 1s 1.5s ease forwards;
+        }
+        
+        .definition dd {
+            opacity: 0;
+            animation: stagger-in 1s 2s ease forwards;
+        }
+        
+        .definition dd:nth-child(2) {
+            animation: stagger-in 0.5s 2.8s ease forwards;
+        }
+        
+        .definition dd:nth-child(3) {
+            animation: stagger-in 0.5s 3.8s ease forwards;
+        }
+        
+        @keyframes definition-slide-here {
+            0% {
+                transform: translate(-10px);
+                -moz-transform: translate(-10px);
+            }
+            100% {
+                transform: translate(15px);
+                -moz-transform: translate(15px);
+            }
+        }
+        
+        @keyframes definition-slide {
+            0% {
+                transform: translate(-75%);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+        
+        @keyframes definition-appear {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .section {
+            margin: 4rem 0 !important;
+        }
+        /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+        
+        html {
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        strong {
+            font-weight: inherit;
+        }
+        
+        strong {
+            font-weight: bolder;
+        }
+        
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+        
+        sup {
+            top: -0.5em;
+        }
+        
+         ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit;
+        }
+        
+        @font-face {
+            font-family: "lightcase";
+            src: url("../webfonts/lightcase.eot?55356177");
+            src: url("../webfonts/lightcase.eot?55356177#iefix") format("embedded-opentype"), url("../webfonts/lightcase.woff?55356177") format("woff"), url("../webfonts/lightcase.ttf?55356177") format("truetype"), url("../webfonts/lightcase.svg?55356177#lightcase") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*! Flickity v2.0.5
+        http://flickity.metafizzy.co
+        ---------------------------------------------- */
+        
+        html {
+            box-sizing: border-box;
+            font-size: 100%;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+        
+         ::-webkit-input-placeholder {
+            color: #161616;
+            opacity: 1 !important;
+        }
+        
+         :-moz-placeholder {
+            color: #161616;
+            opacity: 1 !important;
+        }
+        
+         ::-moz-placeholder {
+            color: #161616;
+            opacity: 1 !important;
+        }
+        
+         :-ms-input-placeholder {
+            color: #161616;
+        }
+        
+        strong {
+            font-weight: 700;
+        }
+        
+        html {
+            font-size: 100%;
+            line-height: 1.5;
+        }
+        
+        body {
+            color: #161616;
+            font-family: "Maison Neue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1.5;
+        }
+        
+        @-webkit-keyframes stagger-in {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 30px, 0);
+                transform: translate3d(0, 30px, 0);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        @keyframes stagger-in {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 30px, 0);
+                transform: translate3d(0, 30px, 0);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        
+        .section {
+            margin: 6rem 0;
+        }
+        
+        @media (min-width: 48em) {
+            .section {
+                margin: 12rem 0;
+            }
+        }
+        
+        .container-small {
+            margin: 0 auto;
+            max-width: 40em;
+        }
+        
+        .container-small::after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+        
+        .grid-full-width {
+            width: calc(100% - 60px);
+            float: left;
+            margin-left: 30px;
+        }
+        
+        @media only screen and (min-width: 48em) {
+            .grid-full-width {
+                width: calc(100% - 10%);
+                float: left;
+                margin-left: 5%;
+            }
+        }
+        
+        .definition dl {
+            margin: 0 auto;
+        }
+        
+        .definition dl::after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+        
+        .definition dl dt {
+            font-size: 3.0517578125rem;
+            line-height: 1.125;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            overflow-y: hidden;
+            position: relative;
+        }
+        
+        @media all and (min-width: 48em) {
+            .definition dl dt {
+                font-size: 3.0517578125rem;
+            }
+        }
+        
+        @media all and (min-width: 75em) {
+            .definition dl dt {
+                font-size: 3.8146972656rem;
+            }
+        }
+        
+        .definition dl dt span:nth-child(3) {
+            position: absolute;
+            -webkit-transform: translate(-10px);
+            transform: translate(-10px);
+        }
+        
+        .definition dl dt .pronunciation {
+            font-size: 1rem;
+            line-height: 1.5;
+            display: block;
+            font-family: "leitura-news", "Georgia", "Times New Roman", serif;
+            -webkit-transform: translate(-75%);
+            transform: translate(-75%);
+        }
+        
+        @media all and (min-width: 48em) {
+            .definition dl dt .pronunciation {
+                font-size: 1.25rem;
+            }
+        }
+        
+        .definition dl dt .pronunciation strong {
+            font-family: "Maison Neue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        }
+        
+        .definition dl dt .bullet {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 0.2em;
+            width: 0.2em;
+            background-color: #161616;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 -8px;
+            vertical-align: middle;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        
+        @media (min-width: 40em) {
+            .definition dl dt {
+                float: left;
+                width: 50%;
+            }
+        }
+        
+        .definition dl dd {
+            margin: 0;
+            opacity: 0;
+            padding: 0.75rem 0 0.75rem 20px;
+            text-indent: -18px;
+        }
+        
+        @media (min-width: 40em) {
+            .definition dl dd {
+                margin-left: 50%;
+                width: 50%;
+            }
+        }
+        
+        @media (max-width: 40em) {
+            .definition dl {
+                max-width: 300px;
+            }
+        }
+        
+        @-webkit-keyframes definition-slide-here {
+            0% {
+                -webkit-transform: translate(-10px);
+                transform: translate(-10px);
+            }
+            100% {
+                -webkit-transform: translate(15px);
+                transform: translate(15px);
+            }
+        }
+        
+        @keyframes definition-slide-here {
+            0% {
+                -webkit-transform: translate(-10px);
+                transform: translate(-10px);
+            }
+            100% {
+                -webkit-transform: translate(15px);
+                transform: translate(15px);
+            }
+        }
+        
+        @-webkit-keyframes definition-slide {
+            0% {
+                -webkit-transform: translate(-75%);
+                transform: translate(-75%);
+            }
+            100% {
+                -webkit-transform: translate(0);
+                transform: translate(0);
+            }
+        }
+        
+        @keyframes definition-slide {
+            0% {
+                -webkit-transform: translate(-75%);
+                transform: translate(-75%);
+            }
+            100% {
+                -webkit-transform: translate(0);
+                transform: translate(0);
+            }
+        }
+        
+        @-webkit-keyframes definition-appear {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes definition-appear {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+        /*# sourceMappingURL=styles.css.map */
+    </style>
+</head>
+
+<body>
+
+    <div class="section definition">
+        <div class="container-small">
+            <div class="grid-full-width">
+                <dl>
+                    <dt>
+                        <span class="word">Xii</span>
+                        <span class="bullet"></span>
+                        <span class="word slide-this">ber</span>
+                        <span class="pronunciation">/ji’ber/
+                            <strong>Nombre masculino</strong>
+                        </span>
+                    </dt>
+                    <dd><sup>1.</sup> Proviene de la lengua maya.</dd>
+                    <dd><sup>2.</sup> Significa hombre.</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+   <title>Protege tu cuenta</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="loggedIn">
+      <h2>Bienvenido</h2>
+    </div>
+    <div id="login">
+      <h2>Iniciar sesión</h2>
+      <label for="email">Email</label><br/>
+      <input id="email" name="email" type="email" /><br/>
+      <label for="password">Password</label><br/>
+      <input id="password" name="password" type="password" /><br/>
+      <button id="loginBtn">Entrar</button>
+    </div>
+    <div id="create">
+      <h2>Crea una nueva cuenta</h2>
+      <label for="createEmail">Email</label><br/>
+      <input name="createEmail" type="email" /><br/>
+      <label for="createPassword">Password</label><br/>
+      <input name="createPassword" type="password" /><br/>
+      <label for="confirmPassword">Repite Password</label><br/>
+      <input name="confirmPassword" type="password" /><br/>
+      <button id="createBtn">Crear perfil</button>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

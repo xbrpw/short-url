@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<title>Gallery Responsive + Image Modal</title>
+
+<head>
+    <style>
+        div.gallery {
+            border: 1px solid #ccc;
+            background-color: var(--main-dark);
+        }
+        
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        div.gallery img:hover {
+            opacity: 0.7;
+        }
+        /* The modalx (background) */
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 25%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 50%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        #myImg:hover {
+            opacity: 0.7;
+        }
+        /* The modalx (background) */
+        
+        .modalx {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+        /* modalx Content (image) */
+        
+        .modalx-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        /* Caption of modalx Image */
+        
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        /* Add Animation */
+        
+        .modalx-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        /* The Close Button */
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* 100% Image Width on Smaller Screens */
+        
+        @media only screen and (max-width: 700px) {
+            .modalx-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Gallery Responsive + Image Modal </h2>
+    <p>In this example, we use CSS to create a modalx (dialog box) that is hidden by default.</p>
+    <p>We use JavaScript to trigger the modalx and to display the current image inside the modalx when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modalx.</p>
+    <br>
+
+    <div class="responsive">
+        <div class="gallery">
+            <img id="myImg" src="https://www.w3schools.com/css/img_5terre.jpg" alt="Mountains" width="600" height="400">
+        </div>
+    </div>
+
+    <!-- The modalx -->
+    <div id="myv" class="modalx">
+        <span class="close">&times;</span>
+        <img class="modalx-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <img id="myImg" src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="600" height="400"> </div>
+    </div>
+
+
+    <div class="responsive ">
+        <div class="gallery">
+            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Forest" width="600" height="400">
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Northern Lights" width="600" height="400">
+        </div>
+    </div>
+
+
+
+    <div class="clearfix"></div>
+
+    <script>
+        var mobileNav = {
+            // Variables
+            $overlayNav: $('.overlay--nav'),
+            $overlayNavChild: $('.overlay--nav').children('span'),
+            $overlayContent: $('.overlay--content'),
+            $overlayContentChild: $('.overlay--content').children('span'),
+            $navTrigger: $('.nav__trigger'),
+            $nav: $('.nav--mobile'),
+            transitionEnd: 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+
+            init: function() {
+                var self = this;
+
+                // Init the layers
+                this.initLayers();
+                $(window).on('resize', function() {
+                    self.initLayers();
+                });
+
+                // Handle the transitions
+                this.$navTrigger.on('click', function(e) {
+                    e.preventDefault();
+
+                    if (!self.$navTrigger.hasClass('is-active')) {
+                        // .nav--trigger active
+                        self.$navTrigger.addClass('is-active');
+
+                        // .overlay--nav active
+                        self.$overlayNavChild.addClass('is-active').one(self.transitionEnd, function() {
+                            // .nav active
+                            self.$nav.addClass('is-active');
+                        });
+
+                        // no-csstransitions fallback
+                        if ($('html').hasClass('no-csstransitions')) {
+                            self.$nav.addClass('is-active');
+                        }
+                    } else {
+                        // .nav inactive
+                        self.$nav.removeClass('is-active').one(self.transitionEnd, function() {
+                            // .overlay--nav inactive
+                            self.$overlayNavChild.removeClass('is-active').off();
+
+                            // .nav--trigger inactive
+                            self.$navTrigger.removeClass('is-active');
+                        });
+
+                        // no-csstransitions fallback
+                        if ($('html').hasClass('no-csstransitions')) {
+                            self.$overlayNavChild.removeClass('is-active');
+                            self.$navTrigger.removeClass('is-active');
+                        }
+                    }
+                });
+            },
+
+            initLayers: function() {
+                var self = this;
+                var diameter = (Math.sqrt(Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2)) * 2);
+
+                self.$overlayNavChild.css({
+                    scaleX: 0,
+                    scaleY: 0,
+                    translateZ: 0,
+                    height: diameter + 'px',
+                    width: diameter + 'px',
+                    top: -(diameter / 2) + 'px',
+                    left: -(diameter / 2) + 'px',
+                });
+            }
+        }
+
+        mobileNav.init();
+    </script>
+    <script>
+        // Get the modalx
+        var modalx = document.getElementById("myv");
+
+        // Get the image and insert it inside the modalx - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalxImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modalx.style.display = "block";
+            modalxImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modalx
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modalx
+        span.onclick = function() {
+            modalx.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+    * {
+        font: inherit;
+    }
+    
+    body {
+        display: flex;
+        flex-flow: column;
+        margin: 0;
+        font: 100%/1.5 Helvetica Neue, sans-serif;
+        min-height: 100vh;
+    }
+    
+    main {
+        flex: 1;
+    }
+    
+    form,
+    main {
+        display: flex;
+    }
+    
+    input,
+    iframe {
+        flex: 1;
+    }
+    
+    input {
+        padding: .4em;
+        border: 0;
+        background: #35363A;
+        color: white;
+        font-display: center;
+        font: 100%/2 Helvetica Neue, sans-serif;
+        /* #35363A #202124*/
+    }
+    
+    i,
+    form {
+        padding: .05em;
+        border: 0;
+        background: #35363A;
+        color: white;
+        font-display: center;
+        font: 100%/2 Helvetica Neue, sans-serif;
+        /* #35363A*/
+    }
+    
+    input:last-of-type {
+        order: 1;
+    }
+    
+    iframe {
+        border: 0;
+    }
+    
+    iframe:last-of-type {
+        border-left: 1px solid #bbb;
+    }
+    
+    button {
+        position: relative;
+        border: none;
+        background: #35363A;
+        color: white;
+        cursor: pointer;
+        font-size: 110%;
+        letter-spacing: -.05em;
+        padding: 8px
+    }
+    
+    button:hover {
+        background: #35363A;
+        color: white;
+        font-weight: bold;
+        font: 100%/2 Helvetica Neue, sans-serif;
+    }

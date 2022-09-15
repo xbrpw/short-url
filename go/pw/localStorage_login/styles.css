@@ -1,0 +1,30 @@
+body {
+  background: crimson;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+div {
+  margin: 35px 0 0 35px;
+}
+
+#loggedIn {
+  display: none;
+}
+
+input {
+  border: 0;
+  padding: 10px;
+  margin: 10px 0 15px 0;
+  font-size: 1.4em;
+  width: 250px;
+  color: #333;
+}
+
+button {
+  border: 0;
+  padding: 15px 20px;
+  background: steelblue;
+  font-size: 1.2em;
+  color: #fff;
+}

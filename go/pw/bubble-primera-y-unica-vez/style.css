@@ -1,0 +1,99 @@
+/* reminder bubble styling */
+body{
+    background: url('https://goo.gl/ko4fB') center top no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bubble{
+  background-color: #f8d97c;
+  border: 3px solid #e8b929;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: #444;
+  display: none;
+  padding: 0px;
+  position: fixed;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 0 18px rgba(0,0,0,0.6);
+}
+.bubble p {
+  font: normal 18px Arial, Sans-serif;
+  margin: 8px;
+}
+.bubble strong{
+  font-style: italic;
+  font-weight: bold;
+}
+.bubble p, .bubble strong, .bubble span{
+  text-shadow: 0 1px 0 rgba(256,256,256,0.5);
+}
+.iphone{
+  bottom: 0;
+    left: 51%;
+    width: 240px;
+    margin-bottom: 25px;
+  margin-left: -125px;
+}
+.iphone:before,
+.iphone:after {
+  bottom: -16px;
+  border: solid 20px transparent;
+  border-bottom: 0;
+  border-top-color: #f8d97c;
+  content: "\0020";
+  display: block;
+  height: 0;
+  left: 42%;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: 101;  
+}
+.iphone:before {
+  bottom: -20px;
+  border-top-color: #e8b929;
+  z-index: 99;
+}
+.ipad{
+    top: 22px;
+    left: 67px;
+    width: 440px;
+}
+.ipad p{
+    font-size: 20px;
+}
+.ipad:before,
+.ipad:after {
+  top: -16px;
+  border: solid 20px transparent;
+  border-top: 0;
+  border-bottom-color: #f8d97c;
+  content: "\0020";
+  display: block;
+  height: 0;
+  left: 16%;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  z-index: 101;  
+}
+.ipad:before {
+  top: -20px;
+  border-bottom-color: #e8b929;
+  z-index: 99;
+}
+a.bubble-close{
+  background-color: #e8b929;
+    border-radius: 80px;
+    color: white;
+    cursor: pointer;
+    font: bold 20px Arial, Sans-serif;
+    float: right;
+    margin-right: -20px;
+    margin-top: -15px;
+    padding: 3px 9px;
+}

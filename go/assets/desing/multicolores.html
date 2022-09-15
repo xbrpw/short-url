@@ -1,0 +1,186 @@
+
+<!doctype html>
+<html class="no-js" lang="en"><!--!
+    Oh so you're an inspector?
+    View the source here: https://github.com/maxboeck/mxb
+  -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="preload" href="https://mxb.dev/assets/fonts/noe-display-medium.woff2" as="font" type="font/woff2" crossorigin><link rel="preconnect" href="https://webmention.io">
+    <link rel="stylesheet" href="https://mxb.dev/assets/styles/themes.css"><link rel="stylesheet" href="https://mxb.dev/assets/styles/main.css">
+    <meta name="description" content="Forms on the web don't usually play nice with bad connections. If you try to submit a form while offline, you'll most likely just lose your input. Here's how we might fix that.">
+    <meta name="image" content="https://mxb.dev/blog/offline-forms/cover.jpg">
+    <meta property="og:title" content="Offline-Friendly Forms">
+    <meta property="og:description" content="Forms on the web don't usually play nice with bad connections. If you try to submit a form while offline, you'll most likely just lose your input. Here's how we might fix that.">
+    <meta property="og:url" content="https://mxb.dev/blog/offline-forms/">
+    <meta property="og:image" content="https://mxb.dev/blog/offline-forms/cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2017-08-23T00:00:00"><meta name="author" content="Max Böck">
+    <meta property="og:site_name" content="Max Böck"><meta property="og:locale" content="en_US">
+    <meta name="twitter:site" content="@mxbck"><meta name="twitter:creator" content="@mxbck"><meta property="fb:app_id" content="127677017332959">
+    <link rel="canonical" href="https://mxb.dev/blog/offline-forms/">
+    <script type="text/javascript" src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=nbbisHJQXCdKLUNevPAFlp8oW3o1Htfe24sQ33ID2nM8DBLGJhqxiipJYH6Ij6j9OuAMrp8Rhntk6E2qspWyCA" charset="UTF-8"></script>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=o2NvMDxR4csb8N9Wxm9-T53Mo_HV07zLOV64bLX5bywC1Kbc3h9BnOOzuYbnU2BB771ORC3n156dxzErid3f7Q" charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9teGIuZGV2L2Jsb2cvb2ZmbGluZS1mb3Jtcy8"/>
+    <script type="application/ld+json">{
+          "name":"Max Böck",
+          "description":"Max Böck is a professional front-end developer based in Vienna, Austria.",
+          "author": {
+              "@type":"Person",
+              "name":"Max Böck"
+          },
+          "@type":"WebSite",
+          "url":"https://mxb.dev",
+          "image":"https://mxb.dev/assets/images/avatar2.jpg",
+          "headline":"Max Böck",
+          "sameAs":[
+              "https://twitter.com/mxbck",
+              "https://github.com/maxboeck"
+          ],
+          "@context":"http://schema.org"
+      }</script>
+      
+      <link rel="apple-touch-icon" sizes="180x180" href="https://mxb.dev/assets/images/favicon/apple-touch-icon.png?v=1">
+      <link rel="icon" type="image/png" href="https://mxb.dev/assets/images/favicon/favicon-32x32.png?v=1" sizes="32x32">
+      <link rel="icon" type="image/png" href="https://mxb.dev/assets/images/favicon/favicon-16x16.png?v=1" sizes="16x16">
+      <link rel="mask-icon" href="https://mxb.dev/assets/images/favicon/safari-pinned-tab.svg?v=1" color="#1a1a1a">
+      <link rel="shortcut icon" href="https://mxb.dev/assets/images/favicon/favicon.ico?v=1">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="theme-color" content="#1a1a1a">
+      <link type="application/atom+xml" rel="alternate" href="https://mxb.dev/feed.xml" title="Max Böck">
+      <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+      <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+      <meta name="monetization" content="$ilp.uphold.com/7qZLaNKjDa87">
+      <link rel="pingback" href="https://webmention.io/mxb.dev/xmlrpc"><link rel="webmention" href="https://webmention.io/mxb.dev/webmention">
+      <script>(function() {
+      var theme = localStorage.getItem('theme');
+      window.metaColors = {'default':'#f7f7f9','dark':'#252526','beach':'#e3f6f5','choco':'#41312E','moomoo':'#f3e1d8','bowser':'#29293e','yoshi':'#f2ede9','rainbow':'#311b46','lobster':'#ffb9ad','hackernews':'#F8F8EC'};
+      if (theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', window.metaColors[theme]);
+      }
+  })();</script></head>
+
+<body>
+    <a href="#main" class="sr-skip-link">skip to main content</a><div class="titlebar"><div class="titlebar__inner"></div></div><div class="hfeed layout" role="document"><div class="themepicker js-themepicker" data-nosnippet hidden>
+        <h3 class="themepicker__title">Select Theme</h3>
+        <ul class="themepicker__list" id="theme-menu"><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Classic'" data-theme="default"><span class="themepicker__name">Classic</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Dark'" data-theme="dark"><span class="themepicker__name">Dark</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Koopa Beach'" data-theme="beach"><span class="themepicker__name">Koopa Beach</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Choco Mountain'" data-theme="choco"><span class="themepicker__name">Choco Mountain</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Moo Moo Farm'" data-theme="moomoo"><span class="themepicker__name">Moo Moo Farm</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Bowser&#39;s Castle'" data-theme="bowser"><span class="themepicker__name">Bowser&#39;s Castle</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Yoshi Valley'" data-theme="yoshi"><span class="themepicker__name">Yoshi Valley</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Rainbow Road'" data-theme="rainbow"><span class="themepicker__name">Rainbow Road</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Lobster Life'" data-theme="lobster"><span class="themepicker__name">Lobster Life</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Hacker News'" data-theme="hackernews"><span class="themepicker__name">Hacker News</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li></ul><button class="iconbtn themepicker__close js-themepicker-close"><span class="sr-only">close themepicker</span> <svg class="icon icon--close" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-close"></use></svg></button>
+    </div>
+    
+    <header class="header" role="banner"><div class="header__inner container"><a class="header__brand" href="/" rel="home" aria-label="Go To Homepage"><img class="header__brand__avatar" src="" width="48" height="48" alt="">         <span class="header__brand__text">Max Böck</span></a>
+
+        <div class="header__nav">
+            <nav class="nav js-nav" role="navigation" tabindex="-1">
+            
+            <button class="iconbtn nav__togglebtn js-nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu"><span class="menuicon"><span class="menuicon__bar"></span> <span class="menuicon__bar"></span> <span class="menuicon__bar"></span> <span class="menuicon__bar"></span></span></button><div class="nav__content"><ul class="nav__menu js-nav-menu" id="nav-menu">
+                <li class="nav__item"><a href="/" class="nav__link"><span class="nav__num" aria-hidden="true">01</span> Home</a></li>
+                <li class="nav__item nav__item--active"><a href="/blog/" class="nav__link"><span class="nav__num" aria-hidden="true">02</span> Writing</a></li><li class="nav__item"><a href="/notes/" class="nav__link"><span class="nav__num" aria-hidden="true">03</span> Notes</a></li>
+                <li class="nav__item"><a href="/about/" class="nav__link"><span class="nav__num" aria-hidden="true">04</span> About</a></li></ul></div><div class="nav__bg"><div class="nav__bg__circle"></div></div></nav><button class="iconbtn header__themebtn js-themepicker-toggle" aria-expanded="false" aria-controls="theme-menu"><span class="sr-only">toggle theme panel</span> <svg class="icon icon--theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></svg></button></div></div>
+            </header>
+
+        <main class="main container" role="main" id="main" tabindex="-1">
+            <article id="offline-friendly-forms" class="post h-entry" role="article" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="offline-friendly-forms-title">
+            <header class="post__header">
+                <h1 id="offline-friendly-forms-title" class="post__title p-name title" itemprop="headline">Offline-Friendly Forms</h1>
+            <div class="post__meta"><p><time class="post__date dt-published" itemprop="datePublished" datetime="2017-08-23T00:00:00">23 Aug 2017</time> <span aria-label="in category">&sdot;</span> <span class="post__tags p-category">code</span></p></div></header><div class="post__content e-content markdown" itemprop="articleBody"><p class="lead">Forms on the web don't usually play nice with bad connections. If you try to submit a form while offline, you'll most likely just lose your input. Here's how we might fix that.</p><p><small>TL;DR: Here’s the <a href="https://codepen.io/mxbck/pen/ayYGGO/" target="_blank">CodePen Demo</a> of this post.</small></p><p>With the introduction of Service Workers, developers are now able to supply experiences on the web that will work even without an internet connection. While it’s relatively easy to cache static resources, things like forms that require server interaction are harder to optimize. It is possible to provide a somewhat useful offline fallback though.</p>
+            
+            
+            <script>
+                function clickCounter() {
+                  if (typeof(Storage) !== "undefined") {
+                    if (sessionStorage.clickcount) {
+                      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                    } else {
+                      sessionStorage.clickcount = 1;
+                    }
+                    document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+                  } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                  }
+                }
+                </script>
+               
+                
+                <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+                <div id="result"></div>
+                <p>Click the button to see the counter increase.</p>
+                <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+            
+
+
+                <script>
+                    function clickCounter() {
+                      if (typeof(Storage) !== "undefined") {
+                        if (localStorage.clickcount) {
+                          localStorage.clickcount = Number(localStorage.clickcount)+1;
+                        } else {
+                          localStorage.clickcount = 1;
+                        }
+                        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+                      } else {
+                        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                      }
+                    }
+                    </script>
+                    
+                    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+                    <div id="result"></div>
+                    <p>Click the button to see the counter increase.</p>
+                    <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+            
+            
+               
+                    
+                    <div class="extend" id="codepen-demo">
+                        
+                       
+                         </div>
+                    </div>
+                    
+                    <div class="post__footer">
+                        
+                        <div hidden>
+                
+                            <a class="u-url" href="https://mxb.dev/blog/offline-forms/">Offline-Friendly Forms</a><p class="h-card p-author"><a class="p-name u-url" rel="author" href="https://mxb.dev">Max Böck</a>
+                            
+                            <img class="u-photo" src="https://mxb.dev/assets/images/avatar2.jpg"></p>
+                    </div>
+            
+            <p class="post__footer__info">Published in [code] &sdot; 23 Aug 2017<br><a href="https://github.com/maxboeck/mxb/tree/master/./src/posts/offline-forms/2017-08-23-index.md" title="suggest a change to this post by submitting a PR">Edit this Post</a></p><a href="https://twitter.com/intent/follow?screen_name=mxbck" target="_blank" rel="noopener noreferrer" title="Follow Max Böck on Twitter" class="btn btn--twitter"><svg class="icon icon--twitter" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-twitter"></use></svg> Follow @mxbck</a></div></article>
+            
+            
+            <div class="postsection"><div class="postsection__header">
+                <h3 class="postsection__title u-mb0">Webmentions</h3><a href="https://indieweb.org/Webmention" class="postsection__info" target="_blank" rel="noopener noreferrer"><svg class="icon icon--question" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-question"></use></svg> What’s this?</a></div>
+                <div class="webmentions" id="webmentions" data-url="https://mxb.dev/blog/offline-forms/" data-last-fetched="2022-09-06T06:53:46.483Z"><div data-render-root><div class="webmentions__preview"><ol class="webmentions__list">
+                
+                <li class="webmentions__item">
+                    <div class="webmention" id="webmention-674496"><div class="webmention__meta"><a class="webmention__author h-card u-url" href="https://twitter.com/vick_OnRails/status/1164848818195697664" target="_blank" rel="ugc nofollow"><img class="webmention__author__photo u-photo" src="https://webmention.io/avatar/pbs.twimg.com/c9154ba331fe188961f5969b61d5815e4dd64835e9528ad689b6bc353b477600.jpg" alt="" width="48" height="48" loading="lazy"> <strong class="p-name">Victor Ofoegbu</strong> </a><span class="webmention__meta__divider" aria-hidden="true">&sdot;</span> <time class="webmention__pubdate dt-published" datetime="2019-08-23T10:36:14+00:00">23 Aug 2019</time></div><div class="webmention__content p-content">
+        <a href="https://twitter.com/mxbck">@mxbck</a>'s blog is a great resource for frontend web development. I've specifically enjoyed this article on offline friendly forms. It makes a whole lot of sense to do things this way. <a href="https://mxb.dev/blog/offline-forms/">mxb.dev/blog/offline-f…</a></div></div></li></ol></div></div></div></div>
+        
+        <div class="postsection"><h3 class="postsection__title">Other things I've written</h3>
+            <ol class="otherposts">            
+            <li class="otherposts__item"><a href="/blog/make-free-stuff/" class="otherposts__link"><span class="otherposts__title">Make Free Stuff</span> <time class="otherposts__date" datetime="2022-01-25T00:00:00" aria-label=", written 25 Jan 2022">25 Jan 2022</time></a></li>
+            
+            <li class="otherposts__item"><a href="/blog/media-queries-in-times-of-container-queries/" class="otherposts__link"><span class="otherposts__title">Media Queries in Times of @container</span> <time class="otherposts__date" datetime="2021-06-11T00:00:00" aria-label=", written 11 Jun 2021">11 Jun 2021</time></a></li>
+            <li class="otherposts__item"><a href="/blog/the-whimsical-web/" class="otherposts__link"><span class="otherposts__title">Whimsical Website Club</span> <time class="otherposts__date" datetime="2020-06-30T00:00:00" aria-label=", written 30 Jun 2020">30 Jun 2020</time></a></li></ol></div>
+        </main>
+        
+        <footer class="footer h-card" role="contentinfo"><div class="footer__inner container"><p class="footer__item"><strong>&copy; 2012&ndash;2022</strong><br><a class="p-name u-url" rel="me" href="https://mxb.dev">Max Böck</a></p><p class="footer__item"><strong>Subscribe</strong><br><a href="/mailinglist">Mailing List</a></p><p class="footer__item"><strong>Social</strong><br><a href="https://twitter.com/mxbck" title="Twitter" rel="me">Twitter</a> / <a href="https://github.com/maxboeck" title="Github" rel="me">Github</a></p><p class="footer__item"><strong>Legal</strong><br><a href="/privacy/">Privacy Policy</a></p><p class="footer__item"><strong>Links</strong><br><a href="/blogroll/">Blogroll</a></p>
+            
+            <p class="footer__item footer__item--right u-desktop-only">
+                <a href="https://speedlify.mxb.dev/mxb.dev/" class="footer__speedlify">
+                    <speedlify-score speedlify-url="https://speedlify.mxb.dev" hash="7dda0135" score weight> </speedlify-score>
+                </a>
+            </p>
+
+            <p class="footer__item footer__item--right"><a href="https://github.com/maxboeck/mxb/tree/master/./src/posts/offline-forms/2017-08-23-index.md" class="footer__icon" title="Edit this page on Github"><span class="sr-only">Edit this page on Github</span> 
+                <svg class="icon icon--github" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-github"></use></svg> </a><a href="/feed.xml" class="footer__icon" title="RSS Feed">
+                <span class="sr-only">RSS Feed</span> <svg class="icon icon--feed" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-feed"></use></svg></a></p></div></footer></div><script src="https://mxb.dev/assets/scripts/main.js" defer="defer"></script>
+
+            <script src="https://mxb.dev/assets/scripts/webmentions.js" defer="defer"></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </body></html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Tabla con contenido editable</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body ng-cloak ng-app="TablaDemo">
+  <br>
+  <div class="container" ng-controller="TablaCtrl">
+    <h1>Tabla con contenido editable</h1>
+    <br>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Correo Electrónico</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in lista">
+              <td style="cursor: not-allowed;">
+                {{$index + 1}}
+              </td>
+              <td editable-td row="{{$index}}" field="nombres">
+                {{item.nombres}}
+              </td>
+              <td editable-td row="{{$index}}" field="apellidos">
+                {{item.apellidos}}
+              </td>
+              <td editable-td row="{{$index}}" field="email">
+                {{item.email}}
+              </td>
+              <td>
+                <span class="glyphicon glyphicon-trash" style="cursor: pointer;" ng-click='eliminar($index)' />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-group">
+          <button class="btn btn-default" ng-click='agregar()'>
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+          <button type="button" class="btn btn-default" ng-click='recuperarValores()'>Recuperar Valores</button>
+        </div>
+        <br>
+        <br>
+        <div id='JSON' />
+      </div>
+    </div>
+  </div>
+
+  <small>
+    <p>
+      Leer el post completo en <a href="http://wanderlp.com/blog/tabla-con-contenido-editable-en-angularjs" target="_blank">@wanderlp</a>
+    </p>
+    <p>Indicaciones:</p>
+    <ul>
+      <li>Haga click en la columna y fila que desea modificar (el texto a modificar será seleccionado)</li>
+      <li>Modifique los valores que desea, puede utilizar la tecla <code>tab</code> para navegar entre los campos</li>
+      <li>Puede agregar más elementos presionando <span class="glyphicon glyphicon-plus"></span></li>
+      <li>Puede eliminar líneas presionando <span class="glyphicon glyphicon-trash"></span></li>
+      <li>La opción <strong>'Recuperar Valores'</strong> mostrará en la parte inferior el contenido del arreglo <code>$scope.lista</code></li>
+    </ul>
+    <p>Más ejemplos del autor:</p>
+    <ul>
+      <li><a href="https://codepen.io/wanderlp/full/jEgWVd/" target="_blank">Pagineo con Ángular</a></li>
+      <li><a href="https://codepen.io/wanderlp/full/WvYNKa/" target="_blank">Pagineo con Angular y Bootstrap</a></li>
+      <li><a href="https://codepen.io/wanderlp/full/RPNOLW/" target="_blank">Drag and Drop con Angular</a></li>
+      <li><a href="https://codepen.io/wanderlp/full/gpxWOa/" target="_blank">Angular Local Storage Demo</a></li>
+      <li><a href="https://codepen.io/wanderlp/" target="_blank">Más...</a></li>
+    </ul>
+  </small>
+  <small>Autor: <a href="https://github.com/wanderlp" target="_blank">@wanderlp</a></small>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

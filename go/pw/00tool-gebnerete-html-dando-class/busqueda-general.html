@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+
+
+<body id="myMenu">
+  <span style="background-color:#bbb;">
+    <h2>Busqueda</h2>
+    <input type="text" id="mySearch" onkeyup="busquedaGeneral()" placeholder="Qué buscas..." title="Type in a category">
+  </span>  
+  <br>
+
+  <div style="background-color:rgb(192, 86, 86);"  class="paraSerEncontrado">
+    <ul >
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">PHP</a></li>
+      <li><a href="#">Python</a></li>
+      <li><a href="#">jQuery</a></li>
+      <li><a href="#">SQL</a></li>
+      <li><a href="#">Bootstrap</a></li>
+      <li><a href="#">Node.js xxx</a></li>
+    </ul>
+
+ <div style="background-color:rgb(66, 21, 21);"  class="paraSerEncontrado">
+    <h2>Page Content</h2>
+    <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>luis angel xxx</p>    
+  </div>
+
+  
+  <div  class="paraSerEncontrado" style="background-color:#ddd;">
+    <h2>Mis perritas</h2>
+    <p>Tengo tres, una se llama Phiphi</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>luis angel </p>    
+  </div>
+
+<script>
+function busquedaGeneral() {
+  var input, filter, div, a, body, i, paraSerEncontrado;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  body = document.getElementById("myMenu");
+  div = body.getElementsByTagName("div");
+  for (i = 0; i < div.length; i++) {
+    paraSerEncontrado = div[i].getElementsByClassName("paraSerEncontrado")[0];
+    if (paraSerEncontrado.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      div[i].style.display = "";
+    } else {
+      div[i].style.display = "none";
+    }
+  }
+}
+</script>

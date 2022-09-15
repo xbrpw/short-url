@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Signed Contract</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="robots" content="noindex">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Arapey);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+body {
+    font-family: "Libre Baskerville", serif;
+    font-size:16px;
+    line-height:1.5em;
+    color:#000;
+    margin:0;
+    background:#fff;
+}
+@media (max-width:600px) {
+    body { font-size:14px; }
+}
+@media print {
+   .noprint { display:none !important; }
+}
+.hidden {
+    display:none;
+}
+#content {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    padding: 0 2em;
+    background: #fff;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2em;
+    letter-spacing: 0.15em;
+    font-family: "Arapey", serif;
+    font-weight: normal;
+    margin: 1em 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5em 0;
+}
+h2 {
+    font-size:1.2em;
+    line-height:1.2em;
+    letter-spacing:.05em;
+    font-family:"Open Sans Condensed",sans-serif;
+    font-weight:700;
+}
+#signature {
+    width:auto;
+    border:dashed 2px #53777A;
+    margin:0;
+    text-align:center;
+}
+#hk,
+#dev_signature {
+    max-width:333px;
+    display:block;
+}
+#date-ip {
+    font-size:1.2em;
+    line-height:1.2em;
+    letter-spacing:.05em;
+    font-family:"Open Sans Condensed",sans-serif;
+    font-weight:400;
+}
+#print-pdf {
+    text-align:center;
+    padding:1.5em 0;
+    margin-top:2em;
+    border-top:solid 1px #ccc;
+}
+.buttons {
+    text-align:center;
+    margin:1.5em auto;
+}
+button {
+    margin: 0 .5em;
+    font-size:1.2em;
+    line-height:1.5em;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-weight: 700;
+    text-transform:uppercase;
+    color: #0a3666;
+}
+button:hover {
+    color: #136fd2;
+}
+</style>
+</head>
+
+<body>
+
+<div id="content">
+
+<h1>Contract of work for website design and development</h1>
+<p>Between <strong>Alice</strong>, referred to below as "Designer", and <strong>Bob</strong>, referred to below as "Customer".</p>
+<h2>1. Agreement of parties</h2>
+<p>Customer hires Designer to redesign the current website, <strong>bobswebsite.com</strong>, for the estimated total price of <strong>$PRICE</strong>. Designer agrees to provide quality service and to answer to the Customers requests in a timely manner.</p>
+<p>The agreed payment plan is at the end of the document.</p>
+<h2>2. Legal matters and copyrights</h2>
+<p>The Customer will guarantee to the Designer that any elements of text, graphics, photos, trademarks or other artwork that the Customer provides for inclusion in the website are either owned by him or that he has the permission to use them. When the Designer receives the final payment, copyright is automatically assigned as follows: Customer will own the graphics, virtual elements, text content photographs and other data provided, unless someone else owns them. The Designer owns the XHTML markup, CSS and other code and he licenses it to the Customer for use on only this project. Designer can reserve the right to display, with Customer\'s consent, the work as part of the portfolio.</p>
+<h2>3. Term and termination</h2>
+<ol style="list-style-type: lower-alpha;">
+<li>This contract shall commence upon the first payment, as outlined in the payment plan and shall remain effective until the services are completed and delivered.</li>
+<li>This contract may be terminated at any time by either party effective immediately upon notice, or the mutual agreement of the parties.</li>
+<li>In the event of termination, Designer shall be compensated for the service performed through the date of termination in the amount (a) any advanced payment, (b) a prorated portion of the fees due, or (c) hourly fees for work performed by the Designer at the time of the termination, whichever is greater, together with any additional costs incurred trough and up to the date of cancellation.</li>
+<li>This Contract may be modified by parties; any modification must be in writing.</li>
+<li>All notices to be given hereunder shall be transmitted in writing by electronic mail and will only be effective upon return confirmation.</li>
+</ol>
+<h2>4. Force majeure</h2>
+<p>Designer shall not be deemed in breach of this contract if Designer is unable to complete the services or any portion by reason of fire, earthquake, labor dispute, illness, internet breaches or any technical issues that may appear beyond Designer\'s control. Upon occurrence of any Force Majeure Event, Designer shall give notice to the Customer of his inability to perform or of delay in completing the services and shall propose revisions to the schedule for completion of the services.</p>
+<h2>5. Payment plan</h2>
+<p>Payment shall be done as follows:</p>
+<ul>
+<li>50% of total estimated fee will be required to commence work, after this contract has been approved and signed by both parties.</li>
+<li>50% upon project closure.</li>
+</ul>
+<p>Any extra time required outside the project timeline/services mentioned at point 1 of this contract, will be billed at a rate of <strong>$FEE</strong> per hour.</p>
+<h2>Both parties agree to the terms stipulated above:</h2>
+  <form method="post" class="noprint" id="signature_form">
+    <div id="signature">
+      <!-- Client Signature Canvas -->
+    </div>
+
+    <div class="buttons">
+      <button id="reset" type="button">Reset</button>
+      <button id="submit" type="submit">Done &rarr;</button>
+    </div>
+
+    <input type="hidden" id="client_signature" name="client_signature" />
+  </form>
+
+</div> <!-- #content -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- https://github.com/brinley/jSignature/blob/master/README.md -->
+<script src="https://cdn.rawgit.com/willowsystems/jSignature/master/libs/jSignature.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("#signature").jSignature();
+  var $sigdiv = $("#signature");
+  var datapair = $sigdiv.jSignature("getData", "svgbase64");
+
+  $("#signature").bind("change", function(e) {
+    var data = $("#signature").jSignature("getData");
+    $("#client_signature").val(data);
+  });
+
+  $("#reset").click(function(e){
+    $("#signature").jSignature("clear");
+    var data = $("#signature").jSignature("getData");
+    $("#client_signature").val("");
+    e.preventDefault();
+  });
+
+  $("#submit").click(function(e) {
+    $("#signature_form").slideUp(200);
+    //$(".buttons").slideUp(300);
+    $("#signature_form").after("<img id=\"hk\" class=\"hidden\" />");
+    var data = $("#signature").jSignature("getData");
+    $("#hk").attr("src", data );
+    $("#hk").slideDown(200);
+    // Loading text
+    $("#dev_signature").css("opacity",".625")
+    $("#content").css({"color":"#aaa","list-style-color":"#aaa !important"}).append("<div id=\"loading_area\"></div>");
+    $("#loading_area").append("<h2 id=\"loading\" style=\"text-align:center; color:green; display:none;\">Saving Contract…</h2>");
+    $("#loading_area").append("<p id=\"loading2\" style=\"text-align:center; color:#222; display:none;\">This shouldn\'t take more than a minute.</p>");
+    $("#loading").slideDown(300, function() {
+		 		$("#loading2").delay(2000).slideDown(300);
+  	});
+	});
+});
+</script>
+</body>
+</html>

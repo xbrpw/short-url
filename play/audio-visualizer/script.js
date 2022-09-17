@@ -196,13 +196,13 @@ const drawLine = (ctx, color, c1, c2) => {
   ctx.strokeStyle = color
   ctx.stroke()
 }
-
+    // audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1468070/Boost.mp3')
 let drawVisual = null
 const processAudio = mp3 => {
   let audio = null
   if(mp3 === 'default'){
-    // audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1468070/Boost.mp3')
-    audio = new Audio('httpop-es-2022.mp3')
+
+    audio = new Audio('pop-es-2022.mp3')
     audio.crossOrigin = 'anonymous'
   }
   else{

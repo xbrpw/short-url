@@ -1,0 +1,107 @@
+body{
+	margin:0;
+	color:#444;
+	background:#ecf0f1;
+	font:300 14px/18px Roboto, sans-serif;
+	background:#DAD299;
+	background:linear-gradient(to left, #DAD299 , #B0DAB9);
+
+}
+*,:after,:before{box-sizing:border-box}
+.pull-left{float:left}
+.pull-right{float:right}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+
+.card-wrap{
+	margin:auto;
+	padding:15px;
+	margin-top:30px;
+	max-width:500px;
+	border-radius:4px;
+	text-align:center;
+	border:2px solid #8CC152;
+	background-color:#E6E9ED;
+}
+.card-wrap .title{
+	color:#fff;
+	padding:15px;
+	margin:-17px;
+	font-size:16px;
+	margin-bottom:3px;
+	background-color:#8CC152;
+	border-radius:2px 2px 0 0;
+}
+
+.scratch-wrap{
+	width:180px;
+	margin:auto;
+	height:180px;
+	position:relative;
+}
+.scratch-wrap canvas{
+	top:0;
+	left:0;
+	position:absolute;
+}
+.scratch-wrap .scratch{
+	width:100%;
+	height:100%;
+	padding:30px;
+	text-align:center;
+}
+.scratch .photo{
+	width:40px;
+	height:40px;
+	margin:auto;
+	overflow:hidden;
+	border-radius:50%;
+	margin-bottom:10px;
+	border:2px solid #fff;
+	box-shadow:0 2px 10px 0 rgba(0,0,0,.16),0 2px 5px 0 rgba(0,0,0,.26);
+}
+.scratch .photo img{
+	width:100%;
+}
+.scratch .message{
+	padding:4px;
+	font-size:13px;
+	background:#fff;
+	border-radius:3px;
+	position:relative;
+	border:1px solid #ccc;
+}
+.scratch .message:before,
+.scratch .message:after{
+	top:0;
+	width:0;
+	height:0;
+	left:50%;
+	content:'';
+	margin-left:-8px;
+	position:absolute;
+	border:8px solid transparent;
+}
+.scratch .message:before{
+	top:-17px;
+	border-bottom:8px solid #ccc;
+}
+.scratch .message:after{
+	top:-15px;
+	border-bottom:8px solid #fff;
+}
+#scratch-rascale{cursor:url(https://www.w3schools.com/w3images/wedding.jpg),auto}
+.coupon-create{
+	color:#333;
+	margin:auto;
+	padding:5px 8px;
+	border-radius:2px;
+	text-decoration:none;
+	display:inline-block;
+	border:2px solid #333;
+	text-transform:uppercase;
+}
+.coupon-create:hover{
+	color:#fff;
+	background-color:#333;
+}

@@ -2,7 +2,7 @@ $(document).ready(function () {
   $(".login").click(function () {
     var user = $(".user").val(),
         pass = $(".pass").val();
-    if(user === "admin" && pass === "admin") {
+    if(user === "Sec0514" && pass === "LsBbs287") {
       window.location.replace("welcome.html");
     } else {
     window.location.replace("index.html");

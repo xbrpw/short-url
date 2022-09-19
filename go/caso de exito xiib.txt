@@ -1,0 +1,16 @@
+CASO DE ESTUDIO
+Blog austriaco _
+¿Buscas inspiración para tu próximo viaje? El blog oficial de Austrian Airlines se complace en ofrecer ayuda aquí. Puede descubrir los próximos destinos de moda allí.
+
+Descripción del proyecto
+PUDO
+
+ Una gran cantidad de consejos y "cosas para hacer y ver", preparados para la era digital.
+
+
+El mayor desafío: un número cada vez mayor de publicaciones de todo el mundo. Este es un gran contenido, pero ¿cómo haces que sea fácil de encontrar?
+
+A la gente le gusta descubrir. Entonces, ¿por qué no invitarlos a un pequeño viaje de descubrimiento? El mapa interactivo, en el que se pueden encontrar todos los artículos de un destino, ofrece exactamente eso.
+
+
+

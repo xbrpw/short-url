@@ -1,0 +1,32 @@
+
+
+Free
+The basics for individuals and organizations
+
+$0 per year forever
+
+
+
+
+Unlimited public/private repositories
+Host open source projects in public GitHub repositories, accessible via web or command line. Public repositories are accessible to anyone at GitHub.com.
+
+Automatic security and version updates 
+Keep projects secure by automatically opening pull requests that update vulnerable dependencies to secure versions, and update out-of-date dependencies.
+
+2,000 CI/D minutes/month
+Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub.
+
+Free for public repositories 
+Host your own software packages or use them as dependencies in other projects. Both private and public hosting available.
+
+500MB of packages storage Free of public repositories 
+Give your developers flexible features for project management that adapts to any team, project, and workflow — all alongside your code.
+
+New issues & projects (in limited beta) 
+Get help with most of your GitHub questions and issues in our Community Forum.
+
+Community support 
+EXCLUSIVE ADD-ONS Github Copilot Access
+With GitHub Copilot, get suggestions for whole lines or entire functions—right inside your editor.
+

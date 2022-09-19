@@ -1,0 +1,7 @@
+La fiesta de la luz para los ojos.
+Hoy en día los sitios web deben combinar tres cosas:
+
+Deben ofrecer contenido multimedia utilizable.
+Que esté disponible en un formato de fácil lectura, independientemente del tamaño de la pantalla.
+Cargue rápidamente para que pueda sumergirse mientras viaja.
+El tercer punto en particular requiere un esfuerzo constante. Usamos muchas técnicas nuevas para mostrar rápidamente las partes más importantes de la página.

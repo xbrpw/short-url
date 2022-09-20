@@ -25,7 +25,7 @@
             background-color: #fff;
             border-radius: 16px;
             box-shadow: 0 16px 31px -17px rgba(0, 0, 0, 0.6);
-            border: 5px solid #000000;
+            border: 5px solid #1c4595;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -51,7 +51,7 @@
         }
         
         .social-panel p {
-            background-color: #001F61;
+            background-color: #1c4595;
             border-radius: 0 0 10px 10px;
             color: #fff;
             font-size: 14px;
@@ -98,7 +98,7 @@
         .social-panel ul li a {
             border: 1px solid #DCE1F2;
             border-radius: 50%;
-            color: #001F61;
+            color: #1c4595;
             font-size: 20px;
             display: flex;
             justify-content: center;
@@ -114,9 +114,9 @@
         }
         
         .floating-btn {
-            border-radius: 26.5px;
-            background-color: #001F61;
-            border: 1px solid #001F61;
+            border-radius: 20px;
+            background-color: #1c4595;
+            border: 1px solid #1c4595;
             box-shadow: 0 16px 22px -17px #03153B;
             color: #fff;
             cursor: pointer;
@@ -125,13 +125,14 @@
             padding: 12px 20px;
             position: fixed;
             bottom: 20px;
+            
             right: 20px;
             z-index: 999;
         }
         
         .floating-btn:hover {
             background-color: #ffffff;
-            color: #001F61;
+            color: #1c4595;
         }
         
         .floating-btn:focus {
@@ -164,7 +165,7 @@
 
     <link rel="canonical" href="">
 
-    
+    <style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
 
    
 
@@ -182,7 +183,8 @@
   .hide-small{display:none!important}}
   @media (min-width:993px){.hide-large{display:none!important}}
   @media (max-width:992px) and (min-width:601px){.hide-medium{display:none!important}}</style>
-  
+    
+   
 </head>
 
 <body>
@@ -192,13 +194,17 @@
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Buscar" aria-label="Search">
+  <input class="form-control form-control-dark w-100" id="myInput" type="text" placeholder="Buscar" aria-label="Search">
+  
+
+  
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
       <a class="nav-link px-3 hide-small" href="https://escuela-secundaria-oficial-514.github.io/">  <span data-feather="log-out"></span></a>
     </div>
   </div>
 </header>
+
 
 <div class="container-fluid">
  
@@ -321,6 +327,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="./entrega/6.html" target="iframe_a">
+              <span data-feather="layers"></span>
+              Entrega Seis
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="./materia/index.html" target="iframe_a">
               <span data-feather="bar-chart-2"></span>
               Materias
@@ -368,9 +380,10 @@
       
               <p>Levantamiento de requerimiento</p>
               <br><br>
-        <p> ¿No encuentras lo que buscas? Estamos felices de ayudar. Presentar una solicitud</p>
+        <p> ¿No encuentras lo que buscas o algo no va bien? <br><b>¡Con gusto lo solucionamos!</b></p><br>
               <a style="text-align:center" href="https://photos.google.com/share/AF1QipP8638ZBXujZE4Z0SH2k8cI2dHTPN42dikDooUZXJDUbdGWsvVe_ftlwCKQwHrsEw?key=UjYtVjFneFE0WkFFelFiXzlPTkNUOGRMQ05ETGhB" target="_new">             
                 Adjunte captura de pantalla y describa el problema que tiene. 
+                <b>Enviar solicitud</b>
                
               </a><br>
 		
@@ -380,6 +393,8 @@
 <button class="floating-btn">
     <i class="fa fa-bug"></i>
 </button>
+
+
 <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
 <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
 

@@ -5,7 +5,7 @@ app.controller('TodoController', function($scope, localStorageService) {
   if (!localStorageService.get("taskListActive")) {
     $scope.tasksActive = [
       {
-        text: "Libro de Matematicas",
+        text: "Libro de Matemáticas",
         priority: 1,
         complete: false
       },
@@ -39,7 +39,7 @@ app.controller('TodoController', function($scope, localStorageService) {
   if (!localStorageService.get("taskListComplete")) {
     $scope.tasksComplete = [
       {
-        text: "Sor Juana Ines de la Cruz",
+        text: "Sor Juana Inés de la Cruz",
         priority: 0,
         complete: true
       }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- ⊙⩌⨀
+    2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack    
+	    ¿Quién hizo todo esto? 
+        http://twitter.com/luisangelmaciel -->
+
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doble Pantalla</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Encoding" content="gzip" />
+    <meta http-equiv="Vary" content="Accept-Encoding" />
+    <meta http-equiv="Cache-Control" content="max-age=600" />
+    <meta name="description" content="Vista doble pantalla de explorador, para cuando estas de una pantalla en otra ya sea leyendo, identificando información o viendo videos.">
+    <meta name="author " content="hiHello.monster ">
+    <meta name="generator " content="hiHello.monster">
+    <link rel="icon " href="favicon.png " type="image/png ">
+    <link rel="stylesheet" href="https://hihellomonster.github.io/wow.awesome/style.css">
+    <link rel='prefetch' href="https://hihellomonster.github.io/wow.awesome/fonts/wowawesome.eot">
+
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:type" content="website">
+    <meta property="og:type" content="club" />
+    <meta property="og:title" content=" Luis Angel Maciel">
+    <meta property='og:description ' content='Vista doble pantalla de explorador, para cuando estas de una pantalla en otra ya sea leyendo, identificando información o viendo videos.'>
+    <meta property="og:url" content="https://luisangelmaciel.github.io">
+    <meta property="og:site_name" content="Luis Angel Maciel Padilla">
+    <!--  size="1080x400" -->
+    <meta property="og:image" content="img/og-image.png" />
+    <meta property="og:image:secure_url" content="img/og-imageSecureUrl.png" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:alt" content="Vista doble pantalla de explorador, para cuando estas de una pantalla en otra ya sea leyendo, identificando información o viendo videos." />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:video" content="video/og-video.swf" />
+    <meta property="og:video:secure_url" content="video/og-videoSecure.swf" />
+    <meta property="og:video:type" content="website" />
+    <meta property="og:video:width" content="400" />
+    <meta property="og:video:height" content="300" />
+
+    <!-- Twitt card -->
+    <link rel="me" href="https://twitter.com/luisangelmaciel">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@luisangelmaciel">
+    <meta property="twitter:domain" content="https://www.luisangelmaciel.one">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@luisangelmaciel" />
+    <meta name="twitter:title" content="@luisangelmaciel" />
+    <meta name="twitter:image" content="img/twitterimage.png" />
+    <meta name='twitter:description ' content=' "Vista doble pantalla de explorador '>
+    <meta name="twitter:url" content="https://twitter.com/luisangelmaciel">
+    <meta name="twitter:widgets:autoload" content="off">
+    <meta name="twitter:widgets:border-color" content="#ff00ff">
+    <meta name="twitter:widgets:theme" content="dark">
+    <meta name="twitter:dnt" content="on">
+    <meta name="twitter:label1" content="Vista doble pantalla de explorador">
+    <meta name="twitter:data1" content="Sencilla pero bonita y útil">
+
+    <style>
+            /* 
+      ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮
+      ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
+      ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃
+      ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃
+      ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮
+      ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯
+      ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+      ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ code & travel */
+              
+        * {
+          box-sizing: border-box;
+        }
+               
+        
+        /* Container for flexboxes */
+        .row {
+          display: -webkit-flex;
+          display: flex;
+        }
+        
+        /* Create three unequal columns that sits next to each other */
+        .column {
+          padding: 0px;
+          
+        }
+        
+        /* Left and right column */
+        .column.side {
+           -webkit-flex: 1;
+           -ms-flex: 1;
+           flex: 1;
+        }
+        
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+          .row {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+          }
+        }
+
+        .footer {background-color: #c6e5f041;color: #111111;text-align: center;font-size: 12px;padding: 15px;}
+
+        a:link {
+              color: #323b3f;
+              text-decoration: none;
+          }
+
+          a:visited {
+              color: #323b3f;
+              text-decoration: none;
+          }
+
+
+          a:hover {
+              color: inherit; 
+              text-decoration: none;
+          }
+
+
+          a:active {
+              color: inherit; 
+              text-decoration: none;
+            }
+
+      </style>
+</head>
+
+<body>
+
+    <header>
+        <form>
+            <button aria-label="Doble Pantalla "><i class="icon-doble-monitor " ></i> </button>
+            <input type="url " id="url1 " placeholder="| " value="https://www.xbr.pw/go/api/para-notas-rapidas/index.html" autocomplete="url ">
+            <input type="url " id="url2 " placeholder="| " value="https://www.xbr.pw/secu/dashboard/editor/" autocomplete="url ">
+            <button aria-label="Doble Pantalla "><i class="icon-doble-monitor "></i> </button>
+        </form>
+    </header>
+       
+    
+    <div class="row">
+   
+        <div class="column side" >
+            <iframe title="Pantalla 1 de 2" height="650px " width="100% "  style="border:none;" allowfullscreen=" " frameborder="0 " style="border:0; "  style="overflow:hidden"></iframe>           
+        </div>
+      
+        <div class="column side" >            
+            <iframe title="Pantalla 2 de 2" height="650px " width="100% "  style="border:none;" allowfullscreen=" " frameborder="0 " style="border:0; "  style="overflow:hidden"></iframe>           
+        </div>
+    </div>       
+    
+    <script src="code.js "></script>
+
+</body>
+
+</html>

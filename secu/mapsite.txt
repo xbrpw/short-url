@@ -1,9 +1,0 @@
-index.html
-login.html
-users.html
-materias.html
-
-
-
-img/lamp-app.svg
-img/sor-juana-ines-de-la-cruz-icon.svg

@@ -15,7 +15,7 @@ body {
   font-family:'Montserrat', sans-serif;
   font-weight:300;
   text-align:center;
-  background:dodgerblue;
+  background:rgb(0, 21, 43);
 }
 body:after {
   content:'';
@@ -25,7 +25,7 @@ body:after {
   top:0;
   left:0;
   z-index:-1;
-  background:dodgerblue;
+  background:rgb(3, 43, 83);
   background-size:cover;
   background-position:50% 50%;  
 }

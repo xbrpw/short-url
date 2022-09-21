@@ -11,7 +11,7 @@
 
 .hcc-r1 {
   text-transform: uppercase;
-  font-size: 8em;
+  font-size: 6em;
   font-weight: 700;
   line-height: 0.9em;
   margin: 0;
@@ -38,3 +38,137 @@
   margin-top: 0.3em;
   line-height: 1em;
 }
+
+.fc {
+  font-family: Roboto Condensed, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-image: url(http://tobiasahlin.com/images/typesource/leaves.jpg);
+  background-color: #2b5a33;
+  background-size: cover;
+  padding: 1em 2em 2em;
+}
+
+.fc-r1 {
+  font-size: 15em;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0;
+}
+
+.fc-r2 {
+  font-family: Roboto, sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 1em;
+  letter-spacing: 0.64em;
+  color: #1d6152;
+  background-color: #fff;
+  display: inline-block;
+  margin-top: -0.7em;
+  padding: 0.65em 0 0.65em 0.7em;
+}
+
+.ybile {
+  color: #fffeec;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  background: #f1cf63 url(http://tobiasahlin.com/images/typesource/bike.png) no-repeat center bottom/38% 30%;
+  line-height: 3em;
+  padding-top: 1.5em;
+  padding-bottom: 8em;
+  text-transform: uppercase;
+}
+
+.ybile-r1 {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.1em;
+  font-family: Lora;
+  font-style: italic;
+  display: inline-block;
+  position: relative;
+  text-transform: lowercase;
+}
+
+.ybile-r2 {
+  font-weight: 200;
+  font-size: 4.8em;
+  line-height: 1em;
+  margin: 0;
+}
+
+.ybile-r3 {
+  font-weight: 200;
+  font-size: 3em;
+  line-height: 1.1em;
+  margin: 0;
+}
+
+.ybile-r1:before,
+.ybile-r1:after {
+  background: url(http://tobiasahlin.com/images/typesource/arrow.svg) no-repeat center center/5em 0.5em;
+  content: "";
+  left: -5.8em;
+  position: absolute;
+  width: 5em;
+  height: 1.25em;
+}
+
+.ybile-r1:after {
+  left: auto;
+  right: -5.8em;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.asog {
+  color: #fff;
+  text-align: center;
+  background-image: url(http://tobiasahlin.com/images/typesource/mountains.jpg);
+  background-size: cover;
+  background-color: #f0ae93;
+  font-family: PT Sans, sans-serif;
+  line-height: 3em;
+  padding-top: 5em;
+  padding-bottom: 7em;
+}
+
+.asog-r1 {
+  text-transform: uppercase;
+  font-size: 6em;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0;
+}
+
+.asog-r2 {
+  font-family: Lora, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7em;
+  display: inline-block;
+  position: relative;
+  mix-blend-mode: overlay;
+  margin: 0;
+}
+
+.asog-r2:before,
+.asog-r2:after {
+  background: url(http://tobiasahlin.com/images/typesource/leaves.svg) no-repeat center center/2.5em 0.7em;
+  content: "";
+  left: -3em;
+  top: -0.3em;
+  position: absolute;
+  width: 2.5em;
+  height: 1.5em;
+}
+
+.asog-r2:after {
+  left: auto;
+  right: -3em;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Mask Lamp</title>
+  <style>  :root {
+    --swing: 1.03deg;
+    --light: transparent;
+  }
+  
+  body {
+    height: 100vh;
+    margin: 0;
+    background-image: url(https://picsum.photos/id/192/1920/1080);
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .beam {
+    height: 100vh;
+    background-color: hsla(0,0%,0%,0.95);
+    mask: conic-gradient(
+      from var(--swing) at 50% 4%, 
+      #000000 0deg 155deg,
+      var(--light) 170deg 190deg,
+      #000000 205deg 360deg
+   );
+   -webkit-mask: conic-gradient(
+      from var(--swing) at 50% 4%, 
+      #000000 0deg 155deg,
+      transparent 170deg 190deg,
+      #000000 205deg 360deg
+   );
+  }
+  
+  .lamp {
+    width: 80px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform-origin: center 30px;
+    transform: translateX(-50%);
+    z-index: 10;
+  }  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="beam"></div>
+<svg class="lamp" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 133 175" fill="none">
+  <rect width="40" height="35" x="46" y="85" fill="#272B28" rx="5"/>
+  <path fill="#494037" d="M133 175H0a66 66 0 01133 0z"/>
+  <path stroke="#272B28" stroke-width="6" d="M66 0v99"/>
+</svg>
+<!-- partial -->
+  <script>import {gsap, Power1} from "https://cdn.skypack.dev/gsap";
+
+    const beam = document.querySelector('.beam');
+    const lamp = document.querySelector('.lamp');
+    
+    gsap.fromTo(beam, { 
+      '--swing': '0.97turn',
+    }, { 
+      '--swing': '1.03turn',
+      duration: 1,
+      repeat:-1,
+      yoyo: true,
+      ease: Power1.easeInOut
+    });
+    
+    gsap.fromTo(lamp, { 
+      rotate: '-8.5deg'
+    }, { 
+      rotate: '8.5deg',
+      duration: 1,
+      repeat:-1,
+      yoyo: true,
+      ease: Power1.easeInOut
+    });</script>
+
+</body>
+</html>

@@ -172,3 +172,128 @@
   transform: scaleX(-1);
 }
 
+.thosm {
+  font-family: Oswald, sans-serif;
+  line-height: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #48a0dd;
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
+
+.thosm-r1 {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.1em;
+  color: #87caed;
+  display: inline-block;
+  position: relative;
+}
+
+.thosm-r2 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1em;
+  margin: 0;
+}
+
+.thosm-r3 {
+  font-size: 5em;
+  font-weight: 300;
+  line-height: 1.1em;
+  color: #f1cf63;
+  margin: 0;
+}
+
+.thosm-r1:before,
+.thosm-r1:after {
+  width: 2.5em;
+  height: 1.4em;
+  content: "";
+  background: url(http://tobiasahlin.com//images/typesource/meatball-ornament.svg) no-repeat center center/2.5em 1.4em;
+  position: absolute;
+  top: -0.1em;
+  left: -2.8em;
+}
+
+.thosm-r1:after {
+  right: -2.8em;
+  left: auto;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.iwcp {
+  color: #fff;
+  text-align: center;
+  background-color: #fd774c;
+  font-family: Ubuntu, sans-serif;
+  text-transform: uppercase;
+  line-height: 3em;
+  padding-top: 5.5em;
+  padding-bottom: 6.5em;
+}
+
+.iwcp-r1 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.iwcp-divider {
+  background: url(http://tobiasahlin.com/images/typesource/banner.svg) no-repeat center center/20em 0.8em;
+  font-size: 1.5em;
+  height: 0.5em;
+  border: 0;
+  margin: 0;
+  margin-bottom: -1.4em;
+}
+
+.iwcp-r2 {
+  font: italic 400 1.3em/1.3em Playfair Display, sans-serif;
+  text-transform: lowercase;
+  padding: 0 0.5em;
+  position: relative;
+  background-color: inherit;
+  display: inline-block;
+}
+
+.iwcp-r3 {
+  font-size: 2.43em;
+  font-weight: 700;
+  margin: 0;
+  margin-top: -0.4em;
+}
+
+.iwcp-r4 {
+  font-size: 2.2em;
+  margin: -0.3em 0 0;
+  font-weight: 700;
+}
+.sos {
+  color: #f1cf63;
+  background-color: #343434;
+  text-align: center;
+  font-family: Source Sans Pro, sans-serif;
+  line-height: 3em;
+  padding-top: 4em;
+  padding-bottom: 5em;
+}
+
+.sos-r1 {
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1.1em;
+}
+
+.sos-prep {
+  font-family: Playfair Display;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.5em;
+  vertical-align: middle;
+  margin-top: -0.4em;
+  display: inline-block;
+}

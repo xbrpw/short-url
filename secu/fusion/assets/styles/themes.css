@@ -1,0 +1,191 @@
+:root {
+    --color-bg: #ffffff;
+    --color-bg-offset: #f7f7f9;
+    --color-text: #373a3c;
+    --color-text-offset: #818a91;
+    --color-border: #eceeef;
+    --color-primary: #ff335f;
+    --color-primary-offset: #ff1447;
+    --color-secondary: #43a9a3;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0e141b;
+    --color-bg-offset: #252526;
+    --color-text: #ffffff;
+    --color-text-offset: #818a91;
+    --color-border: #2d2d2d;
+    --color-primary: #ff5277;
+    --color-primary-offset: #ff2957;
+    --color-secondary: #43a9a3;
+    }
+}
+
+
+[data-theme='default'] {
+    --color-bg: #ffffff;
+    --color-bg-offset: #f7f7f9;
+    --color-text: #373a3c;
+    --color-text-offset: #818a91;
+    --color-border: #eceeef;
+    --color-primary: #ff335f;
+    --color-primary-offset: #ff1447;
+    --color-secondary: #43a9a3;
+}
+
+[data-theme='dark'] {
+    --color-bg: #0e141b;
+    --color-bg-offset: #252526;
+    --color-text: #ffffff;
+    --color-text-offset: #818a91;
+    --color-border: #2d2d2d;
+    --color-primary: #ff5277;
+    --color-primary-offset: #ff2957;
+    --color-secondary: #43a9a3;
+}
+
+.blueg {color: #1c4595, #e76a24 #01080a #e7e5e8 #fbbc42}
+.blueg {color: #92b0eb, #6791e3, #3d72da, #1c4595, #131418, #0c1d3f,#29293e, #040914,  #131c2e;}
+.blueg {color:#fbe7dc, #f6c8ae, #f1a980, #e76a24, #c35415, #954010, #672c0b}
+.blueg {color:#149cc3, #0f7795, #0a5267, #01080a, #000000}
+.blueg {color:#ffffff, #e7e5e8, #cecad0, #b5afb8, #9c94a0}
+.blueg {color: #ffffff, #fef1d8, #fddfa6, #fbbc42, #faaa10, #d38c04, #a16b03}
+
+[data-theme='dragonBall'] {
+    --color-bg:#29293e;
+    --color-bg-offset:  #16161a;
+    --color-text: #fffffe;
+    --color-text-offset:  #e76a24;
+    --color-border: #383a61;
+    --color-primary: #e76a24;
+    --color-primary-offset: #954010;
+    --color-secondary: #0c1d3f
+}
+/* #1c4595 #e76a24 #01080a #e7e5e8 #fbbc42 */
+
+[data-theme='beach'] {
+    --color-bg: #fffffe;
+    --color-bg-offset: #e3f6f5;
+    --color-text: #272343;
+    --color-text-offset: #2d334a;
+    --color-border: #e3f6f5;
+    --color-primary: #ff9d00;
+    --color-primary-offset: #ffca00;
+    --color-secondary: #bae8e8;
+}
+
+[data-theme='choco'] {
+    --color-bg: #55423d;
+    --color-bg-offset: #41312E;
+    --color-text: #fffffe;
+    --color-text-offset: #ffc0ad;
+    --color-border: #271c19;
+    --color-primary: #f3ab87;
+    --color-primary-offset: #ffc0ad;
+    --color-secondary: #e78fb3;
+}
+
+[data-theme='moomoo'] {
+    --color-bg: #fef6e4;
+    --color-bg-offset: #f3e1d8;
+    --color-text: #172c66;
+    --color-text-offset: #006e8a;
+    --color-border: #f3d2c1;
+    --color-primary: #f582ae;
+    --color-primary-offset: #ff3d6a;
+    --color-secondary: #8bd3dd;
+}
+
+[data-theme='bowser'] {
+    --color-bg: #16161a;
+    --color-bg-offset: #29293e;
+    --color-text: #fffffe;
+    --color-text-offset: #94a1b2;
+    --color-border: #383a61;
+    --color-primary: #7f5af0;
+    --color-primary-offset: #e068fd;
+    --color-secondary: #2cb67d;
+}
+
+[data-theme='yoshi'] {
+    --color-bg: #fafbf5;
+    --color-bg-offset: #f2ede9;
+    --color-text: #41474C;
+    --color-text-offset: #757D84;
+    --color-border: #e8e0d9;
+    --color-primary: #99C221;
+    --color-primary-offset: #6E910A;
+    --color-secondary: #E55812;
+}
+
+[data-theme='rainbow'] {
+    --color-bg: #140527;
+    --color-bg-offset: #311b46;
+    --color-text: #feff00;
+    --color-text-offset: #ff464d;
+    --color-border: #d846ff;
+    --color-primary: #49f5f7;
+    --color-primary-offset: #5dccf8;
+    --color-secondary: #01c317;
+}
+
+[data-theme='lobster'] {
+    --color-bg: #fcddd4;
+    --color-bg-offset: #ffb9ad;
+    --color-text: #4b1313;
+    --color-text-offset: #146caa;
+    --color-border: #f1797c;
+    --color-primary: #b62b2b;
+    --color-primary-offset: #FF0030;
+    --color-secondary: #fb9f13;
+}
+
+[data-theme='hackernews'] {
+    --color-bg: #F6F6EF;
+    --color-bg-offset: #F8F8EC;
+    --color-text: #000000;
+    --color-text-offset: #828282;
+    --color-border: #FF6600;
+    --color-primary: #FF6600;
+    --color-primary-offset: #F56200;
+    --color-secondary: #FF6600;
+}
+
+
+
+
+/* Rainbow Road Theme Extra Styles */
+
+[data-theme='rainbow'] body {
+    background-image: url("/assets/images/stars.gif");
+    text-shadow: 0 0 2px;
+}
+
+/* Lobster Theme Extra Styles */
+
+[data-theme='lobster'] {
+    --font-family-display: "Lobster", cursive;
+    cursor: url("/assets/images/lobster-cursor.png"), auto;
+}
+
+[data-theme='lobster'] a,
+[data-theme='lobster'] button {
+    cursor: url("/assets/images/lobster-cursor-hover.png"), auto;
+}
+
+/* HN Theme Extra Styles */
+
+[data-theme='hackernews'] {
+    --font-size-root: 75%;
+    --font-family-base: Verdana, Geneva, sans-serif;
+    --font-family-display: Verdana, Geneva, sans-serif;
+    --content-max-width: 56rem;
+}
+
+[data-theme='hackernews'] .featuredpost__title::after,
+[data-theme='hackernews'] .postlist__link::after,
+[data-theme='hackernews'] .post__title::after,
+[data-theme='hackernews'] .otherposts__title::after {
+    content: " considered harmful";
+}

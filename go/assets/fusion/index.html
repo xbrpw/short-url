@@ -7,8 +7,111 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title></title>
     
-   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-   <link rel="stylesheet" href="./style.css">
+ <style>@charset "UTF-8";
+  :root {
+    --sans: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu,
+      cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  body,
+  html {
+    margin: 0;
+    height: 100%;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-family: var(--sans);
+  }
+  
+  p,
+  blockquote,
+  li {
+    text-align: justify;
+    line-height: 1.6rem;
+  }
+  
+  blockquote {
+    position: relative;
+    padding: 2rem 0;
+    width: 100%;
+    margin: 40px auto;
+    border-top: solid 3px;
+    border-bottom: solid 3px;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.8rem;
+  }
+  
+  blockquote:after {
+    position: absolute;
+    content: "”";
+    font-size: 8rem;
+    bottom: -40px;
+    right: 10px;
+  }
+  
+  a,
+  a:link,
+  a:visited {
+    color: inherit;
+  }
+  
+  
+  .wrapper {
+    margin: 0 auto;
+    /*padding: 0.5rem;*/
+    display: grid;
+    justify-content: start;
+    align-content: start;
+    gap: 0 30px;
+    grid-template-areas: "widgets" "header" "content" "sidebar" "footer";
+  }
+  .wrapper .main-head {
+    grid-area: header;
+    font-size: 1.2rem;
+    /*padding: 1rem 0;*/
+  
+  }
+  .wrapper .main-head h1 {
+    border-bottom: 3px solid;
+  
+    line-height: 3.5rem;
+    padding-bottom: 1rem;
+  }
+  .wrapper .head-widgets {
+    grid-area: widgets;
+    /*padding: 1rem 0;*/
+  }
+  .wrapper .content {
+    grid-area: content;
+    /*padding-bottom: 2rem;*/
+  }
+  .wrapper .side {
+    grid-area: sidebar;
+  }
+  .wrapper .side p {
+    text-align: left;
+  }
+  .wrapper .main-footer {
+    grid-area: footer;
+  /*  padding: 2rem 0;*/
+    text-align: center;
+    border-top: 1px solid;
+    font-size: 0.9rem;
+  }
+  @media (min-width: 992px) {
+    .wrapper {
+      max-width: 920px;
+      grid-template-columns: 8fr 4fr;
+      grid-template-areas: "header widgets" "content sidebar" "footer footer";
+    }
+  }</style>
 
    <link rel="preload" href="assets/fonts/noe-display-medium.woff2" as="font" type="font/woff2" crossorigin>
 <!--    <link rel="preconnect" href="https://webmention.iox"> -->
@@ -240,9 +343,11 @@
             </p>
 
             <p class="footer__item footer__item--right"><a href="https://github.com/maxboeck/mxb/tree/master/./src/posts/offline-forms/2017-08-23-index.md" class="footer__icon" title="Edit this page on Github"><span class="sr-only">Edit this page on Github</span> 
-                <svg class="icon icon--github" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons/icons.sprite.svg#icon-github"></use></svg> </a><a href="/feed.xml" class="footer__icon" title="RSS Feed">
-                <span class="sr-only">RSS Feed</span> <svg class="icon icon--feed" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons/icons.sprite.svg#icon-feed"></use></svg></a></p></div></footer></div><script src="https://mxb.dev/assets/scripts/main.js" defer="defer"></script>
+                <svg class="icon icon--github" role="img" aria-hidden="true" width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons/icons.sprite.svg#icon-github"></use></svg> </a>
+                <a href="/feed.xml" class="footer__icon" title="RSS Feed">
+                <span class="sr-only">RSS Feed</span> <svg class="icon icon--feed" role="img" aria-hidden="true" width="24" height="24">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons/icons.sprite.svg#icon-feed"></use></svg></a>
+                </p></div></footer></div>
 
-            <script src="https://mxb.dev/assets/scripts/webmentions.js" defer="defer"></script>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </body></html>

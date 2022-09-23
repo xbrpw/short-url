@@ -1,0 +1,55 @@
+html, body {
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  background-color: #ffe035;
+}
+#canvas {
+  position: absolute;
+  user-select: none;
+}
+#canvas1 {
+  position: relative;
+  width:100%;
+}
+
+#logo {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+#badgeSound {
+  width:60px;
+  height:70px;
+  position: absolute;
+  left:10px;
+  bottom:10px;
+}
+
+#logo {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+
+}
+
+#badge {
+  width:190px;
+  height:70px;
+  position: absolute;
+  left:10px;
+  bottom:10px;
+}
+#container {
+  position: absolute;
+  perspective: 1000px;
+  top: 50%;
+  left: 50%;
+  margin-top: -316px;
+  margin-left: -547px;
+  width: 1093px;
+  height: 633px;
+  transform: scale(1,1);
+
+}

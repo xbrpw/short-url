@@ -21,11 +21,12 @@
 
 <div class="container mt-5">	
 	<div class=" table-responsive table-striped" id="myDIV">
-	<table class="stem  table vertical-align: middle">
+		
+	<table class="stem  table vertical-align: middle" id="myTable">
 		<caption><a href="https://drive.google.com/drive/my-drive">Equipo de preservación del cuidado ambiental y del humano.</a></caption>
 		<thead CLASS="table-light">
 		<tr>
-			<th>Ejes STEM CV Liderazgo&nbsp;</th>
+			<th>Ejes STEM CV Liderazgo&nbsp;<span onclick="sortTable()" ><small style="color:rgb(47, 70, 47)">A-Z</small></span></th>
 			<th>ODS Que desarrolla&nbsp;<br></th>
 			<th>Orientación por asignaturas<br></th>
 		</tr>
@@ -52,7 +53,7 @@
 			<td>&nbsp;<a href="https://drive.google.com/drive/folders/1IpuJgME1bEKE7B-hLoBXwWk-As83Q0ed">Matemáticas&nbsp;</a></td>
 		</tr>
 		<tr>
-			<td><b>&nbsp;Valores</b> Esmero</td>
+			<td><b>Valores</b> Esmero</td>
 			<td><b>ODS 4.</b> Educación inclusiva&nbsp;</td>
 			<td><a href="https://drive.google.com/drive/folders/1fLd5vBs5F-NM_Ubg5w8tf10HWdeWIFZG">&nbsp;Formación Cívica y Ética,</a>&nbsp;<a href="https://drive.google.com/drive/folders/19bcdhB-ZKzvpkv0sQ-ekf0ui8JQW9NJ6"> Español</a>,&nbsp; <a href="https://drive.google.com/drive/folders/1a8GHgHgAH3lBvnwdfnIkt6YXk0veZEA1">Inglés&nbsp;</a></td>
 		</tr>
@@ -81,3 +82,43 @@
 	  });
 	});
 </script>
+
+
+  
+  <script>
+  function sortTable() {
+	var table, rows, switching, i, x, y, shouldSwitch;
+	table = document.getElementById("myTable");
+	switching = true;
+	/*Make a loop that will continue until
+	no switching has been done:*/
+	while (switching) {
+	  //start by saying: no switching is done:
+	  switching = false;
+	  rows = table.rows;
+	  /*Loop through all table rows (except the
+	  first, which contains table headers):*/
+	  for (i = 1; i < (rows.length - 1); i++) {
+		//start by saying there should be no switching:
+		shouldSwitch = false;
+		/*Get the two elements you want to compare,
+		one from current row and one from the next:*/
+		x = rows[i].getElementsByTagName("TD")[0];
+		y = rows[i + 1].getElementsByTagName("TD")[0];
+		//check if the two rows should switch place:
+		if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+		  //if so, mark as a switch and break the loop:
+		  shouldSwitch = true;
+		  break;
+		}
+	  }
+	  if (shouldSwitch) {
+		/*If a switch has been marked, make the switch
+		and mark that a switch has been done:*/
+		rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+		switching = true;
+	  }
+	}
+  }
+  </script>
+  

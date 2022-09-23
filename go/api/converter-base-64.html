@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head><!-- CodePen - Data uri converter -->
+  <meta charset="UTF-8">
+  <title>Simply File to Data Uri converter</title>
+  <link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">
+<style>*,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  /*  = scroll
+  ----------------------------*/
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar {
+    background: #ecf0f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
+  
+  /*  = body
+  ----------------------------*/
+  html,body{
+    position:relative;
+    height:100%;
+  }
+  body{
+    background:url(https://31.media.tumblr.com/d83b99e22981d5e58e2bd74ed2494087/tumblr_n4ef3ynCZP1st5lhmo1_1280.jpg) no-repeat center center fixed #eee; 
+    background-size:cover;
+    color:#7f8c8d;
+    overflow:hidden;
+  }
+  
+  
+  .wrapper{
+    display: block;
+    margin: 15% auto;
+    width: 90%;
+    text-align: center;
+  }
+  
+  /*  = title
+  ----------------------------*/
+  .wrapper h1,h1{
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: 400;
+    font-size: 39px;
+    color: #E74C3C;
+    text-shadow: 0 2px 3px #FFF,0 4px 3px #FFF,0 5px 1px #756969;
+  }
+  
+  
+  /*  = input file
+  ----------------------------*/
+  .inputFile {
+    color: transparent;
+    outline:none;
+    cursor:pointer;
+    display:block;
+    margin:0 auto;
+    width:150px;
+  }
+  .inputFile::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .inputFile::before {
+    content: 'Select file';
+    margin: 10px;
+    color: #FFF;
+    display: inline-block;
+    background: #E74C3C;
+    border: 1px solid #E74C3C;
+    padding: 5px;
+    width: 97px;
+    height: 50px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration:none;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    box-shadow: 0 6px 6px -6px #474747;
+    border-radius: 2px;
+    transition:all 0.2s ease;
+  }
+  .inputFile:hover::before {
+    border-color: #eee;
+    background: #C0392B;
+    color: #eee;
+    transition:all 0.2s ease;
+  }
+  .inputFile:active {
+    outline: 0;
+  }
+  .inputFile:active::before {
+    border-color: #FFF;
+    background: #2B8AC0;
+    color: #FFF;
+  }
+  .btn{
+    margin:5px;
+    color: #FFF;
+    display: inline-block;
+    background: #E74C3C;
+    border: 1px solid #E74C3C;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration:none;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: 300;
+    font-size: 20px;
+    box-shadow: 0 6px 6px -6px #474747;
+    border-radius: 2px;
+    transition:all 0.2s ease;
+  }
+  .btn:hover{
+    border-color: #eee;
+    background: #C0392B;
+    color: #eee;
+    transition:all 0.2s ease;
+  }
+  /*  = lightbox
+  ----------------------------*/
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height:199%;
+    background:#ecf0f1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .close_overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    color:#95a5a6;
+    transition: all 0.5s ease;
+  }
+  .close_overlay:hover{
+    background: #E74C3C;
+    color: #ECF0F1;
+    transition:all 0.5s ease;
+  }
+  .show{
+    opacity: 1;
+    visibility: visible;
+    z-index: 999999999;
+  }
+  .output {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 5% auto;
+    padding: 1em;
+    width: 600px;
+    height: 500px;
+    overflow:auto;
+  }
+  .output ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+    display: block;
+    color: #A7A7A7;
+    font-size: 13px;
+  }
+  .output ul b{
+    color: #868686;
+  }
+  .textarea {
+    overflow: auto;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    margin-bottom:16px;
+    display: block;
+    border: 1px solid #ecf0f1;
+    background: #ecf0f1;
+    color: #7f8c8d;
+    font-size:13px;
+    font-family:monospace,sans-serif;
+    
+    word-break: break-all; 
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    white-space: pre\9; 
+  }
+  .thumb {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 10px auto;
+    box-shadow: 0 6px 6px -6px #000;
+  }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!-- main  -->
+<div class="wrapper">
+  <h1>Simply File to Data Uri converter</h1>
+  <input type="file" id="files" class="inputFile" name="files[]" />
+</div>
+
+<!-- lightbox -->
+<div class="overlay">
+  <a href="#" class="close_overlay">x</a>
+  <div class="output"></div> 
+</div>
+<!-- partial -->
+  <script>var img2data = (function() {
+    'use strict';
+    return {
+      // this.qS(foo)
+      qS: function(el) {
+        return document.querySelector(el);
+      },
+      run: function() {
+        this.convert(); 
+      },
+      convert: function() {
+        // vars 
+        var fls = this.qS('#files'),
+            output = this.qS('.output'),
+            overlay = this.qS('.overlay'),
+            close_overlay = this.qS('.close_overlay');
+        
+        fls.addEventListener('change', function(e) {
+          var file = fls.files[0],
+              txtType = /text.*/, // all text files
+              imgType = /image.*/, // all image files
+              fR = new FileReader(); // fileReader start
+          
+          fR.onload = function(e) {
+            // if text 
+            if (file.type.match(txtType)) {
+              var rS = fR.result,
+                  // template 
+                  render = '<a class="btn" href="'+rS+'" target="blank">Preview</a><ul>'+
+                    '<li><b>Name: </b>  '+file.name+'</li>'+
+                    '<li><b>Size: </b>  '+file.size+'</li>'+
+                    '<li><b>Type: </b>  '+file.type+'</li>'+
+                    '<li><b>Data uri: </b></li>'+
+                  '</ul>'+
+                  '<pre class="textarea">'+rS+'</pre>';
+              output.innerHTML = render; 
+            // if image
+            } else if(file.type.match(imgType)) {
+              var rS2 = fR.result,
+                  // template
+                  tmpl = '<a class="btn" href="'+rS2+'" target="blank">Preview</a>'+
+                  '<img class="thumb" src="'+rS2+'" alt="'+file.name+'"><ul>'+
+                    '<li><b>Name: </b>  '+file.name+'</li>'+
+                    '<li><b>Size: </b>  '+file.size+'</li>'+
+                    '<li><b>Type: </b>  '+file.type+'</li>'+
+                    '<li><b>Data uri: </b></li>'+
+                  '</ul>'+
+                  '<pre class="textarea">'+rS2+'</pre>';
+              output.innerHTML = tmpl;
+             // if not support
+            }else{
+              output.innerHTML = '<h1>Discula, el archivo no es soportado!</h1>';
+            }
+          };
+          
+          // on loaded add events
+          fR.onloadend = function(e) {
+            overlay.classList.add('show'); // add class
+            close_overlay.onclick = function(){
+              overlay.classList.remove('show'); // remove class
+              fls.value = ''; // remove files
+            };
+          };  
+          // convert to data uri
+          fR.readAsDataURL(file);	
+        });
+      }
+    };
+  })();
+  
+  img2data.run();</script>
+
+</body>
+</html>

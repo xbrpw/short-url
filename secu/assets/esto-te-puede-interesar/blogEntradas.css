@@ -20,8 +20,6 @@
 .body-entradas {
   min-height: 100vh;
   margin: 0;
-
-  font-weight: 400;
   background: #f7f6fe;
   -webkit-font-smoothing: antialiased;
 }

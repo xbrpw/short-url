@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title><!-- Dead-Simple Persisting Data 🐘 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.setAttribute('data-theme','default')</script>
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic'>
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic'>
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700,900'>
+<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/67439/basic.css'>
+<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/67439/data-buttons.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Persisting Data</h1>
+<h2>Using <code>localStorage</code> to backup input fields</h2>
+<form>
+  <input type=text data-persist=demo placeholder="1">
+</form>
+<br><hr><br>
+<form>
+  <input type=text data-persist=2 placeholder="2">
+</form>
+<hr>
+<form>
+  <input type=text data-persist=3 placeholder="3">
+</form>
+<p>Using this JavaScript, every input that has a <code>data-persist=""</code> 
+  attribute and value will be automatically saved to a <code>localStorage</code> entry of the same name.</p>
+<p>Additionally, if there is any previously saved text in <code>localStorage</code> from previous page loads it will pre-fill the fields will the saved data.</p>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.2.1/EQCSS.min.js'></script><script  src="./data-persist.js"></script>
+<style>
+var field = document.querySelectorAll('[data-persist]')
+  for (i=0;i<field.length;i++){
+    var stored = localStorage.getItem(field[i].getAttribute('data-persist'))
+    if (stored) field[i].value = stored
+    field[i].addEventListener('input',function(){
+      localStorage.setItem(this.getAttribute('data-persist'),this.value)
+    })
+  }
+  </style>
+</body>
+</html>

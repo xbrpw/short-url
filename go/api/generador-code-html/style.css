@@ -1,0 +1,21 @@
+textarea {
+  width: 100%;
+  height: 250px;
+  max-height: 250px;
+  resize: none;
+}
+tr,td,th {
+  transition: all 0.2s linear;
+}
+.fake {
+  opacity: 0.3;
+}
+input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+}
+.fakeLink {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}

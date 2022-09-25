@@ -20,7 +20,7 @@
 .body-entradas {
   min-height: 100vh;
   margin: 0;
-  background: #f7f6fe;
+  background: inherit;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .header-title-entrada {
-  color: #343538;
+  color: inherit;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 15px 0;

@@ -1,319 +1,659 @@
 <!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
-<title>My Dashboard | xBr-lamp!</title><meta name="viewport" content="width=device-width, initial-scale=1">   <link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
-<style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
-<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.jsx'></script><script>$(document).ready(function() {$("#div4").load("div4.html");  });</script> <div id="div4"> </div> -->
-<link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /*loop through a collection of all HTML elements:*/
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("incluye-html");
-            if (file) {
-            /*make an HTTP request using the attribute value as the file name:*/
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}
-                /*remove the attribute, and call this function once more:*/
-                elmnt.removeAttribute("incluye-html");
-                includeHTML();
-                }
-            }      
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            /*exit the function:*/
-            return;
-            }
-        }
-        };
-    </script>
-<style>:root {--bg-color-initial: rgb(20, 20, 20); --card-color-initial: rgb(23, 23, 23);}</style>  
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>New Index Dash </title><link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+  <style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
+  <link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">   
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.jsx'></script><script>$(document).ready(function() {$("#div4").load("div4.html");  });</script> <div id="div4"> </div> -->
+
+  <!--  font-family: "Lato", sans-serif; -->
+  <style>:root {--bg-color-initial: rgb(20, 20, 20); --card-color-initial: rgb(23, 23, 23);}</style>  
+  <style>.window-mini {width: 300px;max-width: 400px;border-left: 1px solid #ccc;border-right: 1px solid #ccc;border-top: 1px solid #ccc;position:fixed;
+    bottom: 0;right: 30px;border-radius: 4px 4px 0 0;box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);transition: bottom 0.5s ease-in-out; background: rgb(255, 255, 255);}
+  .header-mini {
+    display: flex;
+height: 35px;
+    border-bottom: 1px solid #ccc;
+    align-items: center; border-radius: 4px 4px 0 0;
+    background: #eee;
+    padding-top: 5px;}
   
-<div class="w3-sidebar w3-collapse w3-white w3-animate-left " style="z-index:3;width:250px;" id="mySidebar">
-
-<div class="w3-bar w3-center  " style="background-color: var(--bg-color-initial); padding-right: 7px;">  
-        <a class="w3-bar-item w3-padding-16" style="width:10%" href="javascript:void(0)" onclick="openNav('nav01')">
-        <i class="fa fa-bars  w3-text-white"></i><span  href="javascript:void(0)" onclick="w3_close()" class="w3-hide-large">x</span></a>
-        <a class="w3-bar-item w3-padding-16 " style="width:10%" href="javascript:void(0)" onclick="openNav('nav03')" title="CSS">
-        <i class="fa fa-link  w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16" style="width:10%" href="javascript:void(0)" onclick="openNav('nav02')" title="Multimedia">
-        <i class="fa fa-camera  w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16" style="width:10%" href="javascript:void(0)" onclick="openNav('nav04')" title="Proyectos">
-        <i class="fa fa-heart  w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16 " style="width:10%" href="javascript:void(0)" onclick="openNav('nav05')" title="¡Una idea, hazla!">
-        <i class="fa fa-code w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16" style="width:10%" href="javascript:void(0)" onclick="openNav('nav06')" title="Full Mapa de sitio">
-        <i class="fa fa-sitemap  w3-text-white"></i></a>
-        <a class="w3-bar-item w3-padding-16" style="width:10%" href="javascript:void(0)" onclick="openNav('nav07')" title="Snippes">
-        <i class="fa fa-book  w3-text-white"></i></a>                   
-</div>
-<div class="w3-bar w3-center" style="background-color: black; ">  
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a"  style="width:10%;" class="w3-bar-item  w3-bar-item w3-padding-16 " title="Descargas"> 
-    <i class="fa fa-download  w3-text-white"></i></a>
-    <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a"  style="width:10%;" class="w3-bar-item  w3-bar-item w3-padding-16 " title="Documentos"> 
-      <i class="fa fa-folder-open  w3-text-white"></i></a>   
-       
-  <a class="w3-bar-item w3-padding-16" style="width:10%; " href="javascript:void(0)" onclick="openNav('nav10')" title="Tareas">
-    <i class="fa fa-check  w3-text-white"></i></a>
   
-  <a class="w3-bar-item w3-padding-16 " style="width:10%; " href="javascript:void(0)" onclick="openNav('nav08')" title="Editar img">    
-    <i class="fa fa-photo  w3-text-white"></i></a>
-  <div><a class="w3-bar-item w3-padding-16" style="width:10%; " href="https://docs.google.com/spreadsheets/d/1-VpQFNgiAi66LMPeap5eoNe2vDw_nDlW1kuRsyPC-ss/edit#gid=0" target="iframe_a"  onclick="openNav('nav09')" title="Metodología">
-  <i class="fa fa-chec  w3-text-white">💡</i></a></div>
-  <a class="w3-bar-item w3-padding-16" style="width:10%; " href="javascript:void(0)" onclick="openNav('nav10')" title="Tareas">
-    <i class="fa fa-check  w3-text-white"></i></a>
-  <a class="w3-bar-item w3-padding-16" style="width:10%; " href="https://www.w3schools.com/w3css/default.asp" target="_blank"  title="How to">
-    <img src="assets/favicons/w3.ico" width="18" height="18" alt="How to"></a> 
-</div>
-
-<style>.imput-search[type=text] {width: 100%; box-sizing: border-box; border: 2px solid black;border-radius: 0px;background-color: white;
-      background-image: url('https://www.w3schools.com/howto/searchicon.png');
-      background-position: 10px 10px; 
-      background-repeat: no-repeat;
-      padding: 12px 20px 12px 40px;
-      -webkit-transition: width 0.4s ease-in-out;
-      transition: width 0.4s ease-in-out;
-    }.imput-search[type=text]:focus {width: 100%;}</style>
-    <form><input class="imput-search" type="text" name="search" placeholder="Buscar.." title="Tu pide y yo busco"></form>
-
-
-<div id="nav01" class="w3-bar-block">      
-  <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-  <a href="https://docs.google.com/spreadsheets/d/1xcXsKf8h9JYzhHyZYeLi0ltQoCHos4b7phazOxlTQf0/edit#gid=0" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()"> Twitts Content</span> </a> 
-  <a href="https://docs.google.com/document/d/1IvTS5-Omp1fQUrC27hE3ranYCMRXOdFJBjq9UkMBjw0/edit" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Twitts Word</span> </a> 
-  <a href="https://docs.google.com/spreadsheets/d/1KmhqJrukodoKtBbBUJ0sxppepEHQ4ROqENfEAWG2erI/edit#gid=1626759999" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Google</span></a> 
-  <a href="api/doble.pantalla/index.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Doble View</span></a>  
-  <a href="https://hihellomonster.github.io/editor.online/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">LampCode</span> </a> 
-  <a href="https://www.xbr.pw/secu/dashboard/editor/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Editor</span></a>     
-  <a href="https://codebeautify.org/source-code-viewer" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">View Source</span></a>
-  <a href="api/extrae-color/index.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Extrae color</span></a>
-  <a href="https://dummyimage.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Dummy image</span></a>
-  <a href="https://test-vcz6zlcu0k.disqus.com/admin/settings/moderation/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Disquis</span></a>
-  <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "> <span onclick="w3_close()">Catálogo de iconos Fontawesome </span></a>      
-  <a href="api/codepen.html" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Codepen</span></a> 
-
-</div>
-
-
-<div id="nav02">
+  .status-mini {
+    width: 84px;  height: 25px;text-align: center;}  
+  .text-mini { flex-grow: 1;}
   
-    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
+  .buttons-mini {
+    width: 65px;  height: 25px;
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;}
+  
+  .container-mini {/*display: flex;
+    flex-direction: column;
+    */height: 200px;
+    overflow: scroll;
+    text-align: left;}  
+  </style>
+  <style>* {box-sizing: border-box;}
+    /* The browser window */.containerwidow {border: 3px solid #f1f1f1;border-top-left-radius: 4px;border-top-right-radius: 4px;}
     
-    <iframe src="assets/gallery.html"  height="350" width="100% " title="Gallery" style="border:none;" allowfullscreen=" " frameborder="0 " style="border:0; "  style="overflow:hidden"></iframe>
-    <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/Igglybuff/svg/Silhouette-v1.svg" style="width:100%;"></a>
-    <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/lamp-goku-style.svg" style="width:100%;"></a>
-  <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/600x400.svg" style="width:100%;"></a>
-  <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/ico%20sombra%20silueta%20goku%20dragon%20ball.svg" style="width:100%;"></a>
-  <div class="w3-bar-item w3-button" ><img src="https://www.luisangelmaciel.one/img/el%20chocolate%20choco%20ru%20edition%20rupaul%20drag%20race%20de%20katya%20zamolodchikova.webp" style="width:100%;"></div>
-  <!-- https://www.luisangelmaciel.one/img/xiiber-recomienda-negro-curvas.svg
-  https://www.luisangelmaciel.one/img/logo%20hi%20hello%20monster.svg
-https://www.luisangelmaciel.one/Igglybuff/svg/logo-cgtravel-color.svg  github.svg xiiber-1.svg xiiber.svg https://www.luisangelmaciel.one/Igglybuff/svg/camara.svg 
-https://www.luisangelmaciel.one/Igglybuff/svg/doble-monitor.svg https://www.luisangelmaciel.one/Igglybuff/svg/logo-dragvesti.svg  https://www.luisangelmaciel.one/Igglybuff/svg/verificado.svg 
-https://www.luisangelmaciel.one/Igglybuff/svg/verga-one.svg https://www.luisangelmaciel.one/Igglybuff/svg/mascarilla-covid.svg
-https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg https://www.luisangelmaciel.one/Igglybuff/svg/carozaon-crayola.svg
-https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg https://www.luisangelmaciel.one/Igglybuff/svg/cdmx-angel-de-la-independencia-two.svg-->
+    /* containerwidow for columns and the top "toolbar" */
+    .row {
+      padding: 10px;
+      background: #f1f1f1;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    
+    /* Create three unequal columns that floats next to each other */
+    .column {
+      float: left;
+    }
+    
+    .left {
+      width: 15%;
+    }
+    
+    .right {
+      width: 10%;
+    }
+    
+    .middle {
+      width: 75%;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Three dots */
+    .dot {
+      margin-top: 4px;
+      height: 12px;
+      width: 12px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    
+    /* Style the input field */
+    input[type=text] {
+      width: 100%;
+      border-radius: 3px;
+      border: none;
+      background-color: white;
+      margin-top: -8px;
+      height: 25px;
+      color: #666;
+      padding: 5px;
+    }
+    
+    /* Three bars (hamburger menu) */
+    .bar {
+      width: 17px;
+      height: 3px;
+      background-color: #aaa;
+      margin: 3px 0;
+      display: block;
+    }
+    
+    /* Page content */
+    .content {
+      padding: 10px;
+    }
+    </style>
+    <style>
+      div.scrollmenu {
+        
+        overflow: auto;
+        white-space: nowrap;
+          
+        
+        background-color: #f5f5f5;
+        
+        display: block;
+      }
+      
+      div.scrollmenu a {
+        display: inline-block;
+        color: #aaa;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+      }
+      
+      div.scrollmenu a:hover {
+        background-color: #f9f9f9;}
+      </style>
+
+        <style>
+
+          .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 80px;
+          }
+          
+          .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+          }
+          
+          .sidenav a:hover {
+            color: #f1f1f1;
+          }
+          
+          .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+          
+          @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+          }
+          
+          
+          .sidenavFav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+          }
+          
+          .sidenavFav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+          }
+          
+          .sidenavFav a:hover {
+            color: #f1f1f1;
+          }
+          
+          .sidenavFav .closebtnFav {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }
+          
+          @media screen and (max-height: 450px) {
+            .sidenavFav {padding-top: 15px;}
+            .sidenavFav a {font-size: 18px;}
+          }
+          
+   
+          
+          .icon-bar {
+            width: 60px;
+            background-color: #555;
+          }
+          
+          .icon-bar a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 25px;
+          }
+          
+          .icon-bar a:hover {
+            background-color: #000;
+          }
+          </style>
+                    
+          <style>
+            /* Style the tab */
+            .tab {
+              overflow: hidden;
+              border: 1px solid #ccc;
+              background-color: #f1f1f1;
+            }
+            
+            /* Style the buttons inside the tab */
+            .tab button {
+              background-color: inherit;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              transition: 0.3s;
+              font-size: 17px;
+            }
+            
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+              background-color: #ddd;
+            }
+            
+            /* Create an active/current tablink class */
+            .tab button.active {
+              background-color: #ccc;
+            }
+            
+            /* Style the tab content */
+            .tabcontent {
+              display: none;
+              padding: 6px 12px;
+              border: 1px solid #ccc;
+              border-top: none;
+            }
+            
+            /* Style the close button */
+            .topright {
+              float: right;
+              cursor: pointer;
+              font-size: 28px;
+            }
+            
+            .topright:hover {color: red;}
+            </style>
+            <style>                          
+              .icon-bar-sticky {
+                position: fixed;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                margin-top: 50px;
+              }
+              
+              .icon-bar-sticky a {
+                display: block;
+                text-align: center;
+                padding: 16px;
+                transition: all 0.3s ease;
+                color: white;
+                font-size: 20px;
+              }
+              
+              /*.icon-bar-sticky a:hover {
+                background-color: #000;
+              }*/
+              
+              .facebook {
+                background: #3B5998;
+                color: white;
+              }
+              
+              .twitter {
+                background: #55ACEE;
+                color: white;
+              }
+              
+              .google {
+                background: #dd4b39;
+                color: white;
+              }
+              
+              .linkedin {
+                background: #007bb5;
+                color: white;}
+              
+              .youtube {
+                background: #bb0000;
+                color: white;}
+              
+              .xbrpw {
+                background: #000000;
+                color: rgb(255, 255, 255);}            
+              </style>
   
+<style>
+  .sidenavRight {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
   
-  <p style="color: #1c4595" class="w3-bar-item w3-button"><b>#1c4595 Blue+</b></p> 
-  <p style="color: #15c8" class="w3-bar-item w3-button"><b>#15c8 Blue</b></p> 
-  <p style="color: #e76a24" class="w3-bar-item w3-button"><b>#e76a24+</b></p>
-  <p style="color: #f27a23" class="w3-bar-item w3-button"> <b>#f27a23 Naranja</b></p>  
-  <p style="color: #000 " class="w3-bar-item w3-button"> #000 Negro</p>
-  <p style="color: #e7e5e8  " class="w3-bar-item w3-button"> <b>#e7e5e8  Gris</b></p>
-  <p style="color: #fbbc42  " class="w3-bar-item w3-button"> <b>#fbbc42 Amarillo</b></p>
+  .sidenavRight a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenavRight a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenavRight .closebtnRight {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenavRight {padding-top: 15px;}
+    .sidenavRight a {font-size: 18px;}
+  }
+  </style>
+  
+  <script>
+    function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("incluye-html");
+        if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("incluye-html");
+            includeHTML();
+            }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+        }
+    }
+    };
+</script>
+<div class="containerwidow" id="mainXbr">
+  <div class="scrollmenu">
+  <a href="#openNavXbR" onclick="openNavXbr()"> <span class="dot" style="background:#ED594A;"></span><span class="dot" style="background:#FDD800;"></span><span class="dot" style="background:#5AC05A;"></span> <span class="w3-hide">Welcome Screen</span></a>
+  
+  <button class="tablinks" onclick="openCity(event, 'Paris')"><i class="fa fa-photo"></i></button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <a href="#" onclick="openCity(event, 'London')" id="defaultOpen"><i class="fa fa-home"></i></a>  
+
+  <a href="https://how-to-examples-html.w3spaces.com/editor-online-renovado.html" target="iframe_a" title="Editor  Online revonado ">W3ditor!</a>
+  <a href="api/codepen.html" target="iframe_a">Codepen</a>  
+  <a href="https://www.xbr.pw/secu/dashboard/editor/" target="iframe_a"  >eDitor</a>     
+  <a href="https://hihellomonster.github.io/editor.online/" target="iframe_a">LampCode </a> 
+
+
+  <a href="https://www.w3schools.com/bootstrap5/index.php" target="_blank"><img src="assets/favicons/w3.ico" width="18" height="18" alt="W3 Bootstrap 5"></a>
+  <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank"><img src="assets/favicons/bootstrap.ico" width="18" height="18" alt="Docs Bootstrap 5"></a>
+  <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" target="_blank"><img src="assets/favicons/w3.ico" width="18" height="18" alt="Save en w3"></a>
+  
+  <a href="https://github.com/luisangelmaciel?tab=repositories" target="_blank"><img src="assets/favicons/github.svg" width="18" height="18" alt="CSS"></a>
+  
+  <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free" target="_blank"> <img src="assets/favicons/fontawesome.ico" width="18" height="18" alt="W3 Bootstrap 5"> </a>      
+  <a href="api/doble.pantalla/index.html" target="iframe_a"   >Doble View</a> 
+
+
+  <a href="#tools"><i class="fa fa-at" ></i></a>  
+  <a href="#base"><i class="fa fa-bolt" style="cursor:pointer" onclick="openNavRight()"></i></a>
+  <a href="#custom"><i class="fa fa-stopwatch" ></i></a>
+  <a href="#friends"><i class="fa fa-file-import" ></i></a>
+  <a href="#partners" data-bs-toggle="modal" data-bs-target="#myModalFull"><i class="fa fa-external-link-alt"></i></a>
+  <a href="#people" data-bs-toggle="modal" data-bs-target="#myModalScroll"><i class="fas fa-copy"></i> envelope-open-text </a>
+  <a href="javascript:void(0)"  title="Editar img">        <i class="fa fa-photo  "></i></a>
+  <a href="javascript:void(0)"  title="Tareas">    <i class="fa fa-check "></i></a>
+  <a href="file:///C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a"  style="width:10%;"  title="Descargas"> <i class="fa fa-download "></i></a>
+  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a" title="Documentos">  <i class="fa fa-folder-open  "></i></a>         
+  <a href="https://docs.google.com/spreadsheets/d/1-VpQFNgiAi66LMPeap5eoNe2vDw_nDlW1kuRsyPC-ss/edit#gid=0" target="iframe_a"  title="Metodología">💡</a>
+  <a href="https://codepen.io/trending" target="_blank"><img src="  https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="CSS"></a>
+  <a href="" target="_blank"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico.svg" width="18" height="18" alt="CSS"></a>
+
+ 
+
+
+    <!-- The Modal -->
+    <div class="modal" id="myModalScroll">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <h3>Some text to enable scrolling..</h3>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /The Modal -->
+ 
+
+    <!-- The Modal -->
+    <div class="modal" id="myModalFull">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            Modal body..
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- The Modal -->
+</div><!-- scrollmenu -->
+
+<div class="icon-bar-sticky">
+  <!-- <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>  -->
+  <a href="#" class="xbrpw"><i class="fa fa-home" onclick="openNav()"></i> </a> 
+  <a href="#"  class="xbrpw"><i class="fa fa-heart" onclick="openNavFav()"></i></a> 
+
+  
+  <a href="https://docs.google.com/spreadsheets/d/1xcXsKf8h9JYzhHyZYeLi0ltQoCHos4b7phazOxlTQf0/edit#gid=0" class="xbrpw"target="iframe_a"  ><img src="assets/favicons/sheets.png" width="18" height="18" alt="Twits en Sheets"></a> 
+  <a href="https://docs.google.com/document/d/1IvTS5-Omp1fQUrC27hE3ranYCMRXOdFJBjq9UkMBjw0/edit" class="xbrpw" target="iframe_a"  ><img src="assets/favicons/docs.png" width="18" height="18" alt="Twits en Docs"></a> 
 </div>
 
+  <div style="margin-left: 0px;" id="mainXbr">
+    <div id="London" class="tabcontent">
+      <iframe src="empecemos/index.html" name="iframe_a" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
+    </div><!-- /London -->
 
-<div id="nav03">  
-  <ul class="w3-ul ">  
-   <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-   <li class="w3-bar-item "> 
-    <a href="https://www.w3schools.com/howto/default.asp" target="_blank">></a>
-    <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"><img src="assets/favicons/w3.ico" width="18" height="18" alt="CSS"></a>
-    <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank"><img src="assets/favicons/bootstrap.ico" width="18" height="18" alt="CSS"></a>
-    <a href="https://github.com/luisangelmaciel?tab=repositories" target="_blank"><img src="assets/favicons/github.svg" width="18" height="18" alt="CSS"></a>
-    <a href="https://codepen.io/trending" target="_blank"><img src="  https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="CSS"></a>
-    <a href="" target="_blank"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico.svg" width="18" height="18" alt="CSS"></a>
-    <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Base64</span></a>
-  </li>   
+    <div id="Paris" class="tabcontent">
+      <iframe src="assets/gallery.html" name="iframe_a" height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
+    </div><!-- /Paris -->
 
-
-     
-   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/oNYxgyX" target="iframe_a">Gradients</a></li>
-   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/ZEBWYxm" target="iframe_a">CSS Filter playground</a></li>
-   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/BaQKyxd" target="iframe_a">Box Shadow </a></li>
-   <li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/mdOPyxO" target="iframe_a">CSS Cursor Property</a></li>
-   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/EWerRM" target="iframe_a">Para que sea banco de indexación </a></li>
-   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/LzWgyJ" target="iframe_a">Digital assets</a></li>
-   <li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/VMePLV" target="iframe_a">Background patterns</a></li>  
-  </ul>
-</div>
-
-<div id="nav04">
-    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-    <a href=" https://how-to-examples-js.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">howTo.js (hi)</a>
-    <a href=" https://how-to-examples-html.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">howTo.html (lamp)</a>
-    <a href=" https://how-to-examples-css.w3spaces.com/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><b>howTo.css</b> (lamacp)</a>
-    <a href=" https://how-to-examples-css.w3spaces.com/como-crear-un-efecto-de-movimiento-en-css.html " target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Efecto de ilusion</a>
-</div>
-
-<div id="nav05">    
-    <a style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-    <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">Abrir carpeta Git</span></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">xbr.pw</span></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-luisangelmaciel" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">luisangelmaciel.one</span></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xiiber" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">xiiber.com</span></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-dragvesti" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">dragvesti</span></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-luisemoji" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align "><span onclick="w3_close()">luisemoji</span></a>
-</div>
-
-<div id="nav06"><ul class="w3-ul ">  
-    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-    <a href="webamigas.txt" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">Web amigas</a></ul>
-</div>
+    <div id="Tokyo" class="tabcontent"><!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
+      <h3>Tokyo</h3>
+      <p>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_social_bar</p>
+    </div><!-- /Tokio -->
+  </div><!-- /class content -->
+  </div><!--  id="mainXbr" -->
 
 
-<div id="nav07">  
-    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align  w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-  <a class="w3-bar-item w3-button" href="#AutomaticSlideshow">Automatic Slideshow</a>
-  <a class="w3-bar-item w3-button" href="#usarjQuery">UsarjQuery</a>  
-  <a class="w3-bar-item w3-button" href="#paraA">a</a>
-  <a class="w3-bar-item w3-button" href="#incluirHtml">Incluir html</a>
-  <button onclick="window.location.href='https://w3docs.com';">Click Here</button>
+  
+  <div id="mysidenavRightRight" class="sidenavRight">
+    <a href="javascript:void(0)" class="closebtnRight" onclick="closeNavRight()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
   </div>
+  
 
   
-<div id="nav08"><ul class="w3-ul ">  
-    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large" href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-    <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a></li>
-    <li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/compress-png-jpg-webp-gif" target="iframe_a">Comprimir img</a></li>
-    <li  class="w3-bar-item "><a href="https://photoswipe.com/" target="iframe_a">Photoswipe +galerias</a></li>
-    <li  class="w3-bar-item "><a href="https://icomoon.io/app/#/select" >Icomoon</a></li>   </ul>
-    <li  class="w3-bar-item "><a href="responsive.html" target="iframe_a"><span onclick="w3_close()">Responsive</span></a></li>   
-    <li  class="w3-bar-item "><a href="/fusion/index.html"  target="iframe_a"><span onclick="w3_close()">Fusion</span></a></li>   
-  </ul>
-</div>
-
-<div id="nav09">    <ul class="w3-ul ">      
-  <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">Cerrar </a> 
-  <li  class="w3-bar-item "><a href="https://www.cleancss.com/css-minify/" target="iframe_a">CSS Minify</a></li>
-  <li  class="w3-bar-item "><a href="https://uncss-online.com/" target="iframe_a">UnCSS</a></li></ul>
-  <li  class="w3-bar-item "><a href="https://seoinspector.pro/" target="iframe_a">Seo Inspector</a></li></ul>
-  <li  class="w3-bar-item "><a href="/Users/Luis Ángel/Documents/head-total-full/index.html" target="iframe_a"><span onclick="w3_close()">Head Full</span></a></li></ul>
+  <script>
+  function openNavRight() {
+    document.getElementById("mysidenavRightRight").style.width = "250px";
+  }
   
-</div> 
+  function closeNavRight() {
+    document.getElementById("mysidenavRightRight").style.width = "0";
+  }
+  </script>
+     
+  
+  
 
-<div id="nav10">    
-  <ul class="w3-ul "> <li>
-    <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large " href="javascript:void(0)" onclick="w3_close()">
-    Cerrar </a> </li> 
-    <li>
-      <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large "href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" target="_blank" onclick="w3_close()">
-        <span onclick="w3_close()">w3 Editor</span>  </a> 
-    </li> 
-    <li>
-      <a  style="width:100%;" class="w3-bar-item w3-button w3-left-align w3-hide-large" href="" target="_blank" onclick="w3_close()">
-        <span onclick="w3_close()"></span>  </a> 
-    </li> 
-  </ul>
-</div>  
-</div><!-- /nav -->
-
-
-<div class="w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
-<div class="w3-main" style="margin-left:250px;"> 
-
-<div class="w3-top w3-theme  w3-hide-large">
-  <i class="fa fa-bars w3-button " onclick="w3_open()"></i>
+<div id="mySidenavXbr" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNavXbr()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>
 
- <div class="w3-top w3-theme w3-hide-large">
-      <i class="fa fa-bars w3-button " onclick="w3_open()"></i>
-    </div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"  onclick="closeNav()">About</a>
+  <a href="#"  onclick="closeNav()">Services</a>
+  <a href="#"  onclick="closeNav()">Clients</a>
+  <a href="#"  onclick="closeNav()">Contact</a>
+</div>
 
-    <!-- Principal -->
-    <iframe src="empecemos/index.html" name="iframe_a" height="730px " width="100% " title="Tu zona de trabajo" 
-    style="border:none; border:0; overflow:hidden" allowfullscreen=" "
-    frameborder="0 " scrolling="true" loading="lazy"></iframe>
-    <!-- /Principal -->
+<div id="mySidenavFav" class="sidenavFav">
+  <a href="javascript:void(0)" class="closebtnFav"  onclick="closeNavFav()">&times;</a>
+  <a href="#"  onclick="closeNavFav()">About Fav</a>
+  <a href="#"  onclick="closeNavFav()">Services Fav</a>
+  <a href="#"  onclick="closeNavFav()">Clients Fav</a>
+  <a href="#"  onclick="closeNavFav()"><a href="api/codepen.html">Codepen</a></a>
+</div>
 
-    <!-- header --><templete hidden> <header class="w3-container w3-theme w3-padding-64 w3-center">
-    <h1 class="w3-xxxlarge w3-padding-16">xbr.pw</h1></header> </templete><!-- /header -->
-    <!-- section -->
-    <div class="w3-container w3-padding-large w3-section  w3-light-grey">
-        <h2 id="incluirHtml">Incluir html</h2>
-        <p>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2</p>        
-        <div class="w3-code htmlHigh notranslate green-border" >Espacio en blanco: <b><code>&#38;nbsp;</code></b> <br>": <b><code>&#38;#34;</code> </b> <br>  </div>
-    </div><!-- /section -->
+<script>function openNavXbr() {document.getElementById("mySidenavXbr").style.width = "250px";document.getElementById("mainXbr").style.marginLeft = "250px";}  
+function closeNavXbr() {document.getElementById("mySidenavXbr").style.width = "0";document.getElementById("mainXbr").style.marginLeft= "0";}</script><script>
+function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+</script>
+<script>
+ function openNavFav() {document.getElementById("mySidenavFav").style.width = "250px";}
+function closeNavFav() {document.getElementById("mySidenavFav").style.width = "0";}
+</script>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+  
+
+
+
+
+ <div class="window-mini" >
+  <div class="header-mini">    
+    <div class="status-mini"  onclick="sortListDir()"><i class="fa fa-search"></i> A-Z</div>
+    <input lass="text-mini" id="myInput" type="text" placeholder="Buscar...">
+    <div class="buttons-mini"><i class="fa fa-minus-square" onclick="myFunction()"></i> <i class="fa fa-window-close" onclick="myFunction()"></i></div>
+  </div>
+  <div class="container-mini" id="myMenuMini"> 
+    <div id="myDIV"> 
+       <ul id="id01"  style="  display: block; list-style-type: disc;margin-top: 0.5em;margin-bottom: 1 em;margin-left: 0;margin-right: 0;padding-left: 12px;list-style: none">
+        <li><a href="https://how-to-examples-html.w3spaces.com/Window-Navigator-Object-All-Properties.html" target="iframe_a">Window-Navigator-Object-All-Properties</a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/hide-small-medium-large.html" target="iframe_a">Hide-small-medium-large</a><br></li>
+        <li><a href="https://how-to-examples-html.w3spaces.comstyle-db.html"  target="iframe_a">Style Dragon Ball</a><br></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/css-style-default-w3-customize.html" target="iframe_a">CSS style-default-w3-customize</a><br></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/" target="iframe_a">HTML</a></li>
+        <li><a href="https://how-to-examples-css.w3spaces.com/" target="iframe_a">CSS</a></li>
+        <li><a href="https://how-to-examples-js.w3spaces.com/" target="iframe_a">JS</a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/mini-search-content.html" target="iframe_a">Mini navegador summary - Search Content </a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/just-click-on-the-Contact-me-below.html" target="iframe_a">Ficha de contacto en- Just click on the contact me below</a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/animation-exploding-Bombs-and-Candies.html" target="iframe_a">Animación CSS | EXplotanto bombas y dulces. </a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/welcome-Random-How-to-examples-HTML.html" target="iframe_a">Welcome Random - Letrero colgante para ecommerce </a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/angular-intro_controller-imput-ng-model.html" target="iframe_a">Apuntes Angular | Controller Imput NG-Model</a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/apuntes-angular-intro-bind-expression.html" target="iframe_a"><b>Apuntes Angular </b> | Intro Bind EXpression </a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/buton-upload-animation.html" target="iframe_a">Animation buton upload - multiusos</a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/Photo-Grid-showSlides-lazy_loading-image.html" target="iframe_a">Photo grind showslides + loading lazy image</a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/photo-grind-1-2-3-4.html" target="iframe_a">Photo grind 1,2,3 y 4 espacios</a></li>
+        <li><a href="https://how-to-examples-html.w3spaces.com/Glitch-effect-text-tv.html" target="iframe_a"></a></li>
+      </ul><!-- /ul -->
+    </div><!--/MyDivx -->
+  </div><!-- /"myMenuMini">-->
+</div><!-- window mini -->
+
+<div class="content">
+  <h3>Browser Window</h3>
+  <textarea rows="1" cols="150">rows="4" cols="150"</textarea>
+
     <!-- code--><templete><!--  --><!--/  --><div class="w3-container w3-padding-large w3-section  w3-light-grey"><div class="w3-code htmlHigh notranslate green-border" >&lt;button onclick=&quot;document.location='index.html'&quot;&gt;Click Me!&lt;/button&gt;</div></div></templete><!-- /code-->
 
     <!-- code--><templete><div class="w3-container w3-padding-large w3-section  w3-light-grey"><div class="w3-code htmlHigh notranslate green-border" >&lt;!--   --> <br> &lt;!--/  --> <br>   </div></div></templete><!-- /code-->
-
-    <textarea rows="1" cols="150">rows="4" cols="150"</textarea>
-
-    <!-- code-->
-    <textarea rows="10" cols="150"> <center>
-      <div onclick="typeWriter() " style="  color: #323b3f;" class="footer">
-        <a href="about/index.html">Abaut</a> | Hecho con <span class="heartbeat"> ❤ </span> y mucho código
-        <a id="powered " href="https://luisangelmaciel.github.io/ " ></a> 
-      </div>
-     </center>
-   
-     <script>
-         var i = 0;
-         var txt = 'designer luisangel.maciel';
-         var speed = 65;
-   
-         function typeWriter() {
-             if (i < txt.length) {
-                 document.getElementById("powered ").innerHTML += txt.charAt(i);
-                 i++;
-                 setTimeout(typeWriter, speed);
-             }
-         }
-     </script>
-    <div ></textarea><!-- /code-->
     
-     
-    <!-- centro centro --> <style>
-        .center-center {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 200px;
-        }
-        </style>
-        <div class="center-center">
-         <button onclick="onlinenow()">Try it</button>
-        
-        <p id="demo"></p>
-        
-        <script>
-        function onlinenow() {
-          var x = "Is the browser online? " + navigator.onLine;
-          document.getElementById("demo").innerHTML = x;
-        }
-        </script>
-        
-        </div>
-        
-        <div style="display: flex;justify-content: center;align-items: center;height: 200px">
-          <div>&copy;
-            <span id="copyright">Trabajando desde 2006 - <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-            </span>
-            
-            </div>
-        </div><!-- /centro centro-->
-        
-
 <div><textarea rows="4" cols="150"><style>
 
 
@@ -406,16 +746,41 @@ https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg http
   </div>
 
   <textarea rows="1" cols="150"><link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css"></textarea>
-
-
-        Acerca de Fred Wilson
-        Soy un VC. Lo he sido desde 1986. También soy esposo , padre de tres personas increíbles , blogger, fanático de la música y muchas otras cosas también.
+  
+  <!-- centro centro --> <style>
+        .center-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+        }
+        </style>
+        <div class="center-center">
+         <button onclick="onlinenow()">Try it</button>
         
-        Escribo algo aquí todos los días de la semana y, a veces, también los fines de semana. He estado haciendo eso desde septiembre de 2003. Espero seguir haciéndolo mientras pueda escribir.
+        <p id="demo"></p>
         
-        Este es mi diario donde pienso las cosas “en voz alta”. Principalmente escribo AVC para mí y espero que todos se beneficien tanto como yo. 
+        <script>
+        function onlinenow() {
+          var x = "Is the browser online? " + navigator.onLine;
+          document.getElementById("demo").innerHTML = x;
+        }
+        </script>
+        
+        </div>
+        
+        <div style="display: flex;justify-content: center;align-items: center;height: 200px">
+          <div>&copy;
+            <span id="copyright">Trabajando desde 2006 - <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+            </span>
+            
+            </div>
+        </div><!-- /centro centro-->
+        
 
-<footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
+
+    
+        <footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
           <a href="https://twitter.com/luisangelmaciel" target="_blank" title="@_luisangelmaciel"><i class="fa fa-twitter fa-lg fa-fw"></i></a>
     
         <small>Built by <a href="https://luisangelmaciel.github.io/" target="_blank">luisAngel.maciel<b>!</b></a></small> <br><br> Contact me on the different platforms and social networks <br>
@@ -430,127 +795,174 @@ https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg http
 
         <p> A menos que se indique lo contrario, el contenido de esta página tiene una licencia Creative Commons Attribution-ShareAlike 3.0 License
             <!-- https://creativecommons.org/licenses/by-sa/3.0/ --><p> 
+
+        <p>Acerca de Fred Wilson
+          Soy un VC. Lo he sido desde 1986. También soy esposo , padre de tres personas increíbles , blogger, fanático de la música y muchas otras cosas también.
+          
+          Escribo algo aquí todos los días de la semana y, a veces, también los fines de semana. He estado haciendo eso desde septiembre de 2003. Espero seguir haciéndolo mientras pueda escribir.
+          
+          Este es mi diario donde pienso las cosas “en voz alta”. Principalmente escribo AVC para mí y espero que todos se beneficien tanto como yo. </p>
         
          ❤🧡💛💚💙💜🤎🖤🤍💔❣💕💞💓💗💖💘💝💟❤️‍🔥❤️‍🩹🤟🫀👫💑💏💋♥😍😘😻🏩💒💌დღ♡❣❤❥❦❧♥          
          <i class="fa fa-share-alt"></i>
          <i class="fa fa-upload"></i>
          <i class="fa fa-bug"></i>
-         <i class="fa fa-file"></i>    
+         <i class="fa fa-file"></i>  
+         
+         <p style="color: #1c4595" class="w3-bar-item w3-button"><b>#1c4595 Blue+</b></p> 
+         <p style="color: #15c8" class="w3-bar-item w3-button"><b>#15c8 Blue</b></p> 
+         <p style="color: #e76a24" class="w3-bar-item w3-button"><b>#e76a24+</b></p>
+         <p style="color: #f27a23" class="w3-bar-item w3-button"> <b>#f27a23 Naranja</b></p>  
+         <p style="color: #000 " class="w3-bar-item w3-button"> #000 Negro</p>
+         <p style="color: #e7e5e8  " class="w3-bar-item w3-button"> <b>#e7e5e8  Gris</b></p>
+         <p style="color: #fbbc42  " class="w3-bar-item w3-button"> <b>#fbbc42 Amarillo</b></p>
         
 </footer>
-</div><!-- /div principal-->
 
 
-<style>.window-mini {
-  width: 300px;
-  max-width: 400px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  position:fixed;
-  bottom: 0;
-  right: 30px;
-  border-radius: 4px 4px 0 0;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transition: bottom 0.5s ease-in-out;
-  background: rgb(255, 255, 255);
-}
+<a href="/Users/Luis Ángel/Documents/head-total-full/index.html" target="iframe_a"><span onclick="w3_close()">Head Full</span></a>
+<li  class="w3-bar-item "><a href="/fusion/index.html"  target="iframe_a"><span onclick="w3_close()">Fusion</span></a></li>  
 
-.header-mini {
-  display: flex;
-  height: 25px;
-  border-bottom: 1px solid #ccc;
-  align-items: center;
-  border-radius: 4px 4px 0 0;
-  background: #eee;
-}
+<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  >Base64</a>
+<li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a></li>
+<li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/compress-png-jpg-webp-gif" target="iframe_a">Comprimir img</a></li>
+<li  class="w3-bar-item "><a href="https://photoswipe.com/" target="iframe_a">Photoswipe +galerias</a></li>
+<li  class="w3-bar-item "><a href="https://icomoon.io/app/#/select" >Icomoon</a></li>   </ul>
+<li  class="w3-bar-item "><a href="responsive.html" target="iframe_a"><span onclick="w3_close()">Responsive</span></a></li>   
+
+<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/oNYxgyX" target="iframe_a">Gradients</a></li>
+<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/ZEBWYxm" target="iframe_a">CSS Filter playground</a></li>
+<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/BaQKyxd" target="iframe_a">Box Shadow </a></li>
+<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/mdOPyxO" target="iframe_a">CSS Cursor Property</a></li>
+<li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/EWerRM" target="iframe_a">Para que sea banco de indexación </a></li>
+<li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/LzWgyJ" target="iframe_a">Digital assets</a></li>
+<li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/VMePLV" target="iframe_a">Background patterns</a></li>  
+<li  class="w3-bar-item "><a href="https://www.cleancss.com/css-minify/" target="iframe_a">CSS Minify</a></li>
+<li  class="w3-bar-item "><a href="https://uncss-online.com/" target="iframe_a">UnCSS</a></li></ul>
+<li  class="w3-bar-item "><a href="https://seoinspector.pro/" target="iframe_a">Seo Inspector</a></li></ul>
+   
+
+<a href="api/extrae-color/index.html" target="iframe_a"  ><span onclick="w3_close()">Extrae color</span></a>
+<a href="https://dummyimage.com/" target="iframe_a"  ><span onclick="w3_close()">Dummy image</span></a>
+<a href="https://test-vcz6zlcu0k.disqus.com/admin/settings/moderation/" target="iframe_a"  ><span onclick="w3_close()">Disquis</span></a>   
+
+<a href=" https://how-to-examples-js.w3spaces.com/" target="iframe_a"  >howTo.js (hi)</a>
+<a href=" https://how-to-examples-html.w3spaces.com/" target="iframe_a"  >howTo.html (lamp)</a>
+<a href=" https://how-to-examples-css.w3spaces.com/" target="iframe_a"  ><b>howTo.css</b> (lamacp)</a>
+<a href=" https://how-to-examples-css.w3spaces.com/como-crear-un-efecto-de-movimiento-en-css.html " target="iframe_a"  >Efecto de ilusion</a>
 
 
-.status-mini {
-  width: 34px;
-  text-align: center;
-}
+<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a"  ><span onclick="w3_close()">Abrir carpeta Git</span></a>
+<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  ><span onclick="w3_close()">xbr.pw</span></a>
+<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-luisangelmaciel" target="iframe_a"  ><span onclick="w3_close()">luisangelmaciel.one</span></a>
+<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xiiber" target="iframe_a"  ><span onclick="w3_close()">xiiber.com</span></a>
+<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-dragvesti" target="iframe_a"  ><span onclick="w3_close()">dragvesti</span></a>
+<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-luisemoji" target="iframe_a"  ><span onclick="w3_close()">luisemoji</span></a>
+          
+  <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/Igglybuff/svg/Silhouette-v1.svg" style="width:100%;"></a>
+  <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/lamp-goku-style.svg" style="width:100%;"></a>
+<a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/600x400.svg" style="width:100%;"></a>
+<a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/ico%20sombra%20silueta%20goku%20dragon%20ball.svg" style="width:100%;"></a>
+<div class="w3-bar-item w3-button" ><img src="https://www.luisangelmaciel.one/img/el%20chocolate%20choco%20ru%20edition%20rupaul%20drag%20race%20de%20katya%20zamolodchikova.webp" style="width:100%;"></div>
+<!-- https://www.luisangelmaciel.one/img/xiiber-recomienda-negro-curvas.svg
+https://www.luisangelmaciel.one/img/logo%20hi%20hello%20monster.svg
+https://www.luisangelmaciel.one/Igglybuff/svg/logo-cgtravel-color.svg  github.svg xiiber-1.svg xiiber.svg https://www.luisangelmaciel.one/Igglybuff/svg/camara.svg 
+https://www.luisangelmaciel.one/Igglybuff/svg/doble-monitor.svg https://www.luisangelmaciel.one/Igglybuff/svg/logo-dragvesti.svg  https://www.luisangelmaciel.one/Igglybuff/svg/verificado.svg 
+https://www.luisangelmaciel.one/Igglybuff/svg/verga-one.svg https://www.luisangelmaciel.one/Igglybuff/svg/mascarilla-covid.svg
+https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg https://www.luisangelmaciel.one/Igglybuff/svg/carozaon-crayola.svg
+https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg https://www.luisangelmaciel.one/Igglybuff/svg/cdmx-angel-de-la-independencia-two.svg-->
 
-.text-mini {
-  flex-grow: 1;
-}
 
-.buttons-mini {
-  width: 54px;
-  text-align: center;
-}
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script><script>w3CodeColor();</script>
+<div incluye-html=""></div> <script>includeHTML();</script> 
+<!-- Para formulario de wp <script src='js/mrofppastaw.js'></script> -->
 
-.container-mini {
-  /*display: flex;
-  flex-direction: column;
-  */height: 200px;
-  overflow: scroll;
-  text-align: left;
-}
 
-</style>
-<div class="window-mini" >
-  <div class="header-mini">
-    <div class="status-mini"><i class="fa fa-search"></i></div>
-    <div class="text-mini">Buscar...</div>
-    <div class="buttons-mini"><i class="fa fa-minus-square" onclick="myFunction()"></i> <i class="fa fa-window-close" onclick="myFunction()"></i></div>
-  </div>
-  <div class="container-mini" id="myMenuMini">
-    <ul style="  display: block;
-    list-style-type: disc;
-    margin-top: 0.5em;
-    margin-bottom: 1 em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 12px;
-    list-style: none">
-      <li><a href="index.html" target="_new">1 item</a></li>
-      <li><a href="index.html" target="_new">1 item</a></li>
-      <li><a href="index.html" target="_new">2 item</a></li>
-      <li><a href="index.html" target="_new">3 item</a></li>
-      <li><a href="index.html" target="_new">4 item</a></li>
-      <li><a href="index.html" target="_new">2 item</a></li>
-      <li><a href="index.html" target="_new">3 item</a></li>
-      <li><a href="index.html" target="_new">4 item</a></li>
-      <li><a href="index.html" target="_new">2 item</a></li>
-      <li><a href="index.html" target="_new">3 item</a></li>
-      <li><a href="index.html" target="_new">4 item</a></li>
-    </ul>
-  </div>
-</div>
-<script>
-  function myFunction() {
-    var x = document.getElementById("myMenuMini");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myMenuMini");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+
+  <script>
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myDIV *").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+  </script>
+
+  <script>
+  function sortListDir() {
+    var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+    list = document.getElementById("id01");
+    switching = true;
+    // Set the sorting direction to ascending:
+    dir = "asc"; 
+    // Make a loop that will continue until no switching has been done:
+    while (switching) {
+      // start by saying: no switching is done:
+      switching = false;
+      b = list.getElementsByTagName("LI");
+      // Loop through all list-items:
+      for (i = 0; i < (b.length - 1); i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /* check if the next item should switch place with the current item,
+        based on the sorting direction (asc or desc): */
+        if (dir == "asc") {
+          if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+            /* if next item is alphabetically lower than current item,
+            mark as a switch and break the loop: */
+            shouldSwitch = true;
+            break;
+          }
+        } else if (dir == "desc") {
+          if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
+            /* if next item is alphabetically higher than current item,
+            mark as a switch and break the loop: */
+            shouldSwitch= true;
+            break;
+          }
+        }
+      }
+      if (shouldSwitch) {
+        /* If a switch has been marked, make the switch
+        and mark that a switch has been done: */
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+        // Each time a switch is done, increase switchcount by 1:
+        switchcount ++;
+      } else {
+        /* If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again. */
+        if (switchcount == 0 && dir == "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
     }
   }
   </script>
-  
-  <script>
-    function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-    }
 
-    function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-    }
+</body>
+</html>
 
-    openNav("nav01");function openNav(id) {document.getElementById("nav01").style.display = "none";    document.getElementById("nav02").style.display = "none";    document.getElementById("nav03").style.display = "none";    document.getElementById("nav04").style.display = "none";    document.getElementById("nav05").style.display = "none";    document.getElementById("nav06").style.display = "none";    document.getElementById("nav07").style.display = "none";document.getElementById("nav08").style.display = "none";    document.getElementById("nav09").style.display = "none";
-    document.getElementById("nav10").style.display = "none";
-    document.getElementById(id).style.display = "block";}</script>
-    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script><script>w3CodeColor();</script>
-    <div incluye-html=""></div> <script>includeHTML();</script> 
-    <!-- Para formulario de wp <script src='js/mrofppastaw.js'></script> -->
-     
-    </body>
-    </html> 
 
-<head>
+
+
+
+
+
 <!-- <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 <link rel="canonical" href="/" />

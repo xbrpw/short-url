@@ -6,6 +6,7 @@
 
   <title>New Index Dash </title><link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
   <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
@@ -13,440 +14,120 @@
   <link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">   
   <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.jsx'></script><script>$(document).ready(function() {$("#div4").load("div4.html");  });</script> <div id="div4"> </div> -->
 
+  <!-- la rapida 
+  <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+  <link rel="stylesheet" href=""/>
+  <meta name="ResourceLoaderDynamicStyles" content=""/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="WikiDex"/>
+  <meta property="og:title" content="Eevee"/>
+  <meta property="og:url" content="https://pokemon.fandom.com/es/wiki/Eevee"/>
+  <meta property="og:description" content="Eevee es un Pokémon de tipo normal introducido en la primera generación. Se caracteriza por ser el Pokémon con más opciones evolutivas, actualmente son 8. Es el Pokémon inicial de Pokémon Let&#039;s Go Eevee! Su nombre original iba a ser Eon, pero al final se cambió. A pesar de esto, todas sus evoluciones sí terminan con dicho sufijo. Ninguna de las evoluciones de Eevee se lleva a cabo al alcanzar un determinado nivel, la forma más común de evolución. El nombre de Eevee es un palíndromo. Lo mismo ocu"/>
+  <meta property="og:image" content="https://static.wikia.nocookie.net/espokemon/images/f/f2/Eevee.png/revision/latest/scale-to-width-down/1200?cb=20150621181400"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@getfandom"/>
+  <meta name="twitter:url" content="https://pokemon.fandom.com/es/wiki/Eevee"/>
+  <meta name="twitter:title" content="Eevee | WikiDex | Fandom"/>
+  <meta name="twitter:description" content="Eevee es un Pokémon de tipo normal introducido en la primera generación. Se caracteriza por ser el Pokémon con más opciones evolutivas, actualmente son 8. Es el Pokémon inicial de Pokémon Let&#039;s Go…"/>
+  <meta name="description" content="Eevee es un Pokémon de tipo normal introducido en la primera generación. Se caracteriza por ser el Pokémon con más opciones evolutivas, actualmente son 8. Es el Pokémon inicial de Pokémon Let&#039;s Go Eevee! Su nombre original iba a ser Eon, pero al final se cambió. A pesar de esto, todas sus…"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <link rel="search" type="application/opensearchdescription+xml" href="/es/opensearch_desc.php" title="WikiDex"/>
+  <link rel="EditURI" type="application/rsd+xml" href="https://pokemon.fandom.com/es/api.php?action=rsd"/>
+  <link rel="license" href="https://www.fandom.com/es/licensing-es"/>
+  <link rel="canonical" href="https://pokemon.fandom.com/es/wiki/Eevee"/>
+  <meta property="fb:app_id" content="" prefix="fb: http://www.facebook.com/"/>
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+  <meta property="og:type" content="article" />
+  <meta property="article:modified_time" content="2022-07-03T20:26:01+00:00" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:label1" content="Tiempo de lectura" />
+  <meta name="twitter:data1" content="4 minutos" /> 
+  <link rel='preconnect' href='//www.google-analytics.com' />
+  <link rel="alternate" type="application/rss+xml" title="◉ Team Eevee ◉ &raquo; Feed" href="https://www.teameevee.com/feed/" />
+  <link rel="alternate" type="application/rss+xml" title="◉ Team Eevee ◉ &raquo; Feed de los comentarios" href="https://www.teameevee.com/comments/feed/" /> 
+  -->
+  
   <!--  font-family: "Lato", sans-serif; -->
   <style>:root {--bg-color-initial: rgb(20, 20, 20); --card-color-initial: rgb(23, 23, 23);}</style>  
-  <style>.window-mini {width: 300px;max-width: 400px;border-left: 1px solid #ccc;border-right: 1px solid #ccc;border-top: 1px solid #ccc;position:fixed;
-    bottom: 0;right: 30px;border-radius: 4px 4px 0 0;box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);transition: bottom 0.5s ease-in-out; background: rgb(255, 255, 255);}
-  .header-mini {
-    display: flex;
-height: 35px;
-    border-bottom: 1px solid #ccc;
-    align-items: center; border-radius: 4px 4px 0 0;
-    background: #eee;
-    padding-top: 5px;}
-  
-  
-  .status-mini {
-    width: 84px;  height: 25px;text-align: center;}  
-  .text-mini { flex-grow: 1;}
-  
-  .buttons-mini {
-    width: 65px;  height: 25px;
-    text-align: center;
-    padding-left: 4px;
-    padding-right: 4px;}
-  
-  .container-mini {/*display: flex;
-    flex-direction: column;
-    */height: 200px;
-    overflow: scroll;
-    text-align: left;}  
-  </style>
-  <style>* {box-sizing: border-box;}
-    /* The browser window */.containerwidow {border: 3px solid #f1f1f1;border-top-left-radius: 4px;border-top-right-radius: 4px;}
-    
-    /* containerwidow for columns and the top "toolbar" */
-    .row {
-      padding: 10px;
-      background: #f1f1f1;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-    }
-    
-    /* Create three unequal columns that floats next to each other */
-    .column {
-      float: left;
-    }
-    
-    .left {
-      width: 15%;
-    }
-    
-    .right {
-      width: 10%;
-    }
-    
-    .middle {
-      width: 75%;
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Three dots */
-    .dot {
-      margin-top: 4px;
-      height: 12px;
-      width: 12px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-    }
-    
-    /* Style the input field */
-    input[type=text] {
-      width: 100%;
-      border-radius: 3px;
-      border: none;
-      background-color: white;
-      margin-top: -8px;
-      height: 25px;
-      color: #666;
-      padding: 5px;
-    }
-    
-    /* Three bars (hamburger menu) */
-    .bar {
-      width: 17px;
-      height: 3px;
-      background-color: #aaa;
-      margin: 3px 0;
-      display: block;
-    }
-    
-    /* Page content */
-    .content {
-      padding: 10px;
-    }
-    </style>
-    <style>
-      div.scrollmenu {
-        
-        overflow: auto;
-        white-space: nowrap;
-          
-        
-        background-color: #f5f5f5;
-        
-        display: block;
-      }
-      
-      div.scrollmenu a {
-        display: inline-block;
-        color: #aaa;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
-      }
-      
-      div.scrollmenu a:hover {
-        background-color: #f9f9f9;}
-      </style>
+  <style>.icon-bar-sticky {position: fixed;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); margin-top: 50px;}.icon-bar-sticky a {display: block;text-align: center;padding: 16px;transition: all 0.3s ease;color: white;font-size: 20px;}/*.icon-bar-sticky a:hover {background-color: #000;}*/.facebook {background: #3B5998;color: white;}.twitter {background: #55ACEE;color: white;}.google {background: #dd4b39;color: white;}.linkedin {background: #007bb5;color: white;}.youtube {background: #bb0000;color: white;}.xbrpw {background: #000000;color: white;}</style>
+  <script>function includeHTML() {var z, i, elmnt, file, xhttp;/*loop through a collection of all HTML elements:*/z = document.getElementsByTagName("*");for (i = 0; i < z.length; i++) {elmnt = z[i];/*search for elements with a certain atrribute:*/file = elmnt.getAttribute("incluye-html");if (file) {/*make an HTTP request using the attribute value as the file name:*/xhttp = new XMLHttpRequest();xhttp.onreadystatechange = function() {if (this.readyState == 4) {if (this.status == 200) {elmnt.innerHTML = this.responseText;}if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}/*remove the attribute, and call this function once more:*/elmnt.removeAttribute("incluye-html");includeHTML();}}      
+  xhttp.open("GET", file, true);xhttp.send();/*exit the function:*/return;}}};</script>
 
-        <style>
-
-          .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 80px;
-          }
-          
-          .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-          }
-          
-          .sidenav a:hover {
-            color: #f1f1f1;
-          }
-          
-          .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-          }
-          
-          @media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-          }
-          
-          
-          .sidenavFav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-          }
-          
-          .sidenavFav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-          }
-          
-          .sidenavFav a:hover {
-            color: #f1f1f1;
-          }
-          
-          .sidenavFav .closebtnFav {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-          }
-          
-          @media screen and (max-height: 450px) {
-            .sidenavFav {padding-top: 15px;}
-            .sidenavFav a {font-size: 18px;}
-          }
-          
-   
-          
-          .icon-bar {
-            width: 60px;
-            background-color: #555;
-          }
-          
-          .icon-bar a {
-            display: block;
-            text-align: center;
-            padding: 16px;
-            transition: all 0.3s ease;
-            color: white;
-            font-size: 25px;
-          }
-          
-          .icon-bar a:hover {
-            background-color: #000;
-          }
-          </style>
-                    
-          <style>
-            /* Style the tab */
-            .tab {
-              overflow: hidden;
-              border: 1px solid #ccc;
-              background-color: #f1f1f1;
-            }
-            
-            /* Style the buttons inside the tab */
-            .tab button {
-              background-color: inherit;
-              float: left;
-              border: none;
-              outline: none;
-              cursor: pointer;
-              padding: 14px 16px;
-              transition: 0.3s;
-              font-size: 17px;
-            }
-            
-            /* Change background color of buttons on hover */
-            .tab button:hover {
-              background-color: #ddd;
-            }
-            
-            /* Create an active/current tablink class */
-            .tab button.active {
-              background-color: #ccc;
-            }
-            
-            /* Style the tab content */
-            .tabcontent {
-              display: none;
-              padding: 6px 12px;
-              border: 1px solid #ccc;
-              border-top: none;
-            }
-            
-            /* Style the close button */
-            .topright {
-              float: right;
-              cursor: pointer;
-              font-size: 28px;
-            }
-            
-            .topright:hover {color: red;}
-            </style>
-            <style>                          
-              .icon-bar-sticky {
-                position: fixed;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-                margin-top: 50px;
-              }
-              
-              .icon-bar-sticky a {
-                display: block;
-                text-align: center;
-                padding: 16px;
-                transition: all 0.3s ease;
-                color: white;
-                font-size: 20px;
-              }
-              
-              /*.icon-bar-sticky a:hover {
-                background-color: #000;
-              }*/
-              
-              .facebook {
-                background: #3B5998;
-                color: white;
-              }
-              
-              .twitter {
-                background: #55ACEE;
-                color: white;
-              }
-              
-              .google {
-                background: #dd4b39;
-                color: white;
-              }
-              
-              .linkedin {
-                background: #007bb5;
-                color: white;}
-              
-              .youtube {
-                background: #bb0000;
-                color: white;}
-              
-              .xbrpw {
-                background: #000000;
-                color: rgb(255, 255, 255);}            
-              </style>
-  
-<style>
-  .sidenavRight {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidenavRight a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenavRight a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidenavRight .closebtnRight {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenavRight {padding-top: 15px;}
-    .sidenavRight a {font-size: 18px;}
-  }
-  </style>
-  
-  <script>
-    function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("incluye-html");
-        if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("incluye-html");
-            includeHTML();
-            }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        return;
-        }
-    }
-    };
-</script>
 <div class="containerwidow" id="mainXbr">
   <div class="scrollmenu">
-  <a href="#openNavXbR" onclick="openNavXbr()"> <span class="dot" style="background:#ED594A;"></span><span class="dot" style="background:#FDD800;"></span><span class="dot" style="background:#5AC05A;"></span> <span class="w3-hide">Welcome Screen</span></a>
+  <a href="#openNavXbR" onclick="openNavXbr()"> <span class="dot" style="background:#ED594A;"></span><span class="dot" style="background:#FDD800;"></span><span class="dot" style="background:#5AC05A;"></span> </a><!-- <img src="assets/favicons/lamp-services.svg" width="18" height="18" alt="Welcome Screen Get Started"> -->
+  <a href="file:///C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a" title="Descargas"> <i class="fa fa-download "></i></a>
+  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a" title="Documentos">  <i class="fa fa-folder-open  "></i></a> 
   
-  <button class="tablinks" onclick="openCity(event, 'Paris')"><i class="fa fa-photo"></i></button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-  <a href="#" onclick="openCity(event, 'London')" id="defaultOpen"><i class="fa fa-home"></i></a>  
 
-  <a href="https://how-to-examples-html.w3spaces.com/editor-online-renovado.html" target="iframe_a" title="Editor  Online revonado ">W3ditor!</a>
-  <a href="api/codepen.html" target="iframe_a">Codepen</a>  
-  <a href="https://www.xbr.pw/secu/dashboard/editor/" target="iframe_a"  >eDitor</a>     
-  <a href="https://hihellomonster.github.io/editor.online/" target="iframe_a">LampCode </a> 
+  <a href="#" onclick="openCity(event, 'London')" id="defaultOpen" title="Editor"><img src="assets/favicons/lamp-martech.svg" width="18" height="18" alt="Editor" >  Editor </a>  
+  <a href="#" onclick="openCity(event, 'Tokyo')" title="Snippes"> <img src="assets/favicons/lamp-desing.svg" width="18" height="18" alt="Snippes" onclick="closeNav()">   Snippets  </a>  
+  <a href="#" onclick="openCity(event, 'Paris')" title="Multimedia"> <img src="assets/favicons//lamp-developer-products-and-experience.svg" width="18" height="18" alt="Multimedia" onclick="closeNav()"> Multimedia </a>  
+   
+  
+  <a href="https://how-to-examples-html.w3spaces.com/editor-online-renovado.html" target="iframe_a" title="W3ditor! "><img src="assets/favicons/lamp.svg" width="18" height="18" alt="eDitor"></a>
+  
+  <a href="api/codepen.html" target="iframe_a"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen"></a>  
+  <a href="https://www.xbr.pw/secu/dashboard/editor/" target="iframe_a" title="eDitor"  ><img src="assets/favicons/pikachu en la nube voladora.svg" width="18" height="18" alt="eDitor"></a>     
+  <a href="https://hihellomonster.github.io/editor.online/" target="iframe_a" ><img src="assets/favicons/hihellomonster.png" width="18" height="18" alt="Editor online"> </a> 
+  <a href="api/doble.pantalla/index.html" target="iframe_a" title="Doble View" ><img src="assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"></a> 
 
 
+  <a href="api/para-notas-rapidas/index.html" target="notas-rapidas"><img src="assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Docs Bootstrap 5" onclick="openNavRight()"></a>
+  <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank"><img src="assets/favicons/bootstrap.ico" width="18" height="18" alt="Docs Bootstrap 5"></a>  
   <a href="https://www.w3schools.com/bootstrap5/index.php" target="_blank"><img src="assets/favicons/w3.ico" width="18" height="18" alt="W3 Bootstrap 5"></a>
-  <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank"><img src="assets/favicons/bootstrap.ico" width="18" height="18" alt="Docs Bootstrap 5"></a>
   <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" target="_blank"><img src="assets/favicons/w3.ico" width="18" height="18" alt="Save en w3"></a>
-  
   <a href="https://github.com/luisangelmaciel?tab=repositories" target="_blank"><img src="assets/favicons/github.svg" width="18" height="18" alt="CSS"></a>
-  
   <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free" target="_blank"> <img src="assets/favicons/fontawesome.ico" width="18" height="18" alt="W3 Bootstrap 5"> </a>      
-  <a href="api/doble.pantalla/index.html" target="iframe_a"   >Doble View</a> 
+  <a href="https://codepen.io/trending" target="_blank" title="Codepen Trending"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen"></a>
 
-
-  <a href="#tools"><i class="fa fa-at" ></i></a>  
-  <a href="#base"><i class="fa fa-bolt" style="cursor:pointer" onclick="openNavRight()"></i></a>
-  <a href="#custom"><i class="fa fa-stopwatch" ></i></a>
-  <a href="#friends"><i class="fa fa-file-import" ></i></a>
-  <a href="#partners" data-bs-toggle="modal" data-bs-target="#myModalFull"><i class="fa fa-external-link-alt"></i></a>
-  <a href="#people" data-bs-toggle="modal" data-bs-target="#myModalScroll"><i class="fas fa-copy"></i> envelope-open-text </a>
-  <a href="javascript:void(0)"  title="Editar img">        <i class="fa fa-photo  "></i></a>
-  <a href="javascript:void(0)"  title="Tareas">    <i class="fa fa-check "></i></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a"  style="width:10%;"  title="Descargas"> <i class="fa fa-download "></i></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a" title="Documentos">  <i class="fa fa-folder-open  "></i></a>         
-  <a href="https://docs.google.com/spreadsheets/d/1-VpQFNgiAi66LMPeap5eoNe2vDw_nDlW1kuRsyPC-ss/edit#gid=0" target="iframe_a"  title="Metodología">💡</a>
-  <a href="https://codepen.io/trending" target="_blank"><img src="  https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="CSS"></a>
-  <a href="" target="_blank"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico.svg" width="18" height="18" alt="CSS"></a>
 
  
-
+  <!-- myModalScrolla -->
+  <div class="modal" id="myModalScrolla">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><i class="fa fa-check "></i> Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h3><i class="fa fa-file-import" ></i> Some text to enable scrolling..</h3>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>    </div> </div><!-- /"#myModalScrolla" -->
+        
+  </div>
+  
+  <!-- myModal16x9 -->
+  <div class="modal" id="myModal16x9">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+       <h2>Mapa de sitio <i class="fa fa-photo"></i> <span data-bs-dismiss="modal" class="float-end" style="color:grey">X<span></h2>         
+      <div class="ratio ratio-16x9">
+        <iframe src="https://docs.google.com/spreadsheets/d/1-VpQFNgiAi66LMPeap5eoNe2vDw_nDlW1kuRsyPC-ss/edit#gid=0"  height="600px " width="100% " title="Mapa de sitio" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
+      </div>   
+      </div>
+    </div>
+  </div><!-- /#myModal16x9" -->
+  
 
     <!-- The Modal -->
     <div class="modal" id="myModalScroll">
@@ -455,7 +136,7 @@ height: 35px;
 
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
+            <h4 class="modal-title">Modal Heading <i class="fa fa-bolt" style="cursor:pointer" ></i> <i class="fa fa-at" ></i> </h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
@@ -470,7 +151,7 @@ height: 35px;
 
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fas fa-copy"></i></button>
           </div>
 
         </div>
@@ -478,29 +159,7 @@ height: 35px;
     </div><!-- /The Modal -->
  
 
-    <!-- The Modal -->
-    <div class="modal" id="myModalFull">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-
-          <!-- Modal body -->
-          <div class="modal-body">
-            Modal body..
-          </div>
-
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div><!-- The Modal -->
+  
 </div><!-- scrollmenu -->
 
 <div class="icon-bar-sticky">
@@ -511,52 +170,36 @@ height: 35px;
   <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>  -->
   <a href="#" class="xbrpw"><i class="fa fa-home" onclick="openNav()"></i> </a> 
   <a href="#"  class="xbrpw"><i class="fa fa-heart" onclick="openNavFav()"></i></a> 
-
-  
+  <a href="#" title="Metodología" class="xbrpw" data-bs-toggle="modal" data-bs-target="#myModal16x9">💡</a>
+  <a href="#pomodoro" class="xbrpw" data-bs-toggle="modal" data-bs-target="#myModalScrolla"><i class="fa fa-stopwatch" ></i> </a>    
   <a href="https://docs.google.com/spreadsheets/d/1xcXsKf8h9JYzhHyZYeLi0ltQoCHos4b7phazOxlTQf0/edit#gid=0" class="xbrpw"target="iframe_a"  ><img src="assets/favicons/sheets.png" width="18" height="18" alt="Twits en Sheets"></a> 
   <a href="https://docs.google.com/document/d/1IvTS5-Omp1fQUrC27hE3ranYCMRXOdFJBjq9UkMBjw0/edit" class="xbrpw" target="iframe_a"  ><img src="assets/favicons/docs.png" width="18" height="18" alt="Twits en Docs"></a> 
-</div>
+</div><!-- icon-bar-sticky" -->
+  
 
-  <div style="margin-left: 0px;" id="mainXbr">
-    <div id="London" class="tabcontent">
-      <iframe src="empecemos/index.html" name="iframe_a" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
-    </div><!-- /London -->
+    <div style="margin-left: 0px;" id="mainXbr">
+    
+        <div id="London" class="tabcontent">
+          <iframe src="./tareas/index.html" name="iframe_a" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+        </div><!-- /London -->
 
-    <div id="Paris" class="tabcontent">
-      <iframe src="assets/gallery.html" name="iframe_a" height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
-    </div><!-- /Paris -->
+        <div id="Paris" class="tabcontent">
+          <iframe src="multimedia.html"  height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
+        </div><!-- /Paris -->
 
-    <div id="Tokyo" class="tabcontent"><!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->
-      <h3>Tokyo</h3>
-      <p>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_social_bar</p>
-    </div><!-- /Tokio -->
-  </div><!-- /class content -->
-  </div><!--  id="mainXbr" -->
+        <div id="Tokyo" class="tabcontent"><!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->      
+          <iframe src="snippes.html" name="tabSnipes" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+        </div><!-- /Tokio -->
+    </div><!--  id="mainXbr" -->
 
 
   
   <div id="mysidenavRightRight" class="sidenavRight">
     <a href="javascript:void(0)" class="closebtnRight" onclick="closeNavRight()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <iframe src="assets/gallery.html" name="notas-rapidas" height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
   </div>
   
-
-  
-  <script>
-  function openNavRight() {
-    document.getElementById("mysidenavRightRight").style.width = "250px";
-  }
-  
-  function closeNavRight() {
-    document.getElementById("mysidenavRightRight").style.width = "0";
-  }
-  </script>
-     
-  
-  
+ 
 
 <div id="mySidenavXbr" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNavXbr()">&times;</a>
@@ -568,8 +211,11 @@ height: 35px;
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#"  onclick="closeNav()">About</a>
-  <a href="#"  onclick="closeNav()">Services</a>
+
+  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  >Base64</a>
+  <a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a>
+
+  <a href="#"  onclick="closeNav()">Editor</a>
   <a href="#"  onclick="closeNav()">Clients</a>
   <a href="#"  onclick="closeNav()">Contact</a>
 </div>
@@ -579,42 +225,14 @@ height: 35px;
   <a href="#"  onclick="closeNavFav()">About Fav</a>
   <a href="#"  onclick="closeNavFav()">Services Fav</a>
   <a href="#"  onclick="closeNavFav()">Clients Fav</a>
-  <a href="#"  onclick="closeNavFav()"><a href="api/codepen.html">Codepen</a></a>
+  <a href="api/codepen.html"  onclick="closeNavFav()" target="iframe_a">Codepen</a>
 </div>
 
-<script>function openNavXbr() {document.getElementById("mySidenavXbr").style.width = "250px";document.getElementById("mainXbr").style.marginLeft = "250px";}  
-function closeNavXbr() {document.getElementById("mySidenavXbr").style.width = "0";document.getElementById("mainXbr").style.marginLeft= "0";}</script><script>
-function openNav() {document.getElementById("mySidenav").style.width = "250px";}
-function closeNav() {document.getElementById("mySidenav").style.width = "0";}
-</script>
-<script>
- function openNavFav() {document.getElementById("mySidenavFav").style.width = "250px";}
-function closeNavFav() {document.getElementById("mySidenavFav").style.width = "0";}
-</script>
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
+
+
+
   
-
-
-
-
  <div class="window-mini" >
   <div class="header-mini">    
     <div class="status-mini"  onclick="sortListDir()"><i class="fa fa-search"></i> A-Z</div>
@@ -623,163 +241,30 @@ document.getElementById("defaultOpen").click();
   </div>
   <div class="container-mini" id="myMenuMini"> 
     <div id="myDIV"> 
-       <ul id="id01"  style="  display: block; list-style-type: disc;margin-top: 0.5em;margin-bottom: 1 em;margin-left: 0;margin-right: 0;padding-left: 12px;list-style: none">
-        <li><a href="https://how-to-examples-html.w3spaces.com/Window-Navigator-Object-All-Properties.html" target="iframe_a">Window-Navigator-Object-All-Properties</a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/hide-small-medium-large.html" target="iframe_a">Hide-small-medium-large</a><br></li>
-        <li><a href="https://how-to-examples-html.w3spaces.comstyle-db.html"  target="iframe_a">Style Dragon Ball</a><br></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/css-style-default-w3-customize.html" target="iframe_a">CSS style-default-w3-customize</a><br></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/" target="iframe_a">HTML</a></li>
-        <li><a href="https://how-to-examples-css.w3spaces.com/" target="iframe_a">CSS</a></li>
-        <li><a href="https://how-to-examples-js.w3spaces.com/" target="iframe_a">JS</a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/mini-search-content.html" target="iframe_a">Mini navegador summary - Search Content </a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/just-click-on-the-Contact-me-below.html" target="iframe_a">Ficha de contacto en- Just click on the contact me below</a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/animation-exploding-Bombs-and-Candies.html" target="iframe_a">Animación CSS | EXplotanto bombas y dulces. </a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/welcome-Random-How-to-examples-HTML.html" target="iframe_a">Welcome Random - Letrero colgante para ecommerce </a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/angular-intro_controller-imput-ng-model.html" target="iframe_a">Apuntes Angular | Controller Imput NG-Model</a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/apuntes-angular-intro-bind-expression.html" target="iframe_a"><b>Apuntes Angular </b> | Intro Bind EXpression </a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/buton-upload-animation.html" target="iframe_a">Animation buton upload - multiusos</a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/Photo-Grid-showSlides-lazy_loading-image.html" target="iframe_a">Photo grind showslides + loading lazy image</a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/photo-grind-1-2-3-4.html" target="iframe_a">Photo grind 1,2,3 y 4 espacios</a></li>
-        <li><a href="https://how-to-examples-html.w3spaces.com/Glitch-effect-text-tv.html" target="iframe_a"></a></li>
-      </ul><!-- /ul -->
-    </div><!--/MyDivx -->
+      <ul id="id01"  style="  display: block; list-style-type: disc;margin-top: 0.5em;margin-bottom: 1 em;margin-left: 0;margin-right: 0;padding-left: 12px;list-style: none">
+       <li><a href="https://how-to-examples-html.w3spaces.com/Window-Navigator-Object-All-Properties.html" target="tabSnipes">Window-Navigator-Object-All-Properties</a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/hide-small-medium-large.html" target="tabSnipes">Hide-small-medium-large</a><br></li>
+       <li><a href="https://how-to-examples-html.w3spaces.comstyle-db.html"  target="tabSnipes">Style Dragon Ball</a><br></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/css-style-default-w3-customize.html" target="tabSnipes">CSS style-default-w3-customize</a><br></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/" target="tabSnipes">HTML</a></li>
+       <li><a href="https://how-to-examples-css.w3spaces.com/" target="tabSnipes">CSS</a></li>
+       <li><a href="https://how-to-examples-js.w3spaces.com/" target="tabSnipes">JS</a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/mini-search-content.html" target="tabSnipes"><i class="fa fa-at" ></i>  Mini navegador summary - Search Content </a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/just-click-on-the-Contact-me-below.html" target="tabSnipes">Ficha de contacto en- Just click on the contact me below</a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/animation-exploding-Bombs-and-Candies.html" target="tabSnipes">Animación CSS | EXplotanto bombas y dulces. </a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/welcome-Random-How-to-examples-HTML.html" target="tabSnipes">Welcome Random - Letrero colgante para ecommerce </a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/angular-intro_controller-imput-ng-model.html" target="tabSnipes">Apuntes Angular | Controller Imput NG-Model</a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/apuntes-angular-intro-bind-expression.html" target="tabSnipes"><b>Apuntes Angular </b> | Intro Bind EXpression </a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/buton-upload-animation.html" target="tabSnipes">Animation buton upload - multiusos</a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/Photo-Grid-showSlides-lazy_loading-image.html" target="tabSnipes">Photo grind showslides + loading lazy image</a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/photo-grind-1-2-3-4.html" target="tabSnipes">Photo grind 1,2,3 y 4 espacios</a></li>
+       <li><a href="https://how-to-examples-html.w3spaces.com/Glitch-effect-text-tv.html" target="tabSnipes"></a></li>
+     </ul><!-- /ul -->
+   </div><!--/MyDivx -->
   </div><!-- /"myMenuMini">-->
 </div><!-- window mini -->
 
-<div class="content">
-  <h3>Browser Window</h3>
-  <textarea rows="1" cols="150">rows="4" cols="150"</textarea>
-
-    <!-- code--><templete><!--  --><!--/  --><div class="w3-container w3-padding-large w3-section  w3-light-grey"><div class="w3-code htmlHigh notranslate green-border" >&lt;button onclick=&quot;document.location='index.html'&quot;&gt;Click Me!&lt;/button&gt;</div></div></templete><!-- /code-->
-
-    <!-- code--><templete><div class="w3-container w3-padding-large w3-section  w3-light-grey"><div class="w3-code htmlHigh notranslate green-border" >&lt;!--   --> <br> &lt;!--/  --> <br>   </div></div></templete><!-- /code-->
-    
-<div><textarea rows="4" cols="150"><style>
-
-
-  .h1p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 1em;  
-    font-weight: normal;
-  }
-  .h2p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 1em;  
-    font-weight: normal;
-  }
-  .h3p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 1em;  
-    font-weight: normal;
-  }
-  .h4p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 1em;  
-    font-weight: normal;
-  }
-  .h5p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 1em;  
-    font-weight: normal;
-  }
-  .h6p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 1em;  
-    font-weight: normal;
-  }
-  
-  p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 18px;
-    
-  }
-  
-  
-  </style>
-  
-  Me / Default / W3 
-  <h1 class="h1p"> h1 con estilo de p / font-size: 2em; / 64px</h1>
-  <h2 class="h2p"> h2 con estilo de p / font-size: 1.5em; / 48px</h2>
-  <h3 class="h3p"> h3 con estilo de p / font-size: 1.17em; / 36px </h3>  
-  <h4 class="h4p"> h4 con estilo de p / font-size: .83em; / 24px</h>  
-  <h5 class="h5p"> h5 con estilo de p / font-size: 1em; /20px </h>  
-  <h6 class="h6p"> h6 con estilo de p / font-size: .67em; 18px </h>  
-    
-  
-  <hr>
-  
-  <style>h1 {font-size: 18px;}
-  h2 {font-size: 18px;}
-  h3 {font-size: 18px;}
-  h4 {font-size: 18px;}
-  h5 {font-size: 18px;}
-  h6 {font-size: 18px;}
-  </style></textarea>
-  </div>
-
-  <textarea rows="1" cols="150"><link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css"></textarea>
-  
-  <!-- centro centro --> <style>
-        .center-center {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 200px;
-        }
-        </style>
-        <div class="center-center">
-         <button onclick="onlinenow()">Try it</button>
-        
-        <p id="demo"></p>
-        
-        <script>
-        function onlinenow() {
-          var x = "Is the browser online? " + navigator.onLine;
-          document.getElementById("demo").innerHTML = x;
-        }
-        </script>
-        
-        </div>
-        
-        <div style="display: flex;justify-content: center;align-items: center;height: 200px">
-          <div>&copy;
-            <span id="copyright">Trabajando desde 2006 - <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-            </span>
-            
-            </div>
-        </div><!-- /centro centro-->
-        
-
-
-    
+<div class="content">    
         <footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity">
           <a href="https://twitter.com/luisangelmaciel" target="_blank" title="@_luisangelmaciel"><i class="fa fa-twitter fa-lg fa-fw"></i></a>
     
@@ -802,12 +287,18 @@ document.getElementById("defaultOpen").click();
           Escribo algo aquí todos los días de la semana y, a veces, también los fines de semana. He estado haciendo eso desde septiembre de 2003. Espero seguir haciéndolo mientras pueda escribir.
           
           Este es mi diario donde pienso las cosas “en voz alta”. Principalmente escribo AVC para mí y espero que todos se beneficien tanto como yo. </p>
-        
+        <hr>
+          <style>.bg45deg {background:linear-gradient(45deg, #ae1a31 0%, #db6b2a 99%)}</style>
+          <div class="bg45deg">Hi</div><hr>
+
          ❤🧡💛💚💙💜🤎🖤🤍💔❣💕💞💓💗💖💘💝💟❤️‍🔥❤️‍🩹🤟🫀👫💑💏💋♥😍😘😻🏩💒💌დღ♡❣❤❥❦❧♥          
          <i class="fa fa-share-alt"></i>
          <i class="fa fa-upload"></i>
          <i class="fa fa-bug"></i>
-         <i class="fa fa-file"></i>  
+         <i class="fa fa-file">
+          Sobre las ilustraciones
+          Esta publicación de blog incluye ilustraciones anónimas de debates en r/science. Agradezco a Sophie Diehl por las conversaciones sobre la ilustración de esta investigación y por los algoritmos de código abierto de Anders Hoff que modifiqué para crear la obra de arte. 
+          </i>  
          
          <p style="color: #1c4595" class="w3-bar-item w3-button"><b>#1c4595 Blue+</b></p> 
          <p style="color: #15c8" class="w3-bar-item w3-button"><b>#15c8 Blue</b></p> 
@@ -820,227 +311,38 @@ document.getElementById("defaultOpen").click();
 </footer>
 
 
-<a href="/Users/Luis Ángel/Documents/head-total-full/index.html" target="iframe_a"><span onclick="w3_close()">Head Full</span></a>
-<li  class="w3-bar-item "><a href="/fusion/index.html"  target="iframe_a"><span onclick="w3_close()">Fusion</span></a></li>  
-
-<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  >Base64</a>
-<li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a></li>
-<li  class="w3-bar-item "><a href="https://www.onlineimagetool.com/es/compress-png-jpg-webp-gif" target="iframe_a">Comprimir img</a></li>
-<li  class="w3-bar-item "><a href="https://photoswipe.com/" target="iframe_a">Photoswipe +galerias</a></li>
-<li  class="w3-bar-item "><a href="https://icomoon.io/app/#/select" >Icomoon</a></li>   </ul>
-<li  class="w3-bar-item "><a href="responsive.html" target="iframe_a"><span onclick="w3_close()">Responsive</span></a></li>   
-
-<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/oNYxgyX" target="iframe_a">Gradients</a></li>
-<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/ZEBWYxm" target="iframe_a">CSS Filter playground</a></li>
-<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/BaQKyxd" target="iframe_a">Box Shadow </a></li>
-<li  class="w3-bar-item "><a href="https://codepen.io/rahulmeshram/full/mdOPyxO" target="iframe_a">CSS Cursor Property</a></li>
-<li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/EWerRM" target="iframe_a">Para que sea banco de indexación </a></li>
-<li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/LzWgyJ" target="iframe_a">Digital assets</a></li>
-<li  class="w3-bar-item "><a href="https://codepen.io/Aniboaz/pen/VMePLV" target="iframe_a">Background patterns</a></li>  
-<li  class="w3-bar-item "><a href="https://www.cleancss.com/css-minify/" target="iframe_a">CSS Minify</a></li>
-<li  class="w3-bar-item "><a href="https://uncss-online.com/" target="iframe_a">UnCSS</a></li></ul>
-<li  class="w3-bar-item "><a href="https://seoinspector.pro/" target="iframe_a">Seo Inspector</a></li></ul>
-   
-
-<a href="api/extrae-color/index.html" target="iframe_a"  ><span onclick="w3_close()">Extrae color</span></a>
-<a href="https://dummyimage.com/" target="iframe_a"  ><span onclick="w3_close()">Dummy image</span></a>
-<a href="https://test-vcz6zlcu0k.disqus.com/admin/settings/moderation/" target="iframe_a"  ><span onclick="w3_close()">Disquis</span></a>   
-
-<a href=" https://how-to-examples-js.w3spaces.com/" target="iframe_a"  >howTo.js (hi)</a>
-<a href=" https://how-to-examples-html.w3spaces.com/" target="iframe_a"  >howTo.html (lamp)</a>
-<a href=" https://how-to-examples-css.w3spaces.com/" target="iframe_a"  ><b>howTo.css</b> (lamacp)</a>
-<a href=" https://how-to-examples-css.w3spaces.com/como-crear-un-efecto-de-movimiento-en-css.html " target="iframe_a"  >Efecto de ilusion</a>
-
-
-<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a"  ><span onclick="w3_close()">Abrir carpeta Git</span></a>
-<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  ><span onclick="w3_close()">xbr.pw</span></a>
-<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-luisangelmaciel" target="iframe_a"  ><span onclick="w3_close()">luisangelmaciel.one</span></a>
-<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xiiber" target="iframe_a"  ><span onclick="w3_close()">xiiber.com</span></a>
-<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-dragvesti" target="iframe_a"  ><span onclick="w3_close()">dragvesti</span></a>
-<a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-luisemoji" target="iframe_a"  ><span onclick="w3_close()">luisemoji</span></a>
-          
-  <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/Igglybuff/svg/Silhouette-v1.svg" style="width:100%;"></a>
-  <a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/lamp-goku-style.svg" style="width:100%;"></a>
-<a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/600x400.svg" style="width:100%;"></a>
-<a class="w3-bar-item w3-button" target="_blank" href=""><img src="https://www.luisangelmaciel.one/img/ico%20sombra%20silueta%20goku%20dragon%20ball.svg" style="width:100%;"></a>
-<div class="w3-bar-item w3-button" ><img src="https://www.luisangelmaciel.one/img/el%20chocolate%20choco%20ru%20edition%20rupaul%20drag%20race%20de%20katya%20zamolodchikova.webp" style="width:100%;"></div>
-<!-- https://www.luisangelmaciel.one/img/xiiber-recomienda-negro-curvas.svg
-https://www.luisangelmaciel.one/img/logo%20hi%20hello%20monster.svg
-https://www.luisangelmaciel.one/Igglybuff/svg/logo-cgtravel-color.svg  github.svg xiiber-1.svg xiiber.svg https://www.luisangelmaciel.one/Igglybuff/svg/camara.svg 
-https://www.luisangelmaciel.one/Igglybuff/svg/doble-monitor.svg https://www.luisangelmaciel.one/Igglybuff/svg/logo-dragvesti.svg  https://www.luisangelmaciel.one/Igglybuff/svg/verificado.svg 
-https://www.luisangelmaciel.one/Igglybuff/svg/verga-one.svg https://www.luisangelmaciel.one/Igglybuff/svg/mascarilla-covid.svg
-https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg https://www.luisangelmaciel.one/Igglybuff/svg/carozaon-crayola.svg
-https://www.luisangelmaciel.one/Igglybuff/svg/logo-grindr-app-gay-color.svg https://www.luisangelmaciel.one/Igglybuff/svg/cdmx-angel-de-la-independencia-two.svg-->
-
-
-<script src="https://www.w3schools.com/lib/w3codecolor.js"></script><script>w3CodeColor();</script>
+<script src="js/dashboard.js"></script>
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+<script>w3CodeColor();</script>
 <div incluye-html=""></div> <script>includeHTML();</script> 
 <!-- Para formulario de wp <script src='js/mrofppastaw.js'></script> -->
 
-
-
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myMenuMini");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-  </script>
-
-  <script>
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myDIV *").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-  </script>
-
-  <script>
-  function sortListDir() {
-    var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
-    list = document.getElementById("id01");
-    switching = true;
-    // Set the sorting direction to ascending:
-    dir = "asc"; 
-    // Make a loop that will continue until no switching has been done:
-    while (switching) {
-      // start by saying: no switching is done:
-      switching = false;
-      b = list.getElementsByTagName("LI");
-      // Loop through all list-items:
-      for (i = 0; i < (b.length - 1); i++) {
-        //start by saying there should be no switching:
-        shouldSwitch = false;
-        /* check if the next item should switch place with the current item,
-        based on the sorting direction (asc or desc): */
-        if (dir == "asc") {
-          if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-            /* if next item is alphabetically lower than current item,
-            mark as a switch and break the loop: */
-            shouldSwitch = true;
-            break;
-          }
-        } else if (dir == "desc") {
-          if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
-            /* if next item is alphabetically higher than current item,
-            mark as a switch and break the loop: */
-            shouldSwitch= true;
-            break;
-          }
-        }
-      }
-      if (shouldSwitch) {
-        /* If a switch has been marked, make the switch
-        and mark that a switch has been done: */
-        b[i].parentNode.insertBefore(b[i + 1], b[i]);
-        switching = true;
-        // Each time a switch is done, increase switchcount by 1:
-        switchcount ++;
-      } else {
-        /* If no switching has been done AND the direction is "asc",
-        set the direction to "desc" and run the while loop again. */
-        if (switchcount == 0 && dir == "asc") {
-          dir = "desc";
-          switching = true;
-        }
-      }
-    }
+<script>  function openNavRight() {document.getElementById("mysidenavRightRight").style.width = "400px";}function closeNavRight() {document.getElementById("mysidenavRightRight").style.width = "0";}</script>
+<script>function openNavXbr() {document.getElementById("mySidenavXbr").style.width = "250px";document.getElementById("mainXbr").style.marginLeft = "250px";} function closeNavXbr() {document.getElementById("mySidenavXbr").style.width = "0";document.getElementById("mainXbr").style.marginLeft= "0";}</script>
+<script>function openNav() {document.getElementById("mySidenav").style.width = "250px";}function closeNav() {document.getElementById("mySidenav").style.width = "0";}</script>
+<script>function openNavFav() {document.getElementById("mySidenavFav").style.width = "250px";}function closeNavFav() {document.getElementById("mySidenavFav").style.width = "0";}</script><script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-  </script>
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+  
+
+
 
 </body>
 </html>
-
-
-
-
-
-
-
-<!-- <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-
-<link rel="canonical" href="/" />
-<meta property="og:type" content="article" />
-<meta property="article:modified_time" content="2022-07-03T20:26:01+00:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:label1" content="Tiempo de lectura" />
-<meta name="twitter:data1" content="4 minutos" /> 
-
-<script type="application/ld+json"
- class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.teameevee.com/curiosidades-del-mundo-pokemon/",
- "url":"https://www.teameevee.com/curiosidades-del-mundo-pokemon/","name":"⭐ Curiosidades del Mundo Pokémon - Team Eevee","isPartOf":{"@id":"https://www.teameevee.com/#website"},"primaryImageOfPage":{"@id":"https://www.teameevee.com/curiosidades-del-mundo-pokemon/#primaryimage"},"image":{"@id":"https://www.teameevee.com/curiosidades-del-mundo-pokemon/#primaryimage"},"thumbnailUrl":"https://www.teameevee.com/wp-content/uploads/2022/04/VULPIX-POKE-BALL.jpg","datePublished":"2022-04-12T12:42:31+00:00","dateModified":"2022-07-03T20:26:01+00:00","description":"Pokémon tiene más de 20 años de historia, tiempo en el cual han ocurrido tode de ellas?","breadcrumb":
- {"@id":"https://www.teameevee.com/curiosidades-del-mundo-pokemon/#breadcrumb"},"inLanguage":"es",
- "potentialAction":[{"@type":"ReadAction","target":["https://www.teameevee.com/curiosidades-del-mundo-pokemon/"]}]},
- {"@type":"ImageObject","inLanguage":"es","@id":"https://www.teameevee.com/curiosidades-del-mundo-pokemon/#primaryimage","url":
- "https://www.teameevee.com/wp-content/uploads/2022/04/VULPIX-POKE-BALL.jpg","contentUrl":
- "https://www.teameevee.com/wp-content/uploads/2022/04/VULPIX-POKE-BALL.jpg",
- "width":1024,"height":576,"caption":"FAN-ART POKÉMON"},
- {"@type":"BreadcrumbList","@id":"https://www.teameevee.com/curiosidades-del-mundo-pokemon/#breadcrumb",
- "itemListElement":[{"@type":"ListItem","position":1,"name":"Portada","item":"https://www.teameevee.com/"},
- {"@type":"ListItem","position":2,"name":"⭐ Curiosidades del Mundo Pokémon"}]},{"@type":"WebSite",
- "@id":"https://www.teameevee.com/#website","url":"https://www.teameevee.com/","name":"◉ Team Eevee ◉",
- "description":"Las Mejores Guias, Trucos y Noticias de la Saga Pok&eacute;mon","publisher":{"@id":"https://www.teameevee.com/#organization"},
- "potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.teameevee.com/?s={search_term_string}"},
- "query-input":"required name=search_term_string"}],"inLanguage":"es"},{"@type":"Organization","@id":"https://www.teameevee.com/#organization",
- "name":"◉ Team Eevee ◉","url":"https://www.teameevee.com/","sameAs":[],
- "logo":{"@type":"ImageObject","inLanguage":"es","@id":"https://www.teameevee.com/#/schema/logo/image/",
- "url":"https://www.teameevee.com/wp-content/uploads/2022/03/LOGO-TEAM-EEVEE-NUEVO.png",
- "contentUrl":"https://www.teameevee.com/wp-content/uploads/2022/03/LOGO-TEAM-EEVEE-NUEVO.png",
- "width":704,"height":528,"caption":"◉ Team Eevee ◉"},"image":{"@id":"https://www.teameevee.com/#/schema/logo/image/"}}]}</script> 
-
- 
- <link rel='dns-prefetch' href='//fonts.googleapis.com' />
- 
-<link rel='preconnect' href='//www.google-analytics.com' />
-<link rel="alternate" type="application/rss+xml" title="◉ Team Eevee ◉ &raquo; Feed" href="https://www.teameevee.com/feed/" />
-<link rel="alternate" type="application/rss+xml" title="◉ Team Eevee ◉ &raquo; Feed de los comentarios" href="https://www.teameevee.com/comments/feed/" /> 
- -->
-<!-- 
-Servicio de atención al cliente
-WikiDex es una comunidad FANDOM en Juegos.
-
-
-
-<link rel="stylesheet" href="/es/load.php?lang=es&amp;modules=ext.cite.styles%7Cext.fandom.ArticleInterlang.css%7Cext.fandom.ArticleVideo.desktopNew.css%7Cext.fandom.CreatePage.css%7Cext.fandom.FandomEmbedVideo.css%7Cext.fandom.GlobalComponents.CommunityHeader.css%7Cext.fandom.GlobalComponents.CommunityHeaderBackground.css%7Cext.fandom.GlobalComponents.GlobalComponentsTheme.light.css%7Cext.fandom.GlobalComponents.GlobalFooter.css%7Cext.fandom.GlobalComponents.GlobalNavigation.css%7Cext.fandom.GlobalComponents.GlobalNavigationTheme.default.css%7Cext.fandom.GlobalComponents.StickyNavigation.css%7Cext.fandom.HighlightToAction.css%7Cext.fandom.PortableInfoboxFandomDesktop.css%7Cext.fandom.Thumbnails.css%7Cext.fandom.UserPreferencesV2.css%7Cext.fandom.bannerNotifications.desktop.css%7Cext.fandom.photoGallery.gallery.css%7Cext.fandom.quickBar.css%7Cext.fandomVideo.css%7Cext.staffSig.css%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cjquery.tablesorter.styles%7Cskin.fandomdesktop.CargoTables-ext.css%7Cskin.fandomdesktop.FanFeed.css%7Cskin.fandomdesktop.Math.css%7Cskin.fandomdesktop.rail.css%7Cskin.fandomdesktop.rail.popularPages.css%7Cskin.fandomdesktop.styles%7Cvendor.bootstrap.popover.css&amp;only=styles&amp;skin=fandomdesktop"/>
-<script async="" src="/es/load.php?cb=20220830200712&amp;lang=es&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=fandomdesktop"></script>
-<meta name="ResourceLoaderDynamicStyles" content=""/>
-<link rel="stylesheet" href="/es/load.php?lang=es&amp;modules=site.styles&amp;only=styles&amp;skin=fandomdesktop"/>
-<meta name="generator" content="MediaWiki 1.37.4"/>
-<meta name="format-detection" content="telephone=no"/>
-<meta property="og:type" content="article"/>
-<meta property="og:site_name" content="WikiDex"/>
-<meta property="og:title" content="Eevee"/>
-<meta property="og:url" content="https://pokemon.fandom.com/es/wiki/Eevee"/>
-<meta property="og:description" content="Eevee es un Pokémon de tipo normal introducido en la primera generación. Se caracteriza por ser el Pokémon con más opciones evolutivas, actualmente son 8. Es el Pokémon inicial de Pokémon Let&#039;s Go Eevee! Su nombre original iba a ser Eon, pero al final se cambió. A pesar de esto, todas sus evoluciones sí terminan con dicho sufijo. Ninguna de las evoluciones de Eevee se lleva a cabo al alcanzar un determinado nivel, la forma más común de evolución. El nombre de Eevee es un palíndromo. Lo mismo ocu"/>
-<meta property="og:image" content="https://static.wikia.nocookie.net/espokemon/images/f/f2/Eevee.png/revision/latest/scale-to-width-down/1200?cb=20150621181400"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:site" content="@getfandom"/>
-<meta name="twitter:url" content="https://pokemon.fandom.com/es/wiki/Eevee"/>
-<meta name="twitter:title" content="Eevee | WikiDex | Fandom"/>
-<meta name="twitter:description" content="Eevee es un Pokémon de tipo normal introducido en la primera generación. Se caracteriza por ser el Pokémon con más opciones evolutivas, actualmente son 8. Es el Pokémon inicial de Pokémon Let&#039;s Go…"/>
-<meta name="description" content="Eevee es un Pokémon de tipo normal introducido en la primera generación. Se caracteriza por ser el Pokémon con más opciones evolutivas, actualmente son 8. Es el Pokémon inicial de Pokémon Let&#039;s Go Eevee! Su nombre original iba a ser Eon, pero al final se cambió. A pesar de esto, todas sus…"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
-<link href="/es/wikia.php?controller=ThemeApi&amp;method=themeVariables&amp;cityId=1221&amp;version=1663173391" rel="stylesheet"/>
-<link rel="shortcut icon" href="/skins-ucp/v2/common/favicon.ico"/>
-<link rel="search" type="application/opensearchdescription+xml" href="/es/opensearch_desc.php" title="WikiDex (es)"/>
-<link rel="EditURI" type="application/rsd+xml" href="https://pokemon.fandom.com/es/api.php?action=rsd"/>
-<link rel="license" href="https://www.fandom.com/es/licensing-es"/>
-<link rel="canonical" href="https://pokemon.fandom.com/es/wiki/Eevee"/>
-	<meta property="fb:app_id" content="112328095453510" prefix="fb: http://www.facebook.com/2008/fbml"/>
-
-
-
-Sobre las ilustraciones
-Esta publicación de blog incluye ilustraciones anónimas de debates en r/science. Agradezco a Sophie Diehl por las conversaciones sobre la ilustración de esta investigación y por los algoritmos de código abierto de Anders Hoff que modifiqué para crear la obra de arte. 
-
-Comenta como si estuvieras cara a cara. Sea cortés, deje de lado las excavaciones personales. No maldigas.
-¡QUÉ ESTÁ DE MODA HOY!
- -->
-
 

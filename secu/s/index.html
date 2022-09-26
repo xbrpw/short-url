@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>ESO 0514 - Sticker Studio - Sticker Maker for WhatsApp</title>
+    <link rel="icon" type="image/png" href="sticker-studio.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="description" content="Create and share your own personal stickers for WhatsApp on Android! Make your friends laugh by sending them the perfect memes"/>
+</head>
+<body>
+    <div class="content">
+        <div class="screens">
+            <div class="screen stickerpack">
+                <header>
+                    <div class="tray" style="background-image: url('https://stickerstud.io//api/v1/sticker/626963/sticker1664153824764')"></div>
+                    <h1>ESO 0514</h1>
+                    <p>By Luis Ángel</p>
+                </header>
+                <main>
+                    <div class="stickers">
+                        
+                            <div class="sticker" style="background-image: url('https://stickerstud.io//api/v1/sticker/626963/sticker1664153824764')"></div>
+                        
+                            <div class="sticker" style="background-image: url('https://stickerstud.io//api/v1/sticker/626963/sticker1664154023691')"></div>
+                        
+                    </div>
+                </main>
+                <footer>
+                    <a href="#" class="button"><img src="whatsapp.svg" width="20" height="20"> Add stickerpack to WhatsApp</a>
+                </footer>
+            </div>
+            <div class="screen download">
+                <div class="logo"></div>
+                <h1>Sticker Studio - Sticker Maker for WhatsApp</h1>
+                <p>Download Sticker Studio to use this stickerpack or make your own personal stickers!</p>
+                <a href='https://play.google.com/store/apps/details?id=stickermaker.android.stickermaker&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' class="downloadBtn"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="170"/></a>
+            </div>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button").click(function (e) {
+                e.preventDefault();
+                setTimeout(function () {
+                    $(".content").animate({
+                        scrollLeft: $(".download").offset().left
+                    }, 500);
+                }, 1000);
+                window.location = 'stickerstudio://stickerpack/p/rjgrEE1dcUAUv1G4WVWu1cwWcCBatCDuVxXJiKp55D0L8pYT9y';
+            });
+        });
+    </script>
+  
+</body>
+</html>

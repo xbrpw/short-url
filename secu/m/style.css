@@ -1,0 +1,444 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+}
+.container-fluid {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+.headmenu .nav-item {
+  cursor: pointer;
+  z-index: 9;
+}
+.headmenu .nav-link {
+  padding: 0.5rem 1.35rem 0.5rem 0;
+}
+.social {
+  float: right;
+}
+.navbar-brand img {
+  max-height: 70px;
+}
+.jumbotron {
+  background-image: url("https://i.imgur.com/10K8ojW.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.headmenu {
+  float: right;
+  width: 100%;
+  background: #4caf50;
+}
+.headmenu ul {
+  float: right;
+  max-width: 50%;
+  font-size: 12px;
+  color: #cacaca;
+}
+.headmenu ul a {
+  color: #e8e8e8;
+}
+.headmenu:after {
+  transition: all 0.5s ease-in;
+  opacity: 0.5;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.02) 37%,
+    rgba(0, 0, 0, 0.19) 99%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+}
+.perfilselect {
+  cursor: pointer;
+}
+.perfilselect h4,
+.perfilselect .circle {
+  transition: all 0.5s ease;
+}
+.perfilselect:hover .circle {
+  width: 115px;
+  margin-top: -15px;
+}
+.perfilselect:hover h4 {
+  color: #5a6764;
+}
+.badge-success.novedades {
+  padding: 3rem 3rem 3rem 1rem !important;
+}
+.badge-pink {
+  color: #fff;
+  background-color: #e91e63;
+}
+.badge-pink:hover {
+  background-color: #ab3e63;
+}
+.badge-deepblue {
+  color: #fff;
+  background-color: #253162;
+}
+.area.badge-info:hover {
+  background-color: #28c8e2 !important;
+}
+.badge-deepblue:hover {
+  background-color: #3f51b5;
+}
+.badge-lightblue {
+  color: #fff;
+  background-color: #009688;
+}
+.badge-lightblue:hover {
+  background-color: #00bcd4;
+}
+.badge-purple {
+  color: #fff;
+  background-color: #591558;
+}
+.badge-purple:hover {
+  background-color: #7d3a7c;
+}
+.areasyproyectos a.area:hover {
+  color: white;
+  text-decoration: none;
+}
+.areasyproyectos .area:after {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 90px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.02) 37%,
+    rgba(0, 0, 0, 0.19) 99%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+}
+.areasyproyectos .area {
+  /*   padding: 2rem 1rem 5rem 1rem!important;*/
+  position: relative;
+  text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 1.09em;
+  font-family: "Lato";
+  font-weight: 700;
+  height: 90px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease;
+}
+.area:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+.accesosrapidos li {
+  cursor: pointer;
+  color: #01cee8;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.accesosrapidos li:hover {
+  color: #e6e6e6;
+}
+.proyectos .card {
+  box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.5);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.5);
+  transition: box-shadow 0.25s ease;
+  width: 23%;
+}
+.card {
+  border: 0;
+  width: 24%;
+  height: 320px;
+  max-height: 320px;
+  cursor: pointer;
+  float: left;
+  margin-left: 20px;
+}
+.proyectos .card {
+  height: 260px;
+  max-height: 260px;
+}
+.card-text {
+  color: #565656;
+  overflow: hidden;
+  opacity: 0;
+  text-overflow: ellipsis;
+  font-size: 0.85em;
+  -moz-transition: all 1.5s ease;
+  -webkit-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+.novedades .card:hover .card-img-top {
+  height: 90px;
+}
+.card-img-top {
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 170px;
+  position: relative;
+}
+.card .card-img-top:after {
+  transition: all 0.5s ease-in;
+  opacity: 0.5;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.02) 37%,
+    rgba(0, 0, 0, 0.19) 99%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+}
+.card:hover .card-img-top:after {
+  opacity: 1;
+}
+.card-subtitle {
+  color: #ffffff;
+  font-size: 0.7em;
+  background: #bdbdbd;
+  display: inline-block;
+  padding: 1px 5px;
+  margin-bottom: 10px;
+}
+.proyectos .card-subtitle,
+.proyectos .card-text {
+  display: none;
+}
+.proyectos .card-title {
+  font-size: 1.1rem;
+  color: #505050;
+  padding-bottom: 5px;
+  border: 0px solid #cacaca;
+}
+.proyectos .card:hover .card-title {
+  border-bottom: 3px solid #cacaca;
+}
+.novedades .card:hover .card-text {
+  opacity: 1;
+  display: block !important;
+}
+.card-body {
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.card-title {
+  color: #2d2727;
+  font-size: 1.24rem;
+}
+.circle {
+  background: #4caf50;
+  border: 0px solid #4caf50;
+  display: inline-block;
+  width: 100px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.5);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(196, 196, 196, 0.5);
+  transition: box-shadow 0.25s ease;
+}
+
+.circle:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+}
+
+.circle > img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  position: absolute;
+  height: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 16px;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.circle > img.tallAndNarrow {
+  width: 100%;
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  left: 0;
+  height: auto;
+}
+
+.circle > img {
+  opacity: 1;
+}
+
+.jumbotron-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.jumbotron {
+  color: #fff;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.container-fluid {
+  padding: unset;
+  overflow-y: hidden;
+}
+.dropdown-toggle::after {
+  margin-left: 0.455em;
+  vertical-align: 0.355em;
+  font-size: 12px;
+}
+.navbar-nav li.nav-item {
+  padding: 0 8px;
+}
+.btn.btn-primary {
+  border: 0px solid #7ae201;
+  background: #a0dc2a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #a0dc2a,
+    #dce35b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #a0dc2a,
+    #dce35b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.btn-primary.focus,
+.btn-primary:focus,
+.form-control:focus {
+  border-color: #c7c7c7;
+  box-shadow: 0 0 0 0.2rem #8bc34a61;
+}
+.dropdown {
+  position: initial;
+}
+.dropdown-menu {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  margin: -1px -10px;
+}
+.dropdown-menu a {
+  font-size: 0.8em;
+}
+@media (min-width: 600px) {
+  a.navbar-brand img {
+    max-height: 90px;
+  }
+}
+@media (max-width: 600px) {
+  form.form-inline.form-inline.ml-md-auto {
+    width: 90%;
+    margin: auto;
+  }
+  .headmenu .nav-link {
+    padding: 0.5rem 0.8rem 0.5rem 0;
+  }
+
+  .headmenu ul {
+    max-width: 100%;
+    font-size: 11px;
+  }
+
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    padding: 0.5rem 0rem !important;
+  }
+  .jumbotron-overlay {
+    padding-left: 1.5rem !important;
+  }
+  .herotext h2 {
+    font-size: 1.8rem;
+  }
+
+  .herotext {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .perfilselect {
+    padding: 15px 0;
+  }
+  .card {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  .areas {
+    padding: 0 !important;
+  }
+  .areasyproyectos h4.pt-4.px-5.text-muted {
+    margin-bottom: 15px;
+  }
+  .areasyproyectos div > br {
+    display: none;
+  }
+  .areasyproyectos h4 {
+    padding: 1rem 0 !important;
+  }
+  .areasyproyectos h3 {
+    padding: 2rem 0 1rem !important;
+  }
+  .areasyproyectos .area {
+    height: 5.5em !important;
+    padding-top: 15px !important;
+    padding: 0.7rem 0.5rem 5rem 1rem !important;
+  }
+  .proyectos .px-5 {
+    padding: 0 !important;
+  }
+
+  .proyectos .card {
+    width: 50% !important;
+    float: left;
+    margin: 0;
+    padding: 5px;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .proyectos {
+    margin: 0 -3rem !important;
+  }
+}

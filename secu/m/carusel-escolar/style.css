@@ -1,0 +1,104 @@
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+/* .aos{display:none;} */
+
+body { font-family: sans-serif; }
+.fullimage{
+  background-position: center center;
+    background-size: cover;
+}
+.flickity-viewport {
+  height:360px!important;
+}
+.carousel {
+  background: #fff;
+}
+.pretext{color: white;
+    width: 360px;
+    padding: 60px 0 0 20px;
+    margin-left: 20px;
+    font-size: 1.7em;
+    line-height: 1em;
+}
+.pretext h2{color:white;
+      font-size: 40px;
+    line-height: 1em;
+    padding: 15px 0 0 20px;
+  font-weight:bold;
+  font-family: 'Roboto','Open Sans';
+}
+.btn-outline-success {
+    border-radius: 50px;
+    margin: 20px;
+  
+    font-size: 13px;
+}
+.pretext .subtitle{
+  background: #8fb61d;
+    color: white;
+    font-size: 15px;
+    line-height: 1em;
+    width: unset;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 6px 10px;
+    font-weight: bold;
+    font-family: 'Roboto','Open Sans';
+}
+.carousel-cell {
+  width: 100%;
+  height:360px;
+  margin-right: 10px;
+  background: #1f7f22;background: #539C09;
+background: -webkit-radial-gradient(top left, #539C09, #077919);
+background: -moz-radial-gradient(top left, #539C09, #077919);
+background: radial-gradient(to bottom right, #539C09, #077919);
+  border-radius: 0;
+  counter-increment: carousel-cell;
+}
+.container-fluid {
+    max-width: 96%!important;
+}
+.slider.imagemobile:before {
+    content: ;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: red;
+    transform-origin: bottom left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-30deg, 0deg);
+}
+
+
+@media screen and (max-width:600px){
+  .flickity-viewport {
+    height: 500px!important;
+}
+  .slider.imagemobile {
+    height: 200px!important;
+}
+  .pretext h2 {
+        width: 80%;
+    font-size: 30px!important;
+}
+  .pretext {
+    padding: 20px 20px;
+    padding-top: 20px!important;
+  }
+  .container-fluid {
+    max-width: 100%!important;
+  }
+  .slider.imagemobile {
+    height: 200px!important;
+}
+  .carousel-cell {
+    height: 470px;
+    }
+}

@@ -48,48 +48,364 @@
   <link rel="alternate" type="application/rss+xml" title="◉ Team Eevee ◉ &raquo; Feed" href="https://www.teameevee.com/feed/" />
   <link rel="alternate" type="application/rss+xml" title="◉ Team Eevee ◉ &raquo; Feed de los comentarios" href="https://www.teameevee.com/comments/feed/" /> 
   -->
+  <!-- RAPIDA 2
   
-  <!--  font-family: "Lato", sans-serif; -->
-  <style>:root {--bg-color-initial: rgb(20, 20, 20); --card-color-initial: rgb(23, 23, 23);}</style>  
-  <style>.icon-bar-sticky {position: fixed;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); margin-top: 50px;}.icon-bar-sticky a {display: block;text-align: center;padding: 16px;transition: all 0.3s ease;color: white;font-size: 20px;}/*.icon-bar-sticky a:hover {background-color: #000;}*/.facebook {background: #3B5998;color: white;}.twitter {background: #55ACEE;color: white;}.google {background: #dd4b39;color: white;}.linkedin {background: #007bb5;color: white;}.youtube {background: #bb0000;color: white;}.xbrpw {background: #000000;color: white;}</style>
-  <script>function includeHTML() {var z, i, elmnt, file, xhttp;/*loop through a collection of all HTML elements:*/z = document.getElementsByTagName("*");for (i = 0; i < z.length; i++) {elmnt = z[i];/*search for elements with a certain atrribute:*/file = elmnt.getAttribute("incluye-html");if (file) {/*make an HTTP request using the attribute value as the file name:*/xhttp = new XMLHttpRequest();xhttp.onreadystatechange = function() {if (this.readyState == 4) {if (this.status == 200) {elmnt.innerHTML = this.responseText;}if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}/*remove the attribute, and call this function once more:*/elmnt.removeAttribute("incluye-html");includeHTML();}}      
-  xhttp.open("GET", file, true);xhttp.send();/*exit the function:*/return;}}};</script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Luis Angel Maciel and xBr contributors">
+    <meta name="generator" content="Xbr">
+    <title></title>
+    <link rel="canonical" href="">
+
+             
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9"> --> 
+
+      <!--  font-family: "Lato", sans-serif; -->
+      <style>:root {--bg-color-initial: rgb(20, 20, 20); --card-color-initial: rgb(23, 23, 23);}</style>  
+      <style>.icon-bar-sticky {position: fixed;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); margin-top: 50px;}.icon-bar-sticky a {display: block;text-align: center;padding: 16px;transition: all 0.3s ease;color: white;font-size: 20px;}/*.icon-bar-sticky a:hover {background-color: #000;}*/.facebook {background: #3B5998;color: white;}.twitter {background: #55ACEE;color: white;}.google {background: #dd4b39;color: white;}.linkedin {background: #007bb5;color: white;}.youtube {background: #bb0000;color: white;}.xbrpw {background: #000000;color: white;}</style>
+      <script>function includeHTML() {var z, i, elmnt, file, xhttp;/*loop through a collection of all HTML elements:*/z = document.getElementsByTagName("*");for (i = 0; i < z.length; i++) {elmnt = z[i];/*search for elements with a certain atrribute:*/file = elmnt.getAttribute("incluye-html");if (file) {/*make an HTTP request using the attribute value as the file name:*/xhttp = new XMLHttpRequest();xhttp.onreadystatechange = function() {if (this.readyState == 4) {if (this.status == 200) {elmnt.innerHTML = this.responseText;}if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}/*remove the attribute, and call this function once more:*/elmnt.removeAttribute("incluye-html");includeHTML();}}      
+      xhttp.open("GET", file, true);xhttp.send();/*exit the function:*/return;}}};</script>
+
+  <!-- Icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+      <title>Bootstrap</title>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+    <symbol id="home" viewBox="0 0 16 16">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+    </symbol>
+    <symbol id="speedometer2" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+      <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+    </symbol>
+    <symbol id="table" viewBox="0 0 16 16">
+      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+    </symbol>
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </symbol>
+    <symbol id="grid" viewBox="0 0 16 16">
+      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+    </symbol>
+    <symbol id="collection" viewBox="0 0 16 16">
+      <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+    </symbol>
+    <symbol id="calendar3" viewBox="0 0 16 16">
+      <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+      <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </symbol>
+    <symbol id="chat-quote-fill" viewBox="0 0 16 16">
+      <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+    </symbol>
+    <symbol id="cpu-fill" viewBox="0 0 16 16">
+      <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+      <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
+    </symbol>
+    <symbol id="gear-fill" viewBox="0 0 16 16">
+      <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+    </symbol>
+    <symbol id="speedometer" viewBox="0 0 16 16">
+      <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+      <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+    </symbol>
+    <symbol id="toggles2" viewBox="0 0 16 16">
+      <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
+      <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
+      <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+    </symbol>
+    <symbol id="tools" viewBox="0 0 16 16">
+      <path d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
+    </symbol>
+    <symbol id="chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </symbol>
+    <symbol id="geo-fill" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+    </symbol>
+    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </symbol>
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="check2-circle" viewBox="0 0 16 16">
+      <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+      <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+    </symbol>
+    <symbol id="bookmark-star" viewBox="0 0 16 16">
+      <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
+      <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+    </symbol>
+    <symbol id="grid-fill" viewBox="0 0 16 16">
+      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/>
+    </symbol>
+    <symbol id="stars" viewBox="0 0 16 16">
+      <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+    </symbol>
+    <symbol id="film" viewBox="0 0 16 16">
+      <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z"/>
+    </symbol>
+    <symbol id="joystick" viewBox="0 0 16 16">
+      <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+      <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+    </symbol>
+    <symbol id="music-note-beamed" viewBox="0 0 16 16">
+      <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"/>
+      <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z"/>
+      <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"/>
+    </symbol>
+    <symbol id="files" viewBox="0 0 16 16">
+      <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
+    </symbol>
+    <symbol id="image-fill" viewBox="0 0 16 16">
+      <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
+    </symbol>
+    <symbol id="trash" viewBox="0 0 16 16">
+      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+    </symbol>
+    <symbol id="question-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </symbol>
+    <symbol id="arrow-left-short" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+    </symbol>
+    <symbol id="arrow-right-short" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+    </symbol>
+    <symbol id="home" viewBox="0 0 16 16">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+    </symbol>
+    <symbol id="speedometer2" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+      <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+    </symbol>
+    <symbol id="table" viewBox="0 0 16 16">
+      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+    </symbol>
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </symbol>
+    <symbol id="grid" viewBox="0 0 16 16">
+      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+    </symbol>
+    <symbol id="home" viewBox="0 0 16 16">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+    </symbol>
+    <symbol id="speedometer2" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+      <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+    </symbol>
+    <symbol id="table" viewBox="0 0 16 16">
+      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+    </symbol>
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </symbol>
+    <symbol id="grid" viewBox="0 0 16 16">
+      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+    </symbol>
+  </svg><!-- /SVG icons -->
 
 <div class="containerwidow" id="mainXbr">
-  <div class="scrollmenu">
-  <a href="#openNavXbR" onclick="openNavXbr()"> <span class="dot" style="background:#ED594A;"></span><span class="dot" style="background:#FDD800;"></span><span class="dot" style="background:#5AC05A;"></span> </a><!-- <img src="assets/favicons/lamp-services.svg" width="18" height="18" alt="Welcome Screen Get Started"> -->
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a" title="Descargas"> <i class="fa fa-download "></i></a>
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a" title="Documentos">  <i class="fa fa-folder-open  "></i></a> 
-  
+  <div class="scrollmenu">  
+  <a href="#openNavXbR" onclick="openNavXbr()"> 
+    <img src="assets/favicons/lamp-desing.svg" width="18" height="18" > <img src="assets/favicons/lamp-martech.svg" width="18" height="18" alt="Inicio" >
+    <img src="assets/favicons//lamp-developer-products-and-experience.svg" width="18" height="18"  > 
+    <!--  <span class="dot" style="background:#ED594A;"></span> <span class="dot" style="background:#FDD800;"></span> <span class="dot" style="background:#5AC05A;"></span><img src="assets/favicons/lamp-services.svg" width="18" height="18" alt="Welcome Screen Get Started"> -->
+  </a>
+ 
 
-  <a href="#" onclick="openCity(event, 'London')" id="defaultOpen" title="Editor"><img src="assets/favicons/lamp-martech.svg" width="18" height="18" alt="Editor" >  Editor </a>  
-  <a href="#" onclick="openCity(event, 'Tokyo')" title="Snippes"> <img src="assets/favicons/lamp-desing.svg" width="18" height="18" alt="Snippes" onclick="closeNav()">   Snippets  </a>  
-  <a href="#" onclick="openCity(event, 'Paris')" title="Multimedia"> <img src="assets/favicons//lamp-developer-products-and-experience.svg" width="18" height="18" alt="Multimedia" onclick="closeNav()"> Multimedia </a>  
+
+  <a href="#"><i class="fa fa-home" onclick="openNav()"></i> </a> 
+  <a href="#pomodoro"  data-bs-toggle="modal" data-bs-target="#myModalScrolla"><i class="fa fa-stopwatch" ></i> </a>      
+  <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">
+    Editor
+  </a>
+   <ul class="dropdown-menu text-small shadow">    
+   <li onclick="openCity(event, 'London')">       
+    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"href="https://hihellomonster.github.io/editor.online/" target="iframe_a"  title="eDitor" >
+      <img src="assets/favicons/hihellomonster.png" width="18" height="18" alt="Editor online"  >
+      W3ditor-me
+    </a>
+    <li onclick="openCity(event, 'London')">     
+   <li>
+    <a class="dropdown-item d-flex gap-2 align-items-center" href="api/codepen.html" target="iframe_a">
+     <img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen"  >
+      Codepen
+    </a>
+    <li onclick="openCity(event, 'London')">     
+  <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/go/editor-1.html" target="iframe_a" title="W3ditor! " >
+    <img src="assets/favicons/lamp.svg" width="18" height="18" alt="eDitor">
+    New editor
+  </a>
+   <li><hr class="dropdown-divider"></li>
+   <li onclick="openCity(event, 'London')">     
+    <a href="https://www.xbr.pw/secu/dashboard/editor/" target="iframe_a" title="eDitor" class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" >
+     <img src="assets/favicons/pikachu en la nube voladora.svg" width="18" height="18" alt="eDitor"> 
+     Sor eDitor!
+   </a>     
+  </li>
+  <li onclick="openCity(event, 'London')">     
+    <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" target="_blank" title="eDitor" class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" >
+      <img src="assets/favicons/w3.ico" width="18" height="18" alt="W3 Try HTML ">
+     w3 Try HTML 
+   </a>     
+  </li>
+  </ul>        
    
+  <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">
+    Abrir
+  </a>
+   <ul class="dropdown-menu text-small shadow">    
+   <li>       
+    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="https://docs.google.com/spreadsheets/d/1-VpQFNgiAi66LMPeap5eoNe2vDw_nDlW1kuRsyPC-ss/edit" target="iframe_a"  title="De los pies a la cabeza" >
+      💡 Metodología
+    </a>
+   </li>
+   <li>       
+    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://docs.google.com/spreadsheets/d/1xcXsKf8h9JYzhHyZYeLi0ltQoCHos4b7phazOxlTQf0/edit" target="iframe_a"  title="Tits en Sheets" >
+      <img src="assets/favicons/sheets.png" width="18" height="18" alt="Twits en Sheets">
+       Twitter
+    </a>
+   </li>
+   <li>
+    <a class="dropdown-item d-flex gap-2 align-items-center" href="https://docs.google.com/document/d/1IvTS5-Omp1fQUrC27hE3ranYCMRXOdFJBjq9UkMBjw0/edit" target="iframe_a" title="Twits en Docs">
+      <img src="assets/favicons/docs.png" width="18" height="18" alt="Twits en Docs">
+      Twits
+    </a>
+   </li>    
+   <li><hr class="dropdown-divider"></li>
+   <li>
+    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="file:///C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a" title="Abrir documentos ">
+      <i class="fa fa-download "></i>
+      Descargas  
+    </a>
+    </li>
+   <li>          
+    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a"  title="Abrir Documentos" onclick="openCity(event, 'London')"  >
+      <i class="fa fa-folder-open  "></i> Documentos  </a>
+   </a>     
+  </li>
+  </ul>      
+
+  <a href="#" onclick="openCity(event, 'Tokyo')" title="Snippes"> <span onclick="closeNav()">  Snippets </span>  </a>  
+  <a href="#" onclick="openCity(event, 'Paris')" title="Multimedia">  <span onclick="closeNav()"> Multimedia </span> </a>          
+  <a href="#" onclick="openNavFav()" ><i class="fa fa-heart" ></i> Me </a> 
   
-  <a href="https://how-to-examples-html.w3spaces.com/editor-online-renovado.html" target="iframe_a" title="W3ditor! "><img src="assets/favicons/lamp.svg" width="18" height="18" alt="eDitor"></a>
+  <a href="api/doble.pantalla/index.html" target="iframe_a" title="Doble View"  onclick="openCity(event, 'Paris')"><img src="assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"></a> 
+  <a href="api/para-notas-rapidas/index.html" target="notas-rapidas"><img src="assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Notas Rápidas" onclick="openNavRight()"></a>
+
+  <a href="#" class="align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa fa-user  "></i> Herramientas
+  </a>
+   <ul class="dropdown-menu text-small shadow">    
+   <li>
+     <a class="dropdown-item d-flex gap-2 align-items-center" href="https://getbootstrap.com/docs/5.1/examples/" target="_blank">
+      <img src="assets/favicons/bootstrap.ico" width="18" height="18" alt="Docs Bootstrap 5">
+      Docs 5 <i class="fas fa-external-link-alt"></i>
+     </a>
+   </li>   
+   <li>
+     <a class="dropdown-item d-flex gap-2 align-items-center" href="https://www.w3schools.com/bootstrap5/index.php" target="_blank">
+      <img src="assets/favicons/w3.ico" width="18" height="18" alt="W3 Bootstrap 5">
+      W3 Bootstrap 5 <i class="fas fa-external-link-alt"></i>
+     </a>
+   </li> 
+   <li>
+    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free" target="_blank" title="Favicons/Fontawesome">
+     <img src="assets/favicons/fontawesome.ico" width="18" height="18" alt="Favicons/Fontawesome">
+      Fontawesome <i class="fas fa-external-link-alt"></i>
+    </a>
+  </li>  
+  <li>
+    <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://codepen.io/trending" target="_blank" title="Codepen Trending">
+     <img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen Trendin">
+     Codepen Trendin <i class="fas fa-external-link-alt"></i>
+    </a>
+  </li>
+   <li><hr class="dropdown-divider"></li>
+   <li>
+     <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a"   title="Codepen Trending">
+      <img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen Trendin">
+      Convertir a webp 
+     </a>
+   </li>
+   </ul>   
   
-  <a href="api/codepen.html" target="iframe_a"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen"></a>  
-  <a href="https://www.xbr.pw/secu/dashboard/editor/" target="iframe_a" title="eDitor"  ><img src="assets/favicons/pikachu en la nube voladora.svg" width="18" height="18" alt="eDitor"></a>     
-  <a href="https://hihellomonster.github.io/editor.online/" target="iframe_a" ><img src="assets/favicons/hihellomonster.png" width="18" height="18" alt="Editor online"> </a> 
-  <a href="api/doble.pantalla/index.html" target="iframe_a" title="Doble View" ><img src="assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"></a> 
 
 
-  <a href="api/para-notas-rapidas/index.html" target="notas-rapidas"><img src="assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Docs Bootstrap 5" onclick="openNavRight()"></a>
-  <a href="https://getbootstrap.com/docs/5.1/examples/" target="_blank"><img src="assets/favicons/bootstrap.ico" width="18" height="18" alt="Docs Bootstrap 5"></a>  
-  <a href="https://www.w3schools.com/bootstrap5/index.php" target="_blank"><img src="assets/favicons/w3.ico" width="18" height="18" alt="W3 Bootstrap 5"></a>
-  <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default" target="_blank"><img src="assets/favicons/w3.ico" width="18" height="18" alt="Save en w3"></a>
-  <a href="https://github.com/luisangelmaciel?tab=repositories" target="_blank"><img src="assets/favicons/github.svg" width="18" height="18" alt="CSS"></a>
-  <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free" target="_blank"> <img src="assets/favicons/fontawesome.ico" width="18" height="18" alt="W3 Bootstrap 5"> </a>      
-  <a href="https://codepen.io/trending" target="_blank" title="Codepen Trending"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen"></a>
+   <a href="#" class="align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <img src="assets/favicons/github.svg" width="18" height="18" alt="CSS">
+    Repositorios
+  </a>
+   <ul class="dropdown-menu text-small shadow">    
+   <li>
+     <a class="dropdown-item d-flex gap-2 align-items-center" href="https://github.com/luisangelmaciel?tab=repositories" target="_blank">
+    LuisAngelMaciel.one <i class="fas fa-external-link-alt"></i>
+     </a>
+   </li> 
+   <li>
+    <a class="dropdown-item d-flex gap-2 align-items-center" href="https://github.com/hihellomonster?tab=repositories" target="_blank">
+   hihello.monster <i class="fas fa-external-link-alt"></i>
+    </a>
+  </li> 
+   <li><hr class="dropdown-divider"></li>
+   <li>
+    <a class="dropdown-item d-flex gap-2 align-items-center" href="https://github.com/xbrpw?tab=repositories" target="_blank">
+   xbr.pw <i class="fas fa-external-link-alt"></i>
+    </a>
+  </li> 
+   </ul>    
 
+
+  <a href="#"  onclick="openCity(event, 'London')" id="defaultOpen"></a>
+
+  <a href="#" class="align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa fa-user  "></i>   <img src="assets/favicons/lamp-desing.svg" alt="Luis Angel Maciel" width="24" height="24" class="rounded-circle">
+  </a>
+   <ul class="dropdown-menu text-small shadow">    
+   <li>
+     <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+       <svg class="bi" width="16" height="16"><use xlink:href="#film"/></svg>
+       Editar perfil
+     </a>
+   </li>
+   <li>
+     <a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+       <svg class="bi" width="16" height="16"><use xlink:href="#music-note-beamed"/></svg>
+       Music
+     </a>
+   </li>   
+   <li><hr class="dropdown-divider"></li>
+   <li>
+     <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#">
+       <svg class="bi" width="16" height="16"><use xlink:href="#trash"/></svg>
+       Trash
+     </a>
+   </li>
+   </ul>   
 
  
   <!-- myModalScrolla -->
   <div class="modal" id="myModalScrolla">
     <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-  
+      <div class="modal-content">  
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title"><i class="fa fa-check "></i> Modal Heading</h4>
@@ -110,11 +426,13 @@
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div>
   
-      </div>    </div> </div><!-- /"#myModalScrolla" -->
-        
-  </div>
+      </div>    
+    </div> 
+  </div><!-- /"#myModalScrolla" -->        
   
-  <!-- myModal16x9 -->
+</div>
+  
+  <!-- id="myModal16x9" -->
   <div class="modal" id="myModal16x9">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
@@ -126,78 +444,31 @@
       </div>   
       </div>
     </div>
-  </div><!-- /#myModal16x9" -->
-  
+  </div><!-- /modal-dialog modal-fullscreen" --> 
+</div><!-- /id="myModal16x9" -->
 
-    <!-- The Modal -->
-    <div class="modal" id="myModalScroll">
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
+<div class="icon-bar-sticky"><!-- <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>   <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>   <a href="#" class="google"><i class="fa fa-google"></i></a>   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>  --></div><!-- icon-bar-sticky" -->  
 
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Modal Heading <i class="fa fa-bolt" style="cursor:pointer" ></i> <i class="fa fa-at" ></i> </h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
+<div style="margin-left: 0px;" id="mainXbr">
+    <div id="London" class="tabcontent">
+      <iframe src="./tareas/index.html" name="iframe_a" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+    </div><!-- /London -->
 
-          <!-- Modal body -->
-          <div class="modal-body">
-            <h3>Some text to enable scrolling..</h3>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div id="Paris" class="tabcontent">
+      <iframe src="multimedia.html"  height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
+    </div><!-- /Paris -->
 
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-          </div>
-
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fas fa-copy"></i></button>
-          </div>
-
-        </div>
-      </div>
-    </div><!-- /The Modal -->
- 
-
-  
-</div><!-- scrollmenu -->
-
-<div class="icon-bar-sticky">
-  <!-- <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-  <a href="#" class="google"><i class="fa fa-google"></i></a> 
-  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>  -->
-  <a href="#" class="xbrpw"><i class="fa fa-home" onclick="openNav()"></i> </a> 
-  <a href="#"  class="xbrpw"><i class="fa fa-heart" onclick="openNavFav()"></i></a> 
-  <a href="#" title="Metodología" class="xbrpw" data-bs-toggle="modal" data-bs-target="#myModal16x9">💡</a>
-  <a href="#pomodoro" class="xbrpw" data-bs-toggle="modal" data-bs-target="#myModalScrolla"><i class="fa fa-stopwatch" ></i> </a>    
-  <a href="https://docs.google.com/spreadsheets/d/1xcXsKf8h9JYzhHyZYeLi0ltQoCHos4b7phazOxlTQf0/edit#gid=0" class="xbrpw"target="iframe_a"  ><img src="assets/favicons/sheets.png" width="18" height="18" alt="Twits en Sheets"></a> 
-  <a href="https://docs.google.com/document/d/1IvTS5-Omp1fQUrC27hE3ranYCMRXOdFJBjq9UkMBjw0/edit" class="xbrpw" target="iframe_a"  ><img src="assets/favicons/docs.png" width="18" height="18" alt="Twits en Docs"></a> 
-</div><!-- icon-bar-sticky" -->
-  
-
-    <div style="margin-left: 0px;" id="mainXbr">
-    
-        <div id="London" class="tabcontent">
-          <iframe src="./tareas/index.html" name="iframe_a" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
-        </div><!-- /London -->
-
-        <div id="Paris" class="tabcontent">
-          <iframe src="multimedia.html"  height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
-        </div><!-- /Paris -->
-
-        <div id="Tokyo" class="tabcontent"><!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->      
-          <iframe src="snippes.html" name="tabSnipes" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
-        </div><!-- /Tokio -->
-    </div><!--  id="mainXbr" -->
+    <div id="Tokyo" class="tabcontent"><!-- <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->      
+      <iframe src="file:///C:/Users/Luis%20%C3%81ngel/Documents" name="tabSnipes" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+    </div><!-- /Tokio -->
+</div><!--  id="mainXbr" -->
 
 
   
-  <div id="mysidenavRightRight" class="sidenavRight">
-    <a href="javascript:void(0)" class="closebtnRight" onclick="closeNavRight()">&times;</a>
-    <iframe src="assets/gallery.html" name="notas-rapidas" height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
-  </div>
+<div id="mysidenavRightRight" class="sidenavRight">
+  <a href="javascript:void(0)" class="closebtnRight" onclick="closeNavRight()">&times;</a>
+  <iframe src="assets/gallery.html" name="notas-rapidas" height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
+</div>
   
  
 
@@ -210,11 +481,7 @@
 </div>
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-  <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go" target="iframe_a"  >Base64</a>
-  <a href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a">Convertir a webp</a>
-
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
   <a href="#"  onclick="closeNav()">Editor</a>
   <a href="#"  onclick="closeNav()">Clients</a>
   <a href="#"  onclick="closeNav()">Contact</a>

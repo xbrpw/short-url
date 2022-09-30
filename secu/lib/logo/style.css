@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/**
+ * Computes a CSS calc function that betweens a value from
+ * A to B over viewport-width A to viewport-width B.
+ * Requires a media query to cap the value at B.
+ */
+/* -------------------------------------
+---------- default classes -------------
+-------------------------------------- */
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+i, em {
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.pos-sticky {
+  position: static;
+  position: sticky;
+}
+
+.hidden.hidden.hidden.hidden.hidden {
+  display: none;
+}
+
+.margin {
+  margin: 0.625rem;
+}
+
+.margin-top {
+  margin-top: 0.625rem;
+}
+
+.margin-bottom {
+  margin-bottom: 0.625rem;
+}
+
+.padding {
+  padding: 0.625em;
+}
+
+.padding-sides {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.header-height {
+  line-height: 3.125rem;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.radius {
+  border-radius: 0.25em;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.tac, .t-center, .centered {
+  text-align: center;
+}
+
+.tar, .t-right, .right {
+  text-align: right;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fw-bold, .bold {
+  font-weight: 600;
+}
+
+.fw-normal, .normal {
+  font-weight: 400;
+}
+
+.fw-thin, .thin {
+  font-weight: 200;
+}
+
+.fs-smaller {
+  font-size: 0.75rem;
+}
+
+.fs-small {
+  font-size: 0.875rem;
+}
+
+.fs-normal {
+  font-size: 1rem;
+}
+
+.fs-big {
+  font-size: 1.25rem;
+}
+
+.fs-bigger {
+  font-size: 1.5rem;
+}
+
+.fs-biggest {
+  font-size: 1.875rem;
+}
+
+.no-events {
+  pointer-events: none;
+}
+
+.do-events {
+  pointer-events: all;
+}
+
+.list-comma > li {
+  display: inline-block;
+}
+.list-comma > li:not(:last-child):after {
+  content: ", ";
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-left: 0.3125em;
+  padding-right: 0.3125em;
+}
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+*:focus {
+  outline: 0;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*:active {
+  cursor: url(https://i.imgur.com/0vIPd79.png) 16 12, auto;
+}
+
+html {
+  background-color: #24582b;
+}
+html body {
+  font-family: 'Roboto Condensed', serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #24582b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html, html body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#sect {
+  width: 3em;
+  padding: 1em;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  font-family: 'Roboto Condensed', serif;
+  font-size: 2.5em;
+  padding: 1em;
+  height: 3.8em;
+  color: #000;
+  background-color: #F0CE4C;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  cursor: pointer;
+  box-shadow: 0 0 0 120vh #F0CE4C;
+  transition: all 0.9s;
+}
+#logo div {
+  flex: 0 1 40%;
+  text-align: center;
+  line-height: 0.8;
+  overflow: hidden;
+  max-width: 0;
+  transition: all 0.9s;
+ 
+}
+#logo .top {
+ color:#24582b;
+ text-align: center;
+}
+#logo .bottom {
+  letter-spacing: 0.0025em; color:rgb(0, 0, 0)
+}
+#logo:before {
+  content: "-";
+  display: block;
+  margin-top: -0.075em;
+  left: 0.125em;
+  font-size: 2.5em;
+  font-family: 'Roboto', serif;
+  position: absolute;
+  opacity: 0.125;
+  transition: all 0.2s;    color: black;
+  -webkit-animation: glow 1.5s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite forwards alternate;
+          animation: glow 1.5s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite forwards alternate;
+}
+#logo:after {
+  content: "-";
+  display: block;
+  margin-top: -0.075em;
+  left: 0.125em;
+  font-size: 2.5em;
+  font-family: 'Roboto', serif;
+  position: absolute;
+  opacity: 0.125;
+  transition: all 0.2s;    
+  color: #24582b;
+  -webkit-animation: glow 1.5s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite forwards alternate;
+          animation: glow 1.5s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite forwards alternate;
+}
+#logo:after {
+  content: "-";
+  left: auto;
+  right: 0.125em;
+  color: transparent
+}
+#logo:hover:before {
+  color: #24582b;
+  content: "-";
+  opacity: 1;
+  -webkit-animation: appear 0.3s cubic-bezier(0.5, 0.8, 0.5, 0.2) 1 forwards;
+          animation: appear 0.3s cubic-bezier(0.5, 0.8, 0.5, 0.2) 1 forwards;
+}
+
+ #logo:hover:after {
+  color: transparent;
+  opacity: 1;
+  -webkit-animation: appear 0.3s cubic-bezier(0.5, 0.8, 0.5, 0.2) 1 forwards;
+          animation: appear 0.3s cubic-bezier(0.5, 0.8, 0.5, 0.2) 1 forwards;
+}
+
+#toggle {
+  display: none;
+}
+#toggle:checked + #logo {
+  box-shadow: 0 0 0 0vh #F0CE4C;
+
+}
+#toggle:checked + #logo div {
+  max-width: 10em;
+}
+#toggle:checked + #logo:before, #toggle:checked + #logo:after {
+  color: transparent;
+  opacity: 1;
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+
+@-webkit-keyframes glow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.125;
+  }
+}
+
+@keyframes glow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.125;
+  }
+}
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

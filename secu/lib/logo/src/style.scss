@@ -1,0 +1,200 @@
+// vars
+
+$random_color: rgba(rd(255),rd(255),rd(255),.5);
+
+$c: ( // colors
+	t: rgba(0,0,0,0),
+	s: #000,
+	w: #fff,
+	gr: desaturate(rgb(rd(255),rd(255),rd(255)), 100%),
+	r: rgb(rd(255),rd(150),rd(150)),
+	g: rgb(rd(150),rd(255),rd(150)),
+	b: rgb(rd(150),rd(150),rd(255)),
+	bg: $random_color,
+	cp: ( // color palette
+		1: #003E21,
+		2: #067242,
+		3: #098B54,
+		4: #F8D098,
+		5: #F92727,
+		6: #F0CE4C,
+		7: #F9D00F,
+		8: #FBF7F7
+	),
+);
+
+// settings
+// Roboto+Condensed:700|Source+Sans+Pro:600
+$f: unquote("'Roboto Condensed', serif");
+$f2: unquote("'Source Sans Pro', serif");
+$fb: unquote("'Trebuchet MS', Helvetica, sans-serif");
+$fz: 16px;
+// uncomment for responsive font-size
+// $fz: unquote('calc(1.1vw + 1.1vh - .6vmin)');
+// @media screen and (max-width: 600px) {
+// 	body > * {
+// 		font-size: 1.5em;
+// 	}
+// }
+
+$time: .3s;
+
+// --------- defaults ---------
+* {
+	&:focus {
+		outline: 0;
+	}
+	
+	&, &:before, &:after {
+		box-sizing: border-box;
+	}
+}
+
+// touch cursor effect
+*:active {
+	cursor: url(https://i.imgur.com/0vIPd79.png) 16 12, auto;
+}
+// @include placeholder(){
+// 		font-family: $f;
+// }
+// --------------------
+html {
+	background-color: clr(s);
+	
+	body {
+		font-family: $f;
+		font-size: $fz;
+		color: clr(w);
+		background-color: clr(bg);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	&, body {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+	}
+}
+
+#sect	{
+	width: 3em;
+	// margin: 10% auto;
+	padding: 1em;
+	border-radius: .5em;
+	// background-color: clr(gr);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#logo {
+	font-family: $f;
+	font-size: 3em;
+	padding: 1em;
+	height: 3.8em;
+	color: clr(s);
+	background-color: clr(cp, 6);
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	flex-wrap: wrap;
+	cursor: pointer;
+	box-shadow: 0 0 0 120vh clr(cp, 6);
+	transition: all $time*3;
+	
+	div {
+		flex: 0 1 40%;
+		text-align: center;
+		line-height: .8;
+		overflow: hidden;
+		max-width: 0;
+		transition: all $time*3;
+	}
+	.top {
+		letter-spacing: 0.11em;
+	}
+	.bottom {
+		letter-spacing: 0.0025em;
+	}
+	
+	&:before,
+	&:after {
+		content: '}';
+		display: block;
+		margin-top: -.075em;
+		// top: .125em;
+		left: .125em;
+		font-size: 2.5em;
+		font-family: $f2;
+		position: absolute;
+		opacity: 0.125;
+		transition: all $time;
+		animation: glow $time*5 ease(perpetuum)  infinite forwards alternate;
+	}
+	
+	&:after {
+		content: '{';
+		left: auto;
+		right: .125em;
+	}
+	
+	&:hover {
+		&:before,
+		&:after {
+			opacity: 1;
+			animation: appear $time ease(gravity) 1 forwards;
+		}
+	}
+}
+#toggle {
+	display: none;
+	
+	&:checked {
+		+ #logo {
+			& {
+				box-shadow: 0 0 0 0vh clr(cp, 6);
+
+				div {
+					max-width: 10em;
+				}
+
+					&:before,
+					&:after {
+						opacity: 1;
+						animation-name: none;
+					}
+			}
+
+		}
+	}
+}
+
+@keyframes glow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.125;
+	}
+}
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+// ease():
+// default, in-cubic, out-cubic, in-out-cubic, in-circ, out-circ, in-out-circ, in-expo, out-expo, in-out-expo, in-quad, out-quad, in-out-quad, in-quart, out-quart, in-out-quart, in-quint, out-quint, in-out-quint, in-sine, out-sine, in-out-sine, in-back, out-back, in-out-back, liquid", bounce, in-out-bounce, perpetuum, impetus, full-circle, gravity, overshot, downhill, pendulum, wtf, swing

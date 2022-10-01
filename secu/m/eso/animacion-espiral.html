@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animación</title>
-<style>body {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
+<style>
 
-p {
-  text-transform: uppercase;
-}
 
 .small {
+  text-transform: uppercase;
   -webkit-animation: linear 15s rotate infinite;
           animation: linear 15s rotate infinite;
 }
 
 .medium {
+  text-transform: uppercase;
   animation: linear 30s rotate reverse infinite;
 }
 
@@ -43,9 +37,10 @@ p {
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+<div style="  display: flex; align-items: center;justify-content: center;">
 <p class="small">Sor Juana Inés de la Cruz - Escuela Secundaria Oficial - 0514 - </p>
 <p class="medium">Escuela Secundaria Oficial - 0514 </p>
+</div>
 <!-- partial -->
   <script>
     /*!

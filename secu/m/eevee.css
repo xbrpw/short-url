@@ -287,6 +287,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
     text-align: center;
 }
 
+
 .loader {
     width: 40px;
     height: 40px;

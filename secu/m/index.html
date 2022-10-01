@@ -65,13 +65,15 @@
     <div class="row">
       <div class="col-md-12">
         <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-          <h3 class="w3-hide-large w3-hide-medium" >
-           <span data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" title="Navegador" aria-label="Navegador" style=" float: left"> &nbsp; &nbsp; 
-            <img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="navbar  img-fluid img-responsive " id="elInicio"> </span>                      
+          <h3 class="w3-hide-large w3-hide-medium" style=" float: left" >
+           <span>  &nbsp; &nbsp;  <img src="favicon.svg" width="28" height="28"  alt="Logo Escuela Secundaria Oficial"   id="elInicio">                      </span>
+
+           <span data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" title="Navegador" aria-label="Navegador" > &nbsp; 
+            <b>ESO 0514</b> </span> 
           </h3> 
-          <!-- <h3 class="w3-hide-large w3-hide-medium" style=" float: right" >
+           <!-- <h3 class="w3-hide-large w3-hide-medium" style=" float: right" >
             <span ><i class="fa fa-search" style=" float: right"></i> <i class="fa fa-user"></i></span>
-           </h3> -->
+           </h3>  -->
           
           <a class="navbar-brand" href="/index" title="ESO-154" class="w3-hide-small"><img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="img-fluid img-responsive w3-hide-small" id="elInicio"></a>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -237,8 +239,13 @@
         </div>  
       </div>
     </div>
-    </div>
+    </div>   
   </div>
+
+
+
+
+  
   <div class="row p-5 areasyproyectos">
     <div class="col-md-12">
       <h3>
@@ -302,6 +309,246 @@
 
   
 
+  <style>
+    *, *:before, *:after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+    
+    .html-entradas {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      user-drag: none;
+      -webkit-touch-callout: none;
+    }
+    
+    .body-entradas {
+      min-height: 100vh;
+      margin: 0;
+      background: inherit;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container-entradas {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .header-entradas {
+      padding: 5px 50px 5px;
+    }
+    
+    .header-title-entrada {
+      color: inherit;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 15px 0;
+    }
+    
+    .itemsEntrada {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0px 50px 40px 50px;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+      perspective: 500px;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .itemsEntrada.active {
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+      cursor: grabbing;
+    }
+    
+    .itemEntrada-image {
+      display: block;
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+    }
+    
+    .itemEntrada {
+      background: inherit;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.01),0 1px 2px rgba(0,0,0,0.07),0 5px 15px rgba(0,0,0,0.03);
+      margin-right: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+    }
+    
+    .itemEntrada-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-flex: 1;
+      flex: 1 0 auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      margin-top: 0;
+      padding: 1.2rem;
+      width: 340px;        box-shadow: 0 0 0 1px rgba(187, 172, 172, 0.01),0 1px 2px rgba(158, 151, 151, 0.07),0 5px 15px rgba(163, 157, 157, 0.03);
+    }
+    
+    .item-title-h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: inherit;
+      margin: 0.5rem 0 0.5rem;
+    }
+    
+    .item-description {
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      color: inherit;
+      margin: 0 0 1rem;
+    }
+    
+    .item-category-h5 {
+      display: inline-block;
+      color: inherit;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin: 0.5rem 0 0rem;
+    }</style>
+  <div class="container-entradas">
+    <div class="itemsEntrada">
+      <div class="itemEntrada" onclick="document.location='404/index.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/error-404.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5 postsection__title">404</h5>
+          <h4 class="item-title-h4">Página de error Error </h4>
+          <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor pretium cursus...</p>
+        </div>
+      </div>
+      <div class="itemEntrada"  onclick="document.location='404/index.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/escudo%20escuela%20secundaria%20oficial%20514%20sor%20juana%20ines%20de%20la%20cruz.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5 ">Historia</h5>
+          <h4 class="item-title-h4">Historia del escudo del Estado de México</h4>
+          <p class="item-description"> Fue diseñado por el pintor mexiquense Pastor Velázquez <B>Leer nota...</B></p>
+        </div>
+      </div>
+      <div class="itemEntrada"  onclick="document.location='proyecto/index.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400-1.jpg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Proyecto</h5>
+          <h4 class="item-title-h4">Entrada de evidencias</h4>
+          <p class="item-description">Cada actividad tiene su area de de texto, foto y/o video, reacciones, muro de opiniones y commpartir. Así como el sumario de actividades. </p>
+        </div>
+      </div>
+      <div class="itemEntrada"  onclick="document.location='dashboard/index.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/sor%20juana%20ines%20de%20la%20cruz%20cantando%20la%20vida%20es%20mejor.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Actualización</h5>
+          <h4 class="item-title-h4">Cómo actualiza está sección</h4>
+          <p class="item-description">Desde el dashboard principal tiene el acceso a la solicitud. <b>Ver más Adelante</b></p>
+        </div>
+      </div>
+      <div class="itemEntrada" onclick="document.location='lista-de-utiles/index.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Material</h5>
+          <h4 class="item-title-h4">Lista de utiles escolares</h4>
+          <p class="item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor pretium cursus...</p>
+        </div>
+      </div>           
+      <div class="itemEntrada" onclick="document.location='herramientas.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/sor%20juana%20ines%20de%20la%20cruz%20empoderada%20y%20luchona.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Herramientas</h5>
+          <h4 class="item-title-h4">Recursos para los estudiantes</h4>
+          <p class="item-description">¿se te olvido la calculadora, pero tienes celular? Utiliza la calculadora de tu pagína escolar. <b>Ver más recursos</b></p>
+        </div>
+      </div>
+      <div class="itemEntrada"  onclick="document.location='herramientas.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Apps</h5>
+          <h4 class="item-title-h4">Calculadora Cientifica</h4>
+          <p class="item-description">Usa la que más se adapte a tu perzonalidad</p>
+        </div>
+      </div>
+  
+      <div class="itemEntrada"  onclick="document.location='herramientas.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Directorio</h5>
+          <h4 class="item-title-h4">Conoce a tu comunidad</h4>
+          <p class="item-description">Conoce al personal docente y administrativo  <i class="fas fa-user-check"></i> </p>
+        </div>
+      </div>
+  
+      <div class="itemEntrada"  onclick="document.location='herramientas.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Apps</h5>
+          <h4 class="item-title-h4">Calculadora Cientifica</h4>
+          <p class="item-description">Usa la que más se adapte a tu perzonalidad</p>
+        </div>
+      </div>
+      <div class="itemEntrada"  onclick="document.location='SorJuanaPedia/index.html'">
+        <img class="itemEntrada-image" src="https://www.xbr.pw/secu/img/600x400.svg">
+        <div class="itemEntrada-content">
+          <h5 class="item-category-h5">Wikipedia</h5>
+          <h4 class="item-title-h4">SorJuanaPedia</h4>
+          <p class="item-description">Acceso directo a la biblioteca digital más grande del mundo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script>const slider = document.querySelector('.items');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return; 
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3;
+        slider.scrollLeft = scrollLeft - walk;
+    });</script>
+  
 
 
 
@@ -441,6 +688,98 @@
     </div>
   </div>
 </div>
+
+<div class="container"><center><span class="footerRandomlamp"></span> </center></div>
+        <script>
+         var elements = {
+             footerRandomlamp: document.querySelector('.footerRandomlamp')
+         };
+         var footerRandom = [
+             ' «No estudio para saber más, sino para ignorar menos» Sor Juana Inés de la Cruz',
+             ' vHombres necios que acusáis  a la mujer sin razón, sin ver que sois  ocasión de lo mismo que culpáis» Sor Juana Inés de la Cruz',
+             ' vSin claridad no hay voz de sabiduría» Sor Juana Inés de la Cruz',
+             ' «Yo no puedo tenerte ni dejarte, ni sé por qué, al dejarte o al tenerte, se encuentra un no sé qué para quererte y muchos sí sé qué para olvidarte» Sor Juana Inés de la Cruz',
+             ' «Para todo se halla prueba y razón en qué fundarlo; y no hay razón para nada, de haber razón para tanto» Sor Juana Inés de la Cruz',
+             ' «Así como ninguno quiere ser menos que otro, así ninguno confiesa: porque es consecuencia del ser más» Sor Juana Inés de la Cruz',
+             ' «La más brillante de las apariencias, puede cubrir las más vulgares realidades» Sor Juana Inés de la Cruz',
+             ' «Dime vencedor rapaz, vencido de mi constancia, ¿qué ha sacado tu arrogancia de alterar mi firme paz» Sor Juana Inés de la Cruz',
+             ' «Hagas lo que hagas nunca hagas algo de lo que te puedas arrepentir.» Sor Juana Inés de la Cruz',
+             ' «…teniendo por mejor en mis verdades consumir vanidades de la vida  que consumir la vida en vanidades» Sor Juana Inés de la Cruz',
+             ' «Al que ingrato me deja, busco amante; al que amante me sigue, dejo ingrata;  constante adoro a quien me maltrata, maltrato a quien mi amor busca constante» Sor Juana Inés de la Cruz',
+             ' «¿Cuál será más de culpar, aunque cualquiera mal haga, la que peca por la paga o el que paga por pecar?» Sor Juana Inés de la Cruz',
+             ' «Hasta el saber cansa, cuando es el saber por oficio» Sor Juana Inés de la Cruz',
+             ' «Queredlas cual las hacéis o hacedlas cual las buscáis.» Sor Juana Inés de la Cruz',
+             ' «Quien oye y aprende, es mucha razón que atienda y calle.» Sor Juana Inés de la Cruz',
+             ' «Aquellos signos exteriores que ejercita el amante, siendo su causa motiva el amor, eso se llama fineza.» Sor Juana Inés de la Cruz',
+             ' «Al que trato de amor hallo diamante; y soy diamante al que de amor me trata» Sor Juana Inés de la Cruz',
+             ' «Constante adoro a quien mi amor maltrata; maltrato a quien mi amor busca constante» Sor Juana Inés de la Cruz',
+             ' «Nunca lo que es razón ha sido injuria» Sor Juana Inés de la Cruz' + new Date().getFullYear()
+         ];
+         var rand = Math.floor(Math.random() * footerRandom.length);
+         elements.footerRandomlamp.innerHTML += footerRandom[rand];
+   
+         reset();
+     </script> <br><br><br><br>
+
+
+<nav class="navbtn w3-hide-large w3-hide-medium" tabindex="3">
+  <a href="index.html" class="navbtn__link a">
+      <i class="fa fa-home w3-xlarge"></i>
+    <span class="navbtn__text">Home</span>
+  </a>
+  <a href="index.html" class="navbtn__link navbtn__ a">
+      <i class="fa fa-bell w3-xlarge"></i>
+    <span class="navbtn__text">Notificaciones</span>
+  </a>
+  <a href="index.html" class="navbtn__link a">
+      <i class="fa fa-calendar-alt w3-xlarge"></i>
+    <span class="navbtn__text">Calendario</span>
+  </a>
+  <a href="index.html" class="navbtn__link a">
+      <i class="fa fa-folder-open w3-xlarge"></i>
+    <span class="navbtn__text">Proyecto</span>
+  </a>
+  <a href="index.html" class="navbtn__link a">
+      <i class="fa fa-user w3-xlarge"></i>
+    <span class="navbtn__text">Login</span>
+  </a>
+</nav>
+
+<style>
+.navbtn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  box-shadow: 0 0 3px rgb(255, 255, 255);
+  z-index: 5;
+  display: flex;
+  overflow-x: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.navbtn__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  font-size: 13px;  
+  text-decoration: none;
+  -webkit-tap-highlight-color: white;
+  transition: background-color 0.1s ease-in-out;
+}
+
+
+.navbtn__icon {
+  font-size: 18px;
+}</style>
+
+
 <script>includeHTML();</script>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js'></script>

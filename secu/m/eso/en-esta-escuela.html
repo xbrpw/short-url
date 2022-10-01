@@ -11,9 +11,11 @@
     text-align:center;
   }
   
-  #container {
+  #containerTextAni {
     color:#999;
-    
+    margin:0px;
+    font-family:'Roboto';
+    text-align:center;
     font-size:36px;
     font-weight:bold;
     padding-top:200px;  
@@ -23,12 +25,12 @@
     display:block;
   }
   
-  #flip {
+  #flipTextAni {
     height:50px;
     overflow:hidden;text-transform: uppercase;
   }
   
-  #flip > div > div {
+  #flipTextAni > div > div {
     color:#fff;
     padding:4px 12px;
     height:45px;
@@ -36,17 +38,17 @@
     display:inline-block;
   }
   
-  #flip div:first-child {
+  #flipTextAni div:first-child {
     animation: show 5s linear infinite;
   }
   
-  #flip div div {
+  #flipTextAni div div {
     background:#42c58a;
   }
-  #flip div:first-child div {
+  #flipTextAni div:first-child div {
     background:#4ec7f3;
   }
-  #flip div:last-child div {
+  #flipTextAni div:last-child div {
     background:#DC143C;
   }
   
@@ -59,23 +61,15 @@
     71% {margin-top:0px;}
     99.99% {margin-top:0px;}
     100% {margin-top:-270px;}
-  }
-  
-  p {
-    position:fixed;
-    width:100%;
-    bottom:30px;
-    font-size:12px;
-    color:#999;
-    margin-top:200px;
-  }</style>>
+  }  
+</style>
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div id=container>
+
+<div id=containerTextAni>
   En esta escuela<br> reforzamos
-  <div id=flip>
+  <div id=flipTextAni>
     <div><div>Respeto</div></div>
     <div><div>Trabajo</div></div>
     <div><div>lifeStyle</div></div>

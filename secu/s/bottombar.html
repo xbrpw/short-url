@@ -1,4 +1,4 @@
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
 <style>@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
   @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
@@ -19,6 +19,28 @@
     /*--clay-background-color: #c0d8ec;*/
     --clay-fg-color: #444;
   }
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #f6f6f6;
+}
+
+.content {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+
   
   .flex-center {
     display: flex;
@@ -95,8 +117,8 @@
     background-color: var(--app-content-background-color);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-    height: 120px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 600px;
     display: flex;
     flex-direction: column;
     box-sizing: content-box;
@@ -355,6 +377,8 @@
   .tab-style5 .active span {
     font-size: 2rem;
   }</style>
+  <body>
+  <div class="conten">
 <div class="container stage">
   <div class="container">
     <div class="tabbar tab-style1">
@@ -380,7 +404,7 @@
   </div>
 
 </div>
-
+</div></body>
   <script>/**
     @chrisbautista @codespud
     I did not want to add a bunch of checkboxes so I opted for setting the `active` class via javascript

@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<html lang="es-MX" >
+<html lang="es-MX" ><!-- ⊙⩌⨀
+    2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack    
+	    ¿Quién hizo todo esto? 
+        http://twitter.com/luisangelmaciel -->
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Panel de control</title>
+  <meta name="title" content="Panel de Control">
+  <meta name="description" content="Bienvenido a su dasbhoard">
+  <meta name="language" content="Spanish">
+  <meta name="revisit-after" content="7 days">
+  <meta name="author" content="@LuisAngelMaciel">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.1/custom/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
@@ -13,7 +21,39 @@
 <br>
 <div class="row">
     <div class="col-xs-12">
-        <div class="alert alert-success">Bievenido</div>
+        <div class="alert alert-success">            
+            <div class="container"><center><span class="footerRandomlamp"></span> </center></div>
+            <script>
+            var elements = {
+                footerRandomlamp: document.querySelector('.footerRandomlamp')
+            };
+            var footerRandom = [
+                ' «No estudio para saber más, sino para ignorar menos» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Hombres necios que acusáis  a la mujer sin razón, sin ver que sois  ocasión de lo mismo que culpáis» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Sin claridad no hay voz de sabiduría» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Yo no puedo tenerte ni dejarte, ni sé por qué, al dejarte o al tenerte, se encuentra un no sé qué para quererte y muchos sí sé qué para olvidarte» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Para todo se halla prueba y razón en qué fundarlo; y no hay razón para nada, de haber razón para tanto» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Así como ninguno quiere ser menos que otro, así ninguno confiesa: porque es consecuencia del ser más» <b>Sor Juana Inés de la Cruz<b>',
+                ' «La más brillante de las apariencias, puede cubrir las más vulgares realidades» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Dime vencedor rapaz, vencido de mi constancia, ¿qué ha sacado tu arrogancia de alterar mi firme paz» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Hagas lo que hagas nunca hagas algo de lo que te puedas arrepentir» <b>Sor Juana Inés de la Cruz<b>',
+                ' «…teniendo por mejor en mis verdades consumir vanidades de la vida  que consumir la vida en vanidades» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Al que ingrato me deja, busco amante; al que amante me sigue, dejo ingrata;  constante adoro a quien me maltrata, maltrato a quien mi amor busca constante» <b>Sor Juana Inés de la Cruz<b>',
+                ' «¿Cuál será más de culpar, aunque cualquiera mal haga, la que peca por la paga o el que paga por pecar?» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Hasta el saber cansa, cuando es el saber por oficio» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Queredlas cual las hacéis o hacedlas cual las buscáis» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Quien oye y aprende, es mucha razón que atienda y calle» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Aquellos signos exteriores que ejercita el amante, siendo su causa motiva el amor, eso se llama fineza» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Al que trato de amor hallo diamante; y soy diamante al que de amor me trata» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Constante adoro a quien mi amor maltrata; maltrato a quien mi amor busca constante» <b>Sor Juana Inés de la Cruz<b>',
+                ' «Nunca lo que es razón ha sido injuria» <b>Sor Juana Inés de la Cruz<b>' + new Date().getFullYear()
+            ];
+            var rand = Math.floor(Math.random() * footerRandom.length);
+            elements.footerRandomlamp.innerHTML += footerRandom[rand];
+
+            reset();
+            </script> 
+        </div> <!-- / alert alert-success -->
     </div>
 </div>
 
@@ -46,11 +86,11 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <i class="fa fa-tasks fa-5x"></i>
+                        <i class="fa fa-users fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge">2</div>
-                        <div>Alumnos registrados</div>
+                        <div class="huge">4</div>
+                        <div>Bases de datos registradas</div>
                     </div>
                 </div>
             </div>
@@ -68,17 +108,17 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <i class="fa fa-users fa-5x"></i>
+                        <i class="fa fa-check fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge">1</div>
-                        <div>Contacto en el directorio </div>
+                        <div class="huge" title="360 horas al 1 de septiembre 2022">360</div>
+                        <div>horas de servicio </div>
                     </div>
                 </div>
             </div>
             <a href="#">
                 <div class="panel-footer">
-                    <span class="pull-left">Ver directorio</span>
+                    <span class="pull-left">Ver reporte de entregas</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                     <div class="clearfix"></div>
                 </div>
@@ -113,13 +153,30 @@
     <div class="col-lg-6">
         <div class="widget">
             <div class="widget-title">
-                <i class="fa fa-tasks"></i> Reportes de Entrega
+                <i class="fa fa-check"></i> Reportes de Entrega
                 <a href="https://www.xbr.pw/secu" class="pull-right">Webapp</a>
             </div>
             <div class="widget-body medium no-padding">
                 <div class="table-responsive">
                     <table class="table">
-                        <tbody>
+                        <tbody>                        
+                        <tr><td><a href="#Carrusel" target="_blank" title="Carrusel">Carrusel</a> </td><td> 01.09.22</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Serve images in next-gen formats </td><td>02.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Image elements attributes </td><td>03.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Links discernible name </td><td>04.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Accessibility to read </td><td>05.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Document meta description </td><td>06.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Reduce unused CSS </td><td>07.09.22  </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Random SorJuana </td><td>08.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Search info random SorJuana </td><td>09.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Icons original </td><td>10.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Color palette </td><td>11.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td>Font family </td><td>12.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>13.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>14.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>15.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>16.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
+                        <tr><td> </td><td>17.09.22 </td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                         <tr><td>RDVMPC001</td><td>238.103.133.37</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                         <tr><td>RDVMPC002</td><td>68.66.63.170</td><td><span class="text-success"><i class="fa fa-check"></i></span></td></tr>
                         <tr><td>RDVMPC003</td><td>76.117.212.33</td><td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td></tr>
@@ -141,7 +198,7 @@
         <div class="widget">
             <div class="widget-title">
                 <i class="fa fa-users"></i> Alumnos registrados
-                <input type="text" placeholder="Buscar" class="form-control input-sm pull-right" />
+                <input type="text" placeholder="Buscar" class="form-control input-sm pull-right" title="Busqueda no disponible por el momento"/>
                 <div class="clearfix"></div>
             </div>
             <div class="widget-body medium no-padding">

@@ -3,14 +3,21 @@
 <html lang="es-MX" ><meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <meta charset="UTF-8">
-<title></title>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+<title>Escuela Secundaria Oficial No. 514  Sor Juana Inés de la Cruz</title>
+<meta name="title" content="Escuela Secundaria Oficial 0514 SOR JUANA INÉS DE LA CRUZ">
+<meta name="description" content="Escuela pública de nivel secundaria para la formación y vinculación del aprendizaje y desarrollo intelectual y físico entre alumnos, profesores y tutores y padres de familia. Turno Matutino y vespertino. Chimalhuacán, Estado de México.">
+<meta name="keywords" content="secundaria oficial, secundaria 0514, secundaria Chimalhuacán, secundaria app, proyecto unesco,">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="7 days">
+<meta name="author" content="@LuisAngelMaciel">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;display=swap'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
 
 <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="./eevee.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;display=swap'>
 <!-- 
   <link rel="stylesheet" href="./eevee.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +36,12 @@
       $("#enEstaEscuelaReforzamos").load("eso/en-esta-escuela.html");
   });
 </script>
+<script>
+  $(document).ready(function() {
+      $("#carrusel").load("carusel-escolar/index.html");
+  });
+</script>
+
 
 <!-- <div id="enEstaEscuelaReforzamos"> </div> -->
 </head>
@@ -52,12 +65,18 @@
     <div class="row">
       <div class="col-md-12">
         <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="navbar-toggler-icon"></span>
-          </button> <a class="navbar-brand" href="#"><img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="img-fluid img-responsive" id="elInicio"></a>
+          <h3 class="w3-hide-large w3-hide-medium" >
+           <span data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" title="Navegador" aria-label="Navegador" style=" float: left"> &nbsp; &nbsp; 
+            <img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="navbar  img-fluid img-responsive " id="elInicio"> </span>                      
+          </h3> 
+          <!-- <h3 class="w3-hide-large w3-hide-medium" style=" float: right" >
+            <span ><i class="fa fa-search" style=" float: right"></i> <i class="fa fa-user"></i></span>
+           </h3> -->
+          
+          <a class="navbar-brand" href="/index" title="ESO-154" class="w3-hide-small"><img src="img/eso0514-vertical.svg" width="654px" height="150" alt="Logo Escuela Secundaria Oficial" class="img-fluid img-responsive w3-hide-small" id="elInicio"></a>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="navbar-nav p-3">
-              <li class="nav-item active">
+              <li class="nav-item active w3-hide-small" >
                 <a class="nav-link" href="#elInicio">Inicio <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item dropdown">
@@ -68,10 +87,9 @@
                       <ul class="list-group">
                         <li class="border-0 list-group-item">Institucional
                           <ul class="uk-nav-sub">
-                            <li><a href="/">Organigrama</a></li>
-                            <li><a href="/">Materias impartidas</a></li>
-                            <li><a href="/">Directorio Administrativo</a></li>
-                            <li><a href="/">Directorio personal docente</a></li>
+                            <li><a href="#organigrama">Organigrama</a></li>
+                            <li><a href="#materias">Materias impartidas</a></li>
+                            <li><a href="#directorio">Directorio Administrativo y personal docente</a></li>
                           </ul>
                         </li>
                       </ul>
@@ -80,13 +98,12 @@
                       <ul class="list-group">
                         <li class="border-0 list-group-item">Destacados
                           <ul class="uk-nav-sub">
-                            <li><a href="">Cifras e Indicadores</a></li>                            
-                            <li><a href="/" target="_blank">Establecimientos Educativos</a></li>                            
-                            <li><a href="/">Noticias</a></li>
-                            <li><a href="/">Trámites</a></li>
-                            <li><a href="/">Enlaces</a></li>
-                            <li><a href="/">Avisos</a></li>
-                            <li><a href="/">Novedades COVID-19</a></li>
+                            <li><a href="">Cifras e Indicadores</a></li>                                                        
+                            <li><a href="#noticias">Noticias</a></li>
+                            <li><a href="#tramites">Trámites</a></li>
+                            <li><a href="#enlaces">Enlaces</a></li>
+                            <li><a href="#avisos">Avisos</a></li>
+                            <li><a href="#Covid">Novedades COVID-19</a></li>
                           </ul>
                         </li>
                       </ul>
@@ -96,63 +113,8 @@
                         <li class="uk-parent uk-active uk-nav-header">Acciones
                           <ul class="uk-nav-sub">
                             <li class="uk-active"><a href="acciones/programas-y-proyectos">Áreas, Programas y proyectos</a></li>
-                            <li><a href="/acciones/agendas">Agendas imprimibles</a></li>
-                            <li><a href="/acciones/calendario-escolar">Calendario Escolar 2022-2023</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Aplicativos en línea
-                          <ul class="uk-nav-sub">
-                            <li><a href="/aplicativos-online/busqueda-avanzada">Búsqueda </a></li>                            
-                            <li><a href="/aplicativos-online/solicitud-de-soporte-tecnico" target="_blank"> Solicitud de Soporte Técnico</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>             
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown">Mapa de sitio</a>
-                <div class="dropdown-menu p-5 text-success" aria-labelledby="navbarDropdownMenuLink">
-                  <div class="row">
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Institucional
-                          <ul class="uk-nav-sub">
-                            <li><a href="/">Organigrama</a></li>
-                            <li><a href="/">Materias impartidas</a></li>
-                            <li><a href="/">Directorio Administrativo</a></li>
-                            <li><a href="/">Directorio personal docente</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="border-0 list-group-item">Destacados
-                          <ul class="uk-nav-sub">
-                            <li><a href="">Cifras e Indicadores</a></li>                            
-                            <li><a href="/" target="_blank">Establecimientos Educativos</a></li>                            
-                            <li><a href="/">Noticias</a></li>
-                            <li><a href="/">Trámites</a></li>
-                            <li><a href="/">Enlaces</a></li>
-                            <li><a href="/">Avisos</a></li>
-                            <li><a href="/">Novedades COVID-19</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <ul class="list-group">
-                        <li class="uk-parent uk-active uk-nav-header">Acciones
-                          <ul class="uk-nav-sub">
-                            <li class="uk-active"><a href="acciones/programas-y-proyectos">Áreas, Programas y proyectos</a></li>
-                            <li><a href="/acciones/agendas">Agendas imprimibles</a></li>
-                            <li><a href="/acciones/calendario-escolar">Calendario Escolar 2022-2023</a></li>
+                            <li><a href="#agendas">Agendas imprimibles</a></li>
+                            <li><a href="#calendario-escolar">Calendario Escolar 2022-2023</a></li>
                           </ul>
                         </li>
                       </ul>
@@ -172,9 +134,9 @@
                     </div>
                   </div>
                 </div>
-              </li>  
+              </li>                          
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#">Login</a>
               </li>
             </ul>
              <form class="form-inline form-inline ml-md-auto">
@@ -212,7 +174,7 @@
   
   
   <iframe src="carusel-escolar/index.html"  height="550px " width="100% " title="Carrusel de noticias" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
- 
+  <div id="carrusel"> </div>
  <div id="enEstaEscuelaReforzamos"> </div>
 
   <div class="row px-5 py-3 ">
@@ -224,16 +186,16 @@
           </h3>
         </div>
         <div class="col-6 col-md-2 text-center perfilselect">
-        <div class="circle" style="    background: linear-gradient(to bottom, #38ef7d, #11998e);"><img src="img/estudiante.png" alt="Estudiantes"></div><h4>Estudiantes</h4></div>
-        <div class="col-6 col-md-2 text-center perfilselect"><div class="circle" style="background: linear-gradient(to bottom, #1CCAD8, #11998e);"><img src="img/profesores.png" style="height: 81%;padding: 6px;" alt="Docentes"></div><h4>Docentes</h4>
+        <div class="circle" style="    background: linear-gradient(to bottom, #38ef7d, #11998e);"><img src="img/estudiante.webp" alt="Estudiantes"></div><h4>Estudiantes</h4></div>
+        <div class="col-6 col-md-2 text-center perfilselect"><div class="circle" style="background: linear-gradient(to bottom, #1CCAD8, #11998e);"><img src="img/profesores.webp" style="height: 81%;padding: 6px;" alt="Docentes"></div><h4>Docentes</h4>
         </div>
         <div class="col-6 col-md-2 text-center perfilselect">
           <div class="circle" style="background: linear-gradient(to top, #587291, #2F97C1);">
-            <img src="img/tutores-o-padres-de-familia.png" style=" left: 48%;" alt="Tutores y Padres de familia"></div><h4>Tutores y Padres de familia</h4>
+            <img src="img/tutores-o-padres-de-familia.webp" style=" left: 48%;" alt="Tutores y Padres de familia"></div><h4>Tutores y Padres de familia</h4>
         </div>
         <div class="col-6 col-md-2 text-center perfilselect">
           <div class="circle" style="    background: linear-gradient(to bottom, #38EF7D, #4CAF50);">
-            <img src="img/general.png" alt="General">
+            <img src="img/general.webp" alt="General">
           </div> <h4> General </h4>
         </div>
       </div>
@@ -244,37 +206,37 @@
       <h3 style="    border-bottom: 2px solid #72cc68;
     padding-bottom: 5px;
     display: inline-block;" class="mt-4 mb-4">Novedades</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-img-top" style="background-image:url('/')"></div>
-            <div class="card-body">
-              <h5 class="card-title">Extienden inscripción de aspirantes a Jurado</h5>
-              <p class="card-subtitle">Concursos de Ascenso 2020</p><br>
-              <p class="card-text">Hasta el 17 de abril inclusive, permanecerá abierta la inscripción para docentes de nivel Inicial, Primario y Secundario ...</p>
-              <a href="#" class="btn btn-primary d-none">Go somewhere</a>
-            </div>
+     <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-img-top" style="background-image:url('img/600x400.webp')"></div>
+          <div class="card-body">
+            <h5 class="card-title">10 acciones en educación</h5>
+            <p class="card-subtitle">Para aprender en la casa y escuela</p><br>
+            <p class="card-text">La escuela y la educación que en ella se imparte son un conjunto complejo e interconectado, a imagen y semejanza de los vasos comunicantes.</p>
+            <a href="eso/10-en-educacion.HTML" class="btn btn-primary d-none">Leer</a>
           </div>
-          <div class="card" style="width: 18rem;">
-            <div class="card-img-top" style="background-image:url('https://sitio.lapampa.edu.ar/cache/com_zoo/images/85419_img-20200318-wa0021_506cc3a369191d542f1ca525f8fa8a3d.jpg')"></div>
-            <div class="card-body">
-              <h5 class="card-title">Está disponible cuarentena.lapampa.gob.ar</h5>
-              <p class="card-subtitle">COVID19</p><br>
-              <p class="card-text">Con el objetivo de profundizar la responsabilidad social y al mismo tiempo facilitar que los ciudadanos puedan ejercer “control social”...</p>
-              <a href="#" class="btn btn-primary d-none">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <div class="card-img-top" style="background-image:url('https://sitio.lapampa.edu.ar/cache/com_zoo/images/67798_con-jefes-policiales-3_42eefe252e4c794d76ede733884b9514.jpg')"></div>
-            <div class="card-body">
-              <h5 class="card-title">Seguridad intensificará controles por la Emergencia Pública Sanitaria Nacional</h5>
-              <p class="card-subtitle d-none">Concursos de Ascenso 2020</p>
-              <p class="card-text">En el estado epidemiológico actual y acompañando las acciones nacionales tendientes a minimizar los efectos de la pandemia...</p>
-              <a href="#" class="btn btn-primary d-none">Go somewhere</a>
-            </div>
-          </div>          
         </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-img-top" style="background-image:url('img/600x400-1.webp')"></div>
+          <div class="card-body">
+            <h5 class="card-title">En está escuela</h5>
+            <p class="card-subtitle">Reforzamos los siguientes valores</p><br>
+            <p class="card-text">Con el objetivo de profundizar la responsabilidad social y al mismo tiempo facilitar que los ciudadanos puedan ejercer “control social”...</p>
+            <a href="eso/reforzamos/index.html" class="btn btn-primary d-none">Ver</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-img-top" style="background-image:url('img/600x400-2.webp')"></div>
+          <div class="card-body">
+            <h5 class="card-title">Historia del Escudo del Estado de México</h5>
+            <p class="card-subtitle">Fue diseñado por el pintor mexiquense Pastor Velázquez</p>
+            <p class="card-text">Ganador de la convocatoria realizada en 1940</p>
+            <a href="eso/historia-del-Escudo-del-Estado-de-México.html" class="btn btn-primary d-none">Ver</a>
+          </div>
+        </div>  
       </div>
+    </div>
     </div>
   </div>
   <div class="row p-5 areasyproyectos">
@@ -296,39 +258,39 @@
       <div class="row pb-3 pt-3 proyectos">
         <div class="col-md-12 px-5">
           <div class="card">
-            <div class="card-img-top" style="background-image:url('https://sitio.lapampa.edu.ar/cache/com_zoo/images/alfabetizacion_425a19c19b02fa369b112cd602dbfcdc.jpg')"></div>
+            <div class="card-img-top" style="background-image:url('img/600x400-2.webp')"></div>
             <div class="card-body">
-              <h5 class="card-title">Alfabetización - Finalización del Nivel Primario</h5>
-              <p class="card-subtitle">Concursos de Ascenso 2020</p><br>
-              <p class="card-text">Hasta el 17 de abril inclusive, permanecerá abierta la inscripción para docentes de nivel Inicial, Primario y Secundario ...</p>
-              <a href="#" class="btn btn-primary d-none">Go somewhere</a>
+              <h5 class="card-title">Pautas de consumo</h5>
+              <p class="card-subtitle">Orientación por asignaturas</p><br>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary d-none">Go </a>
             </div>
           </div>
           <div class="card">
-            <div class="card-img-top" style="background-image:url('https://sitio.lapampa.edu.ar/cache/com_zoo/images/programa_fee1c2a2ddabbcee1cf2da99e7783404.png')"></div>
+            <div class="card-img-top" style="background-image:url('img/600x400.webp')"></div>
             <div class="card-body">
-              <h5 class="card-title">Articulación entre niveles</h5>
-              <p class="card-subtitle">COVID19</p><br>
-              <p class="card-text">Con el objetivo de profundizar la responsabilidad social y al mismo tiempo facilitar que los ciudadanos puedan ejercer “control social”...</p>
-              <a href="#" class="btn btn-primary d-none">Go somewhere</a>
+              <h5 class="card-title">Infraestructura Resiliente </h5>
+              <p class="card-subtitle">Orientación por asignaturas</p><br>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary d-none">Go </a>
             </div>
           </div>
           <div class="card">
-            <div class="card-img-top" style="background-image:url('https://sitio.lapampa.edu.ar/cache/com_zoo/images/rcp_escuela_3a14c8dae7b24dfb5fb3041376150d9c.jpg')"></div>
+            <div class="card-img-top" style="background-image:url('img/600x400-3.webp')"></div>
             <div class="card-body">
-              <h5 class="card-title">Campaña RCP en las Escuelas</h5>
-              <p class="card-subtitle d-none">Concursos de Ascenso 2020</p>
-              <p class="card-text">En el estado epidemiológico actual y acompañando las acciones nacionales tendientes a minimizar los efectos de la pandemia...</p>
-              <a href="#" class="btn btn-primary d-none">Go somewhere</a>
+              <h5 class="card-title">Energías asequibles </h5>
+              <p class="card-subtitle d-none">Orientación por asignaturas</p>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary d-none">Go </a>
             </div>
           </div>
           <div class="card">
-            <div class="card-img-top" style="background-image:url('https://sitio.lapampa.edu.ar/cache/com_zoo/images/ascenso_pyp_0ad2a32d59415e868d876135abb549ce.png')"></div>
+            <div class="card-img-top" style="background-image:url('img/600x400-1.webp')"></div>
             <div class="card-body">
-              <h5 class="card-title">Concursos de Ascenso Docente</h5>
-              <p class="card-subtitle d-none">Concursos de Ascenso 2020</p>
-              <p class="card-text">Se brindan a continuación detalles principales del Régimen de Aislamiento Social Preventivo y Obligatorio anunciados por el presidente...</p>
-              <a href="#" class="btn btn-primary d-none">Go somewhere</a>
+              <h5 class="card-title">Erradicar Pobreza</h5>
+              <p class="card-subtitle d-none">Orientación por asignaturas</p>
+              <p class="card-text"> Matemáticas </p>
+              <a href="#" class="btn btn-primary d-none">Go </a>
             </div>
           </div>
         </div>        
@@ -449,7 +411,7 @@
 
   <div class="col-md-12 ">
   <div style="display: flex;justify-content: center;align-items: center;height: 200px" >    
-    <img src="img/semaforo-verde-edomex.png" alt="Semáforo Verde EDOMEX" width="555px" height="120px" style=" max-width: 100%;height: auto; ">
+    <img src="img/semaforo-verde-edomex.webp" alt="Semáforo Verde EDOMEX" width="555px" height="120px" style=" max-width: 100%;height: auto; ">
   </div>
   </div>
   
@@ -475,6 +437,7 @@
     <div class="col-md-7 p-3 px-5" style="    color: #847c7c;">
       <div> La Paz 1A, </div><div> Villa San Agustín Atlapulco, </div><div> CP 56346 Chimalhuacán,</div><div> Estado de México</div>
       <div class="social"><i class="fab fa-facebook-f" style="background: #3F51B5;padding: 10px 13px;font-size: 25px;color: white;border-radius: 25px;"></i> &nbsp;&nbsp; <i class="fab fa-google" style="background: #3F51B5;padding: 10px 13px;font-size: 25px;color: white;border-radius: 25px;"></i><!-- <i class="fa fa-instagram" style="padding: 10px 12px;font-size: 25px;color: white;border-radius: 25px;margin: 0px 15px;background: #d6249f;background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);"></i> --></div>
+      
     </div>
   </div>
 </div>

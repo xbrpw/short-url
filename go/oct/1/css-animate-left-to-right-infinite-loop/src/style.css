@@ -1,0 +1,76 @@
+
+
+/*  CSS animation running left to right in an infinite loop.  
+
+Donut BG from:
+https://dinpattern.com/2019/05/23/donuts/
+ */
+
+:root {
+  
+ /*   Transition speed set as CSS variable.
+     Speed of transition tied to  width of parent container. 
+  
+      Set in seconds or milliseconds:
+      i.e 5s or 5000ms */
+
+
+  --transition-speed:5000ms; /*  <-- Play with me! */
+}
+
+
+
+#homer{
+  bottom: 0;
+  display: block;
+  height:60vh;
+  position: absolute;
+  animation: linear infinite alternate;
+  animation-name: run;
+  animation-duration: var(--transition-speed);
+}
+
+@-webkit-keyframes run {
+    0% {
+      left: 0;
+      transform: translateX(0);
+    }
+    100% {
+      left: 100%;
+      transform: translateX(-100%);
+    }
+}
+
+
+
+/*  Animated Scrolling Page Background
+Set body background image and animation. 
+
+Donut BG from:
+https://dinpattern.com/2019/05/23/donuts/
+ */
+
+body {
+	background-image: url(https://assets.codepen.io/191814/donuts.png);
+	background-color: black;
+	margin: 0;
+	overflow: hidden;
+  
+  /*  SCROLL TIME
+Set scroll timing.  Timing is tied in with background position width/height
+ */
+	animation: background-scroll 50s linear infinite;
+}
+
+
+/*  SCROLL BG ANIMATION
+Set x - y coordinate and scroll direction.  
+i.e. set a negative percent to reverse scroll direction
+ */
+
+ @keyframes background-scroll {
+ from {
+ background-position-x: 500%;
+}
+}
+

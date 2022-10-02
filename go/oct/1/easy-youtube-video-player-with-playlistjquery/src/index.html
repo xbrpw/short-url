@@ -1,0 +1,87 @@
+<section class="parent-container">
+
+  <aside id="video-player">
+    <!--  BEGIN PLAYER CONTAINER -->
+
+    <!-- YouTube iFrame Embed -->
+
+    <iframe id="YouTube-Iframe" class="lazyload" src="https://www.youtube.com/embed/3YHVC1DcHmo?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <!-- VIDEO CAPTION  -->
+
+    <div id="video-caption">Jon Batiste ♩ FREEDOM</div>
+
+    <!-- BEGIN PLAYLIST CONTAINER  -->
+
+    <div id="playlist">
+
+      <!-- BUTTON MARK-UP  
+
+ Button has two data-attribtes that update the
+ player when clicked.
+
+1.  data-iframe     = the url of the YouTube Video Embed
+2.  data-caption    = video caption
+
+YouTube URL/SRC must end with ?autoplay=1 for videos to autoplay.
+Data caption is HTML - convert double quotes to single quotes
+in data attribute mark-up - i.e. ' not " - Probably Need to format
+your caption markup too. lol
+
+Playlist buttom image is called from YouTube.  Uses the Video ID.
+
+EASY WAY - copy a button and change out the
+YouTube video ID with the new one and edit the caption.  Done!
+
+
+-->
+
+      <button class="lazyload active" data-bg="//img.youtube.com/vi/3YHVC1DcHmo/sddefault.jpg" data-iframe="https://www.youtube.com/embed/3YHVC1DcHmo?autoplay=1" data-caption="Jon Batiste ♩  FREEDOM">Jon Batiste</button>
+
+      <!-- MORE VIDEO BUTTONS  -->
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/1GupNeliuLA/sddefault.jpg" data-iframe="https://www.youtube.com/embed/1GupNeliuLA?autoplay=1" data-caption="Luke James ♩ SHINE ON">Luke James</button>
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/cGoguR2gYn8/sddefault.jpg" data-iframe="https://www.youtube.com/embed/cGoguR2gYn8?autoplay=1" data-caption="Luke James ♩ 2013 .  Beyoncé .  Mrs. Carter Show">Luke James</button>
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/DjfMEE2krr4/sddefault.jpg" data-iframe="https://www.youtube.com/embed/DjfMEE2krr4?autoplay=1" data-caption="Chapal Hart ♩ American Pride">Chapal Hart</button>
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/WLKmDbDv6j0/sddefault.jpg" data-iframe="https://www.youtube.com/embed/WLKmDbDv6j0?autoplay=1" data-caption="Chapal Hart ♩ Made for Me">Chapal Hart</button>
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/QlOfJTeXqKU/sddefault.jpg" data-iframe="https://www.youtube.com/embed/QlOfJTeXqKU?autoplay=1" data-caption="Shamarr Allen ♩ Dance with Me">Shamarr Allen</button>
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/Hit10kFN2BQ/sddefault.jpg" data-iframe="https://www.youtube.com/embed/Hit10kFN2BQ?autoplay=1" data-caption="Shamarr Allen ♩ I LOVE YOU">Shamarr Allen</button>
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/4WtmkES0X48/sddefault.jpg" data-iframe="https://www.youtube.com/embed/4WtmkES0X48?autoplay=1" data-caption="Kermit Ruffins ♩ Drop me Off in New Orleans">Kermit Ruffins</button>
+
+      <button class="lazyload" data-bg="//img.youtube.com/vi/89Lum1zkRuU/sddefault.jpg" data-iframe="https://www.youtube.com/embed/89Lum1zkRuU?autoplay=1" data-caption="Luke James x Nu Deco Ensemble ♩ reprise two">Luke James</button>
+
+      <!-- CODPEN IFRAME EMBED 
+           As we are simply swapping out iframes, the player will work for
+           any iframe embed so lon as it fits the player container's 16/9 aspect ratio.
+-->
+
+      <button class="lazyload" data-bg="https://assets.codepen.io/191814/palyer-codepen.jpg?width=300&height=216&format=auto" data-iframe="https://codepen.io/mark_sottek/embed/zYWKKmz?default-tab=result&theme-id=dark" data-caption="Oz Cylone ♩ Codepen Iframe Embed">Codepen</button>
+
+    </div> <!-- // END PLAYLIST CONTAINER  -->
+
+  </aside> <!--  // END PLAYER CONTAINER -->
+  
+  <!--  DEMO COPY  -->
+   <article>
+    <h2>YouTube Player + Playlist</h2>
+    <h3>Player Updated via Data Attributes</h3>
+
+    <p> Player uses native YouTube Iframe Embeds. jQuery. No additional libraries needed.</p>
+
+    <p>Videos in player are updated via jQuery data attributes.</p>
+
+    <p> Simply, when a button is clicked - the values of the data attributes in the button HTML mark-up are written to the respective player elements - #YouTube-Iframe (SRC) and #video-caption (HTML) - overriding the current values and updating the player. </p>
+    <p>Easy.</p>
+     <p>++ a few New Orleans 'Dreamers'</p>
+
+  </article>
+
+  
+
+</section>

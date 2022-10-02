@@ -1,0 +1,85 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  width: 65%;
+  height: 100%;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/iceicebaby.png);
+  background-size: cover;
+  background-color: grey;
+  background-blend-mode: luminosity;
+  position: relative;
+}
+.image-container:before {
+  content: "";
+  width: 10px;
+  background: #ffcfb4;
+  height: 100%;
+  position: absolute;
+  right: -10px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  bottom: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: calc(30px + 4vw);
+  letter-spacing: 0.07em;
+  margin: 0 auto;
+  overflow: hidden;
+  font-weight: 400;
+  -webkit-text-decoration-color: #000;
+          text-decoration-color: #000;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink;
+}
+h1:before {
+  content: attr(data-title);
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 65% 0, 65% 100%, 0% 100%);
+          clip-path: polygon(0 0, 65% 0, 65% 100%, 0% 100%);
+  width: 100%;
+  color: #ffcfb4;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink;
+  -webkit-text-decoration-color: #ffcfb4;
+          text-decoration-color: #ffcfb4;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  font-size: calc(2.5vw);
+  color: #000;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  background: #ffcfb4;
+}
+p:before {
+  content: attr(data-pretitle);
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 65% 0, 65% 100%, 0% 100%);
+          clip-path: polygon(0 0, 65% 0, 65% 100%, 0% 100%);
+  color: #fff;
+  background: #000;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Wikipedia Viewer</title>
+  <title>Build a Wikipedia Viewer</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://codepen.io/u-ways/pen/qNLeMg.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="container">
+  <header class="grid cols-6" id="header">
+    <section id="proj-heading">
+      <h1>Wikipedia Viewer Application</h1>
+    </section>
+    <details id="proj-details">
+      <summary>Project Info</summary>
+      <section class="grid cols-2 rows-2" id="details-body">
+        <div class="details-column"></div>
+        <div class="details-column"></div>
+      </section>
+    </details>
+  </header>
+  <main id="app">
+    <div class="flex-c" id="app-con">
+      <section class="flex-c" id="search">
+        <h2><i class="fa fa-wikipedia-w item-icon"></i>ikipedia Viewer</h2>
+        <div id="search-bar">
+          <input id="search-input" autocomplete="off" autofocus="" placeholder="Search The Wikipedia..." type="search"/>
+          <button id="search-btn" type="button"><i class="fa fa-search"></i></button>
+        </div><a id="random" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Article</a>
+      </section>
+      <section class="flex-c" id="results-con"></section>
+    </div>
+  </main>
+  <footer id="footer">
+    <p>Last Updated:
+      <time datetime="2017-05-03"> 03/05/2017</time>&amp;nbsp | &amp;nbsp<a href="https://codepen.io/U-ways/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i>U-ways</a>
+    </p>
+  </footer>
+</div>
+<!-- partial -->
+  <script src='https://codepen.io/u-ways/pen/qNLeMg.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

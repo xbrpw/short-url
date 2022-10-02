@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap");
+
+/* Responsive jQuery Off Canvas Push Menu 
+Plus the World's Greatest Entertainer ... Sammie! */
+
+:root {
+  --body-font-color: #111;
+  --body-background-color: rgba(255, 255, 255,1);
+    /* MAIN BACKGROUND COLOR
+       MAIN is on top of BODY.  Hence, if you want the BODY  
+       background color to show by default, remove this class from the markup - or
+       set MAIN BG color opacity to 0 - i.e. rgba(221, 221, 221, 0) <- note 0 at the end  */
+  --main-background-color:  rgba(221, 221, 221, 1);
+
+  /* Header */
+
+  /* Set height of header. */
+  --header-height: 80px;
+  --header-height-mobile: 45px;
+  
+  /* Header stylin'  */
+  --header-font-size: 25px;
+  --header-font-size-mobile: 16px;
+  --header-font-spacing: 1px;
+  --header-background-color: black;
+  --header-link-color: white;
+  --header-link-hover-color: #049dff;
+  --header-link-hover-bottom-border-color: white;
+  
+  /* SVG HAMBURGER */
+  --hamburger-color: white;
+  --hamburger-hover-color: #049dff;
+
+  /* NAV SIDE PANEL  */
+
+  /* Set max-width of side panel in pixels or % . i.e.  Full screen = 100% 
+       On mobile defaults to 100%; */
+
+  --side-nav-max-width: 425px;
+
+  --side-nav-background-color: black;
+  --side-nav-font-color: white;
+  --side-nav-item-border-color: rgba(255, 255, 255, 0.5);
+  --side-nav-item-background: #1e303c;
+  --side-nav-item-hover-background: #2b485b;
+  --side-nav-item-active-background: #355f81;
+  
+  /* TRANSITION SPEED
+     This is speed of the push transition.
+     Set in seconds - i.e. 0.5s 0r Milliseconds - i.e. 1000ms 
+     Some like it fast, some slow.  */
+  
+ --transition-speed: 800ms;
+  
+}
+
+/* BODY -->  100vh + OVERFLOW HIDDEN */
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-font-color);
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* MAIN -->  POSITION FIXED - 100vh - 100% WIDTH + OVERFLOW SCROLL  */
+
+#site_main {
+  position: fixed;
+  margin-top: var(--header-height);
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  background-color: var(--main-background-color);
+ transition: all var(--transition-speed) ease;
+}
+#site_main.is-active {
+    /*  CALC TRICK * OPEN STATE
+  100% less side-nav max-width    ↓ ↓ ↓ ↓    */
+  width: calc(100% - var(--side-nav-max-width));
+}
+
+/* MAIN MOBILE BREAKPOINT  */
+
+@media (max-width: 979px) {
+ #site_main {
+    margin-top: var(--header-height-mobile);
+  }
+ #site_main.is-active {
+    width: 100%;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  width: 100vw;
+  height: var(--header-height);
+  color: var(--header-font-color);
+
+  background-color: var(--header-background-color);
+
+  padding-left: 35px;
+
+  /* Flexbox Header Layout */
+
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+}
+
+header a {
+  font-size: var(--header-font-size);
+  color: var(--header-link-color);
+  letter-spacing: 1px;
+  margin-right: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
+}
+
+@media (max-width: 979px) {
+  header {
+    height: var(--header-height-mobile);
+    padding-left: 25px;
+  }
+
+  header a {
+    font-size: var(--header-font-size-mobile);
+  }
+}
+
+header a:hover {
+  color: var(--header-link-hover-color);
+  border-bottom: 1px solid var(--header-link-hover-bottom-border-color);
+  padding-bottom: 1px;
+  opacity: 1;
+  filter: brightness(1.5);
+}
+
+header a.logo {
+  font-size: var(--header-font-size);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+header div:last-of-type {
+  margin-left: auto;
+  /* Padding right to account for width of hamburger  */
+  padding-right: 50px;
+}
+
+/* Toggle Button SVG Container */
+
+#side_toggle_button {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  border: none;
+  width: var(--header-height);
+  height: var(--header-height);
+  background: var(--side-toggle-button-background-color);
+  cursor: pointer;
+}
+/* Toggle Button SVG Container MOBILE  */
+
+@media (max-width: 979px) {
+  #side_toggle_button {
+    width: var(--header-height-mobile);
+    height: var(--header-height-mobile);
+  }
+}
+
+/* SVG HAMBURGER */
+
+#hamburger {
+  width: 80%;
+  height: 80%;
+}
+
+#hamburger:hover line {
+  stroke: var(--hamburger-hover-color);
+}
+
+#hamburger line {
+  stroke: var(--hamburger-color);
+  stroke-width: 10;
+  stroke-linecap: round;
+  opacity: 1;
+}
+#hamburger line:first-of-type,
+#hamburger line:last-of-type {
+  transition: transform 0.2s ease-in;
+}
+#hamburger line:nth-of-type(2) {
+  transition: opacity 0.3s ease-out;
+}
+#hamburger line:first-of-type {
+  transform-origin: 10px 35px;
+}
+#hamburger line:last-of-type {
+  transform-origin: 10px 85px;
+}
+#hamburger.is-active line:first-of-type {
+  transform: rotate(45deg);
+}
+#hamburger.is-active line:nth-of-type(2) {
+  opacity: 0;
+}
+#hamburger.is-active line:last-of-type {
+  transform: rotate(-45deg);
+}
+
+/*  // END HANBURGER CSS */
+
+#side-nav {
+  position: fixed;
+  width: 100%;
+  max-width: var(--side-nav-max-width);
+  /*  CALC TRICK TO SET A NEGATIVE VALUE 
+      Closed state = to max-width    ↓ ↓ ↓ ↓    */
+  margin-right: calc(-1 * var(--side-nav-max-width));
+  height: 100vh;
+  overflow: scroll;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: var(--header-height);
+  background: var(--side-nav-background-color);
+  color: var(--side-nav-font-color);
+  transition: all var(--transition-speed) ease;
+}
+
+#side-nav.is-active {
+  margin-right: 0;
+}
+
+@media (max-width: 979px) {
+  #side-nav {
+    margin-top: var(--header-height-mobile);
+  }
+}
+
+.inner-nav-container {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.inner-nav-container ul,
+.inner-nav-container li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.inner-nav-container ul li {
+  margin-bottom: 20px;
+}
+
+.inner-nav-container ul li a {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-decoration: none;
+  color: var(--side-nav-font-color);
+}
+
+/*  NAV GRID MEDIA QUERY
+   making image column and Text smaller */
+
+@media (max-width: 979px) {
+  .inner-nav-container ul li a {
+    grid-template-columns: 60px 1fr;
+  }
+}
+
+/*  NAV ITEM SECTION
+     SECTION TO BREAK UP CATEGORIES  */
+
+.nav-top-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.nav-top-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner-nav-container ul li {
+  background-color: var(--side-nav-item-background);
+  border: 1px solid var(--side-nav-item-border-color);
+}
+.inner-nav-container ul li:hover {
+  background-color: var(--side-nav-item-hover-background);
+}
+.inner-nav-container ul li.active {
+  background-color: var(--side-nav-item-active-background);
+  /*  Disable pointer events and bring down opacity when active state  */
+    opacity:0.80;
+  pointer-events: none;
+}
+
+
+.inner-nav-container ul li a span img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner-nav-container li div {
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: center;
+}
+
+.inner-nav-container ul li h2 {
+  line-height: 1;
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-right: 10%;
+  padding-bottom: 5px;
+}
+.inner-nav-container ul li h3 {
+  line-height: 1;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding-right: 15%;
+  padding-bottom: 10px;
+}
+
+
+
+/*  DEMO  PAGE CONTENT  */
+
+
+
+article {width:95%;max-width:1000px;margin:0 auto;padding-top:60px;text-align:center;padding-bottom:800px}
+
+
+article iframe {aspect-ratio: 16 / 9; 
+
+
+  width: 100% !important;  /*  override default iframe width   */
+  height: auto !important;  /*  override default iframe height   */
+
+
+}
+footer h2 {font-size:21px!important; text-align:center;width:100%:}
+article h2, footer h2 {font-size:3vw;line-height:1;margin:0;padding-top:50px;}
+article h3 {font-size:2vw;line-height:1;margin:0;}
+article p {font-size:1.5vw;font-style:italic}
+@media only screen and (max-width: 980px) {
+article h2{font-size:20px}
+article h3 {font-size:18px}
+
+}

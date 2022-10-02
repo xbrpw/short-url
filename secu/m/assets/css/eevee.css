@@ -8,7 +8,7 @@ details>summary {transition: color 1s;color: black;}details[open]>summary {color
 audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
 audio:not([controls]){display:none;height:0}[hidden],template{display:none}
 a{background-color:transparent}a:active,a:hover{outline-width:0}
-a,a:after,a:link,a:visited,a:hover{text-decoration: none;color:initial;cursor: pointer;}
+.a,.a:after,.a:link,.a:visited,.a:hover{text-decoration: none;color:inherit;cursor: pointer;}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
 b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:rgb(238, 255, 0);color:#000}
 small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -266,3 +266,76 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 @keyframes blink {78% {color: inherit;text-shadow: inherit;}79% {color: #333;}80% {text-shadow: none;}81% {color: inherit;text-shadow: inherit;}82% {color: #333;text-shadow: none;}83% {color: inherit;text-shadow: inherit;}92% {color: #333;text-shadow: none;}92.5% {color: inherit;text-shadow: inherit;}}.iconico-3d {padding: 10px;-webkit-animation: icon3d 200ms 10;animation: icon3d 200ms 10;color: rgb(255, 255, 255);}.iconico-3d:hover {-webkit-animation: icon3d 200ms infinite;animation: icon3d 200ms infinite;}
 @keyframes icon3d {0% {text-shadow: 5px 4px #f44336, -5px -6px #2196f3;}25% {text-shadow: -5px -6px #f44336, 5px 4px #2196f3;}50% {text-shadow: 5px -4px #f44336, -8px 4px #2196f3;}75% {text-shadow: -8px -4px #f44336, -5px -4px #2196f3;}100% {text-shadow: -5px 0 #f44336, 5px -4px #2196f3;}}
 /* seguir editando desde ESTE es el BS XXX */
+  /* Preloder */
+    
+  #preloder {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    min-height: 80vh;
+    background-color: #02251288;
+    /*background-image: url("img/lamp-icon-black-1B1C24.svg ");*/
+    /*  background-color: #1086B5; 
+    background-image: url("lamp-icon.svg "); */
+    align-items: center;
+    text-align: center;
+}
+
+
+.loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    border-radius: 60px;
+    animation: loader 0.8s linear infinite;
+    -webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}
+
+@-webkit-keyframes loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        border: 4px solid #673ab7;
+        border-left-color: transparent;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        border: 4px solid #f44336;
+        border-left-color: transparent;
+    }
+}

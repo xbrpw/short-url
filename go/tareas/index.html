@@ -304,15 +304,15 @@ function showHelp(){
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="overlay-bg" id="bg-image"></div>
+<!-- partial:index.partial.html 
+<div class="overlay-bg" id="bg-image"></div>-->
 <header>
 	
-	<h1>
-		<a target="_top" href="https://codepen.io/josetxu/full/VwyxZKq">
-			<span>J</span><span>osetxu</span>
-			<span>K</span><span>anban</span>
-			<span>B</span><span>oard</span>
+	<h1 >
+		<a target="_top" href="https://codepen.io/luisangelmaciel">
+			<span>L</span><span>developer </span>
+			<span>A</span><span>web &</span>
+			<span>MP</span><span>mkt</span>
 		</a>
 	</h1>
 	
@@ -322,16 +322,16 @@ function showHelp(){
 		<div class="btnAdd">
 			<button id="addToDo">&#10010;</button>
 		</div>
-		<div class="btnUrg">
+		<div class="btnUrg" style="display:none">
 			<button id="addUrgent">&nbsp;</button>
 		</div>
-		<div id="deleteItem">
+		<div id="deleteItem" style="display:none">
 			<ul id="delete-list" ondrop="drop(event, this);delTaskDrop()" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
 			</ul>
 		</div>
 	</div>
 
-	<div class="options">
+	<div class="options" style="display:none">
 		<div id="toggleOptions">
 			<button id="btnOptions" onclick="openCloseOptions()"></button>
 			<div class="optionsToggle">
@@ -418,7 +418,7 @@ function showHelp(){
 	<button id="confirmUrgentCls">CANCEL</button>
 </div>
 
-<footer>
+<footer style="display:none">
 	<div class="l-footer">
 		<span>
 			<button id="josetxuBtn" onclick="window.open('https://josetxu.com');"></button>

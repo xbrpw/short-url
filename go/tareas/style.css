@@ -2211,7 +2211,7 @@ input#dontShowAgainUrgent + label:after {
 
 
 .josetxuInfo:before {
-    background: url(https://assets.codepen.io/256997/internal/avatars/users/default.png?width=24);
+    background: url(favicon.svg);
 	background-size: contain;
 }
 

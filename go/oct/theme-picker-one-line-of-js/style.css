@@ -1,0 +1,372 @@
+:root {
+  --white: 255, 255, 255;
+  --red: 229, 57, 53;
+  --orange: 251, 140, 0;
+  --yellow: 253, 216, 53;
+  --green: 67, 160, 71;
+  --blue: 30, 136, 229;
+  --indigo: 57, 73, 171;
+  --violet: 156, 39, 176;
+  
+  --theme-color: var(--white);
+}
+
+body {
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(var(--theme-color), 0.4) 9%, 
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 50px 50px;
+  background-attachment: fixed;
+  margin: 0px;
+}
+
+input,
+label {  
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+}
+
+#example-wrapper {
+  margin: 4rem auto;
+  margin-bottom: 6rem;
+  padding: 1rem;
+  width: min(600px, calc(100% - 2rem));
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 
+    "🎨 🎨"
+    "⬅️ 🔍"
+    "⬅️ 🪟"
+    "⬅️ 🅿️"
+    "⬅️ 🖼️"
+    "⬅️ 🔼";
+}
+
+.example-section {
+  background-color: rgba(50, 50, 50, 0.2);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.example-section.vertical {
+  flex-direction: column;
+  height: max-content;
+}
+
+.example-button {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  color: rgb(var(--theme-color));
+  flex-grow: 1;
+  outline: none;
+  padding: 1.25rem;
+  cursor: pointer;
+}
+
+.example-button.short {
+  color: white;
+  padding: 0.3rem 1.5rem;
+}
+
+.example-button:hover,
+.example-button:focus {
+  border: 1px solid rgb(var(--theme-color));
+}
+
+.example-button > i {
+  height: 2rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  width: 2rem;
+}
+
+.example-input {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: white;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.example-input::placeholder {
+  color: rgba(var(--theme-color), 0.5);
+}
+
+.example-input:focus {
+  border-color: rgb(var(--theme-color));
+}
+
+#theme-picker-section {  
+  grid-area: 🎨;
+  justify-content: space-between;
+}
+
+#theme-picker-section > input {
+  height: 1.8rem;
+  width: 1.8rem;
+  margin: 0px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+
+#theme-picker-section > input:before,
+#theme-picker-section > input:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: 2;
+}
+
+#theme-picker-section > input:after {
+  height: 104%;
+  width: 104%;
+}
+
+#theme-picker-section > input:before {
+  display: none;
+  height: 120%;
+  width: 120%;
+  border: 0.2rem solid white;
+}
+
+#theme-picker-section > input:not(:checked):hover:before,
+#theme-picker-section > input:not(:checked):active:before {
+  display: block;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#theme-picker-section > input:checked:before {
+  display: block;
+}
+
+#theme-picker-section > input[value="white"]:after {
+  background-color: rgb(255, 255, 255);
+}
+
+#theme-picker-section > input[value="red"]:after {
+  background-color: rgb(var(--red));
+}
+
+#theme-picker-section > input[value="orange"]:after {
+  background-color: rgb(var(--orange));
+}
+
+#theme-picker-section > input[value="yellow"]:after {
+  background-color: rgb(var(--yellow));
+}
+
+#theme-picker-section > input[value="green"]:after {
+  background-color: rgb(var(--green));
+}
+
+#theme-picker-section > input[value="blue"]:after {
+  background-color: rgb(var(--blue));
+}
+
+#theme-picker-section > input[value="indigo"]:after {
+  background-color: rgb(var(--indigo));
+}
+
+#theme-picker-section > input[value="violet"]:after {
+  background-color: rgb(var(--violet));
+}
+
+#side-bar-section {
+  grid-area: ⬅️;
+}
+
+#search-section {
+  grid-area: 🔍;
+}
+
+#view-section {
+  grid-area: 🪟;
+}
+
+#progress-section {
+  grid-area: 🅿️;
+}
+
+.progress-bar {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 100%;
+}
+
+.progress-bar-completion {
+  background-color: rgb(var(--theme-color));
+  border-radius: inherit;
+  height: 100%;
+  width: 40%;
+}
+
+#image-section {
+  grid-area: 🖼️;
+  gap: 1rem;
+}
+
+#image-section > img {
+  width: 100%;
+}
+
+#image-section-rotator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#image-section-rotator > .image-section-dot {
+  background-color: rgba(var(--theme-color), 0.4);
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+}
+
+#image-section-rotator > .image-section-dot:hover,
+#image-section-rotator > .image-section-dot:focus {
+  background-color: rgba(var(--theme-color), 0.8);
+  cursor: pointer;  
+}
+
+#image-section-rotator > .image-section-dot:first-child {
+  background-color: rgb(var(--theme-color));
+}
+
+#shape-section {
+  grid-area: 🔼;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+#shape-section > .example-button {
+  border: 1px solid rgba(var(--theme-color), 0.4);
+  height: 100px;
+}
+
+
+#shape-section > .example-button:hover,
+#shape-section > .example-button:focus {
+  background-color: rgba(var(--theme-color), 0.1);
+  border-color: rgb(var(--theme-color));
+}
+
+@media(max-width: 500px) {  
+  #example-wrapper {
+    grid-template-areas: 
+      "🎨"
+      "⬅️"
+      "🔍"
+      "🪟"
+      "🅿️"
+      "🖼️"
+      "🔼";
+    margin-top: 1rem;
+  }
+  
+  .example-button > i {
+    height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  #theme-picker-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  #theme-picker-section > input {
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  
+  #view-section {
+    flex-direction: column;
+  }
+  
+  #view-section > button {
+    width: 100%; 
+  }
+  
+  #side-bar-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+  color: rgb(30, 30, 30);
+}
+
+#grid-layout-link {
+  bottom: 62px;
+}
+
+.yt-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;  
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+}
+
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i, .meta-link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}

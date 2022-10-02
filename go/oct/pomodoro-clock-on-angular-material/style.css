@@ -1,0 +1,27 @@
+body {
+    background : #BCAAA4;
+    height: auto;
+}
+input {
+    font-size: 2rem;
+}
+.contentdemoBasicUsage md-content {
+    padding: 24px; }
+md-card {
+    min-width: 400px;
+}
+.md-head {
+    transition: all linear 0.3s;
+    height: 100%;
+}
+.ng-hide {
+    height: 0;
+    opacity: 0;
+    background-color: transparent;
+}
+h1,h2,h3,h4 {
+    text-transform: uppercase;
+}
+h3.md-display-1,  h3.md-display-2{
+    margin: 10px 0;
+}

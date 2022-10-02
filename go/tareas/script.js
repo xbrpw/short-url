@@ -193,7 +193,7 @@
 			this.parentNode.classList.add("active");
 			elem('myLists').classList.add('fourCol');
 			var newBoard = document.createElement("div");
-			newBoard.innerHTML = '<h3>Urgent <span>0</span></h3><ul id="ul-urgent" class="section" ondrop="drop(event, this)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"></ul>';
+			newBoard.innerHTML = '<h3>Urgente <span>0</span></h3><ul id="ul-urgent" class="section" ondrop="drop(event, this)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)"></ul>';
 			newBoard.setAttribute('id','ur-gent');
 			elem('myLists').insertBefore(newBoard, elem('do-ne'));
 			if(elem('do-ne').className=='full') elem('ur-gent').className='full';

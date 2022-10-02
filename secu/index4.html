@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!-- ⊙⩌⨀
+    2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack    
+	    ¿Quién hizo todo esto? 
+        http://twitter.com/luisangelmaciel -->
+
+<title>Escuela Secundaria Oficial No. 514  Sor Juana Inés de la Cruz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+<script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.cssx">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.cssx">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="loopple.css">
+
+
+
+<style>
+.mySlides {display:none;} a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;}
+a:hover {color: #000000;text-decoration: none;font-weight: 500;}
+a:active {    color: #000000;    text-decoration: none;      font-weight: 500; }
+
+    /* ================================= *
+  * Card Styling + Default
+  ==================================== */
+  .card {
+    z-index: 1;
+    cursor: pointer;
+    display: inline-block;
+    position: static;
+    text-align: left;
+    width: 89%;
+    height: 400px;
+    max-height: 400px;
+    border-radius: 10px;
+    margin: 15px 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.10),
+      0px 1px 20px 0px rgba(0, 0, 0, 0.10);
+    transform-origin: center;
+    transition: transform, width, height, border-radius, top, left;
+      transition-duration: 500ms;
+      transition-timing-function: ease-in-out;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
+  }
+  .card .wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: table; 
+  }
+  .card h6,
+  .card p {
+    margin: 4px 0;
+  }
+  .card h6,
+  .card p {
+    color: #8f8f91;
+  }
+  .card h6 {
+    text-transform: uppercase;
+  }
+  .card img {
+    display: table-cell;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .card > .wrapper > footer{
+    display: table-cell;
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+  .card > .wrapper > footer{
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .card:active {
+    transform: scale(0.97);
+  }
+
+  /* Card Style: x */
+  /* Card Style: v */
+
+  /* Card Style: i */
+  /* Card Style~input styling*/
+  input[type="button"].concord{
+    cursor: pointer;
+    position: absolute;
+    height: auto;
+    width: auto;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    color: rgba(28, 80, 245, 0.98);
+    text-align: left;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 4.4px 13px;
+    margin: 0;
+    right: 20px;
+    bottom: 19px;
+    box-sizing: border-box;
+  }
+  input[type="button"].concord:active{
+    color: rgba(28, 80, 245, 0.48);
+  }
+  input[type="button"].concord.exit{
+    display: none;
+    z-index: 99;
+    top: 15px;
+    right: 20px;
+    bottom: initial;
+    padding: 2px 6px;
+    font-size: 1.2em;
+    line-height: 1em;
+    color: rgba(255,255,255,0.75);
+    background: rgba(20,20,25,0.65);
+  }
+  /* Card State: Content and Card active Styling*/
+
+
+  @media screen and (min-width: 530px){
+    .card{
+      width: 75%;
+    }
+  }
+  @media screen and (min-width: 600px){
+    .card{
+      max-width:340px;
+      width: 65%;
+    }
+  }
+  @media screen and (min-width: 730px){
+    .card{
+      max-width:340px;
+      width: 40%;
+    }
+  }
+  @media screen and (min-width: 1000px){
+    .card{
+      width: 340px;
+    }
+    .card.xl{
+      width: 600px;
+      max-width: 600px;
+    }
+  }
+
+  
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.html-entradas {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.body-entradas {
+  min-height: 100vh;
+  margin: 0;
+
+  font-weight: 400;
+  background: #f7f6fe;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container-entradas {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-entradas {
+  padding: 5px 50px 5px;
+}
+
+.header-title-entrada {
+  color: #343538;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.itemsEntrada {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0px 50px 40px 50px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  perspective: 500px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.itemsEntrada.active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.itemEntrada-image {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.itemEntrada {
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.01),0 1px 2px rgba(0,0,0,0.07),0 5px 15px rgba(0,0,0,0.03);
+  margin-right: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.itemEntrada-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 1.2rem;
+  width: 340px;
+}
+
+.item-title-h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343538;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.item-description {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #8a8a8a;
+  margin: 0 0 1rem;
+}
+
+.item-category-h5 {
+  display: inline-block;
+  color: #339999;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0.5rem 0 0rem;
+}
+
+</style>
+
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#navBottom").load("navBottom.html");
+        });
+    </script>
+
+
+    <!-- <div id="navBottom"> </div> -->
+
+
+
+
+<link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">
+<style>
+    /* Preloder */
+    
+    #preloder {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        justify-content: center;
+        gap: 2rem;
+        padding: 3rem;
+        min-height: 80vh;
+        background-color: #1B1C24;
+        /*background-image: url("img/lamp-icon-black-1B1C24.svg ");*/
+        /*  background-color: #1086B5; 
+        background-image: url("lamp-icon.svg "); */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .loader {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -13px;
+        margin-left: -13px;
+        border-radius: 60px;
+        animation: loader 0.8s linear infinite;
+        -webkit-animation: loader 0.8s linear infinite;
+    }
+    
+    @keyframes loader {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            border: 4px solid #f44336;
+            border-left-color: transparent;
+        }
+        50% {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            border: 4px solid #673ab7;
+            border-left-color: transparent;
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            border: 4px solid #f44336;
+            border-left-color: transparent;
+        }
+    }
+    
+    @-webkit-keyframes loader {
+        0% {
+            -webkit-transform: rotate(0deg);
+            border: 4px solid #f44336;
+            border-left-color: transparent;
+        }
+        50% {
+            -webkit-transform: rotate(180deg);
+            border: 4px solid #673ab7;
+            border-left-color: transparent;
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            border: 4px solid #f44336;
+            border-left-color: transparent;
+        }
+    }
+</style>
+
+<div id="preloder" >
+    <!-- <img src="../../lamp-avatar-icon.svg" alt="logo" width="300" height="auto">                 -->
+    <div class="loader "> </div>
+</div>
+<script src="https://www.luisangelmaciel.one/js/compressed.js"></script>
+<script src="https://www.luisangelmaciel.one/preloader.js"></script>
+
+
+
+
+
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right w3-animate-left w3-animate-fading" style="display:none" id="mySidebar">
+  
+  <ul class="w3-ul w3-hoverable w3-left-align">
+    <li><span class="w3-large" onclick="w3_close()"><b>Cerrrar &times;</b> </span><br></li>  
+    <li><span class="w3-large"  onclick="document.location='index.html'">Sobre la escuela</span><br>        </li>
+    <li><span class="w3-large"  onclick="document.location='manual.html'">Manual de uso</span><br></li>
+    <li><span class="w3-large"  onclick="document.location='app'">Version 1.0 </span><br></li>    
+</ul>    
+</div>
+
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+
+<!--Right-Align Links <b>☰</b>   -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div  style="display:block;width:100%; padding:8px 16px!important; color:#000!important;background-color:#f1f1f1!important; ">
+  <span style="font-size:24px!important" onclick="w3_open()">☰ </span> 
+  <span style="float:right!important; font-size:24px!important" onclick="document.location='login/index.html'"><b>
+    <i class="fa fa-sign-in" ></i></b></span>
+</div>
+<!--Right-Align Links <iframe src="banners.html" style="border:none;" name="index" height="400px" width="100%" title=""></iframe>   -->
+
+
+<iframe src="banners.html" style="border:none;"  height="400px" width="100%" title=""></iframe>  
+            
+   
+      <br><br>
+
+      <header class="btn-default">
+        <div class="page-header min-vh-75">
+            <div class="oblique position-absolute top-0 h-100 d-md-block d-none">
+                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n8" style="background-image:url(https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/curved-images/curved11.jpg)"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+                        <h1 class="text-gradientx text-primary">Únase a la comunidad escolar  de la</h1>
+                        <h1 class="mb-4">Secundaria Oficial 514</h1>
+                        <p class="lead pe-5 me-5">
+                          .</p>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+    
+<section class="py-5 draggable" draggable="true">
+<div class="container">
+<div class="row justify-content-center text-center">
+<div class="col-md-4">
+<h1 class="text-gradient text-primary">Participa</h1>
+<h5 class="mt-4">Colabora y comparte</h5>
+<p>conocimientos con tu grupo. Votar y comentar los proyectos generacionales   </p>
+</div>
+<div class="col-md-4">
+<h1 class="text-gradient text-primary">Lleva control </h1>
+<h5 class="mt-4">To do list</h5>
+<p>de tus tareas con las listas de actividades.</p>
+</div>
+<div class="col-md-4">
+<h1 class="text-gradient text-primary">Ten a la mano</h1>
+<h5 class="mt-4">gadgets como</h5>
+<p> calculadora cientifica, block de apuntes y más herramientas</p>
+</div>
+<div class="col-md-4">
+  <h1 class="text-gradient text-primary">Votar</h1>
+  <h5 class="mt-4">y comentar</h5>
+  <p>   los proyectos generacionales</p>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+    <div class="html-entradas">
+      <div class="body-entradas">
+        <div class="header-entradas">              
+ 
+          <div class="row removable ">
+            <div class="col-lg-4 ">      
+              <div class="container w3-margin">
+                <div class=" w3-card-2 " style="  border-radius: 10px;"  onclick="document.location='404/index.html'">
+                  <span>  <img src="./img/600x400-3.jpg" alt="Avatar" style="width:100%" style="  border-radius: 10px;"></span><br>
+                  <div class="container">
+                    <h4 class="card-title">Pagina error 404! </h4>
+                    <h6 class="card-subtitle mb-2 text-muted"></h6>
+                    <p class="card-text">Regresa automaticamente a inicio  <b>ver</b> </p>                     <br>
+                </div></div>
+        </div>
+            </div>
+            <br>
+            <div class="col-lg-4">
+                    
+        
+      <div class="container w3-margin">
+              <div class=" w3-card-2 " style="  border-radius: 10px;">
+                <span>  <img src="./img/600x400-1.jpg" alt="Avatar" style="width:100%" style="  border-radius: 10px;"></span><br>
+                <div class="container">
+                  <h4 class="card-title">Historia del escudo del Estado de México </h4>
+                  <h6 class="card-subtitle mb-2 text-muted"></h6>
+                  <p class="card-text">El escudo del Estado de México fue diseñado por el pintor mexiquense Pastor Velázquez  <b>Leer nota</b> </p>                     <br>
+              </div></div>
+      </div>
+
+            </div> <br>
+            <div class="col-lg-4">
+              <div class="container w3-margin">
+                <div class=" w3-card-2 " style="  border-radius: 10px;" onclick="document.location='publicacion.html'">
+                  <span>  <img src="./img/600x400-2.jpg" alt="Avatar" style="width:100%" style="  border-radius: 10px;"></span><br>
+                  <div class="container">
+                    <h4 class="card-title">Ejemplo de publicación </h4>
+                    <h6 class="card-subtitle mb-2 text-muted"></h6>
+                    <p class="card-text">De resultado del proyecto   <b> ver ejemplo</b> </p>                     <br>
+                </div></div>
+        </div>
+            </div>
+        </div> 
+    </div>
+
+    <section class="py-4">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <h3 class="text-gradient text-primary mb-0 mt-2"></h3>
+                  <h3>Proyecto escolar 2022-2023</h3>                  
+                  <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <a href="javascript:;" class="text-primary icon-move-right">Conoce más
+                      <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                  </a>
+              </div>
+              <div class="col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0">
+                  <div class="p-3 info-horizontal">
+                      <div class="icon icon-shape rounded-circle bg-gradient-primarys shadow text-center" style="background-color:black">
+                          <i class="fas fa-handshake opacity-10  w3-large" aria-hidden="true"></i>
+                      </div>
+                      <div class="description ps-3">
+                          <p class="mb-0" onclick="document.location='lista-de-utiles/index.html'"><b>Lista de utiles escolares</b> <br> Ciclo escolar 2022-2023.</p>
+                          <a href="lista-de-utiles/index.html" class="text-primary icon-move-right">¿Qué te falta?
+                            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                        </a>
+                      </div>  
+                  </div>
+
+                  <div class="p-3 info-horizontal">
+                      <div class="icon icon-shape rounded-circle bg-gradient-primaryx shadow text-center"  style="background-color:black">
+                          <i class="fas fa-handshake opacity-10  w3-large" aria-hidden="true"></i>
+                      </div>
+                      <div class="description ps-3">
+                          <p class="mb-0"><b>Editor del proyecto</b></p>
+                          <p  class="mb-0" onclick="document.location='editor/index.html'"> para los profesores para capturar y guardar los avances mensuales </p>
+                          <a href="editor/index.html" class="text-primary icon-move-right">Ver editor
+                            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                  </div>
+                  <div class="p-3 info-horizontal">
+                      <div class="icon icon-shape rounded-circle bg-gradient-primaryx shadow text-center"  style="background-color:black">
+                          <i class="fas fa-handshake opacity-10 w3-large" aria-hidden="true"></i>
+                      </div>
+                      <div class="description ps-3">
+                          <p class="mb-0">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-6 text-start">
+        <h4>Calendario del ciclo escolar 2022-2023</h4>
+        <p class="mb-0">Descargalo y conoce los días festivos, de puente y evaluación.</p>
+      </div>
+      <div class="col-lg-5 ms-auto text-end mt-4 mt-lg-0">
+      <div class="row">
+      <div class="col-lg-8 col-md-4 col-7">
+        <div class="form-group mb-0">
+          <div class="input-group">
+            <div class="input-group">
+              <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+              <input class="form-control" placeholder="Email" type="email">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-4 col-5 text-start">
+        <button type="button" class="btn bg-gradient-primary mb-0 h-100">Descargar</button>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+    <!-- MODAL-->
+    <templete hidden>
+      <div class="py-5 draggable" draggable="true">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 text-start">
+              <h4>Calendario del ciclo escolar 2022-2023</h4>
+              <p class="mb-0">Descargalo y conoce los días festivos, de puente y evaluación.</p>
+            </div>
+            <div class="col-lg-5 ms-auto text-end mt-4 mt-lg-0">
+              <div class="row">
+                <div class="col-lg-8 col-md-4 col-7">
+                  <div class="form-group mb-0">
+                    <div class="input-group">
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        <input class="form-control" placeholder="Your Email" type="email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-5 text-start">
+                  <button type="button" class="btn bg-gradient-primary mb-0 h-100" onclick="document.getElementById('id01').style.display='block'">Descargar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+
+      <div class="container sizze ">
+        <div class="modal"  id="id01">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" style="color: #000000;">
+                  <button style="color: #000000;" onclick="document.getElementById('id01').style.display='none'" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"></span>             
+                  Cerrar
+                </button></h5>  
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </templete><!-- /Modal-->
+
+
+<iframe src="assets/esto-te-puede-interesar/index.html" style="border:none;"  height="499px" width="100%" title=""></iframe>  
+
+  <footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-5 mb-lg-0">
+                <h6 class="text-uppercase mb-2">Escuela Secundaria Oficial No. 514  </h6>
+                <p class="mb-4 pb-2">
+                    Sor Juana Inés de la Cruz
+                </p>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                    <span class="text-lg fab fa-facebook" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                  <span class="text-lg fab fa-google" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                  <span class="text-lg fab fa-at" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                  <span class="text-lg fab fa-addres-card" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                  <span class="text-lg fab fa-addres-card" aria-hidden="true"></span>
+                </a>
+                <a href="javascript:;" class="text-secondary me-xl-4 me-3">
+                  <span class="text-lg fab fa-wikipedia-w" aria-hidden="true"></span>
+                </a>
+
+                
+            </div>
+            <div class="col-md-2 col-6 ms-lg-auto mb-md-0 mb-4">
+                <h6 class="text-sm">Sobre la escuela</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:void(0);">
+                            Valores
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Historia
+                        </a>
+                    </li>                       
+                </ul>
+            </div>
+
+            <div class="col-md-2 col-6 mb-md-0 mb-4">
+                <h6 class="text-sm">Herramientas</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Calculadora científica
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Tabla periodica de los elementos quimicos
+                        </a>
+                    </li>                       
+                </ul>
+            </div>
+      
+            
+            <div class="col-md-2 col-6 mb-md-0 mb-4">
+                <h6 class="text-sm">Recursos</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Calendario escolar 2022-2023
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Lista de útiles escolares
+                        </a>
+                    </li>
+
+                    <li class="nav-item" hidden>
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Team
+                        </a>
+                    </li>
+
+                    <li class="nav-item" hidden>
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Privacy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-2 col-6 mb-md-0 mb-4">
+                <h6 class="text-sm">Varios</h6>
+                <ul class="flex-column ms-n3 nav">
+                    <li class="nav-item" >
+                        <a class="nav-link text-secondary" href="mapa-de-sitio.html">
+                            Mapa de sitio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Directorio
+                        </a>
+                    </li>
+
+                    <li class="nav-item" hidden>
+                        <a class="nav-link text-secondary" href="javascript:;">
+                            Materias
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div><templete>
+        </div>
+        <hr class="horizontal dark mt-lg-5 mt-4 mb-sm-4 mb-1">
+        <div class="row">
+            <div class="col-8 mx-lg-auto text-lg-center">
+                <p class="text-sm text-secondary">
+                    Elaborado por lamP! diseño y mercadotecnia  © 2022
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+<center>
+    <img src="./img/escudo%20escuela%20secundaria%20oficial%200514%20sor%20juana%20ines%20de%20la%20cruz.jpg" alt="" class="imgresponsive" width="152" height="171"></center>
+</footer>
+
+    <br><br>
+
+         
+<br>
+
+<div id="navBottom"> </div>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 20px 30px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+    backdrop-filter: blur(8px) brightness(1.2);
+    -webkit-backdrop-filter: blur(8px) brightness(1.2);
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: white;
+    font-size: 16px;
+    &.mask {
+      top: 150px;
+      mask-image: linear-gradient(black 70%, transparent);
+      -webkit-mask-image: linear-gradient(black 70%, transparent);
+    }
+    &.mask-pattern {
+      top: 300px;
+      mask-image: url("data:image/svg+xml, %3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12.21 10.57%27%3E%3Cpath fill=%27%23ffffff%27 d=%27M6.1 0h6.11L9.16 5.29 6.1 10.57 3.05 5.29 0 0h6.1z%27/%3E%3C/svg%3E"), linear-gradient(black calc(100% - 30px), transparent calc(100% - 30px));
+      mask-size: auto 30px, 100% 100%;
+      mask-repeat: repeat-x, no-repeat;
+      mask-position: left bottom, top left;
+      
+      -webkit-mask-image: url("data:image/svg+xml, %3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12.21 10.57%27%3E%3Cpath fill=%27%23ffffff%27 d=%27M6.1 0h6.11L9.16 5.29 6.1 10.57 3.05 5.29 0 0h6.1z%27/%3E%3C/svg%3E"), linear-gradient(black calc(100% - 30px), transparent calc(100% - 30px));
+      -webkit-mask-size: auto 30px, 100% 100%;
+      -webkit-mask-repeat: repeat-x, no-repeat;
+      -webkit-mask-position: left bottom, top left;
+    }
+  
+    @media (min-width: 640px) {
+      padding: 16px 50px 30px 50px;
+    }
+  }
+  nav.is-hidden {
+    transform: translateY(-100%);
+  }
+  </style>
+
+
+  
+<div class="container">
+  <div class="error"></div>
+</div>
+<script src="loopple.js"></script>
+<!-- 
+<iframe src="bottombar.html" style="border:none;"  height="200px" width="100%" title=""></iframe>   -->
+
+
+
+<script>
+(async () => {
+    // create and show the notification
+    const showNotification = () => {
+        // create a new notification
+        const notification = new Notification('¡Gracias por aceptar las notificaciones, serán de mucha utilidad y bienvenido! ', {
+            body: 'Y conoce a los maestros y personal de la ESO-154',
+            icon: 'https://www.xbr.pw/secu/img/sor-juana-ines-de-la-cruz-sextaedro.svg'
+        });
+
+        // close the notification after 10 seconds
+        setTimeout(() => {
+            notification.close();
+        }, 10 * 1000);
+
+        // navigate to a URL when clicked
+        notification.addEventListener('click', () => {
+
+            window.open('https://www.xbr.pw/secu/index.html', '_blank');
+        });
+    }
+
+    // show an error message
+    const showError = () => {
+        const error = document.querySelector('.error');
+        error.style.display = 'block';
+        error.textContent = 'Has bloqueado las notificaciones';
+    }
+
+    // check notification permission
+    let granted = false;
+
+    if (Notification.permission === 'granted') {
+        granted = true;
+    } else if (Notification.permission !== 'denied') {
+        let permission = await Notification.requestPermission();
+        granted = permission === 'granted' ? true : false;
+    }
+
+    // show notification or error
+    granted ? showNotification() : showError();
+
+})();
+
+</script>
+
+</body>
+</html>
+

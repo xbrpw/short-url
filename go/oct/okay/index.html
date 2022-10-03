@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html lang="es-MX"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<html lang="es-MX">
 <head>
   <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1">  <link rel="stylesheet" href="./style.css">
   <style></style>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    </script>
+
   <a href="./article-details/" target="okay">article-details</a> <br>
 
   <a href="./variable-font-effect/" target="okay">variable-font-effect</a> <br><br>
 
+  <a href="./layout-with-text-effects-and-clip-path/index.html" target="okay">layout-with-text-effects-and-clip-path Eli Padilla</a> <br>
+  
   <a href="./theme-picker-one-line-of-js" target="okay">theme-picker-one-line-of-js</a> <br>
-  <a href="./theme-picker-one-line-of-js" >theme-picker-one-line-of-js"></a> <br><br
+  <a href="./theme-picker-one-line-of-js" >theme-picker-one-line-of-js"></a> <br><br>
+  <a href="./shadow-parallax-reactjs"  target="okay" >Aitana</a> <br><br>
+  <a href="./vibrate-api.html"   target="okay">  vibrate-api</a> <br><br>
+  <a href="./vibrate-api/index.html"  target="okay" >  vibrate-api</a> <br>
+  
+  <a href="./simple-aspect-ratio-containers/index.html"  target="okay" >  simple-aspect-ratio-containers</a> <br>
+  <a href="./diapositivas/index.html"  target="okay" >  diapositivas</a> <br>
+  
+
   
   <a href="./custom-properties-based-parallax/index.html">cool el contenido para mi en servicios</a><br>
 
@@ -26,10 +66,26 @@
   <a href="https://www.xbr.pw/go/oct/1/simple-css-sliding-santa-panel">sabnta</a> <br>
   <a href="https://www.xbr.pw/go/oct/1/the-fold">fold</a> <br>
   <a href="https://www.xbr.pw/go/oct/1/shadow-parallax-reactjs">paralax efect</a> <br>
+  <a href="Triangle-section-Divider.html" >Triangle-section-Divider</a> <br>
 
-
-
+  
+  <div w3-include-html="logout.html"></div>
+  <div w3-include-html="roundedFolded.html"></div><br>
+  <div w3-include-html="una-propinita.html"></div><br>
+  
+  <iframe src="una-propinita.html"  height="100px " width="50% " title="Tu zona de trabajo"   style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+  <iframe src="roundedFolded.html"  height="100px " width="50% " title="Tu zona de trabajo"   style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+  <iframe src="logout.html"  height="330px " width="20% " title="Tu zona de trabajo"   style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+  
   <iframe src="./variable-font-effect/index.html" name="okay" height="730px " width="100% " title="Tu zona de trabajo"
    style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
   <iframe src="./custom-properties-based-parallax/index.html"  height="730px " width="100% " title="Tu zona de trabajo" 
   style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+  <iframe src="Triangle-section-Divider.html"  height="730px " width="100% " title="Tu zona de trabajo" 
+  style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+
+  <iframe id="newYouTube" src="https://www.youtube.com/embed/xKSA049xkiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <script>
+includeHTML();
+</script>

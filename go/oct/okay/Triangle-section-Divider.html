@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-MX"  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<head>
+  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1">  <link rel="stylesheet" href="./style.css">
+  <style>.triangle {
+    position: relative;
+    background: grey;
+    height: 40vh;
+  }
+  
+  .triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 67px 67px 0 67px;
+    border-color: grey transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+  }
+  
+  .full-height {height:60vh;background:black;}</style>
+  <title></title>
+
+
+</head>
+<body>
+<!-- CodePen - Triangle section Divider -->
+<section class="triangle"></section>
+<section class="full-height"></section>
+<!-- partial -->
+  
+</body>
+</html>

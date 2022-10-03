@@ -65,7 +65,7 @@
      * play mp3 alarm when timer is counted
      */
     app.service('Audio', function () {
-        let sound = new buzz.sound("http://www.orangefreesounds.com/wp-content/uploads/2014/10/Family-feud-buzzer", {
+        let sound = new buzz.sound("ding.mp3", {
             formats: ["mp3"],
             preload: true
         });

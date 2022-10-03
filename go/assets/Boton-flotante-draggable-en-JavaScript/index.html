@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boton flotante draggable en JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div id="floating-menu-container">
+        <div id="floating-menu-content-wrapper" style="display: none;">
+            <div id="floating-menu-content">
+                <div id="floating-menu-minimize-icon" onclick="floatingMenuClickToggle()">
+                    <svg width="0" height="30" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <title>Phihi O´hara</title>
+        <ellipse ry="18" rx="18" id="svg_1" cy="19.77679" cx="19.88092" stroke-width="3" stroke="#017dbb" fill="#fff"/>
+        <g transform="rotate(1.9134000539779663 20.245901107788434,21.193698883056616) " id="svg_7">
+            <line transform="rotate(2.3232717514038086 20.24588584899918,16.418621063232433) " stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="20.33166" x2="26.11545" y1="12.50558" x1="14.37633" fill-opacity="null" stroke-opacity="null" stroke-width="3" stroke="#ff9500" fill="none"/>
+            <line transform="rotate(109.76055908203125 20.176504135131836,23.269657135009766) " stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="27.18267" x2="26.04605" y1="19.35659" x1="14.30693" fill-opacity="null" stroke-opacity="null" stroke-width="3" stroke="#ff9500" fill="none"/>
+        </g>
+    </g>
+</svg>
+                </div>
+                <p id="floating-menu-info-txt">
+                    <b>Phihi O´hara</b><br>Diseñador: luisangel.maciel <br>
+                    <a id="floating-menu-info-link" href="https://hihello.monster/luisangel.maciel">Comprar</a>
+                </p>
+            </div>
+        </div>
+        <div id="floating-menu-logo" onclick="floatingMenuClickToggle()">
+            <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+			<g>
+				<title>+</title>
+				<g stroke="null" id="svg_5">
+					<ellipse stroke="#ffffff" ry="38" rx="38" id="svg_1" cy="39.4375" cx="39.5" stroke-width="4" fill="#ff9500"/>
+					<line stroke="#ffffff" transform="rotate(90 20.5,22.979587554931644) " stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="25" x2="32.5" y1="-15" x1="33.5" fill-opacity="0" stroke-width="3" fill="none"/>
+  <line stroke="#ffffff" transform="rotate(-180 20.5,22.97958755493164) " stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="30" x2="2" y1="-10" x1="2" fill-opacity="0" stroke-width="3" fill="none"/>
+				</g>
+			</g>
+		</svg>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

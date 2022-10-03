@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito:400,700'>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="">
+<div class="app">
+  <div class="no-int"></div>
+  <nav>
+    <button tabindex="0" data-home="data-home">
+      <div class="btn-cnt" tabindex="-1">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="0px" y="0px">
+          <g>
+            <polygon points="16,2 2,12 2,30 30,30 30,12 16,2"></polygon>
+          </g>
+        </svg><span>Home</span>
+      </div>
+    </button>
+    <button tabindex="0" data-menu="data-menu">
+      <div class="btn-cnt" tabindex="-1">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="0px" y="0px">
+          <g>
+            <line x1="2" y1="2" x2="30" y2="2"></line>
+            <line x1="2" y1="16" x2="30" y2="16"></line>
+            <line x1="2" y1="30" x2="30" y2="30"></line>
+          </g>
+        </svg><span>Menu</span>
+      </div>
+    </button>
+    <button tabindex="0" data-target="search">
+      <div class="btn-cnt" tabindex="-1">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="0px" y="0px">
+          <g>
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="20" y1="20" x2="30" y2="30"></line>
+          </g>
+        </svg><span>Search</span>
+      </div>
+    </button>
+  </nav>
+  <div class="panel" id="menu" data-paneltype="menu">
+    <div class="menu-items">
+      <ul>
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Log In</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel active level1" id="index">
+    <header>
+      <div class="app-name">App Name</div>
+    </header>
+    <main>
+      <button class="fullwidth" tabindex="0" data-target="panel1">
+        <div class="btn-cnt" tabindex="-1">Basic Panel</div>
+      </button>
+      <button class="fullwidth" tabindex="0" data-target="panel2">
+        <div class="btn-cnt" tabindex="-1">Right-to-Left</div>
+      </button>
+      <button class="fullwidth" tabindex="0" data-target="panel3">
+        <div class="btn-cnt" tabindex="-1">Panel to More Panels</div>
+      </button>
+      <button class="fullwidth" tabindex="0" data-target="slideup">
+        <div class="btn-cnt" tabindex="-1">Slide Up</div>
+      </button>
+    </main>
+  </div>
+  <div class="panel" id="panel1" data-paneltype="right">
+    <header>
+      <button class="back" tabindex="0" data-prev="data-prev">
+        <div class="btn-cnt" tabindex="-1"></div>
+      </button>
+    </header>
+    <main>
+      <h1>Basic Panel</h1>
+      <p>Spot something, big eyes, big eyes, crouch, prepare to pounce mrow. Hiss and stare at nothing then run suddenly away instantly break out into full speed gallop across the house for no reason.
+      </p>
+      <p>Hunt by meowing loudly at 5am next to human slave food dispenser sit on the laptop brown cats with pink ears lick sellotape. Burrow under covers refuse to leave cardboard box or steal the warm chair right after you get up. Jump on human and sleep on her all night long be long in the bed, purr in the morning and then give a bite to every human around for not waking up request food, purr loud scratch the walls, the floor, the windows, the humans jumps off balcony then snatches yarn and fights with dog.</p>
+    </main>
+  </div>
+  <div class="panel" id="panel2" data-paneltype="left">
+    <header>
+      <button class="back" tabindex="0" data-prev="data-prev">
+        <div class="btn-cnt" tabindex="-1"></div>
+      </button>
+    </header>
+    <main>
+      <h1>Right-to-Left</h1>
+      <p>This panel type is ideal for right-to-left languages.</p>
+      <h2>عربى</h2>
+      <p>بقعة شيء، عيون كبيرة، عيون كبيرة، كراوتش، الاستعداد للانقضاض مرو. هيس والتحديق في أي شيء ثم تشغيل فجأة بعيدا كسر الفور إلى فرس بأقصى سرعة عبر المنزل من دون سبب.</p>
+      <h2>עִברִית</h2>
+      <p>ספוט משהו, עיניים גדולות, עיניים גדולות, מתכופפות, מתכונן לזנק. Hiss ולטוש מבט לעבר שום דבר ואז לרוץ פתאום פתאום לפרוץ החוצה במהירות לדהור את הבית ללא סיבה.</p>
+    </main>
+  </div>
+  <div class="panel" id="panel3" data-paneltype="right">
+    <header>
+      <button class="back" tabindex="0" data-prev="data-prev">
+        <div class="btn-cnt" tabindex="-1"></div>
+      </button>
+    </header>
+    <main>
+      <h1>Panel to More Panels</h1>
+      <button tabindex="0" data-target="panel3-1">
+        <div class="btn-cnt" tabindex="-1">Access Another Panel</div>
+      </button>
+    </main>
+  </div>
+  <div class="panel" id="panel3-1" data-paneltype="right">
+    <header>
+      <button class="back" tabindex="0" data-prev="data-prev">
+        <div class="btn-cnt" tabindex="-1"></div>
+      </button>
+    </header>
+    <main>
+      <h1>Another Panel</h1>
+      <button tabindex="0" data-target="panel3-2">
+        <div class="btn-cnt" tabindex="-1">One More</div>
+      </button>
+    </main>
+  </div>
+  <div class="panel" id="panel3-2" data-paneltype="right">
+    <header>
+      <button class="back" tabindex="0" data-prev="data-prev">
+        <div class="btn-cnt" tabindex="-1"></div>
+      </button>
+    </header>
+    <main>
+      <h1>Last One</h1>
+      <p>Meow all night having their mate disturbing sleeping humans. Pushes butt to face. Loves cheeseburgers groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked.</p>
+    </main>
+  </div>
+  <div class="panel" id="search" data-paneltype="right">
+    <header>
+      <button class="back" tabindex="0" data-prev="data-prev">
+        <div class="btn-cnt" tabindex="-1"></div>
+      </button>
+      <form id="form1">
+        <input type="text" name="search" placeholder="Search…"/>
+        <button type="submit" tabindex="0">
+          <div class="btn-cnt" tabindex="-1">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="0px" y="0px">
+              <g>
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="20" y1="20" x2="30" y2="30"></line>
+              </g>
+            </svg>
+          </div>
+        </button>
+      </form>
+    </header>
+    <main>
+      <div class="searching">
+        <div class="preloader"></div>Searching…
+      </div>
+      <div class="results"></div>
+    </main>
+  </div>
+  <div class="panel" id="slideup" data-paneltype="up">
+    <header>
+      <button class="close" tabindex="0" data-prev="data-prev">
+        <div class="btn-cnt" tabindex="-1">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" x="0px" y="0px">
+            <g>
+              <line x1="4" y1="4" x2="28" y2="28"></line>
+              <line x1="28" y1="4" x2="4" y2="28"></line>
+            </g>
+          </svg>
+        </div>
+      </button>
+    </header>
+    <main>
+      <h1>Slide Up</h1>
+      <p>All sample text about cats in these panels came from <a href="http://catipsum.com/" target="_blank">Cat Ipsum</a>.
+      </p>
+    </main>
+  </div>
+</div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

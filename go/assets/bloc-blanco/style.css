@@ -1,0 +1,92 @@
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pad-binding .button-group {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.pad-content {
+  background: #ffffcc;
+  position: absolute;
+  top: 00px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.pad-content.dummy {
+  z-index: 0;
+}
+.pad-content.removing-page {
+  animation: remove-page 1000ms;
+}
+
+
+
+
+.pad-header {
+  z-index: 2;
+  height: 30px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: box-shadow 0.2s ease;box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+.pad-header.is-overlapping {
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+}
+.pad-header .pad-title {
+  border: 0;
+  background: transparent;
+  font-size: 18px;  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.pad-header .pad-title:focus {
+  outline: none;
+}
+
+.pad-body {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*background: repeating-linear-gradient(#cce0ff, #cce0ff 2px, transparent 2px, transparent 2rem);*/
+  background-attachment: local;
+  background-size: 32px 32px;
+}
+.pad-body .pad-input {
+  background: transparent;
+  
+  font-size: 1rem;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  overflow-y: scroll;  
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.pad-body .pad-input:focus {
+  outline: none;
+}
+
+@keyframes remove-page {
+  100% {
+    transform: rotate(-20deg) translateY(120%);
+  }
+}

@@ -1,0 +1,23 @@
+body {
+  --c1: purple;
+  --c2: pink;
+  --cone: #fff0 0 44.5deg, var(--c1) 44.75deg 45.25deg, #fff0 45.5deg 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  $bg-right: null;
+  @for $i from 0 through 100 {
+    $key: $i * -2% + 100;
+    @if($i<50) {
+      $key: $i * 2%;
+    }
+    $bg-right: $bg-right conic-gradient(from 0deg at #{$key} 100%, var(--cone))#{if($i !=100, ',', '')};
+  }
+  $bg-left: null;
+  @for $i from 0 through 100 {
+    $key: $i * 2%;
+    $bg-left: $bg-left conic-gradient(from -90deg at #{$key} 100%, var(--cone))#{if($i !=100, ',', '')};
+  }
+  background-image: $bg-right, $bg-left, linear-gradient(0deg, var(--c1) , var(--c2));
+}

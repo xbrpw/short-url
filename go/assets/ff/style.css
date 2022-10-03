@@ -1,0 +1,17 @@
+body {
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	place-items: center;
+	background: rgb(255, 255, 255);
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 0.8169642857142857) 0%,
+		rgba(19, 35, 112, 1) 100%
+	);
+}
+
+.fistbump {
+	font-size: 10rem;
+	margin: auto;
+}

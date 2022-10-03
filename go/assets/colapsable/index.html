@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Collapsable</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="https://www.xiiber.com/favicon.png" sizes="192x192">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+
+    <!-- opciones de css propio -->
+    <link rel="preload" href="https://hihellomonster.github.io/xiibicon/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://hihellomonster.github.io/xiibicon/style.css"></noscript>
+    <link data-no-async=”1″ rel="stylesheet" href="https://hihellomonster.github.io/xiibicon/style.css" media="all">
+    <link rel="stylesheet" href="css/hi-style.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js " integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT " crossorigin="anonymous "></script>
+
+    <!-- Font Awesome icons (free version)-->
+
+
+
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+        
+        body {
+            width: 100%;
+            min-height: 100vh;
+            font-size: 1.6rem;
+            line-height: 140%;
+            opacity: 0.3;
+            opacity: 1;
+            display: grid;
+            place-items: center;
+        }
+        
+        .hi-container-mapa {
+            padding: .3rem .3rem;
+            mask-position: initial;
+        }
+        
+        .hi-btn-animado {
+            width: 100%;
+            padding: 1.6rem 2rem;
+            font-size: 1.6rem;
+            cursor: pointer;
+            background: inherit;
+            border: none;
+            outline: none;
+            text-align: left;
+            transition: all 0.5s linear;
+        }
+        
+        .hi-btn-animado:after {
+            content: "\271A";
+            color: #756deb;
+            float: right;
+            transition: all 0.3s linear;
+        }
+        
+        .hi-btn.is-open:after {
+            transform: rotate(90deg);
+        }
+        
+        .hi-btn:hover,
+        .hi-btn.is-open {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .hi-btnx {
+            width: 100%;
+            padding: 1.6rem 2rem;
+            font-size: 1.6rem;
+            cursor: pointer;
+            background: inherit;
+            border: none;
+            outline: none;
+            text-align: left;
+            transition: all 0.5s linear;
+        }
+        
+        .hi-btnx:after {
+            color: #eae9f3;
+            float: right;
+            transition: all 0.3s linear;
+        }
+        
+        .hi-content {
+            max-height: 0;
+            color: rgba(0, 0, 0, 0.75);
+            font-size: 1.5rem;
+            margin: 0 2rem;
+            padding-left: 1rem;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #050505;
+        }
+        
+        a:link {
+            text-decoration: none
+        }
+        
+        a:visited {
+            color: black;
+            text-decoration: none
+        }
+        
+        a:hover {
+            color: black;
+            font-family: arial;
+            text-decoration: none
+        }
+        
+        * {
+            outline: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="mapaDeSitio" class="tabcontenttop">
+        <br><br><br>
+        <div class="hi-container">
+            <div class="hi-acc-container">
+                <button class="hi-acc-btn">Viajes</button>
+                <div class="hi-acc-content">
+                    <ul class=" hi-f_list" style="list-style-type: none;">
+                        <li><a href="viajes/acapulco.html ">Acapulco</a></li>
+                        <li><a href="viajes/cdmx.html">CDMX</a></li>
+                        <li><a href="viajes/puertovallarta.html">Puerto Vallarta</a></li>
+                        <li><a href="viajes/tepoztlan.html">Tepoztlán</a></li>
+                        <li><a href="viajes/veracruz.html#">Veracruz</a></li>
+                        <li><a href="viajes/zipolite.html">Zipolite</a></li>
+                        <li><a href="experiencias/rutagastronomica.html">Ruta Gastronómica</a></li> <br> <br>
+                    </ul>
+                    <!--  <a href="index.html"  style="text-decoration:none"> -->
+                </div>
+
+                <button class="hi-acc-btn">Experiencias</button>
+                <div class="hi-acc-content ">
+                    <ul style="list-style-type: none;">
+                        <li><a href="experiencias/pokemongo.html ">Pokemon Go</a></li>
+                        <li><a href="experiencias/Underground.html ">Underground CDMX</a></li>
+                        <li><a href="experiencias/rutagastronomica.html ">¡A comer!</a></li>
+                        <!--  <li><a href="https://www.xiiber.com ">Barber and Spa</a></li>
+                                        <li><a href="https://www.xiiber.com ">Beer and Pizza</a></li>
+                                        <li><a href="https://www.xiiber.com ">Yoga al desnudo</a></li> -->
+                        <br>
+                        <li> <a href="experiencias/online/game.html " style="text-decoration:none "><strong>Online</strong></a> </li>
+                        <li><a href="https://game.xiiber.com/pacman ">&#32;Pacman</a></li>
+                        <li><a href="https://game.xiiber.com/calculadora-del-amor ">&#32;Calculadora del amor</a></li>
+                        <li><a href="https://game.xiiber.com/emoji-man ">&#32;Emoji man</a></li>
+                        <li><a href="https://game.xiiber.com/game_franki_emoji ">&#32;Frankemoji</li></a></li>
+                        <li><a href="https://game.xiiber.com/gato ">&#32;Gato</a></li>
+                        <li><a href="https://game.xiiber.com/random-nombre-drag.html ">&#32;Nombre drag</li></a></li>
+                    </ul>
+                    <br><br>
+                </div>
+
+                <button class="hi-acc-btn "> Sobre Xiiber </button>
+                <div class="hi-acc-content ">
+                    <ul style="list-style-type: none;">
+                        <li><a href="about/xiiber.html ">Xiiber Travel</a></li>
+                        <li><a href="about/cgtravel.html ">CGTravel</a></li>
+                        <li><a href="about/redes-sociales.html ">Redes sociales</a></li>
+                        <li> <a href="mapadesitio.html ">Mapa de sitio</a> </li>
+                        <li><a href="http://faq.xiiber.com/ ">FAQ</a></li>
+                        <li><a href="politicas.html ">Politica de privacidad</a></li>
+                        <li><a href="notificaciones.html ">Notificaciones</a> </li>
+                        <li><a href="opcionesdepago.html " style="text-decoration:none ">Opciones de pago</a></li>
+                        <li> <a href="gaypride/edicion.html " style="text-decoration:none ">Calendarios Gay Pride</a> </li>
+                        <br>
+                        <!--  <li><strong>Soluciones de negocio </strong></li>
+                                 <li><a href="business/anunciate.html ">Anunciate</a></li>
+                                 <li><a href="Advertising.html ">Advertising</a></li>
+                                     <li><a href="gay.html ">Gay</a> </li>
+                                     <li><a href="underwear.html ">Underwear</a></li>
+                                  <li><a href="gay.html ">Gay</a> </li> -->
+                    </ul><br><br>
+                </div>
+
+                <button class="hi-acc-btn "> Blog   </button>
+                <div class="hi-acc-content ">
+                    <ul class="hi-list-unstyled hi-f_list " style="list-style-type: none;">
+                        <li><a href="telefonos-de-emergencia-y-asistencia-cdmx.html ">Teléfonos de emergencia y asistencia CDMX</a></li>
+                        <li><a href="salud/covid_sexo_gay.html ">El sexo en tiempos de COVID</a></li><br>
+
+                        <li><strong>Marzo</strong></li>
+                        <li><a href="https://diainternacional.xiiber.com/DiaInternacionalDeLasTrabajadorasDelHogar.html ">30 - Día Internacional de las Trabajadoras del Hogar</a></li>
+                        <li><a href="https://diainternacional.xiiber.com/diainternacionaldelavisibilidadtransgenero.html ">31 - Día Internacional de la Visibilidad Transgénero</a></li><br>
+
+                        <li><a href="gaypride/edicion.html "><strong>Calendarios Gay Pride </strong></a> </li>
+                        <li><a href="gaypride/2016.html ">#GayPride 2016  </a></li>
+                        <li><a href="gaypride/2017.html ">#GayPride 2017  </a></li>
+                        <li><a href="gaypride/2018.html ">#GayPride 2018  </a></li>
+                        <li><a href="gaypride/2019.html ">#GayPride 2019  </a></li>
+                        <li><a href="gaypride/2020.html ">#GayPride 2020  </a></li>
+                        <li><a href="gaypride/2021.html ">#GayPride 2021  </a></li>
+                        <li><a href="gaypride/2022.html ">#GayPride 2022  </a></li>
+                    </ul><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="hi-container  hi-center hi-opacity hi-large hi-padding-32"><span class="hi-large hi-padding-small" style="text-align:center;color:#1a1a1a"><b>CG Travel</b>ahora es <span style="font-family: 'Montserrat Alternates', sans-serif; font-size: 18px; color:grey; text-align: center; " class="hi-hover">xiiber </span></b>
+        </span><br></header>
+    <main>
+     
+        <div class="hi-container"><button class="hi-btn">Viajes</button>
+            <div class="hi-content">
+                <ul class="list-unstyled f_list">
+                    <li><a href="viajes/acapulco.html ">Acapulco</a></li>
+                    <li><a href="viajes/cdmx.html">CDMX</a></li>
+                    <li><a href="viajes/puertovallarta.html">Puerto Vallarta</a></li>
+                    <li><a href="viajes/tepoztlan.html">Tepoztlán</a></li>
+                    <li><a href="viajes/veracruz.html#">Veracruz</a></li>
+                    <li><a href="viajes/zipolite.html">Zipolite</a></li>
+                    <li><a href="experiencias/rutagastronomica.html">Ruta Gastronómica</a></li><br><br></ul>
+                <!-- <a href="index.html" style="text-decoration:none">--></div><button class="hi-btn">Experiencias</button>
+            <div class="hi-content">
+                <ul class="list-unstyled f_list">
+                    <li><a href="experiencias/pokemongo.html">Pokemon Go</a></li>
+                    <li><a href="experiencias/Underground.html">Underground CDMX</a></li>
+                    <li><a href="experiencias/rutagastronomica.html">¡A comer!</a></li>
+                    <!-- <li><a href="https://www.xiiber.com">Barber and Spa</a></li><li><a href="https://www.xiiber.com">Beer and Pizza</a></li><li><a href="https://www.xiiber.com">Yoga al desnudo</a></li>--><br>
+                    <li><a href="experiencias/online/game.html" style="text-decoration:none"><strong>Online</strong></a></li>
+                    <li><a href="https://game.xiiber.com/pacman">&#32;
+        Pacman</a></li>
+                    <li><a href="https://game.xiiber.com/calculadora-del-amor">&#32;
+        Calculadora del amor</a></li>
+                    <li><a href="https://game.xiiber.com/emoji-man">&#32;
+        Emoji man</a></li>
+                    <li><a href="https://game.xiiber.com/game_franki_emoji">&#32;
+        Frankemoji</li></a></li>
+                    <li><a href="https://game.xiiber.com/gato">&#32;
+        Gato</a></li>
+                    <li><a href="https://game.xiiber.com/random-nombre-drag.html">&#32;
+        Nombre drag</li></a></li>
+                </ul><br><br></div><button class="hi-btn">Blog </button>
+            <div class="hi-content">
+                <ul class="list-unstyled f_list">
+                    <li><a href="telefonos-de-emergencia-y-asistencia-cdmx.html">Teléfonos de emergencia y asistencia CDMX</a></li>
+                    <li><a href="salud/covid_sexo_gay.html">El sexo en tiempos de COVID</a></li><br>
+                    <li><strong>Marzo</strong></li>
+                    <li><a href="https://diainternacional.xiiber.com/DiaInternacionalDeLasTrabajadorasDelHogar.html">30 - Día Internacional de las Trabajadoras del Hogar</a></li>
+                    <li><a href="https://diainternacional.xiiber.com/diainternacionaldelavisibilidadtransgenero.html">31 - Día Internacional de la Visibilidad Transgénero</a></li><br>
+                    <li><a href="gaypride/edicion.html"><strong>Calendarios Gay Pride </strong></a></li>
+                    <li><a href="gaypride/2016.html">#GayPride 2016 </a></li>
+                    <li><a href="gaypride/2017.html">#GayPride 2017 </a></li>
+                    <li><a href="gaypride/2018.html">#GayPride 2018 </a></li>
+                    <li><a href="gaypride/2019.html">#GayPride 2019 </a></li>
+                    <li><a href="gaypride/2020.html">#GayPride 2020 </a></li>
+                    <li><a href="gaypride/2021.html">#GayPride 2021 </a></li>
+                    <li><a href="gaypride/2022.html">#GayPride 2022 </a></li>
+                </ul><br><br></div><button class="hi-btn">Sobre <span style="font-family: 'Montserrat Alternates', sans-serif; font-size: 18px; color:grey; text-align: center; " class="hi-hover">xiiber </span></button>
+            <div class="hi-content">
+                <ul class="list-unstyled f_list">
+                    <li><a href="about/xiiber.html">Xiiber Travel</a></li>
+                    <li><a href="about/cgtravel.html">CGTravel</a></li>
+                    <li><a href="about/redes-sociales.html">Redes sociales</a></li>
+                    <li><a href="mapadesitio.html">Mapa de sitio</a></li>
+                    <li><a href="http://faq.xiiber.com/">FAQ</a></li>
+                    <li><a href="politicas.html">Politica de privacidad</a></li>
+                    <li><a href="notificaciones.html">Notificaciones</a></li>
+                    <li><a href="opcionesdepago.html" style="text-decoration:none">Opciones de pago</a></li>
+                    <li><a href="gaypride/edicion.html" style="text-decoration:none">Calendarios Gay Pride</a></li>
+                    <!-- <li><strong>Soluciones de negocio </strong></li><li><a href="business/anunciate.html">Anunciate</a></li><li><a href="Advertising.html">Advertising</a></li><li><a href="gay.html">Gay</a></li><li><a href="underwear.html">Underwear</a></li><li><a href="gay.html">Gay</a></li>-->
+                    <li>
+                        <div class="hi-container  hi-center hi-opacity hi-large list-unstyled f_list"><i class=" hi-hover-opacity " onclick="document.location='https://www.xiiber.com/notificaciones' "><img src="sgv/ico_dark20x20.png " alt="Xiiber " width="21px " height="21px "></i><br>
+                            <ul class="hi-small  hi-center"><br><span style="text-align:center;color:#000000"><b>Hecho con <span class="hi-hover-opacity">❤️ </span>de ida y vuelta para ti</b>
+                                </span><br>
+                                <p class="hi-small">Copyright © 2012-2020 Xiiber </p><br></div>
+                        </ul>
+                    </li>
+                </ul><br><br></div><button class="hi-btn">Contacto <i class="fa fa-instagram hi-hover-opacity hi-large" onclick="document.location='https://www.instagram.com/xiibertravel/' "></i><i class=" fa fa-youtube-play hi-hover-opacity  hi-large" onclick="document.location='https://www.facebook.com/cgtravel' "></i><i class="fa fa-twitter hi-hover-opacity hi-large" onclick="document.location='https://twitter.com/XiiberTravel' "></i><i class="fa fa-google hi-hover-opacity hi-large" onclick="document.location='https://www.google.com/maps/place/Xiiber/@19.3507605,-99.1486646,17z/data=!3m1!4b1!4m5!3m4!1s0x85d1fdea83072205:0x762481276f0ce59d!8m2!3d19.3507606!4d-99.1464759' "></i><i class=" hi-hover-opacity "><img src="sgv/ico_dark20x20.png " alt="Xiiber " width="21px " height="21px "></i></button>
+            <div class="hi-content">
+                <ul class="list-unstyled f_list">
+                    <li><i class="fa fa-tripadvisor hi-hover-opacity hi-large " onclick="document.location='https://www.tripadvisor.com.mx/Attraction_Review-g150800-d21347352-Reviews-Xiiber-Mexico_City_Central_Mexico_and_Gulf_Coast.html' "></i></li>
+                    <li><i class="fa fa-pinterest-p hi-hover-opacity hi-large" onclick="document.location='https://www.facebook.com/cgtravel' "></i></li>
+                    <li><i class="fa fa-facebook-official hi-hover-opacity hi-large " onclick="document.location='https://www.facebook.com/cgtravel'"></i></li>
+                    <li><i class="fa fa-instagram hi-hover-opacity hi-large" onclick="document.location='https://www.instagram.com/xiibertravel/' "></i></li>
+                </ul><br></div>
+        </div>
+    </main>
+    <footer class=" hi-container hi-center hi-opacity hi-large hi-padding-32">
+        <ul class="hi-small  hi-center"><span style="text-align:center;color:#000000"><b>Hecho con <span class="hi-hover-opacity">❤️ </span>de ida y vuelta para ti</b>
+            </span><br>
+            <p class="hi-small">Copyright © 2012-2020 Xiiber </p>
+    </footer>
+    <script>
+        const btns = document.querySelectorAll(".hi-btn");
+        // fn
+        function accordion() {
+            // this = the btn | icon & bg changed
+            this.classList.toggle("is-open");
+            // the hi-content
+            const content = this.nextElementSibling;
+            // IF open, close | else open
+            if (content.style.maxHeight) content.style.maxHeight = null;
+            else content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+        // event
+        btns.forEach((el) => el.addEventListener("click", accordion));
+    </script>
+</body>
+
+</html>

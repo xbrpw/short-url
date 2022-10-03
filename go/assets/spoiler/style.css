@@ -1,0 +1,13 @@
+details.spoiler summary::after {
+  content: var(--hidden);
+  filter: blur(4px);
+  display: block;
+/* / width:100%; height:225*/
+}
+
+details[open] summary::after {
+  display: none;
+  width:100%; height:225
+}
+
+img {  width:100%; height:225}

@@ -1,0 +1,219 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #222, #000);
+  color: #fff;
+}
+body * {
+  box-sizing: border-box;
+}
+body #wrap {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+body #wrap:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://puu.sh/Blj4e/88c7a2d9f4.png");
+  background-size: cover;
+  -webkit-animation: zoomin 2.25s ease-in-out 1 forwards;
+          animation: zoomin 2.25s ease-in-out 1 forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+@-webkit-keyframes zoomin {
+  to {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+}
+@keyframes zoomin {
+  to {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+}
+body #wrap .inner {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  overflow: hidden;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5) 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, rgba(255, 255, 255, 0.5) 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to right, rgba(255, 255, 255, 0.5) 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to left, rgba(255, 255, 255, 0.5) 2px, rgba(255, 255, 255, 0) 2px);
+  background-size: 50% 100%, 50% 100%, 50% 100%, 50% 100%;
+  background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%;
+  background-repeat: no-repeat;
+  -webkit-animation: drawin 2s ease-in-out 1 forwards;
+          animation: drawin 2s ease-in-out 1 forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+}
+@-webkit-keyframes drawin {
+  0% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% 50%, 50% 50%;
+    background-size: 0% 100%, 0% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 100% 0%, 100% 0%;
+    -webkit-clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+  25% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% -100%, 50% -100%;
+    background-size: 0% 100%, 0% 100%, 50% 100%, 50% 100%, 100% 0%, 100% 0%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  75% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% 0%, 50% 0%;
+    background-size: 0% 100%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% 50%, 50% 50%;
+    background-size: 50% 100%, 50% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes drawin {
+  0% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% 50%, 50% 50%;
+    background-size: 0% 100%, 0% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 100% 0%, 100% 0%;
+    -webkit-clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+  25% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% -100%, 50% -100%;
+    background-size: 0% 100%, 0% 100%, 50% 100%, 50% 100%, 100% 0%, 100% 0%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  75% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% 0%, 50% 0%;
+    background-size: 0% 100%, 0% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 0% 50%, 100% 50%, 50% 50%, 50% 50%;
+    background-size: 50% 100%, 50% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+body #wrap h3 {
+  font-family: "Montserrat";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  margin: 0px;
+  transform: translateY(150%);
+  -webkit-animation: slideup 0.5s ease-in-out 1 forwards;
+          animation: slideup 0.5s ease-in-out 1 forwards;
+  -webkit-animation-delay: 3.75s;
+          animation-delay: 3.75s;
+}
+@-webkit-keyframes slideup {
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes slideup {
+  to {
+    transform: translateY(0px);
+  }
+}
+body #wrap h1 {
+  font-family: "Merriweather";
+  font-size: 55px;
+  line-height: 1.15;
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  max-width: 80%;
+}
+body #wrap h1:before {
+  content: "DID YOU KNOW?";
+  position: absolute;
+  font-family: "Montserrat";
+  font-size: 14px;
+  top: -20px;
+  left: 20px;
+  opacity: 0.75;
+  -webkit-animation: slidein 1s ease-in-out 1 forwards;
+          animation: slidein 1s ease-in-out 1 forwards;
+  transform: translateX(-400px);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+body #wrap h1 span {
+  display: inline-block;
+  font-size: 55px;
+  margin-right: 5px;
+  position: relative;
+  transform: translateX(-400px);
+  -webkit-animation: slidein 1s ease-in-out 1 forwards;
+          animation: slidein 1s ease-in-out 1 forwards;
+}
+@-webkit-keyframes slidein {
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slidein {
+  to {
+    transform: translateX(0%);
+  }
+}
+body #wrap h1 span:nth-of-type(1) {
+  -webkit-animation-delay: 2.5454545455s;
+          animation-delay: 2.5454545455s;
+}
+body #wrap h1 span:nth-of-type(2) {
+  -webkit-animation-delay: 2.5909090909s;
+          animation-delay: 2.5909090909s;
+}
+body #wrap h1 span:nth-of-type(3) {
+  -webkit-animation-delay: 2.6363636364s;
+          animation-delay: 2.6363636364s;
+}
+body #wrap h1 span:nth-of-type(4) {
+  -webkit-animation-delay: 2.6818181818s;
+          animation-delay: 2.6818181818s;
+}
+body #wrap h1 span:nth-of-type(5) {
+  -webkit-animation-delay: 2.7272727273s;
+          animation-delay: 2.7272727273s;
+}
+body #wrap h1 span:nth-of-type(6) {
+  -webkit-animation-delay: 2.7727272727s;
+          animation-delay: 2.7727272727s;
+}
+body #wrap h1 span:nth-of-type(7) {
+  -webkit-animation-delay: 2.8181818182s;
+          animation-delay: 2.8181818182s;
+}
+body #wrap h1 span:nth-of-type(8) {
+  -webkit-animation-delay: 2.8636363636s;
+          animation-delay: 2.8636363636s;
+}
+body #wrap h1 span:nth-of-type(9) {
+  -webkit-animation-delay: 2.9090909091s;
+          animation-delay: 2.9090909091s;
+}
+body #wrap h1 span:nth-of-type(10) {
+  -webkit-animation-delay: 2.9545454545s;
+          animation-delay: 2.9545454545s;
+}

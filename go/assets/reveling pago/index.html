@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Revealing Form Fields Based on Radio Selection: Complete</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <h2 class="section-title">Payment Information</h2>
+  <form>
+    <div class="form-group">
+      <label for="rdoBankAccount">
+        <input type="radio" name="payment" id="rdoBankAccount" data-target="#bank-account" />
+        Bank Account
+      </label>
+    </div>
+    <div id="bank-account" class="payment-type">
+      <div class="form-group">
+        <label for="txtBankName">Bank Name</label><br/>
+        <input type="text" id="txtBankName" />
+      </div>
+      <div class="form-group">
+        <label for="txtBankNumber">Account Number</label><br/>
+        <input type="text" id="txtBankNumber" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="rdoCreditCard">
+        <input type="radio" name="payment" id="rdoCreditCard" data-target="#credit-card" />
+        Credit Card
+      </label>
+    </div>
+    <div id="credit-card" class="payment-type">
+      <div class="form-group">
+        <label for="txtNameOnCard">Name on Card</label><br/>
+        <input type="text" id="txtBankName" />
+      </div>
+      <div class="form-group">
+        <label for="txtCardNumber">Card Number</label><br/>
+        <input type="text" id="txtCardNumber" />
+      </div>
+    </div>
+  </form>
+</h2>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

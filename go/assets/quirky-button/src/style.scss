@@ -1,0 +1,134 @@
+body{
+  font-family: 'Inconsolata', monospace;
+  display:flex;
+  width:100vw;
+  height:100vh;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+    &:before{
+      content:'';
+      width:100px;
+      height:100px;
+      bottom:-100px;
+      position:absolute;
+      background:blue;
+      border-radius:100%;
+      left:50%;
+      transform:translateX(-50%);
+      transition:transform 1s ease-in-out;
+      transition-delay:0.75s;
+    }
+  &:after{
+    content:'Congration You Done It!';
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-100vh);
+    font-size:1.5em;
+    color:white;
+    z-index:2;
+    transition:transform 0.5s ease-in-out;
+    transition-delay:1s;
+  }
+  &.blue{
+    &:before{
+      transform:translateX(-50%) scale(50);
+    }
+    &:after{
+      transform:translateX(-50%) translateY(-50%);
+    }
+  }
+  a{
+    text-decoration:none;
+    width:auto;
+    height:auto;
+    font-size:2em;
+    padding:1em 2em;
+    background:white;
+    position:relative;
+    border: 3px solid blue;
+    color:blue;
+    transition-delay:0.3s;
+    transition-delay:0s, 0s, 0.5s;
+    &.clicked{
+      color:transparent;
+      transition:width 0.4s ease-in-out, border-radius 0.2s ease-in-out, transform 0.5s ease-in;
+      transition-delay:0s, 0s, 0.5s;
+      width:100px;
+      height:100px;
+      padding:0px;
+      border-radius:100%;
+      background-color:blue;
+      transform:translateY(1000%) scale(0.5);
+      &:hover{
+        color:transparent;
+        border-color:blue;
+        background-color:blue;
+      }
+      &:before{
+        opacity:0;
+      }
+      &:after{
+        opacity:0;
+      }
+    }
+    &:before, &:after{
+      z-index:-1;
+    }
+    &:before{
+      content:'';
+      position:absolute;
+      width:50%;
+      height:100%;
+      background:blue;
+      left:10%;
+      top:0;
+      transform:skewX(-25deg);
+      transition:transform 0.2s ease-in-out, top 0.2s ease-in-out, animation 0s ease-in-out;
+      transition-delay:0s, 0.2s, 0.4s;
+    }
+    &:after{
+      content:'';
+      position:absolute;
+      width:50%;
+      height:100%;
+      background:blue;
+      right:10%;
+      top:0;
+      transform:skewX(25deg);
+      transition:transform 0.2s ease-in-out, top 0.2s ease-in-out, animation 0s ease-in-out;
+      transition-delay:0s, 0.2s, 0.4s;
+    }
+    &:hover{
+      background:transparent;
+      border-color:white;
+      color:white;
+      z-index:4;
+      &:before, &:after{
+        box-shadow:0px 10px 0px -5px white, 0px 15px 0px -5px blue;
+        animation:shadows 1s ease-in-out 2;
+        @keyframes shadows{
+          0%{
+            box-shadow:0px 10px 0px -5px white, 0px 15px 0px -5px blue;
+          }
+          50%{
+            box-shadow:0px 10px 0px -5px white, 0px 45px 0px -35px blue;
+          }
+          100%{
+            box-shadow:0px 10px 0px -5px white, 0px 15px 0px -5px blue;
+          }
+        }
+      }
+      &:before{
+        transform:skewX(0deg) translateY(25%) scaleX(1.425);
+        top:-25%;
+      }
+      &:after{
+        transform:skewX(0deg) translateY(25%) scaleX(1.425);
+        top:-25%;
+      }
+    }
+  }
+}

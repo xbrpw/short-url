@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900);
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #022649;
+}
+body * {
+  color: #fff;
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 90%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+h4 {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: #29FF6A;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 4rem;
+  padding: 0 1rem;
+  font-weight: 700;
+  line-height: 2.5;
+  color: #022649;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #fff;
+  background-image: linear-gradient(#29FF6A, #29FF6A);
+  background-size: 0 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  transform: scale(1);
+  transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), background-size 0.25s;
+}
+.cta:hover, .cta:active, .cta:focus {
+  background-size: 100% 100%;
+  transform: scale(1.1);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  background-color: #fff;
+}
+.header * {
+  color: #022649;
+  line-height: 50px;
+}
+
+.branding,
+.header-menu {
+  position: relative;
+  display: block;
+}
+.branding a,
+.header-menu a {
+  display: block;
+  font-size: 1.1rem;
+}
+@media (max-width: 800px) {
+  .branding a,
+.header-menu a {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 480px) {
+  .branding a,
+.header-menu a {
+    font-size: 0.9rem;
+  }
+}
+
+.branding {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  float: left;
+  background-color: #29FF6A;
+  background-image: linear-gradient(#fff, #fff);
+  background-size: 0 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s;
+}
+.branding:hover, .branding:active, .branding:focus {
+  background-size: 100% 100%;
+}
+.branding a {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header-menu {
+  float: right;
+  padding-right: 1rem;
+}
+
+.header-menu .menu-item {
+  position: relative;
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+@media (max-width: 480px) {
+  .header-menu .menu-item {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+.header-menu .menu-item:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #29FF6A;
+  transition: left 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), width 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), height 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.header-menu .menu-item:hover:after, .header-menu .menu-item:active:after, .header-menu .menu-item:focus:after {
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  padding-top: 15%;
+  padding-right: 1rem;
+  padding-bottom: 30%;
+  padding-left: 1rem;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSJub25lIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMyMzQyNjEiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4="), linear-gradient(160deg, #022649, #1b3c5b);
+  background-size: 5px 5px, cover;
+}
+
+.hero .wrapper {
+  max-width: 70rem;
+}
+
+.hero-left {
+  width: 60%;
+  padding-right: 1rem;
+}
+
+.hero-right {
+  width: 40%;
+  padding-left: 1rem;
+}
+
+.hero-left,
+.hero-right {
+  position: relative;
+  float: left;
+}
+@media (max-width: 800px) {
+  .hero-left,
+.hero-right {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 15rem;
+  margin: 0 auto;
+  -webkit-animation: floating 5s -1s infinite;
+          animation: floating 5s -1s infinite;
+}
+@media (max-width: 800px) {
+  .hero-image {
+    max-width: 8rem;
+  }
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+@-webkit-keyframes floating {
+  0%, 100% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+.hero-overlay {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-overlay svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.content .wrapper {
+  max-width: 50rem;
+  padding-top: 5%;
+}
+
+.content-box {
+  margin-bottom: 8rem;
+}
+
+.box-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 800px) {
+  .box-header {
+    text-align: center;
+  }
+}
+.box-header:before {
+  position: relative;
+  display: block;
+  float: left;
+  padding-right: 0.5rem;
+  font-size: 5.5rem;
+  line-height: 0.9;
+  font-weight: 400;
+  color: #29FF6A;
+}
+@media (max-width: 800px) {
+  .box-header:before {
+    padding-bottom: 1rem;
+    float: none;
+    width: 100%;
+  }
+}
+
+body {
+  counter-reset: countArticles;
+}
+
+.box-header {
+  counter-increment: countArticles;
+}
+
+.box-header:before {
+  content: counter(countArticles, decimal-leading-zero);
+}

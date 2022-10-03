@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Neon text and Buttons</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="buttons">
+        <button onClick="colorChange(colors[0][0],colors[0][1] )">Verde</button>
+        <button onClick="colorChange(colors[2][0], colors[2][1])">Rosa</button>
+        <button onClick="colorChange(colors[1][0], colors[1][1])">Azul</button>
+    </div>
+    <div id="typedStrings">
+        <p>hi hello, mundo!</p>
+        <p>con todo mi <a href="/index.html" target="_blank"><i class='fa fa-heart'></i></a></p>
+    </div>
+    <span id="span"></span>
+    <p>Con <i class="fa fa-heart"></i> de mi para ti</p>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js'></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+.logo {
+    position: fixed;
+    top: 100px;
+    right: 45px;
+    display: block;
+    z-index: 100;
+    transition: all 250ms linear;
+}
+
+
+/* mini */
+
+@media (max-width:300px) {
+    .logo {
+        display: none!important
+    }
+}
+
+.a-up {}
+
+.a-up.lift {
+    xborder: 1px solid whitesmoke;
+    transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    /* easeInOutBack */
+    ;
+}
+
+.a-up.lift:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    /* and empty box makes a shadow */
+    height: 2px;
+    width: 30%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4);
+    transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.a-up.lift:hover {
+    color: white;
+    transform: translateY(-5px);
+}
+
+.a-up.lift:hover:after {
+    bottom: -5px;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.heartbeat {
+    color: #e80d2e;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px white, 0 0 5px rgb(197, 155, 160);
+    animation: heartbeat 36s infinite;
+}
+
+.heartbeat:hover {
+    color: #017db0;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px white, 0 0 5px rgb(177, 227, 240);
+    animation: heartbeat 36s infinite;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:after {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Titulares</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,600,700'>
+    <link rel="stylesheet" href="./encabezados-titulares.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <section>
+        <aside class="cta-block card1">
+            <a class="cta-link " href="#">
+                <span class="cta-line1" style="color: #ffffff;">No importa dónde estés, siempre sentiré tu Ki</span>
+                <span class="cta-line2" style=" text-shadow: 2px 2px 5px #000000">Frases de Goku</span>
+                <span class="cta-line3" style="color: #092635;   font-size: 22px; font-weight: 800; "><b>¡VER MÁS FRASES!</b></span>
+            </a>
+        </aside>
+
+        <aside class="cta-block card3 ">
+            <a class="cta-link " href="/404 ">
+                <span class="cta-line1 ">We'll get you moving</span>
+                <span class="cta-line2 ">Let's Get Started</span>
+                <span class="cta-line3 ">Register Now</span>
+            </a>
+        </aside>
+
+        <aside class="cta-block card4 ">
+            <a class="cta-link " href="/404 ">
+                <span class="cta-line1 ">We'll get you moving</span>
+                <span class="cta-line2 ">Let's Get Started</span>
+                <span class="cta-line3 ">30 day free trial</span>
+            </a>
+        </aside>
+
+        <aside class="cta-block card5 ">
+            <a class="cta-link " href="/404 ">
+                <span class="cta-line1 ">We'll get you moving</span>
+                <span class="cta-line2 ">Let's Get Started</span>
+                <span class="cta-line3 ">$10 credit when you sign up</span>
+            </a>
+        </aside>
+
+        <aside class="cta-block card2 ">
+            <a class="cta-link " href="/404 ">
+                <span class="cta-line1 ">We'll get you moving</span>
+                <span class="cta-line2 ">Let's Get Started</span>
+                <span class="cta-line3 ">Open 24/7!</span>
+            </a>
+        </aside>
+
+        <aside class="cta-block card6 ">
+            <a class="cta-link " href="/404 ">
+                <span class="cta-line1 ">We'll get you moving</span>
+                <span class="cta-line2 ">Let's Get Started</span>
+                <span class="cta-line3 ">Download the free packing guide</span>
+            </a>
+        </aside>
+
+    </section>
+    <!-- partial -->
+    <script src="./encabezados-titulares.js "></script>
+    <!-- Logo -->
+    <link rel="icon" href="https://luisemoji.github.io/img/favicon.svg " type="image/x-icon" sizes="192x192 " />
+    <link rel="stylesheet" href="../css/logo.css">
+    <img src="../img/emoji.svg " alt="@luisemoji " class="logo lift a-up " height="35px;" width="35px;" onclick="document.location='../index.html'">
+    <center>
+        <br><br><br>
+        <div onclick="typeWriter() " style="  color: #323b3f;">
+            Hecho con
+            <span class="heartbeat">❤</span> y mucho código
+            <small>    <a id="powered " href="https://luisangelmaciel.github.io/ " class=" lift a-up "> </a> </small> <br><br><br>
+        </div>
+    </center>
+
+    <script>
+        var i = 0;
+        var txt = 'designer luisangel.maciel';
+        var speed = 65;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("powered ").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+</body>
+
+</html>

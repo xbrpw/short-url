@@ -1,0 +1,276 @@
+@charset "UTF-8";
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at center, #a1dbff 33%, #49b3d7 99%);
+}
+
+body {
+  padding: 2rem;
+  height: 100%;
+}
+
+.titles {
+  font-size: 24px;
+  display: block;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+h1:before {
+  content: attr(data-heading);
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  display: inline-block;
+}
+
+.butterfly:before {
+  filter: hue-rotate(60deg);
+}
+
+.poop-coloured {
+  filter: hue-rotate(270deg);
+}
+.poop-coloured:before {
+  filter: hue-rotate(180deg);
+}
+
+.fenders-heart:before {
+  -webkit-clip-path: polygon(32% 0%, 100% 70%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(32% 0%, 100% 70%, 100% 100%, 0 100%, 0 0);
+  width: auto;
+}
+
+.star-heart:before {
+  width: auto;
+  -webkit-clip-path: polygon(50% 22%, 56% 38%, 72% 38%, 58% 48%, 64% 65%, 50% 55%, 37% 65%, 42% 48%, 29% 38%, 44% 38%);
+          clip-path: polygon(50% 22%, 56% 38%, 72% 38%, 58% 48%, 64% 65%, 50% 55%, 37% 65%, 42% 48%, 29% 38%, 44% 38%);
+}
+
+.unicorn:before {
+  width: auto;
+  -webkit-clip-path: polygon(0 0, 0 90%, 48% 0);
+          clip-path: polygon(0 0, 0 90%, 48% 0);
+}
+
+.floatyman:before {
+  width: auto;
+  transform: translate(34%, -32%);
+}
+
+.gentlemen:before {
+  width: auto;
+  transform: scale(0.8) translate(0, -65%);
+}
+
+.skeptical:before {
+  width: 100%;
+  height: 52%;
+  transform: translateY(-2px);
+}
+
+.masked-face {
+  font-size: 80px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-size: 60px;
+}
+.masked-face:before {
+  content: "😈";
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  display: inline-block;
+  width: 100%;
+  height: 56%;
+  display: inline-block;
+  filter: hue-rotate(80deg);
+}
+.masked-face.small:before {
+  transform: scale(1.03);
+}
+
+.animal-kingdom {
+  font-size: 80px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-size: 60px;
+}
+.animal-kingdom:before {
+  content: "🤴";
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  display: inline-block;
+  width: 100%;
+  height: 40%;
+  display: inline-block;
+  transform: translate(0, -25%);
+}
+.animal-kingdom.poop-king:before {
+  transform: translate(0, 0%);
+}
+
+.cool-animals {
+  font-size: 80px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-size: 60px;
+}
+.cool-animals:before {
+  content: "🕶";
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transform: translate(0, 10%) scale(0.9);
+}
+.cool-animals.lion:before, .cool-animals.monkey:before, .cool-animals.pig:before {
+  transform: translate(0, 0%) scale(0.9);
+}
+.cool-animals.mr-poop:before {
+  transform: translate(0, 7%) scale(0.8);
+}
+
+.poop {
+  margin: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-size: 60px;
+}
+.poop:before {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  display: inline-block;
+}
+
+.gentlemen-poop:before {
+  transform: scale(0.4) translate(25%, -80%) rotate(15deg);
+}
+
+.smart-poop:before {
+  content: "👓";
+  height: 100%;
+  transform: translate(0, 7%) scale(0.9);
+  mix-blend-mode: darken;
+}
+
+.holiday-poop:before {
+  content: "🌺";
+  height: 100%;
+  transform: translate(-15%, -25%) scale(0.3);
+}
+
+.hot-poop:before {
+  content: "🔥";
+  height: 100%;
+  transform: translate(0, -45%) scale(0.5);
+}
+
+.cowboy-poop:before {
+  content: "🤠";
+  height: 28%;
+  transform: translate(0, 24%) scale(1);
+}
+
+.dev-poop:before {
+  content: "👩‍💻";
+  transform: translate(0, 3%) scale(1);
+  -webkit-clip-path: polygon(17% 50%, 86% 50%, 85% 100%, 17% 100%);
+          clip-path: polygon(17% 50%, 86% 50%, 85% 100%, 17% 100%);
+}
+
+.sparkles-poop:before {
+  content: "✨";
+  transform: translate(5%, -20%) scale(0.4);
+}
+
+.english-poop:before {
+  content: "💂";
+  height: 51%;
+  transform: translate(-2%, -30%) scale(1);
+}
+
+.santa-poop:before {
+  content: "🎅";
+  height: 31%;
+  transform: translate(-2%, 20%) scale(0.8, 1);
+}
+
+.poopnado:before {
+  content: "💩";
+  transform: rotate(20deg) scale(0.5);
+}
+.poopnado:after {
+  content: "💩";
+  transform: rotate(-30deg) scale(0.3) translate(160%, -60%);
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  display: inline-block;
+}
+
+.spidey {
+  margin: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  font-size: 60px;
+  margin: 0 20px 0 0;
+}
+.spidey:before {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  display: inline-block;
+}
+
+.spidey-notwet:before {
+  content: "☔️";
+  transform: translate(19%, -39%) rotate(17deg);
+  mix-blend-mode: darken;
+}
+
+.spidey-ohno:before {
+  content: "🕷";
+  transform: translate(20%, -20%) rotate(-20deg) scale(0.4);
+}
+
+.spidey-ohno-uber:before {
+  content: "🕷";
+  transform: translate(5%, -20%) rotate(-50deg) scale(0.35);
+}

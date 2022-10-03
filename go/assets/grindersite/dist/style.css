@@ -1,0 +1,981 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  background: #101010;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#container {
+  width: 960px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+#description {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px 0 0 50px;
+  width: 535px;
+}
+
+#description h1 {
+    font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+    font-size: 76px;
+    font-weight: 800;
+    line-height: 100%;
+    padding-top: 0;
+    margin-top: 0;
+    color: #222;
+    text-shadow: 0px 0px 2px #000;
+    display: table-cell;
+    filter: blur(0px);
+    color: #fff;
+    text-shadow: 0px 0px 10px #00b3ff,
+      0px 0px 20px #00b3ff,
+      0px 0px 40px #00b3ff,
+      0px 0px 80px #00b3ff,
+      0px 0px 120px #00b3ff;
+  
+}
+
+
+.content {
+  padding: 10px 25px 20px;
+  background: rgba(60, 102, 227,.5);
+  border-radius: 15px;
+  margin: 25px 0;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color 0.5s ease
+
+  box-shadow: 25px 25px 25px 25px rgba(0, 0, 0, .2);
+
+}
+
+.content p {
+   padding: 5px 0 10px;
+   margin: 0;
+}
+
+.content h3 {
+   padding: 10px 0;
+   margin: 0;
+    text-shadow: 0px 0px 10px #00b3ff,
+      0px 0px 20px #00b3ff,
+      0px 0px 40px #00b3ff,
+      0px 0px 80px #00b3ff,
+      0px 0px 120px #00b3ff;
+}
+
+a.content {
+  display: block;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(60, 102, 227,.3);
+  transition: 0.5s ease
+}
+
+a.content:hover {
+  background: rgba(60, 102, 227,.6);
+  /* background: rgba(255, 255, 255,.4);
+  
+   box-shadow:
+    inset 60px 0 120px #f0f, 
+    inset -60px 0 120px #0ff; /* right cyan */
+}
+
+a.content span {
+  display: inline-block;
+  padding; 5px;
+  background: rgba(255, 255, 255,.2);
+  border-radius: 4px;
+}
+
+#side-tray {
+  margin: 0 auto;
+  width: 375px;
+  height: 812px;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #202020;
+  background-image: url(https://assets.codepen.io/3508410/menu.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#screen {
+  margin: 0;
+  width: 381px;
+  height: 818px;
+  position: relative;
+}
+
+.screenInner {
+  margin: 0;
+  width: 375px;
+  height: 812px;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #202020;
+  z-index: 5;
+  border: 3px solid rgba(0,0,0,.2);
+  border-radius: 2px;
+}
+
+#cascade {
+  margin: 0 auto;
+  width: 375px;
+  height: 812px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #202020;
+}
+
+#menu {
+  width: 375px;
+  height: 132px;
+  background-image: url(https://assets.codepen.io/3508410/IMG_246FB8BF0711-1.jpeg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+#tab-toggle {
+  width: 206px;
+  height: 90px;
+  position: absolute;
+  top: 230px;
+  background-color: #202020;
+  padding-left: 80px;
+}
+
+#tab-toggle a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #eee;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;    
+  background: #4a4a4e;
+  color: white;
+  padding: 8px 30px;
+  border: none;
+  margin: 0;
+}
+
+
+#tab-toggle a.active { 
+  background: #ffcc00;
+  color: #000;
+}
+
+#button-classic {
+  border-radius: 5px 0 0 5px;
+}
+#button-shuffle {
+  border-radius: 0 5px 5px 0;
+}
+
+#btn-shuffle {
+  background: #ffcc00;
+  color: #000;
+  border-radius:200px;
+  padding: 8px 30px;
+  font-family: 'Abel', sans-serif;
+  display: block;
+  position: absolute;
+}
+
+#bottom-bar {
+  width: 375px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  margin-left: 0;
+  bottom: 0;
+  z-index: 9;
+  background-image: url('https://assets.codepen.io/3508410/Bottom+Navigation+Bar.png');
+  background-size: 100%;
+}
+
+
+
+#grid-container {
+  width: 100%;
+  float: left;
+  padding: 0 2px 50px;
+  position: absolute;
+  top: 131px;
+  background-size: 100%;
+}
+
+.square {
+  width: 122px;
+  height: 122px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 1px;
+  background-color: #222;
+  float: left;
+  z-index:0;
+  position: relative;
+}
+
+.square:hover {
+  width: 122px;
+  height: 122px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 1px;
+  background-color: #222;
+  float: left;
+  position: relative;
+  z-index:1;
+  cursor: pointer;
+
+  transform: scale(1.025);
+  transition: all .25s linear;
+}
+
+.square.anon {
+  background-image: url("https://assets.codepen.io/3508410/anon.png") !important;
+}
+
+.square.big-left {
+  width: 246px;
+  height: 246px;
+}
+
+.square.big-right {
+  width: 246px;
+  height: 246px;
+  float: right;
+  margin-right: 4px;
+}
+
+.square.big-super {
+  width: 370px;
+  height: 370px;
+}
+
+.square.big-right:hover {
+ transform: scale(1);
+}
+
+.square.anon:hover {
+ transform: scale(1);
+}
+
+.square.big-left:hover {
+ transform: scale(1);
+}
+
+.square.big-super:hover {
+ transform: scale(1);
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.500437675070028) 0%, rgba(0,0,0,0) 30%);
+}
+
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -moz-box-shadow:    inset 0 0 15px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+  box-shadow:         inset 0 0 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+.sparkle {
+  display:  none;
+}
+.recommend {
+  display:  none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000;
+  width: auto;
+  text-align: left;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+  background:  #ffcc00;
+  padding: 2px 8px;
+  border-radius: 15px;
+}
+
+
+.big-left .recommend {
+  display: inline-block;
+}
+.big-right .recommend {
+  display: inline-block;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #eee;
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  bottom: 3px;
+  left: 6px;
+  z-index: 1;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+.name::before {
+  content: '';
+  display: none;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border: solid 1px #ddd;
+  border-radius: 100%;
+}
+
+.square.online .name::before {
+  display: inline-block;
+  background-color: #08FF00;
+  border: none;
+  width: 8px;
+  height: 8px;
+  margin-bottom: 1px;
+}
+
+.ad {
+  width: 100%;
+  padding: 35px;
+  float: left;
+}
+
+.advert {
+  width: 300px;
+  height: 250px;
+  margin:; 0 auto;
+}
+
+#grid-profile {
+  position: absolute;
+  top: 0;
+  left: 375px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: 500ms;
+}
+
+.profile-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #777;
+  background-image: url(https://assets.codepen.io/3508410/74.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+.profile-container .recommend {
+  display: none;
+}
+
+.profile-container.rec .recommend {
+  display: inline-block;
+  margin: auto;
+  top: 85px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  left: 30px;
+}
+
+#grid-profile.show {
+  left: 0;
+}
+
+#grid-profile.show + #bottom-bar {
+  display: none;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 37px 17px;
+  height: 30px;
+  width: 100%;
+  z-index: 11;
+  box-sizing: border-box;
+} 
+
+.profile-menu-back {
+  position: absolute;
+  display: inline-block;
+  top: 37px;
+  left: 17px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://assets.codepen.io/3508410/left-arrow.svg);
+}
+
+.profile-menu-back a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.profile-menu-block {
+  position: absolute;
+  display: inline-block;
+  top: 37px;
+  right: 70px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://assets.codepen.io/3508410/block.svg);
+}
+.profile-menu-fav {
+  position: absolute;
+  display: inline-block;
+  top: 37px;
+  right: 17px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://assets.codepen.io/3508410/fave-star-off-profile.svg);
+}
+
+.profile-info {
+  margin-top: 700px;
+  padding: 40px 17px;
+  background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 57%, rgba(0,0,0,0.5606836484593838) 83%, rgba(0,0,0,0) 100%);
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #fff;
+  text-align: left;
+  z-index: 1;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+.profile-online {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #fff;
+  text-align: left;
+  z-index: 1;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+.profile-online {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #fff;
+  text-align: left;
+  z-index: 1;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+
+.profile-distance {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+  text-align: left;
+  z-index: 1;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+.profile-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #eee;
+  width: 100%;
+  text-align: left;
+  z-index: 1;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+
+.profile-about {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #eee;
+  width: 100%;
+  text-align: left;
+  z-index: 1;
+  display: block;
+  padding: 20px 0;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+.profile-field {
+  width: 100%;
+  height: 20px;
+  padding: 10px 0;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+}
+
+.profile-field-name {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+  color: #aaa;
+  padding-right: 30px;
+  text-align: left;
+  display: block;
+  position: absolute;
+  left: 0;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+.profile-field-value {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  text-align: left;
+  position: absolute;
+  left: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
+}
+
+.pulse {
+    animation-name: pulse_animation;
+    animation-duration: 5000ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes pulse_animation {
+    0% { transform: scale(1); box-shadow: inset 0 0 80px rgba(0,0,0,0.0);}
+    30% { transform: scale(1); box-shadow: inset 0 0 80px rgba(0,0,0,0.0);}
+    40% { transform: scale(.975); box-shadow: inset 0 0 80px rgba(0,0,0,0.5);}
+    50% { transform: scale(1); box-shadow: inset 0 0 80px rgba(0,0,0,0.0);}
+    60% { transform: scale(1); box-shadow: inset 0 0 80px rgba(0,0,0,0.0);}
+    70% { transform: scale(.980); box-shadow: inset 0 0 80px rgba(0,0,0,0.6);}
+    80% { transform: scale(1); box-shadow: inset 0 0 80px rgba(0,0,0,0.0);}
+    100% { transform: scale(1); box-shadow: inset 0 0 80px rgba(0,0,0,0.0);}
+}
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+.card {
+  background: #191c29;
+  padding: 0px;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  z-index: 2;
+  color: rgb(88 199 250 / 0%);
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: 0;
+    top: -1%;
+    left: -2%;
+    animation: spin 4s linear infinite;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 8);
+  left: -10%;
+  right: 0;
+  z-index: 0;
+  height: 110%;
+  width: 120%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 5));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+
+
+.particle-network-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom,#091133,#000);
+}
+.particle-network-animation::before {
+  z-index: -2;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+}

@@ -1,0 +1,91 @@
+body {
+  overflow-x: hidden;
+}
+
+.w-container {
+  max-width: 1100px;
+}
+
+/*
+	.w-container.container-work {
+		max-width: 960px;
+	}
+*/
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+.no-bg {
+  background-color: transparent !important;
+  background-image: none !important;
+  overflow: hidden !important;
+}
+
+.backgrounds > div {
+  transform: scale(1.03);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+.next-prev-container div {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+.project-thumb {
+  -webkit-backface-visibility: hidden;
+}
+
+</style>
+<style>
+/* Base */
+
+#awwwards {
+  position: absolute;
+  bottom: 20px;
+  width: 90px;
+  height: 135px;
+  text-indent: -666em;
+  overflow: hidden;
+  z-index: 999;
+
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#awwwards.top {
+  top: 0;
+}
+#awwwards.left {
+  left: 0;
+}
+#awwwards.right {
+  right: 0;
+}
+
+#awwwards a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 90px;
+  height: 135px;
+  background-repeat: no-repeat;
+  background-size: 90px 135px;
+}
+
+/* HONORABLE */
+
+#awwwards.sotd.white.right a {
+  background-image: url(https://s30.postimg.org/42v5ue5nh/awwwards_sotd_white_right.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  #awwwards.sotd.white.right a {
+    background-image: url(https://s30.postimg.org/4453nt7h9/awwwards_sotd_white_right_2x.png);
+  }
+}

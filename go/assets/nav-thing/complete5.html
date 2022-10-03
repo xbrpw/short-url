@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nav Thing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+        * {
+            transition: 0.33s ease;
+        }
+        
+        body {
+            background-color: #e4e9e9;
+            font-family: "Raleway";
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 300;
+            letter-spacing: 4px;
+        }
+        
+        .abs-center {
+            position: absolute;
+            width: 85%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .bar-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 85px;
+            overflow: hidden;
+        }
+        
+        .button-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 85px;
+        }
+        
+        .bar-button {
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 20%;
+            box-sizing: border-box;
+            color: #999;
+            background-color: #222;
+            font-size: 20px;
+            line-height: 85px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.33s ease;
+            text-decoration: none;
+            border-right: 1px solid #555;
+        }
+        
+        .bar-button:last-child {
+            border-right: none;
+        }
+        
+        .bar-button:hover {
+            background-color: #555;
+            color: #fff;
+        }
+        
+        .white-bar {
+            position: absolute;
+            bottom: 0;
+            width: 33.333333%;
+            height: 3px;
+            left: -33.333333%;
+            background-color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="bar-container ">
+        <div class="button-container ">
+            <a class="bar-button one " href=" ">Button</a>
+            <a class="bar-button two " href=" ">Button</a>
+            <a class="bar-button three " href=" ">Button</a>
+            <a class="bar-button four " href=" ">Button</a>
+            <a class="bar-button five " href=" ">Button</a>
+        </div>
+        <div class="white-bar "></div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $(document).ready(function() {
+
+            // Function for nav bar
+            // It sets the size of the hovered link and the links around it
+            // It also moves the white-bar around.
+            $('.bar-button').hover(function() {
+                $('.bar-button').css('width', '16.66666%');
+                $(this).css('width', '33.33333%');
+                if ($(this).hasClass('one')) {
+                    $('.white-bar').css('left', '0%')
+                } else if ($(this).hasClass('two')) {
+                    $('.white-bar').css('left', '16.66666%')
+                } else if ($(this).hasClass('three')) {
+                    $('.white-bar').css('left', '33.33333%')
+                } else if ($(this).hasClass('four')) {
+                    $('.white-bar').css('left', '50%')
+                } else if ($(this).hasClass('five')) {
+                    $('.white-bar').css('left', '66.666666%')
+                };
+            }, function() {
+                $('.white-bar').css('left', '-33.333333%');
+                $('.bar-button').css('width', '20%');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

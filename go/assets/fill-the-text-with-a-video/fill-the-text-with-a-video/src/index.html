@@ -1,0 +1,54 @@
+<svg viewBox="0 0 600 300" class="svg-defs">
+
+  <!-- Symbol with text -->
+  <symbol id="s-text">
+    <text text-anchor="middle"
+          x="50%"
+          y="50%"
+          dy=".35em"
+          class="text"
+          >
+      Text
+    </text>    
+  </symbol>
+
+  <!-- Mask with text -->
+  <mask id="m-text"
+        maskunits="userSpaceOnUse"
+        maskcontentunits="userSpaceOnUse">
+
+    <rect
+          width="100%"
+          height="100%"
+          class="mask__shape">
+    </rect>
+    <use xlink:href="#s-text"
+         class="mask__text"
+         ></use>
+
+  </mask>
+</svg>
+
+<div class="box-with-text">
+
+  <!-- Container for video -->
+  <div class="text-fill">
+    <video 
+           class="video" src="https://tympanus.net/codrops-playground/assets/images/posts/23145/bokeh2.mp4"
+           autoplay loop
+           ></video>
+  </div>
+
+  <!-- Visible SVG -->
+  <svg viewBox="0 0 600 300"
+       class="svg-inverted-mask">
+    <rect
+          width="100%"
+          height="100%"
+          mask="url(#m-text)"
+          class="shape--fill"/>
+    <use xlink:href="#s-text"
+         class="text--transparent"
+         ></use>
+  </svg> 
+</div>

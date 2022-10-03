@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#text{
+	display: none;
+}
+#display{
+	font-family: "PT Mono";
+	font-size: 20vmin;
+	text-align: center;
+	height: 100vh;
+	line-height: 100vh;
+	cursor: pointer;
+}
+.red{
+	color: red;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Viaje, vámonos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylw.cs">
+  <style>body {
+    position: relative;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace, monospace;  
+    
+    user-select: none;
+  }
+  
+  #line1 *,
+  #line2 * {
+    opacity: 0;
+    animation: show 1s linear 1, hide 1s linear 1;
+    animation-fill-mode: forwards;
+  }
+  
+  #line3 * {
+    opacity: 0;
+    animation: show 1s linear 1;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  @keyframes show {
+    100% { opacity: 1; }
+  }
+  
+  @keyframes hide {
+    100% { opacity: 0; }
+  }
+  
+  #line1 span {
+    animation-delay: 1s, 8.5s;
+  }
+  
+  #line1 strong {
+    animation-delay: 2.5s, 8.5s;
+  }
+  
+  #line2 span {
+    animation-delay: 4.5s, 8.5s;
+  }
+  
+  #line2 strong {
+    animation-delay: 6s, 8.5s;
+  }
+  
+  #line3 span {
+    animation-delay: 10s;
+  }
+  
+  #line3 strong {
+    animation-delay: 12.5s;
+  /*   text-decoration: underline; */
+  }
+  
+  @keyframes animateLang {
+    0%, 5% { opacity: 0; transform: translate(0, 0); }
+    10%, 42.5% { opacity: 1; transform: translate(0, 0); }
+    47.5%, 50% { opacity: 1; transform: translate(3ch, 16vw); }
+    55%, 100% { opacity: 0; transform: translate(3ch, 16vw); }
+  }
+  
+  #line1 #lang {
+    display: inline-block;
+    position: relative;
+    animation: animateLang 20s 1 linear;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes animateProg {
+    0%, 22.5% { opacity: 0; transform: translate(0, 0); }
+    27.5%, 42.5% { opacity: 1; transform: translate(0, 0); }
+    47.5%, 50% { opacity: 1; transform: translate(-10ch, 8vw); }
+    55%, 100% { opacity: 0; transform: translate(-10ch, 8vw); }
+  }
+  
+  #line2 #prog {
+    display: inline-block;
+    position: relative;
+    animation: animateProg 20s 1 linear;
+    animation-fill-mode: forwards;
+  }</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+  <div id="line1">
+    <span>Vámonos de viaje</span> <span id="lang">Acapulco</span><span></span> 
+    <strong>el 31  abril</strong>
+  </div>
+  <div id="line2">
+    <span>Vámonos de viaje</span> <span id="prog">Tepozspa</span> <span></span>
+    <strong>el 29 febrero</strong>
+  </div>
+  <div id="line3">
+    <span>Xiiber</span>
+    <strong>Vámonos de viaje</strong>
+  </div>
+</main>
+<!-- partial -->
+<template>
+  <main>
+    <div id="line1">
+      <span>Is HTML a computer</span> <span id="lang">language</span><span>?</span> 
+      <strong>Yes.</strong>
+    </div>
+    <div id="line2">
+      <span>Do people purposely</span> <span id="prog">program</span> <span>in HTML?</span>
+      <strong>Yes.</strong>
+    </div>
+    <div id="line3">
+      <span>Is HTML a programming language?</span>
+      <strong>Yes.</strong>
+    </div>
+  </main>
+  </template>
+  
+</body>
+</html>

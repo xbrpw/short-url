@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito:900'>
+    <link rel="stylesheet" href="css/como-estas.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div id="app-cover">
+        <h1>¿Cómo estás hoy?</h1>
+        <div id="app">
+            <div class="mood" id="mood-great">
+                <div class="face">
+                    <div class="eyes-cover">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="mood-name"><span>genial</span></div>
+            </div>
+            <div class="mood" id="mood-okay">
+                <div class="face">
+                    <div class="eyes-cover">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="mood-name"><span>bien</span></div>
+            </div>
+            <div class="mood" id="mood-bad">
+                <div class="face">
+                    <div class="eyes-cover">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="mood-name"><span>mal</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/como-estas.js"></script>
+    <!-- Logo -->
+    <link rel="icon" href="https://luisemoji.github.io/img/favicon.svg " type="image/x-icon" sizes="192x192 " />
+    <link rel="stylesheet" href="../css/logo.css">
+    <img src="../img/emoji.svg " alt="@luisemoji " class="logo lift a-up " height="35px;" width="35px;" onclick="typeWriter() ">
+    <center><br><br><br>
+        <div style="  color: #323b3f;" id="powered " onclick="document.location='../index.html'"></div>
+    </center>
+
+    <script>
+        var i = 0;
+        var txt = 'hecho con ❤ por luisangelmaciel';
+        var speed = 65;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("powered ").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+</body>
+
+</html>

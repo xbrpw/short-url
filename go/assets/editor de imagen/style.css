@@ -1,0 +1,52 @@
+html {
+  background-color:#18191D;
+  color:#5A4F7d;
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+  border-radius: 28px;
+  margin-left:320px;
+  margin-right: 320px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color :black;
+   background-color: #544a7d;
+  background: linear-gradient(to right, #544a7d, #ffd452)/*
+    background: linear-gradient(to right, #f12711, #f5af19)*/
+  
+}
+body {
+  text-align: center;
+}
+#dim{
+  font-size: 18px;
+  font-weight: bold;
+  color: #544a7d,
+}
+div input {
+  padding : 5px;
+  margin-top : 5px;
+  margin-bottom : 5px;
+  margin-left: 5px;
+  margin-right : 5px; 
+  border-color: #ffd452;
+  color : #C0C0C0;
+}
+input{
+  font-size: 16px;
+  font-weight: bold;
+  background: none;
+}
+#imput{
+    border-color: #ffd452;
+    opacity : 0.8 ;
+    color: #ffd452;
+}
+
+
+
+canvas {
+  border: 2px solid #ffd452;
+  
+}

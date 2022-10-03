@@ -1,0 +1,17 @@
+div,
+canvas {
+    position: absolute;
+}
+
+canvas {
+    left: 154px;
+    top: 87px;
+}
+
+div {
+    width: 296px;
+    height: 240px;
+    background: url("https://luisemoji.github.io/img/rainbowVomit_copy.png");
+    position: relative;
+    margin: 20px auto;
+}

@@ -1,0 +1,160 @@
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+<style>
+    a,
+    a:focus,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .btn,
+    .btn:hover,
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus {
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #fff;
+        text-shadow: none;
+        outline: none;
+    }
+    
+    .quote {
+        font-size: 36px;
+        font-weight: 600;
+    }
+    
+    .site-wrapper {
+        display: table;
+        width: 100%;
+        height: 100%;
+        /* For at least Firefox */
+        min-height: 100%;
+        -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+    }
+    
+    .site-wrapper-inner {
+        display: table-cell;
+        vertical-align: top;
+    }
+    
+    .cover-container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .inner {
+        padding: 30px;
+    }
+    
+    .cover {
+        padding: 0 20px;
+    }
+    
+    .cover .btn-lg {
+        padding: 10px 20px;
+        font-weight: bold;
+    }
+    
+    @media (min-width: 768px) {
+        .site-wrapper-inner {
+            vertical-align: middle;
+        }
+        .cover-container {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .cover-container {
+            width: 700px;
+        }
+    }
+</style>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="inner cover">
+                <p class="cover-heading quote">¡Hola, <br/>soy Goku!</p>
+                <p class="lead character"> <img src="https://hihello.monster/favicon.png"></p>
+
+                <p class="lead">
+                    <button class="btn btn-lg btn-default btn-force" title="かめはめ波">¡Kame hame ha! </button>
+                    <a class="twitter">
+                        <button class="btn btn-lg btn-default btn-tweet">Tweetealo</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src="./scrip.js"></script>
+<script>
+    (function() {
+        var generateQuote, quotes, said, speaker;
+
+        speaker = '';
+
+        said = '';
+
+        quotes = [{
+            quote: "Ni tú, ni yo ni nadie golpea tan fuerte como la vida. Pero no importa qué tan duro lo hagas. Importa lo duro que resistas",
+            character: "Goku",
+        }, {
+            quote: "Because he's holding a thermal detonator!",
+            character: "Goku",
+        }, {
+            quote: "Ya estoy satisfecho. Tu orgullo está hecho pedazos, retaste y perdiste contra un peleador superior a ti y lo peor de todo es que solo es un mono",
+            character: "Goku",
+        }, {
+            quote: "Prefiero ser un mono descerebrado que un monstruo sin corazón.",
+            character: "Goku",
+        }, {
+            quote: "Parece ser que solo me quieren a mí. Si es así, es exactamente a quien tendrán.",
+            character: "Goku",
+        }, {
+            quote: "Tus niveles de energía disminuyen con cada golpe, de hecho, ya no eres un reto para mí. No sería justo seguir peleando contigo.",
+            character: "Goku",
+        }, {
+            quote: "No tiene sentido seguir peleando contigo, tienes demasiado miedo y vergüenza. Vive con ese temor. Que se quede encerrado contigo en silencio. Adiós Freezer, nunca hagas el mal de nuevo, ojalá vivas el resto de tu vida en paz.",
+            character: "Goku",
+        }, {
+            quote: "Tengo familia propia ahora que atender, dos niños y una esposa. Una muy iracunda esposa que debe querer matarme ahora.",
+            character: "Goku",
+        }, {
+            quote: "I find your lack of faith disturbing.",
+            character: "Goku",
+        }, {
+            quote: "Once you start down the dark path, forever will it dominate your destiny.",
+            character: "Goku",
+        }];
+
+        generateQuote = function() {
+            var randomQuote;
+            randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            if (randomQuote.quote.length + randomQuote.character.length > 97) {
+                return generateQuote();
+            } else {
+                $('.quote').text(randomQuote.quote);
+                $('.character').text(randomQuote.character);
+                said = randomQuote.quote.split(' ').join('%20');
+                return speaker = randomQuote.character.split(' ').join('%20');
+            }
+        };
+
+        $(document).ready(function() {
+            $('.btn-tweet').hide();
+            return $('.btn-force').on('click', function() {
+                generateQuote();
+                $('.twitter').attr('href', 'https://twitter.com/intent/tweet?text=' + speaker + '%20said,%20"' + said + '"%20%23DragonBall%20https://goo.gl/MOxWg1').attr('target', '_blank');
+                return $('.btn-tweet').show();
+            });
+        });
+
+    }).call(this);
+</script>

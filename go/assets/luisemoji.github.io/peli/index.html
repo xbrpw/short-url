@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Popcorn </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://luisangelmaciel.github.io/css/w3.css">
+    <style>
+        /* small */
+        
+        @media (max-width:600px) {
+            .susan-storm-small {
+                display: none!important
+            }
+            .iframe {
+                width: 310;
+                height: 175;
+            }
+        }
+        /* medium */
+        
+        @media (max-width:992px) and (min-width:601px) {
+            .susan-storm-medium {
+                display: none!important
+            }
+            .iframe {
+                width: 515;
+                height: 290;
+            }
+        }
+        /* large */
+        
+        @media (min-width:993px) {
+            .susan-storm-large {
+                display: none!important
+            }
+            .iframe {
+                width: 607;
+                height: 342;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html 
+    <iframe width="195 " height="110 " src="https://www.youtube.com/embed/F4e6YQFrt1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="susan-storm-large susan-storm-medium ">
+</iframe>
+
+    <iframe width="512 " height="290 " src="https://www.youtube.com/embed/F4e6YQFrt1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class=" susan-storm-large susan-storm-small ">
+</iframe>
+
+    <iframe width="607 " height="342 " src="https://www.youtube.com/embed/F4e6YQFrt1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class=" susan-storm-medium  susan-storm-small  ">
+</iframe>-->
+    <center class="w3-display-middle">
+        <video autoplay loop muted playsinline width="310 " height="175 " class="susan-storm-large susan-storm-medium ">  
+    <source src="https://www.luisangelmaciel.one/video/iris-xc-la-mas-draga-travel.webm" type="video/mp4 " title="Iris XC Queen "  loading="lazy " class="lazy " >                                           
+</video>
+        <video autoplay loop muted playsinline width="512 " height="290 " class=" susan-storm-large susan-storm-small ">  
+    <source src="https://www.luisangelmaciel.one/video/iris-xc-la-mas-draga-travel.webm" type="video/mp4 " title="Iris XC Queen " loading="lazy " class="lazy " >                                           
+</video>
+        <video autoplay loop muted playsinline width="607 " height="342 " class=" susan-storm-medium  susan-storm-small  ">  
+    <source src="https://www.luisangelmaciel.one/video/iris-xc-la-mas-draga-travel.webm" type="video/mp4 " title="Iris XC Queen " loading="lazy " class="lazy " >                                           
+</video>
+    </center>
+
+    <div id="pop_corn_container"></div>
+    <!-- partial -->
+    <script src="./script.js"></script>
+    <!-- Logo -->
+    <link rel="icon" href="https://luisemoji.github.io/img/favicon.svg " type="image/x-icon" sizes="192x192 " />
+    <link rel="stylesheet" href="../css/logo.css">
+    <img src="../img/emoji.svg " alt="@luisemoji " class="logo lift a-up " height="35px;" width="35px;" onclick="document.location='../index.html'">
+
+
+</body>
+
+</html>

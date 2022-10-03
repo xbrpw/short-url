@@ -1,0 +1,36 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+    font-size: 2rem;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+}
+
+main div {
+    display: grid;
+    place-items: center;
+    min-width: 100%;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+main div:before {
+    content: "";
+}
+
+main div:first-child:before {
+    content: "";
+}
+
+main div:last-child:before {
+    content: "";
+}

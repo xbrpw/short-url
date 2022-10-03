@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter");
+
+body {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://images.unsplash.com/photo-1531824475211-72594993ce2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80)
+    no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 200px;
+  height: 250px;
+  background: white;
+  margin: auto;
+  box-shadow: 2px 2px 15px #404040;
+  transform: rotate(-5deg);
+  transition: all 0.5s linear;
+  z-index: 0;
+  position: relative;
+  padding: 10px;
+  font-size: 5em;
+}
+
+.wrapper::after {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  position: absolute;
+  border-radius: 8px;
+  background: #333;
+  top: 15px;
+  left: 50%;
+  margin-left: -8px;
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Architects Daughter", cursive;
+  font-size: 16px;
+  height: 55px;
+  color: #444;
+}
+
+.detail {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 1em;
+  display: inline-block;
+}
+
+.title--little {
+  font-size: 0.6em;
+}
+
+.title--miss {
+  font-size: 0.8em;
+}
+
+.author {
+  display: block;
+  font-size: 0.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.wheel {
+  will-change: transform;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#wheel-1 {
+  animation: wheel-1 .75s linear infinite;
+}
+#wheel-2 {
+  animation: wheel-2 .75s linear infinite;
+}
+@keyframes wheel-1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(0, 0.6px) rotate(90deg);
+  }
+  50% {
+    transform: translate(0, -0.4px) rotate(180deg);
+  }
+  75% {
+    transform: translate(0, 0.5px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0.3px) rotate(360deg);
+  }
+}
+@keyframes wheel-2 {
+  0% {
+    transform: translate(98.593px, 0.4px) rotate(0deg);
+  }
+  25% {
+    transform: translate(98.593px, -0.5px) rotate(90deg);
+  }
+  50% {
+    transform: translate(98.593px, 0.7px) rotate(180deg);
+  }
+  75% {
+    transform: translate(98.593px, 0.6px) rotate(270deg);
+  }
+  100% {
+    transform: translate(98.593px, 0) rotate(360deg);
+  }
+}
+
+.roadline {
+  will-change: transform;
+  animation: roadline 2s linear infinite;
+}
+#roadline-2 {
+  animation-delay: .5s;
+}
+#roadline-3 {
+  animation-delay: 1s;
+}
+#roadline-4 {
+  animation-delay: 1.5s;
+}
+@keyframes roadline {
+  0% {
+    transform: translate(20px, 0px);
+  }
+
+  100% {
+    transform: translate(-220px, 0px);
+  }
+}
+
+#truckinside {
+  will-change: transform;
+  animation: truckinside 1s linear infinite;
+}
+.truck {
+  will-change: transform;
+  animation: truck 1s linear infinite;
+}
+@keyframes truckinside {
+  0% {
+    transform: translate(0, 0px) rotate(0) scale(.26458);
+  }
+  25% {
+    transform: translate(0, .5px) rotate(-0.2deg) scale(.26458);
+  }
+  50% {
+    transform: translate(0, 1px) rotate(0deg) scale(.26458);
+  }
+  75% {
+    transform: translate(0, .5px) rotate(0.2deg) scale(.26458);
+  }
+  100% {
+    transform: translate(0, 0px) rotate(0) scale(.26458);
+  }
+}
+@keyframes truck {
+  0% {
+    transform: translate(0, 0px)  rotate(0);
+  }
+  25% {
+    transform: translate(0, 0.75px)  rotate(-0.2deg);
+  }
+  50% {
+    transform: translate(0, 1.5px)  rotate(0deg);
+  }
+  75% {
+    transform: translate(0, 0.75px)  rotate(0.2deg);
+  }
+  100% {
+    transform: translate(0, 0px)  rotate(0);
+  }
+}
+
+.mountains {
+  will-change: transform;
+  animation: mountains 60s linear infinite;
+}
+#mountains-0 {
+  animation: mountains0 30s linear;
+  transform: translate(-210px, 0px);
+}
+#mountains-1 {
+  animation-delay: 30s;
+  transform: translate(210px, 0px);
+}
+@keyframes mountains {
+  0% {
+    transform: translate(210px, 0px);
+  }
+  100% {
+    transform: translate(-210px, 0px);
+  }
+}
+@keyframes mountains0 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(-210px, 0px);
+  }
+}
+
+.field1 {
+  will-change: transform;
+  animation: field1 1s linear infinite;
+}
+.field2 {
+  will-change: transform;
+  animation: field2 1s linear infinite;
+}
+.frontfield2 {
+  will-change: transform;
+  animation-duration: 1.5s;
+}
+.backfield1 {
+  will-change: transform;
+  animation-duration: 5s;
+}
+.backfield2 {
+  will-change: transform;
+  animation-duration: 15s;
+}
+@keyframes field1 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(-210px, 0px);
+  }
+}
+@keyframes field2 {
+  0% {
+    transform: translate(210px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.cactusfront {
+  will-change: transform;
+  animation: cactusfront 10s linear infinite;
+}
+@keyframes cactusfront {
+  0% {
+    transform: translate(210px, 0px);
+  }
+  20% {
+    transform: translate(-210px, 0px);
+  }
+  100% {
+    transform: translate(-210px, 0px);
+  }
+}
+
+.backcactus {
+  will-change: transform;
+  animation: backcactus 60s linear infinite;
+}
+@keyframes backcactus {
+  0% {
+    transform: translate(210px, 0px) ;
+  }
+  50% {
+    transform: translate(-210px, 0px);
+  }
+  100% {
+    transform: translate(-210px, 0px) ;
+  }
+}
+
+.midcactus {
+  will-change: transform;
+  animation: midcactus 20s linear infinite;
+}
+@keyframes midcactus {
+  0% {
+    transform: translate(210px, 0px) ;
+  }
+  50% {
+    transform: translate(-210px, 0px);
+  }
+  100% {
+    transform: translate(-210px, 0px) ;
+  }
+}
+
+.smoke {
+  will-change: transform;
+  animation: smoke 1s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.smoke2 {
+  animation-duration: 1.1s;
+  animation-delay: 0.2s;
+}
+.smoke3 {
+  animation-duration: 0.9s;
+  animation-delay: 0.1s;
+}
+.smoke4 {
+  animation-duration: 0.8s;
+  animation-delay: 0.05s;
+}
+.smoke5 {
+  animation-duration: 1.2s;
+  animation-delay: -0.1s;
+}
+.smoke6 {
+  animation-duration: 0.95s;
+  animation-delay: 0.1s;
+}
+.smoke7 {
+  animation-duration: 1.05s;
+  animation-delay: -0.15s;
+}
+.smoke8 {
+  animation-duration: 1.05s;
+  animation-delay: -0.15s;
+}
+.smoke9 {
+  animation-duration: 0.85s;
+  animation-delay: -0.15s;
+}
+.smoke10 {
+  animation-duration: 1.05s;
+  animation-delay: 0.1s;
+}
+@keyframes smoke {
+  0% {
+    transform: translate(50px, 25px) scale(0.1);
+  }
+  100% {
+    transform: translate(-70px, -30px)  scale(1.5);
+  }
+}
+
+.cloud {
+  will-change: transform;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: cloud 10s ease-in-out infinite;
+}
+.cloud2 {
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+.cloud3 {
+  animation-duration: 11s;
+  animation-delay: -1s;
+}
+.cloud4 {
+  animation-duration: 8s;
+  animation-delay: -4s;
+}
+.cloud5 {
+  animation-duration: 12s;
+  animation-delay: -2s;
+}
+@keyframes cloud {
+  0% {
+    transform: translate(0px, 0px) ;
+  }
+  25% {
+    transform: translate(4px, 3px) ;
+  }
+  50% {
+    transform: translate(9px, -1px) ;
+  }
+  75% {
+    transform: translate(3px, -6px) ;
+  }
+  100% {
+    transform: translate(0px, 0px) ;
+  }
+}
+
+.circle {
+  will-change: transform;
+  animation: circlesmall 3s ease-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.circle2 {
+  animation-delay: -1.5s;
+}
+@keyframes circlesmall {
+  0% {
+    transform: scale(0.5) ;
+    opacity: .9;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@media (min-height: 475px) and (min-width: 550px) {
+  .wrapper {
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+  }
+
+  .caption {
+    font-size: 32px;
+    height: 110px;
+  }
+}
+
+@media (min-height: 1100px) and (min-width: 850px) {
+  .wrapper {
+    width: 800px;
+    height: 1000px;
+  }
+
+  .caption {
+    font-size: 64px;
+    height: 220px;
+  }
+}

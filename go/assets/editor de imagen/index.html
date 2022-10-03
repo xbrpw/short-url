@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Mini Project 1</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<! DOCTYPE HTML>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Mini Project 1</title>
+    <script type="text/javascript" src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+  </head>
+
+  <body>
+
+    <h1>Mini Project 1: Images and Filters</h1>
+    <canvas id="can"></canvas>
+    <h2>Load the Image you want to get filtred</h2>
+    <p id="dim">Width * Height</p>
+    <input style="margin-bottom:19px" type="file" multiple="false" accept="image/*" id="imput" onchange="upload()">
+    <div>
+    <input style="margin-right:20px" type="button" value="size" onclick="ChangeText()">
+    <input type="button" value="Reset Image" onclick="RestImg()">
+    <br>
+    <input type="button" value="GrayStyle" onclick="GrayStyle()">
+    <input type="button" value="Rainbow" onclick="ToRainbow()">
+    <br>
+    <input type="button" value="Red" onclick="ToColor('red')">
+    <input type="button" value="Green" onclick="ToColor('green')">
+    <input type="button" value="Blue" onclick="ToColor('blue')">
+      <br>
+      <input type="button" value="Blur the image in here" onclick="blurImg()">
+    </div>
+  </body>
+
+  </html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

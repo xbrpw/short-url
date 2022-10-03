@@ -1,0 +1,166 @@
+{
+    "name": "@LuisEmoji",
+    "short_name": "@LuisEmoji",
+    "icons": [{
+        "src": "icon/mask-icon.sgv",
+        "sizes": "196x196",
+        "type": "image/png"
+    }, {
+        "src": "img/apple-touch-startup-image.png",
+        "sizes": "1125x2436",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-precomposed.png",
+        "sizes": "180x180",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-57x57.png",
+        "sizes": "57x57",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-60x60.png",
+        "sizes": "60x60",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-76x76.png",
+        "sizes": "76x76",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-114x114.png",
+        "sizes": "114x114",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-120x120.png",
+        "sizes": "120x120",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple/touch-icon-167x167.png",
+        "sizes": "167x167",
+        "type": "image/png"
+    }, {
+        "src": "icon/apple-touch-icon-180x180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+    }, {
+        "src": "favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }, {
+        "src": "favicon.ico",
+        "sizes": "192x192",
+        "type": "image/x-icon"
+    }, {
+        "src": "icon/maskable_icon.png ",
+        "sizes": "114x114",
+        "type": "image/png",
+        "purpose": "any maskable",
+        "density": 0.75
+    }, {
+        "src": "icon/icon-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png",
+        "density": 1
+    }, {
+        "src": "icon/icon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png",
+        "density": 1.5
+    }, {
+        "src": "icon/icon64x64.png ",
+        "sizes": "64x64",
+        "type": "image/png",
+        "density": 2
+    }, {
+        "src": "icon/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "density": 3
+    }, {
+        "src": "icon/icon128x128.png ",
+        "sizes": "128x28",
+        "type": "image/png",
+        "density": 4
+    }, {
+        "src": "icon/icon144x144.png ",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any maskable"
+    }, {
+        "src": "icon/icon512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "density": 1.5
+    }, {
+        "src": "icon/icon192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "density": 2
+    }, {
+        "src": "icon/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "density": 3
+    }, {
+        "src": "icon/icon256x256.png  ",
+        "sizes": "256x256",
+        "type": "image/png",
+        "density": 4
+    }, {
+        "src": "img/msapplication-square70x70logo.png ",
+        "sizes": "70x70",
+        "type": "image/png"
+    }, {
+        "src": "img/msapplication-square150x150logo.png",
+        "sizes": "150x150",
+        "type": "image/png",
+        "density": 1.5
+    }, {
+        "src": "img/msapplication-wide310x150logo.png",
+        "sizes": "310x150",
+        "type": "image/png",
+        "density": 2
+    }, {
+        "src": "img/msapplication-square310x310logo",
+        "sizes": "310x310",
+        "type": "image/png",
+        "density": 3
+    }, {
+        "src": "img/og-image.png ",
+        "sizes": "1080x400",
+        "type": "image/png",
+        "density": 4
+    }, {
+        "src": "/video/og-video.swf ",
+        "sizes": "300x400",
+        "type": "video/mp4"
+    }, {
+        "src": "img/twitterimage.jpg  ",
+        "sizes": "1080x400",
+        "type": "image/png"
+    }, {
+        "src": "/video/twitter_player.webp ",
+        "sizes": "480x480",
+        "type": "video/mp4"
+    }, {
+        "src": "video/twitter_player_stream.webm ",
+        "sizes": "480x480",
+        "type": "video/mp4"
+    }],
+    "lang": "es-MX",
+    "start_url": "https://www.luisemoji.github.io/",
+    "display": "standalone",
+    "background_color": "yellow",
+    "theme_color": "black"
+}

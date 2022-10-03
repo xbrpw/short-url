@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+  <style>body {
+    padding: 50px;
+    background: grey;
+  }
+  
+  .blocky_hold {
+    height: 201px;
+    width: 235px;
+    position: relative;
+    display: block;
+  }
+  .blocky {
+    border: 1px solid #fff;
+    height: 201px;
+    width: 235px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+  
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35),
+      inset 0 0 21px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35),
+      inset 0 0 21px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.35), inset 0 0 21px rgba(0, 0, 0, 0.3);
+  
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  
+    -webkit-transition-property: -webkit-transform, margin, scale;
+    -moz-transition-property: -moz-transform, margin, scale;
+    -o-transition-property: -o-transform, margin, scale;
+    transition-property: transform, margin, scale;
+  }
+  
+  .pos1 {
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+  }
+  
+  .pos2 {
+    -webkit-transform: rotate(-16deg);
+    -moz-transform: rotate(-16deg);
+    -o-transform: rotate(-16deg);
+  }
+  .pos3 {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+  }
+  
+  .blocky_hold:hover .blocky,
+  .blocky_hold.grid .blocky {
+    transform: scale(0.5);
+    -webkit-transform: rotate(0deg), scale(0.5);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    margin: -5px 0 0 -5px;
+  }
+  
+  .blocky_hold:hover .pos3,
+  .blocky_hold.grid .pos3 {
+    margin: 0 0 0 0;
+    transform:  matrix(0.5, 0, 0, 0.5, -70, 95);
+  }
+  .blocky_hold:hover .pos2,
+  .blocky_hold.grid .pos2 {
+    margin: 5px 0 0 5px;
+     transform:  matrix(0.5, 0, 0, 0.5, 55, 90);
+  }
+  .blocky_hold:hover .pos1,
+  .blocky_hold.grid .pos1 {
+    margin: 10px 0 0 10px; transform:  matrix(0.5, 0, 0, 0.5, 50, -20);
+  }
+  
+  .blocky_hold:hover .main,
+  .blocky_hold.grid .main {
+    margin: 10px 0 0 10px; transform:  matrix(0.5, 0, 0, 0.5, -80, -20);
+  }</style>
+<span class="blocky_hold"> <span class="blocky pos1"><img src="https://dummyimage.com/235x201/000/fff.jpg"></span>
+  <span class="blocky pos2"><img src="https://dummyimage.com/235x201/000/fff.jpg"></span>
+  <span class="blocky pos3"><img src="https://dummyimage.com/235x201/000/fff.jpg"></span>  
+  <span class="blocky main"><img src="https://dummyimage.com/235x201/000/fff.jpg"></span>
+</span>
+
+  
+
+</html>

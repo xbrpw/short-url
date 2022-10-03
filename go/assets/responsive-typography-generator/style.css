@@ -1,0 +1,97 @@
+body, input, textarea, option, select {
+  color: #282828;
+  font-weight: 400;
+  font-family: "Montserrat", Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  line-height: 1.666;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+p, input, textarea, select, option {
+  font-size: inherit;
+}
+
+i, .i, em {
+  font-style: italic;
+}
+
+b, .b, strong {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 3.9466681479em;
+}
+
+h2 {
+  font-size: 2.9607412962em;
+}
+
+h3 {
+  font-size: 2.22111125em;
+}
+
+h4 {
+  font-size: 1.66625em;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+body {
+  transition: 0.1s font-size;
+}
+
+h1 {
+  margin-left: -0.05em;
+}
+
+h2 {
+  margin-left: -0.08em;
+}
+
+h3 {
+  margin-left: -0.06em;
+}
+
+h4 {
+  margin-left: -0.04em;
+}
+
+.note {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.form {
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.form #fontSizeDisplay {
+  width: 60px;
+  display: inline-block;
+}
+.form #fontSize {
+  vertical-align: middle;
+}

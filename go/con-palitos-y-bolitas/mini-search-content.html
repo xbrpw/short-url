@@ -1,0 +1,94 @@
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
+<title>Mini search content!</title><meta name="viewport" content="width=device-width, initial-scale=1">   <link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+<style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
+
+<link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">
+
+<style>.window-mini {
+  width: 300px;
+  max-width: 400px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  position:fixed;
+  bottom: 0;
+  right: 30px;
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: bottom 0.5s ease-in-out;
+  background: rgb(255, 255, 255);
+}
+
+.header-mini {
+  display: flex;
+  height: 25px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+  background: #eee;
+}
+
+
+.status-mini {
+  width: 34px;
+  text-align: center;
+}
+
+.text-mini {
+  flex-grow: 1;
+}
+
+.buttons-mini {
+  width: 54px;
+  text-align: center;
+}
+
+.container-mini {
+  /*display: flex;
+  flex-direction: column;
+  */height: 200px;
+  overflow: scroll;
+  text-align: left;
+}
+
+</style>
+<div class="window-mini" >
+  <div class="header-mini">
+    <div class="status-mini"><i class="fa fa-search"></i></div>
+    <div class="text-mini">Buscar...</div>
+    <div class="buttons-mini"><i class="fa fa-minus-square" onclick="myFunction()"></i> <i class="fa fa-window-close" onclick="myFunction()"></i></div>
+  </div>
+  <div class="container-mini" id="myMenuMini">
+    <ul style="  display: block;
+    list-style-type: disc;
+    margin-top: 0.5em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 12px;
+    list-style: none">
+      <li><a href="index.html" target="_new">1 item</a></li>
+      <li><a href="index.html" target="_new">1 item</a></li>
+      <li><a href="index.html" target="_new">2 item</a></li>
+      <li><a href="index.html" target="_new">3 item</a></li>
+      <li><a href="index.html" target="_new">4 item</a></li>
+      <li><a href="index.html" target="_new">2 item</a></li>
+      <li><a href="index.html" target="_new">3 item</a></li>
+      <li><a href="index.html" target="_new">4 item</a></li>
+      <li><a href="index.html" target="_new">2 item</a></li>
+      <li><a href="index.html" target="_new">3 item</a></li>
+      <li><a href="index.html" target="_new">4 item</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myMenuMini");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>

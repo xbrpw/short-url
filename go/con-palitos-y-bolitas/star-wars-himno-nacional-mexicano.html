@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>El Himno Nacional Mexicano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El Himno Nacional Mexicano, con letra de Francisco González Bocanegra y música de Jaime Nunó, inicialmente estaba compuesto de 10 estrofas. Sin embargo,Juan Nepomuceno Álvarez prohibió las estrofas IV y VII, que hacían referencia al recién derrocado Antonio López de Santa Anna y al primer emperador de México, Agustín de Iturbide.">
+    <style>
+        h1 {
+            width: 100%;
+            text-align: center;
+            color: #F8FF00;
+            position: absolute;
+            top: 30%;
+            font-size: 42px;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            -webkit-animation: logo 4s linear;
+            /* Chrome, Safari, Opera */
+            animation: logo 4s linear;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        
+        #container {
+            text-align: center;
+            width: 300px;
+            margin: 0 auto;
+            -webkit-perspective: 600;
+            perspective: 600;
+            transition: all .5s;
+        }
+        
+        section {
+            font-smooth: always;
+            transition: all 5s;
+            font-size: 22px;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 100px;
+            color: #F8FF00;
+            -webkit-transform: rotateX(70deg) translate(0, -1800px);
+            transform: rotateX(70deg) translate(0, -1800px);
+            -webkit-animation: mymove 40s linear;
+            /* Chrome, Safari, Opera */
+            animation: mymove 40s linear;
+        }
+        
+        section p {
+            line-height: 30px;
+            font-size: 14px;
+            font-smooth: always;
+            text-align: center;
+        }
+        
+        @-webkit-keyframes logo {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+        }
+        
+        @keyframes logo {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            50% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+        }
+        
+        @-webkit-keyframes mymove {
+            from {
+                -webkit-transform: rotateX(70deg) translate(0, 550px);
+                transform: rotateX(70deg) translate(0, 550px);
+            }
+            to {
+                -webkit-transform: rotateX(70deg) translate(0, -1800px);
+                transform: rotateX(70deg) translate(0, -1800px);
+            }
+        }
+        /* Standard syntax */
+        
+        @keyframes mymove {
+            from {
+                -webkit-transform: rotateX(70deg) translate(0, 550px);
+                transform: rotateX(70deg) translate(0, 550px);
+            }
+            to {
+                -webkit-transform: rotateX(70deg) translate(0, -1800px);
+                transform: rotateX(70deg) translate(0, -1800px);
+            }
+        }
+        /* Background */
+        
+        body {
+            background-color: #000000;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        canvas {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 1000;
+        }
+        
+        .cleartxt {
+            top: 80px;
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 1);
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 0)));
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
+        }
+        
+        .black {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: #000;
+            z-index: 999;
+            height: 80px;
+            width: 100%;
+        }
+        /* End Background */
+    </style>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <h1>El Himno Nacional Mexicano</h1>
+    <div class="black"></div>
+    <div class="cleartxt"></div>
+    <div id="container">
+        <section>
+            <br/>
+            <br/>
+            <h2>EL CORO</h2>
+            <p>Mexicanos, al grito de guerra</p>
+            <p>El acero aprestad y el bridón;</p>
+            <p>Y retiemble en sus centros la tierra</p>
+            <p>Al sonoro rugir del cañón.</p>
+            <br><br>
+            <h2>PARTE I</h2>
+            <h3>PRIMERA ESTROFA</h3>
+            <p>Ciña ¡Oh Patria! tus sienes de oliva</p>
+            <p>De la paz el arcángel divino,</p>
+            <p>Que en el cielo tu eterno destino</p>
+            <p>Por el dedo de Dios se escribió.</p>
+            <p>Mas si osare un extraño enemigo</p>
+            <p>Profanar con su planta tu suelo,</p>
+            <p>Piensa ¡Oh Patria querida! que el cielo</p>
+            <p>Un soldado en cada hijo te dio.</p>
+            <h2>PARTE X</h2>
+            <h3>DECIMA ESTROFA</h3>
+            <p>¡Patria! ¡Patria! tus hijos te juran</p>
+            <p>Exhalar en tus aras su aliento,</p>
+            <p>Si el clarín con su bélico acento</p>
+            <p>Los convoca a lidiar con valor.</p>
+            <p>¡Para ti las guirnaldas de oliva!</p>
+            <p>¡Un recuerdo para ellos de gloria!</p>
+            <p>¡Un laurel para ti de victoria!</p>
+            <p>¡Un sepulcro para ellos de honor!</p>
+            <br><br>
+        </section>
+        <div style="visibility:hidden; display: none;">
+            X
+            <p>¡Patria! ¡Patria! tus hijos te juran</p>
+            <p>Exhalar en tus aras su aliento,</p>
+            <p>Si el clarín con su bélico acento</p>
+            <p>Los convoca a lidiar con valor.</p>
+            <p>¡Para ti las guirnaldas de oliva!</p>
+            <p>¡Un recuerdo para ellos de gloria!</p>
+            <p>¡Un laurel para ti de victoria!</p>
+            <p>¡Un sepulcro para ellos de honor!</p>
+            <br>
+            <br>
+            <p>Mexicanos, al grito de guerra</p>
+            <p>El acero aprestad y el bridón;</p>
+            <p>Y retiemble en sus centros la tierra</p>
+            <p>Al sonoro rugir del cañón.</p>
+            <br>
+            <br> I
+            <p>Ciña ¡Oh Patria! tus sienes de oliva</p>
+            <p>De la paz el arcángel divino,</p>
+            <p>Que en el cielo tu eterno destino</p>
+            <p>Por el dedo de Dios se escribió.</p>
+            <p>Mas si osare un extraño enemigo</p>
+            <p>Profanar con su planta tu suelo,</p>
+            <p>Piensa ¡Oh Patria querida! que el cielo</p>
+            <p>Un soldado en cada hijo te dio.</p>
+            <br>
+            <br> II En sangrientos combates los viste Por tu amor palpitando sus senos, Arrostrar la metralla serenos Y la muerte o la gloria buscar. Si el recuerdo de antiguas hazañas De tus hijos inflama la mente, Los laureles del triunfo tu frente
+            Volverán inmortales a ornar.
+            <br>
+            <br> III Como al golpe del rayo la encina Se derrumba hasta el hondo torrente, La discordia vencida, impotente, A los pies del arcángel cayó. Ya no más de tus hijos la sangre Se derrame en contienda de hermanos; Solo encuentre el acero en
+            tus manos Quien tu nombre sagrado insultó.
+            <br>
+            <br> IV Del guerrero inmortal de Zempoala Te defiende la espada terrible, Y sostiene su brazo invencible Tu sagrado pendón tricolor. Él será del feliz mexicano En la paz y en la guerra el caudillo, Porque él supo sus armas de brillo Circundar
+            en los campos de honor.
+            <br>
+            <br> V ¡Guerra, guerra sin tregua al que intente De la patria manchar los blasones!, ¡Guerra, guerra! los patrios pendones En las olas de sangre empapad. ¡Guerra, guerra! en el monte, en el valle, Los cañones horrísonos truenen Y los ecos
+            sonoros resuenen Con las voces de ¡Unión! ¡Libertad!
+            <br>
+            <br> VI Antes, Patria, que inermes tus hijos Bajo el yugo su cuello dobleguen, Tus campiñas con sangre se rieguen, Sobre sangre se estampe su pie. Y tus templos, palacios y torres Se derrumben con hórrido estruendo, Y sus ruinas existan diciendo:
+            De mil héroes la patria aquí fue.
+            <br>
+            <br> VII Si a la lid contra hueste enemiga Nos convoca la trompa guerrera, De Iturbide la sacra bandera ¡Mexicanos! valientes seguid. Y a los fieros bridones les sirvan Las vencidas enseñas de alfombra; Los laureles del triunfo den sombra
+            A la frente del bravo adalid.
+            <br>
+            <br> VIII Vuelva altivo a los patrios hogares El guerrero a contar su victoria, Ostentando las palmas de gloria Que supiera en la lid conquistar. Tornaránse sus lauros sangrientos En guirnaldas de mirtos y rosas, Que el amor de las hijas y
+            esposas También sabe a los bravos premiar.
+            <br>
+            <br> IX Y el que al golpe de ardiente metralla De la Patria en las aras sucumba, Obtendrá en recompensa una tumba Donde brille de gloria la luz. Y de Iguala la enseña querida A su espada sangrienta enlazada, De laurel inmortal coronada Formará
+            de su fosa la cruz.
+            <br>
+            <br> X ¡Patria! ¡Patria! tus hijos te juran Exhalar en tus aras su aliento, Si el clarín con su bélico acento Los convoca a lidiar con valor. ¡Para ti las guirnaldas de oliva! ¡Un recuerdo para ellos de gloria! ¡Un laurel para ti de victoria!
+            ¡Un sepulcro para ellos de honor!
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script>
+        // The text 3D affect, and animation is pure CSS.  Only Javascript here is to play music and create stars. 
+
+        // Created by Darryl Huffman
+
+        //////////////// STAR BACKGROUND
+        window.onload = function() {
+            // Creating the Canvas
+            var canvas = document.createElement("canvas"),
+                c = canvas.getContext("2d"),
+                particles = {},
+                particleIndex = 0,
+                particleNum = 4;
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            canvas.id = "motion";
+            document.body.appendChild(canvas);
+            // Finished Creating Canvas
+
+            // Setting color which is just one big square
+            c.fillStyle = "black";
+            c.fillRect(0, 0, canvas.width, canvas.height);
+            // Finished Color
+
+            function Particle() {
+                var random_x = Math.floor(Math.random() * (canvas.width - 1 + 1)) + 1;
+                var random_y = Math.floor(Math.random() * (canvas.height - 1 + 1)) + 1;
+                this.x = random_x;
+                this.y = random_y;
+                this.vx = 0;
+                this.vy = 0;
+                this.gravity = 0;
+                particleIndex++;
+                particles[particleIndex] = this;
+                this.id = particleIndex;
+                this.life = 0;
+                this.size = Math.random() * 6 - 2;
+                this.maxlife = Math.random() * 80 + 20; // Stars are set to have a random life length right now, but you can shorten this or make it longer
+                this.color = "#FFF"; // Change color being displayed here
+            }
+
+            Particle.prototype.draw = function() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                this.vy += this.gravity;
+                this.life++;
+                if (this.life >= this.maxlife) {
+                    delete particles[this.id];
+                }
+                c.fillStyle = this.color;
+                c.fillRect(this.x, this.y, this.size, this.size);
+            };
+
+            setInterval(function() {
+                c.fillStyle = "black";
+                c.clearRect(0, 0, canvas.width, canvas.height);
+                for (var i = 0; i < particleNum; i++) {
+                    new Particle();
+                }
+                for (var i in particles) {
+                    particles[i].draw();
+                }
+            }, 30);
+        };
+        //////////////// END STAR BACKGROUND
+    </script>
+
+</body>
+
+</html>

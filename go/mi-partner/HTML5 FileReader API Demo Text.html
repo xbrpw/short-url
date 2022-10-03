@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 FileReader API Demo: Text</title>
+<style>html {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	background: #333;
+  }
+  
+  #page-wrapper {
+	width: 600px;
+	background: #FFF;
+	padding: 1em;
+	margin: 1em auto;
+	min-height: 300px;
+	border-top: 5px solid #69c773;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  }
+  
+  h1 {
+	  margin-top: 0;
+  }
+  
+  img {
+	max-width: 100%;
+  }
+  
+  #fileDisplayArea {
+	margin-top: 2em;
+	width: 100%;
+	overflow-x: auto;
+  }</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="page-wrapper">
+
+		<h1>Text File Reader</h1>
+		<div>
+			Select a text file: 
+			<input type="file" id="fileInput">
+		</div>
+		<pre id="fileDisplayArea"><pre>
+
+	</div>
+<!-- partial -->
+  <script>
+	window.onload = function() {
+		var fileInput = document.getElementById('fileInput');
+		var fileDisplayArea = document.getElementById('fileDisplayArea');
+
+		fileInput.addEventListener('change', function(e) {
+			var file = fileInput.files[0];
+			var textType = /text.*/;
+
+			if (file.type.match(textType)) {
+				var reader = new FileReader();
+
+				reader.onload = function(e) {
+					fileDisplayArea.innerText = reader.result;
+				}
+
+				reader.readAsText(file);	
+			} else {
+				fileDisplayArea.innerText = "File not supported!"
+			}
+		});
+}
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es-Mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diseño de Cupon de Descuento en CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
+    <style>
+        .offerBtndescuento {
+            background-color: rgb(56, 154, 220);
+            box-shadow: inset 0px 5px 0px 0px rgba(255, 255, 255, 0.15);
+            width: 420px;
+            height: 100px;
+            z-index: 82;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Raleway', sans;
+            cursor: pointer;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+        
+        .offerBtndescuento:hover {
+            background: #3CBD45;
+        }
+        
+        .offerBtndescuento:active {
+            box-shadow: 0px 0px 15px 0px rgba(27, 199, 0, 1);
+        }
+        
+        .offerBtndescuento img {
+            height: 80px;
+            top: 10px;
+            position: absolute;
+            left: -5px;
+            opacity: .15;
+        }
+        
+        .offerBtndescuento span {
+            position: absolute;
+        }
+        
+        .btnIcondescuento {
+            top: 24px;
+            left: 50px;
+        }
+        
+        .st0descuento {
+            fill: #FFFFFF;
+        }
+        
+        .st1descuento {
+            fill: #FFFFFF;
+            fill-opacity: 0.5;
+        }
+        
+        .text1descuento,
+        .text2descuento,
+        .text3descuento {
+            color: #FFF;
+            font-weight: 800;
+        }
+        
+        .offerBtndescuento:before {
+            content: '';
+            display: block;
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, .15);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: -200px;
+            left: -330px;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+        }
+        
+        .offerBtndescuento:hover:before {
+            left: -500px;
+        }
+        
+        .text1descuento {
+            font-size: 36px;
+            line-height: 1em;
+            left: 80px;
+            top: 13px;
+        }
+        
+        .text2descuento {
+            font-weight: 300;
+            right: 50px;
+            bottom: 10px;
+        }
+        
+        .text3descuento {
+            top: -10px;
+            right: 20px;
+            font-size: 70px;
+            font-family: 'Open Sans', sans;
+            font-weight: 400;
+            letter-spacing: -4px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- descuento -->
+    <a class="offerBtndescuento">&#32;&#32;&#32;<img src="https://hihellomonster.github.io/favicon.png" alt="icon"><span class="text1descuento">Xiiber<br/>Travel</span><span class="text2descuento">click aquí</span><span class="text3descuento">20%</span>
+      
+    </a>
+    <!-- descuento -->
+    <br>
+
+
+</body>
+
+</html>

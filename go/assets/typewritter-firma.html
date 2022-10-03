@@ -1,0 +1,22 @@
+<!-- code-->
+<textarea rows="10" cols="150"> <center>
+  <div onclick="typeWriter() " style="  color: #323b3f;" class="footer">
+    <a href="about/index.html">Abaut</a> | Hecho con <span class="heartbeat"> ❤ </span> y mucho código
+    <a id="powered " href="https://luisangelmaciel.github.io/ " ></a> 
+  </div>
+ </center>
+
+ <script>
+     var i = 0;
+     var txt = 'designer luisangel.maciel';
+     var speed = 65;
+
+     function typeWriter() {
+         if (i < txt.length) {
+             document.getElementById("powered ").innerHTML += txt.charAt(i);
+             i++;
+             setTimeout(typeWriter, speed);
+         }
+     }
+ </script>
+<div ></textarea><!-- /code-->

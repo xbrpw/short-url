@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hamburguesas, hablamos de otras hamburguesas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .nav-icon {
+            margin: 1em;
+            width: 40px;
+        }
+        
+        .nav-icon:after,
+        .nav-icon:before,
+        .nav-icon div {
+            background-color: rgb(110, 10, 10);
+            border-radius: 3px;
+            content: '';
+            display: block;
+            height: 5px;
+            margin: 7px 0;
+            transition: all .2s ease-in-out;
+        }
+        
+        .nav-icon:hover:before {
+            transform: translateY(12px) rotate(135deg);
+        }
+        
+        .nav-icon:hover:after {
+            transform: translateY(-12px) rotate(-135deg);
+        }
+        
+        .nav-icon:hover div {
+            transform: scale(0);
+            /* display: inline-block;
+            width: 1em;
+            height: 1em;
+            padding: 0;
+            cursor: pointer;
+            transition: transform .2s ease-in-out;
+            vertical-align: middle;
+            border: 0 none;
+            background: transparent;*/
+        }
+        /**
+* Button height fix for Firefox https://w3bits.com/animated-hamburger-icons/ 
+*/
+        
+        .hamburger {
+            font-size: 30px;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            padding: 0;
+            cursor: pointer;
+            transition: transform .2s ease-in-out;
+            vertical-align: middle;
+            border: 0 none;
+            background: transparent;
+        }
+        /**
+ * Button height fix for Firefox
+ */
+        
+        .hamburger::-moz-focus-inner {
+            padding: 0;
+            border: 0 none;
+        }
+        /**
+ * Focus fix for Chrome
+ */
+        
+        .hamburger:focus {
+            outline: 0;
+        }
+        
+        .hamburger::-moz-focus-inner {
+            padding: 0;
+            border: 0 none;
+        }
+        /**
+* Focus fix for Chrome
+*/
+        
+        .hamburger:focus {
+            outline: 0;
+        }
+        
+        .hamburger:before,
+        .hamburger:after {
+            content: "";
+        }
+        
+        .hamburger:before,
+        .hamburger .icon,
+        .hamburger:after {
+            display: block;
+            width: 100%;
+            height: .2em;
+            margin: 0 0 .2em;
+            transition: transform .2s ease-in-out;
+            border-radius: .05em;
+            background: #000000;
+        }
+        /**
+ * Styles for the active `.hamburger` icon
+ */
+        
+        .hamburger.active:before,
+        .hamburger.active .icon,
+        .hamburger.active:after {
+            background: #000000;
+        }
+        /**
+ * VERTICAL HAMBURGER
+ */
+        
+        .hamburger.hamburger-vertical.active {
+            transform: rotate(270deg);
+        }
+        /**
+ * CLOSE/CANCEL/CROSS
+ */
+        
+        .hamburger.hamburger-cancel.active .icon {
+            transform: scale(0);
+        }
+        
+        .hamburger.hamburger-cancel.active:before {
+            transform: translateY(.4em) rotate(135deg);
+        }
+        
+        .hamburger.hamburger-cancel.active:after {
+            transform: translateY(-.4em) rotate(-135deg);
+        }
+        /**
+ * PLUS
+ */
+        
+        .hamburger.hamburger-plus.active .icon {
+            transform: scale(0);
+        }
+        
+        .hamburger.hamburger-plus.active:before {
+            transform: translateY(.4em) rotate(90deg);
+        }
+        
+        .hamburger.hamburger-plus.active:after {
+            transform: translateY(-.4em) rotate(180deg);
+        }
+        /**
+ * MINUS/DASH
+ */
+        
+        .hamburger.hamburger-minus.active {
+            transform: rotate(180deg);
+        }
+        
+        .hamburger.hamburger-minus.active .icon {
+            transform: scale(0);
+        }
+        
+        .hamburger.hamburger-minus.active:before {
+            transform: translateY(.4em);
+        }
+        
+        .hamburger.hamburger-minus.active:after {
+            transform: translateY(-.4em);
+        }
+        /**
+ * LEFT ARROW
+ */
+        
+        .hamburger.hamburger-arrow-left.active {
+            transform: rotate(180deg);
+        }
+        
+        .hamburger.hamburger-arrow-left.active:before {
+            width: .6em;
+            transform: translateX(.4em) translateY(.2em) rotate(45deg);
+        }
+        
+        .hamburger.hamburger-arrow-left.active .icon {
+            border-radius: .1em .25em .25em .1em;
+        }
+        
+        .hamburger.hamburger-arrow-left.active:after {
+            width: .6em;
+            transform: translateX(.4em) translateY(-.2em) rotate(-45deg);
+        }
+        /**
+ * RIGHT ARROW
+ */
+        
+        .hamburger.hamburger-arrow-right.active {
+            transform: rotate(180deg);
+        }
+        
+        .hamburger.hamburger-arrow-right.active:before {
+            width: .6em;
+            transform: translateX(0) translateY(.2em) rotate(-45deg);
+        }
+        
+        .hamburger.hamburger-arrow-right.active .icon {
+            border-radius: .25em .1em .1em .25em;
+        }
+        
+        .hamburger.hamburger-arrow-right.active:after {
+            width: .6em;
+            transform: translateX(0) translateY(-.2em) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Animated Hamburger Icons </h1>
+    <center>
+        <div class="nav-icon">
+            <div></div>
+        </div>
+        <br><br>
+
+        <button class="hamburger hamburger-arrow-left">
+          <span class="icon"></span>
+        </button>
+        <br><br>
+
+        <button class="hamburger hamburger-arrow-right">
+         <span class="icon"></span>
+        </button>
+        <br><br>
+
+        <button class="hamburger hamburger-minus">
+            <span class="icon"></span>
+        </button>
+        <br><br>
+
+        <button class="hamburger hamburger-plus">
+          <span class="icon"></span>
+        </button>
+        <br><br>
+
+        <button class="hamburger hamburger-vertical">
+           <span class="icon"></span>
+        </button>
+        <br><br>
+
+        <button class="hamburger hamburger-cancel">
+          <span class="icon"></span>
+        </button>
+
+
+    </center>
+
+    <script>
+        var el = document.querySelectorAll('.hamburger');
+        for (i = 0; i <= el.length; i++) {
+            el[i].addEventListener('click', function() {
+                this.classList.toggle('active');
+            }, false);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tab in tab</title>
+    <meta name="description" content="Codigo Templete de Ejemplo y paso a paso cómo hacer en HTML y Javascript unas Tabs Codigo ejemplo de Tabs en HTML y Javascript con un 100% Score en lighthouse">
+    <link rel="canonical" href="https://hihello.monster/templetes/tabs.html">
+    <link rel="preconnect " href="https://fonts.gstatic.com ">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
+    <link href="https://www.xiiber.com/lib/fonts/xiibicon.woff " rel="stylesheet ">
+    <link href="https://www.xiiber.com/css/xiibicon.css " rel="stylesheet ">
+
+    <link rel=" icon " href="https://www.xiiber.com/favicon.png " sizes="192x192 ">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel='prefetch' href="https://hihello.monster/xiibicon/fonts/xiibicon.eot">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='prefetch' href="https://hihello.monster/xiibicon/fonts/xiibicon.eot">
+    <link rel="preload" href="https://hihello.monster/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://hihello.monster/xiibicon/style.css"></noscript>
+    <link data-no-async=”1″ rel="stylesheet" href=https://hihello.monster/ "xiibicon/style.css" media="all">
+    <link rel="stylesheet" href="tab-in-tab-hi-style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js" async></script>
+
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+            font-family: Arial;
+            box-sizing: border-box
+        }
+        
+        .visuallyhidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        
+        .taptop {
+            overflow: hidden;
+            background-color: #f1f1f1;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            margin: 0;
+        }
+        
+        .tablink {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin: 0;
+            width: 20%;
+            text-align: center;
+            padding: 6px 0px;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        
+        .tablink:hover {
+            background-color: rgb(0, 0, 0);
+            font-size: 24.5px;
+        }
+        
+        .tablink:active {
+            background-color: rgb(0, 0, 0);
+            font-weight: bold;
+            color: rgb(100, 0, 0);
+            font-size: 24px;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            color: black;
+            display: none;
+            margin: 0;
+        }
+    </style>
+    <style>
+        /* Style the tab */
+        
+        .tab2 {
+            overflow: hidden;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding-top: 10px;
+            padding-bottom: 0px;
+            text-align: center;
+            line-height: 0;
+            transition: all 0.3s ease;
+        }
+        /* Style the buttons inside the tab */
+        
+        .tab2 button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 20%;
+            text-align: center;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+            color: #555;
+            font-size: 28px;
+            transition: all 0.3s ease;
+            font-weight: normal;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab2 button:hover {
+            background-color: rgb(255, 255, 255);
+            color: #0b3144;
+            font-weight: bold;
+        }
+        /* Create an active/current tablink class */
+        
+        .tab2 button.active {
+            background-color: rgb(255, 255, 255);
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            font-size: 28.5px;
+        }
+        /* Style the tab content */
+        
+        .tabcontent2 {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+            color: rgb(0, 0, 0);
+            transition: all 0.3s ease;
+        }
+    </style>
+    <style>
+        /* Style the tab */
+        
+        .tab3 {
+            overflow: hidden;
+            background-color: #948fdf;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Style the buttons inside the tab */
+        
+        .tab3 button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 20%;
+            text-align: center;
+            padding: 12px 0;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab3 button:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        
+        .tab3 button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent3 {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="taptop">
+        <button class="tablink" onclick="openOne('x1', this, 'black')" id="defaultOpen"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x2', this, 'black')"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x3', this, 'black')"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x4', this, 'black')"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x5', this, 'black')"><span class="icon-menu" aria-hidden="true"></span></button>
+    </div>
+
+    <div id="x1" class="tabcontent">
+        <br>
+        <br>
+        <h3>x1 b1</h3>
+        <p>Bienvenido!</p>
+        <!-- inicio -->
+        <div id="a1" class="tabcontent2" id="defaultOpen">
+            <br>
+            <br>
+            <h3>a1</h3>
+            <p>Gracias! era home-babajo</p>
+        </div>
+
+        <div id="a2" class="tabcontent2">
+            <h3>a2</h3>
+            <p>Welcome!</p>
+        </div>
+
+        <div id="a3" class="tabcontent2">
+            <h3>a3</h3>
+            <p>En horabuena!</p>
+        </div>
+
+        <div id="a4" class="tabcontent2">
+            <h3>a4</h3>
+            <p>Que gusto!</p>
+        </div>
+
+        <div id="a5" class="tabcontent2">
+            <h3>a5</h3>
+            <p>Saludos!</p>
+        </div>
+
+
+        <div class="tab2">
+            <div class="hi-icon-bar ">
+                <button class="tablinks2" onclick="openTwo(event, 'a1')" id="defaultOpen"><span class="icon-home" aria-hidden="true" ></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a2')"><span class="icon-notificaciones hi-hover-opacity" aria-hidden="true"></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a3')"><span class="icon-viajes hi-hover-opacity" aria-hidden="true"></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a4')"><span class="icon-experiencias hi-hover-opacity" aria-hidden="true"></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a5')"><span class="icon-calendario hi-hover-opacity" aria-hidden="true"></span></button>
+            </div>
+        </div>
+        <!-- inicio -->
+        <!-- <div id="index" class="tabcontenttop">
+        <div class="hi-footerx ">
+            <div class="hi-icon-bar ">
+                <i class="icon-notificaciones hi-hover-opacity" onclick="openMenu(event, 'notificaciones')"> <p >Notificaciones</p></i>
+                <i class="icon-viajes-one hi-hover-opacity" onclick="openMenu(event, 'viajes')"><p >Viajes</p></i>
+                <i class="icon-experiencias hi-hover-opacity" onclick="openMenu(event, 'experiencias')"> <p >Experiencias</p></i>
+                <i class="icon-calendario hi-hover-opacity" onclick="openMenu(event, 'calendario')"> <p >Calendario</p></i>
+            </div>
+        </div> -->
+    </div>
+
+
+
+
+    <div id="x2" class="tabcontent">
+        <h1>x2</h1>
+        <p>Wow!</p>
+        <div id="b1" class="tabcontent3">
+            <h3>b1</h3>
+            <p>Holis!</p>
+        </div>
+
+        <div id="b2" class="tabcontent3">
+            <h3>b2</h3>
+            <p>Hey!</p>
+            <!-- le pertenece al b2-->
+            <div class="w3-container w3-content">
+                <p class="w3-opacity"><b>Today</b></p>
+                <div class="w3-panel w3-white w3-card w3-display-container">
+                    <span class="w3-display-topright w3-padding w3-hover-red">X</span>
+                    <p class="w3-text-blue"><b>email.zip</b></p>
+                    <p>https://www.w3schools.c</p>
+                    <p class="w3-text-blue">Show in folder</p>
+                </div>
+
+                <p class="w3-opacity"><b>Yesterday</b></p>
+                <div class="w3-panel w3-white w3-card w3-display-container">
+                    <span class="w3-display-topright w3-padding w3-hover-red">X</span>
+                    <p class="w3-text-blue"><b>email.zip</b></p>
+                    <p>https://www.w3schools.co</p>
+                    <p class="w3-text-blue">Show in folder</p>
+                </div>
+
+                <div class="w3-panel w3-white w3-card w3-display-container">
+                    <span class="w3-display-topright w3-padding w3-hover-red">X</span>
+                    <p class="w3-text-blue"><b>email.zip</b></p>
+                    <p>https://www.w3schools.com/libp</p>
+                    <p class="w3-text-blue">Show in folder</p>
+                </div>
+
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>Frozen</h3>
+                        <p>The response to the animations was ridiculous.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Fault in Our Stars</h3>
+                        <p>Touching, gripping and genuinely well made.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- le pertenece al b2 -->
+        </div>
+
+        <div id="b3" class="tabcontent3">
+            <h3>b3</h3>
+            <p>Hello!</p>
+            <!-- le pertenece al b3 -->
+            <div class="w3-container" style="margin-top:90px">
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>Frozen</h3>
+                        <p>The response to the animations was ridiculous.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Fault in Our Stars</h3>
+                        <p>Touching, gripping and genuinely well made.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:20%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+            <!-- le pertenece al b3-->
+        </div>
+
+        <div id="b4" class="tabcontent3">
+            <h3>b4</h3>
+            <p>Que gusto verte!</p>
+
+        </div>
+
+        <div id="b5" class="tabcontent3">
+            <h3>b5</h3>
+            <p>Super!</p>
+        </div>
+
+        <div class="tab3">
+            <button class="tablinks3" onclick="openThree(event, 'b1')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b2')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b3')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b4')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b5')"><span class="icon-calendario" aria-hidden="true"></span></button>
+        </div>
+    </div>
+
+
+
+
+    <div id="x3" class="tabcontent">
+        <h1>x3</h1>
+        <p>Hi!</p>
+    </div>
+
+
+
+
+    <div id="x4" class="tabcontent">
+        <h1>x4</h1>
+        <p>Hola!</p>
+    </div>
+
+
+
+    <script>
+        function openTwo(evt, twoMenu) {
+            var i, tabcontent, tablinks2;
+            tabcontent = document.getElementsByClassName("tabcontent2");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks2 = document.getElementsByClassName("tablinks2");
+            for (i = 0; i < tablinks2.length; i++) {
+                tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+            }
+            document.getElementById(twoMenu).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+    <script>
+        function openOne(oneMenu, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(oneMenu).style.display = "initial";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+        function openThree(evt, ThreeMenu) {
+            var i, tabcontent, tablinks3;
+            tabcontent = document.getElementsByClassName("tabcontent3");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks3 = document.getElementsByClassName("tablinks3");
+            for (i = 0; i < tablinks3.length; i++) {
+                tablinks3[i].className = tablinks3[i].className.replace(" active", "");
+            }
+            document.getElementById(ThreeMenu).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

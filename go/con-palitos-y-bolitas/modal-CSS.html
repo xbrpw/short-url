@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modal | Pokemon inicial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Encoding" content="gzip" />
+    <meta http-equiv="Vary" content="Accept-Encoding" />
+    <meta http-equiv="Cache-Control" content="max-age=600" />
+
+    <style>
+        html {
+            padding-top: 50px;
+            font-family: "Raleway", Helvetica, arial, sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+        }
+        /*-------------------------------------------------------------------*/
+        
+        .espacio-del-modal {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .modal-input {
+            display: none;
+        }
+        
+        .modal-input:checked+.modal {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .modal {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            padding: 3rem 2rem;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            background-color: #fff;
+        }
+        
+        .modal-close {
+            position: absolute;
+            right: 10%;
+            font-size: 3rem;
+            line-height: 2;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    <header class="header">
+        <h1>Pokémon Sol y Luna - Rowlet, Litten y Popplio iniciales</h1>
+        <h2> ¿Cuál escoges?</h2>
+        <p>Ejemplo de como hacer en CSS</p>
+    </header>
+    <br> <br>
+
+    <div class="espacio-del-modal">
+        <p>
+            <label for="modal-1" style="  text-align: center;"><img src="https://ae01.alicdn.com/kf/HTB1zREHgBDH8KJjSszcq6zDTFXaN/7CM-20-piezas-BOHS-al-por-mayor-pokebola-de-juguete.jpg_Q90.jpg_.webp" width="70" height="auto" alt="Pokebola"></label>
+
+            <label for="modal-2"><b><img src="https://ae01.alicdn.com/kf/HTB1zREHgBDH8KJjSszcq6zDTFXaN/7CM-20-piezas-BOHS-al-por-mayor-pokebola-de-juguete.jpg_Q90.jpg_.webp" width="70" height="auto" alt="Pokebola"></b></label>
+
+            <label for="modal-3"><img src="https://ae01.alicdn.com/kf/HTB1zREHgBDH8KJjSszcq6zDTFXaN/7CM-20-piezas-BOHS-al-por-mayor-pokebola-de-juguete.jpg_Q90.jpg_.webp" width="70" height="auto" alt="Pokebola"></label>
+        </p>
+    </div>
+
+
+    <input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-1" class="modal-close">&times;</label>
+        <div class="content">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/722.png" width="300" height="auto" alt="Pokebola"> </div>
+    </div>
+
+    <input id="modal-2" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal"><br><br>
+        <label for="modal-2" class="modal-close">&times;</label>
+        <div class="content">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png" width="300" height="auto" alt="Pokebola"> </div>
+    </div>
+    </div>
+
+    <input id="modal-3" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-3" class="modal-close">&times;</label>
+        <div class="content">
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/158.png" width="300" height="auto" alt="Pokebola"> </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>

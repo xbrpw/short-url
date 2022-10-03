@@ -12,11 +12,10 @@
   
   <!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
   <html lang="es-MX" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" >  <head>
-  <title>New Index Dash </title><link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" /> 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>New Index Dash </title><link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />   
   <link rel="stylesheet" href="css/dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-  <link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css">   
+  <link rel="stylesheet" href="eevee.css">   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
   <link rel='dns-prefetch' href="https://fonts.googleapis.com">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -287,6 +286,7 @@
       <a href="api/para-notas-rapidas/index.html" target="notas-rapidas"><img src="assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Notas Rápidas" onclick="openNavRight()"></a>
 
       <a href="#pomodoro"  data-bs-toggle="modal" data-bs-target="#myModalScrolla"><i class="fa fa-stopwatch" ></i> <span id="counter" >25:00</span>  </a>    
+      <a href="#pomodoro"  data-bs-toggle="modal" data-bs-target="#myModalMDS"><i class="fa fa-at" ></i> <span id="counter" >MDS</span>  </a>    
 
       <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa fa-user  "></i> Herramientas</a>
@@ -411,6 +411,7 @@
       </ul>   
       </templete>
     
+
       <!-- myModalScrolla -->
       <div class="modal" id="myModalScrolla">
         <div class="modal-dialog modal-dialog-scrollable">
@@ -534,10 +535,35 @@
         </footer></span><b onclick="myFunctionIsMostrar()" id="myBtn-verMas"  class="tes-btn tes-btn--primary-dark" data-mz="true" style="color:#063a5f"> Ver más</b>   
   </div>
 
+  
+  <!-- MDS -->
+  <div class="modal" id="myModalMDS">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">  
+        <!-- Modal Header -->
+        <div class="modal-header">        
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+                  
+          <div w3-include-html="ms.html"></div>
+
+
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">          
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button> 
+        </div>
+      </div>    
+    </div> 
+  </div><!-- /"MDS" -->    
+
+
   <script src="js/dashboard.js"></script><!-- Para formulario de wp <script src='js/mrofppastaw.js'></script> -->
   <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/pomodoro.js"></script>
+  <script src="js/pomodoro.js"></script><!-- <div w3-include-html="content.html"></div> -->
   <script>w3CodeColor();</script> <script>includeHTML();</script>   <!-- Para formulario de wp <script src='js/mrofppastaw.js'></script> -->
   <script>function openNavRight() {document.getElementById("mysidenavRightRight").style.width = "400px";}function closeNavRight() {document.getElementById("mysidenavRightRight").style.width = "0";}</script>
   <script>function openNavXbr() {document.getElementById("mySidenavXbr").style.width = "250px";document.getElementById("mainXbr").style.marginLeft = "250px";} function closeNavXbr() {document.getElementById("mySidenavXbr").style.width = "0";document.getElementById("mainXbr").style.marginLeft= "0";}</script>

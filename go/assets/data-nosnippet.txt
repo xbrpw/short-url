@@ -1,0 +1,2 @@
+<h3>data-nosnippet</h3>
+<textarea><span data-nosnippet></span></textarea>

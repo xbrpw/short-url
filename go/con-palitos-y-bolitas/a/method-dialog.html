@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../../eevee.css">
+
+<templete>
+    <!-- Simple pop-up dialog box, containing a form -->
+    <dialog id="favDialog">
+        <form method="dialog">
+            <section>
+                <p><label for="favAnimal">Personaje de Dragon Ball Favorito:</label>
+                    <select id="favAnimal">
+    <option></option>
+    <option>Goku alias Kakaroto</option>
+    <option>Vegeta</option>
+    <option>Piccolo</option>
+  </select></p>
+            </section>
+            <menu>
+                <button id="cancel" type="reset">Cancelar</button>
+                <button type="submit">Confirmar</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <menu>
+        <button id="updateDetails">Update details</button>
+    </menu>
+
+    <script>
+        (function() {
+            var updateButton = document.getElementById('updateDetails');
+            var cancelButton = document.getElementById('cancel');
+            var favDialog = document.getElementById('favDialog');
+
+            // Update button opens a modal dialog
+            updateButton.addEventListener('click', function() {
+                favDialog.showModal();
+            });
+
+            // Form cancel button closes the dialog box
+            cancelButton.addEventListener('click', function() {
+                favDialog.close();
+            });
+
+        })();
+    </script>
+</templete>

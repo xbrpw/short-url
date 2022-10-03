@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Star Wars Dark/Light Toggle w GSAP 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button class="menu-btn" data-toggled='false'></button>
+<nav>
+  <ul class="menu-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Jedi</a></li>
+    <li><a href="#">Sith</a></li>
+    <li><a href="#">The Saga</a></li>
+  </ul>
+  <ul class="social-links">
+    <li>
+      <a href="#">
+        <svg class="social-icon">
+          <use xlink:href="#fb">
+        </svg>
+      </a>
+    </li>
+    <li><a href="#"><svg class="social-icon">
+  <use xlink:href="#ig">
+</svg></a></li>
+  </ul>
+</nav>
+<main>
+  <h1 class="title">CHOOSE YOUR SIDE</h1>
+  <div class="container">
+    <div class="bg">
+      <svg version="1.1" id="SVGBG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 450 450" xml:space="preserve">
+        <defs>
+          <clipPath id="bgClip">
+            <circle cx="225" cy="225" r="225"/>
+          </clipPath>
+          <linearGradient id="bgGrad" gradientUnits="userSpaceOnUse" x1="225" y1="450" x2="225" y2="0">
+            <stop  offset="0" style="stop-color:#161616"/>
+            <stop  offset="0.50" style="stop-color:#161616"/>
+            <stop  offset="1" style="stop-color:#000000"/>
+          </linearGradient>
+          <clipPath id="windowClip">
+            <polygon points="-73.383,296.558 -79.585,306.228 -52.608,306.228 -51.515,304.71 -44.042,301.223 -73.383,296.558"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#bgClip)">  
+        <circle fill="url(#bgGrad)" cx="225" cy="225" r="225"/>
+        <g id="stars">
+          <circle fill="#FFFFFF" cx="311" cy="112" r="3"/>
+          <circle fill="#FFFFFF" cx="110" cy="168" r="3"/>
+          <circle fill="#FFFFFF" cx="194" cy="58" r="3"/>
+          <circle fill="#FFFFFF" cx="76" cy="291" r="3"/>
+          <circle fill="#FFFFFF" cx="374" cy="260" r="3"/>
+          <circle fill="#FFFFFF" cx="404" cy="189" r="3"/>
+          <circle fill="#FFFFFF" cx="22" cy="211" r="3"/>
+          <circle fill="#FFFFFF" cx="367" cy="79" r="3"/>
+          <circle fill="#FFFFFF" cx="79" cy="89" r="3"/>
+          <circle fill="#FFFFFF" cx="332.007" cy="51.475" r="3.475"/>
+          <circle fill="#FFFFFF" cx="399.266" cy="261.201" r="4.633"/>
+          <circle fill="#FFFFFF" cx="53.633" cy="185.367" r="4.633"/>
+          <circle fill="#FFFFFF" cx="126.993" cy="85.18" r="3.475"/>
+          <circle fill="#FFFFFF" cx="-97" cy="112" r="3"/>
+          <circle fill="#FFFFFF" cx="-298" cy="168" r="3"/>
+          <circle fill="#FFFFFF" cx="-332" cy="291" r="3"/>
+          <circle fill="#FFFFFF" cx="-186.677" cy="111.124" r="3"/>
+          <circle fill="#FFFFFF" cx="-34" cy="260" r="3"/>
+          <circle fill="#FFFFFF" cx="-4" cy="189" r="3"/>
+          <circle fill="#FFFFFF" cx="-386" cy="211" r="3"/>
+          <circle fill="#FFFFFF" cx="-41" cy="79" r="3"/>
+          <circle fill="#FFFFFF" cx="-329" cy="89" r="3"/>
+          <circle fill="#FFFFFF" cx="-75.993" cy="51.475" r="3.475"/>
+          <circle fill="#FFFFFF" cx="-8.734" cy="261.201" r="4.633"/>
+          <circle fill="#FFFFFF" cx="-354.367" cy="185.367" r="4.633"/>
+          <circle fill="#FFFFFF" cx="-84.367" cy="195.367" r="4.633"/>
+          <circle fill="#FFFFFF" cx="-128" cy="243.5" r="3"/>
+          <circle fill="#FFFFFF" cx="-179" cy="189.5" r="3"/>
+          <circle fill="#FFFFFF" cx="-235.367" cy="206.867" r="4.633"/>
+          <circle fill="#FFFFFF" cx="-281.007" cy="85.18" r="3.475"/>
+        </g>  
+        <g id="tf">
+        <polygon fill="#0C0C0C" stroke="#D1D1D1" stroke-width="3.7213" stroke-miterlimit="10" points="390.479,201.608 337.255,201.608 
+        326.078,155.238 337.255,109 390.479,109 401.789,155.238"/>
+          <line fill="#0C0C0C" stroke="#D1D1D1" stroke-width="3.7213" stroke-miterlimit="10" x1="326.478" y1="155.304" x2="401.522" y2="155.304"/>
+          <line fill="#0C0C0C" stroke="#D1D1D1" stroke-width="3.7213" stroke-miterlimit="10" x1="337.255" y1="109" x2="390.479" y2="201.608"/>
+          <line fill="#0C0C0C" stroke="#D1D1D1" stroke-width="3.7213" stroke-miterlimit="10" x1="390.479" y1="109" x2="337.255" y2="201.608"/>
+        <circle fill="#D1D1D1" stroke="#0C0C0C" stroke-width="3.7213" stroke-miterlimit="10" cx="363.867" cy="155.304" r="8.782"/>
+        </g>
+        <g id="xw">
+            <polygon fill="#F5F1F3" points="-125.82,328.879 -125.82,328.159 -93.415,328.159 -93.196,328.159 -72.103,328.159 
+                -72.103,328.82 -66.738,328.82 -64.775,326.879 -61.406,326.879 -61.406,327.596 -64.191,327.622 -65.146,328.82 -55.636,328.82 
+                -55.636,329.851 -65.146,329.851 -64.191,331.049 -61.406,331.076 -61.406,331.792 -64.775,331.792 -66.738,329.851 
+                -72.103,329.851 -72.103,330.386 -93.196,330.386 -93.196,331.201 -125.82,331.201 -125.82,331.122 -127.482,331.122 
+                -127.482,328.879"/>
+            <polygon fill="#F5F1F3" points="-105.272,285.334 -92.242,285.334 -91.637,285.893 -89.083,285.893 -89.083,286.042 
+                -73.249,286.042 -73.249,286.059 -70.539,286.059 -69.518,285.049 -67.766,285.049 -67.766,285.422 -69.215,285.436 
+                -69.711,286.059 -64.766,286.059 -64.766,286.594 -69.711,286.594 -69.215,287.217 -67.766,287.231 -67.766,287.604 
+                -69.518,287.604 -70.539,286.594 -73.249,286.594 -73.249,286.612 -89.083,286.612 -89.083,286.883 -90.564,286.883 
+                -90.288,287.138 -90.288,287.89 -106.424,287.89 -106.424,286.612"/>
+            <polygon fill="#CECCCD" points="-106.312,286.477 -111.809,291.827 -88.42,291.827 -92.118,286.477"/>
+            <polygon fill="#F5F1F3" points="-100.259,329.566 -112.449,329.566 -114.277,327.762 -114.277,327.011 -99.181,327.011 
+                -99.181,328.289"/>
+            <polyline fill="none" stroke="#F54F44" stroke-miterlimit="10" points="-107.037,290.784 -104.93,287.52 -92.483,287.52"/>
+            <polygon fill="#F5F1F3" points="-84.599,316.618 -82.046,316.618 -82.046,316.766 -66.212,316.766 -66.212,316.783 
+                -63.501,316.783 -62.481,315.774 -60.729,315.774 -60.729,316.147 -62.177,316.16 -62.674,316.783 -57.729,316.783 
+                -57.729,317.319 -62.674,317.319 -62.177,317.942 -60.729,317.956 -60.729,318.328 -62.481,318.328 -63.501,317.319 
+                -66.212,317.319 -66.212,317.336 -82.046,317.336 -82.046,317.608 -84.599,317.608"/>
+            <polygon fill="#F5F1F3" points="-85.962,320.025 -83.324,317.59 -83.324,316.576 -105.1,316.576 -105.1,318.3 -103.545,320.025"/>
+            <path fill="#CECCCD" d="M-76.277,317.741"/>
+            <polygon fill="#F5F1F3" points="-73.388,296.558 -85.526,296.558 -85.526,296.063 -85.526,295.567 -85.526,295.072 
+                -88.94,291.084 -102.115,291.084 -110.048,283.43 -121.443,283.43 -125.989,293.09 -140.02,293.09 -140.02,298.292 
+                -132.341,298.292 -132.341,302.008 -125.653,302.008 -126.778,302.76 -126.815,318.356 -138.782,318.356 -138.782,323.558 
+                -118.718,323.558 -118.718,318.852 -86.764,318.852 -86.764,316.622 -82.189,316.622 -82.268,315.042 -75.618,314.888 
+                -42.718,314.141 -25.334,313.65 -17.655,305.476"/>
+            <polygon fill="#F54F44" points="-17.655,309.875 -84.962,309.875 -87.018,306.228 -17.655,306.228"/>
+            <polygon fill="#9A9798" points="-17.027,304.71 -25.334,313.65 -4.031,312.907 6.124,309.191"/>
+            <polygon fill="#2E292A" points="-79.585,296.558 -79.585,306.228 -52.798,306.228 -51.705,304.71 -44.231,301.223 -73.388,296.558"/>
+            <g clip-path="url(#windowClip)">
+                <line  fill="none"stroke="#F5F1F3" stroke-miterlimit="10" x1="-73.805" y1="296.402" x2="-50.287" y2="305.243"/>
+            </g>
+            <polygon fill="#F5F1F3" points="-79.607,306.228 -79.607,306.228 -79.607,296.558 -73.383,296.558"/>
+            <polygon fill="#F5F1F3" points="-124.991,281.108 -124.991,280.388 -92.586,280.388 -92.367,280.388 -71.275,280.388 
+                -71.275,280.951 -64.677,280.951 -62.262,279.01 -58.119,279.01 -58.119,279.726 -61.545,279.753 -62.719,280.951 
+                -51.024,280.951 -51.024,281.981 -62.719,281.981 -61.545,283.18 -58.119,283.206 -58.119,283.922 -62.262,283.922 
+                -64.677,281.981 -71.275,281.981 -71.275,282.615 -92.367,282.615 -92.367,283.43 -124.991,283.43 -124.991,283.352 
+                -126.653,283.352 -126.653,281.108"/>
+            <polygon fill="#D1D1D1" points="-88.899,311.699 -88.905,311.702 -88.883,311.701 -99.149,327.521 -114.259,327.521 
+                -114.259,325.787 -118.617,311.699"/>
+            <polygon fill="#8E8E8E" points="-118.617,311.635 -114.259,325.802 -114.259,325.787 -99.056,325.787 -93.889,318.426 
+                -88.883,311.701 -99.149,327.521 -114.259,327.519"/>
+            <polygon fill="#CECCCD" points="-135.622,317.68 -135.622,324.316 -141.87,323.584 -141.87,318.611"/>
+            <polygon fill="#CECCCD" points="-137.683,292.511 -137.683,299.148 -143.932,298.415 -143.932,293.443"/>
+            <line fill="none" stroke="#F54F44" stroke-miterlimit="10" x1="-115.18" y1="315.774" x2="-113.249" y2="323.387"/>
+          <polygon fill="#F54F44" points="-113.564,324.422 -100.203,324.422 -96.975,319.811 -114.722,319.811"/>
+          <polygon fill="#D1D1D1" points="-94.238,298.467 -110.048,283.43 -121.443,283.43 -128.56,298.467"/>
+          <g id="motor">
+            <polygon fill="#F54F44" points="-143.932,297.45 -143.932,294.418 -148.965,296.082"/>
+            <polygon fill="#F54F44" points="-141.87,322.638 -141.87,319.504 -146.903,321.179"/>
+          </g>
+        </g>
+        </svg>
+      <div class="lightsaber">
+        <svg version="1.1" class="saber" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 77 394" xml:space="preserve">
+            <defs>
+            <filter id="saberGlow" x="-150%" y="-150%" width="500%" height="500%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feGaussianBlur stdDeviation="5 10" x="0%" y="0%" width="300%" height="300%" in="composite1" edgeMode="none" result="blur1"/>
+            </filter>  
+            <linearGradient id="green" gradientUnits="userSpaceOnUse" x1="30.3678" y1="197.6404" x2="46.8587" y2="197.6404">
+              <stop  offset="0" style="stop-color:#1C7C49"/>
+              <stop  offset="0.0217" style="stop-color:#298553"/>
+              <stop  offset="0.1168" style="stop-color:#5BAA7A"/>
+              <stop  offset="0.2106" style="stop-color:#85C99B"/>
+              <stop  offset="0.3013" style="stop-color:#A6E0B4"/>
+              <stop  offset="0.3881" style="stop-color:#BDF1C6"/>
+              <stop  offset="0.4692" style="stop-color:#CBFBD1"/>
+              <stop  offset="0.5391" style="stop-color:#D0FFD5"/>
+              <stop  offset="0.596" style="stop-color:#CBFBD1"/>
+              <stop  offset="0.666" style="stop-color:#BCF0C5"/>
+              <stop  offset="0.7431" style="stop-color:#A3DEB2"/>
+              <stop  offset="0.8251" style="stop-color:#80C496"/>
+              <stop  offset="0.911" style="stop-color:#53A474"/>
+              <stop  offset="0.9991" style="stop-color:#1D7C49"/>
+              <stop  offset="1" style="stop-color:#1C7C49"/>
+            </linearGradient>
+            <linearGradient id="red" gradientUnits="userSpaceOnUse" x1="30.3678" y1="212.6404" x2="46.8587" y2="212.6404">
+              <stop  offset="0" style="stop-color:#A56767"/>
+              <stop  offset="0.0546" style="stop-color:#B47777"/>
+              <stop  offset="0.1877" style="stop-color:#D39797"/>
+              <stop  offset="0.3159" style="stop-color:#E9AEAE"/>
+              <stop  offset="0.4358" style="stop-color:#F6BCBC"/>
+              <stop  offset="0.5391" style="stop-color:#FBC1C1"/>
+              <stop  offset="0.6226" style="stop-color:#F6BCBC"/>
+              <stop  offset="0.7255" style="stop-color:#E7ADAD"/>
+              <stop  offset="0.8385" style="stop-color:#D09494"/>
+              <stop  offset="0.958" style="stop-color:#AE7171"/>
+              <stop  offset="1" style="stop-color:#A16363"/>
+            </linearGradient>    
+               <clipPath id="saberClip">
+                  <path d="M37.811,385.282c0,0,5.702,0.045,8.435-3.911c0,0,0.797-1.053,0.681-2.505
+                  c-0.116-1.452-0.05-341.14-0.05-341.14h-16.51v342.273c0,0-0.432,1.773,1.301,3.398c1.137,1.066,2.837,1.619,4.384,1.807
+                  C36.534,385.263,37.172,385.285,37.811,385.282z"/>
+               </clipPath>  
+            </defs>
+            <g filter="url(#saberGlow)" id="glow">  
+              <path fill="#964343" d="M38.51,385.237L38.51,385.237c-5.636,0-10.51-1.512-10.51-5.93l0.304-327.272
+              c0-4.418,4.569-13,10.206-13h0c5.636,0,10.206,8.582,10.206,13L49,379.294C48.346,381.29,44.054,385.051,38.51,385.237z"/>
+            </g>
+              <path id="saberFill" clip-path="url(#saberClip)" fill="url(#red)" d="M46.859,386.246H30.368V52.28c0-4.554,2.632-13.28,8.245-13.245h0C44,39,46.859,47.726,46.859,52.28V386.246z"/>
+          </svg>
+        <img class="saber-base" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/saber-handle.png">
+      </div>
+    </div>
+    <div class="kylo"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/star%20wars2.png"></div>
+    <div class="luke"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/star%20wars3.png"></div>
+  </div>
+  <button class="confirm-btn">Confirm</button
+</main>  
+    
+<audio id="sound">
+  <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/590856/saber-sound.wav" type="audio/wav">
+</audio>   
+  
+<svg id="icons" style="display:none">
+      <symbol id="ig" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M7 1c-1.657 0-3.158 0.673-4.243 1.757s-1.757 2.586-1.757 4.243v10c0 1.657 0.673 3.158 1.757 4.243s2.586 1.757 
+                 4.243 1.757h10c1.657 0 3.158-0.673 4.243-1.757s1.757-2.586 1.757-4.243v-10c0-1.657-0.673-3.158-1.757-4.243s-2.586-1.757-4.243-1.757zM7 
+                 3h10c1.105 0 2.103 0.447 2.828 1.172s1.172 1.723 1.172 2.828v10c0 1.105-0.447 2.103-1.172 2.828s-1.723 1.172-2.828 1.172h-10c-1.105 
+                 0-2.103-0.447-2.828-1.172s-1.172-1.723-1.172-2.828v-10c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172zM16.989 
+                 11.223c-0.15-0.972-0.571-1.857-1.194-2.567-0.754-0.861-1.804-1.465-3.009-1.644-0.464-0.074-0.97-0.077-1.477-0.002-1.366 0.202-2.521 
+                 0.941-3.282 1.967s-1.133 2.347-0.93 3.712 0.941 2.521 1.967 3.282 2.347 1.133 3.712 0.93 2.521-0.941 3.282-1.967 1.133-2.347 0.93-3.712zM15.011 
+                 11.517c0.122 0.82-0.1 1.609-0.558 2.227s-1.15 1.059-1.969 1.18-1.609-0.1-2.227-0.558-1.059-1.15-1.18-1.969 0.1-1.609 0.558-2.227 1.15-1.059 
+                 1.969-1.18c0.313-0.046 0.615-0.042 0.87-0.002 0.74 0.11 1.366 0.47 1.818 0.986 0.375 0.428 0.63 0.963 0.72 1.543zM18.5 6.5c0-0.552-0.448-1-1-1s-1 0.448-1 1 0.448 
+                 1 1 1 1-0.448 1-1z"></path>
+      </symbol>
+      <symbol id="fb" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M17 3v2h-2c-0.552 0-1.053 0.225-1.414 0.586s-0.586 0.862-0.586 1.414v3c0 0.552 0.448 
+                 1 1 1h2.719l-0.5 2h-2.219c-0.552 0-1 0.448-1 1v7h-2v-7c0-0.552-0.448-1-1-1h-2v-2h2c0.552 0 1-0.448 
+                 1-1v-3c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172zM18 1h-3c-1.657 0-3.158 0.673-4.243 
+                 1.757s-1.757 2.586-1.757 4.243v2h-2c-0.552 0-1 0.448-1 1v4c0 0.552 0.448 1 1 1h2v7c0 0.552 0.448 1
+                 1 1h4c0.552 0 1-0.448 1-1v-7h2c0.466 0 
+                 0.858-0.319 0.97-0.757l1-4c0.134-0.536-0.192-1.079-0.728-1.213-0.083-0.021-0.167-0.031-0.242-0.030h-3v-2h3c0.552
+                 0 1-0.448 1-1v-4c0-0.552-0.448-1-1-1z"></path>
+      </symbol>
+    </svg>  
+<a href="https://greensock.com/"><img class="gsap-3-logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-3-logo.svg" width="150"/></a>
+<!-- partial -->
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable3.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

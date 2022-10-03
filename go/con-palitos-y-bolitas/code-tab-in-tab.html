@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta name="description" content="Codigo Templete de Ejemplo y paso a paso cómo hacer en HTML y Javascript unas Tabs Codigo ejemplo de Tabs en HTML y Javascript con un 100% Score en lighthouse">
+    <link rel="canonical" href="https://hihello.monster/templetes/tabs.html">
+    <link rel="preconnect " href="https://fonts.gstatic.com ">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap " rel="stylesheet ">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap " rel="stylesheet ">
+    <link href="https://www.xiiber.com/lib/fonts/xiibicon.woff " rel="stylesheet ">
+    <link href="https://www.xiiber.com/css/xiibicon.css " rel="stylesheet ">
+
+    <link rel=" icon " href="https://www.xiiber.com/favicon.png " sizes="192x192 ">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel='prefetch' href="https://hihello.monster/xiibicon/fonts/xiibicon.eot">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='prefetch' href="https://hihello.monster/xiibicon/fonts/xiibicon.eot">
+    <link rel="preload" href="https://hihello.monster/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://hihello.monster/xiibicon/style.css"></noscript>
+    <link data-no-async=”1″ rel="stylesheet" href=https://hihello.monster/ "xiibicon/style.css" media="all">
+    <link rel="stylesheet" href="tab-in-tab-hi-style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js" async></script>
+
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+            font-family: Arial;
+            box-sizing: border-box
+        }
+        
+        .visuallyhidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        
+        .taptop {
+            overflow: hidden;
+            background-color: #f1f1f1;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            margin: 0;
+        }
+        
+        .tablink {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin: 0;
+            width: 20%;
+            text-align: center;
+            padding: 6px 0px;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        
+        .tablink:hover {
+            background-color: rgb(0, 0, 0);
+            font-size: 24.5px;
+        }
+        
+        .tablink:active {
+            background-color: rgb(0, 0, 0);
+            font-weight: bold;
+            color: rgb(100, 0, 0);
+            font-size: 24px;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            color: black;
+            display: none;
+            margin: 0;
+        }
+    </style>
+    <style>
+        /* Style the tab */
+        
+        .tab2 {
+            overflow: hidden;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding-top: 10px;
+            padding-bottom: 0px;
+            text-align: center;
+            line-height: 0;
+            transition: all 0.3s ease;
+        }
+        /* Style the buttons inside the tab */
+        
+        .tab2 button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 20%;
+            text-align: center;
+            padding: 10px 0;
+            transition: all 0.3s ease;
+            color: #555;
+            font-size: 28px;
+            transition: all 0.3s ease;
+            font-weight: normal;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab2 button:hover {
+            background-color: rgb(255, 255, 255);
+            color: #0b3144;
+            font-weight: bold;
+        }
+        /* Create an active/current tablink class */
+        
+        .tab2 button.active {
+            background-color: rgb(255, 255, 255);
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            font-size: 28.5px;
+        }
+        /* Style the tab content */
+        
+        .tabcontent2 {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+            color: rgb(0, 0, 0);
+            transition: all 0.3s ease;
+        }
+    </style>
+    <style>
+        /* Style the tab */
+        
+        .tab3 {
+            overflow: hidden;
+            background-color: #948fdf;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Style the buttons inside the tab */
+        
+        .tab3 button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 20%;
+            text-align: center;
+            padding: 12px 0;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab3 button:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        
+        .tab3 button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent3 {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            font-size: 18px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="taptop">
+        <button class="tablink" onclick="openOne('x1', this, 'black')" id="defaultOpen"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x2', this, 'black')"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x3', this, 'black')"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x4', this, 'black')"><span class="icon-home" aria-hidden="true"></span></button>
+        <button class="tablink" onclick="openOne('x5', this, 'black')"><span class="icon-menu" aria-hidden="true"></span></button>
+    </div>
+
+    <div id="x1" class="tabcontent">
+        <br>
+        <br>
+        <h3>x1 b1</h3>
+        <p>Bienvenido!</p>
+        <!-- inicio -->
+        <div id="a1" class="tabcontent2" id="defaultOpen">
+            <br>
+            <br>
+            <h3>a1</h3>
+            <p>Gracias! era home-babajo</p>
+        </div>
+
+        <div id="a2" class="tabcontent2">
+            <h3>a2</h3>
+            <p>Welcome!</p>
+        </div>
+
+        <div id="a3" class="tabcontent2">
+            <h3>a3</h3>
+            <p>En horabuena!</p>
+        </div>
+
+        <div id="a4" class="tabcontent2">
+            <h3>a4</h3>
+            <p>Que gusto!</p>
+        </div>
+
+        <div id="a5" class="tabcontent2">
+            <h3>a5</h3>
+            <p>Saludos!</p>
+            <!-- de aqui -->
+            <div class="pd-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+
+
+                            <div class="slideshow-container">
+
+                                <div class="mySlidesViaje fade">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+
+                                </div>
+
+                                <div class="mySlidesViaje fade">
+                                    <div class="numbertext">2 / 3</div>
+                                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+
+                                </div>
+
+                                <div class="mySlidesViaje fade">
+                                    <div class="numbertext">3 / 3</div>
+                                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+                                </div>
+
+                            </div>
+                            <br>
+
+                            <div style="text-align:center">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 w3-card-2 ">
+                            <div class="product-dtl ">
+                                <div class="product-info "><br>
+                                    <small>Puerto Vallarta</small>
+                                    <div class="product-name ">Viaje en grupo</div>
+                                    <div class="reviews-counter ">
+                                        <div class="rate ">
+                                            <input type="radio " id="star6 " name="rate " value="6 " checked />
+                                            <label for="star6 " title=" ">6 stars</label>
+                                            <input type="radio " id="star5 " name="rate " value="5 " checked />
+                                            <label for="star5 " title=" ">5 stars</label>
+                                            <input type="radio " id="star4 " name="rate " value="4 " checked />
+                                            <label for="star4 " title=" ">4 stars</label>
+                                            <input type="radio " id="star3 " name="rate " value="3 " checked/>
+                                            <label for="star3 " title=" ">3 stars</label>
+                                            <input type="radio " id="star2 " name="rate " value="2 " checked/>
+                                            <label for="star2 " title=" ">2 stars</label>
+                                            <input type="radio " name="rate " value="1 " checked />
+                                        </div>
+                                        <span>.</span>
+                                    </div>
+                                    <br>
+                                    <div class="product-price-discount " style="font-size:14px; "><span>Precio por persona</span></div>
+                                    <div class="product-price-discount " style="font-size:24px; "><span> $3,000</span><span class="line-through ">$3,500</span></div>
+                                    <div class="product-price-discount " style="font-size:12px; "><span>En ocupación cuádruple </span></div>
+                                    <hr>
+                                    <p style="font-size: medium; ">Viaje en grupo a Puerto Vallarta. <br>Incluye transporte redondo y hospedaje <br>Reserva con anticipación, cupo limitado. Aparta con el 50% y liquida el día de viaje</p>
+                                    <br>
+                                    <a href="#info "> <button class="buttonb w3-border w3-round-large "><span><b>Reservar</b> </span>                     </button></a><br><br>
+                                    <button onclick="document.getElementById( 'id01').style.display='block' " class="buttonb w3-border w3-round-large "><span><b>Recibe avisos de los próximos viajes</b></button>
+                                    <!-- modal -->
+                                    <div id="id01 " class="w3-modal ">
+                                        <div class="w3-modal-content ">
+                                            <span onclick="document.getElementById( 'id01').style.display='none' " class="w3-button w3-display-topright ">&times;</span>
+                                            <iframe src="https://www.xiiber.com/viajes/puertovallarta-xiib.html " style="width:100%;height:550px " frameborder="0 " style="border:0; " title=" Notificaciones para los próximos viajes "></iframe>
+                                        </div>
+                                    </div>
+                                    <!-- fin modal -->
+                                    <br><br>
+                                    <b>Medios de pago</b><br><br>
+                                    <img src="https://www.xiiber.com/img/pagos-aceptados.png " style="width: 70%; " alt="Opciones de pago " title="Opciones de pago: Visa, Mastercard, American Express, Clip, Mercado Pago, Banco Azteca "><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info-tabs">
+
+                        <div class="tabs">
+                            <input type="radio" name="tab" id="Detalles" checked>
+                            <label for="Detalles">Detalles</label>
+                            <div>
+                                <p> Abordaje <br>
+                                    <br> 🕑 Puedes abordar el bus desde las 8:30am.
+                                    <br> Salimos a las 9:00 AM en punto Abordaje
+                                    <br> <br>🚩 Puedes abordar el bus desde las 8:00pm.
+                                    <br> Salimos a las 8:30 PM en punto Punto de reunión CDMX En la primera gasolinera que esta saliendo del metro General Anaya, dirección Taxqueña, siguiendo el sentido de los carros.</p>
+                            </div>
+                            <input type="radio" name="tab" id="Mecanica">
+                            <label for="Mecanica">
+                Mecánica</label>
+                            <div>
+                                <br> Curabitur pretium consectetur placerat. Quisque venenatis magna aliquam, vulputate ligula in, maximus purus. Aliquam molestie interdum congue. Cras eget augue vel lectus faucibus ornare in eget augue. Maecenas sodales
+                                arcu eget sapien iaculis, id faucibus libero congue. Maecenas quis placerat dolor. Quisque aliquet eget dui convallis pulvinar. Donec sed tortor non mauris pellentesque egestas. Pellentesque habitant morbi tristique senectus
+                                et netus et malesuada fames ac turpis egestas. Proin posuere nisi in dictum varius. Proin rutrum pharetra leo et aliquet. Nullam ultricies vitae dolor at dignissim. Curabitur dictum, purus eget tincidunt auctor, lectus
+                                turpis tempus nisl, non facilisis eros sapien ac metus. Aliquam erat volutpat.<br>
+                                <p>
+                                    <ul>
+                                        <li>Maecenas eget tortor a neque ultrices ornare.</li>
+                                        <li>Nam bibendum turpis non bibendum convallis.</li>
+                                        <li>Proin nec odio a quam vehicula hendrerit nec eu neque.</li>
+                                        <li>Donec lacinia purus eget dictum laoreet.</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>Phasellus efficitur justo quis est tristique sodales.</li>
+                                        <li>Maecenas sit amet odio tincidunt, laoreet eros ut, efficitur libero.</li>
+                                        <li>Vivamus vitae libero aliquam, feugiat sem ac, dignissim risus.</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>Integer egestas odio malesuada lacus fermentum facilisis.</li>
+                                        <li>Nunc quis nisi ac mi hendrerit porttitor quis in velit.</li>
+                                        <li>In euismod ante nec fringilla venenatis.</li>
+                                    </ul>
+                                </p>
+
+                            </div>
+
+                            <input type="radio" name="tab" id="FAQ-viaje">
+                            <label for="FAQ-viaje">
+                FAQ
+            </label>
+
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel tortor dapibus, pharetra dui congue, pellentesque ipsum. Donec vel tortor bibendum, dictum metus non, porttitor risus. Fusce sit amet venenatis nulla. Aliquam
+                                    erat volutpat. Fusce eu nunc faucibus, tincidunt erat ac, hendrerit lacus. Proin eget volutpat enim. Maecenas convallis arcu erat, a rutrum dui pretium sit amet. Morbi non egestas purus, nec pharetra justo. Donec vitae
+                                    aliquet tellus. Fusce cursus sed mauris id cursus. Suspendisse id sapien pretium, porttitor nisi a, feugiat turpis. Etiam ligula magna, gravida non mi a, sollicitudin rutrum purus. Curabitur porttitor auctor sapien
+                                    quis suscipit.</p>
+                                <br>
+
+
+                                <p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Fusce ac justo eu velit mollis facilisis sed eget ex.</li>
+                                        <li>Sed fermentum risus eu ornare pellentesque.</li>
+                                        <li>Quisque quis leo nec purus hendrerit feugiat auctor nec velit.</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>Donec elementum nisi vitae ex iaculis, fringilla pretium augue porttitor.</li>
+                                        <div style="text-align:center;font-size:14px; ">Hecho con ❤️ de ida y vuelta para ti</div>
+                                        <div style="text-align:center;font-size:12px;padding-bottom:20px; "> <a href="https://www.xiiber.com/ " target="_blank " style="color:#685758;font-weight:bold; ">Copyright © 2012-2020 Xiiber Travel</a></div>
+                                    </ul>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <style>
+                        .tabs {
+                            position: relative;
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                        
+                        .tabs>label {
+                            order: 1;
+                            display: inline-block;
+                            line-height: 50px;
+                            margin: 0;
+                            padding: 0 20px 0 20px;
+                            font-weight: bold;
+                        }
+                        
+                        .tabs>input[type="radio"] {
+                            display: none;
+                        }
+                        
+                        .tabs>input[type="radio"]:checked+label {}
+                        
+                        .tabs>input[type="radio"]:checked+label+div {
+                            display: block;
+                        }
+                        
+                        .tabs>div {
+                            order: 3;
+                            display: none;
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 15px;
+                            height: 100%;
+                        }
+                    </style>
+
+
+
+
+                    <script>
+                        // Slideshow Apartment Images
+                        var slideIndex = 1;
+                        showDivs(slideIndex);
+
+                        function plusDivs(n) {
+                            showDivs(slideIndex += n);
+                        }
+
+                        function currentDiv(n) {
+                            showDivs(slideIndex = n);
+                        }
+
+                        function showDivs(n) {
+                            var i;
+                            var x = document.getElementsByClassName("mySlides ");
+                            var dots = document.getElementsByClassName("demo ");
+                            if (n > x.length) {
+                                slideIndex = 1
+                            }
+                            if (n < 1) {
+                                slideIndex = x.length
+                            }
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none ";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" w3-opacity-off ", " ");
+                            }
+                            x[slideIndex - 1].style.display = "block ";
+                            dots[slideIndex - 1].className += " w3-opacity-off ";
+                        }
+                    </script>
+
+
+
+                </div>
+            </div>
+
+            <!-- partial -->
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlidesViaje ");
+                    var dots = document.getElementsByClassName("dot ");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none ";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active ", " ");
+                    }
+                    slides[slideIndex - 1].style.display = "block ";
+                    dots[slideIndex - 1].className += " active ";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+            </script>
+
+            <script>
+                function openViaje(evt, cityName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent ");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none ";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks ");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active ", " ");
+                    }
+                    document.getElementById(cityName).style.display = "block ";
+                    evt.currentTarget.className += " active ";
+                }
+
+                // Get the element with id="defaultOpen " and click on it
+                document.getElementById("defaultOpen ").click();
+            </script>
+            <!-- aca e-->
+        </div>
+
+
+        <div class="tab2">
+            <div class="hi-icon-bar ">
+                <button class="tablinks2" onclick="openTwo(event, 'a1')" id="defaultOpen"><span class="icon-home" aria-hidden="true" ></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a2')"><span class="icon-notificaciones hi-hover-opacity" aria-hidden="true"></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a3')"><span class="icon-viajes hi-hover-opacity" aria-hidden="true"></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a4')"><span class="icon-experiencias hi-hover-opacity" aria-hidden="true"></span></button>
+                <button class="tablinks2" onclick="openTwo(event, 'a5')"><span class="icon-calendario hi-hover-opacity" aria-hidden="true"></span></button>
+            </div>
+        </div>
+        <!-- inicio -->
+        <!-- <div id="index" class="tabcontenttop">
+        <div class="hi-footerx ">
+            <div class="hi-icon-bar ">
+                <i class="icon-notificaciones hi-hover-opacity" onclick="openMenu(event, 'notificaciones')"> <p >Notificaciones</p></i>
+                <i class="icon-viajes-one hi-hover-opacity" onclick="openMenu(event, 'viajes')"><p >Viajes</p></i>
+                <i class="icon-experiencias hi-hover-opacity" onclick="openMenu(event, 'experiencias')"> <p >Experiencias</p></i>
+                <i class="icon-calendario hi-hover-opacity" onclick="openMenu(event, 'calendario')"> <p >Calendario</p></i>
+            </div>
+        </div> -->
+    </div>
+
+
+
+
+    <div id="x2" class="tabcontent">
+        <h1>x2</h1>
+        <p>Wow!</p>
+        <div id="b1" class="tabcontent3">
+            <h3>b1</h3>
+            <p>Holis!</p>
+        </div>
+
+        <div id="b2" class="tabcontent3">
+            <h3>b2</h3>
+            <p>Hey!</p>
+            <!-- le pertenece al b2-->
+            <div class="w3-container w3-content">
+                <p class="w3-opacity"><b>Today</b></p>
+                <div class="w3-panel w3-white w3-card w3-display-container">
+                    <span class="w3-display-topright w3-padding w3-hover-red">X</span>
+                    <p class="w3-text-blue"><b>email.zip</b></p>
+                    <p>https://www.w3schools.c</p>
+                    <p class="w3-text-blue">Show in folder</p>
+                </div>
+
+                <p class="w3-opacity"><b>Yesterday</b></p>
+                <div class="w3-panel w3-white w3-card w3-display-container">
+                    <span class="w3-display-topright w3-padding w3-hover-red">X</span>
+                    <p class="w3-text-blue"><b>email.zip</b></p>
+                    <p>https://www.w3schools.co</p>
+                    <p class="w3-text-blue">Show in folder</p>
+                </div>
+
+                <div class="w3-panel w3-white w3-card w3-display-container">
+                    <span class="w3-display-topright w3-padding w3-hover-red">X</span>
+                    <p class="w3-text-blue"><b>email.zip</b></p>
+                    <p>https://www.w3schools.com/libp</p>
+                    <p class="w3-text-blue">Show in folder</p>
+                </div>
+
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>Frozen</h3>
+                        <p>The response to the animations was ridiculous.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Fault in Our Stars</h3>
+                        <p>Touching, gripping and genuinely well made.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- le pertenece al b2 -->
+        </div>
+
+        <div id="b3" class="tabcontent3">
+            <h3>b3</h3>
+            <p>Hello!</p>
+            <!-- le pertenece al b3 -->
+            <div class="w3-container" style="margin-top:90px">
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>Frozen</h3>
+                        <p>The response to the animations was ridiculous.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Fault in Our Stars</h3>
+                        <p>Touching, gripping and genuinely well made.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:20%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-cell-row">
+                    <div class="w3-cell" style="width:10%">
+                        <img class="w3-circle" src="https://www.xiiber.com/favicon.png" style="width:100%">
+                    </div>
+                    <div class="w3-cell w3-container">
+                        <h3>The Avengers</h3>
+                        <p>A huge success for Marvel and Disney.</p>
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+            <!-- le pertenece al b3-->
+        </div>
+
+        <div id="b4" class="tabcontent3">
+            <h3>b4</h3>
+            <p>Que gusto verte!</p>
+
+        </div>
+
+        <div id="b5" class="tabcontent3">
+            <h3>b5</h3>
+            <p>Super!</p>
+        </div>
+
+        <div class="tab3">
+            <button class="tablinks3" onclick="openThree(event, 'b1')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b2')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b3')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b4')"><span class="icon-calendario" aria-hidden="true"></span></button>
+            <button class="tablinks3" onclick="openThree(event, 'b5')"><span class="icon-calendario" aria-hidden="true"></span></button>
+        </div>
+    </div>
+
+
+
+
+    <div id="x3" class="tabcontent">
+        <h1>x3</h1>
+        <p>Hi!</p>
+    </div>
+
+
+
+
+    <div id="x4" class="tabcontent">
+        <h1>x4</h1>
+        <p>Hola!</p>
+    </div>
+
+
+
+    <script>
+        function openTwo(evt, twoMenu) {
+            var i, tabcontent, tablinks2;
+            tabcontent = document.getElementsByClassName("tabcontent2");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks2 = document.getElementsByClassName("tablinks2");
+            for (i = 0; i < tablinks2.length; i++) {
+                tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+            }
+            document.getElementById(twoMenu).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+    <script>
+        function openOne(oneMenu, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(oneMenu).style.display = "initial";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script>
+        function openThree(evt, ThreeMenu) {
+            var i, tabcontent, tablinks3;
+            tabcontent = document.getElementsByClassName("tabcontent3");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks3 = document.getElementsByClassName("tablinks3");
+            for (i = 0; i < tablinks3.length; i++) {
+                tablinks3[i].className = tablinks3[i].className.replace(" active", "");
+            }
+            document.getElementById(ThreeMenu).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
+
+</html>

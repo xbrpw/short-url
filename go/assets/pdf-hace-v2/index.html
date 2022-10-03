@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='bootstrap.min.css'>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" id="template_invoice">
+
+  <table id="basic-table" >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th>IP-address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="right">1</td>
+        <td>Donna</td>
+        <td>Moore</td>
+        <td>dmoore0@furl.net</td>
+        <td>China</td>
+        <td>211.56.242.221</td>
+      </tr>
+      <tr>
+        <td align="right">2</td>
+        <td>Janice</td>
+        <td>Henry</td>
+        <td>jhenry1@theatlantic.com</td>
+        <td>Ukraine</td>
+        <td>38.36.7.199</td>
+      </tr>
+      <tr>
+        <td align="right">3</td>
+        <td>Ruth</td>
+        <td>Wells</td>
+        <td>rwells2@constantcontact.com</td>
+        <td>Trinidad and Tobago</td>
+        <td>19.162.133.184</td>
+      </tr>
+      <tr>
+        <td align="right">4</td>
+        <td>Jason</td>
+        <td>Ray</td>
+        <td>jray3@psu.edu</td>
+        <td>Brazil</td>
+        <td>10.68.11.42</td>
+      </tr>
+      <tr>
+        <td align="right">5</td>
+        <td>Jane</td>
+        <td>Stephens</td>
+        <td>jstephens4@go.com</td>
+        <td>United States</td>
+        <td>47.32.129.71</td>
+      </tr>
+      <tr>
+        <td align="right">6</td>
+        <td>Adam</td>
+        <td>Nichols</td>
+        <td>anichols5@com.com</td>
+        <td>Canada</td>
+        <td>18.186.38.37</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="row">
+    <br>
+    <center>Order # 12345</center>
+    <div class="col-xs-4">
+      <div class="invoice-title">
+        <h2>Invoice</h2>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <p class="lead"></p>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-info pull-right">Download</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-6">
+      <address>
+    		<strong>Billed To:</strong><br>
+    		John Smith<br>
+    		1234 Main<br>
+    		Apt. 4B<br>
+    		Springfield, ST 54321
+    	</address>
+    </div>
+    <div class="col-xs-6 text-right">
+      <address>
+        <strong>Shipped To:</strong><br>
+    		Jane Smith<br>
+    		1234 Main<br>
+    		Apt. 4B<br>
+    		Springfield, ST 54321
+    	</address>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <address>
+    		<strong>Payment Method:</strong><br>
+    		Visa ending **** 4242<br>
+    		jsmith@email.com
+    	</address>
+    </div>
+    <div class="col-xs-6 text-right">
+      <address>
+    		<strong>Order Date:</strong><br>
+    		March 7, 2014<br><br>
+    	</address>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Order summary</strong></h3>
+        </div>
+        <div class="panel-body" >
+          <div class="table-responsive">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <td><strong>Item</strong></td>
+                  <td class="text-center"><strong>Price</strong></td>
+                  <td class="text-center"><strong>Quantity</strong></td>
+                  <td class="text-right"><strong>Totals</strong></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>BS-200</td>
+                  <td class="text-center">$10.99</td>
+                  <td class="text-center">1</td>
+                  <td class="text-right">$10.99</td>
+                </tr>
+                <tr>
+                  <td>BS-400</td>
+                  <td class="text-center">$20.00</td>
+                  <td class="text-center">3</td>
+                  <td class="text-right">$60.00</td>
+                </tr>
+                <tr>
+                  <td>BS-1000</td>
+                  <td class="text-center">$600.00</td>
+                  <td class="text-center">1</td>
+                  <td class="text-right">$600.00</td>
+                </tr>
+                <tr>
+                  <td class="thick-line"></td>
+                  <td class="thick-line"></td>
+                  <td class="thick-line text-center"><strong>Subtotal</strong></td>
+                  <td class="thick-line text-right">$670.99</td>
+                </tr>
+                <tr>
+                  <td class="no-line"></td>
+                  <td class="no-line"></td>
+                  <td class="no-line text-center"><strong>Shipping</strong></td>
+                  <td class="no-line text-right">$15</td>
+                </tr>
+                <tr>
+                  <td class="no-line"></td>
+                  <td class="no-line"></td>
+                  <td class="no-line text-center"><strong>Total</strong></td>
+                  <td class="no-line text-right">$685.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='./jquery.min.js'></script>
+<script src='./jspdf.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

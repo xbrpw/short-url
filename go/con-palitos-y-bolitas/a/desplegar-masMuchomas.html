@@ -1,0 +1,24 @@
+
+  <link rel="stylesheet" href="../../eevee.css">
+Sabes que si derrites un gran glaciar podras ver de<span id="dots">...</span>
+<span id="masMuchoMas">cerca un gran dragon. !Shala, hed shala!</span>
+<b onclick="myFunctionIsMostrar()" id="myBtn-verMas"  class="tes-btn tes-btn--primary-dark" data-mz="true">Ver más</b>
+
+    <style>#masMuchoMas {display: none;}</style>
+      <script>
+      function myFunctionIsMostrar() {
+        var dots = document.getElementById("dots");
+        var masMuchoMasText = document.getElementById("masMuchoMas");
+        var btnText = document.getElementById("myBtn-verMas");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Mostrar"; 
+          masMuchoMasText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Cerrar"; 
+          masMuchoMasText.style.display = "inline";
+        }
+      }
+      </script>

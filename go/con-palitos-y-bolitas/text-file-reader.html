@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 FileReader API Demo: Text</title>
+<style>  
+  #fileDisplayArea {
+	margin-top: 2em;
+	width: 100%;
+	overflow-x: auto;
+  }</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+
+		<h1>Text File Reader .TXT</h1>
+		<div>
+			Select a text file: 
+			<input type="file" id="fileInput">
+		</div>
+		<pre id="fileDisplayArea"><pre>
+
+
+<!-- partial -->
+  <script>
+	window.onload = function() {
+		var fileInput = document.getElementById('fileInput');
+		var fileDisplayArea = document.getElementById('fileDisplayArea');
+
+		fileInput.addEventListener('change', function(e) {
+			var file = fileInput.files[0];
+			var textType = /text.*/;
+
+			if (file.type.match(textType)) {
+				var reader = new FileReader();
+
+				reader.onload = function(e) {
+					fileDisplayArea.innerText = reader.result;
+				}
+
+				reader.readAsText(file);	
+			} else {
+				fileDisplayArea.innerText = "Archivo no soportado!"
+			}
+		});
+}
+  </script>
+
+</body>
+</html>

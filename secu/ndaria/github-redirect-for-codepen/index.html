@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - GitHub Redirect for CodePen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>a {
+    text-decoration: none;
+    color: #3F51B5;
+  }
+  
+  a:hover {
+    color: #536DFE;
+  }
+  
+  body {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    margin: 16px;
+  }
+  
+  .codebox {
+    padding: 16px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+  }
+  
+  code {
+    font-family: "Source Code Pro", monospace;
+    font-size: 12px;
+  }
+  
+  .big-github-logo {
+    
+    margin: 0 auto;
+    background-image: url(https://res.cloudinary.com/mca62511/image/upload/v1544583989/jetpack-octocat-airlock-b1d6ad7f41f88e5207896fe1f63ca30b_vlaq8r.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    width: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  
+  .instructions {
+    max-width: 600px;
+    margin: 0 auto 100px auto;
+  }
+  
+  .ts {
+    font-size: 1px;
+  }
+  
+  button {
+    cursor: pointer !important;
+    margin-bottom: 6px;
+    min-width: 150px;
+    text-transform: none!important;
+    color: #212121!important;
+    font-size: 16px!important;
+    font-weight: 500!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    line-height: 2em;
+    padding: 0 12px!important;
+    background-image: linear-gradient(#fcfcfc, #eee) !important;
+    border: 1px solid #d5d5d5!important;
+  }
+  
+  button:hover {
+    background-image: linear-gradient(#ebebeb, #dedede)!important;
+  }
+  
+  button:active {
+    background-image: linear-gradient(#cecece, #dedede)!important;
+  }
+  
+  
+  code .meth-prop {
+    color: #0097A7;
+  }
+  
+  code .object {
+    color: #D32F2F;
+  }
+  
+  code .value {
+    color: #303F9F;
+  }
+  
+  .inline-code {
+    font-family: monospace;
+    background: #e2e2e2;
+    padding: 0 4px;
+    border-radius: 4px;
+  }</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body class="fasz83s-z">
+
+  <div class="big-github-logo"></div>
+  <div class="instructions">
+
+    <p>The JavaScript of this CodePen creates a modal that redirects users to GitHub. Click on the "Show Example" button below to see an example of the modal that is created.</p>
+
+    <button onclick="gitHubRedirect.show({
+                     message: 'The CodePen version of this project is no longer being maintained. To see the most up-to-date version of this project, please visit its project page on GitHub.',
+                     title: 'This project lives on GitHub now.',
+                     url: 'https://github.com/luisangelmaciel',
+                     });">
+    Show Example
+    </button>
+
+    <p>It can be added to any project by simply linking to this CodePen's JavaScript file.</p>
+    <div class="codebox"><code>https://codepen.io/mca62511/pen/qZoPzM.js</code></div>
+
+    <p>After being added to a project, the modal can be generated in the following way.</p>
+    <div class="codebox">
+      <code> <span class="object">gitHubRedirect</span>.<span class="meth-prop">show</span>(<span class="ts"> </span><span class="value">"https://github.com/xbrpw/go"</span><span class="ts"> </span>
+      </code>
+    </div>
+    <p>If you want to supply a custom title or message, then pass an object.</p>
+    <div class="codebox">
+      <code> <span class="object">gitHubRedirect</span>.<span class="meth-prop">show</span>({<br>
+        &nbsp;&nbsp;&nbsp; <span class="meth-prop">url</span>: <span class="value">"https://example.com"</span>,<br>
+       &nbsp;&nbsp;&nbsp; <span class="meth-prop">title</span>: <span class="value">"Message Title!"</span>,<br>
+       &nbsp;&nbsp;&nbsp; <span class="meth-prop">message</span>: <span class="value">"Your message goes here."</span><br>
+       });
+      </code>
+    </div>
+    <p>Click on the button bellow to see the modal that this code would produce.</p>
+    <button onclick='gitHubRedirect.show({url: "https://example.com",title: "Message Title!",
+                     message: "Your message goes here."});'>
+      Show Example
+    </button>
+    <p>Additionally, if the version of your project is no longer working on CodePen, you can add a <span class="inline-code">canContinue</span> key with a value of <span class="inline-code">true</span> to remove the "Continue on CodePen" button. This will also update the default message to indicate that the CodePen version of the project is no longer working.</p>
+  </div>
+</body>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>

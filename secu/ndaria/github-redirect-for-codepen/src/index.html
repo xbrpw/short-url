@@ -1,0 +1,40 @@
+<body class="fasz83s-z">
+
+  <div class="big-github-logo"></div>
+  <div class="instructions">
+    <h2>GitHub Redirection</h2>
+    <p>The JavaScript of this CodePen creates a modal that redirects users to GitHub. Click on the "Show Example" button below to see an example of the modal that is created.</p>
+
+    <button onclick="gitHubRedirect.show({
+                     message: 'The CodePen version of this project is no longer being maintained. To see the most up-to-date version of this project, please visit its project page on GitHub.',
+                     title: 'This project lives on GitHub now.',
+                     url: 'https://github.com/mcaubrey',
+                     });">
+    Show Example
+    </button>
+
+    <p>It can be added to any project by simply linking to this CodePen's JavaScript file.</p>
+    <div class="codebox"><code>https://codepen.io/mca62511/pen/qZoPzM.js</code></div>
+
+    <p>After being added to a project, the modal can be generated in the following way.</p>
+    <div class="codebox">
+      <code> <span class="object">gitHubRedirect</span>.<span class="meth-prop">show</span>(<span class="ts"> </span><span class="value">"https://github.com/username/project"</span><span class="ts"> </span>);
+      </code>
+    </div>
+    <p>If you want to supply a custom title or message, then pass an object.</p>
+    <div class="codebox">
+      <code> <span class="object">gitHubRedirect</span>.<span class="meth-prop">show</span>({<br>
+        &nbsp;&nbsp;&nbsp; <span class="meth-prop">url</span>: <span class="value">"https://example.com"</span>,<br>
+       &nbsp;&nbsp;&nbsp; <span class="meth-prop">title</span>: <span class="value">"Message Title!"</span>,<br>
+       &nbsp;&nbsp;&nbsp; <span class="meth-prop">message</span>: <span class="value">"Your message goes here."</span><br>
+       });
+      </code>
+    </div>
+    <p>Click on the button bellow to see the modal that this code would produce.</p>
+    <button onclick='gitHubRedirect.show({url: "https://example.com",title: "Message Title!",
+                     message: "Your message goes here."});'>
+      Show Example
+    </button>
+    <p>Additionally, if the version of your project is no longer working on CodePen, you can add a <span class="inline-code">canContinue</span> key with a value of <span class="inline-code">true</span> to remove the "Continue on CodePen" button. This will also update the default message to indicate that the CodePen version of the project is no longer working.</p>
+  </div>
+</body>

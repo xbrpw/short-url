@@ -1,0 +1,106 @@
+<div id="tab-pure-css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        .tab-controls {
+            color: none
+        }
+        
+        @media (min-width: 40rem) {
+            .tab-controls {
+                border: none;
+            }
+        }
+        
+        .tab-controls li {
+            display: block;
+        }
+        
+        @media (min-width: 40rem) {
+            .tab-controls li {
+                border: none;
+            }
+            .tab-controls li:after {
+                content: "";
+                position: absolute;
+                transform: translateY(-50%);
+            }
+            .tab-controls li:last-of-type:after {
+                content: none;
+            }
+        }
+        
+        .tab-controls label {
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .tab-input {
+            display: none;
+        }
+        
+        .tab-item {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        
+        .tab-input:checked+.tab-item {
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            transition: 0.3s ease-in-out;
+        }
+        
+        @media (min-width: 40rem) {
+            .tab-item {
+                text-decoration: none;
+            }
+        }
+    </style>
+
+    <label for="tab-1">1 </label>
+    <label for="tab-2">2 </label>
+    <label for="tab-3">3 </label>
+    <label for="tab-4">4</label>
+    <br>
+    <div>
+        <input id="tab-1" name="tab" type="radio" class="tab-input" checked />
+        <div class="tab-item">
+            <p>
+                1
+            </p>
+        </div>
+
+        <input id="tab-2" name="tab" type="radio" class="tab-input" />
+        <div class="tab-item">
+            <p>
+                2
+            </p>
+        </div>
+
+        <input id="tab-3" name="tab" type="radio" class="tab-input" />
+        <div class="tab-item">
+            <p>
+                3
+            </p>
+        </div>
+
+        <input id="tab-4" name="tab" type="radio" class="tab-input" />
+        <div class="tab-item">
+            <p>
+                4
+            </p>
+        </div>
+    </div>
+</div>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script>
+    document.querySelector('.menu').addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+</script>
+
+</div>

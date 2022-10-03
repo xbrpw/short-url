@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DateTime</title>
+    <style>
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 0 20px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: 'FiraCode Nerd Font Mono', 'FiraCode NF', 'Fira Code', 'Ubuntu Mono', 'Courier New', Courier, monospace;
+        }
+        
+        .datetime {
+            text-align: center;
+        }
+        
+        #date {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+        <p id="date">01/01/2020</p>
+        <h1 id="time">00:00:00</h1>
+    </div>
+</body>
+
+<script>
+    var date = document.getElementById("date")
+    var time = document.getElementById("time")
+
+    var setTime = function() {
+        date.innerHTML = new Date().toLocaleDateString("pt-br")
+        time.innerHTML = new Date().toLocaleTimeString("pt-br")
+    };
+
+    setTime()
+
+    setInterval(setTime, 1000)
+</script>
+
+</html>

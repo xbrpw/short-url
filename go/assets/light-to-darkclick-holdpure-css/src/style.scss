@@ -1,0 +1,262 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.forest {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	/* 
+		Dark Forest Background by Bandarai Art:
+		https://bandarai.artstation.com/projects/L32Jkr
+	*/
+	background-image: url(https://cdnb.artstation.com/p/assets/images/images/027/870/313/large/bandarai-art-ebguwbewsaahd1f.jpg),
+		url(https://render.fineartamerica.com/images/rendered/default/greeting-card/images/artworkimages/medium/2/the-dark-forest-bingo-z.jpg);
+	background-size: cover;
+	background-color: #000;
+
+	&:after {
+		content: "\00A9 \A Bandarai Art";
+		color: #fff;
+		position: absolute;
+		bottom: 2vmin;
+		width: 100%;
+		text-align: center;
+		font-size: 2.5vmin;
+		text-shadow: 0 0 1px #fff, 0 0 12px #000;
+		font-family: Arial, Helvetica, sans-serif;
+		mix-blend-mode: overlay;
+	}
+}
+
+.overlay {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(45deg, #000, #000000cc, #000);
+	opacity: 0.7;
+}
+
+.eyes {
+	--iris: #ff1100;
+	position: absolute;
+	background: radial-gradient(
+			circle at 25% 40%,
+			var(--iris) 0 8%,
+			#fff0 10% 100%
+		),
+		radial-gradient(circle at 75% 40%, var(--iris) 0 8%, #fff0 10% 100%), #fff0;
+	width: 5vmin;
+	height: 5vmin;
+	left: 22%;
+	top: 20%;
+	border-radius: 100%;
+	transition: all 0s linear 0s;
+	transform: rotate(-2deg);
+	opacity: 0;
+
+	&:nth-child(even) {
+		transform: rotate(3deg);
+		animation-duration: 7s;
+	}
+
+	&:nth-child(2) {
+		--iris: yellow;
+		left: 80%;
+		top: 30%;
+		animation-delay: 0.55s;
+		transform: scale(0.9);
+	}
+
+	&:nth-child(3) {
+		--iris: orange;
+		left: 35%;
+		top: 40%;
+		animation-delay: 0.77s;
+	}
+
+	&:nth-child(4) {
+		--iris: lightskyblue;
+		left: 13%;
+		top: 50%;
+		animation-delay: 0.22s;
+	}
+
+	&:nth-child(5) {
+		--iris: yellow;
+		left: 61%;
+		top: 59%;
+		transform: scale(0.88);
+	}
+
+	&:nth-child(6) {
+		--iris: #ffffff;
+		left: 73%;
+		top: 88%;
+		animation-delay: 0.33s;
+	}
+
+	&:nth-child(7) {
+		--iris: #ffffff;
+		left: 39%;
+		top: 81%;
+		animation-delay: 1.25s;
+		transform: scale(0.99);
+	}
+
+	&:nth-child(8) {
+		animation-delay: 0.44s;
+		--iris: #ff6600;
+		left: 19%;
+		top: 92%;
+	}
+}
+
+.light {
+	mix-blend-mode: soft-light;
+	background: #fff4d2; /* #ff9866 */
+	width: 50vmin;
+	height: 50vmin;
+	border-radius: 100%;
+	border: 100vw solid black;
+	border-bottom-width: 100vh;
+	border-top-width: 100vh;
+	box-shadow: 0 0 5vmin 0 red inset;
+	position: absolute;
+	bottom: calc(50% - 100vh);
+	left: calc(50% - 100vw - 25vmin);
+	transform: rotateZ(-10deg) rotateX(25deg);
+	transform-origin: center bottom;
+	transition: all 0.333s ease 0s;
+	box-shadow: 0 0 2vmin 1.5vmin #000 inset;
+	animation: move 3s ease 0s, blink-light 0.25s linear 3s 1;
+
+	&:before {
+		/*cone*/
+		content: "";
+		position: absolute;
+		border: 24vmin solid transparent;
+		border-top: 85vmin solid #fff4d2; /* #ff9800 */
+		top: 31vmin;
+		left: 1vmin;
+		border-radius: 5.5vmin;
+		filter: blur(10px);
+		transition: all 0.333s ease 0s;
+		animation: blink-cone 0.25s linear 3s 1;
+		opacity: 0.5;
+	}
+
+	&:after {
+		/*eyes*/
+		content: "";
+		position: absolute;
+		background: radial-gradient(
+				circle at 25% 40%,
+				green 0 8%,
+				transparent 8% 100%
+			),
+			radial-gradient(circle at 75% 40%, green 0 8%, transparent 8% 100%), #0000;
+		width: 6vmin;
+		height: 6vmin;
+		left: -300vmin;
+		top: 20vmin;
+		border-radius: 100%;
+		transition: all 0.5s linear 0.15s;
+		animation: eyes 5s ease 0s infinite;
+		transform: rotate(5deg);
+	}
+}
+
+@keyframes move {
+	50% {
+		transform: rotateZ(10deg) rotateX(25deg);
+	}
+}
+
+@keyframes eyes {
+	45%,
+	55% {
+		filter: brightness(0.5);
+		transform: scale(0.7);
+	}
+}
+
+@keyframes blink-light {
+	0%,
+	33%,
+	66%,
+	100% {
+		background: #fff4d2;
+	}
+	16.5%,
+	49.5%,
+	82.5% {
+		background: #000;
+	}
+}
+@keyframes blink-cone {
+	0%,
+	33%,
+	66%,
+	100% {
+		border-top-color: #fff4d2;
+	}
+	16.5%,
+	49.5%,
+	82.5% {
+		border-top-color: #000;
+	}
+}
+
+.cam {
+	width: 5vw;
+	height: 5vh;
+	z-index: 44;
+	opacity: 0;
+	border: 1px solid red;
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+	/*** 
+		Cam System by Yusuke Nakaya from this pen:
+		https://codepen.io/YusukeNakaya/pen/GRWZdOb
+	
+	  Explained by Amit Sheen in CSS-Tricks:
+	  https://css-tricks.com/how-to-map-mouse-position-in-css/
+	***/
+	@for $i from 1 through 20 {
+		@for $j from 1 through 20 {
+			$key: ($i - 1) * 20 + $j;
+			&:nth-child(#{$key}) {
+				&:hover ~ .light {
+					transform: rotateZ(($j - 8) * 3deg - 7) rotateX(($i - 8) * 3deg + 14);
+				}
+			}
+		}
+	}
+	&:active ~ .light {
+		background: #000;
+		&:before {
+			border-top-color: #000;
+		}
+		&:after {
+			left: 1vmin;
+			transition: all 0.25s linear 0s;
+		}
+	}
+	&:active ~ .overlay .eyes {
+		opacity: 0.5;
+		transition: all 0.5s linear 0.15s;
+		animation: eyes 5s ease 0s infinite alternate;
+	}
+	&:hover ~ .light {
+		animation-iteration-count: 0;
+		&:before {
+			animation-iteration-count: 0;
+		}
+	}
+}

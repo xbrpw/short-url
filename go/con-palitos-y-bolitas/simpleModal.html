@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Modal basic | La curiosidad mató al gato pero murió sabiendo</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        input[type="checkbox"]:checked~.modal,
+        input[type="checkbox"]:checked~.modal-background {
+            display: block;
+        }
+        
+        .modal-background {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 9998;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: none;
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            box-sizing: border-box;
+            z-index: 9999;
+        }
+        
+        .modal>p {
+            padding: 15px;
+            margin: 0;
+        }
+        
+        .modal-header {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #dddddd;
+            box-sizing: border-box;
+            height: 50px;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+            box-sizing: border-box;
+            padding-left: 15px;
+            line-height: 50px;
+            color: #4d4d4d;
+            font-size: 16px;
+            display: inline-block;
+        }
+        
+        .modal-header label {
+            box-sizing: border-box;
+            border-left: 1px solid #dddddd;
+            float: right;
+            line-height: 50px;
+            padding: 0 15px 0 15px;
+            cursor: pointer;
+        }
+        
+        .modal-header label:hover img {
+            opacity: 0.6;
+        }
+        /* below is optional, it is just an example for the blue button */
+        
+        .lebel-a {
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #375d91;
+            color: #f9f9f9;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            float: right;
+            margin-right: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="modal">
+    <label for="modal" class="exaple-label"><h1 style=" position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+        background-color: #fff;
+        box-sizing: border-box;
+        z-index: 9999;"><img src="https://www.orientacionandujar.es/wp-content/uploads/2013/10/gato-negro-silueta.png" width="150" height="auto" alt="La curiosidad mato al gato"><br> No abras, recuerda quela curiosidad mato al gato</h1></label>
+    <label for="modal" class="modal-background"></label>
+    <div class="modal">
+        <div class="modal-header">
+            <h3>pero...</h3>
+            <label for="modal">
+		        	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAABNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU0N3NIOAAAAJnRSTlMAAQIDBAUGBwgRFRYZGiEjQ3l7hYaqtLm8vsDFx87a4uvv8fP1+bbY9ZEAAAB8SURBVBhXXY5LFoJAAMOCIP4VBRXEv5j7H9HFDOizu2TRFljedgCQHeocWHVaAWStXnKyl2oVWI+kd1XLvFV1D7Ng3qrWKYMZ+MdEhk3gbhw59KvlH0eTnf2mgiRwvQ7NW6aqNmncukKhnvo/zzlQ2PR/HgsAJkncH6XwAcr0FUY5BVeFAAAAAElFTkSuQmCC" width="16px" height="16px" alt="La curiosidad mato al gato">
+		        </label>
+        </div>
+        <p>murió sabiendo</p>
+    </div>
+</body>
+
+</html>

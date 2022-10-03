@@ -1,0 +1,24 @@
+Image responsive + lazy
+ver las otras responsive 
+<link rel="stylesheet" href="../../eevee.css">
+
+<Style>.imgResponsive {width: 100%;max-width: 250px;height: auto;}</Style>
+<img src="../../lamp-avatar-icon.svg" alt="image" class="imgResponsive loading" loading="load" width="300" height="200">
+<script src="../../lazysizes.min.js" rel="preload " as="script " async charset="utf-8 "></script>
+<script>
+    if ("loading" in HTMLImageElement.prototype) {
+        // Si el navegador soporta lazy-load, tomamos todas las imágenes que tienen la clase
+        // `lazyload`, obtenemos el valor de su atributo `data-src` y lo inyectamos en el `src`.
+        const images = document.querySelectorAll("img.lazyload");
+        images.forEach((img) => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Importamos dinámicamente la libreria `lazysizes`
+        let script = document.createElement("script");
+        script.async = true;
+        script.src =
+            "../../lazysizes.min.js";
+        document.body.appendChild(script);
+    }
+</script>

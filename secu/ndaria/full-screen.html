@@ -1,0 +1,64 @@
+
+<style>
+    /* Safari syntax */
+    :-webkit-full-screen {
+      background-color: rgb(255, 255, 255);
+    }
+    
+    /* IE11 */
+    :-ms-fullscreen {
+      background-color: rgb(255, 255, 255);
+    }
+    
+    /* Standard syntax */
+    :fullscreen {
+      background-color: rgb(255, 255, 255);
+    }
+    
+    /* Style the button */
+    button {
+      padding: 20px;
+      font-size: 20px;
+    }
+    </style>
+
+</head>
+
+
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
+
+
+
+
+         
+   
+
+<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+
+      
+
+    <button onclick="openFullscreen();">Open Fullscreen</button>
+<button onclick="closeFullscreen();">Close Fullscreen</button>
+ 
+

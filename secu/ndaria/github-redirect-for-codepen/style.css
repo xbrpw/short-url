@@ -1,0 +1,93 @@
+a {
+  text-decoration: none;
+  color: #3F51B5;
+}
+
+a:hover {
+  color: #536DFE;
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  margin: 16px;
+}
+
+.codebox {
+  padding: 16px;
+  background-color: #e2e2e2;
+  border-radius: 10px;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+}
+
+.big-github-logo {
+  
+  margin: 0 auto;
+  background-image: url(https://res.cloudinary.com/mca62511/image/upload/v1544583989/jetpack-octocat-airlock-b1d6ad7f41f88e5207896fe1f63ca30b_vlaq8r.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  width: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.instructions {
+  max-width: 600px;
+  margin: 0 auto 100px auto;
+}
+
+.ts {
+  font-size: 1px;
+}
+
+button {
+  cursor: pointer !important;
+  margin-bottom: 6px;
+  min-width: 150px;
+  text-transform: none!important;
+  color: #212121!important;
+  font-size: 16px!important;
+  font-weight: 500!important;
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
+  line-height: 2em;
+  padding: 0 12px!important;
+  background-image: linear-gradient(#fcfcfc, #eee) !important;
+  border: 1px solid #d5d5d5!important;
+}
+
+button:hover {
+  background-image: linear-gradient(#ebebeb, #dedede)!important;
+}
+
+button:active {
+  background-image: linear-gradient(#cecece, #dedede)!important;
+}
+
+
+code .meth-prop {
+  color: #0097A7;
+}
+
+code .object {
+  color: #D32F2F;
+}
+
+code .value {
+  color: #303F9F;
+}
+
+.inline-code {
+  font-family: monospace;
+  background: #e2e2e2;
+  padding: 0 4px;
+  border-radius: 4px;
+}

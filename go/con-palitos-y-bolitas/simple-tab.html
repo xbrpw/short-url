@@ -1,0 +1,87 @@
+<style>
+    /* Style the tab */
+    
+    .tab {
+        overflow: hidden;
+    }
+    /* Style the buttons inside the tab */
+    
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+    /* Change background color of buttons on hover */
+    /* Create an active/current tablink class */
+    
+    .tab button.active {
+        font-size: 20px;
+    }
+    /* Style the tab content */
+    
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+    }
+    /* Style the close button */
+    
+    .topright {
+        float: right;
+        cursor: pointer;
+        font-size: 28px;
+    }
+    
+    .topright:hover {
+        color: red;
+    }
+</style>
+
+<h2>
+    Tabs</h2>
+
+<div class="tab">
+    <button class="tablinks" onclick="openViaje(event, 'info-del-viaje')" id="defaultOpen">Información adicional</button>
+    <button class="tablinks" onclick="openViaje(event, 'faq-del-viaje')">FAQ</button>
+</div>
+
+<div id="info-del-viaje" class="tabcontent">
+    <h3>Información adicional</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+        has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+
+<div id="faq-del-viaje" class="tabcontent">
+    <!-- <span onclick="this.parentElement.style.display='none'">x</span> -->
+    <h3>FAQ</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies hendrerit facilisis. Nunc ac semper nulla, non gravida leo. Sed dapibus lectus mauris, a mollis magna pretium non. Class aptent taciti sociosqu ad litora torquent per conubia
+        nostra, per inceptos himenaeos. Maecenas semper, velit eu sollicitudin maximus, magna odio facilisis magna, id facilisis magna odio cursus nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed et ipsum pharetra risus efficitur
+        gravida. Ut a faucibus sapien. Fusce eget lectus tincidunt nulla accumsan condimentum ornare in sem. Nam ultricies pellentesque lacus ut vulputate. Nam sit amet rutrum felis. Cras faucibus vitae ante nec efficitur. Suspendisse potenti. Phasellus
+        vel nunc porttitor, scelerisque justo ut, facilisis leo.</p>
+</div>
+
+
+<script>
+    function openViaje(evt, viajeName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(viajeName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>

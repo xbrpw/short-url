@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/*Columnas iguales */
+* {
+  box-sizing: border-box;
+}
+
+/* Create three unequal columns that floats next to each other */
+.columna {
+  float: left;
+  padding: 0px;
+  height: 100%;/* Should be removed. Only for demonstration */
+}
+
+.lefticon {
+  width: 60px;
+}
+
+.middlecontent {
+  width:auto;
+}
+
+/* Clear floats after the columns */
+.rowcontent:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 80px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.sidenavFav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenavFav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavFav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenavFav .closebtnFav {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenavFav {padding-top: 15px;}
+  .sidenavFav a {font-size: 18px;}
+}
+
+body {margin:0}
+
+.icon-bar {
+  width: 60px;
+  background-color: #555;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+</style>
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+</style>
+
+<body>
+
+
+<div class="rowcontent">
+  <div class="columna lefticon" style="background-color:#aaa;">
+    <div class="icon-bar">
+      <a href="#"><i class="fa fa-home" onclick="openNav()"></i> </a> 
+      <a href="#"><i class="fa fa-heart" onclick="openNavFav()"></i></a> 
+      <a href="#"><i class="fa fa-envelope"></i></a> 
+      <a href="#"><i class="fa fa-globe" ></i></a>
+      <a href="#"><i class="fa fa-trash" ></i></a> 
+      <a href="#"><i class="fa fa-search" ></i></a> 
+  	</div><!-- /icon-bar -->
+  </div><!-- /lass="columna lefticon" -->
+  <div class="columna middlecontent" style="background-color:#bbb;">
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div> <!-- /tab-->
+
+    <div id="London" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div><!-- /London -->
+
+    <div id="Paris" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p> 
+    </div><!-- /Paris -->
+
+    <div id="Tokyo" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+      <h3>Tokyo</h3>
+      <p>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sticky_social_bar</p>
+    </div><!-- /Tokio -->
+  </div> <!-- /class="columna middlecontent" -->
+</div><!-- /class="rowcontent" -->
+
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"  onclick="closeNav()">About</a>
+  <a href="#"  onclick="closeNav()">Services</a>
+  <a href="#"  onclick="closeNav()">Clients</a>
+  <a href="#"  onclick="closeNav()">Contact</a>
+</div>
+
+<div id="mySidenavFav" class="sidenavFav">
+  <a href="javascript:void(0)" class="closebtnFav"  onclick="closeNavFav()">&times;</a>
+  <a href="#"  onclick="closeNavFav()">About Fav</a>
+  <a href="#"  onclick="closeNavFav()">Services Fav</a>
+  <a href="#"  onclick="closeNavFav()">Clients Fav</a>
+  <a href="#"  onclick="closeNavFav()">Contact Fav</a>
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script>
+function openNavFav() {
+  document.getElementById("mySidenavFav").style.width = "250px";
+}
+
+function closeNavFav() {
+  document.getElementById("mySidenavFav").style.width = "0";
+}
+</script>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+  
+</body>
+</html> 
+

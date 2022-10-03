@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ex-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Follow me - Twitter boton abre y cierra tipo puerta</title>
+    <style>
+        @font-face {
+            font-family: 'tweet';
+            src: url('https://hihellomonster.github.io/fonts/tweet.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'how-to';
+            src: url('https://hihellomonster.github.io/how-to/i/fonts/how-to.eot?10k65f');
+            src: url('https://hihellomonster.github.io/how-to/i/fonts/how-to.eot?10k65f#iefix') format('embedded-opentype'), url('https://hihellomonster.github.io/how-to/i/fonts/how-to.ttf?10k65f') format('truetype'), url('https://hihellomonster.github.io/how-to/i/fonts/how-to.woff?10k65f') format('woff'), url('https://hihellomonster.github.io/how-to/i/fonts/how-to.svg?10k65f#how-to') format('svg');
+            url('https://hihellomonster.github.io/how-to/i/fonts/how-to.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        
+        .se-desliza .hole {
+            width: auto
+        }
+        
+        .se-desliza .door {
+            -webkit-transition: left 400ms;
+            -moz-transition: left 400ms;
+            -ms-transition: left 400ms;
+            -o-transition: left 400ms;
+            transition: left 400ms;
+            background-color: white;
+        }
+        
+        .se-desliza .door:after {
+            background-color: white;
+        }
+        
+        .se-desliza .left {
+            left: 0%;
+            top: 0%;
+        }
+        
+        .se-desliza .left:after {
+            right: 0px;
+        }
+        
+        .se-desliza .right {
+            left: 0%;
+            top: 0%;
+        }
+        /* Effects on Hover */
+        
+        .se-desliza .hole:hover .right {
+            left: 170px;
+            color: white;
+        }
+        
+        .hole {
+            -webkit-transition: background 300ms ease-in-out;
+            -moz-transition: background 300ms ease-in-out;
+            -ms-transition: background 300ms ease-in-out;
+            -o-transition: background 300ms ease-in-out;
+            transition: background 300ms ease-in-out;
+            /* Font smoothing + HW acceleration for webkit */
+            -webkit-font-smoothing: antialiased;
+            -webkit-transform: translateZ(0px);
+        }
+        
+        .door {
+            -webkit-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+            position: absolute;
+            background-color: white;
+            width: 500%;
+        }
+        /*  .door:after {
+        font-family: 'tweet', sans-serif;
+        position: absolute;
+        content: "\e000";
+        font-size: 35px;
+        display: block;
+        height: 20px;
+        width: 0px;
+        background-color: white;
+    } */
+        
+        .door:after {
+            font-family: 'tweet', sans-serif;
+            position: absolute;
+            content: "/e907 &#xe907;";
+            font-size: 35px;
+            display: block;
+            height: 20px;
+            width: 0px;
+            background-color: white;
+        }
+        
+        .door:hover {
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="se-desliza" style="width: auto;padding: 10px; margin: 10px; background-color: white;">
+
+        <div class="hole">
+            <div class="door right"></div>
+            ¡Eres un curioso!
+        </div>
+
+    </section>
+
+</body>
+
+</html>

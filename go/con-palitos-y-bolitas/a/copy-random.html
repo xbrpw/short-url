@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="../../eevee.css">
+    <div class="copyYear"> </div>
+    <script>
+        var elements = {
+            copyYear: document.querySelector('.copyYear')
+        };
+        var footerRandom = [
+            new Date().getFullYear() + ' ツ @luisangelmaciel ',
+            new Date().getFullYear() + ' ㋡ @luisangelmaciel ',
+            new Date().getFullYear() + ' ☺ @luisangelmaciel ',
+            new Date().getFullYear() + ' © @luisangelmaciel ',
+            new Date().getFullYear() + ' 😊  @luisangelmaciel ',
+            new Date().getFullYear() + ' 🙂  @luisangelmaciel ',
+            new Date().getFullYear() + ' 😏  @luisangelmaciel ',
+            new Date().getFullYear() + ' 🙃  @luisangelmaciel ',
+            new Date().getFullYear() + ' 🙃  @luisangelmaciel '
+        ];
+        var rand = Math.floor(Math.random() * footerRandom.length);
+        elements.copyYear.innerHTML += footerRandom[rand];
+
+        reset();
+    </script>

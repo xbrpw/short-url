@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body ng-cloak ng-app="TablaDemo">
+  <br>
+  <div class="container" ng-controller="TablaCtrl">
+    <h1>Tabla con contenido editable</h1>
+    <br>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Correo Electrónico</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in lista">
+              <td style="cursor: not-allowed;">
+                {{$index + 1}}
+              </td>
+              <td editable-td row="{{$index}}" field="nombres">
+                {{item.nombres}}
+              </td>
+              <td editable-td row="{{$index}}" field="apellidos">
+                {{item.apellidos}}
+              </td>
+              <td editable-td row="{{$index}}" field="email">
+                {{item.email}}
+              </td>
+              <td>
+                <span class="glyphicon glyphicon-trash" style="cursor: pointer;" ng-click='eliminar($index)' />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-group">
+          <button class="btn btn-default" ng-click='agregar()'>
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+          <button type="button" class="btn btn-default" ng-click='recuperarValores()'>Recuperar Valores</button>
+        </div>
+        <br>
+        <br>
+        <div id='JSON' />
+      </div>
+    </div>
+  </div>
+
+
+
+Indicaciones<span id="dots">...</span>
+<span id="masMuchoMas">  
+  <ul>
+    <li>Haga click en la columna y fila que desea modificar (el texto a modificar será seleccionado)</li>
+    <li>Modifique los valores que desea, puede utilizar la tecla <code>tab</code> para navegar entre los campos</li>
+    <li>Puede agregar más elementos presionando <span class="glyphicon glyphicon-plus"></span></li>
+    <li>Puede eliminar líneas presionando <span class="glyphicon glyphicon-trash"></span></li>
+    <li>La opción <strong>'Recuperar Valores'</strong> mostrará en la parte inferior el contenido del arreglo <code>$scope.lista</code></li>
+  </ul>
+</small>
+</span>
+<b onclick="myFunctionIsMostrar()" id="myBtn-verMas"  class="tes-btn tes-btn--primary-dark" data-mz="true">Ver</b>
+
+    <style>#masMuchoMas {display: none;}</style>
+      <script>
+      function myFunctionIsMostrar() {
+        var dots = document.getElementById("dots");
+        var masMuchoMasText = document.getElementById("masMuchoMas");
+        var btnText = document.getElementById("myBtn-verMas");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Mostrar"; 
+          masMuchoMasText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Cerrar"; 
+          masMuchoMasText.style.display = "inline";
+        }
+      }
+      </script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

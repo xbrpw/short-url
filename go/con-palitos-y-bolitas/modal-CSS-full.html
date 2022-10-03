@@ -1,0 +1,58 @@
+<div>
+
+    <style>
+        .modal-input {
+            display: none;
+        }
+        
+        .modal-input:checked+.modal {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            background-color: #fff;
+        }
+        
+        .modal-close {
+            position: fixed;
+            right: 10%;
+            font-size: 3rem;
+            line-height: 2;
+        }
+    </style>
+
+    <label for="modal-1">1</label>
+    <label for="modal-2">2</label>
+    <label for="modal-3">3</label>
+
+    <input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-1" class="modal-close">&times;</label>
+        <div class="content">
+            1</div>
+    </div>
+
+    <input id="modal-2" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal"><br><br>
+        <label for="modal-2" class="modal-close">&times;</label>
+        <div class="content">
+            2 </div>
+    </div>
+
+
+    <input id="modal-3" name="modal" type="checkbox" class="modal-input" />
+    <div class="modal">
+        <label for="modal-3" class="modal-close">&times;</label>
+        <div class="content">
+            3</div>
+    </div>
+</div>

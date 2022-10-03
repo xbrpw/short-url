@@ -1,0 +1,49 @@
+<style>
+
+#page-wrapper {
+  width: 640px;
+  background: #FFFFFF;
+  padding: 1em;
+  margin: 1em auto;
+  /*border-top: 5px solid #69c773;*/
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+
+.details {
+  border-radius: 3px;
+  background: #EEE;
+  margin: 1em 0;
+}
+
+.summary {
+  background: #333;
+  color: #FFF;
+  border-radius: 3px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+/* Style the summary when details box is open */
+.details[open] .summary {
+  background: #042768;
+  color: rgb(255, 255, 255);
+}
+
+  </style>  
+
+<div id="page-wrapper">
+  <h1 class=".h1">Details and Summary Elements Demo</h1>
+  
+  <h2 class="h2">Example #1: Order Information</h2>
+  
+  <!-- Specifying an 'open' attribute will make all the content visible when the page loads -->
+  <details class="details">
+    <summary class="summary">Order #24892105</summary>
+    <p>Here be some content... yarr!</p>   
+  </details>
+  
+
+  
+</body>
+</html>

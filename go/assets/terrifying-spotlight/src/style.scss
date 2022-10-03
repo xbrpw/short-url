@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.scenario {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(https://i.pinimg.com/originals/49/15/f2/4915f23130cea9a3c390bf06154b45c4.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-color: #000;
+	transition: all 0.5s ease 0s;
+}
+
+.overlay {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(0deg, #000, #0008, #0004),
+		radial-gradient(ellipse at 50% 50%, #0009 5%, #0008 30%, #000 80%);
+	opacity: 1;
+}
+
+.light {
+	mix-blend-mode: soft-light;
+	background: #ff3d2f;
+	width: 60vmin;
+	height: 60vmin;
+	border-radius: 100%;
+	border: 150vmin solid #0008;
+	position: absolute;
+	bottom: calc(50% - 150vmin);
+	left: calc(50% - 175vmin);
+	transform: rotateZ(0deg) rotateX(25deg);
+	transform-origin: center bottom;
+	transition: all 0.333s ease 0s;
+	animation: move 3.5s ease 0s 1;
+	filter: blur(5px);
+	&:before {
+		/*cone*/
+		opacity: 0.65;
+		content: "";
+		position: absolute;
+		border: 30vmin solid transparent;
+		border-top: 85vmin solid #ff3d2f;
+		top: 36vmin;
+		left: 0vmin;
+		border-radius: 5.5vmin;
+		transition: all 0.333s ease 0s;
+	}
+}
+
+@keyframes move {
+	19% {
+		transform: rotateZ(10deg) rotateX(25deg);
+	}
+	41% {
+		transform: rotateZ(-15deg) rotateX(-35deg);
+	}
+	65% {
+		transform: rotateZ(20deg) rotateX(-30deg);
+	}
+	83% {
+		transform: rotateZ(-12deg) rotateX(5deg);
+	}
+}
+
+.cam {
+	width: 5vw;
+	height: 5vh;
+	z-index: 44;
+	opacity: 0;
+	border: 1px solid red;
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+	/*** 
+		Cam System by Amit Sheen in CSS-Tricks:
+	  https://css-tricks.com/how-to-map-mouse-position-in-css/
+	***/
+	@for $i from 1 through 20 {
+		@for $j from 1 through 20 {
+			$key: ($i - 1) * 20 + $j;
+			&:nth-child(#{$key}) {
+				&:hover ~ .light {
+					transform: rotateZ(($j - 8) * 3deg - 7) rotateX(($i - 8) * 3deg + 14);
+				}
+			}
+		}
+	}
+	&:active {
+		~ .light {
+			background: #fff;
+			border-color: #0006;
+			&:before {
+				border-top-color: #fff;
+			}
+			&:after {
+				left: 1vmin;
+				transition: all 0.25s linear 0s;
+			}
+		}
+		~ .scenario {
+			background-size: 200%;
+			background-position: 70% 60%;
+			transition: all 0.5s ease 0s;
+		}
+	}
+	&:hover ~ .light {
+		animation-iteration-count: 0;
+	}
+}

@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mate&display=swap');
+
+:root {
+  --green: #51BC43;
+  --red: #BC4351;
+  --blue: #4351BC;
+  --trns: all 0.4s ease 0s;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Abril Fatface', cursive;
+  
+  font-family: 'Mate', serif;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #fff, #fff);
+
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80vw;
+}
+
+h1 {
+  background: linear-gradient(-8deg, var(--green) -25%, var(--blue) 35% 60%, var(--red) 125%);
+  text-align: left;
+  padding: 1vw 1vw 0.35em 0.5em;
+  font-size: 8vw;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 0.2em;
+  margin-top: 0.125em;
+  position: relative;
+  text-shadow: 0.1em 0.1em 0.1em #0008;
+  border-radius: 0.015em;
+  transition: var(--trns);
+  z-index: 0;
+  font-family: 'Abril Fatface', cursive;
+}
+
+h1:hover {  
+  transition: var(--trns);
+  border-radius: 0.15em;
+}
+
+h1 span {
+  font-size: 0.3em;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  background: #fff;
+  color: var(--blue);
+  position: absolute;
+  right: 0.75em;
+  bottom: -2.5em;
+  border: 0.25em solid #fff0;
+  border-right: 0.25em solid var(--blue);
+  padding: 2.35em 0.5em 0;
+  line-height: 1.5em;
+  text-shadow: none;
+  text-align: center;
+  transition: var(--trns);
+  width: auto;
+  font-weight: 600;
+  max-width: 10em;
+  min-height: 10em;
+  text-transform: uppercase;
+  border-radius: 100%;  
+  font-family: 'Mate', serif;
+}
+
+.top {
+  background: url(https://assets.codepen.io/t-1/denys-striyeshyn-wJ7yGwz2-00-unsplash.jpg) no-repeat center calc(50% + 8em);
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 1.5em;
+  position: relative;
+  z-index: 1;
+  font-family: 'Abril Fatface', cursive;
+  transition: var(--trns);
+  overflow: hidden;
+}
+
+.top:hover {
+  border-radius: 1em;
+  transition: var(--trns);
+  overflow:hidden;
+}
+
+.top div {
+  background: #3338;
+  color: #fff;
+  font-size: 2em;
+  padding: 0.5em 2em;
+  line-height: 1.5em;
+  text-shadow: -2px 2px 2px #0004;
+  transition: var(--trns);
+  background: linear-gradient(0deg, #333b 50%, #4351bc80 50%, #bc435180, #51bc4380);
+  background-position: center 0%;
+  background-size: 100% 200%;
+}
+
+
+.top:hover div {
+  background-position: center 100%;
+  transition: var(--trns);
+  position: relative;
+}
+
+.top .bd {
+  border-top: 5px dotted #fff;
+  background: #fff0;
+  height: 0;
+  padding: 0;
+}
+
+
+
+
+
+.item {
+  display: inline-block;
+  width: 32%;
+  background: linear-gradient(0deg, var(--blue), var(--red), var(--green));
+  margin-right: 2%;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-shadow: none;
+  float: left;
+  border-radius: 0.1em;
+  overflow: hidden;
+  transition: var(--trns);
+  z-index: 1;
+  position: relative;
+}
+.item:nth-child(5) {
+  margin-right: 0;
+}
+
+.item:hover {
+  border-radius: 1em;
+  transition: var(--trns);
+}
+
+.item a {
+  padding: 1em;
+  transition: var(--trns);
+  text-decoration: none;
+  color: #fff;
+  float: left;
+}
+.item a:hover {
+  transition: var(--trns);
+  padding: 1em 1em 2em 1em;
+}
+
+
+
+.item a p {
+  padding: 0 1em;
+}
+
+.item a:hover p {
+  padding: 0 1em;
+}
+
+.item a img {
+  width: calc(100% + 2em);
+  margin-left: -1em;
+  margin-top: -1em;
+  transition: var(--trns);
+}
+
+.item a:hover img {
+  width: calc(100% - 2em);
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  transition: var(--trns);
+  border-radius: 0.75em;
+  box-shadow: 1em 1em 1em 0 #0008;
+}
+
+.item a span {
+  border: 0;
+  background: var(--red);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  padding: 0.75em 1em;
+  border-radius: 0.5em;
+  bottom: -4em;
+  margin-right: 1em;
+  position: relative;
+  font-weight: 400;
+  float: right;
+  transition: var(--trns);
+  font-family: 'Abril Fatface', cursive;
+  box-shadow: 1em 1em 1em 0 #0008;
+}
+
+.item a:hover span {
+  bottom: 0em;
+  transition: var(--trns);
+}
+
+
+
+
+.no-shopping {
+  clear: both;
+  float: left;
+  width: 100%;
+  font-weight: 500;
+  font-size: 0.825em;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0 11em 0 3em;
+  background: linear-gradient(90deg, var(--blue), var(--red), var(--green));
+  margin: 2.25em 0 1.25em;
+  position: relative;  
+  transition: var(--trns);
+}
+
+.no-shopping:hover {
+  border-radius: 1em;
+  transition: var(--trns);
+}
+
+.no-shopping:before {
+  content: "*";
+  font-size: 2.5em;
+  line-height: 0em;
+  float: left;
+  margin-left: -0.57em;
+  margin-top: 0.75em;
+}
+
+.no-shopping a {
+  background: #fff;
+  text-transform: uppercase;
+  padding: 0.5em 0.75em;
+  font-weight: 400;
+  transition: var(--trns);
+  font-family: 'Abril Fatface', cursive;
+  float: right;
+  top: -1.75em;
+  right: 0;
+  color: var(--green);
+  font-size: 1.1em;
+  position: absolute;
+  text-decoration: none;
+  height: auto;
+  bottom: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.75em;
+  margin-right: 0.65em;
+  min-width: 7.5em;
+  min-height: 7.5em;
+  border-radius: 100%;
+  border: 0.25em solid #fff0;
+  border-right: 0.25em solid var(--green);
+}
+
+.no-shopping a strong {
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+.no-shopping a:hover {
+  background: linear-gradient(0deg, #fff0 1em , var(--green) 0.5em calc(100% - 1em), #fff0 calc(100% - 1em));
+  color: #fff;
+  border-color: #fff;
+}
+
+.item a:hover span:hover {
+  background: linear-gradient(0deg, var(--blue), var(--blue));
+  color: #fff;
+  border-radius: 0.5em;
+}
+
+
+
+/*** MEDIA QUERIES ***/
+
+@media only screen and (max-width: 1280px) {
+  
+  h1 {
+    margin-top: 0.2em;
+    margin-bottom: 0.3em;
+  }
+  .top {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+  }
+  .top div {
+    line-height: 2em;
+  }
+  .item {
+    width: 48%;
+    margin-right: 0;
+    margin-bottom: 2em;
+  }
+  .item:nth-child(4) {
+    margin-right: 4%;
+  }
+  .no-shopping {
+    margin-bottom: 2em;
+  }
+  
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  
+  .top {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 2em;
+  }
+  .item {
+    width: 48%;
+    margin-right: 4%;
+    margin-bottom: 2em;
+  }
+  .item:nth-child(4) {
+    margin-right: 0%;
+  }
+  .item:nth-child(5) {
+    width: 100%;
+  }
+  .item:nth-child(5) a img {
+    max-width: 33%;
+    float: left;
+    margin-bottom: -4em;
+  }
+  .item:nth-child(5) a:hover img {
+    margin-bottom: 0em;
+  }
+  .item:nth-child(5) a p {
+    max-width: 60%;
+    float: right;
+  }
+  .no-shopping a {
+    top: -1.15em;
+  }
+  
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  
+  .top div {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+  .item:nth-child(5) a img {
+    max-width: calc(100% + 2em);
+    float: none;
+    margin-bottom: inherit;
+  }
+  .item:nth-child(5) a:hover img {
+    margin-bottom: 0;
+  }
+  .item:nth-child(5) a p {
+    max-width: 100%;
+    float: none;
+  }
+  
+  .no-shopping a {
+    top: -0.75em;
+  }
+  
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  .top {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+  .top div {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+  .item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2em;
+  }
+
+}

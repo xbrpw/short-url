@@ -1,0 +1,1304 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scenario {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://i.pinimg.com/originals/49/15/f2/4915f23130cea9a3c390bf06154b45c4.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, #000, #0008, #0004), radial-gradient(ellipse at 50% 50%, #0009 5%, #0008 30%, #000 80%);
+  opacity: 1;
+}
+
+.light {
+  mix-blend-mode: soft-light;
+  background: #ff3d2f;
+  width: 60vmin;
+  height: 60vmin;
+  border-radius: 100%;
+  border: 150vmin solid #0008;
+  position: absolute;
+  bottom: calc(50% - 150vmin);
+  left: calc(50% - 175vmin);
+  transform: rotateZ(0deg) rotateX(25deg);
+  transform-origin: center bottom;
+  transition: all 0.333s ease 0s;
+  animation: move 3.5s ease 0s 1;
+  filter: blur(5px);
+}
+.light:before {
+  /*cone*/
+  opacity: 0.65;
+  content: "";
+  position: absolute;
+  border: 30vmin solid transparent;
+  border-top: 85vmin solid #ff3d2f;
+  top: 36vmin;
+  left: 0vmin;
+  border-radius: 5.5vmin;
+  transition: all 0.333s ease 0s;
+}
+
+@keyframes move {
+  19% {
+    transform: rotateZ(10deg) rotateX(25deg);
+  }
+  41% {
+    transform: rotateZ(-15deg) rotateX(-35deg);
+  }
+  65% {
+    transform: rotateZ(20deg) rotateX(-30deg);
+  }
+  83% {
+    transform: rotateZ(-12deg) rotateX(5deg);
+  }
+}
+.cam {
+  width: 5vw;
+  height: 5vh;
+  z-index: 44;
+  opacity: 0;
+  border: 1px solid red;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  /*** 
+  	Cam System by Amit Sheen in CSS-Tricks:
+    https://css-tricks.com/how-to-map-mouse-position-in-css/
+  ***/
+}
+.cam:nth-child(1):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(-7deg);
+}
+.cam:nth-child(2):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(-7deg);
+}
+.cam:nth-child(3):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(-7deg);
+}
+.cam:nth-child(4):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(-7deg);
+}
+.cam:nth-child(5):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(-7deg);
+}
+.cam:nth-child(6):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(-7deg);
+}
+.cam:nth-child(7):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(-7deg);
+}
+.cam:nth-child(8):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(-7deg);
+}
+.cam:nth-child(9):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(-7deg);
+}
+.cam:nth-child(10):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(-7deg);
+}
+.cam:nth-child(11):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(-7deg);
+}
+.cam:nth-child(12):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(-7deg);
+}
+.cam:nth-child(13):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(-7deg);
+}
+.cam:nth-child(14):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(-7deg);
+}
+.cam:nth-child(15):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(-7deg);
+}
+.cam:nth-child(16):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(-7deg);
+}
+.cam:nth-child(17):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(-7deg);
+}
+.cam:nth-child(18):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(-7deg);
+}
+.cam:nth-child(19):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(-7deg);
+}
+.cam:nth-child(20):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(-7deg);
+}
+.cam:nth-child(21):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(-4deg);
+}
+.cam:nth-child(22):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(-4deg);
+}
+.cam:nth-child(23):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(-4deg);
+}
+.cam:nth-child(24):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(-4deg);
+}
+.cam:nth-child(25):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(-4deg);
+}
+.cam:nth-child(26):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(-4deg);
+}
+.cam:nth-child(27):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(-4deg);
+}
+.cam:nth-child(28):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(-4deg);
+}
+.cam:nth-child(29):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(-4deg);
+}
+.cam:nth-child(30):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(-4deg);
+}
+.cam:nth-child(31):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(-4deg);
+}
+.cam:nth-child(32):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(-4deg);
+}
+.cam:nth-child(33):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(-4deg);
+}
+.cam:nth-child(34):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(-4deg);
+}
+.cam:nth-child(35):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(-4deg);
+}
+.cam:nth-child(36):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(-4deg);
+}
+.cam:nth-child(37):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(-4deg);
+}
+.cam:nth-child(38):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(-4deg);
+}
+.cam:nth-child(39):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(-4deg);
+}
+.cam:nth-child(40):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(-4deg);
+}
+.cam:nth-child(41):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(-1deg);
+}
+.cam:nth-child(42):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(-1deg);
+}
+.cam:nth-child(43):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(-1deg);
+}
+.cam:nth-child(44):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(-1deg);
+}
+.cam:nth-child(45):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(-1deg);
+}
+.cam:nth-child(46):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(-1deg);
+}
+.cam:nth-child(47):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(-1deg);
+}
+.cam:nth-child(48):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(-1deg);
+}
+.cam:nth-child(49):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(-1deg);
+}
+.cam:nth-child(50):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(-1deg);
+}
+.cam:nth-child(51):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(-1deg);
+}
+.cam:nth-child(52):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(-1deg);
+}
+.cam:nth-child(53):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(-1deg);
+}
+.cam:nth-child(54):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(-1deg);
+}
+.cam:nth-child(55):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(-1deg);
+}
+.cam:nth-child(56):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(-1deg);
+}
+.cam:nth-child(57):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(-1deg);
+}
+.cam:nth-child(58):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(-1deg);
+}
+.cam:nth-child(59):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(-1deg);
+}
+.cam:nth-child(60):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(-1deg);
+}
+.cam:nth-child(61):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(2deg);
+}
+.cam:nth-child(62):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(2deg);
+}
+.cam:nth-child(63):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(2deg);
+}
+.cam:nth-child(64):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(2deg);
+}
+.cam:nth-child(65):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(2deg);
+}
+.cam:nth-child(66):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(2deg);
+}
+.cam:nth-child(67):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(2deg);
+}
+.cam:nth-child(68):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(2deg);
+}
+.cam:nth-child(69):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(2deg);
+}
+.cam:nth-child(70):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(2deg);
+}
+.cam:nth-child(71):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(2deg);
+}
+.cam:nth-child(72):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(2deg);
+}
+.cam:nth-child(73):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(2deg);
+}
+.cam:nth-child(74):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(2deg);
+}
+.cam:nth-child(75):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(2deg);
+}
+.cam:nth-child(76):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(2deg);
+}
+.cam:nth-child(77):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(2deg);
+}
+.cam:nth-child(78):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(2deg);
+}
+.cam:nth-child(79):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(2deg);
+}
+.cam:nth-child(80):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(2deg);
+}
+.cam:nth-child(81):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(5deg);
+}
+.cam:nth-child(82):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(5deg);
+}
+.cam:nth-child(83):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(5deg);
+}
+.cam:nth-child(84):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(5deg);
+}
+.cam:nth-child(85):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(5deg);
+}
+.cam:nth-child(86):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(5deg);
+}
+.cam:nth-child(87):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(5deg);
+}
+.cam:nth-child(88):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(5deg);
+}
+.cam:nth-child(89):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(5deg);
+}
+.cam:nth-child(90):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(5deg);
+}
+.cam:nth-child(91):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(5deg);
+}
+.cam:nth-child(92):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(5deg);
+}
+.cam:nth-child(93):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(5deg);
+}
+.cam:nth-child(94):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(5deg);
+}
+.cam:nth-child(95):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(5deg);
+}
+.cam:nth-child(96):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(5deg);
+}
+.cam:nth-child(97):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(5deg);
+}
+.cam:nth-child(98):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(5deg);
+}
+.cam:nth-child(99):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(5deg);
+}
+.cam:nth-child(100):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(5deg);
+}
+.cam:nth-child(101):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(8deg);
+}
+.cam:nth-child(102):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(8deg);
+}
+.cam:nth-child(103):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(8deg);
+}
+.cam:nth-child(104):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(8deg);
+}
+.cam:nth-child(105):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(8deg);
+}
+.cam:nth-child(106):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(8deg);
+}
+.cam:nth-child(107):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(8deg);
+}
+.cam:nth-child(108):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(8deg);
+}
+.cam:nth-child(109):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(8deg);
+}
+.cam:nth-child(110):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(8deg);
+}
+.cam:nth-child(111):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(8deg);
+}
+.cam:nth-child(112):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(8deg);
+}
+.cam:nth-child(113):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(8deg);
+}
+.cam:nth-child(114):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(8deg);
+}
+.cam:nth-child(115):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(8deg);
+}
+.cam:nth-child(116):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(8deg);
+}
+.cam:nth-child(117):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(8deg);
+}
+.cam:nth-child(118):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(8deg);
+}
+.cam:nth-child(119):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(8deg);
+}
+.cam:nth-child(120):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(8deg);
+}
+.cam:nth-child(121):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(11deg);
+}
+.cam:nth-child(122):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(11deg);
+}
+.cam:nth-child(123):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(11deg);
+}
+.cam:nth-child(124):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(11deg);
+}
+.cam:nth-child(125):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(11deg);
+}
+.cam:nth-child(126):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(11deg);
+}
+.cam:nth-child(127):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(11deg);
+}
+.cam:nth-child(128):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(11deg);
+}
+.cam:nth-child(129):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(11deg);
+}
+.cam:nth-child(130):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(11deg);
+}
+.cam:nth-child(131):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(11deg);
+}
+.cam:nth-child(132):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(11deg);
+}
+.cam:nth-child(133):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(11deg);
+}
+.cam:nth-child(134):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(11deg);
+}
+.cam:nth-child(135):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(11deg);
+}
+.cam:nth-child(136):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(11deg);
+}
+.cam:nth-child(137):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(11deg);
+}
+.cam:nth-child(138):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(11deg);
+}
+.cam:nth-child(139):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(11deg);
+}
+.cam:nth-child(140):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(11deg);
+}
+.cam:nth-child(141):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(14deg);
+}
+.cam:nth-child(142):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(14deg);
+}
+.cam:nth-child(143):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(14deg);
+}
+.cam:nth-child(144):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(14deg);
+}
+.cam:nth-child(145):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(14deg);
+}
+.cam:nth-child(146):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(14deg);
+}
+.cam:nth-child(147):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(14deg);
+}
+.cam:nth-child(148):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(14deg);
+}
+.cam:nth-child(149):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(14deg);
+}
+.cam:nth-child(150):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(14deg);
+}
+.cam:nth-child(151):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(14deg);
+}
+.cam:nth-child(152):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(14deg);
+}
+.cam:nth-child(153):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(14deg);
+}
+.cam:nth-child(154):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(14deg);
+}
+.cam:nth-child(155):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(14deg);
+}
+.cam:nth-child(156):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(14deg);
+}
+.cam:nth-child(157):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(14deg);
+}
+.cam:nth-child(158):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(14deg);
+}
+.cam:nth-child(159):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(14deg);
+}
+.cam:nth-child(160):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(14deg);
+}
+.cam:nth-child(161):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(17deg);
+}
+.cam:nth-child(162):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(17deg);
+}
+.cam:nth-child(163):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(17deg);
+}
+.cam:nth-child(164):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(17deg);
+}
+.cam:nth-child(165):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(17deg);
+}
+.cam:nth-child(166):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(17deg);
+}
+.cam:nth-child(167):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(17deg);
+}
+.cam:nth-child(168):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(17deg);
+}
+.cam:nth-child(169):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(17deg);
+}
+.cam:nth-child(170):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(17deg);
+}
+.cam:nth-child(171):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(17deg);
+}
+.cam:nth-child(172):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(17deg);
+}
+.cam:nth-child(173):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(17deg);
+}
+.cam:nth-child(174):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(17deg);
+}
+.cam:nth-child(175):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(17deg);
+}
+.cam:nth-child(176):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(17deg);
+}
+.cam:nth-child(177):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(17deg);
+}
+.cam:nth-child(178):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(17deg);
+}
+.cam:nth-child(179):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(17deg);
+}
+.cam:nth-child(180):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(17deg);
+}
+.cam:nth-child(181):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(20deg);
+}
+.cam:nth-child(182):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(20deg);
+}
+.cam:nth-child(183):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(20deg);
+}
+.cam:nth-child(184):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(20deg);
+}
+.cam:nth-child(185):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(20deg);
+}
+.cam:nth-child(186):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(20deg);
+}
+.cam:nth-child(187):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(20deg);
+}
+.cam:nth-child(188):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(20deg);
+}
+.cam:nth-child(189):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(20deg);
+}
+.cam:nth-child(190):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(20deg);
+}
+.cam:nth-child(191):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(20deg);
+}
+.cam:nth-child(192):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(20deg);
+}
+.cam:nth-child(193):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(20deg);
+}
+.cam:nth-child(194):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(20deg);
+}
+.cam:nth-child(195):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(20deg);
+}
+.cam:nth-child(196):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(20deg);
+}
+.cam:nth-child(197):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(20deg);
+}
+.cam:nth-child(198):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(20deg);
+}
+.cam:nth-child(199):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(20deg);
+}
+.cam:nth-child(200):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(20deg);
+}
+.cam:nth-child(201):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(23deg);
+}
+.cam:nth-child(202):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(23deg);
+}
+.cam:nth-child(203):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(23deg);
+}
+.cam:nth-child(204):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(23deg);
+}
+.cam:nth-child(205):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(23deg);
+}
+.cam:nth-child(206):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(23deg);
+}
+.cam:nth-child(207):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(23deg);
+}
+.cam:nth-child(208):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(23deg);
+}
+.cam:nth-child(209):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(23deg);
+}
+.cam:nth-child(210):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(23deg);
+}
+.cam:nth-child(211):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(23deg);
+}
+.cam:nth-child(212):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(23deg);
+}
+.cam:nth-child(213):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(23deg);
+}
+.cam:nth-child(214):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(23deg);
+}
+.cam:nth-child(215):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(23deg);
+}
+.cam:nth-child(216):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(23deg);
+}
+.cam:nth-child(217):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(23deg);
+}
+.cam:nth-child(218):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(23deg);
+}
+.cam:nth-child(219):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(23deg);
+}
+.cam:nth-child(220):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(23deg);
+}
+.cam:nth-child(221):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(26deg);
+}
+.cam:nth-child(222):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(26deg);
+}
+.cam:nth-child(223):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(26deg);
+}
+.cam:nth-child(224):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(26deg);
+}
+.cam:nth-child(225):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(26deg);
+}
+.cam:nth-child(226):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(26deg);
+}
+.cam:nth-child(227):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(26deg);
+}
+.cam:nth-child(228):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(26deg);
+}
+.cam:nth-child(229):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(26deg);
+}
+.cam:nth-child(230):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(26deg);
+}
+.cam:nth-child(231):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(26deg);
+}
+.cam:nth-child(232):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(26deg);
+}
+.cam:nth-child(233):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(26deg);
+}
+.cam:nth-child(234):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(26deg);
+}
+.cam:nth-child(235):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(26deg);
+}
+.cam:nth-child(236):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(26deg);
+}
+.cam:nth-child(237):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(26deg);
+}
+.cam:nth-child(238):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(26deg);
+}
+.cam:nth-child(239):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(26deg);
+}
+.cam:nth-child(240):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(26deg);
+}
+.cam:nth-child(241):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(29deg);
+}
+.cam:nth-child(242):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(29deg);
+}
+.cam:nth-child(243):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(29deg);
+}
+.cam:nth-child(244):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(29deg);
+}
+.cam:nth-child(245):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(29deg);
+}
+.cam:nth-child(246):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(29deg);
+}
+.cam:nth-child(247):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(29deg);
+}
+.cam:nth-child(248):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(29deg);
+}
+.cam:nth-child(249):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(29deg);
+}
+.cam:nth-child(250):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(29deg);
+}
+.cam:nth-child(251):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(29deg);
+}
+.cam:nth-child(252):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(29deg);
+}
+.cam:nth-child(253):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(29deg);
+}
+.cam:nth-child(254):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(29deg);
+}
+.cam:nth-child(255):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(29deg);
+}
+.cam:nth-child(256):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(29deg);
+}
+.cam:nth-child(257):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(29deg);
+}
+.cam:nth-child(258):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(29deg);
+}
+.cam:nth-child(259):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(29deg);
+}
+.cam:nth-child(260):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(29deg);
+}
+.cam:nth-child(261):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(32deg);
+}
+.cam:nth-child(262):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(32deg);
+}
+.cam:nth-child(263):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(32deg);
+}
+.cam:nth-child(264):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(32deg);
+}
+.cam:nth-child(265):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(32deg);
+}
+.cam:nth-child(266):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(32deg);
+}
+.cam:nth-child(267):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(32deg);
+}
+.cam:nth-child(268):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(32deg);
+}
+.cam:nth-child(269):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(32deg);
+}
+.cam:nth-child(270):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(32deg);
+}
+.cam:nth-child(271):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(32deg);
+}
+.cam:nth-child(272):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(32deg);
+}
+.cam:nth-child(273):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(32deg);
+}
+.cam:nth-child(274):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(32deg);
+}
+.cam:nth-child(275):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(32deg);
+}
+.cam:nth-child(276):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(32deg);
+}
+.cam:nth-child(277):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(32deg);
+}
+.cam:nth-child(278):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(32deg);
+}
+.cam:nth-child(279):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(32deg);
+}
+.cam:nth-child(280):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(32deg);
+}
+.cam:nth-child(281):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(35deg);
+}
+.cam:nth-child(282):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(35deg);
+}
+.cam:nth-child(283):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(35deg);
+}
+.cam:nth-child(284):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(35deg);
+}
+.cam:nth-child(285):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(35deg);
+}
+.cam:nth-child(286):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(35deg);
+}
+.cam:nth-child(287):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(35deg);
+}
+.cam:nth-child(288):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(35deg);
+}
+.cam:nth-child(289):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(35deg);
+}
+.cam:nth-child(290):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(35deg);
+}
+.cam:nth-child(291):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(35deg);
+}
+.cam:nth-child(292):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(35deg);
+}
+.cam:nth-child(293):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(35deg);
+}
+.cam:nth-child(294):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(35deg);
+}
+.cam:nth-child(295):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(35deg);
+}
+.cam:nth-child(296):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(35deg);
+}
+.cam:nth-child(297):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(35deg);
+}
+.cam:nth-child(298):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(35deg);
+}
+.cam:nth-child(299):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(35deg);
+}
+.cam:nth-child(300):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(35deg);
+}
+.cam:nth-child(301):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(38deg);
+}
+.cam:nth-child(302):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(38deg);
+}
+.cam:nth-child(303):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(38deg);
+}
+.cam:nth-child(304):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(38deg);
+}
+.cam:nth-child(305):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(38deg);
+}
+.cam:nth-child(306):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(38deg);
+}
+.cam:nth-child(307):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(38deg);
+}
+.cam:nth-child(308):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(38deg);
+}
+.cam:nth-child(309):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(38deg);
+}
+.cam:nth-child(310):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(38deg);
+}
+.cam:nth-child(311):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(38deg);
+}
+.cam:nth-child(312):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(38deg);
+}
+.cam:nth-child(313):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(38deg);
+}
+.cam:nth-child(314):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(38deg);
+}
+.cam:nth-child(315):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(38deg);
+}
+.cam:nth-child(316):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(38deg);
+}
+.cam:nth-child(317):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(38deg);
+}
+.cam:nth-child(318):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(38deg);
+}
+.cam:nth-child(319):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(38deg);
+}
+.cam:nth-child(320):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(38deg);
+}
+.cam:nth-child(321):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(41deg);
+}
+.cam:nth-child(322):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(41deg);
+}
+.cam:nth-child(323):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(41deg);
+}
+.cam:nth-child(324):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(41deg);
+}
+.cam:nth-child(325):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(41deg);
+}
+.cam:nth-child(326):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(41deg);
+}
+.cam:nth-child(327):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(41deg);
+}
+.cam:nth-child(328):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(41deg);
+}
+.cam:nth-child(329):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(41deg);
+}
+.cam:nth-child(330):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(41deg);
+}
+.cam:nth-child(331):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(41deg);
+}
+.cam:nth-child(332):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(41deg);
+}
+.cam:nth-child(333):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(41deg);
+}
+.cam:nth-child(334):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(41deg);
+}
+.cam:nth-child(335):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(41deg);
+}
+.cam:nth-child(336):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(41deg);
+}
+.cam:nth-child(337):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(41deg);
+}
+.cam:nth-child(338):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(41deg);
+}
+.cam:nth-child(339):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(41deg);
+}
+.cam:nth-child(340):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(41deg);
+}
+.cam:nth-child(341):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(44deg);
+}
+.cam:nth-child(342):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(44deg);
+}
+.cam:nth-child(343):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(44deg);
+}
+.cam:nth-child(344):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(44deg);
+}
+.cam:nth-child(345):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(44deg);
+}
+.cam:nth-child(346):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(44deg);
+}
+.cam:nth-child(347):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(44deg);
+}
+.cam:nth-child(348):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(44deg);
+}
+.cam:nth-child(349):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(44deg);
+}
+.cam:nth-child(350):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(44deg);
+}
+.cam:nth-child(351):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(44deg);
+}
+.cam:nth-child(352):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(44deg);
+}
+.cam:nth-child(353):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(44deg);
+}
+.cam:nth-child(354):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(44deg);
+}
+.cam:nth-child(355):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(44deg);
+}
+.cam:nth-child(356):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(44deg);
+}
+.cam:nth-child(357):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(44deg);
+}
+.cam:nth-child(358):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(44deg);
+}
+.cam:nth-child(359):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(44deg);
+}
+.cam:nth-child(360):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(44deg);
+}
+.cam:nth-child(361):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(47deg);
+}
+.cam:nth-child(362):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(47deg);
+}
+.cam:nth-child(363):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(47deg);
+}
+.cam:nth-child(364):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(47deg);
+}
+.cam:nth-child(365):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(47deg);
+}
+.cam:nth-child(366):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(47deg);
+}
+.cam:nth-child(367):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(47deg);
+}
+.cam:nth-child(368):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(47deg);
+}
+.cam:nth-child(369):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(47deg);
+}
+.cam:nth-child(370):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(47deg);
+}
+.cam:nth-child(371):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(47deg);
+}
+.cam:nth-child(372):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(47deg);
+}
+.cam:nth-child(373):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(47deg);
+}
+.cam:nth-child(374):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(47deg);
+}
+.cam:nth-child(375):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(47deg);
+}
+.cam:nth-child(376):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(47deg);
+}
+.cam:nth-child(377):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(47deg);
+}
+.cam:nth-child(378):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(47deg);
+}
+.cam:nth-child(379):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(47deg);
+}
+.cam:nth-child(380):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(47deg);
+}
+.cam:nth-child(381):hover ~ .light {
+  transform: rotateZ(-28deg) rotateX(50deg);
+}
+.cam:nth-child(382):hover ~ .light {
+  transform: rotateZ(-25deg) rotateX(50deg);
+}
+.cam:nth-child(383):hover ~ .light {
+  transform: rotateZ(-22deg) rotateX(50deg);
+}
+.cam:nth-child(384):hover ~ .light {
+  transform: rotateZ(-19deg) rotateX(50deg);
+}
+.cam:nth-child(385):hover ~ .light {
+  transform: rotateZ(-16deg) rotateX(50deg);
+}
+.cam:nth-child(386):hover ~ .light {
+  transform: rotateZ(-13deg) rotateX(50deg);
+}
+.cam:nth-child(387):hover ~ .light {
+  transform: rotateZ(-10deg) rotateX(50deg);
+}
+.cam:nth-child(388):hover ~ .light {
+  transform: rotateZ(-7deg) rotateX(50deg);
+}
+.cam:nth-child(389):hover ~ .light {
+  transform: rotateZ(-4deg) rotateX(50deg);
+}
+.cam:nth-child(390):hover ~ .light {
+  transform: rotateZ(-1deg) rotateX(50deg);
+}
+.cam:nth-child(391):hover ~ .light {
+  transform: rotateZ(2deg) rotateX(50deg);
+}
+.cam:nth-child(392):hover ~ .light {
+  transform: rotateZ(5deg) rotateX(50deg);
+}
+.cam:nth-child(393):hover ~ .light {
+  transform: rotateZ(8deg) rotateX(50deg);
+}
+.cam:nth-child(394):hover ~ .light {
+  transform: rotateZ(11deg) rotateX(50deg);
+}
+.cam:nth-child(395):hover ~ .light {
+  transform: rotateZ(14deg) rotateX(50deg);
+}
+.cam:nth-child(396):hover ~ .light {
+  transform: rotateZ(17deg) rotateX(50deg);
+}
+.cam:nth-child(397):hover ~ .light {
+  transform: rotateZ(20deg) rotateX(50deg);
+}
+.cam:nth-child(398):hover ~ .light {
+  transform: rotateZ(23deg) rotateX(50deg);
+}
+.cam:nth-child(399):hover ~ .light {
+  transform: rotateZ(26deg) rotateX(50deg);
+}
+.cam:nth-child(400):hover ~ .light {
+  transform: rotateZ(29deg) rotateX(50deg);
+}
+.cam:active ~ .light {
+  background: #fff;
+  border-color: #0006;
+}
+.cam:active ~ .light:before {
+  border-top-color: #fff;
+}
+.cam:active ~ .light:after {
+  left: 1vmin;
+  transition: all 0.25s linear 0s;
+}
+.cam:active ~ .scenario {
+  background-size: 200%;
+  background-position: 70% 60%;
+  transition: all 0.5s ease 0s;
+}
+.cam:hover ~ .light {
+  animation-iteration-count: 0;
+}

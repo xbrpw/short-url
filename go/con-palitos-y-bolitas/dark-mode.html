@@ -1,0 +1,27 @@
+
+
+<script>
+    function myFunctiondarkmode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+</script>
+
+<style>
+.body-dark-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+</style>
+
+<body class="body-dark-mode">
+<center>
+<h1>Dark Mode en acción</h1>
+<button onclick="myFunctiondarkmode()">Activar Dark mode</button>
+</center>
+</body>

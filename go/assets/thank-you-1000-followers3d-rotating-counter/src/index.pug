@@ -1,0 +1,25 @@
+- for (c = 0; c < 81; c++)
+	.cam
+.container
+	.number
+		.thanks.text3d
+			- for (sp = 0; sp < 10; sp++)
+				span Thank You
+			- for (cbs = 0; cbs < 3; cbs++)
+				.cuboid.bar
+					- for (s = 0; s < 6; s++)
+						.side
+		- for (dcs = 0; dcs < 5; dcs++)				
+			div(class='wheel d-' + dcs)
+				- for (fcs = 0; fcs < 12; fcs++)
+					.face
+		.cuboid
+			- for (s = 0; s < 6; s++)
+				.side
+		.followers.text3d
+			- for (sp = 0; sp < 10; sp++)
+				span Followers
+			- for (cbs = 0; cbs < 3; cbs++)
+				.cuboid.bar
+					- for (s = 0; s < 6; s++)
+						.side

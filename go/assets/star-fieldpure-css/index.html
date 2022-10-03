@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-MX" ><!-- CodePen - Star Field - Pure CSS -->
+<head>
+  <meta charset="UTF-8">
+  <title></title>  <meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>* {
+	box-sizing: border-box;
+	position: absolute;
+	transform-style: preserve-3d;
+}
+
+*:before, *:after {
+	box-sizing: border-box;
+	transform-style: preserve-3d;
+	position: absolute;
+	content: "";
+}
+
+.body-starfield {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 50vmin;
+    background-size: 100vw 100vh;
+    background-image: radial-gradient(#0000, #673ab72e), linear-gradient(-90deg, #2000587d, #000, #9c27b02b), linear-gradient(0deg, #ff98002e, #000, #8bc34a5e);
+    background-color: #000;
+    box-shadow: 0 0 150vmin 11vmin #000 inset;
+}
+
+.body-starfield:before {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(#0000, #0a123a), linear-gradient(180deg, #2000587d, #000, #9c27b02b), linear-gradient(0deg, #ff980054, #000, #009688ba);
+}
+
+.stars {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.stars:before, .stars:after {
+	width: 200vw;
+    height: 200vh;
+    content: "";
+    background: #fff0;
+    border-radius: 100%;
+    background-image: repeating-conic-gradient(#FFF8 0%, transparent .0002%, transparent .075%, transparent .65%), repeating-conic-gradient(#FFF 0%, transparent .0004%, transparent 0.05%, transparent .495%);
+    transform: translateZ(-40vmin);
+    opacity: 0;
+    animation: stars 4s ease-in 0s infinite;
+    z-index: 1;
+    left: -50vw;
+    top: -50vh;
+}
+
+.stars:after {
+	animation-name: stars2;
+	animation-delay: 1s;
+}
+
+
+@keyframes stars {
+	  0% { transform: translateZ(-40vmin); opacity: 0; }
+	 30%, 70% { opacity: 1; }
+	 90% { opacity: 1;}
+	100% { transform: translateZ(40vmin) rotate(15deg); opacity: 0; }
+}
+
+@keyframes stars2 {
+	  0% { transform: translateZ(-40vmin) rotate(180deg); opacity: 0; }
+	 30%, 70% { opacity: 1; }
+	 90% { opacity: 1;}
+	100% { transform: translateZ(40vmin) rotate(195deg); opacity: 0; }
+}
+
+
+
+
+.stars + .stars::before {
+    animation-delay: 2s;
+}
+
+.stars + .stars::after {
+    animation-delay: 3s;
+}</style>
+
+</head>
+<body class="body-starfield">
+<!-- partial:body-starfield -->
+<div class="stars"></div>
+<div class="stars"></div>
+<!-- /body-starfield -->
+  
+</body>
+</html>

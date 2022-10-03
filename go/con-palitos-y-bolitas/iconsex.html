@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Icon Sex</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            padding-top: 150px
+        }
+        
+        .sexposition {
+            width: 300px;
+            height: 300px;
+            margin: 0 450px;
+            position: relative;
+            clear: both;
+        }
+        
+        .female1 {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border: 10px solid #BBC1CC;
+            border-radius: 50%;
+        }
+        
+        .female1:before {
+            content: "";
+            left: -71px;
+            top: 20px;
+            position: absolute;
+            width: 70px;
+            height: 10px;
+            background: #BBC1CC;
+            box-shadow: -146px -56px 0px #BBC1CC, -152px -56px 0px #BBC1CC;
+        }
+        
+        .female1:after {
+            content: "";
+            left: -159px;
+            top: -8px;
+            position: absolute;
+            width: 100px;
+            height: 10px;
+            background: #BBC1CC;
+            -webkit-transform: rotate(35deg);
+            -moz-transform: rotate(35deg);
+            -ms-transform: rotate(35deg);
+            -o-transform: rotate(35deg);
+            transform: rotate(35deg);
+        }
+        
+        .male1 {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 10px solid #8f96a3;
+            border-radius: 50%;
+            background: #8f96a3;
+            left: -75px;
+            top: -95px;
+            -webkit-animation: position 1s infinite;
+            -moz-animation: position 1s infinite;
+            -ms-animation: position 1s infinite;
+            -o-animation: position 1s infinite;
+            animation: position 1s infinite;
+        }
+        
+        .male1:before {
+            content: "";
+            left: -91px;
+            top: 81px;
+            position: absolute;
+            width: 100px;
+            height: 15px;
+            background: #8f96a3;
+            -webkit-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            -ms-transform: rotate(-40deg);
+            -o-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+            border-radius: 15px;
+        }
+        
+        .male1:after {
+            content: "";
+            left: -150px;
+            top: 109px;
+            position: absolute;
+            width: 80px;
+            height: 15px;
+            background: #8f96a3;
+            border-radius: 15px;
+        }
+        
+        @-webkit-keyframes position {
+            0% {
+                left: -75px;
+            }
+            50% {
+                left: -70px;
+            }
+            100% {
+                left: -75px;
+            }
+        }
+        
+        @-moz-keyframes position {
+            0% {
+                left: -75px;
+            }
+            50% {
+                left: -70px;
+            }
+            100% {
+                left: -75px;
+            }
+        }
+        
+        @-ms-keyframes position {
+            0% {
+                left: -75px;
+            }
+            50% {
+                left: -70px;
+            }
+            100% {
+                left: -75px;
+            }
+        }
+        
+        @-o-keyframes position {
+            0% {
+                left: -75px;
+            }
+            50% {
+                left: -70px;
+            }
+            100% {
+                left: -75px;
+            }
+        }
+        
+        @keyframes position {
+            0% {
+                left: -75px;
+            }
+            50% {
+                left: -70px;
+            }
+            100% {
+                left: -75px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="sexposition">
+        <div class="female1"></div>
+        <div class="male1"></div>
+    </div>
+    <!-- partial -->
+</body>
+
+</html>

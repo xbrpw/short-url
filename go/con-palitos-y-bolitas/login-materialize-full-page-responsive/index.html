@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="generator" content="@LuisAngelMaciel">
+  <meta name="rights" content="®@LuisAngelMaciel">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:url" content="https://xbr.github.io">
+  <meta property="og:site_name" content="Luis Angel Maciel Padilla">
+  <meta property="og:image" content="https://luisangelmaciel.github.io/img/og-image.png" /> 
+  <meta property="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@luisangelmaciel" />
+  <meta name="twitter:creator" content="@luisangelmaciel">
+  <meta name="twitter:image" content="https://luisangelmaciel.github.io/img/twitterimage.png" />
+  <meta property="og:title" content="xbr.pw">
+
+  <title></title>
+  <meta name="twitter:title" content="Iniciar sesión | Crear cuenta">
+  <meta name="description" content="Iniciar sesión o registrarse">
+  <meta name='twitter:description ' content=' Iniciar sesión o registrarse '>
+  <meta property='og:description ' content='Iniciar sesión o registrarse'>
+  <meta name="keywords" content="login, Login,  Sing in,  Sing up, Iniciar sesión,  registrarse">
+  <meta property="og:type" content="club" />
+
+  <style media="screen">
+          /* Login materialize (full page+responsive)
+  ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮
+  ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
+  ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃
+  ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃
+  ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮
+  ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯
+  ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+  ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ code & desing & travel */
+      </style>  
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'><link rel="stylesheet" href="./style.css">
+
+
+<div class="main-container login-container login-parent">
+  <div class="login-in-middle full-width">
+    <div class="container login-child z-depth-3 white">
+      <div class="row no-padding">
+        <div class="col l6 m6 s12 no-padding">
+          <ul class="tabs tabs-fixed-width" name="tabs">
+            <li class="tab col s3">
+              <a class="active" href="#login-tab">Iniciar sesión</a>
+            </li>
+            <li class="tab col s3"><a href="#singup-tab">Crear cuenta</a></li>
+          </ul>
+          <div id="login-tab" class="col s12 white login-content no-selectable">
+            <!-- Login form -->
+            <form name="login" method="post" class="col s12" novalidate>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">mail</i>
+                  <input
+                    id="login_email"
+                    name="email"
+                    type="email"
+                    class="validate"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="login_email">Correo electrónico</label>
+                  <span
+                    class="helper-text"
+                    data-error="El valor ingresado no es válido"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">vpn_key</i>
+                  <input
+                    id="login_password"
+                    name="password"
+                    type="password"
+                    class="validate"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="login_password">Contraseña</label>
+                  <span
+                    class="helper-text"
+                    data-error="Este campo es obligatorio"
+                  />
+                </div>
+              </div>
+              <div class="progress no-display">
+                <div class="indeterminate"></div>
+              </div>
+              <div class="row center-align">
+                <button
+                  name="ingresar"
+                  class="btn waves-effect waves-light blue darken-3"
+                  type="button"
+                >
+                  Ingresar
+                  <i class="material-icons right">keyboard_arrow_right</i>
+                </button>
+              </div>
+              <div class="row center-align">
+                <a
+                  name="recuperar-password"
+                  href="#"
+                  data-action="olvidaste-tu-contrasena"
+                  >¿Olvidaste tu contraseña?</a
+                >
+              </div>
+            </form>
+          </div>
+          <div
+            id="singup-tab"
+            class="col s12 white login-content no-selectable"
+          >
+            <!-- Singup form -->
+            <form class="col s12">
+              <div class="row">
+                Gracias por visitarnos, por favor llena el siguiente formulario
+                para darte de alta.
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input
+                    id="singup_nombre"
+                    type="text"
+                    class="validate"
+                    autocomplete="off"
+                  />
+                  <label for="singup_nombre">Nombre</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input
+                    id="singup_apellido"
+                    type="text"
+                    class="validate"
+                    autocomplete="off"
+                  />
+                  <label for="singup_apellido">Apellido</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input
+                    id="singup_email"
+                    type="email"
+                    class="validate"
+                    autocomplete="off"
+                  />
+                  <label for="singup_email">Correo electrónico</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input
+                    id="singup_password"
+                    type="password"
+                    class="validate"
+                    autocomplete="off"
+                  />
+                  <label for="singup_password">Contraseña</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input
+                    id="singup_repetir_password"
+                    type="password"
+                    class="validate"
+                    autocomplete="off"
+                  />
+                  <label for="singup_repetir_password"
+                    >Repeetir Contraseña</label
+                  >
+                </div>
+              </div>
+              <div class="row center-align">
+                <button
+                  class="btn waves-effect waves-light blue darken-3"
+                  type="button"
+                >
+                  Registrar
+                  <i class="material-icons right">keyboard_arrow_right</i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="col l6 m6 s12 login-right-image no-padding hide-on-small-only"
+        ></div>
+      </div>
+      <div class="login-footer center-align blue darken-3">
+        <a href="#">
+          <img
+            src="https://seeklogo.com/images/M/materialize-logo-0FCAD8A6F8-seeklogo.com.png"
+            height="40"
+            alt="Logotipo"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

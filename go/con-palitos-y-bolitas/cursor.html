@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cursor en movimiento - hand pointer</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        .container {
+            background-color: #fff;
+            bottom: 10%;
+            left: 10%;
+            position: absolute;
+            right: 10%;
+            top: 10%;
+        }
+        
+        .hand {
+            animation: swipe 1s ease-in-out infinite;
+            color: #000;
+            font-size: 100px;
+            height: 100px;
+            left: calc(50% - 50px);
+            opacity: .5;
+            position: absolute;
+            top: calc(50% - 50px);
+            transform-origin: bottom;
+            width: 100px;
+        }
+        
+        @keyframes swipe {
+            0% {
+                transform: translate(-100%) rotate(-15deg);
+            }
+            100% {
+                transform: translate(100%) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container"><i class="hand fa fa-hand-pointer-o"></i></div>
+    <!-- partial -->
+</body>
+
+</html>

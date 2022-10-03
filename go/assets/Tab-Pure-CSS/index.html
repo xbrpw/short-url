@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tab Pure CSS | Qué significan realmente los nombres de los personajes de Dragon Ball </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+        
+        html {
+            padding-top: 50px;
+        }
+        
+        .tab-controls {
+            color: none
+        }
+        
+        @media (min-width: 40rem) {
+            .tab-controls {
+                border: none;
+            }
+        }
+        
+        .tab-controls li {
+            display: block;
+        }
+        
+        @media (min-width: 40rem) {
+            .tab-controls li {
+                border: none;
+            }
+            .tab-controls li:after {
+                content: "";
+                position: absolute;
+                transform: translateY(-50%);
+            }
+            .tab-controls li:last-of-type:after {
+                content: none;
+            }
+        }
+        
+        .tab-controls label {
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .tab-input {
+            display: none;
+        }
+        
+        .tab-item {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        
+        .tab-input:checked+.tab-item {
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            transition: 0.3s ease-in-out;
+        }
+        
+        @media (min-width: 40rem) {
+            .tab-item {
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tab-pure-css">
+        <div style="width: 100%;
+        max-width: 75rem;
+        margin: 0 auto;
+        padding: 2rem;">
+
+            <h1 style="color: #017dbb">Qué significan realmente los nombres de los personajes de Dragon Ball </h1>
+            <h2 style="color: #18487D">
+                <label for="tab-1">Goku | </label>
+                <label for="tab-2">Vegeta | </label>
+                <label for="tab-3">Bulma | </label>
+                <label for="tab-4">Freezer</label>
+            </h2>
+            <br>
+            <div>
+                <input id="tab-1" name="tab" type="radio" class="tab-input" checked />
+                <div class="tab-item">
+                    <p>
+                        El nombre natal de Son Goku es Kakarot, que en japonés se pronuncia “Kakarotto”.
+                        <br><br> Kakarot es una manera diferente que se le ocurrió a Toriyama de escribir “carrot”, zanahoria en inglés.
+                        <br><br> En cuanto a Goku, en Japón esta palabra se refiere a la cantidad de arroz necesaria para alimentar a una persona cada año, aunque también hace referencia al cielo.
+                        <br><br>De hecho, el arroz es protagonista en la familia de Goku.
+                    </p>
+                </div>
+
+                <input id="tab-2" name="tab" type="radio" class="tab-input" />
+                <div class="tab-item">
+                    <p>
+                        Tanto el nombre de Vegeta como el de su padre, el Rey Vegeta, y el de su planeta de origen, el planeta Vegeta (una familia con un poco de ego, como los fanáticos tenemos claro), significa “vegetales”, dado que son las seis primeras letras de esa palabra.
+                        ¿Un poco obvio, no?
+                    </p>
+                </div>
+
+                <input id="tab-3" name="tab" type="radio" class="tab-input" />
+                <div class="tab-item">
+                    <p>
+                        El nombre de Bulma, uno de los personajes más famosos del universo de Dragon Ball desde su origen, que en Dragon Ball Z se casó con Vegeta, hace referencia a un tipo de pantaloncillos cortos que usan las mujeres como pijama, ropa interior o en el gimnasio.
+                    </p>
+                </div>
+
+                <input id="tab-4" name="tab" type="radio" class="tab-input" />
+                <div class="tab-item">
+                    <p>
+                        Freezer o Frieza hace referencia al refrigerador.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script>
+        document.querySelector('.menu').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

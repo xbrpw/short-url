@@ -1,18 +1,74 @@
-<!DOCTYPE html>
-<html lang="es-MX" >
-<head>
-  <meta charset="UTF-8">
-  <title> Dashboard </title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
-	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+
+<!DOCTYPE html><html lang="es-MX" class="dark [--scroll-mt:9.875rem] lg:[--scroll-mt:6.3125rem]">
+	<head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/>
+	<meta name="twitter:site" content="@tailwindcss"/><meta name="twitter:description" content="Documentation for the Tailwind CSS framework."/>
+	<meta name="twitter:creator" content="@tailwindcss"/><meta property="og:url" content="https://tailwindcss.com/docs/installation"/>
+	<meta property="og:type" content="article"/><meta property="og:description" content="Documentation for the Tailwind CSS framework."/>
+	<meta property="og:image" content="https://tailwindcss.com/_next/static/media/social-card-large.a6e71726.jpg"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feeds/feed.xml"/>
+	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/feeds/atom.xml"/>
+	<link rel="alternate" type="application/json" title="JSON Feed" href="/feeds/feed.json"/><link rel="preconnect" href="https://KNPXZI5B0M-dsn.algolia.net" crossorigin="true"/><title>Installation: Tailwind CLI - Tailwind CSS</title><meta name="twitter:title" content="Installation: Tailwind CLI - Tailwind CSS"/><meta property="og:title" content="Installation: Tailwind CLI - Tailwind CSS"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://tailwindcss.com/_next/static/media/social-square.eab77323.jpg"/><meta name="next-head-count" content="18"/><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=3"/><link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png?v=3"/><link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png?v=3"/>
+	<link rel="manifest" href="/favicons/site.webmanifest?v=3"/><link rel="mask-icon" href="/favicons/safari-pinned-tab.svg?v=3" color="#38bdf8"/>
+	<link rel="shortcut icon" href="/favicons/favicon.ico?v=3"/><meta name="apple-mobile-web-app-title" content="Tailwind CSS"/><meta name="application-name" content="Tailwind CSS"/><meta name="msapplication-TileColor" content="#38bdf8"/><meta name="msapplication-config" content="/favicons/browserconfig.xml?v=3"/><meta name="theme-color" content="#f8fafc"/>
+	
+
+
+
+  <title> Dashboard </title>   <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet"> <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+	<link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.css" rel="stylesheet">
+	
+	<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 	<style>[x-cloak] {display: none;}body {font-family: "Inter" !important;}</style>
+	<link rel="stylesheet" href="https://www.xbr.pw/go/eevee.cs">  
+	<style>@charset "UTF-8";/* luisngelmaciel.git.io/eevee now by me Luis Angel Maciel. Extract from W3; extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+		html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+		/*  azul #18487D; */
+		html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+		body {font-family:Verdana, Helvetica, "Roboto","Effra", "Calibri", Arial,sans-serif;}
+		article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+		details>summary {transition: color 1s;color: black;}details[open]>summary {color: rgb(1, 1, 31);}
+		audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+		audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+		a{background-color:transparent}a:active,a:hover{outline-width:0}
+		.a,.a:after,.a:link,.a:visited,.a:hover{text-decoration: none;color:inherit;cursor: pointer;}
+		abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+		b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:rgb(238, 255, 0);color:#000}
+		small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+		sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}
+		code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+		button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+		button,input{overflow:visible}button,select{text-transform:none}
+		button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+		button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+		button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+		fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+		legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+		[type=checkbox],[type=radio]{padding:0}
+		[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+		[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+		[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+		h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+		h1,h2,h3,h4,h5,h6{font-family:"Effra", "Calibri", Arial, helvetica,sans-serif;font-weight:400;margin:10px 0}.letter-spacing-4px{letter-spacing:4px}
+		hr{border:0;border-top:1px solid #eee;margin:20px 0} 
+		p{display: block;margin-top: 1em;margin-bottom: 1em;margin-left: 0;margin-right: 0;font-size: 1em}
+		img {vertical-align: middle;border-style:none}/* End extract & Start Eevee*/
+		.imgResponsive {width: 100%;max-width: 250px;height: auto;}
+		#preloder {position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 999999;justify-content: center;gap: 2rem;padding: 3rem;min-height: 80vh;background-color: #1B1C24;/*background-image: url("img/lamp-icon-black-1B1C24.svg ");*//*  background-color: #1086B5; background-image: url("lamp-icon.svg "); */align-items: center;text-align: center;}
+		.loader {width: 40px;height: 40px;position: absolute;top: 50%;left: 50%;margin-top: -13px;margin-left: -13px;border-radius: 60px;animation: loader 0.8s linear infinite;-webkit-animation: loader 0.8s linear infinite;}
+		@keyframes loader {0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);border: 4px solid #f44336;border-left-color: transparent;}50% {-webkit-transform: rotate(180deg);transform: rotate(180deg);border: 4px solid #673ab7;border-left-color: transparent;}100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);border: 4px solid #f44336;border-left-color: transparent;}}    
+		@-webkit-keyframes loader {0% {-webkit-transform: rotate(0deg);border: 4px solid #f44336;border-left-color: transparent;}50% {-webkit-transform: rotate(180deg);border: 4px solid #673ab7;border-left-color: transparent;}100% {-webkit-transform: rotate(360deg);border: 4px solid #f44336;border-left-color: transparent;}}
+		.font-serif{font-family:serif}.font-sans-serif{font-family:sans-serif}.font-cursive{font-family:cursive}.font-monospace{font-family:monospace}
+		.hp {display: block;margin-top: 1em;margin-bottom: 1em;margin-left: 0;margin-right: 0;font-size: 1em;  font-weight: normal;}
+		/*normalize*/
+		button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}
+		button,input{color:inherit}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{color:inherit}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}/*# sourceMappingURL=normalize.min.css.map */</style>
 </head>
 <body>
 <!-- partial:Dashboard with TailwindCSS and AlpineJS -->
 <body class="antialiased bg-gray-200">
-
-	<div x-data="{ sidemenu: false }" class="h-screen flex overflow-hidden" x-cloak @keydown.window.escape="sidemenu = false">
+	
+	<div x-data="{ sidemenu: true }" class="h-screen flex overflow-hidden" x-cloak @keydown.window.escape="sidemenu = true">
 
         <div class="md:hidden">
 			<div @click="sidemenu = false" class="fixed inset-0 z-30 bg-gray-600 opacity-0 pointer-events-none transition-opacity ease-linear duration-300" :class="{'opacity-75 pointer-events-auto': sidemenu, 'opacity-0 pointer-events-none': !sidemenu}"></div>
@@ -30,7 +86,7 @@
 					<ul>
 						<li>
 							<a href="#"
-								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 								<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 									viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 									stroke-linecap="round" stroke-linejoin="round">
@@ -46,7 +102,7 @@
 
 						<li>
 							<a href="#"
-								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 								<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 									viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 									stroke-linecap="round" stroke-linejoin="round">
@@ -60,7 +116,7 @@
 
 						<li>
 							<a href="#"
-								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 								<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 									viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 									stroke-linecap="round" stroke-linejoin="round">
@@ -77,7 +133,7 @@
 
 						<li>
 							<a href="#"
-								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-blue-700 hover:text-blue-600 hover:bg-gray-200 bg-gray-200">
+								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-blue-700 hover: hover:bg-gray-200 bg-gray-200">
 								<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 									viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 									stroke-linecap="round" stroke-linejoin="round">
@@ -91,7 +147,7 @@
 
 						<li>
 							<a href="#"
-								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 								<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 									viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 									stroke-linecap="round" stroke-linejoin="round">
@@ -108,7 +164,7 @@
 
 						<li>
 							<a href="#"
-								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+								class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 								<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 									viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 									stroke-linecap="round" stroke-linejoin="round">
@@ -141,7 +197,7 @@
 				<ul>
 					<li>
 						<a href="#"
-							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 							<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 								viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 								stroke-linecap="round" stroke-linejoin="round">
@@ -157,7 +213,7 @@
 
 					<li>
 						<a href="#"
-							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 							<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 								viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 								stroke-linecap="round" stroke-linejoin="round">
@@ -171,7 +227,7 @@
 
 					<li>
 						<a href="#"
-							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 							<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 								viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 								stroke-linecap="round" stroke-linejoin="round">
@@ -188,7 +244,7 @@
 
 					<li>
 						<a href="#"
-							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-blue-600 hover:text-blue-600 hover:bg-gray-200 bg-gray-200">
+							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium  hover: hover:bg-gray-200 bg-gray-200">
 							<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 								viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 								stroke-linecap="round" stroke-linejoin="round">
@@ -202,7 +258,7 @@
 
 					<li>
 						<a href="#"
-							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 							<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 								viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 								stroke-linecap="round" stroke-linejoin="round">
@@ -219,7 +275,7 @@
 
 					<li>
 						<a href="#"
-							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200">
+							class="mb-1 px-2 py-2 rounded-lg flex items-center font-medium text-gray-700 hover: hover:bg-gray-200">
 							<svg xmlns="http://www.w3.org/2000/svg" class="mr-4 opacity-50" width="24" height="24"
 								viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
 								stroke-linecap="round" stroke-linejoin="round">
@@ -264,7 +320,7 @@
 				</div>
 				<div class="flex items-center">
 					 
-					<a href="#" class="text-gray-500 p-2 rounded-full hover:text-blue-600 hover:bg-gray-200 cursor-pointer mr-4">
+					<a href="#" class="text-gray-500 p-2 rounded-full hover: hover:bg-gray-200 cursor-pointer mr-4">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							<rect x="0" y="0" width="24" height="24" stroke="none"></rect>
 							<path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
@@ -274,18 +330,18 @@
 					 
 					<div class="relative" x-data="{ open: false }" x-cloak>
 						<div @click="open = !open"
-							class="cursor-pointer font-bold w-10 h-10 bg-blue-200 text-blue-600 flex items-center justify-center rounded-full">
+							class="cursor-pointer font-bold w-10 h-10 bg-blue-200  flex items-center justify-center rounded-full">
 							DA
 						</div>
 
 						<div x-show.transition="open" @click.away="open = false"
 							class="absolute top-0 mt-12 right-0 w-48 bg-white py-2 shadow-md border border-gray-100 rounded-lg z-40">
-							<a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Edit
+							<a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:">Edit
 								Profile</a>
 							<a href="#"
-								class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Account
+								class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:">Account
 								Settings</a>
-							<a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Sign
+							<a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:">Sign
 								Out</a>
 						</div>
 					</div>
@@ -351,7 +407,7 @@
 				<div class="flex items-center justify-between mb-4">
 					<h2 class="text-xl font-bold text-gray-800">Last Invoices</h2>
 
-					<a href="#" class="text-blue-600 hover:text-blue-500 font-medium">View all</a>
+					<a href="#" class=" hover:text-blue-500 font-medium">View all</a>
 				</div>
 				<div class="overflow-x-auto bg-white rounded-lg shadow">
 					<table class="w-full whitespace-no-wrap bg-white overflow-hidden table-striped">
@@ -468,15 +524,78 @@
 						</tbody>
 					</table>
 				</div>
+
+				<div class="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+  <div>
+    <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
+      <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><!-- ... --></svg>
+    </span>
+  </div>
+ 
+</div>
+<!-- Dark mode not enabled 
+<html>
+<body>
+  
+  <div class="bg-white dark:bg-black">
+   
+  </div>
+</body>
+</html>-->
+
+<!-- Dark mode enabled -->
+<html class="dark">
+<body>
+  <!-- Will be black -->
+  <div class="bg-white dark:bg-black">
+	<h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes Upside-Down</h3>
+  <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+  </p>
+  </div>
+</body>
+</html>
+
+
+tailwind.config.js
+<script>module.exports = {
+	darkMode: ['class', '[data-mode="dark"]'],
+  // ...
+}</script>
+<script>// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+
+// Whenever the user explicitly chooses light mode
+localStorage.theme = 'light'
+
+// Whenever the user explicitly chooses dark mode
+localStorage.theme = 'dark'
+
+// Whenever the user explicitly chooses to respect the OS preference
+localStorage.removeItem('theme')</script>
                 
 				<div class="py-10 text-center">
-				    <p class="text-gray-600">Created by <a class="text-blue-600 hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300" href="https://twitter.com/mithicher">@mithicher</a>. Built with <a class="text-blue-600 hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300" href="https://tailwindcss.com/">tailwindCSS</a> and <a href="https://github.com/alpinejs/alpine" class="text-blue-600 hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300">AlpineJS</a>. Illustration from <a href="https://undraw.co/illustrations" class="text-blue-600 hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300">https://undraw.co/illustrations</a>. SVG icons from <a href="https://github.com/tabler/tabler-icons" class="text-blue-600 hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300">Tabler Icons</a>.</p>
+				    <p class="text-gray-600">Created by <a class=" hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300" href="https://twitter.com/mithicher">@mithicher</a>. Built with <a class=" hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300" href="https://tailwindcss.com/">tailwindCSS</a> and <a href="https://github.com/alpinejs/alpine" class=" hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300">AlpineJS</a>. Illustration from <a href="https://undraw.co/illustrations" class=" hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300">https://undraw.co/illustrations</a>. SVG icons from <a href="https://github.com/tabler/tabler-icons" class=" hover:text-blue-500 border-b-2 border-blue-200 hover:border-blue-300">Tabler Icons</a>.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
 <!-- partial -->
+<script type="text/javascript" charset="UTF-8"></script>
+	try {
+	  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+		document.documentElement.classList.add('dark')
+		document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B1120')
+	  } else {
+		document.documentElement.classList.remove('dark')
+	  }
+	} catch (_) {}
+  </script>
   
 </body>
 </html>

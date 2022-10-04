@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #131417;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+}
+
+.ipass , .btn {
+  outline: none;
+  border: none;
+}
+
+.ipass {
+  padding-left: 10px;
+  height: 27.5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;  
+}
+
+.btn {
+  color: white;
+  background: #257eff;
+  cursor: pointer;
+  height: 30px;
+  width: 80px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: .5s ease-out;
+}
+
+.btn:hover {
+  background: #ff3960;
+}

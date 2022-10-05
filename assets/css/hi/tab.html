@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet">   
+  </head>
+  <body class="p-3 m-0 border-0 bd-example">
+
+
+
+  
+  
+  <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+<style>/* Style the close button */
+  .topright {
+    float: right;
+    cursor: pointer; padding-right:3px
+  }
+  
+  .topright:hover {color: red;}
+  </style>
+  
+  <div class="container">
+    <h2>Filterable List</h2>
+    <p>Type something in the input field to search the list for specific items:</p>  
+    <ul class="nav nav-tabs">
+      <li class="nav-item " onclick="openCity(event, 'London')" id="defaultOpen"> 
+        <a class="nav-link active" aria-current="page" href="#">Fav</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="openCity(event, 'Paris')">Hey</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="openCity(event, 'Tokyo')">Hi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">+</a>
+      </li>
+    </ul>
+ 
+      <input class="form-control list-group list-group-item" id="myInput" type="text" placeholder=" Search..">
+    <div id="London" class="tabcontent">
+    <br>
+  </div>
+
+  <div id="Paris" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p> 
+  </div>
+  
+  <div id="Tokyo" class="tabcontent">
+    <h3>Tokyo</h3> <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <p>Tokyo is the capital of Japan.</p>
+  </div> 
+</div>
+
+
+
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+
+  </body>
+</html>

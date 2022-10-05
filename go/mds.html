@@ -33,19 +33,21 @@
   </div>
    si pero no -->
   <!-- The Modal -->
-  <div class="modal" id="myModal">
+ 
+  
+  <div class="modal" id="myModalfav">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
   
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">{{City}} </h4>
+          <h4 class="modal-title">{{fav}} </h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
   
         <!-- Modal body -->
         <div class="modal-body">
-          <iframe src="" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+          <iframe src="{{hreffav}}" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
         </div>
   
         <!-- Modal footer -->
@@ -56,7 +58,6 @@
       </div>
     </div>
   </div>
-  
   
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -69,104 +70,71 @@
   
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   
-  <script>
-  var myObject= {"customers":[
-  {"CustomerName" : "../assets/css/fav/simple-responsive-table-in-css","City" : "paper-ripple-effect","Country" : ""},
-  {"CustomerName" : "../assets/css/fav/paper-ripple-effect","City" : "paper-ripple-effect","Country" : ""},
-  {"CustomerName" : "../assets/css/fav/card-article-ui","City" : "card-article-ui","Country" : ""},
-  {"CustomerName" : "../assets/css/fav/css3-poster","City" : "css3-poster","Country" : ""},
-  {"CustomerName" : "../assets/css/fav/nav-boton-mobile","City" : "nav-boton-mobile","Country" : ""},
-  {"CustomerName" : "../assets/css/fav/section-separator-inspiration","City" : "section-separator-inspiration","Country" : ""},
-  {"CustomerName" : "https://www.xbr.pw/secu/ndaria/2024","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/assets/hey/login-colorMode-2col","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/assets/hey/login-bootstrap-5","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/assets/hey/show-password","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/assets/hey/step-by-stepcss-js ","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/assets/hey/login-bootstrap-form ","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/assets/hey/localStorage_login ","City" : "","Country" : ""},
-{"CustomerName" : "../assets/css/fav/simple-responsive-table-in-css             ","City" : "      ","Country" : ""},      
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/2024","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/alerts","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/calendario","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/feeds","City" : "","City" : "","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/github-redirect-for-codepen","City" : "https://www.xbr.pw/secu/ndaria/github-redirect-for-codepen","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/local","City" : "https://www.xbr.pw/secu/ndaria/local","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/myb","City" : "https://www.xbr.pw/secu/ndaria/local","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/myb/portadas","City" : "https://www.xbr.pw/secu/ndaria/myb","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/paso-a-paso","City" : "https://www.xbr.pw/secu/ndaria/myb/portadas","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/pomodoro","City" : "https://www.xbr.pw/secu/ndaria/en-1-linea.html","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/responsive-off-canva","City" : "s-menu-slide-paneljqueryhttps://www.xbr.pw/secu/ndaria/pomodoro","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/s/bottombar.html","City" : "https://www.xbr.pw/secu/ndaria/s/bottombar.html","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/crear-perfil-completo-paso-a-paso.html","City" : "https://www.xbr.pw/secu/ndaria/crear-perfil-completo-paso-a-paso.html","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/pantalla-bloqueada-para-apps","City" : "https://www.xbr.pw/secu/ndaria/pantalla-bloqueada-para-apps","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/secu/ndaria/full-screen.html","City" : "https://www.xbr.pw/secu/ndaria/full-screen.html","Country" : ""},
-{"CustomerName" : "https://www.xbr.pw/go/assets/apuntes-w3.html","City" : "https://www.xbr.pw/go/assets/apuntes-w3.html","Country" : ""},
-{"CustomerName" : "go/dash/index.html","City" : "go/dash/index.html","Country" : ""}
-]};
-  </script>
-  
 
-
-  <ul id="id01">
-    <li  w3-repeat="customers">
-      <a href="..//assets/css/{{SnipetDorada}}" target="copy" data-bs-toggle="modal" data-bs-target="#myModal" > "{{City}}" </a> 
-      <a href="..//assets/css/{{SnipetDorada}}" target="_blank"> <i class="fas fa-external-link-alt"></i></a> </i> 
-    </li>
-    <ul id="id02">
-      <li  w3-repeat="customers">
-        <a href="{{SnipetDorada}}" target="copy" data-bs-toggle="modal" data-bs-target="#myModal" > "{{SnipetDorada}}" </a> 
-        <a href="{{SnipetDorada}}" target="_blank"> <i class="fas fa-external-link-alt"></i></a> </i> 
-      </li>
-  
-    
     <script>
-    w3.displayObject("id01", myObject);
-    </script>
-      <script>
-        w3.displayObject("id02", myObject);
-        </script>
+      var myObject= {"snipdoradafav":[
+      {"fav" : "simple-responsive-table-in-css", "hreffav" : "´https:www.xbr.pw/assets/css/fav/simple-responsive-table-in-css.html´"},
+      {"fav" : "card-article-ui", "hreffav" : "´https:www.xbr.pw/assets/css/fav/card-article-ui´"},
+      {"fav" : "", "hreffav" : ""}
+    ]};
+      </script>
 
-  <div class="offcanvas offcanvas-start" id="demo">
-    <div class="offcanvas-header">
-      <h1 class="offcanvas-title">Heading</h1>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <p>Some text lorem ipsum.</p>
-      <p>Some text lorem ipsum.</p>
-      <p>Some text lorem ipsum.</p>
-      <button class="btn btn-secondary" type="button">A Button</button>
-    </div>
-  </div>
+
   
-  <div class="container-fluid mt-3">
-    <h3>Offcanvas Sidebar</h3>
-    <p>Offcanvas is similar to modals, except that it is often used as a sidebar.</p>
-    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-      Open Offcanvas Sidebar
-    </button>
-  </div>
+    <ul id="cssFAV">
+      <li  w3-repeat="snipdoradafav">
+        <a href={{hreffav}} target="copy" data-bs-toggle="modal" data-bs-target="#myModalfav" > {{fav}} </a> 
+        <a href={{hreffav}} target="_blank"> <i class="fas fa-external-link-alt"></i></a> </i> 
+      </li></ul>
 
+    
+   
+    
+      <script>
+        w3.displayObject("cssFAV", myObject);
+        </script> 
 
-<div class="offcanvas offcanvas-bottom" id="demo">
+ <!--  <div class="offcanvas offcanvas-start" id="demo">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title">Heading</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
     <p>Some text lorem ipsum.</p>
+    <p>Some text lorem ipsum.</p>
+    <p>Some text lorem ipsum.</p>
     <button class="btn btn-secondary" type="button">A Button</button>
   </div>
 </div>
 
 <div class="container-fluid mt-3">
-  <h3>Bottom Offcanvas</h3>
-  <p>The .offcanvas-bottom class positions the offcanvas at the bottom of the page.</p>
+  <h3>Offcanvas Sidebar</h3>
+  <p>Offcanvas is similar to modals, except that it is often used as a sidebar.</p>
   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-    Toggle Bottom Offcanvas
+    Open Offcanvas Sidebar
   </button>
 </div>
 
+
+<div class="offcanvas offcanvas-bottom" id="demo">
+<div class="offcanvas-header">
+  <h1 class="offcanvas-title">Heading</h1>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+  <p>Some text lorem ipsum.</p>
+  <button class="btn btn-secondary" type="button">A Button</button>
+</div>
+</div>
+
+<div class="container-fluid mt-3">
+<h3>Bottom Offcanvas</h3>
+<p>The .offcanvas-bottom class positions the offcanvas at the bottom of the page.</p>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+  Toggle Bottom Offcanvas
+</button>
+</div>
+ 
 
 <hr>
 
@@ -198,11 +166,7 @@
           <li><a href="animated-mail-button/enviar.html" target="tabSnipes">animated-mail-button</a><br></li> </ul><!-- /ul -- ></div>< !--/MyDivx -- ></div>< !-- /"myMenuMini">-->
     </div>
 
-<script src="js/dashboard.js"></script>
- <div w3-include-html="content.html"></div> 
-    
-    
-
+<!-- 
  .containerOK {
   max-width: 1000px;
   margin: 0 auto;
@@ -281,3 +245,4 @@
 <hr>
 
 
+-->

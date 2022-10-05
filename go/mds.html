@@ -40,14 +40,14 @@
       <div class="modal-content">
   
         <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">{{fav}} </h4>
+        <div class="modal-header" id="cssFAV">
+          <h4 class="modal-title"> {{fav}} </h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
   
         <!-- Modal body -->
         <div class="modal-body">
-          <iframe src="{{hreffav}}" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+          <iframe src="{{fav}}" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
         </div>
   
         <!-- Modal footer -->
@@ -73,8 +73,13 @@
 
     <script>
       var myObject= {"snipdoradafav":[
-      {"fav" : "simple-responsive-table-in-css", "hreffav" : "´https:www.xbr.pw/assets/css/fav/simple-responsive-table-in-css.html´"},
-      {"fav" : "card-article-ui", "hreffav" : "´https:www.xbr.pw/assets/css/fav/card-article-ui´"},
+      {"fav" : "card-article-ui	", "hreffav" : "card-article-ui"},
+      {"fav" : "css3-poster	", "hreffav" : "css3-poster"},
+      {"fav" : "paper-ripple-effect	", "hreffav" : "paper-ripple-effect"},
+      {"fav" : "section-separator-inspiration	", "hreffav" : "section-separator-inspiration"},
+      {"fav" : "simple-responsive-table-in-css	", "hreffav" : "simple-responsive-table-in-css"},
+      {"fav" : "fav.html	", "hreffav" : "fav.html"},
+      {"fav" : "nav-boton-mobile.html	", "hreffav" : "nav-boton-mobile.html"},
       {"fav" : "", "hreffav" : ""}
     ]};
       </script>
@@ -83,18 +88,17 @@
   
     <ul id="cssFAV">
       <li  w3-repeat="snipdoradafav">
-        <a href={{hreffav}} target="copy" data-bs-toggle="modal" data-bs-target="#myModalfav" > {{fav}} </a> 
-        <a href={{hreffav}} target="_blank"> <i class="fas fa-external-link-alt"></i></a> </i> 
+        <a href={{fav}} target="copy" data-bs-toggle="modal" data-bs-target="#myModalfav" > {{fav}} </a> 
+        <a href={{fav}} target="_blank"> <i class="fas fa-external-link-alt"></i></a> </i> 
       </li></ul>
 
     
-   
     
       <script>
         w3.displayObject("cssFAV", myObject);
         </script> 
 
- <!--  <div class="offcanvas offcanvas-start" id="demo">
+ <!-- ༼ つ ◕_◕ ༽つ Please share ༼ つ ◕_◕ ༽つ Please share  ༼ つ ◕_◕ ༽つ Please share <div class="offcanvas offcanvas-start" id="demo">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title">Heading</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>

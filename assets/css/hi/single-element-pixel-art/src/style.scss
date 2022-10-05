@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color: #f5f7fa;
+}
+$colors: (
+  "o": transparent,
+  "b": #000000,
+  "w": #ffffff
+);
+// 28
+$size: 16px;
+$pixel-art: (
+  thug-life: (
+    (o o b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b)
+      (b b o o o o o o o o b b w b w b b b b b b b b b w b w b b b b b b b)
+      (o o o o o o o o o o o b b w b w b b b b b o b b b w b w b b b b b o)
+      (o o o o o o o o o o o o b b w b w b b b o o o b b b w b w b b b o o)
+      (o o o o o o o o o o o o o b b b b b b o o o o o b b b b b b b o o o)
+  )
+);
+
+@function pixelize($matrix, $size) {
+  $shadow: "";
+  $rows: length($matrix); //6 rows
+  @for $row from 1 through $rows {
+    $rowNum: nth($matrix, $row);
+    @for $col from 1 through length($rowNum) {
+      $dot: nth($rowNum, $col);
+      $shadow: $shadow +
+        ($size * $col) +
+        " "+
+        ($size * $row) +
+        " " +
+        map-get($colors, $dot);
+
+      @if not($col == length($rowNum) and $row == $rows) {
+        $shadow: $shadow + ",";
+      }
+    }
+  }
+  @return unquote($shadow);
+}
+
+.thug-life {
+  height: $size * length(map-get($pixel-art, thug-life));
+  width: $size * length(nth(map-get($pixel-art, thug-life), 1));
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: $size;
+    width: $size;
+    top: -$size;
+    left: -$size;
+    box-shadow: pixelize(map-get($pixel-art, thug-life), $size);
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 2rem;
+  }
+}

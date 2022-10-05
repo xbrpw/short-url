@@ -1,0 +1,29 @@
+:root {
+  --mouse-x: 0;
+  --mouse-y: 0;
+}
+html,body {
+  height:100%;
+  margin: 0;
+  padding: 0;
+}
+
+#ball {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: white;
+  transform: translate(
+    calc(calc(var(--mouse-x) - 10) * 1px), 
+    calc(calc(var(--mouse-y) - 10) * 1px)
+  );
+  border-radius: 100%;
+}
+body {
+
+  /* 
+  Other option, use x and y to calculate colour */
+  /*
+  background: rgb(0,calc(var(--mouse-x) / 10),calc(var(--mouse-y) / 10)); */
+  background: radial-gradient(circle at calc(var(--mouse-x) * 1px) calc(var(--mouse-y) * 1px), #FBFFD6 0, #01191F 10%, #000);
+}

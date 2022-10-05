@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color: #f5f7fa;
+}
+
+.thug-life {
+  height: 80px;
+  width: 544px;
+  position: relative;
+}
+.thug-life::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: -16px;
+  left: -16px;
+  box-shadow: 16px 16px transparent,32px 16px transparent,48px 16px #000000,64px 16px #000000,80px 16px #000000,96px 16px #000000,112px 16px #000000,128px 16px #000000,144px 16px #000000,160px 16px #000000,176px 16px #000000,192px 16px #000000,208px 16px #000000,224px 16px #000000,240px 16px #000000,256px 16px #000000,272px 16px #000000,288px 16px #000000,304px 16px #000000,320px 16px #000000,336px 16px #000000,352px 16px #000000,368px 16px #000000,384px 16px #000000,400px 16px #000000,416px 16px #000000,432px 16px #000000,448px 16px #000000,464px 16px #000000,480px 16px #000000,496px 16px #000000,512px 16px #000000,528px 16px #000000,544px 16px #000000,16px 32px #000000,32px 32px #000000,48px 32px transparent,64px 32px transparent,80px 32px transparent,96px 32px transparent,112px 32px transparent,128px 32px transparent,144px 32px transparent,160px 32px transparent,176px 32px #000000,192px 32px #000000,208px 32px #ffffff,224px 32px #000000,240px 32px #ffffff,256px 32px #000000,272px 32px #000000,288px 32px #000000,304px 32px #000000,320px 32px #000000,336px 32px #000000,352px 32px #000000,368px 32px #000000,384px 32px #000000,400px 32px #ffffff,416px 32px #000000,432px 32px #ffffff,448px 32px #000000,464px 32px #000000,480px 32px #000000,496px 32px #000000,512px 32px #000000,528px 32px #000000,544px 32px #000000,16px 48px transparent,32px 48px transparent,48px 48px transparent,64px 48px transparent,80px 48px transparent,96px 48px transparent,112px 48px transparent,128px 48px transparent,144px 48px transparent,160px 48px transparent,176px 48px transparent,192px 48px #000000,208px 48px #000000,224px 48px #ffffff,240px 48px #000000,256px 48px #ffffff,272px 48px #000000,288px 48px #000000,304px 48px #000000,320px 48px #000000,336px 48px #000000,352px 48px transparent,368px 48px #000000,384px 48px #000000,400px 48px #000000,416px 48px #ffffff,432px 48px #000000,448px 48px #ffffff,464px 48px #000000,480px 48px #000000,496px 48px #000000,512px 48px #000000,528px 48px #000000,544px 48px transparent,16px 64px transparent,32px 64px transparent,48px 64px transparent,64px 64px transparent,80px 64px transparent,96px 64px transparent,112px 64px transparent,128px 64px transparent,144px 64px transparent,160px 64px transparent,176px 64px transparent,192px 64px transparent,208px 64px #000000,224px 64px #000000,240px 64px #ffffff,256px 64px #000000,272px 64px #ffffff,288px 64px #000000,304px 64px #000000,320px 64px #000000,336px 64px transparent,352px 64px transparent,368px 64px transparent,384px 64px #000000,400px 64px #000000,416px 64px #000000,432px 64px #ffffff,448px 64px #000000,464px 64px #ffffff,480px 64px #000000,496px 64px #000000,512px 64px #000000,528px 64px transparent,544px 64px transparent,16px 80px transparent,32px 80px transparent,48px 80px transparent,64px 80px transparent,80px 80px transparent,96px 80px transparent,112px 80px transparent,128px 80px transparent,144px 80px transparent,160px 80px transparent,176px 80px transparent,192px 80px transparent,208px 80px transparent,224px 80px #000000,240px 80px #000000,256px 80px #000000,272px 80px #000000,288px 80px #000000,304px 80px #000000,320px 80px transparent,336px 80px transparent,352px 80px transparent,368px 80px transparent,384px 80px transparent,400px 80px #000000,416px 80px #000000,432px 80px #000000,448px 80px #000000,464px 80px #000000,480px 80px #000000,496px 80px #000000,512px 80px transparent,528px 80px transparent,544px 80px transparent;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .title {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 2rem;
+}

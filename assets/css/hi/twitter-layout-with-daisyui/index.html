@@ -1,0 +1,217 @@
+   <!DOCTYPE html><html lang="es-MX"><head> <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - twitter layout with daisyUI</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.4/tailwind.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/daisyui/1.10.0/full.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="grid grid-cols-5 md:grid-cols-7 lg:grid-cols-10 xl:grid-cols-12 max-w-xl lg:max-w-4xl xl:max-w-6xl mx-auto min-h-screen">
+	
+	<!-- 	menu -->
+	<aside class="col-span-1 xl:col-span-3">
+		<a class="btn btn-ghost mt-4 mx-4 text-primary"><span class="material-icons">flash_on</span></a>
+		<ul class="menu p-4 w-24 xl:w-auto">
+			<li><a>
+				<span class="material-icons">home</span>
+				<span class="hidden xl:inline ml-2">Home</span>
+			</a></li>
+			<li><a>
+				<span class="material-icons">tag</span>
+				<span class="hidden xl:inline ml-2">Explore</span>
+			</a></li>
+			<li><a>
+				<span class="material-icons">notifications</span>
+				<span class="hidden xl:inline ml-2">Notifications</span>
+			</a></li>
+			<li><a>
+				<span class="material-icons">mail</span>
+				<span class="hidden xl:inline ml-2">Messages</span>
+			</a></li>
+			<li><a>
+				<span class="material-icons">bookmark</span>
+				<span class="hidden xl:inline ml-2">Bookmarks</span>
+			</a></li>
+			<li><a>
+				<span class="material-icons">list</span>
+				<span class="hidden xl:inline ml-2">Lists</span>
+			</a></li>
+			<li><a>
+				<span class="material-icons">person</span>
+				<span class="hidden xl:inline ml-2">Profile</span>
+			</a></li>
+			<li><a>
+				<span class="material-icons">more_horiz</span>
+				<span class="hidden xl:inline ml-2">More</span>
+			</a></li>
+			<li><button class="btn my-2">
+				<span class="xl:hidden"><span class="material-icons">create</span></span>
+				<span class="hidden xl:inline">More</span>
+			</button></li>
+		</ul>
+	</aside>
+	
+	<!-- timeline -->
+	<main class="col-span-4 md:col-span-6 border-r border-l border-base-300">
+		<nav class="navbar border-b border-base-300 justify-between">
+			<div class="navbar-start font-black px-2">Home</div>
+			<div class="px-4 btn btn-sm btn-ghost btn-circle"><span class="material-icons">auto_awesome</span></div>
+		</nav>
+		
+		<!-- tweet -->
+		<div class="border-b border-base-300 p-4 flex space-x-4">
+			<div class="avatar">
+				<div class="rounded-full w-14 h-14">
+					<img src="https://i.pravatar.cc/56">
+				</div>
+			</div>
+			<div class="w-full">
+				<div>
+					<span class="font-bold">Jackie</span>
+					@username
+				</div>
+				<p class="py-2">Look at this picture I took today</p>
+				<img src="https://picsum.photos/600/300?1" class="rounded-box" alt="image"/>
+				<div class="flex justify-between text-sm mt-4">
+					<a class="flex items-center cursor-pointer hover:text-info">
+						<span class="material-icons mr-2">chat_bubble_outline</span>
+						99
+					</a>
+					<a class="flex items-center cursor-pointer hover:text-success">
+						<span class="material-icons mr-2">loop</span>
+						99
+					</a>
+					<a class="flex items-center cursor-pointer hover:text-error">
+						<span class="material-icons mr-2">favorite</span>
+						99
+					</a>
+					<a class="flex items-center cursor-pointer hover:text-info">
+						<span class="material-icons">share</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- tweet -->
+		<div class="border-b border-base-300 p-4 flex space-x-4">
+			<div class="avatar">
+				<div class="rounded-full w-14 h-14">
+					<img src="https://i.pravatar.cc/56?3">
+				</div>
+			</div>
+			<div class="w-full">
+				<div>
+					<span class="font-bold">Billie</span>
+					@username
+				</div>
+				<p class="py-2">Mood</p>
+				<img src="https://picsum.photos/600/300?2" class="rounded-box" alt="image"/>
+				<div class="flex justify-between text-sm mt-4">
+					<a class="flex items-center cursor-pointer hover:text-info">
+						<span class="material-icons mr-2">chat_bubble_outline</span>
+						99
+					</a>
+					<a class="flex items-center cursor-pointer hover:text-success">
+						<span class="material-icons mr-2">loop</span>
+						99
+					</a>
+					<a class="flex items-center cursor-pointer hover:text-error">
+						<span class="material-icons mr-2">favorite</span>
+						99
+					</a>
+					<a class="flex items-center cursor-pointer hover:text-info">
+						<span class="material-icons">share</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+	
+	<!-- sidebar -->
+	<aside class="col-span-3 hidden lg:block">
+		
+		<div class="form-control m-4 w-full">
+			<input type="text" placeholder="Search" class="input input-bordered">
+		</div>
+		
+		<div class="card bg-base-200 m-4 w-full">
+			
+			<nav class="navbar justify-between">
+				<div class="navbar-start font-black px-4">Themes</div>
+				<div class="btn btn-sm btn-ghost btn-circle mx-2"><span class="material-icons">tune</span></div>
+			</nav>
+			
+			<div class="p-4 border-t border-base-300">
+				<div class="opacity-50 text-sm">Trending</div>
+				<div class="font-bold link link-hover" data-set-theme="light">#light</div>
+			</div>
+			
+			<div class="p-4 border-t border-base-300">
+				<div class="opacity-50 text-sm">Trending</div>
+				<div class="font-bold link link-hover" data-set-theme="dark">#dark</div>
+			</div>
+			
+			<div class="p-4 border-t border-base-300">
+				<div class="opacity-50 text-sm">Trending</div>
+				<div class="font-bold link link-hover" data-set-theme="valentine">#valentine</div>
+			</div>
+			
+			<div class="p-4 border-t border-base-300">
+				<div class="opacity-50 text-sm">Trending</div>
+				<div class="font-bold link link-hover" data-set-theme="luxury">#luxury</div>
+			</div>
+			
+			<div class="p-4 border-t border-base-300">
+				<div class="opacity-50 text-sm">Trending</div>
+				<div class="font-bold link link-hover" data-set-theme="cupcake">#cupcake</div>
+			</div>
+			
+			<div class="p-4 border-t border-base-300">
+				<div class="opacity-50 text-sm">Trending</div>
+				<div class="font-bold link link-hover" data-set-theme="synthwave">#synthwave</div>
+			</div>
+			
+		</div>
+
+		<div class="card bg-base-200 m-4 w-full">
+			
+			<nav class="navbar">
+				<div class="font-black px-4">Who to follow</div>
+			</nav>
+			
+			<div class="p-4 border-t border-base-300 flex space-x-4">
+				<div class="avatar">
+					<div class="rounded-full w-14 h-14">
+						<img src="https://i.pravatar.cc/56?1">
+					</div>
+				</div>
+				<div>
+					<span class="font-bold">username</span>
+					@username
+				</div>
+			</div>
+			
+			<div class="p-4 border-t border-base-300 flex space-x-4">
+				<div class="avatar">
+					<div class="rounded-full w-14 h-14">
+						<img src="https://i.pravatar.cc/56?2">
+					</div>
+				</div>
+				<div>
+					<span class="font-bold">username</span>
+					@username
+				</div>
+			</div>
+			
+		</div>
+	</aside>
+	
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/theme-change@2.0.1/index.js'></script>
+</body>
+</html>

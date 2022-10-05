@@ -1,0 +1,49 @@
+   <!DOCTYPE html><html lang="es-MX"><head> <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Alpine JS pricing table toggle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<script>
+	    tailwind.config = {
+	      theme: {
+	        extend: {
+            boxShadow: {
+		        'ios': '0 3px 8px 0 rgba(0,0,0,0.12), 0 3px 1px 0 rgba(0,0,0,0.04)',
+		      }
+	        }
+	      }
+	    }
+	</script>
+<style>[x-cloak] { display: none !important; }</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="text-center py-12">
+	<h1 class="font-bold text-4xl">Pricing</h1>
+	<p class="mb-12 text-gray-500">No contracts, no surprise fees</p>
+
+    <div class="w-full max-w-sm mx-auto px-4" x-data="{annual: false}">
+        <div class="flex w-full border-4 border-gray-200 rounded-xl bg-gray-200 mb-12">
+            <button
+                class="transition rounded-lg w-full block py-1 text-sm"
+                :class="annual == false ? 'bg-white shadow-ios' : 'hover:text-gray-400'"
+                @click="annual = false"
+                type="button">Monthly</button>
+            <button
+                class="transition rounded-lg w-full block py-1 text-sm"
+                :class="annual == true ? 'bg-white shadow-ios' : 'hover:text-gray-400'"
+                @click="annual = true"
+                type="button">Annual</button>
+        </div>
+        <div class="mb-8">
+            <p class="text-7xl font-bold">£<span x-text="annual ? '8.00' : '10.00'">10.00</span></p>
+            <p class="text-gray-500">per month <span x-cloak x-show="annual">(billed annually)</span></p>
+        </div>
+        <button class="text-xl rounded-full w-32 px-6 py-3 bg-black text-white purchase">Join</button>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.8.0/cdn.js'></script>
+</body>
+</html>

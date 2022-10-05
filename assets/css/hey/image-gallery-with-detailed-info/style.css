@@ -91,36 +91,52 @@ body {
 
 
 .gallery li:nth-child(1) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/tonin-rocodromo.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_Azael_ferrely_CGtravel_xiiber.webp);
   background-position: center 10%;
 }
 .gallery li:nth-child(2) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/biafra-hueso.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_Chrystian_ferrely_cgtravel_xiiber.webp);
   background-position: right 40%;
 }
 .gallery li:nth-child(3) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/normal-caliz.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_ferrely_CGtravel_xiiber_gaypride.webp);
   background-position: 70% 25%;
 }
 .gallery li:nth-child(4) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/cumbre-totem.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_ferrely_CGtravel_xiiber.webp);
   background-position: center 20%;
 }
 .gallery li:nth-child(5) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/oscar-raul-hueco-hoces2.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_Jason_ferrely_CGtravel_xiiber.webp);
 }
 .gallery li:nth-child(6) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/gallego-cueva-mora.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_Jesus_ferrely_CGtravel_xiiber.webp);
   background-position: right 75%;
 }
 .gallery li:nth-child(7) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/blues-ojos-bonitos-tres-coronas.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_Marcelo_ferrely_CGtravel_xiiber.webp);
   background-position: right 20%;
 }
 .gallery li:nth-child(8) .image {
-  background-image: url(https://josetxu.com/beta/galerias/escalada/pedriza/images-scroll/capuchon-sarcofago.jpg);
+  background-image: url(img/Gay-pride-2016-modelo_Nathaniel_ferrely_CGtravel_xiiber.webp);
   background-position: center 10%;
 }
+.gallery li:nth-child(9) .image {
+  background-image: url(img/Gay-pride-2016-modelo_Noe_ferrely_CGtravel_xiiber.webp);
+}
+.gallery li:nth-child(10) .image {
+  background-image: url(img/Gay-pride-2016-modelo_Rodolfo_ferrely_CGtravel_xiiber.webp);
+  background-position: right 75%;
+}
+.gallery li:nth-child(11) .image {
+  background-image: url(img/Gay-pride-2016-modelo_Rufino_ferrely_CGtravel_xiiber.webp);
+  background-position: right 20%;
+}
+.gallery li:nth-child(12) .image {
+  background-image: url(img/Gay-pride-2016-modelo_sergio_ferrely_cgtravel_xiiber.webp);
+  background-position: center 10%;
+}
+
 
 
 
@@ -405,3 +421,7 @@ body {
 @media only screen and (max-width:540px) {
   .info:after {font-size: 15px;}
 }
+
+@media (min-width:993px) {.susan-storm-large {display: none!important}
+@media (max-width:992px) and (min-width:601px) {.susan-storm-medium {display: none!important}
+@media (max-width:600px) {.susan-storm-small {display: none!important}

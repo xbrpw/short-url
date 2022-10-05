@@ -1,0 +1,56 @@
+:root {
+  --main-color: #E6098B;
+	--bg-color: #03120E;
+}
+body {
+ background-color: var(--bg-color);
+ overflow: hidden;
+ text-align:center;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+body,
+html {
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+svg {
+ width: 100%;
+ height: 100%;
+ visibility: hidden;
+ 
+}
+
+.liquid {
+	fill:var(--main-color);
+}
+#bubbleGroup {
+	stroke: var(--main-color);
+	fill: #222932
+}
+.poly {
+	fill: #3A86FF;
+}
+
+.glass {
+	opacity: 0.2
+}
+
+#flask {
+	opacity: 0.5;
+	fill:#003459;
+	stroke: #003459;
+}
+
+.gsap-3-logo {
+width: 20vw;
+max-width: 150px;
+position: fixed;
+bottom: 25px;
+right: 25px;
+}

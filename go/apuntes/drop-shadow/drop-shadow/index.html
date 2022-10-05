@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-MX" ><meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <title>Drop shadow</title>
+  <link rel='stylesheet' href='https://codepen.io/denic/pen/YzyPzKG.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mr-2 {
+  margin-right: 2em;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.box-shadow {
+  box-shadow: 2px 4px 8px #585858;
+}
+
+.drop-shadow {
+  filter: drop-shadow(2px 4px 8px #585858);
+} </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <div class="mr-2">
+    <div class="mb-1 text-center">
+      box-shadow
+    </div>
+    
+    <img class="box-shadow" src="https://luisangelmaciel.github.io/img/avatar-esfera-4-estrellas.png" alt="Imagen de prueba para box-shadow">
+  </div>
+    
+  <div>
+    <div class="mb-1 text-center">
+      drop-shadow
+    </div>
+    
+    <img class="drop-shadow" src="https://luisangelmaciel.github.io/img/avatar-esfera-4-estrellas.png" alt="Imagen de prueba para drop-shadow">
+  </div>
+</div>
+<!-- partial -->
+</body>
+</html>

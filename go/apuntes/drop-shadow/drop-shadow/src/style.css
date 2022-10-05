@@ -1,0 +1,26 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mr-2 {
+  margin-right: 2em;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.box-shadow {
+  box-shadow: 2px 4px 8px #585858;
+}
+
+.drop-shadow {
+  filter: drop-shadow(2px 4px 8px #585858);
+}

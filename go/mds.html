@@ -35,64 +35,300 @@
   <!-- The Modal -->
  
   
-  <div class="modal" id="myModalfav">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header" id="cssFAV">
-          <h4 class="modal-title"> {{fav}} </h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          <iframe src="{{fav}}" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-  
+ 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
    
     
   
-
+    <style>
+      #myDIVFrame {        visibility: hidden;}
+      </style>
+      
+      
+      
+      
+      
+      
+      
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myDIVFrame");
+        if (window.getComputedStyle(x).visibility === "hidden") {
+          x.style.visibility = "visible";
+        }
+      }
+      </script>
 
   
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   
 
-    <script>
-      var myObject= {"snipdoradafav":[
-      {"fav" : "card-article-ui	", "hreffav" : "card-article-ui"},
-      {"fav" : "css3-poster	", "hreffav" : "css3-poster"},
-      {"fav" : "paper-ripple-effect	", "hreffav" : "paper-ripple-effect"},
-      {"fav" : "section-separator-inspiration	", "hreffav" : "section-separator-inspiration"},
-      {"fav" : "simple-responsive-table-in-css	", "hreffav" : "simple-responsive-table-in-css"},
-      {"fav" : "fav.html	", "hreffav" : "fav.html"},
-      {"fav" : "nav-boton-mobile.html	", "hreffav" : "nav-boton-mobile.html"},
-      {"fav" : "", "hreffav" : ""}
+<script>
+var myObject= {"snipdoradafav":[
+{"fav" : "card-article-ui	", "hreffav" : "../assets/css/fav/card-article-ui/index.html"},
+{"fav" : "css3-poster	", "hreffav" : "../assets/css/fav/css3-poster/index.html"},
+{"fav" : "paper-ripple-effect	", "hreffav" : "../assets/css/fav/paper-ripple-effect/index.html"},
+{"fav" : "section-separator-inspiration	", "hreffav" : "../assets/css/fav/section-separator-inspiration/index.html"},
+{"fav" : "simple-responsive-table-in-css	", "hreffav" : "../assets/css/fav/simple-responsive-table-in-css/index.html"},
+{"fav" : "nav-boton-mobile.html	", "hreffav" : "../assets/css/fav/nav-boton-mobile.html"},
+{"fav" : "	00-5paginas-dinamicas/", "hreffav" : "../assets/css/hey/00-5paginas-dinamicas/index.html"},
+{"fav" : "	01/", "hreffav" : "../assets/css/hey/01/index.html"},
+{"fav" : "	01-slider/", "hreffav" : "../assets/css/hey/01-slider/index.html"},
+{"fav" : "	404-tittle-not-found-/", "hreffav" : "../assets/css/hey/404-tittle-not-found-/index.html"},
+{"fav" : "	5-taps/", "hreffav" : "../assets/css/hey/5-taps//index.html"},
+{"fav" : "	9-post/", "hreffav" : "../assets/css/hey/9-post//index.html"},
+{"fav" : "	alerts/", "hreffav" : "../assets/css/hey/alerts//index.html"},
+{"fav" : "	angular-material-design-starter-app/", "hreffav" : "../assets/css/hey/angular-material-design-starter-app//index.html"},
+{"fav" : "	animated-quote/", "hreffav" : "../assets/css/hey/animated-quote//index.html"},
+{"fav" : "	animated-skill-metercss/", "hreffav" : "../assets/css/hey/animated-skill-metercss//index.html"},
+{"fav" : "	app-menu-with-lock-screen/", "hreffav" : "../assets/css/hey/app-menu-with-lock-screen//index.html"},
+{"fav" : "	aqui-va-el-search/", "hreffav" : "../assets/css/hey/aqui-va-el-search//index.html"},
+{"fav" : "	author-de-negro-a-spacio-morado/", "hreffav" : "../assets/css/hey/author-de-negro-a-spacio-morado//index.html"},
+{"fav" : "	background/", "hreffav" : "../assets/css/hey/background//index.html"},
+{"fav" : "	banner-2/", "hreffav" : "../assets/css/hey/banner-2//index.html"},
+{"fav" : "	bloc-blanco/", "hreffav" : "../assets/css/hey/bloc-blanco//index.html"},
+{"fav" : "	Bootstrap-starter-fav/", "hreffav" : "../assets/css/hey/Bootstrap-starter-fav//index.html"},
+{"fav" : "	bost/", "hreffav" : "../assets/css/hey/bost//index.html"},
+{"fav" : "	boton-enviar/", "hreffav" : "../assets/css/hey/boton-enviar//index.html"},
+{"fav" : "	boton-enviar2/", "hreffav" : "../assets/css/hey/boton-enviar2//index.html"},
+{"fav" : "	Boton-flotante-draggable-en-JavaScript/", "hreffav" : "../assets/css/hey/Boton-flotante-draggable-en-JavaScript//index.html"},
+{"fav" : "	boton-menu-blue/", "hreffav" : "../assets/css/hey/boton-menu-blue//index.html"},
+{"fav" : "	boton-soporte-modal/", "hreffav" : "../assets/css/hey/boton-soporte-modal//index.html"},
+{"fav" : "	box-moving-illusion/", "hreffav" : "../assets/css/hey/box-moving-illusion//index.html"},
+{"fav" : "	button-highlight-styles/", "hreffav" : "../assets/css/hey/button-highlight-styles//index.html"},
+{"fav" : "	calculadora-cientifica-sin-js/", "hreffav" : "../assets/css/hey/calculadora-cientifica-sin-js//index.html"},
+{"fav" : "	card-start/", "hreffav" : "../assets/css/hey/card-start//index.html"},
+{"fav" : "	cards-boostramp-ok/", "hreffav" : "../assets/css/hey/cards-boostramp-ok//index.html"},
+{"fav" : "	cards-carrusel-horizontal/", "hreffav" : "../assets/css/hey/cards-carrusel-horizontal//index.html"},
+{"fav" : "	carrual/", "hreffav" : "../assets/css/hey/carrual//index.html"},
+{"fav" : "	carrusel/", "hreffav" : "../assets/css/hey/carrusel//index.html"},
+{"fav" : "	carrusel-tipo-yb/", "hreffav" : "../assets/css/hey/carrusel-tipo-yb//index.html"},
+{"fav" : "	chat-recomendaciones/", "hreffav" : "../assets/css/hey/chat-recomendaciones//index.html"},
+{"fav" : "	close dialog/", "hreffav" : "../assets/css/hey/close dialog//index.html"},
+{"fav" : "	codepen-team-member-listeven-odd-styles/", "hreffav" : "../assets/css/hey/codepen-team-member-listeven-odd-styles//index.html"},
+{"fav" : "	colapsable/", "hreffav" : "../assets/css/hey/colapsable//index.html"},
+{"fav" : "	collapsable-css/", "hreffav" : "../assets/css/hey/collapsable-css//index.html"},
+{"fav" : "	color-mode/", "hreffav" : "../assets/css/hey/color-mode//index.html"},
+{"fav" : "	como-se-ve/", "hreffav" : "../assets/css/hey/como-se-ve//index.html"},
+{"fav" : "	contentEditable/", "hreffav" : "../assets/css/hey/contentEditable//index.html"},
+{"fav" : "	crea-contador-regresivo/", "hreffav" : "../assets/css/hey/crea-contador-regresivo//index.html"},
+{"fav" : "	crear-login-sing-up-user/", "hreffav" : "../assets/css/hey/crear-login-sing-up-user//index.html"},
+{"fav" : "	cursor/", "hreffav" : "../assets/css/hey/cursor//index.html"},
+{"fav" : "	dashboard-uno/", "hreffav" : "../assets/css/hey/dashboard-uno//index.html"},
+{"fav" : "	descuento/", "hreffav" : "../assets/css/hey/descuento//index.html"},
+{"fav" : "	destroy/", "hreffav" : "../assets/css/hey/destroy//index.html"},
+{"fav" : "	editor de imagen/", "hreffav" : "../assets/css/hey/editor de imagen//index.html"},
+{"fav" : "	efecto-tipo-reflejo-lampara/", "hreffav" : "../assets/css/hey/efecto-tipo-reflejo-lampara//index.html"},
+{"fav" : "	el-bg-rojo-azul-negro-wow/", "hreffav" : "../assets/css/hey/el-bg-rojo-azul-negro-wow//index.html"},
+{"fav" : "	emojis-teclado-3x3/", "hreffav" : "../assets/css/hey/emojis-teclado-3x3//index.html"},
+{"fav" : "	en/", "hreffav" : "../assets/css/hey/en//index.html"},
+{"fav" : "	encabezados-titulares/", "hreffav" : "../assets/css/hey/encabezados-titulares//index.html"},
+{"fav" : "	encuesta-con-caritas/", "hreffav" : "../assets/css/hey/encuesta-con-caritas//index.html"},
+{"fav" : "	enviar-mensaje-btn-animado/", "hreffav" : "../assets/css/hey/enviar-mensaje-btn-animado//index.html"},
+{"fav" : "	ese-que-nunca-le-toca/", "hreffav" : "../assets/css/hey/ese-que-nunca-le-toca//index.html"},
+{"fav" : "	eshop-ecommerce-html5-template/", "hreffav" : "../assets/css/hey/eshop-ecommerce-html5-template//index.html"},
+{"fav" : "	estilo-push/", "hreffav" : "../assets/css/hey/estilo-push//index.html"},
+{"fav" : "	faq/", "hreffav" : "../assets/css/hey/faq//index.html"},
+{"fav" : "	ff/", "hreffav" : "../assets/css/hey/ff//index.html"},
+{"fav" : "	fill-the-text-with-a-video/", "hreffav" : "../assets/css/hey/fill-the-text-with-a-video//index.html"},
+{"fav" : "	fixing-the-overflow/", "hreffav" : "../assets/css/hey/fixing-the-overflow//index.html"},
+{"fav" : "	fondo-centrado/", "hreffav" : "../assets/css/hey/fondo-centrado//index.html"},
+{"fav" : "	fondo-del-buuble/", "hreffav" : "../assets/css/hey/fondo-del-buuble//index.html"},
+{"fav" : "	footer-new/", "hreffav" : "../assets/css/hey/footer-new//index.html"},
+{"fav" : "	footer-responsive/", "hreffav" : "../assets/css/hey/footer-responsive//index.html"},
+{"fav" : "	form-app/", "hreffav" : "../assets/css/hey/form-app//index.html"},
+{"fav" : "	form-paso-por-paso/", "hreffav" : "../assets/css/hey/form-paso-por-paso//index.html"},
+{"fav" : "	form-xbr/", "hreffav" : "../assets/css/hey/form-xbr//index.html"},
+{"fav" : "	formato-blog-centrado/", "hreffav" : "../assets/css/hey/formato-blog-centrado//index.html"},
+{"fav" : "	formulario-hello/", "hreffav" : "../assets/css/hey/formulario-hello//index.html"},
+{"fav" : "	fusion/", "hreffav" : "../assets/css/hey/fusion//index.html"},
+{"fav" : "	Gradient-hover-animated-button/", "hreffav" : "../assets/css/hey/Gradient-hover-animated-button//index.html"},
+{"fav" : "	grindersite/", "hreffav" : "../assets/css/hey/grindersite//index.html"},
+{"fav" : "	guardarcomo/", "hreffav" : "../assets/css/hey/guardarcomo//index.html"},
+{"fav" : "	halftone-square-backgroundno-divpure-css/", "hreffav" : "../assets/css/hey/halftone-square-backgroundno-divpure-css//index.html"},
+{"fav" : "	herstory/", "hreffav" : "../assets/css/hey/herstory//index.html"},
+{"fav" : "	html-form-to-google-sheet-master/", "hreffav" : "../assets/css/hey/html-form-to-google-sheet-master//index.html"},
+{"fav" : "	html5-canvas-overlay-erase-effect/", "hreffav" : "../assets/css/hey/html5-canvas-overlay-erase-effect//index.html"},
+{"fav" : "	iconic-tab-barpure-css/", "hreffav" : "../assets/css/hey/iconic-tab-barpure-css//index.html"},
+{"fav" : "	image-gallery-with-detailed-info/", "hreffav" : "../assets/css/hey/image-gallery-with-detailed-info//index.html"},
+{"fav" : "	img/", "hreffav" : "../assets/css/hey/img//index.html"},
+{"fav" : "	insignias/", "hreffav" : "../assets/css/hey/insignias//index.html"},
+{"fav" : "	intro-animacion-presentacion/", "hreffav" : "../assets/css/hey/intro-animacion-presentacion//index.html"},
+{"fav" : "	intro-vanish/", "hreffav" : "../assets/css/hey/intro-vanish//index.html"},
+{"fav" : "	juego de palabras/", "hreffav" : "../assets/css/hey/juego de palabras//index.html"},
+{"fav" : "	just-studying-this/", "hreffav" : "../assets/css/hey/just-studying-this//index.html"},
+{"fav" : "	justo-estudiando/", "hreffav" : "../assets/css/hey/justo-estudiando//index.html"},
+{"fav" : "	lectura puo up/", "hreffav" : "../assets/css/hey/lectura puo up//index.html"},
+{"fav" : "	light-to-darkclick-holdpure-css/", "hreffav" : "../assets/css/hey/light-to-darkclick-holdpure-css//index.html"},
+{"fav" : "	loading-one/", "hreffav" : "../assets/css/hey/loading-one//index.html"},
+{"fav" : "	loading-two/", "hreffav" : "../assets/css/hey/loading-two//index.html"},
+{"fav" : "	localStorage_login/", "hreffav" : "../assets/css/hey/localStorage_login//index.html"},
+{"fav" : "	locking-smart-home-dashboard/", "hreffav" : "../assets/css/hey/locking-smart-home-dashboard//index.html"},
+{"fav" : "	login-bootstrap-5/", "hreffav" : "../assets/css/hey/login-bootstrap-5//index.html"},
+{"fav" : "	login-bootstrap-form/", "hreffav" : "../assets/css/hey/login-bootstrap-form//index.html"},
+{"fav" : "	login-colorMode-2col/", "hreffav" : "../assets/css/hey/login-colorMode-2col//index.html"},
+{"fav" : "	login-colorMode-2col1/", "hreffav" : "../assets/css/hey/login-colorMode-2col1//index.html"},
+{"fav" : "	login-formato-firebase/", "hreffav" : "../assets/css/hey/login-formato-firebase//index.html"},
+{"fav" : "	low-poly-experiment/", "hreffav" : "../assets/css/hey/low-poly-experiment//index.html"},
+{"fav" : "	luisemoji.github.io/", "hreffav" : "../assets/css/hey/luisemoji.github.io//index.html"},
+{"fav" : "	macron-punch-game-css-html/", "hreffav" : "../assets/css/hey/macron-punch-game-css-html//index.html"},
+{"fav" : "	magic-card/", "hreffav" : "../assets/css/hey/magic-card//index.html"},
+{"fav" : "	mensaje-de-autodestruccion-con-setinterval-js-bom/", "hreffav" : "../assets/css/hey/mensaje-de-autodestruccion-con-setinterval-js-bom//index.html"},
+{"fav" : "	modal-second/", "hreffav" : "../assets/css/hey/modal-second//index.html"},
+{"fav" : "	multicopyv1/", "hreffav" : "../assets/css/hey/multicopyv1//index.html"},
+{"fav" : "	nav-thing/", "hreffav" : "../assets/css/hey/nav-thing//index.html"},
+{"fav" : "	neont-text-and-buttons/", "hreffav" : "../assets/css/hey/neont-text-and-buttons//index.html"},
+{"fav" : "	neuomorphic-section/", "hreffav" : "../assets/css/hey/neuomorphic-section//index.html"},
+{"fav" : "	opening-popup-animation/", "hreffav" : "../assets/css/hey/opening-popup-animation//index.html"},
+{"fav" : "	page-contenido-editable-/", "hreffav" : "../assets/css/hey/page-contenido-editable-//index.html"},
+{"fav" : "	para alguna app/", "hreffav" : "../assets/css/hey/para alguna app//index.html"},
+{"fav" : "	para-footer-random/", "hreffav" : "../assets/css/hey/para-footer-random//index.html"},
+{"fav" : "	para-nav/", "hreffav" : "../assets/css/hey/para-nav//index.html"},
+{"fav" : "	pdf-hace-v1/", "hreffav" : "../assets/css/hey/pdf-hace-v1//index.html"},
+{"fav" : "	pdf-hace-v2/", "hreffav" : "../assets/css/hey/pdf-hace-v2//index.html"},
+{"fav" : "	pdf-hace-v3/", "hreffav" : "../assets/css/hey/pdf-hace-v3//index.html"},
+{"fav" : "	pen-export-EymdpE/", "hreffav" : "../assets/css/hey/pen-export-EymdpE//index.html"},
+{"fav" : "	perfect-center-all-views/", "hreffav" : "../assets/css/hey/perfect-center-all-views//index.html"},
+{"fav" : "	personalizando-tu-nombre/", "hreffav" : "../assets/css/hey/personalizando-tu-nombre//index.html"},
+{"fav" : "	photos-agrupadas/", "hreffav" : "../assets/css/hey/photos-agrupadas//index.html"},
+{"fav" : "	planetsgenerative-arttetradic/", "hreffav" : "../assets/css/hey/planetsgenerative-arttetradic//index.html"},
+{"fav" : "	pure-css-frida-kahlo/", "hreffav" : "../assets/css/hey/pure-css-frida-kahlo//index.html"},
+{"fav" : "	quirky-button/", "hreffav" : "../assets/css/hey/quirky-button//index.html"},
+{"fav" : "	random/", "hreffav" : "../assets/css/hey/random//index.html"},
+{"fav" : "	random goku/", "hreffav" : "../assets/css/hey/random goku//index.html"},
+{"fav" : "	responsive-gallery/", "hreffav" : "../assets/css/hey/responsive-gallery//index.html"},
+{"fav" : "	responsive-typography-generator/", "hreffav" : "../assets/css/hey/responsive-typography-generator//index.html"},
+{"fav" : "	responsive-video-header-with-gradient/", "hreffav" : "../assets/css/hey/responsive-video-header-with-gradient//index.html"},
+{"fav" : "	reveling pago/", "hreffav" : "../assets/css/hey/reveling pago//index.html"},
+{"fav" : "	rick-and-morty/", "hreffav" : "../assets/css/hey/rick-and-morty//index.html"},
+{"fav" : "	sat-nav-for-your-website/", "hreffav" : "../assets/css/hey/sat-nav-for-your-website//index.html"},
+{"fav" : "	sea-debris-concept/", "hreffav" : "../assets/css/hey/sea-debris-concept//index.html"},
+{"fav" : "	section-separator-inspiration/", "hreffav" : "../assets/css/hey/section-separator-inspiration//index.html"},
+{"fav" : "	shop-list/", "hreffav" : "../assets/css/hey/shop-list//index.html"},
+{"fav" : "	shops/", "hreffav" : "../assets/css/hey/shops//index.html"},
+{"fav" : "	show-password/", "hreffav" : "../assets/css/hey/show-password//index.html"},
+{"fav" : "	significado-de-xiiber/", "hreffav" : "../assets/css/hey/significado-de-xiiber//index.html"},
+{"fav" : "	simple-blog-concept-pure-modal-tab-icon-efect-css/", "hreffav" : "../assets/css/hey/simple-blog-concept-pure-modal-tab-icon-efect-css//index.html"},
+{"fav" : "	size-app/", "hreffav" : "../assets/css/hey/size-app//index.html"},
+{"fav" : "	songokugrande/", "hreffav" : "../assets/css/hey/songokugrande//index.html"},
+{"fav" : "	spoiler/", "hreffav" : "../assets/css/hey/spoiler//index.html"},
+{"fav" : "	star-fieldpure-css/", "hreffav" : "../assets/css/hey/star-fieldpure-css//index.html"},
+{"fav" : "	star-wars-dark-light-toggle-w-gsap-3/", "hreffav" : "../assets/css/hey/star-wars-dark-light-toggle-w-gsap-3//index.html"},
+{"fav" : "	step-by-stepcss-js/", "hreffav" : "../assets/css/hey/step-by-stepcss-js//index.html"},
+{"fav" : "	stripe-website-gradient-animatio/", "hreffav" : "../assets/css/hey/stripe-website-gradient-animatio//index.html"},
+{"fav" : "	student/", "hreffav" : "../assets/css/hey/student//index.html"},
+{"fav" : "	Tab-Pure-CSS/", "hreffav" : "../assets/css/hey/Tab-Pure-CSS//index.html"},
+{"fav" : "	table-page-contenido-editable- - copia/", "hreffav" : "../assets/css/hey/table-page-contenido-editable- - copia//index.html"},
+{"fav" : "	table-shopping-layout/", "hreffav" : "../assets/css/hey/table-shopping-layout//index.html"},
+{"fav" : "	templete-twotwo/", "hreffav" : "../assets/css/hey/templete-twotwo//index.html"},
+{"fav" : "	terrifying-spotlight/", "hreffav" : "../assets/css/hey/terrifying-spotlight//index.html"},
+{"fav" : "	texto escondido y emoji/", "hreffav" : "../assets/css/hey/texto escondido y emoji//index.html"},
+{"fav" : "	thank-you-1000-followers3d-rotating-counter/", "hreffav" : "../assets/css/hey/thank-you-1000-followers3d-rotating-counter//index.html"},
+{"fav" : "	the-end/", "hreffav" : "../assets/css/hey/the-end//index.html"},
+{"fav" : "	twitter-follow-boton-door/", "hreffav" : "../assets/css/hey/twitter-follow-boton-door//index.html"},
+{"fav" : "	type/", "hreffav" : "../assets/css/hey/type//index.html"},
+{"fav" : "	ver-size/", "hreffav" : "../assets/css/hey/ver-size//index.html"},
+{"fav" : "	verticalslides/", "hreffav" : "../assets/css/hey/verticalslides//index.html"},
+{"fav" : "	vintage-phone-keyboard-with-sound/", "hreffav" : "../assets/css/hey/vintage-phone-keyboard-with-sound//index.html"},
+{"fav" : "	whalefacts/", "hreffav" : "../assets/css/hey/whalefacts//index.html"},
+{"fav" : "	z/", "hreffav" : "../assets/css/hey/z//index.html"},
+{"fav" : "	27-marzo-dia-del-queso.html	", "hreffav" : "../assets/css/hey/27-marzo-dia-del-queso.html/index.html"},
+{"fav" : "	apuntes-w3.html	", "hreffav" : "../assets/css/hey/apuntes-w3.html/index.html"},
+{"fav" : "	auto typewritter.html	", "hreffav" : "../assets/css/hey/auto typewritter.html/index.html"},
+{"fav" : "	banners.html	", "hreffav" : "../assets/css/hey/banners.html/index.html"},
+{"fav" : "	card.css	", "hreffav" : "../assets/css/hey/card.css/index.html"},
+{"fav" : "	card.html	", "hreffav" : "../assets/css/hey/card.html/index.html"},
+{"fav" : "	card.js	", "hreffav" : "../assets/css/hey/card.js/index.html"},
+{"fav" : "	center-center.txt	", "hreffav" : "../assets/css/hey/center-center.txt/index.html"},
+{"fav" : "	colum-gallery-big.html	", "hreffav" : "../assets/css/hey/colum-gallery-big.html/index.html"},
+{"fav" : "	crear-perfil-completo-paso-a-paso.html	", "hreffav" : "../assets/css/hey/crear-perfil-completo-paso-a-paso.html/index.html"},
+{"fav" : "	css-GalleryResponsive-ImageModal.html	", "hreffav" : "../assets/css/hey/css-GalleryResponsive-ImageModal.html/index.html"},
+{"fav" : "	cual_es_la_edad_de_la_felicidad_sexual.html	", "hreffav" : "../assets/css/hey/cual_es_la_edad_de_la_felicidad_sexual.html/index.html"},
+{"fav" : "	data-nosnippet.txt	", "hreffav" : "../assets/css/hey/data-nosnippet.txt/index.html"},
+{"fav" : "	espacio-en-blanco.html	", "hreffav" : "../assets/css/hey/espacio-en-blanco.html/index.html"},
+{"fav" : "	fases-de-la-luna.html	", "hreffav" : "../assets/css/hey/fases-de-la-luna.html/index.html"},
+{"fav" : "	footerRandom.html	", "hreffav" : "../assets/css/hey/footerRandom.html/index.html"},
+{"fav" : "	form-whats.html	", "hreffav" : "../assets/css/hey/form-whats.html/index.html"},
+{"fav" : "	h8_neon_text.html	", "hreffav" : "../assets/css/hey/h8_neon_text.html/index.html"},
+{"fav" : "	htmlsnipe-iframe.html	", "hreffav" : "../assets/css/hey/htmlsnipe-iframe.html/index.html"},
+{"fav" : "	iframe.txt	", "hreffav" : "../assets/css/hey/iframe.txt/index.html"},
+{"fav" : "	img-4-2-1-colum.html	", "hreffav" : "../assets/css/hey/img-4-2-1-colum.html/index.html"},
+{"fav" : "	index-bg-black.html	", "hreffav" : "../assets/css/hey/index-bg-black.html/index.html"},
+{"fav" : "	index-browser-con-iframe-nav-scroll.html	", "hreffav" : "../assets/css/hey/index-browser-con-iframe-nav-scroll.html/index.html"},
+{"fav" : "	mobile.html	", "hreffav" : "../assets/css/hey/mobile.html/index.html"},
+{"fav" : "	multicolores.html	", "hreffav" : "../assets/css/hey/multicolores.html/index.html"},
+{"fav" : "	navbotton+tabs.html	", "hreffav" : "../assets/css/hey/navbotton+tabs.html/index.html"},
+{"fav" : "	navResponsive con modalfull.html	", "hreffav" : "../assets/css/hey/navResponsive con modalfull.html/index.html"},
+{"fav" : "	no-download.html	", "hreffav" : "../assets/css/hey/no-download.html/index.html"},
+{"fav" : "	notificaciones.html	", "hreffav" : "../assets/css/hey/notificaciones.html/index.html"},
+{"fav" : "	para-imagenes-svg.txt	", "hreffav" : "../assets/css/hey/para-imagenes-svg.txt/index.html"},
+{"fav" : "	para-usar-jquary.html	", "hreffav" : "../assets/css/hey/para-usar-jquary.html/index.html"},
+{"fav" : "	Preloder.html	", "hreffav" : "../assets/css/hey/Preloder.html/index.html"},
+{"fav" : "	scroll-ba-bottom.html	", "hreffav" : "../assets/css/hey/scroll-ba-bottom.html/index.html"},
+{"fav" : "	sidenav-derecho.html	", "hreffav" : "../assets/css/hey/sidenav-derecho.html/index.html"},
+{"fav" : "	sidenav-izquierdo.html	", "hreffav" : "../assets/css/hey/sidenav-izquierdo.html/index.html"},
+{"fav" : "	sine-estilo-en-listas.txt	", "hreffav" : "../assets/css/hey/sine-estilo-en-listas.txt/index.html"},
+{"fav" : "	subscription-button.html	", "hreffav" : "../assets/css/hey/subscription-button.html/index.html"},
+{"fav" : "	tabs.txt	", "hreffav" : "../assets/css/hey/tabs.txt/index.html"},
+{"fav" : "	templete-de-venta-de-producto.html	", "hreffav" : "../assets/css/hey/templete-de-venta-de-producto.html/index.html"},
+{"fav" : "	templete-oneone.html	", "hreffav" : "../assets/css/hey/templete-oneone.html/index.html"},
+{"fav" : "	test-w3-spaces.html	", "hreffav" : "../assets/css/hey/test-w3-spaces.html/index.html"},
+{"fav" : "	text-shadow.txt	", "hreffav" : "../assets/css/hey/text-shadow.txt/index.html"},
+{"fav" : "	twitter-boton.html	", "hreffav" : "../assets/css/hey/twitter-boton.html/index.html"},
+{"fav" : "	typewritter-firma.html	", "hreffav" : "../assets/css/hey/typewritter-firma.html/index.html"}
     ]};
       </script>
 
 
-  
-    <ul id="cssFAV">
-      <li  w3-repeat="snipdoradafav">
-        <a href={{fav}} target="copy" data-bs-toggle="modal" data-bs-target="#myModalfav" > {{fav}} </a> 
-        <a href={{fav}} target="_blank"> <i class="fas fa-external-link-alt"></i></a> </i> 
-      </li></ul>
+<input oninput="w3.filterHTML('#idFilter', 'li', this.value)" placeholder="Buscar Snitch Dorada.." onclick="w3.show('.city')">
 
-    
+
+
+
+<!-- <p><span onclick="w3.hide('.city')">Hide</span><span onclick="w3.show('.city')">Show</span></p>
+ -->
+<ul id="idFilter">
+    <ul id="cssFAV" >
+      <li  w3-repeat="snipdoradafav">
+      <p> <a href={{hreffav}} target="copy" data-bs-toggle="modal" data-bs-target="#myModalfav" > {{fav}} </a> 
+        <a href={{hreffav}} target="_blank"> <i class="fas fa-external-link-alt"></i></a> 
+        <span onclick="myFunction()">Ver</span> </p>
+   
+      <div id="myDIVFrame">
+        <iframe class="city"  src="{{hreffav}}" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>          
+        </div>
+        
+        <div class="modal" id="myModalfav">
+          <div class="modal-dialog modal-xl"  >
+            <div class="modal-content" >
+        
+              <!-- Modal Header -->
+              <div class="modal-header" >
+                <h4 class="modal-title" > {{fav}} </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+        
+              <!-- Modal body -->
+              <div class="modal-body" >
+                <iframe src="{{hreffav}}" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+      </li>       
+  </ul>
+</ul>
+  
+
+  
     
       <script>
         w3.displayObject("cssFAV", myObject);

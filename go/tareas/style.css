@@ -174,7 +174,7 @@ h1 span:nth-child(6) {
 #totalTask {
     display: inline-block;
     color: var(--dark-color);
-    font-size: 1.35em;
+    font-size: 1.35em!important;
     position: relative;
     height: 1.65em;
     float: left;
@@ -2521,7 +2521,7 @@ input#dontShowAgainUrgent + label:after {
 	#helpContent > div > div {
 		margin-bottom: 5%;
 		padding-top: 0;
-		font-size: 10px;
+		font-size: 12px;
 	}
 	
 	.helpInfo:after {

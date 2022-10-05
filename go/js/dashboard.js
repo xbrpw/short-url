@@ -84,3 +84,12 @@ function openCity(evt, cityName) {var i, tabcontent, tablinks;tabcontent = docum
 
 includeHTML();
 w3CodeColor();
+
+// Navs
+
+function openNavFav() {document.getElementById("mySidenavFav").style.width = "250px";}function closeNavFav() {document.getElementById("mySidenavFav").style.width = "0";}
+function openNav() {document.getElementById("mySidenav").style.width = "250px";}function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+function openNavXbr() {document.getElementById("mySidenavXbr").style.width = "250px";document.getElementById("mainXbr").style.marginLeft = "250px";} function closeNavXbr() {document.getElementById("mySidenavXbr").style.width = "0";document.getElementById("mainXbr").style.marginLeft= "0";}
+function openNavRight() {document.getElementById("mysidenavRightRight").style.width = "400px";}function closeNavRight() {document.getElementById("mysidenavRightRight").style.width = "0";}
+
+// 

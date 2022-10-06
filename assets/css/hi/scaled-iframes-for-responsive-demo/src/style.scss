@@ -1,0 +1,154 @@
+@import "compass/css3";
+
+* , *:befrore, *:after{
+ box-sizing: border-box;
+}
+
+html {
+  background: #9b59b6; 
+  overflow-Y: scroll;
+  transition: background 1s;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 0;
+   width: 100%; 
+  span {
+   display: block;
+    font-size: 2.5rem;
+    margin: -1rem 0 0; 
+  }
+}
+
+ul {
+ list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: justify;  
+  width: 20rem;
+  
+    &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+li {
+  color: #fff;
+  cursor: pointer;
+ display: inline-block; 
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+%common {
+    @include background-image(linear-gradient(45deg, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 60%,rgba(181,198,208,1) 60%,rgba(224,239,249,1) 100%));
+    @include background-image(linear-gradient(45deg, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 60%,rgba(181,198,208,1) 60%,rgba(224,239,249,1) 100%));
+  box-shadow: inset 0 0 0 1em #333230, 0 1rem 2rem -1rem rgba(black,0.6);
+  border-radius: 1rem ; 
+   margin: 1rem auto 10rem; 
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  
+  iframe {
+  left: 1rem;
+  position: absolute;
+  top: 1rem;
+  transform-origin: 0 0
+}
+}
+
+.dektop {
+  @extend %common;
+  border-bottom: 3rem solid #c7c3c1;
+  height: 18rem;
+  width: 32rem;
+  
+  &:after {
+    bottom: -3rem;
+    content:'♠'; 
+    font-size: 2rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+&:before {
+ @include background-image(linear-gradient(top, rgba(96,94,93,1) 0%,rgba(199,195,193,1) 100%));
+  border-radius: 50% 50% 1rem 1rem;
+  border-bottom: 0.3rem solid rgba(96,94,93,1);
+  bottom: -6rem;
+  content: '';
+  left: 50%;
+  height: 8rem;
+  margin-left: -3.5rem;
+  position: absolute;
+  width: 7rem;
+  z-index: -1;
+}
+
+iframe {
+  height: calc(400% - 8rem);
+  transform: scale(0.25);
+ width: calc(400% - 8rem); 
+}
+
+}
+
+
+.mobile {
+  @extend %common;
+  border-bottom: 4rem solid #333230;
+  height: 18rem;
+  height: 28rem;
+  width: 18rem; 
+  
+  &:after {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 0.5rem white, 0 0 0.5rem rgba(black,0.4);
+    bottom: -3rem;
+    content: '';
+    height: 3rem;
+    left: 50%;
+    margin-left: -1.5rem;
+    position: absolute;
+    width: 3rem;
+  }
+  
+  iframe {
+  height: 35rem;
+  transform: scale(0.75);
+  width: 21.4rem; 
+}
+  
+}
+
+.tablet {
+  @extend %common;
+  border-bottom: 4rem solid #333230;
+  height: 27rem;
+  width: 22rem;
+  
+  &:after {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 0.2rem white, 0 0 0.5rem rgba(black,0.4);
+    bottom: -2.5rem;
+    content: '';
+    height: 2.5rem;
+    left: 50%;
+    margin-left: -1.5rem;
+    position: absolute;
+    width: 2.5rem;
+  }  
+  
+    iframe {
+      height: 63rem;
+      transform: scale(0.4);
+      width: 50rem; 
+      }
+}

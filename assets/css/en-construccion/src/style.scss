@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+h1, h2, p {
+	font-family: 'Staatliches', cursive;
+	color: #1C1C1C;
+}
+
+h1 {
+	font-size: 5rem;
+}
+
+h2 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 2.5rem;
+}
+
+body {
+	background-color: #FCE101;
+	height: 100%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: stretch;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.container-character {
+	display: flex;
+}
+
+.character {
+	position: relative;
+	display: inline-block;
+	width: 189px;
+	height: 424px;
+	align-self: flex-end;
+}
+
+.body {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	z-index: 2;
+}
+
+.legs {
+	display: inline-block;
+	position: absolute;
+	bottom: -5px;
+	z-index: 1;
+}
+
+.dirt {
+	display: inline-block;
+	position: absolute;
+	bottom: -6px;
+	z-index: 3;
+	left: 72px;
+}
+
+.construction {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: inherit;
+}
+
+.ground {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: inherit;
+	flex: 1;
+	background-color: #CBB400;
+}
+
+button {
+	margin: 20px;
+	height: 60px;
+	width: 180px;
+	font-family: 'Staatliches', cursive;
+	font-size: 1.35rem;
+	background-color: #FCE101;
+	border: 0;
+	cursor: pointer;
+}
+
+#work-normal {
+	background-color: inherit;
+	color: #FCE101;
+	font-size: 1.2rem;
+	text-decoration: underline;
+}
+
+.selected {
+	background-color: #3A9828;
+	color: white;
+}

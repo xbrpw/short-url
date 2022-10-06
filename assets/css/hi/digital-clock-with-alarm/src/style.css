@@ -1,0 +1,8 @@
+body { background:#A3ABF2; font-family:Arial; text-align:center; }
+.day { font-size:64px;  }
+.date { font-size:33px; }
+.clock { font-size:44px; }
+.clock-content { margin-top:35vh; color:#FFF;  }
+.alarm-icon { font-size:34px; cursor:pointer; position:absolute; top:15px; right:15px; color:#FFF; }
+.setalmlbl { padding-right:20px; }
+.setalmtxtbox { margin-right:10px; width:60px; }

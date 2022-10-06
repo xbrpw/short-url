@@ -42,10 +42,9 @@
 <body >
   <div class="containerwidow body-dark-mode" id="mainXbr" >
     <div class="scrollmenu">  
-      <a href="#openNavXbR" onclick="openNavXbr()"> <img src="../assets/favicons/lamp-desing.svg" width="18" height="18" alt="Lamp! desing"> <img src="../assets/favicons/lamp-martech.svg" width="18" height="18" alt="lamp! martech" > <img src="../assets/favicons//lamp-developer-products-and-experience.svg" width="18" height="18" alt="Lamp! developer products and experience" >   <!--  <span class="dot" style="background:#ED594A;"></span> <span class="dot" style="background:#FDD800;"></span> <span class="dot" style="background:#5AC05A;"></span><img src="../assets/favicons/lamp-services.svg" width="18" height="18" alt="Welcome Screen Get Started"> --></a>   
-      <a href="#DarkModeColor" title="Activar Poder obscuro" onclick="myFunction()" > Obscuro <i class="fa fa-user-alien " ></i> </a>
-      <a href="#home" title="Hola, gracias por estar aquí" ><i class="fa fa-home " onclick="openNav()"></i> </a>    
-      <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">Editor</a>
+      <a href="#openNavXbR" onclick="openNavXbr()"> <img src="../assets/favicons/lamp-desing.svg" width="18" height="18" alt="Lamp! desing"> <img src="../assets/favicons/lamp-martech.svg" width="18" height="18" alt="lamp! martech" > <img src="../assets/favicons//lamp-developer-products-and-experience.svg" width="18" height="18" alt="Lamp! developer products and experience" >   <!--  <span class="dot" style="background:#ED594A;"></span> <span class="dot" style="background:#FDD800;"></span> <span class="dot" style="background:#5AC05A;"></span><img src="../assets/favicons/lamp-services.svg" width="18" height="18" alt="Welcome Screen Get Started"> --></a>         
+      <a href="#home" title="Hola, gracias por estar aquí" ><i class="fa fa-home " onclick="openNav()"></i> Get Started </a>    
+      <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-code"></i> Editor</a>
       <ul class="dropdown-menu text-small shadow">    
         <li onclick="openCity(event, 'Editorland')"> <a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://hihellomonster.github.io/editor.online/" target="iframe_a"  title="eDitor" ><img src="../assets/favicons/hihellomonster.png" width="18" height="18" alt="Editor online">W3ditor-me</a></li>
         <li onclick="openCity(event, 'Editorland')"> <a class="dropdown-item d-flex gap-2 align-items-center" href="api/codepen.html" target="iframe_a">
@@ -60,7 +59,7 @@
         
       </ul>        
       
-      <a href="#AbrirGo" class="align-items-center justify-content-center p-3 text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">Abrir</a>
+      <a href="#AbrirGo" class="align-items-center justify-content-center p-3 text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-folder-open"></i> Abrir</a>
       <ul class="dropdown-menu text-small shadow">    
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="https://docs.google.com/spreadsheets/d/1-VpQFNgiAi66LMPeap5eoNe2vDw_nDlW1kuRsyPC-ss/edit" target="iframe_a"  title="De los pies a la cabeza" >💡 Metodología</a></li>
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://docs.google.com/spreadsheets/d/1xcXsKf8h9JYzhHyZYeLi0ltQoCHos4b7phazOxlTQf0/edit" target="iframe_a"  title="Twts en Sheets" ><img src="../assets/favicons/sheets.png" width="18" height="18" alt="Twits en Sheets">Twitter</a></li>
@@ -68,71 +67,58 @@
       <li><a class="dropdown-item d-flex gap-2 align-items-center" href="https://docs.google.com/document/d/1IvTS5-Omp1fQUrC27hE3ranYCMRXOdFJBjq9UkMBjw0/edit" target="iframe_a" title="Twits en Docs"><img src="../assets/favicons/docs.png" width="18" height="18" alt="Twits en Docs">Twits</a></li>          
       <li><a class="dropdown-item d-flex gap-2 align-items-center" href="https://drive.google.com/drive/my-drive" target="iframe_a" title="Google Drive"><img src="../assets/favicons/docs.png" width="18" height="18" alt="Google Drive">Google Drive</a></li>          
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a" title="Abrir Descargas" aria-label="Abrir Descargas"><i class="fa fa-download "></i>Descargas  </a></li>
-      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a"  title="Abrir Documentos" aria-label="Abrir Documentos" onclick="openCity(event, 'Editorland')"  ><i class="fa fa-folder-open  "></i> Documentos </a></li>
-      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///P:/" target="iframe_a"  title="Abrir Documentos" onclick="openCity(event, 'Editorland')"  aria-label="gCloud"> <img src="../assets/favicons/gcloud.webp" width="18" height="18" alt="gCloud"> gCloud  </a> </li>
+      <li class="w3-hide-small w3-hidel-medium"><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="C:/Users/Luis%20%C3%81ngel/Downloads/" target="iframe_a" title="Abrir Descargas" aria-label="Abrir Descargas"><i class="fa fa-download "></i>Descargas  </a></li>
+      <li class="w3-hide-small w3-hidel-medium"><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///C:/Users/Luis%20%C3%81ngel/Documents/" target="iframe_a"  title="Abrir Documentos" aria-label="Abrir Documentos" onclick="openCity(event, 'Editorland')"  ><i class="fa fa-folder-open  "></i> Documentos </a></li>
+      <li class="w3-hide-small w3-hidel-medium"><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///P:/" target="iframe_a"  title="Abrir Documentos" onclick="openCity(event, 'Editorland')"  aria-label="gCloud"> <img src="../assets/favicons/gcloud.webp" width="18" height="18" alt="gCloud"> gCloud  </a> </li>
       <li><a href="footer.html"  target="iframe_a" onclick="openCity(event, 'Editorland')">    Footer </a>   </li>
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///C:/Users/Luis%20%C3%81ngel/Documents/ART.cdr"   title="Corel Draw X5" aria-label="Corel Draw X5"> <img src="../assets/favicons/coreldraw2022.ico" width="18" height="18" alt=" Corel Draw X5"> Corel Draw X5 </a></a>
-      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go/history/index.html"  target="iframe_a"  onclick="openCity(event, 'Editorland')"  title="History"  aria-label="History"  ><span class="fa fa-history"></span>History </a></a>     
+      <li class="w3-hide-small w3-hidel-medium"><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/go/history/index.html"  target="iframe_a"  onclick="openCity(event, 'Editorland')"  title="History"  aria-label="History"  ><span class="fa fa-history"></span>History </a></a>     
         
       </li></ul>      
 
-      <a href="#COpySnippets" onclick="openNavFav()" >Snippets </a> 
-      <a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/assets/css/fav/"  target="iframe_a" onclick="openCity(event, 'Editorland')"  title="Snippes" aria-label="go/Assets"> <span onclick="closeNav()"> go/Assets  </span>  </a>  
-      <a href="multimedia.html"  target="iframe_a"  onclick="openCity(event, 'Editorland')" title="Multimedia">  <span onclick="closeNav()"> Multimedia </span> </a>          
-      <a href="api/doble.pantalla/index.html" title="Doble View"  target="iframe_a"  onclick="openCity(event, 'Editorland')" title="Snippes"> <img src="../assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"  >    </a>
+      <a href="#COpySnippets" onclick="openNavFav()" ><i class="fas fa-copy"></i>   Copy-Snippets </a> 
+      <a href="multimedia.html"  target="iframe_a"  onclick="openCity(event, 'Editorland')" title="Multimedia">  <span onclick="closeNav()"> <i class="fa-solid fa-photo-film"></i> Multimedia </span> </a>          
+      
             
       <a href="api/para-notas-rapidas/index.html" target="notas-rapidas"><img src="../assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Notas Rápidas" onclick="openNavRight()"></a>
-
+      <a  href="./tareas/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')">  <i class="fa-solid fa-list-check"></i> </a>              
+      <a  href="api/doble.pantalla/index.html""  target="iframe_a" onclick="openCity(event, 'Editorland')">  <img src="../assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"  > </a>              
       <a href="#pomodoro"  data-bs-toggle="modal" data-bs-target="#myModalScrolla"><i class="fa fa-stopwatch animate__animated animate__bounceInLeft animate__delay-2s 	" ></i> <span id="counter" >25:00</span>  </a>          
-      <a  href="./tareas/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')">  <i class="fa-solid fa-list-check"></i> Tareas </a>              
-    
+          
 
-      <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user  "></i> Herramientas</a>
+      <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-gears"></i> Herramientas</a>
       <ul class="dropdown-menu text-small shadow">    
       <li><a class="dropdown-item d-flex gap-2 align-items-center" href="https://getbootstrap.com/docs/5.2/customize/components/"><img src="../assets/favicons/bootstrap.ico" width="18" height="18" alt="Docs Bootstrap 5">Docs 5 <i class="fas fa-external-link-alt"></i></a></li>   
       <li><a class="dropdown-item d-flex gap-2 align-items-center" href="https://www.w3schools.com/bootstrap5/index.php" target="_blank"><img src="../assets/favicons/w3.ico" width="18" height="18" alt="W3 Bootstrap 5">W3 Bootstrap 5 <i class="fas fa-external-link-alt"></i></a></li> 
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://fontawesome.com/v6/search?m=free" target="_blank" title="Fontawesome"><img src="../assets/favicons/fontawesome.ico" width="18" height="18" alt="Favicons/Fontawesome">Fontawesome <i class="fas fa-external-link-alt"></i></a></li>  
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://codepen.io/trending" target="_blank" title="Codepen Trending"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Codepen Trendin">Codepen Trendin <i class="fas fa-external-link-alt"></i></a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a"   title="Online Image Tool | Convertir a webp"><img src="https://www.luisangelmaciel.one/Igglybuff/svg/ico-codepen.svg" width="18" height="18" alt="Online Image Tool | Convertir a webp">Convertir a webp </a></li>
+      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a"   title="Online Image Tool | Convertir a webp"><img src="../assets/favicons/onliimagetool.png" width="18" height="18" alt="Online Image Tool | Convertir a webp">Convertir a webp </a></li>
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="https://animate.style/" target="iframe_a" title="Animate Style CSS "><img src="../assets/favicons/animate-style.ico" width="18" height="18" alt="Codepen Trendin"> Animate Style  </a></li>
-      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="http://www.shrinker.ch/" target="iframe_a" title="Animate Style CSS "><img src="../assets/favicons/animate-style.ico" width="18" height="18" alt="Codepen Trendin"> Animate Style  </a></li>
-    </ul>   
-      
-    <a href="#" class="align-items-center justify-content-center p-3  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user  "></i>   <img src="../assets/favicons/lamp-desing.svg" alt="Luis Angel Maciel" width="24" height="24" class="rounded-circle"></a>
-    <ul class="dropdown-menu text-small shadow">    
-    <li><a  href="mds.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa fa-search"></i> Hey </a>   </li>
-    <li><a  href="mds.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa fa-search"></i> Fav </a>   </li>
-    <li><a  href="hi.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa fa-search"></i> Hi </a>   </li>
+      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="http://www.shrinker.ch/" target="iframe_a" title="En una linea tu CSS "><i class="fas fa-plus-minus"></i> Shrinker  </a></li>
+    </ul>             
+
+    
+    <a href="#" class="  p-3  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-file-code"></i>  </a> 
+    <ul class="dropdown-menu text-small shadow">       
+    <li><a  href="hi.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-file-code"></i> Hey </a>   </li>
+    <li><a  href="../notes/bloc-blanco/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-file-circle-plus"></i> Agregar</a></li>              
     <li><hr class="dropdown-divider"></li>
-    <li><a  href="templete-tailwind.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa fa-search"></i> Taiwiland </a> </li>
-    <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#trash"/></svg>Trash</a></li></ul>   
+    <li><a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/assets/css/fav/"  target="iframe_a" onclick="openCity(event, 'Editorland')"  title="Snippes" aria-label="go/Assets"> <span onclick="closeNav()"> <i class="fas fa-folder-open"></i> Carpeta </span>  </a>  </li>
+    </ul>   
+
       
     <!-- gruoup repositorios -->
       <a href="#" class="align-items-center justify-content-center p-3  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="../assets/favicons/github.svg" width="18" height="18" alt="Repositorios">Repositorios</a>
+          <img src="../assets/favicons/github.svg" width="18" height="18" alt="Repositorios"></a>
         <ul class="dropdown-menu text-small shadow">    
           <li>
             <a class="dropdown-item d-flex gap-2 align-items-center" href="https://github.com/luisangelmaciel?tab=repositories" target="_blank">
-            LuisAngelMaciel.one <i class="fas fa-play"></i>
-            <i class="fas fa-pause"></i> 
-            <i class="fas fa-forwad"></i>
-            <i class="fas fa-previus"></i> 
-            <i class="fas fa-backward"></i>
-            <i class="fas fa-list-music "></i>
-            <i class="fas fa-copy"></i>
-            <i class="fas fa-user-alien"></i>
-            <i class="fas fa-external-link"></i>
-            <i class="fas fa-plus-circle"></i>
-            <i class="fas fa-folder-open"></i>
+            LuisAngelMaciel.one                    
+                                                 
             <i class="fas fa-portal-exit"></i>
             <i class="fas fa-times-circle"></i>
-            <i class="fas fa-calendar"></i>
-            <i class="fas fa-"></i>
-            <i class="fas fa-"></i>
-             <i class="fas fa-external-link-alt"></i>
-            </a>
+            <i class="fas fa-calendar"></i>                  
           </li> 
           <li>
             <a class="dropdown-item d-flex gap-2 align-items-center" href="https://github.com/hihellomonster?tab=repositories" target="_blank">
@@ -145,6 +131,14 @@
           xbr.pw <i class="fas fa-external-link-alt"></i></a>
           </li> 
       </ul>    <!--/ gruoup repositorios -->       
+
+      <a href="#" class="align-items-center justify-content-center p-3  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user  "></i></a>
+    <ul class="dropdown-menu text-small shadow">    
+      <li><a  href="mds.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-sitemap"></i>  Mapa de sitio </a>   </li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a href="#DarkModeColor" title="Activar Poder obscuro" onclick="myFunction()" > <i class="fa fa-moon " ></i> </a></li>
+    </ul>
+   
   </div>
   
   <div class="body-dark-mode animate__animated animate__fadeInDown " >
@@ -157,9 +151,9 @@
       <iframe src="multimedia.html"  height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
     </div><!-- /Paris -->
 
-    <div id="Tokyo" class="tabcontent"><!-- Queda vacio porque no funciono, pero lo dejo por si acaso para rapido <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->      
-      <iframe src="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/assets/css/fav/" name="tabSnipes" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
-    </div><!-- /Tokio -->       
+    <div id="AboutGeneral" class="tabcontent"><!-- Queda vacio porque no funciono, pero lo dejo por si acaso para rapido <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->      
+      <iframe src="aboutme.html" name="tabAboutGeneral" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+    </div><!-- /AboutGeneral -->       
   </div>
 
   
@@ -194,7 +188,8 @@
  
   <div id="mySidenavXbr" class="sidenav aBlanco" style="color:white">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNavXbr()" class="aBlanco" aria-label="Close Nav" style="color: white;" >&times;</a>
-    <a href="#" class="aBlanco"><i class="fa fa-check "></i> About</a>
+    <a href="#" class="aBlanco"><i class="fa fa-check "></i>About</a>
+    <a href="release-notes.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" style="color:white"><i class="fa fa-search"></i> Release notes </a>
     <a href="#" class="aBlanco"><i class="fa fa-file-import" ></i> Services</a>
     <a href="#" class="aBlanco">Clients</a>
     <a href="#" class="aBlanco">Contact</a>
@@ -346,7 +341,7 @@
   </body></html>
 
 
-  <!-- la rapida 
+  <!-- la rapida  ༼ つ ◕_◕ ༽つ Please share 
     
 <title>List check - solid | Font Awesome</title>
   <meta id="meta-application-name" name="application-name" content="List check - solid | Font Awesome" />

@@ -1,0 +1,58 @@
+* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		body {
+			background-color: #3c3c3c;
+			color: #FFF;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+		}
+
+		#button_container {
+			position: relative;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		#button_container a {
+			color: #FFF;
+			text-decoration: none;
+			font-weight: 100;
+			font-size: 45px;
+			height: 250px;
+			width: 250px;
+			line-height: 250px;
+			vertical-align: middle;
+			position: relative;
+			display: inline-block;
+			margin-top: 5px;
+
+			transition: all 0.4s;
+			-moz-transition: all 0.4s; /* Firefox 4 */
+			-webkit-transition: all 0.4s; /* Safari and Chrome */
+			-o-transition: all 0.4s; /* Opera */
+
+			-webkit-border-radius: 125px;
+			-moz-border-radius: 125px;
+			border-radius: 125px;
+
+			letter-spacing: 0.05em;
+		}
+
+		#button_container a:hover {
+			margin-top: 0;
+			-moz-box-shadow:    5px 10px 10px rgba(0,0,0,0.4), inset -5px -10px 10px rgba(0,0,0,0);
+			-webkit-box-shadow: 5px 10px 10px rgba(0,0,0,0.4), inset -5px -10px 10px rgba(0,0,0,0);
+			box-shadow:         5px 10px 10px rgba(0,0,0,0.4), inset -5px -10px 10px rgba(0,0,0,0);
+			text-shadow: -1px -2px 2px #000, 1px 2px 0 rgba(255,255,255,0.2);
+		}
+
+		#button_container a:active {
+			margin-top: 5px;
+			height: 245px;
+			background-color: rgba(0,0,0,0.03);
+			-moz-box-shadow:    5px 10px 10px rgba(0,0,0,0), inset 3px 6px 6px rgba(0,0,0,0.4);
+			-webkit-box-shadow: 5px 10px 10px rgba(0,0,0,0), inset 3px 6px 6px rgba(0,0,0,0.4);
+			box-shadow:         5px 10px 10px rgba(0,0,0,0), inset 3px 6px 6px rgba(0,0,0,0.4);
+		}

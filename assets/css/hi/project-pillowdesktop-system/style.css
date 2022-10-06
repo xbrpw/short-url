@@ -1,0 +1,278 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #333;
+  overflow: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: auto;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+  color: whitesmoke;
+  font: 400 normal 16px/20px "Raleway", "Quicksand", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+  background: rgba(255, 255, 255, 0.3);
+}
+header > * {
+  margin: 0 0.5rem;
+}
+header > span {
+  display: inline-block;
+  cursor: pointer;
+}
+header > span:hover {
+  color: gold;
+}
+
+#menu {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 280px;
+  width: 70%;
+  min-height: 300px;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  z-index: 300;
+}
+#menu .menu-item {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  margin: 1rem;
+  outline: 1px dotted red;
+}
+#menu .menu-content {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  overflow: auto;
+  padding: 1rem;
+}
+#menu .menu-footer {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+}
+#menu .menu-footer .menu-item {
+  margin: 0 1rem;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0 0 0;
+  background: linear-gradient(to right top, #8e44ad, #3498db);
+}
+
+.screensaver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#24C6DC 10%, #514A9D 90%) whitesmoke;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 300;
+}
+.screensaver > .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.screensaver > .content time {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+}
+.screensaver > .content time:first-of-type {
+  font-size: 5rem;
+  line-height: 6.25rem;
+}
+.screensaver > .unlock {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 0 5px whitesmoke;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-animation: flash 1500ms ease infinite alternate;
+          animation: flash 1500ms ease infinite alternate;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+button {
+  color: inherit;
+  font: inherit;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+button:active {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+.window {
+  position: absolute;
+  z-index: 200;
+  min-width: 200px;
+  max-width: 100%;
+  max-height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+  font-size: 14px;
+  resize: both;
+  overflow: auto;
+}
+.window .header {
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: move;
+  background: rgba(255, 255, 255, 0.1);
+}
+.window .header h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.window .header > .close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+.window .sub-header {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+}
+.window .content {
+  padding: 2.5rem 0 0 0;
+  overflow: auto;
+}
+.window .content .file-item {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  margin: 1rem;
+  text-align: center;
+  cursor: pointer;
+  resize: none;
+}
+.window .content .file-item > .icon {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+.window .content .file-item > .icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.window .content .file-item > .icon:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.window .content .file-item > .icon.folder {
+  background: linear-gradient(rgba(34, 201, 232, 0.5), rgba(20, 85, 219, 0.5));
+  border-radius: 0 0 4px 4px;
+}
+.window .content .file-item > .icon.folder:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  background: rgba(255, 255, 255, 0.5);
+  width: 94px;
+  height: 3px;
+}
+.window .content .file-item > .icon.folder > * {
+  color: rgba(0, 0, 0, 0.1);
+}
+.window .content .file-item > .icon > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.window .content .file-item > .label {
+  display: inline-block;
+  color: whitesmoke;
+  padding: 0.2rem 0.5rem;
+  min-width: 5rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  text-align: center;
+  font-size: 0.63rem;
+  margin: 0.3rem 0 0 0;
+  overflow: hidden;
+}

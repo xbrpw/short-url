@@ -921,7 +921,7 @@ height: 35px;
             
             /* Create an active/current tablink class */
             .tab button.active {
-              background-color: #ccc;
+              background-color: rgb(143, 142, 211);
             }
             
             /* Style the tab content */

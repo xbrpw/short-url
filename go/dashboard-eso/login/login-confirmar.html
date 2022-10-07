@@ -172,7 +172,38 @@
     <div class="modal"><br><br>
         <label for="modal-2" class="modal-close">&times;</label>
         <div class="content">
-            2 </div>
+            <div class="w3-container">
+                <h2>Toggle Show/Hide</h2>
+                <p>Click on the button to show/hide a paragraph.</p>
+                <button onclick="myFunction()" class="w3-btn w3-black">Toggle hide and show</button>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                <p>Paragraph 1.</p>
+                <div id="Demo" class="w3-hide w3-red">  <form action="" class="login__registre" id="login-in">
+                    <h1 class="login__title">Iniciar sesión</h1>             
+                    <div id="create">
+                        <h2>Crea una nueva cuenta</h2>
+                        <label for="Email">Email</label><br/>
+                        <input name="Email" type="email" /><br/>
+                        <label for="Contraseña">Password</label><br/>
+                        <input name="Contraseña" type="password" /><br/>
+                        <label for="confirmPassword">Repite Password</label><br/>
+                        <input name="confirmPassword" type="password" /><br/>
+                        <div id="createBtn"> 
+                         Enviar</div>                       
+                </form> </div>
+              </div>
+              
+              <script>
+              function myFunction() {
+                var x = document.getElementById("Demo");
+                if (x.className.indexOf("w3-show") == -1) {
+                  x.className += " w3-show";
+                } else {
+                  x.className = x.className.replace(" w3-show", "");
+                }
+              }
+              </script> </div>
     </div>
 
 
@@ -180,6 +211,44 @@
     <div class="modal">
         <label for="modal-3" class="modal-close">&times;</label>
         <div class="content">
-            3</div>
+            <div id="create">
+                        
+                <form        method="post" action="https://api.sheetmonkey.io/form/i9RpN9QTFDNou8UKLfXhe1" autoComplete="on" class="sm__form">
+                    <h1 class="login__title">Crea una cuenta</h1>
+
+                    <div class="login__box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Nombre" class="login__input" id="sm-field-ZhubO5WyEQ" name="Nombre(s)"> 
+                        
+                    </div>
+                      
+                                               
+                    <div class="login__box">
+                        <i class='bx bx-user login__icon'></i>
+                        <input type="text" placeholder="Apellidos" class="login__input" name="CreateName" id="sm-field-3ZbM4MwrRU" name="Apellidos"/>               
+                    </div>
+
+
+                        <div class="login__box">
+                            <i class='bx bx-at login__icon'></i>
+                            <input  placeholder="Email" class="login__input" name="createEmail" type="email" >
+                        </div>                     
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input  placeholder="Password" class="login__input"  name="createPassword" type="password"> 
+                    </div>
+
+
+                    <div class="login__box">
+                        <i class='bx bx-lock-alt login__icon'></i>
+                        <input type="password" placeholder="Confirma tu Password" class="login__input" name="confirmPassword">
+                    </div>
+
+                   
+                    <a href="#" class="login__button"  type="submit" onclick="document.location='https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1'"  class="login__button" id="createBtn" type="submit"> <span >confirmar</span></a>
+                </form>
+            <div>
+        </div><!-- content-->
     </div>
 </div>

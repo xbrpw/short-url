@@ -1,0 +1,74 @@
+
+
+.wrapper {
+    position: absolute;
+    font-family: 'numbers'; -webkit-font-smoothing: antialiased;
+}
+
+.center {
+
+    position: absolute;
+    text-align: center;
+}
+
+.clock {    
+    font-size: 70px;
+}
+
+.month {
+    top: 62px;
+    font-size: 30px;
+    font-family: 'letters';
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.date {
+    position: absolute;
+    
+    text-align: right;
+    font-size: 52px;
+    top: 90px;
+}
+
+.year {
+    position: absolute;
+    
+    text-align: left;
+    left: 60px;
+    font-size: 30px;
+    top: 110px;
+}
+
+.day {
+    position: absolute;
+    
+    text-align: left;
+    left: 60px;
+    font-size: 15px;
+    top: 95px;
+    font-family: 'letters';
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+#dates {
+    position: absolute;
+}
+@font-face {
+    font-family: 'letters';
+    src:  url('https://www.xbr.pw/assets/webfonts/Building_Typeface.ttf?hvurpa') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: 'numbers';
+    src:  url('https://www.xbr.pw/assets/webfonts/Dense-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  

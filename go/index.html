@@ -20,6 +20,7 @@
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  
   <link rel='dns-prefetch' href="https://fonts.googleapis.com">  
   <meta name="MobileOptimized" content="320" />  
+  <meta name="MobileOptimized" content="width" />
   <meta name="ResourceLoaderDynamicStyles" content=""/>
   <meta name="format-detection" content="telephone=no"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/> 
@@ -192,7 +193,17 @@
     <a href="release-notes.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" style="color:white"><i class="fa fa-search"></i> Release notes </a>
     <a href="#" class="aBlanco"><i class="fa fa-file-import" ></i> Services</a>
     <a href="#" class="aBlanco">Clients</a>
-    <a href="#" class="aBlanco">Contact</a>
+    <a href="#" class="aBlanco">  <div class="wrapper">
+      <div id="clock" class="center clock"></div>
+      <div id="month" class="center month"></div>
+      <div id="dates">
+          <div id="date" class="date"></div>
+          <div id="year" class="year"></div>
+          <div id="day" class="day"></div>
+      </div>
+  </div>
+  <link rel="stylesheet" href="./Data-Time-layout.css">
+  <script src="./Data-Time-layout.js"></script></a>
   </div>
 
   <div id="mySidenav" class="sidenav aBlanco"  style="color:white">

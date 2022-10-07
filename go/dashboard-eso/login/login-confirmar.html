@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+  <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>
+  <title>Alumnos </title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-
+<!-- partial:index.partial.html onclick="document.location='../index.html'" -->
 <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 <div class="login">
             <div class="login__content">
@@ -20,7 +21,8 @@
 
                 <div class="login__forms">
 
-                    <div id="loggedIn" onclick="document.location='././index.html'"> Bienvenido  </div>
+                    <div id="loggedIn" >
+                        <iframe src="https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1" name="iframe_a"  style="border:none;"height="600px" width="100%" title=""></iframe>     </div>
                       
                      
                     
@@ -57,19 +59,42 @@
                     </form> </div>
 
                     <div id="create">
-                    <form action="" class="login__create none" id="login-up">
+                        
+                    <form action="" class="login__create none" id="login-up"
+                    method="post" action="https://api.sheetmonkey.io/form/i9RpN9QTFDNou8UKLfXhe1" autoComplete="on" class="sm__form">
                         <h1 class="login__title">Crea una cuenta</h1>
     
                      
-                        <span onclick="document.location='https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1'"  class="login__button" >Alumnos</span>  
-                        <span onclick="document.location='https://share.sheetmonkey.io/f/jMBVZqEcZXYjBWkUsiBuE9'"  class="login__button" >Docentes</span>                          
-                        <a href="/"  class="login__button" >Padres de familia</a>  
-                        <a href="/" class="login__button" >Comunidad</a>  
+                          
+                                                   
+                        <div class="login__box">
+                            <i class='bx bx-user login__icon'></i>
+                            <input type="text" placeholder="Username" class="login__input" name="CreateName">
+                            <label class="sm-field__label" for="sm-field-3ZbM4MwrRU">Apellidos   </label>
+                            <input type="text" class="sm-field__input sm-field__input--text" id="sm-field-3ZbM4MwrRU" name="Apellidos"/>
+                        </div>
+    
+                            <div class="login__box">
+                                <i class='bx bx-at login__icon'></i>
+                                <input  placeholder="Email" class="login__input" name="createEmail" type="email" >
+                            </div>                     
+
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input  placeholder="Password" class="login__input"  name="createPassword" type="password"> 
+                        </div>
+    
+
+                        <div class="login__box">
+                            <i class='bx bx-lock-alt login__icon'></i>
+                            <input type="password" placeholder="Confirma tu Password" class="login__input" name="confirmPassword">
+                        </div>
+
+                        <a href="#" class="login__button" id="createBtn" type="submit" onclick="document.location='https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1'">Registrarse</a>
 
                         <div>
-                            
                             <span class="login__account">Tienes una cuenta?</span>
-                            <a href="login-confirmar.htm|" target="iframe_a"  style="width:100%;"  ><span class="login__signup" >Inicia sesión</span></a> 
+                            <span class="login__signup" id="sign-in">Inicia sesión</span>
                         </div>
                         <label for="createEmail"></label>                           
                         <label for="createPassword"></label>
@@ -91,7 +116,6 @@
   <script src="login.js"></script>
 </body>
 </html>
-
 
 <div>
 
@@ -125,7 +149,7 @@
         }
     </style>
 
-    <label for="modal-1"><a href="https://share.sheetmonkey.io/f/i9RpN9QTFDNou8UKLfXhe1" target="iframe_a"  style="width:100%;" class="w3-bar-item w3-button w3-left-align ">1</a> </label>
+    <label for="modal-1">1 </label>
     <label for="modal-2">2</label>
     <label for="modal-3">3</label>
 

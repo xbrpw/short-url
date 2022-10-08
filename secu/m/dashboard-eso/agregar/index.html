@@ -1,176 +1,199 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - centered vertically and horizontally element</title>
-  <link rel="stylesheet" href="./style.css">
-<style>.modal-overlay {
-  display: none;
-}
 
-.modal-overlay.active {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    overflow: auto;
-}
-
-.modal-outer-container {
-	  display: table;
-    width: 100%;
-    height: 100%;
-}
-
-.modal-middle-container {
-	 display: table-cell;
-   vertical-align: middle;
-}
-.modal-inner-container {
-	  max-width: 485px;
-    width: 90%;
-    margin: 0 auto;
-    position: relative;    
-    text-align: center;
-}
-.clearfix:after {
-  content:" ";
-  display:block;
-  clear:both;
-}
-.form-wrapper {
-max-width: 800px;
-/*   border: 1px solid lightgrey; */
-}
-.form-row-wrapper {
-width: 100%;
-}
-
-.full-row, .half-row {
-  margin-top:  2%;
-}
-.form-row-wrapper label {
-display: block;
-}
-
-.form-row-wrapper .half-row {
-  float: left;
-  width: calc(50% - 2%);
-  transition: all 0.3s ease;
-}
-.form-row-wrapper .half-row:first-child {
-  margin-right: 4%;
-} 
-
-.form-row-wrapper input {
-  width: 100%;
-  height: 30px;
-  box-sizing: border-box;
-  border: 1px solid #CBCCC3;
-}
-
-.custom-select-wrapper {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  width: 100%;
-}
-.custom-select-wrapper:after {
-  content: "";
-  position: absolute;
-  right: 15px;
-  top: 45%;
-  border: solid 5px white;
-  border-top: solid 5px #cbccc2;  
-  pointer-events: none;
-}
-
-.custom-select-wrapper select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  border: none;
-  width: 100%;
-  height: 30px;
-  z-index: 1;
-  background: 0 0;
-  cursor: pointer;
-  padding: 1px 5px 0px 10px;
-  border: 1px solid #CBCCC2;
-  border-radius: 0;
-  font-family: Calibre;
-}
-
-@media only screen and (max-width: 768px) {
-.form-row-wrapper .half-row {
-  float: none;
-  width: 100%;
- }
-}</style>
-</head>
-<body>
+<html lang="es-MX" >  <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- partial:index.partial.html -->
-<div class="modal-overlay active">
-  <div class="modal-outer-container">
-    <div class="modal-middle-container">
-      <div class="modal-inner-container">
-        <div id="modal_header"></div>	
-        <div id="modal_body"> 
-            <div class="form-wrapper">
-    
-              <div class="form-row-wrapper">
-                <div class="full-row">
-                <label> Input Full</label>
-                <input type="text" />
-                </div>
-            </div>
-            
-              <div class="form-row-wrapper clearfix">
-                  <div class="half-row">
-                    <label> Input Half 1</label>
-                    <input type="text" />
-                </div>
-                <div class="half-row">
-                    <label> Input Half 2</label>
-                    <input type="text" />
-                </div>
-            </div>
-                <div class="form-row-wrapper clearfix">
-                  <div class="half-row">
-                    <label> Input Half 1</label>
-                    <input type="text" />
-                </div>
-                <div class="half-row">
-                    <label> Select Half 2</label>
-                  <div class="custom-select-wrapper">
-                  <select>
-                    <optgroup label="Select Number">
-                      <option value="Select1">Select 1 </option>
-                      <option value="Select2">Select 2 </option>                       <option value="Select3">Select 3 </option>
-                    </optgroup>
-                  </select>
-                  </div>
-                </div>
-            </div>
-            
-              <div class="form-row-wrapper">
-                <div class="full-row">
-                <label> Input Full</label>
-                <input type="text" />
-                </div>
-            </div>
-            
-          </div>
-	      <div id="modal_footer"></div>
-			</div>
+<div id="wrapper">
+  <div class="category">
+    <h2>Contenido</h2>
+    <div class="question">
+      <div class="status correct"></div>
+      <h3>Sign Up Form</h3>
+    </div>
+        <div class="question">
+      <div class="status correct"></div>
+      <h3>Item Cart</h3>
+    </div>
+        <div class="question">
+      <div class="status partially-correct"></div>
+      <h3>Spaghetti Recipe</h3>
     </div>
   </div>
+    <div class="category">
+    <h2>Avisos</h2>
+    <div class="question">
+      <div class="status partially-correct"></div>
+      <h3>Rainbow Circles</h3>
+    </div>
+        <div class="question">
+      <div class="status incorrect"></div>
+      <h3>Navbar</h3>
+    </div>
+        <div class="question">
+      <div class="status correct"></div>
+      <h3>Pig Emoji</h3>
+    </div>
+  </div>
+    <div class="category">
+    <h2>Publicar</h2>
+    <div class="question">
+      <div class="status correct"></div>
+      <h3>Testing Framework</h3>
+    </div>
+    <div class="question">
+      <div class="status correct"></div>
+      <h3>Array Methods</h3>
+      </div>
+  </div>
 </div>
+
+<div></div>
+
+<style>
+  :root {
+  --green: #11967e;
+}
+
+body * {
+margin: 0;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#wrapper {
+  display: flex;
+  flex-flow: wrap;
+/*   max-width: 700px;
+  margin: auto; */
+/*  // justify-content: flex-start; */
+  gap: 10px;
+}
+
+.category {
+  flex-grow: 1;
+}
+.category h2 {
+  margin-bottom: 10px;
+}
+.category h3 {
+  color: var(--green);
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.category h3:hover {
+  color: #000;
+}
+
+.status {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.status.correct {
+  background: linear-gradient(#04ff00, #369536);
+}
+
+.status.partially-correct {
+  background: linear-gradient(#fbf82b, #ffc63b);
+}
+
+.status.incorrect {
+  background: linear-gradient(#ff0000, #760000);
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+/*   background: linear-gradient(to right, #fff calc(100% - 25px), var(--green) calc(100% - 25px), var(--green) 100%); */
+  padding: 10px 35px 10px 10px;
+  position: relative;
+}
+
+.question:after {
+  content: "";
+  height: 100%;
+  width: 25px;
+  background-color: var(--green);
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: inherit;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+</style>
+
+
+
+  <style>
+      .modal-input {
+          display: none;
+      }
+      
+      .modal-input:checked+.modal {
+          visibility: visible;
+          opacity: 1;
+      }
+      
+      .modal {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          visibility: hidden;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+          background-color: #fff;
+      }
+      
+      .modal-close {
+          position: fixed;
+          right: 15px;
+          font-size: 3rem;
+          top: 15px;          
+          color:#11967e;
+      }
+  </style>
+
+  <label for="modal-1">1</label>
+  <label for="modal-2">2</label>
+  <label for="modal-3">3</label>
+
+  <input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+  <div class="modal"><br><br><br><br>
+      <label for="modal-1" class="modal-close">&times;</label>
+      <div class="content">        
+        <iframe src="./valores.html" style="border:none; " height="770px" width="100%" title="Valores " ></iframe> 
+      </div>
+  </div>
+
+  <input id="modal-2" name="modal" type="checkbox" class="modal-input" />
+  <div class="modal"><br><br><br><br>
+      <label for="modal-2" class="modal-close">&times;</label>
+      <div class="content">
+        <iframe src="./avisos.html" style="border:none; " height="770px" width="100%" title="Valores " ></iframe> 
+      </div>
+  </div>
+
+
+  <input id="modal-3" name="modal" type="checkbox" class="modal-input" />
+  <div class="modal"><br><br><br><br>
+      <label for="modal-3" class="modal-close">&times;</label>
+      <div class="content">
+        <iframe src="./valores.html" style="border:none; " height="770px" width="100%" title="Valores " ></iframe> 
+      </div>
+  </div>
 </div>
-  
-</body>
-</html>

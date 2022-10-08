@@ -1,0 +1,348 @@
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+
+@font-face {
+  font-family: Acrom;
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-light/acrom-light.woff2) format('woff2'),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-light/acrom-light.woff) format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-regular/acrom-regular.woff2) format('woff2'),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-regular/acrom-regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-medium/acrom-medium.woff2) format('woff2'),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-medium/acrom-medium.woff) format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-bold/acrom-bold.woff2) format('woff2'),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-bold/acrom-bold.woff) format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Acrom;
+  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-extrabold/acrom-extrabold.woff2) format('woff2'),
+  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/scroll-wheel-control/fonts/acrom-extrabold/acrom-extrabold.woff) format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.ag-section_title {
+  padding: 0 0 30px;
+
+  text-align: center;
+  font-size: 80px;
+  color: #FFF;
+}
+.ag-section_text {
+  cursor: pointer;
+
+  text-align: center;
+  font-size: 40px;
+  color: #FFF;
+}
+.ag-section_text:hover {
+  color: #1fc685;
+}
+#section-0 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-7.jpg);
+  background-size: cover;
+}
+#section-1 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-1.jpg);
+  background-size: cover;
+}
+#section-2 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-2.jpg);
+  background-size: cover;
+}
+#section-3 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-3.jpg);
+  background-size: cover;
+}
+#section-3 .ag-section_title {
+  color: #000;
+}
+#section-4 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-4.jpg);
+  background-size: cover;
+}
+#section-5 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-5.jpg);
+  background-size: cover;
+}
+#section-6 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-6.jpg);
+  background-size: cover;
+}
+#section-7 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-7.jpg);
+  background-size: cover;
+}
+#section-8 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-8.jpg);
+  background-size: cover;
+}
+
+/* slider */
+#slide-1 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-4.jpg);
+  background-size: cover;
+}
+#slide-2 {
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/1_images/img-1920-1080-5.jpg);
+  background-size: cover;
+}
+.fp-controlArrow {
+  top: auto;
+  bottom: 7%;
+}
+.fp-controlArrow.fp-prev {
+  left: auto;
+  right: 200px;
+}
+.fp-controlArrow.fp-next {
+  right: 50px;
+}
+/* /slider */
+
+.ag-wheel-block {
+  margin-top: -400px;
+
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 50%;
+
+  font-family: Acrom, sans-serif;
+}
+.ag-wheel_list {
+  height: 800px;
+  width: 800px;
+  margin: 0 50px 50px -680px;
+  border: 1px solid #FFF;
+
+  font-size: 36px;
+  color: #C0C0C0;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  -webkit-transform: rotate(22.5deg);
+  -moz-transform: rotate(22.5deg);
+  -ms-transform: rotate(22.5deg);
+  -o-transform: rotate(22.5deg);
+  transform: rotate(22.5deg);
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+  position: relative;
+}
+.js-ag-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.ag-wheel_page-name {
+  cursor: pointer;
+
+  transition: all 1s ease;
+
+  position: absolute;
+}
+.ag-wheel_page-name a,
+.ag-wheel_page-name a:hover {
+  text-decoration: none;
+  color: #FFF;
+}
+.js-ag-active a,
+.js-ag-active a:hover {
+  cursor: default;
+
+  color: #1fc685;
+}
+
+.ag-wheel_page-name:first-child {
+  top: 377px;
+  left: 797px;
+}
+.ag-wheel_page-name:nth-child(2) {
+  top: 542px;
+  left: 765px;
+
+  -webkit-transform: rotate(22.5deg);
+  -moz-transform: rotate(22.5deg);
+  -ms-transform: rotate(22.5deg);
+  -o-transform: rotate(22.5deg);
+  transform: rotate(22.5deg);
+}
+.ag-wheel_page-name:nth-child(3) {
+  top: 682px;
+  left: 672px;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ag-wheel_page-name:nth-child(4) {
+  top: 776px;
+  left: 533px;
+
+  -webkit-transform: rotate(67.5deg);
+  -moz-transform: rotate(67.5deg);
+  -ms-transform: rotate(67.5deg);
+  -o-transform: rotate(67.5deg);
+  transform: rotate(67.5deg);
+}
+.ag-wheel_page-name:nth-child(5) {
+  top: 810px;
+  left: 367px;
+
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ag-wheel_page-name:nth-child(6) {
+  top: 777px;
+  left: 203px;
+
+  -webkit-transform: rotate(112.5deg);
+  -moz-transform: rotate(112.5deg);
+  -ms-transform: rotate(112.5deg);
+  -o-transform: rotate(112.5deg);
+  transform: rotate(112.5deg);
+}
+.ag-wheel_page-name:nth-child(7) {
+  top: 683px;
+  left: 65px;
+
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.ag-wheel_page-name:nth-child(8) {
+  top: 544px;
+  left: -31px;
+
+  -webkit-transform: rotate(157deg);
+  -moz-transform: rotate(157deg);
+  -ms-transform: rotate(157deg);
+  -o-transform: rotate(157deg);
+  transform: rotate(157deg);
+}
+
+.ag-wheel-page_num {
+  padding: 0 0 0 15px;
+
+  position: relative;
+}
+.ag-wheel-page_num:before {
+  content: "";
+  height: 7px;
+  width: 7px;
+  background: #FFF;
+
+  position: absolute;
+  top: 18px;
+  left: 0;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.js-ag-active .ag-wheel-page_num:before {
+  height: 13px;
+  width: 13px;
+  margin: -3px 0 0 -3px;
+
+  background-color: #1fc685;
+}
+
+.ag-btn-up {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  background-color: #FFF;
+
+  cursor: pointer;
+
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.ag-btn-up:hover {
+  background-color: #1fc685;
+
+  color: #FFF;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+
+@media only screen and (max-width: 639px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+  .ag-format-container {
+    width: 960px;
+  }
+
+}

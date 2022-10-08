@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,590&display=swap");
+
+body {
+	margin: 0;
+	font-family: Archivo;
+	display: grid;
+	place-content: center;
+	height: 100vh;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62,590&display=swap");
+
+body {
+	margin: 0;
+	font-family: Archivo;
+	display: grid;
+	place-content: center;
+	height: 100vh;
+}
+
+h1 {
+	font-size: 8vw;
+	line-height: 1.001;
+	width: 90vw;
+	margin: 0;
+	text-transform: uppercase;
+	column-count: 2;
+}

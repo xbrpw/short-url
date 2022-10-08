@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+
+$Main1: #2196F3;
+$Main2: #1E88E5;
+$Main3: #0D47A1;
+
+$Accent1: #FF3D00;
+$Accent2: #DD2C00;
+
+$White: #FFF;
+$Black: #212121;
+
+@mixin actionShadow($vertical){
+	box-shadow: 0 2px $vertical rgba(0,0,0,.26);
+}
+
+.container{
+	min-width: 320px;
+	width: 
+
+}
+
+#Day{
+	display: block;
+}
+
+#Month{
+	clear: both;
+}
+
+.counters {
+	margin: 0 auto;
+	width: 85%;
+	text-align: center;
+}
+
+.clock {
+	@include actionShadow(5px);
+	background: $White;
+	color: $Main1;
+	display: inline-block;
+	font-family: 'Roboto';
+	font-size: 70px;
+	//margin: 2% auto 0 auto;
+	padding: 5px 20px;
+	text-align: center;
+	//width: 85%;
+
+	@media(max-width: 500px) {
+		font-size: 50px;
+	}
+}
+
+.border {
+	width: 85%;
+	margin: 2% auto 0 auto;
+	text-align: center;
+}
+
+.time {
+	display: block;
+	font-size: 1.8em;
+	padding: 0;
+	text-align: center;
+}
+
+body {
+	background-color: $Main2;
+	color :$White;
+	font-family: Roboto;
+	min-width: 320px;
+}
+
+#AMPM{
+	font-size: 20px;
+}

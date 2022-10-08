@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html>
 
-<title>W3.JS</title>
+<title>Mapa de sitio</title>
 <meta charset="utf-8">
 <script src="https://www.w3schools.com/lib/w3.js"></script>
-
+<style>a {text-decoration: none;}a{background-color:transparent}a:active,a:hover{outline-width:0}a:link, a:visited {color: inherit;text-decoration: none;} a:hover, a:active {color: inherit; text-decoration: none;}a:hover {text-decoration: underline;}</style>
 <script>
 var myObject= {"mapaDeSitio-xbrpw":[
-{"page" : "Xiiber","url" : "https://www.xbr.pw/xiiber/index.html"},
-{"page" : "Social Media ","url" : "https://www.xbr.pw/xiiber/social-media.html"},
-{"page" : "Vip","url" : "https://www.xbr.pw/xiiber/vip.html"}
+{"page" : "<b>Xiiber</b>","url" : "https://www.xbr.pw/xiiber/index.html"},
+{"page" : "Xiiber - Social Media ","url" : "https://www.xbr.pw/xiiber/social-media.html"},
+{"page" : "Xiiber - Vip (registro) ","url" : "https://www.xbr.pw/xiiber/vip.html"},
+{"page" : "<hr>","url" : "https://www.xbr.pw/"},
+{"page" : "<b>Toxel</b>","url" : "https://www.xbr.pw/toxel"},
+{"page" : "Toxel - spinners-page-loaders","url" : "https://www.xbr.pw/spinners-page-loaders"},
+{"page" : "<hr>","url" : "https://www.xbr.pw/"},
+{"page" : "<b>Nota dicha por</b>","url" : "https://www.xbr.pw/nota-dicha-por"},
+{"page" : "<hr>","url" : "https://www.xbr.pw/"},
+{"page" : "<b>Notes</b>","url" : "https://www.xbr.pw/notes/index"},
+{"page" : "Para olvidadizos","url" : "https://www.xbr.pw/una-lsta-de-notas-para-olvidadizos"},
+{"page" : "To do","url" : "https://www.xbr.pw/notes/todo"},
+{"page" : "Sticky","url" : "https://www.xbr.pw/notes/sticky-notes"},
+{"page" : "Lista lista","url" : "https://www.xbr.pw/notes/lista-lista"},
+{"page" : "Block blanco","url" : "https://www.xbr.pw/notes/bloc-blanco"},
+{"page" : "404","url" : "https://www.xbr.pw/notes/404"},
+{"page" : "<hr>","url" : "https://www.xbr.pw/"},
+{"page" : "<b>ESO-0514</b>","url" : "https://www.xbr.pw/secu/m"},
+{"page" : "Sistema Solar","url" : "https://www.xbr.pw/secu/m/clases/sistema-solar"},
+{"page" : "<hr>","url" : "https://www.xbr.pw/"},
+{"page" : "<b>Calendario Anual 2022</b>","url" : "https://www.xbr.pw/22/"},
+{"page" : "No te deseo una feliz navidad","url" : "https://www.xbr.pw/22/No-te-deseo-una-feliz-navidad"},
+{"page" : "Abre tu regalo de navidad","url" : "https://www.xbr.pw/2022/abre-tu-regalo-de-navidad"}
 ]};
 </script>
 <body>
-   
+<!-- 
+    {"page" : "","url" : "https://www.xbr.pw/"}, 
+    -->   
   
   
-<ul id="id01">
+<ul id="id01" style="list-style-type: none;list-style-position: outside;list-style-image: none;margin-left: 0;">
 <li  w3-repeat="mapaDeSitio-xbrpw"><a href="{{url}}" target="copy"> {{page}} </a> 
 <span><a href="{{url}}" target="copy"></a></span> </li>
 

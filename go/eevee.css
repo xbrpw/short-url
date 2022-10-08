@@ -17,8 +17,7 @@ article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{disp
 details>summary {transition: color 1s;color: black;}details[open]>summary {color: rgb(1, 1, 31);}
 audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
 audio:not([controls]){display:none;height:0}[hidden],template{display:none}
-a{background-color:transparent}a:active,a:hover{outline-width:0}
-a:link, a:visited {color: #000;text-decoration: none;} a:hover, a:active {color: inherit; text-decoration: none;}
+a {text-decoration: none;}a{background-color:transparent}a:active,a:hover{outline-width:0}a:link, a:visited {color: inherit;text-decoration: none;} a:hover, a:active {color: inherit; text-decoration: none;}a:hover {text-decoration: underline;}
 .a,.a:after,.a:link,.a:visited,.a:hover{text-decoration: none;color:inherit;cursor: pointer;}
 .aBlanco:link, .aBlanco:visited, .aBlanco:hover, .aBlanco:active {color: white;text-decoration: none;}
 .aNegro:link, .aNegro:visited, .aNegro:hover, .aNegro {color: #000;text-decoration: none;} 

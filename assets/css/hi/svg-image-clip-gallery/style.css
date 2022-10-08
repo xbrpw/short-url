@@ -1,0 +1,43 @@
+.section {
+  background: url('https://www.luisangelmaciel.one/img/600x400.svg') center center no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.clip-svg {
+  width: 0;
+  height: 0;
+}
+
+.clip-fig-1 {
+		  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 80%, 0 100%);
+		  clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 80%, 0 100%);
+		  -webkit-clip-path: url("#clip-svg-demo");
+      -moz-clip-path: url("#clip-svg-demo");
+      clip-path: url("#clip-svg-demo");
+}
+
+.clip-fig-2 {
+      margin-top: -60px;
+		  -webkit-clip-path: polygon(75% 0, 100% 20%, 100% 80%, 20% 100%, 0 80%, 0 20%);
+		  clip-path: polygon(75% 0, 100% 20%, 100% 80%, 20% 100%, 0 80%, 0 20%);
+		  -webkit-clip-path: url("#clip-svg-demo-2");
+      clip-path: url("#clip-svg-demo-2");
+}
+
+.clip-fig-3 {
+      margin-top: -60px;
+		  -webkit-clip-path: polygon(20% 20%, 100% 0, 100% 100%, 60% 80%, 0 100%, 0 0);
+      clip-path: polygon(20% 20%, 100% 0, 100% 100%, 60% 80%, 0 100%, 0 0);
+		  -webkit-clip-path: url("#clip-svg-demo-3");
+      clip-path: url("#clip-svg-demo-3");
+}
+
+.clip-fig-4 {
+      margin-top: -60px;
+		  -webkit-clip-path: polygon(60% 0, 100% 20%, 100% 100%, 0 100%, 0 20%);
+      clip-path: polygon(60% 0, 100% 20%, 100% 100%, 0 100%, 0 20%);
+		  -webkit-clip-path: url("#clip-svg-demo-4");
+      clip-path: url("#clip-svg-demo-4");
+}

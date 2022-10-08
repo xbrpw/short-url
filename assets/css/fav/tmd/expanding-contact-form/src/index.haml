@@ -1,0 +1,19 @@
+.form-overlay
+#form-container.icon.fa.fa-pencil
+  %span#form-close.icon.fa.fa-close
+  #form-content
+    #form-head
+      %h1.pre Get in touch
+      %p.pre Good choice...
+      %h1.post Thanks!
+      %p.post I'll be in touch ASAP
+    %form
+      %input.input.name{:type => "text", :name => "user_name", :placeholder => "Your name please"}
+      %input.input.email{:type => "text", :name => "user_email", :placeholder => "A contact email"}
+      %select.input.select{:name => "subject"}
+        %option{:disabled => ""} What shall we talk about?
+        %option{:selected => ""} About a new project
+        %option About a job opportunity
+        %option Let's do this over a coffee
+      %textarea.input.message{:placeholder => "How can I help?"}
+      %input.input.submit{:type => "submit", :value => "Send Message"}

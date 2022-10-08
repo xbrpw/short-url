@@ -1,0 +1,52 @@
+body {
+  background: #efefef;
+}
+
+.cat__wrapper {
+  overflow: hidden;
+  margin: 120px auto;
+  width: 350px;
+}
+
+.cat__member {
+  width: 100%;
+  overflow: hidden;
+}
+.cat__member .cat__img {
+  display: block;
+  width: 500px;
+  height: 333px;
+  overflow: hidden;
+  padding: 0;
+  background-position: -50px 0;
+}
+.cat__member .cat__img img {
+  max-width: none;
+}
+.cat__member .cat__img#kitteh {
+  background-image: url(https://i.imgur.com/M6HqSnu.jpg);
+}
+.cat__member .cat__img.up {
+  background-position: -50px 0px;
+}
+.cat__member .cat__img.up-right {
+  background-position: -550px 0px;
+}
+.cat__member .cat__img.right {
+  background-position: -1050px 0px;
+}
+.cat__member .cat__img.right-down {
+  background-position: -50px -333px;
+}
+.cat__member .cat__img.down {
+  background-position: -550px -333px;
+}
+.cat__member .cat__img.down-left {
+  background-position: -1050px -333px;
+}
+.cat__member .cat__img.left {
+  background-position: -50px -666px;
+}
+.cat__member .cat__img.up-left {
+  background-position: -550px -666px;
+}

@@ -9,8 +9,8 @@
   <title>Zona de trabajo lamp!board </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Zona de trabajo lamp!board ">
-  <meta name="author" content="Luis Angel Maciel and xbr contributors">
-  <meta name="generator" content="xbr">
+  <meta name="author" content="Luis Angel Maciel and xbr.pw´s contributors">
+  <meta name="generator" content="xbr.pw">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="image/svg+xml" href="../assets/favicons/lamp-desing.svg" >
   <link rel="icon" type="image/x-icon" sizes="192x192" href="../assets/favicons/lamp-desing.svg" id="favicon" />   
@@ -139,7 +139,20 @@
     <li><hr class="dropdown-divider"></li>
     <li><a href="#DarkModeColor" title="Activar Poder obscuro" onclick="myFunction()" > <i class="fa fa-moon " ></i> </a></li>
     </ul>
-   
+
+    <a href="#" class="align-items-center justify-content-center p-3  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="../assets/favicons/lamp-desing.svg" alt="Luis Angel Maciel" width="24" height="24" class="rounded-circle"> lm-aaP!
+    </a>
+    <ul class="dropdown-menu text-small shadow">    
+    <li>
+      <a href="../nota-dicha-por/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" ><img src="../assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Notas dicha por" > Nota dicha por... </a>    
+    </li>
+    <li><a href="./creo/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > Yo creo esto...(Portafolio) </a></li>
+    <li><a href="../assets/css/fav/side-shopping-cart-nav/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > side-shopping-cart-nav </a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="#"><svg class="bi" width="16" height="16"><use xlink:href="#trash"/></svg>Trash</a></li></ul>   
+
+
   </div>
   
   <div class="body-dark-mode animate__animated animate__fadeInDown " >
@@ -152,9 +165,13 @@
       <iframe src="multimedia.html"  height="730px " width="100% " title="Gallery" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>
     </div><!-- /Paris -->
 
-    <div id="AboutGeneral" class="tabcontent"><!-- Queda vacio porque no funciono, pero lo dejo por si acaso para rapido <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->      
+    <div id="AboutGeneral" class="tabcontent">
       <iframe src="aboutme.html" name="tabAboutGeneral" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
     </div><!-- /AboutGeneral -->       
+
+    <div id="AppsMadebyMe" class="tabcontent"><!--    <a  href="api/doble.pantalla/index.html""  target="AppsMadebyMe" onclick="openCity(event, 'AppsMadebyMe')">  <img src="../assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"  > </a>               <span onclick="this.parentElement.style.display='none'" class="topright">&times</span> -->      
+      <iframe src="aboutme.html" name="AppsMadebyMe" height="730px " width="100% " title="Tu zona de trabajo" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe> 
+    </div><!-- /AppsMadebyMe -->       
   </div>
 
   
@@ -204,13 +221,6 @@
   </div>
   <link rel="stylesheet" href="./Data-Time-layout.css">
   <script src="./Data-Time-layout.js"></script></a>
-  </div>
-
-  <div id="mySidenav" class="sidenav aBlanco"  style="color:white">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" class="aBlanco" aria-label="Close Nav" style="color: white;">&times;</a> 
-    <a href="#"  onclick="closeNav()" class="aBlanco">Editor</a>
-    <a href="#"  onclick="closeNav()" class="aBlanco">Clients</a>
-    <a href="#"  onclick="closeNav()" class="aBlanco">Contact</a>
   </div>
 
   <div id="mySidenavFav" class="sidenavFav aBlanco"  style="color:white">
@@ -276,7 +286,20 @@
         <button class="Multibutton"> <i class="fas fa-play "></i></button>
         <button class="Multibutton"><i class="fa-solid fa-volume-high"></i></button>
       </div></div>
+      <div style="color:white">
+        <script  src="./js/work-day.js"></script> 
+      <span id="Day">Jueves</span>, 
+        <span id="Date">02</span> de <span id="Month">Julio</span>,  <span id="Year">2023</span>
       
+      <div class="clock"><span id="Hours" class="numbers">12</span>:<span id="Minutes" class="numbers">00</span>:<span id="Seconds" class="numbers">00</span> <span id="AMPM">PM</span></div>
+        
+      <div id="counters">
+        <p>En la sesión de hoy has estado aquí por <span id="DeltaHours">00</span>:<span id="DeltaMinutes">00</span>:<span id="DeltaSeconds">00</span></p>
+        
+        <p id="Lunch"><span id="End">Tiempo restante del día de hoy</span> <span id="hoursUntil">00</span>:<span id="minutesUntil">00</span>:<span id="secondsUntil">00</span></p>
+      </div>
+        
+      </div>
       
   </div>
 

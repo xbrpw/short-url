@@ -1,0 +1,102 @@
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+* {
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefef;
+}
+
+.process__inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1140px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.process__item {
+  position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 25%;
+  float: left;
+}
+@media screen and (max-width: 1024px) {
+  .process__item {
+    width: 50%;
+  }
+}
+.process__item .item__title {
+  text-align: center;
+  font-size: .75em;
+}
+.process__item .item__title h2 {
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  color: #fff;
+  background: #56aeea;
+  border-radius: 3px;
+  border: 3px solid #56aeea;
+  transition: color 400ms, background 400ms, border 400ms;
+  margin-top: 0;
+  font-size: 1.5em;
+  transform: translateY(-50px);
+  transition: transform 400ms, color 400ms, background 400ms, border 400ms;
+}
+.process__item .first__svg {
+  max-height: 124px;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 400ms, max-height 400ms;
+}
+.process__item .first__svg svg {
+  fill: #efefef;
+}
+.process__item .path {
+  stroke-opacity: 0;
+  stroke-dasharray: 1000;
+}
+.process__item:hover .item__title h2 {
+  color: #2b2b2b;
+  border: none;
+  background: none;
+  transform: translateY(0px);
+}
+.process__item:hover .first__svg {
+  opacity: 1;
+  max-height: 254px;
+}
+.process__item:hover .path {
+  stroke: #2b2b2b;
+  stroke-width: 1;
+  stroke-opacity: 1;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  fill: #2b2b2b;
+  transition: stroke-opacity 400ms, fill 1s 400ms ease;
+  -webkit-animation: dash 2000ms linear forwards;
+          animation: dash 2000ms linear forwards;
+}

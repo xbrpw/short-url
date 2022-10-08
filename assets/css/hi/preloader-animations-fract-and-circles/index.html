@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - GLSL: Animations, fract and circles</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<canvas id="webgl" width="500" height="1758"></canvas>
+
+<script id="vertexShader" type="x-shader/x-vertex">
+  attribute vec4 a_position;
+  
+  uniform mat4 u_modelViewMatrix;
+  uniform mat4 u_projectionMatrix;
+  
+  void main() {
+    gl_Position = a_position;
+  }
+</script>
+<script id="fragmentShader" type="x-shader/x-fragment">
+  precision highp float;
+  
+  uniform vec2 u_resolution;
+  uniform vec2 u_mouse;
+  uniform float u_time;
+  uniform sampler2D u_noise;
+  
+  vec2 getScreenSpace() {
+    vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
+    
+    return uv;
+  }
+
+  void main() {
+    vec2 uv = getScreenSpace();
+    float w = 0.01;
+    uv *= 20.0;
+    vec2 grid_position = floor(uv);
+    uv = fract(uv);
+    
+    vec3 grid = vec3(
+      (step(w, uv.x) + step(uv.x, -w)) *
+      (step(w, uv.y) + step(uv.y, -w))
+    );
+    
+    vec3 circle_colour = vec3(1.0, 0.7, 0.2);
+    uv -= 0.5;
+    
+    float animation_step = u_time * 10.0 + length(grid_position);
+    float amplitude = 0.3;
+    
+    vec2 animation = vec2(
+      cos(animation_step) * amplitude,
+      sin(animation_step) * amplitude
+    );
+    
+    float circle_field = length(uv + animation);
+    
+    float circle = step(0.2, circle_field);
+    
+    vec3 colour = vec3(circle);
+    
+    colour = vec3(
+      step(
+        0.1,
+        length(uv * (sin(u_time * 5.0 + grid_position.x * 0.1) * 0.5 + 0.5))
+      )
+    );
+    
+//     animation = vec2(
+//       cos(animation_step) * -amplitude,
+//       sin(animation_step) * -amplitude
+//     );
+    
+//     circle_field = length(uv + animation);
+    
+//     float circle2 = step(0.2, circle_field);
+//     vec3 colour2 = vec3(0.1, 0.7, 1.0);
+    
+    // colour = mix(
+    //   circle_colour,
+    //   colour,
+    //   circle
+    // );
+    
+    // colour = mix(
+    //   colour2,
+    //   colour,
+    //   circle2
+    // );
+    
+    gl_FragColor = vec4(colour, 1.0);
+  }
+  
+</script>
+<!-- partial -->
+  <script src='https://codepen.io/shubniggurath/pen/aPxLMx.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

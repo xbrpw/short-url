@@ -1,0 +1,97 @@
+@import "compass/css3";
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+*{
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #efefef;
+}
+.process__inner{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1140px;
+  padding: {top:50px;bottom:50px;}
+}
+.process__item{
+	position: relative;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	width: 25%;
+	float: left;
+  @media screen and (max-width: 1024px){
+    width: 50%;
+  }
+	.item__title{
+		text-align: center;
+		font:{
+			size: .75em;
+		}
+		h2{
+      padding-top: 10px;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      color: #fff;
+      background: #56aeea;
+      border-radius: 3px;
+      border: 3px solid #56aeea;
+      transition: color 400ms, background 400ms, border 400ms;
+			margin: {top:0;}
+			font: {
+				size: 1.5em;
+			}
+			transform: translateY(-50px);
+			transition: transform 400ms, color 400ms, background 400ms, border 400ms;
+		}
+	}
+	.first__svg{    
+     max-height: 124px;
+      margin: 0 auto;
+      width: 100%;
+		opacity: 0;
+		transition: opacity 400ms, max-height 400ms;
+		svg{
+			fill: #efefef;
+		}
+	}
+	.path{
+		stroke-opacity: 0;
+		stroke-dasharray: 1000;
+	}
+	&:hover{
+		.item__title{
+			h2{
+				color: #2b2b2b;
+				border: none;
+				background: none;
+				transform: translateY(0px);
+			}
+		}
+		.first__svg{
+			opacity: 1;
+			max-height: 254px;
+		}
+		.path{
+			stroke: #2b2b2b;
+			stroke-width: 1;
+			stroke-opacity: 1;
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			fill: #2b2b2b;
+			transition: stroke-opacity 400ms, fill 1s 400ms ease;
+			animation: dash 2000ms linear forwards;
+		}
+	}
+}

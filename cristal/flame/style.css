@@ -1,0 +1,119 @@
+:root {
+  --bg: #010101;
+  --color-orange-light: #e69050;
+  --color-orange: #e37a2f;
+  --color-orange-dark: #c76723;
+  --color-red-light: #bd657f;
+  --color-red: #99263a;
+  --color-red-dark: #762034;
+  --color-white:#acae9e;
+  --color-white-light:white;
+  --color-white-dark:white;
+  --color-metal:#9fa0a2;
+  --color-metal-light:#e9eae5;
+  --color-metal-dark:#7f7f7f;
+  --color-metal-darker:#444444;
+  --color-flame: radial-gradient(circle at bottom center, #2d3b69 10%, #a18882 20%, #a18882 30%, #fffeff 40%);
+  --color-flame-glow: #c8976b;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+}
+
+body {
+  position: relative;
+  top: -3rem;
+  left: 1.2rem;
+  position: relative;
+  width: 1.2rem;
+  height: 0.5rem;
+  border-radius: 0.2rem 0.5rem 0.1rem 0.1rem;
+  background: var(--color-red-dark);
+  box-shadow: 0rem -0.2rem 0 var(--color-red), 0rem -0.1rem 0 var(--color-red), -0.1rem -0.3rem 0 var(--color-red-light), -0.1rem -0.2rem 0 var(--color-red-light), 0.6rem 0.2rem 0 var(--bg), -0.1rem 0.2rem 0 var(--color-red-dark), -2rem -0.9rem var(--color-metal-darker), -1.7rem -0.9rem var(--color-metal), -1.9rem -0.9rem var(--color-metal), -2.2rem -0.9rem var(--color-metal), -1.9rem -0.7rem 0.2rem var(--color-metal-light), -1.9rem -0.4rem 0.2rem var(--color-metal-light), -1.9rem -0.1rem 0.2rem var(--color-metal-light), -1.9rem 0.2rem 0.2rem var(--color-metal-light), -1.9rem 0.4rem 0.2rem var(--color-metal-light), -1.8rem -0.7rem 0.2rem var(--color-metal-dark), -1.8rem -0.4rem 0.2rem var(--color-metal-dark), -1.8rem -0.1rem 0.2rem var(--color-metal-dark), -1.8rem 0.2rem 0.2rem var(--color-metal-dark), -1.8rem 0.4rem 0.2rem var(--color-metal-dark), -2.2rem -0.7rem 0.2rem var(--color-metal-dark), -2.2rem -0.4rem 0.2rem var(--color-metal-dark), -2.2rem -0.1rem 0.2rem var(--color-metal-dark), -2.2rem 0.2rem 0.2rem var(--color-metal-dark), -2.2rem 0.4rem 0.2rem var(--color-metal-dark), -1.9rem -0.2rem 0 0.6rem var(--color-metal), -1.9rem -0.4rem 0 0.6rem var(--color-metal), -2.5rem 0.4rem var(--color-metal), -2.5rem 0.2rem var(--color-metal), -1rem 0.2rem var(--color-metal), -2.2rem 0.9rem 0.4rem var(--color-orange-dark), -2.2rem 1.2rem 0.4rem var(--color-orange-dark), -2.2rem 1.5rem 0.4rem var(--color-orange-dark), -2.2rem 1.8rem 0.4rem var(--color-orange-dark), -2.2rem 2.1rem 0.4rem var(--color-orange-dark), -2.2rem 2.4rem 0.4rem var(--color-orange-dark), -2.2rem 2.7rem 0.4rem var(--color-orange-dark), -2.2rem 3rem 0.4rem var(--color-orange-dark), -2.2rem 3.3rem 0.4rem var(--color-orange-dark), -2.2rem 3.6rem 0.4rem var(--color-orange-dark), -2.2rem 3.9rem 0.4rem var(--color-orange-dark), -2.2rem 4.2rem 0.4rem var(--color-orange-dark), -2.2rem 4.5rem 0.4rem var(--color-orange-dark), -2.2rem 4.8rem 0.4rem var(--color-orange-dark), -2.2rem 5.1rem 0.4rem var(--color-orange-dark), -2.2rem 5.4rem 0.4rem var(--color-orange-dark), -2.2rem 5.7rem 0.4rem var(--color-orange-dark), -2.2rem 6rem 0.4rem var(--color-orange-dark), -2.2rem 6.3rem 0.4rem var(--color-orange-dark), -2.2rem 6.6rem 0.4rem var(--color-orange-dark), -2.2rem 6.9rem 0.4rem var(--color-orange-dark), -2.2rem 7.1rem 0.4rem var(--color-orange-dark), -2.2rem 7.4rem 0.4rem var(--color-orange-dark), -2.2rem 7.7rem 0.4rem var(--color-orange-dark), -2.2rem 8rem 0.4rem var(--color-orange-dark), -0.4rem 0.6rem 0.3rem var(--color-orange-light), -0.4rem 0.9rem 0.3rem var(--color-orange-light), -0.4rem 1.2rem 0.3rem var(--color-orange-light), -0.4rem 1.5rem 0.3rem var(--color-orange-light), -0.4rem 1.8rem 0.3rem var(--color-orange-light), -0.4rem 2.1rem 0.3rem var(--color-orange-light), -0.4rem 2.4rem 0.3rem var(--color-orange-light), -0.4rem 2.7rem 0.3rem var(--color-orange-light), -0.4rem 3rem 0.3rem var(--color-orange-light), -0.4rem 3.3rem 0.3rem var(--color-orange-light), -0.4rem 3.6rem 0.3rem var(--color-orange-light), -0.4rem 3.9rem 0.3rem var(--color-orange-light), -0.4rem 4.2rem 0.3rem var(--color-orange-light), -0.4rem 4.5rem 0.3rem var(--color-orange-light), -0.4rem 4.8rem 0.3rem var(--color-orange-light), -0.4rem 5.1rem 0.3rem var(--color-orange-light), -0.4rem 5.4rem 0.3rem var(--color-orange-light), -0.4rem 5.7rem 0.3rem var(--color-orange-light), -0.4rem 6rem 0.3rem var(--color-orange-light), -0.4rem 6.3rem 0.3rem var(--color-orange-light), -0.4rem 6.6rem 0.3rem var(--color-orange-light), -0.4rem 6.9rem 0.3rem var(--color-orange-light), -0.4rem 7.2rem 0.3rem var(--color-orange-light), -0.4rem 7.5rem 0.3rem var(--color-orange-light), -0.4rem 7.8rem 0.3rem var(--color-orange-light), -0.4rem 8.1rem 0.3rem var(--color-orange-light), -1.2rem 0.9rem 0 1.2rem var(--color-orange), -1.2rem 1.2rem 0 1.2rem var(--color-orange), -1.2rem 1.5rem 0 1.2rem var(--color-orange), -1.2rem 1.8rem 0 1.2rem var(--color-orange), -1.2rem 2.1rem 0 1.2rem var(--color-orange), -1.2rem 2.4rem 0 1.2rem var(--color-orange), -1.2rem 2.7rem 0 1.2rem var(--color-orange), -1.2rem 3rem 0 1.2rem var(--color-orange), -1.2rem 3.3rem 0 1.2rem var(--color-orange), -1.2rem 3.6rem 0 1.2rem var(--color-orange), -1.2rem 3.9rem 0 1.2rem var(--color-orange), -1.2rem 4.2rem 0 1.2rem var(--color-orange), -1.2rem 4.5rem 0 1.2rem var(--color-orange), -1.2rem 4.8rem 0 1.2rem var(--color-orange), -1.2rem 5.1rem 0 1.2rem var(--color-orange), -1.2rem 5.4rem 0 1.2rem var(--color-orange), -1.2rem 5.7rem 0 1.2rem var(--color-orange), -1.2rem 6rem 0 1.2rem var(--color-orange), -1.2rem 6.3rem 0 1.2rem var(--color-orange), -1.2rem 6.6rem 0 1.2rem var(--color-orange), -1.2rem 6.9rem 0 1.2rem var(--color-orange), -1.4rem 7.2rem 0 1rem var(--color-orange), -1.8rem 7.5rem 0 0.5rem var(--color-orange), -1.9rem 7.7rem 0 0.5rem var(--color-orange), -0.5rem 7.5rem 0 0.5rem var(--color-orange), -0.5rem 7.7rem 0 0.5rem var(--color-orange), -1rem 7.2rem 0 1rem var(--color-orange), -0.5rem 7.8rem 0 0.5rem var(--color-white), -1.9rem 7.8rem 0 0.5rem var(--color-white);
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: -1.2rem;
+  left: -1rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-metal);
+  border: 0.1rem dotted var(--color-metal);
+  box-shadow: inset 0.025rem 0.025rem var(--color-metal-darker), inset -0.025rem -0.025rem var(--color-metal-light);
+  border-radius: 9999px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 85%, 47% 68%, 34% 55%, 15% 50%, 0 50%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 85%, 47% 68%, 34% 55%, 15% 50%, 0 50%);
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: -2.9rem;
+  left: -1.9rem;
+  width: 0.8rem;
+  height: 2.4rem;
+  background: var(--color-flame);
+  box-shadow: 0 -0.4rem 1rem var(--color-flame-glow);
+  transform-origin: bottom center;
+  -webkit-animation: flame1 linear infinite alternate 0.5s, flame2 linear infinite alternate 1s, flame3 infinite 0.5s;
+          animation: flame1 linear infinite alternate 0.5s, flame2 linear infinite alternate 1s, flame3 infinite 0.5s;
+}
+
+@-webkit-keyframes flame1 {
+  from {
+    border-radius: 61% 39% 50% 50%/63% 81% 19% 37%;
+  }
+  to {
+    border-radius: 34% 66% 50% 50%/77% 67% 33% 23%;
+  }
+}
+
+@keyframes flame1 {
+  from {
+    border-radius: 61% 39% 50% 50%/63% 81% 19% 37%;
+  }
+  to {
+    border-radius: 34% 66% 50% 50%/77% 67% 33% 23%;
+  }
+}
+@-webkit-keyframes flame2 {
+  from {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  to {
+    transform: scaleY(1.05) scaleX(0.95);
+  }
+}
+@keyframes flame2 {
+  from {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  to {
+    transform: scaleY(1.05) scaleX(0.95);
+  }
+}
+@-webkit-keyframes flame3 {
+  9.8% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+@keyframes flame3 {
+  9.8% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 1;
+  }
+}

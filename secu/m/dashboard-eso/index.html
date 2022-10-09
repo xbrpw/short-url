@@ -149,9 +149,9 @@
 
 <div class='dashboard '>
         
-    <div class=" logo lift " style="z-index: 1070; ">
+    <!-- <div class=" logo lift " style="z-index: 1070; ">
         <span class="fas fa-bell menu-toggle2 " id="toggle_button"  aria-labelledby="button-label"></span> <span id="button-label" style="display:none">Open Side Menu</span>        
-    </div>
+    </div> -->
     <!-- <div class="lasAlertas lift " style="z-index: 1070;">
         <span class="text-gray-500 p-2 rounded-full hover:text-blue-600  cursor-pointer mr-4 ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -167,18 +167,18 @@
     <div class="elUser lift " style="z-index: 1070;">
         <div class="relative" x-data="{ open: false }" x-cloak>
             <div @click="open = !open"
-                class="cursor-pointer font-bold w-10 h-10 bg-blue-200 text-blue-600 flex items-center justify-center rounded-full">
+                class="cursor-pointer font-bold w-10 h-10 bg-blue-200 text-blue-600 flex items-center justify-center rounded-full" style="background-color: #11967e; color: white;">
                 SO
             </div>
 
             <div x-show.transition="open" @click.away="open = false"
                 class="absolute top-0 mt-12 right-0 w-48 bg-white py-2 shadow-md border border-gray-100 rounded-lg z-40">
-                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Edit
-                    Profile</a>
+                <a href="allproperties.html"  target="iframe_a" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Usuario</a>
                 <a href="#"
                     class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Account
                     Settings</a>
-                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Sign
+                    
+                <a href="https://www.xbr.pw/secu" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600">Sign
                     Out</a>
             </div>
 
@@ -200,39 +200,52 @@
 <!-- <svg class="icon icon-sor-juana-inesicon-" style="font-size: 32px; color: rgb(255, 255, 255); "><use xlink:href="#icon-sor-juana-inesicon-"></use></svg> -->
         <nav class="dashboard-nav-list">
             <a href="./agregar/index.html" target="iframe_a" class="dashboard-nav-item active"><i class="fas fa-file-upload"></i> Upload </a>
-            <a href="#" class="dashboard-nav-item active"><i class="fas fa-file-upload"></i> G Drive </a>
+            <a href="./gdrive/index.html"  target="iframe_a" class="dashboard-nav-item active"><i class="fas fa-file-upload"></i> G Drive </a>
             <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
                 <i class="fas fa-photo-video"></i>   Media </a>
-                <div class='dashboard-nav-dropdown-menu'><a href="https://www.xbr.pw/eso-0514/gallery" class="dashboard-nav-dropdown-item">Gallery</a>
-                    <a href="api/codepen.html" target="iframe_a" class="dashboard-nav-dropdown-item" >Recent</a>
-
-            </div>
-            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
-                    class="fas fa-users"></i> Users </a>
-                <div class='dashboard-nav-dropdown-menu'><a href="#"
-                                                            class="dashboard-nav-dropdown-item">All</a><a
-                        href="#" class="dashboard-nav-dropdown-item">Subscribed</a><a
-                        href="#"
-                        class="dashboard-nav-dropdown-item">Non-subscribed</a><a
-                        href="#" class="dashboard-nav-dropdown-item">Banned</a><a
-                        href="#" class="dashboard-nav-dropdown-item">New</a></div>
-            </div>
+                <div class='dashboard-nav-dropdown-menu'>
+                    <a href="./../././gallery/index.html"  target="iframe_a" class="dashboard-nav-dropdown-item">Multimedia</a>
+                    <a href="./../././multimedia.html" target="iframe_a" class="dashboard-nav-dropdown-item" >Gallery</a>
+                    <a href=./../././icoSorJuana/demo.html" target="iframe_a" class="dashboard-nav-dropdown-item" >IcoSorJuana</a>                    
+                </div>
+                <div class='dashboard-nav-dropdown'>
+                    <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
+                        <i class="fas fa-users"></i> Base de datos 
+                    </a>
+                <div class='dashboard-nav-dropdown-menu'>
+                    <a href="https://docs.google.com/spreadsheets/d/1HRsTYIeUaXhjHLnCrFwHo5bTOAacxAmxWpYl7k4E-oc/edit#gid=0"  target="iframe_a" class="dashboard-nav-dropdown-item">Alumnos</a>
+                    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSj7cjUbeWNJpN8J4nrLGSzpeEEvGLTeSIwyqtUDXkFqfzpHnVLyjnV7XJ0f_h8W5fAiuJXQYYqdDLC/pubhtml"  target="iframe_a" class="dashboard-nav-dropdown-item">Profesores</a>
+                    <a href="https://forms.gle/4TmSHZ7vimyNDQco7"  target="iframe_a" class="dashboard-nav-dropdown-item">Editar</a>
+                    
+                    <a href="#PadresDeFamilia"  target="iframe_a" class="dashboard-nav-dropdown-item">Padres de familia</a>
+                    <a href="#General"  target="iframe_a" class="dashboard-nav-dropdown-item">General</a>                        
+                </div>
             <div class='dashboard-nav-dropdown'>
               <a href=https://www.xbr.pw/secu/app/bloc-de-notas.html"  target="iframe_a"  class="dashboard-nav-item dashboard-nav-dropdown-toggle">
                 <i  class="fas fa-money-check-alt"></i> Payments </a>
-                <div class='dashboard-nav-dropdown-menu'><a href="#"
-                                                            class="dashboard-nav-dropdown-item">All</a><a
-                        href="#" class="dashboard-nav-dropdown-item">Recent</a><a
-                        href="#" class="dashboard-nav-dropdown-item"> Projections</a>
+                <div class='dashboard-nav-dropdown-menu'>
+                    <a href="../../eso-0514/dashboard/notas/orden-de-compra.html'"  target="iframe_a"  class="dashboard-nav-dropdown-item">1 de 2</a><a
+                        href="../../eso-0514/dashboard/notas/orden-de-compra.html'"  target="iframe_a"  class="dashboard-nav-dropdown-item">2 de 2</a>                        
                 </div>
             </div>
-            <a href="#" class="dashboard-nav-item"><i class="fas fa-cogs"></i> Settings </a>
-            <a href="https://www.xbr.pw/eso-0514/calendario-de-entregables" class="dashboard-nav-item"><i class="fas fa-user"></i> Entregables </a>
-           
-          <div class="nav-item-divider"></div> 
-          <a  href="#" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a>
+            <!-- <a href="#" class="dashboard-nav-item"><i class="fas fa-cogs"></i> Settings </a> -->
+            
 
-       
+            <div class='dashboard-nav-dropdown'>
+                <a href=https://www.xbr.pw/secu/app/bloc-de-notas.html"  target="iframe_a"  class="dashboard-nav-item dashboard-nav-dropdown-toggle">
+                  <i  class="fas fa-money-check-alt"></i> Reportes </a>
+                  <div class='dashboard-nav-dropdown-menu'>
+                      <a href="../../eso-0514/sor-juana-ines-de-la-cruz/index.html"  target="iframe_a"  class="dashboard-nav-dropdown-item">Brief</a><a
+                          href="../../eso-0514/mapa-de-sitio.html"  target="iframe_a"  class="dashboard-nav-dropdown-item">Mapa de sitio</a>                          
+                  </div>
+              </div>
+
+            <!-- <a href="https://www.xbr.pw/eso-0514/calendario-de-entregables"  target="iframe_a" class="dashboard-nav-item"><i class="fas fa-calendar"></i> Entregables </a> -->
+           
+          <div class="nav-item-divider"></div> <!-- 
+            <a  href="https://www.xbr.pw/secu" class="dashboard-nav-item"><i class="fas fa-sign-out-alt"></i> Logout </a> -->
+
+            <a href="https://photos.google.com/share/AF1QipP8638ZBXujZE4Z0SH2k8cI2dHTPN42dikDooUZXJDUbdGWsvVe_ftlwCKQwHrsEw?key=UjYtVjFneFE0WkFFelFiXzlPTkNUOGRMQ05ETGhB" class="dashboard-nav-item"><i class="fas fa-bug"></i> Soporte </a>
 
           <!-- <div class="rounded-lg relative " role="alert" x-data="{ open: true }" x-show.transition="open" style="color: antiquewhite;">
                 <div class="w3-container px-1"><div class="bg-orange-200 mb-6 p-3 rounded-lg mt-16">

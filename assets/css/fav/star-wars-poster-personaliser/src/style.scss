@@ -1,0 +1,22 @@
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  background: radial-gradient(#333, #000);
+}
+a{
+  cursor: pointer;
+}
+p{
+  color: #aaa;
+  font-family: sans-serif;
+  margin: 0 0 0.5em;
+}
+#canvas{
+  width: 600px;
+  height: 900px;
+  background: #eee;
+}

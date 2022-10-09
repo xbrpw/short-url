@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="phone">
+  <div id="main-wrapper" class="fancy-scrollbar">
+    <div id="main">
+      <div id="nav">
+        <a class="nav-logo" href="#">
+          <i class="fa-solid fa-hand-peace"></i>
+        </a>
+        <div class="nav-info">
+          <button class="nav-info-selection-button" type="button">
+            <h2 class="nav-location-label">Portland, OR</h2>
+            <h2 class="nav-category-label">Antiques</h2>
+          </button>
+        </div>
+        <button class="nav-sign-in-button" type="button">
+          <img class="profile-pic" src="https://images.unsplash.com/photo-1624956578877-4948166c5dcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGFwcHklMjBkb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Profile Image">
+        </button>
+      </div>
+      <div id="header">
+        <div class="header-row">
+          <div class="header-search-bar">
+            <input class="header-search-bar-input" type="search" placeholder="Search" />
+            <button class="header-search-bar-button" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+        <div class="header-row">
+          <div class="header-options">
+            <div class="header-option view">
+              <div class="header-option-choices">
+                <button class="header-option-choice" data-selected="true" type="button">
+                  <i class="fa-regular fa-grid-2"></i>
+                </button>
+                <button class="header-option-choice" type="button">
+                  <i class="fa-solid fa-list"></i>
+                </button>
+                <a href="https://youtube.com/shorts/smicZwXD5GI" target="_blank" class="header-option-choice" title="Click me">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <h3 class="header-option-label">View</h3>
+            </div>
+            <div class="header-option">
+              <select class="header-option-dropdown">
+                <option value="new">New</option>
+                <option value="old">Old</option>
+                <option value="price-up">$ ➡ $$$</option>
+                <option value="price-down">$$$ ➡ $</option>
+              </select>    
+              <h3 class="header-option-label">Sort</h3>
+            </div>          
+            <div class="header-option">
+              <button class="header-option-toggle header-button" type="button">
+                <i class="fa-regular fa-sliders"></i>
+                <span>Options</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="content-listings-header-wrapper">
+          <div id="content-listings-header">
+            <div class="content-listings-pagination">
+              <button class="content-pagination-button double-back" type="button">
+                <i class="fa-regular fa-chevrons-left"></i>
+              </button>
+              <button class="content-pagination-button back" type="button">
+                <i class="fa-regular fa-chevron-left"></i>
+              </button>
+              <h3 class="content-pagination-label"><span class="accent-text">Page</span>1 / 12</h3>
+              <button class="content-pagination-button forward" type="button">
+                <i class="fa-regular fa-chevron-right"></i>
+              </button>
+              <button class="content-pagination-button save-search" type="button">
+                Save Search
+              </button>
+            </div>
+            <h3 class="content-listings-pagination-quantity-label"><span class="accent-text">Showing</span> 1 - 100 <span class="accent-text">of</span> 1147</h3>
+          </div>
+        </div>
+        <div id="content-listings">
+          <div class="listing">
+            <div class="listing-images">
+              <img class="listing-image" src="https://images.unsplash.com/photo-1662313708911-06070ec5b383?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" />
+            </div>
+            <div class="listing-info-wrapper">
+              <div class="listing-info">
+                <h3 class="listing-info-title">Old timey bike that I found by this tree</h3>
+                <h3 class="listing-info-details">
+                  <span class="listing-info-date">Sept 2</span>
+                  <span>·</span>
+                  <span class="listing-info-location">South Hills</span>
+                </h3>
+              </div>
+            </div>
+            <div class="listing-price-wrapper">
+              <div class="listing-price">
+                <i class="fa-regular fa-dollar-sign"></i>
+                <span class="listing-price-value">328</span>
+              </div>
+            </div>
+            <button class="listing-favorite-button" type="button">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://kit.fontawesome.com/944eb371a4.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -28,7 +28,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> 
   <script>function includeHTML() {var z, i, elmnt, file, xhttp;/*loop through a collection of all HTML elements:*/z = document.getElementsByTagName("*");for (i = 0; i < z.length; i++) {elmnt = z[i];/*search for elements with a certain atrribute:*/file = elmnt.getAttribute("incluye-html");if (file) {/*make an HTTP request using the attribute value as the file name:*/xhttp = new XMLHttpRequest();xhttp.onreadystatechange = function() {if (this.readyState == 4) {if (this.status == 200) {elmnt.innerHTML = this.responseText;}if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}/*remove the attribute, and call this function once more:*/elmnt.removeAttribute("incluye-html");includeHTML();}}
     xhttp.open("GET", file, true);xhttp.send();/*exit the function:*/return;}}};</script><!--  -->
-    <style>
+     <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+          }
+        }
+      };
+      </script> 
+      <style>
       .body-dark-mode {
         background-color: white;
         color: black;
@@ -78,13 +107,6 @@
       <a href="#COpySnippets" onclick="openNavFav()" ><i class="fas fa-copy"></i>   Copy-Snippets </a> 
       <a href="multimedia.html"  target="iframe_a"  onclick="openCity(event, 'Editorland')" title="Multimedia">  <span onclick="closeNav()"> <i class="fa-solid fa-photo-film"></i> Multimedia </span> </a>          
       
-            
-      <a href="api/para-notas-rapidas/index.html" target="notas-rapidas"><img src="../assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Notas Rápidas" onclick="openNavRight()"></a>
-      <a  href="./tareas/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')">  <i class="fa-solid fa-list-check"></i> </a>              
-      <a  href="api/doble.pantalla/index.html""  target="iframe_a" onclick="openCity(event, 'Editorland')">  <img src="../assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"  > </a>              
-      <a href="#pomodoro"  data-bs-toggle="modal" data-bs-target="#myModalScrolla"><i class="fa fa-stopwatch animate__animated animate__bounceInLeft animate__delay-2s 	" ></i> <span id="counter" >25:00</span>  </a>          
-          
-
       <a href="#" class="align-items-center justify-content-center p-3 text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-gears"></i> Herramientas</a>
       <ul class="dropdown-menu text-small shadow">    
       <li><a class="dropdown-item d-flex gap-2 align-items-center" href="https://getbootstrap.com/docs/5.2/customize/components/"><img src="../assets/favicons/bootstrap.ico" width="18" height="18" alt="Docs Bootstrap 5">Docs 5 <i class="fas fa-external-link-alt"></i></a></li>   
@@ -94,11 +116,9 @@
       <li><hr class="dropdown-divider"></li>
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center" href="https://www.onlineimagetool.com/es/convert-png-jpg-webp-gif" target="iframe_a"   title="Online Image Tool | Convertir a webp"><img src="../assets/favicons/onliimagetool.png" width="18" height="18" alt="Online Image Tool | Convertir a webp">Convertir a webp </a></li>
       <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="https://animate.style/" target="iframe_a" title="Animate Style CSS "><img src="../assets/favicons/animate-style.ico" width="18" height="18" alt="Codepen Trendin"> Animate Style  </a></li>
-      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="http://www.shrinker.ch/" target="iframe_a" title="En una linea tu CSS "><i class="fas fa-plus-minus"></i> Shrinker  </a></li>
-    </ul>             
+      <li><a class="dropdown-item dropdown-item-danger d-flex gap-2 align-items-center"  href="http://www.shrinker.ch/" target="iframe_a" title="En una linea tu CSS "><i class="fas fa-plus-minus"></i> Shrinker  </a></li></ul>             
 
-    
-    <a href="#" class="  p-3  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-file-code"></i> Assets </a> 
+    <a href="#" class="  p-3  text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-file-code"></i> Assets </a> 
     <ul class="dropdown-menu text-small shadow">       
     <li><a  href="hi.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-file-code"></i> Hey </a>   </li>
     <li><a  href="../notes/bloc-blanco/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-file-circle-plus"></i> Agregar</a></li>              
@@ -106,6 +126,12 @@
     <li><a href="file:///C:/Users/Luis%20%C3%81ngel/Documents/git-xbr/short-url/assets/css/fav/"  target="iframe_a" onclick="openCity(event, 'Editorland')"  title="Snippes" aria-label="go/Assets"> <span onclick="closeNav()"> <i class="fas fa-folder-open"></i> Carpeta </span>  </a>  </li>
     </ul>   
 
+
+    <a href="api/para-notas-rapidas/index.html" target="notas-rapidas"><img src="../assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Notas Rápidas" onclick="openNavRight()"> Notas</a>
+    <a  href="./tareas/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')">  <i class="fa-solid fa-list-check"></i> Tareas </a>                    
+    <a href="#pomodoro"  data-bs-toggle="modal" data-bs-target="#myModalScrolla"><i class="fa fa-stopwatch animate__animated animate__bounceInLeft animate__delay-2s 	" ></i> <span id="counter" >25:00</span>  </a>          
+    
+    
       
     <!-- gruoup repositorios
       <a href="#" class="align-items-center justify-content-center p-3  text-decoration-none " data-bs-toggle="dropdown" aria-expanded="false">
@@ -129,19 +155,22 @@
  
 
     <a href="#" class="align-items-center justify-content-center p-3  text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="../assets/favicons/lamp-desing.svg" alt="Luis Angel Maciel" width="24" height="24" class="rounded-circle"> lm-aaP!
+      <!-- <img src="../assets/favicons/lamp-desing.svg" alt="Luis Angel Maciel" width="24" height="24" class="rounded-circle"> --> lm-aaP!
     </a>
-    <ul class="dropdown-menu text-small shadow">   
-    <li><a  href="mds.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-sitemap"></i>  Mapa de sitio </a>   </li>
-    <li><a href="#DarkModeColor" title="Activar Poder obscuro" onclick="myFunction()" > <i class="fa fa-moon " ></i> </a></li> 
+    <ul class="dropdown-menu text-small shadow">       
+    <li><a href="#DarkModeColor" title="Activar Poder obscuro" onclick="myFunction()" > <i class="fa fa-moon " ></i> Darkmode </a></li> 
     <li><a href="../nota-dicha-por/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" ><img src="../assets/favicons/ico-bloc-de-notas.svg" width="18" height="18" alt="Notas dicha por" > Nota dicha por... </a>  </li>
-    <li><a href="./creo/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > Yo creo esto...(Portafolio) </a></li>
-    <li><a href="../assets/css/fav/side-shopping-cart-nav/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > side-shopping-cart-nav </a></li>
+    <li><a href="./creo/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > <i class="fa-duotone fa-person-to-portal"></i> Yo creo esto...(Portafolio) </a></li>
+    <li><a href="../assets/css/fav/side-shopping-cart-nav/index.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > <i class="fa-duotone fa-person-to-portal"></i>  Side Shopping </a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a href="../go/schnema/"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > Schema </a></li>
-    <li><a href=".../assets/css/fav/quora-mobile-redesign "  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > Q Mobile  </a></li>
-    <li><a href=".../assets/css/hi/sneaky-monster "  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > Sneaky-monster  </a></li>
-    <li><a href=".../assets/css/hi/sneaky-monster "  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > Sneaky-monster  </a></li>
+    <li><a href="../go/schnema/"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > <i class="fa-duotone fa-person-to-portal"></i> Schema </a></li>
+    <li><a href="../assets/css/fav/quora-mobile-redesign "  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > <i class="fa-duotone fa-person-to-portal"></i> Q Mobile  </a></li>
+    <li><a href="../assets/css/hi/sneaky-monster "  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" > <i class="fa-duotone fa-person-to-portal"></i> Sneaky-monster  </a></li>
+    <li><a  href="api/doble.pantalla/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')">  <img src="../assets/favicons/doblepantalla.png" width="18" height="18" alt="Doble View"  > Doble View </a>              </li>
+    <li><a  href="../assets/css/fav/craigslist-mobile-redesign"  target="iframe_a" onclick="openCity(event, 'Editorland')">  <img src="../assets/favicons/doblepantalla.png" width="18" height="18" alt="Craigslist redesign"  > Craigslist redesign</a>              </li>
+    <li><a  href="../assets/css/fav/T-shirt"  target="iframe_a" onclick="openCity(event, 'Editorland')">  <img src="../assets/favicons/doblepantalla.png" width="18" height="18" alt="T-shirt"  > T-shirt</a>              </li>
+    
+    
   </ul>  
     
 
@@ -199,10 +228,26 @@
  
   <div id="mySidenavXbr" class="sidenav aBlanco" style="color:white">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNavXbr()" class="aBlanco" aria-label="Close Nav" style="color: white;" >&times;</a>
-    <a href="#" class="aBlanco"><i class="fa fa-checkxxx "></i>About</a>
-    <a href="release-notes.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" style="color:white"><i class="fa fa-searchxxx"></i> Release notes </a>    
-    <a href="pricing.html" target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" class="aBlanco"><i class="fa fa-file-import" ></i> Pricing</a>
+    <a href="#" class="aBlanco"><i class="fa fa-check "></i>About</a>
+    <a href="release-notes.html"  target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" style="color:white"><i class="fa fa-search"></i> Release notes </a>    
+    <a href="pricing.html" target="tabAboutGeneral" onclick="openCity(event, 'AboutGeneral')" class="aBlanco"><i class="fa fa-file-import" ></i> Pricing</a>    
+    <a  href="mds.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-sitemap"></i>  Mapa de sitio </a>   
+    <a  href="api/stop-watch/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-stopwatch"></i>  Stop Watch </a>   
+    <a  href="show-me/index.html"  target="iframe_a" onclick="openCity(event, 'Editorland')"><i class="fa-solid fa-eye"></i> Show-me </a>   
     <a href="#" class=" aBlanco"><i class="fa-duotone fa-person-to-portal"></i> Salir</a>
+    <a style="color:white">
+      <script  src="./js/work-day.js"></script> 
+    <span id="Day" >Jueves</span>, 
+      <span id="Date">02</span> de <span id="Month">Julio</span>,  <span id="Year">2023</span>
+      <p class="clock" style="font-size: 16px;"><span id="Hours" class="numbers">12</span>:<span id="Minutes" class="numbers">00</span>:<span id="Seconds" class="numbers">00</span> <span id="AMPM">PM</span></p>
+      
+    <div id="counters">
+      <p>En la sesión de hoy has estado aquí por <span id="DeltaHours">00</span>:<span id="DeltaMinutes">00</span>:<span id="DeltaSeconds">00</span></p>
+      
+      <p id="Lunch"><span id="End">Tiempo restante del día de hoy</span> <span id="hoursUntil">00</span>:<span id="minutesUntil">00</span>:<span id="secondsUntil">00</span></p>
+    </div>
+      
+  </a><!-- has estado aqui -->  
     <a href="#" class="aBlanco">  <div class="wrapper">
       <div id="clock" class="center clock"></div>
       <div id="month" class="center month"></div>
@@ -214,14 +259,19 @@
   </div>
   <link rel="stylesheet" href="./Data-Time-layout.css">
   <script src="./Data-Time-layout.js"></script></a>
+  <a class="w3-margin-top w3-padding-top-48"></a>
+ 
   </div>
+
+
 
   <div id="mySidenavFav" class="sidenavFav aBlanco"  style="color:white">
     <a href="javascript:void(0)" class="closebtnFav"  onclick="closeNavFav()" class="aBlanco" aria-label="Close Nav" style="color: white;">&times;</a>
-    <a href="../go/api/overlay-erase-effect/index.html" onclick="closeNavFav()" class="aBlanco">Erase Efecto</a>
-    <a href="#"  onclick="closeNavFav()" class="aBlanco">Services Fav</a>
-    <a href="#"  onclick="closeNavFav()" class="aBlanco">Clients Fav</a>
-    <a href="api/codepen.html"  onclick="closeNavFav()" target="iframe_a" class="aBlanco">Codepen</a>
+    <a href="../go/api/overlay-erase-effect/index.html" onclick="closeNavFav()" class="aBlanco"><i class="fa-solid fa-sitemap"></i> rase Efecto</a>
+    <a href="#"  onclick="closeNavFav()" class="aBlanco"> <i class="fa-solid fa-sitemap"></i> Services Fav</a>
+    <a href="#"  onclick="closeNavFav()" class="aBlanco"><i class="fa-solid fa-sitemap"></i> Clients Fav</a>
+    <a href="api/codepen.html"  onclick="closeNavFav()" target="iframe_a" class="aBlanco"><i class="fa-solid fa-sitemap"></i> Codepen</a>
+    <br><br>
     <style>@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
       .bodyMulti {
         margin: 0;
@@ -279,21 +329,7 @@
         <button class="Multibutton"> <i class="fas fa-play "></i></button>
         <button class="Multibutton"><i class="fa-solid fa-volume-high"></i></button>
       </div></div>
-      <div style="color:white">
-        <script  src="./js/work-day.js"></script> 
-      <span id="Day">Jueves</span>, 
-        <span id="Date">02</span> de <span id="Month">Julio</span>,  <span id="Year">2023</span>
-      
-      <div class="clock"><span id="Hours" class="numbers">12</span>:<span id="Minutes" class="numbers">00</span>:<span id="Seconds" class="numbers">00</span> <span id="AMPM">PM</span></div>
-        
-      <div id="counters">
-        <p>En la sesión de hoy has estado aquí por <span id="DeltaHours">00</span>:<span id="DeltaMinutes">00</span>:<span id="DeltaSeconds">00</span></p>
-        
-        <p id="Lunch"><span id="End">Tiempo restante del día de hoy</span> <span id="hoursUntil">00</span>:<span id="minutesUntil">00</span>:<span id="secondsUntil">00</span></p>
-      </div>
-        
-      </div>
-      
+  
   </div>
 
  
@@ -365,10 +401,98 @@
   <script src="js/dashboard.js"></script>
   <script src="../assets/js/w3codecolor.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/pomodoro.js"></script>  <script src='https://xbrpw.github.io/assets/fontawesome/js/944eb371a4.js'></script>
-  </body></html>
+  <script src="js/pomodoro.js"></script>  <script src='https://xbrpw.github.io/assets/fontawesome/js/944eb371a4.js'></script> <script>
+    includeHTML();
+    </script>
+    
+    <!-- <link rel="stylesheet" href="https://luisangelmaciel.github.io/eevee/eevee.css"> -->
+<style>
+  /* Preloder */
+  
+  #preloder {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999999;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
+      min-height: 80vh;
+      background-color: #1B1C24;
+      /*background-image: url("img/lamp-icon-black-1B1C24.svg ");*/
+      /*  background-color: #1086B5; 
+      background-image: url("lamp-icon.svg "); */
+      align-items: center;
+      text-align: center;
+  }
+  
+  .loader {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -13px;
+      margin-left: -13px;
+      border-radius: 60px;
+      animation: loader 0.8s linear infinite;
+      -webkit-animation: loader 0.8s linear infinite;
+  }
+  
+  @keyframes loader {
+      0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+      50% {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          border: 4px solid #673ab7;
+          border-left-color: transparent;
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+  }
+  
+  @-webkit-keyframes loader {
+      0% {
+          -webkit-transform: rotate(0deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+      50% {
+          -webkit-transform: rotate(180deg);
+          border: 4px solid #673ab7;
+          border-left-color: transparent;
+      }
+      100% {
+          -webkit-transform: rotate(360deg);
+          border: 4px solid #f44336;
+          border-left-color: transparent;
+      }
+  }
+</style>
+
+<div id="preloder" >
+  <!-- <img src="../../lamp-avatar-icon.svg" alt="logo" width="300" height="auto">                 -->
+  <div class="loader "> </div>
+</div>
+<script src="https://www.luisangelmaciel.one/js/compressed.js"></script>
+<script src="https://www.luisangelmaciel.one/preloader.js"></script>
 
 
+
+ 
+
+  <a href="howto_google_maps.asp">Google Maps</a><br> </body></html>
   <!-- la rapida  ༼ つ ◕_◕ ༽つ Please share 
     <!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
 <!-- <html lang="es-MX" >

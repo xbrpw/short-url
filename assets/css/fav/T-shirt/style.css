@@ -1,0 +1,122 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px 25px;
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  background-color: #a6a9b0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAfCAYAAABtYXSPAAAA1UlEQVR4Ae2WMQrDMAxFc75OWbxk6tKlUxcvXXK5IFvJpZpftJVAPgisBg8PD0HmRbItDcuy3FqiItOm+sZ6LRkRSSFkILKpzliby9hGkJkiZOZaMlbqjLW5DFA7cyFkjGOZLiMi4xlYGYtLDEOt9bnV+joC30spD2zOvDMmmhkoGTIzaY+7r3vsWZzL9Fsqhn6bugw7E0VplLNvo3SYiQJkxklGA8gQM7CLDH8TQsgAfxm+r9DQMghardt6gg6OktIy3/FBNXuDn6TfGXZKIxj/5gB/ANMtHqHKm3kQAAAAAElFTkSuQmCC");
+  transition: all 0.3s linear;
+}
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 991px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+body .shirt {
+  position: relative;
+  margin: auto;
+  display: flex;
+  width: 250px;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #eaeaec;
+  background-color: #36383f;
+  background: radial-gradient(ellipse at bottom, #36383f 0%, #191a1d 100%);
+  clip-path: polygon(16% 20%, 35% 13%, 40% 20%, 60% 20%, 65% 13%, 86% 20%, 100% 31%, 85% 44%, 80% 40%, 80% 100%, 20% 100%, 20% 40%, 15% 44%, 0 31%);
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+body .shirt::before {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  content: "";
+  width: 100%;
+  height: 18px;
+  border-top: 6px solid #a6a9b0;
+  border-bottom: 6px solid #a6a9b0;
+  border-image: linear-gradient(90deg, #a6a9b0 50%, transparent, #a6a9b0 100%) 1;
+}
+body .shirt::after {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -2;
+  content: "";
+  width: 190px;
+  height: 190px;
+  border: 8px solid #a6a9b0;
+  border-image: linear-gradient(135deg, #a6a9b0 50%, transparent 70%) 1;
+}
+body .shirt .fz {
+  font-size: 18px;
+}
+body .shirt .use {
+  margin-bottom: 5px;
+}
+body .shirt .code {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+body .shirt .code span {
+  padding-left: 35px;
+}
+body .shirt .heart {
+  font-size: 48px;
+}
+body .shirt .border {
+  position: relative;
+  margin-top: 25px;
+}
+body .shirt .border::before {
+  position: absolute;
+  top: -10px;
+  left: -6px;
+  z-index: -1;
+  padding: 10px;
+  width: 95%;
+  height: 115%;
+  content: "";
+  border: 5px solid #a6a9b0;
+  opacity: 0.7;
+}
+body .shirt svg {
+  position: absolute;
+  top: 50%;
+  left: 32.7%;
+  z-index: -1;
+  width: 30px;
+  fill: #eaeaec;
+}
+body .shirt css-doodle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+body .shirt.none {
+  cursor: no-drop;
+}

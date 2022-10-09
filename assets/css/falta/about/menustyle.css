@@ -1,0 +1,103 @@
+body {
+  background: #f8fcff;
+}
+
+.button:nth-child(1) span i {
+  color: #00838e;
+}
+
+.button:nth-child(2) span i {
+  color: #ff6c00;
+}
+
+.button:nth-child(3) span i {
+  color: #00a7ff;
+}
+
+.button:nth-child(4) span i {
+  color: #00652b;
+}
+
+.button:nth-child(5) span i {
+  color: #d80000;
+}
+
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+.buttons .button {
+  display: inline-block;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 1px solid #efefef;
+  border-radius: 1px;
+  margin: 5px;
+  vertical-align: top;
+  -webkit-transition: 0.25s all ease-in-out;
+  -moz-transition: 0.25s all ease-in-out;
+  -ms-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.buttons .button span {
+  margin-top: 20px;
+  display: block;
+  font-size: 54px;
+  padding-top: 20px;
+  -webkit-transition: 0.25s all ease-in-out;
+  -moz-transition: 0.25s all ease-in-out;
+  -ms-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.buttons .button h5 {
+  margin-top: 0;
+  font-weight: 600;
+  color: grey;
+  -webkit-transition: 0.25s all ease-in-out;
+  -moz-transition: 0.25s all ease-in-out;
+  -ms-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+.buttons .button p {
+  font-size: 14px;
+  opacity: 0;
+  padding: 15px;
+  color: grey;
+}
+.buttons .button p a {
+  color: #1489ff;
+  text-decoration: none;
+}
+.buttons .active {
+  width: 300px;
+  height: 300px;
+}
+.buttons .active span {
+  -webkit-transition: 0.25s all ease-in-out;
+  -moz-transition: 0.25s all ease-in-out;
+  -ms-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+  font-size: 81px;
+}
+.buttons .active p {
+  opacity: 1;
+  -webkit-transition: 0.25s all ease-in-out;
+  -moz-transition: 0.25s all ease-in-out;
+  -ms-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -ms-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.buttons .active h5 {
+  margin-top: 15px;
+}

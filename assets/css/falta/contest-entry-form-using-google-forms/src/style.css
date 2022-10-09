@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:#111111;
+	background:#FCB514;
+}
+
+#entry-form input[type="text"], #entry-form input[type="email"], #entry-forminput[type="tel"], #entry-form input[type="url"], #entry-form textarea, #entry-form .button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+.container {
+	max-width:400px;
+	width:100%;
+	margin:0px auto;
+	position:relative;
+}
+
+#entry-form{
+  background:#F9F9F9;
+	padding:25px;
+	margin:50px 0px;
+}
+
+h1 {
+	color: #FCB514;
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+  text-shadow:
+   -1px -1px 0 #111111,  
+    1px -1px 0 #111111,
+    -1px 1px 0 #111111,
+     1px 1px 0 #111111;
+}
+
+h2 {
+  color:#111111;
+	margin: -15px 0px 20px 0px;
+	display:block;
+	font-size:16px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0px 0px 10px 0px;
+	min-width: 95%;
+	padding: 0;
+	width: 95%;
+}
+
+#entry-form input[type="text"], #entry-form input[type="email"], #entry-form input[type="tel"], #entry-form input[type="url"], #entry-form textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+#entry-form input[type="text"]:hover, #entry-form input[type="email"]:hover, #entry-form input[type="tel"]:hover, #entry-form input[type="url"]:hover, #entry-form textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #FCB514;
+}
+
+#entry-form textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#entry-form .button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#111111;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#entry-form .button[type="submit"]:hover {
+	background:#FCB514;
+  color:#111111;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#entry-form .button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#entry-form input:focus, #entry-form textarea:focus {
+	outline:0;
+	border:1px solid #FCB514;
+}

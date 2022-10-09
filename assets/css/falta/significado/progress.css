@@ -1,0 +1,9 @@
+/* Progress  */
+
+#progress {
+    height: 13px;
+    background-color: rgba(10, 82, 190, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+}

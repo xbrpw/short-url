@@ -1,0 +1,251 @@
+/* floating menu */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+#floating-menu {
+    cursor: pointer;
+}
+
+#floating-icon {
+    overflow: hidden;
+    position: fixed;
+    z-index: 99999;
+    bottom: 15px;
+    right: 15px;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#floating-icon span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #cccccc;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border-radius: 50px;
+}
+
+#floating-ligar,
+#floating-whatsapp,
+#floating-emergencia {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99998;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#floating-ligar {
+    right: 20px;
+    bottom: 20px;
+    background-color: #4da6ff;
+    -webkit-animation: slide-ligar .75s forwards;
+    -webkit-animation-delay: .75s;
+    animation: slide-ligar .75s forwards;
+    animation-delay: .75s;
+}
+
+#floating-icon,
+#floating-ligar,
+#floating-whatsapp,
+#floating-emergencia {
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes slide-ligar {
+    0% {
+        right: 20px;
+        bottom: 20px;
+    }
+    100% {
+        right: 20px;
+        bottom: 100px;
+    }
+}
+
+@keyframes slide-ligar {
+    0% {
+        right: 20px;
+        bottom: 20px;
+    }
+    100% {
+        right: 20px;
+        bottom: 100px;
+    }
+}
+
+#floating-whatsapp {
+    right: 20px;
+    bottom: 20px;
+    background-color: #009900;
+    -webkit-animation: slide-whatsapp .75s forwards;
+    -webkit-animation-delay: .75s;
+    animation: slide-whatsapp .75s forwards;
+    animation-delay: .75s;
+}
+
+@-webkit-keyframes slide-whatsapp {
+    0% {
+        right: 20px;
+        bottom: 20px;
+    }
+    100% {
+        right: 70px;
+        bottom: 70px;
+    }
+}
+
+@keyframes slide-whatsapp {
+    0% {
+        right: 20px;
+        bottom: 20px;
+    }
+    100% {
+        right: 70px;
+        bottom: 70px;
+    }
+}
+
+#floating-emergencia {
+    right: 20px;
+    bottom: 20px;
+    background-color: #d00829;
+    -webkit-animation: slide-emergencia .75s forwards;
+    -webkit-animation-delay: .75s;
+    animation: slide-emergencia .75s forwards;
+    animation-delay: .75s;
+}
+
+@-webkit-keyframes slide-emergencia {
+    0% {
+        right: 20px;
+        bottom: 20px;
+    }
+    100% {
+        right: 100px;
+        bottom: 20px;
+    }
+}
+
+@keyframes slide-emergencia {
+    0% {
+        right: 20px;
+        bottom: 20px;
+    }
+    100% {
+        right: 100px;
+        bottom: 20px;
+    }
+}
+
+#floating-menu svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#floating-menu a {
+    color: #fff;
+}
+
+
+/* Modal del floating menu */
+
+.modal-open {
+    overflow: auto;
+}
+
+.modal-dialog {
+    top: 25%;
+    width: 40%;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-body {
+    padding: 30px 80px;
+    height: fit-content;
+}
+
+.fechaModal {
+    float: right;
+    margin-top: -20px;
+    margin-right: -20px;
+    background: #d00829;
+    border: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+    cursor: pointer;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box
+}
+
+
+/* Style tabs */
+
+.tablink {
+    background-color: #ffffff;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #ffffff;
+}
+
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent {
+    color: #f2f2f2;
+    display: none;
+    padding: 0px 0px;
+    height: 100%;
+}
+
+#Home {
+    background-color: #f2f2f2;
+}
+
+#News {
+    background-color: #f2f2f2;
+}
+
+#Contact {
+    background-color: #f2f2f2;
+}
+
+#About {
+    background-color: #f2f2f2;
+}

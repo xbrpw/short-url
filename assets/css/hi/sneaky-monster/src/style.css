@@ -1,0 +1,38 @@
+html, body { height: 100%; }
+
+body {
+  display: grid;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Permanent Marker', sans-serif;
+  font-size: 22px;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.boo {
+  font-size: 88px;
+  display: none;
+}
+
+.eyes {
+  transform-origin: 121px 32.5px;
+  transform: scale(0.05);
+}
+
+.eye {
+  fill: greenyellow;
+  animation: blink 5s infinite;
+  transform-origin: 0px 50px;
+}
+
+@keyframes blink {
+  90% { transform: scale(1); }
+  95% { transform: scale(1, 0); }
+  100% { transform: scale(1); }
+}

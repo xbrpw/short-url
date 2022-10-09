@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Sneaky Monster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Permanent+Marker&amp;display=swap'>
+<style>
+/*<link rel="stylesheet" href="./sneaky-monster.css">*/
+
+/*html, body { height: 100%; }
+
+  body {
+    display: grid;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 22px;
+  }
+  
+  .container {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+  }
+  */
+  .bg-negro { background-color: black;}
+  .boo {
+    font-size: 88px;
+    display: none;
+  }
+  
+  .eyes {
+    transform-origin: 121px 32.5px;
+    transform: scale(0.05);
+  }
+  
+  .eye {
+    fill: greenyellow;
+    animation: blink 5s infinite;
+    transform-origin: 0px 50px;
+  }
+  
+  @keyframes blink {
+    90% { transform: scale(1); }
+    95% { transform: scale(1, 0); }
+    100% { transform: scale(1); }
+  }</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="bg-negro">
+  <!-- <p id="instructions">Try switching away and back to this tab a few times.</p> -->
+  
+  <svg viewBox="0 0 242 65">
+    <defs>
+      <symbol id="eye">
+        <path class="eye"
+              d="M 31 2
+                 L 62 0
+                 L 92 20
+                 L 73 51
+                 L 60 64
+                 L 22 65
+                 L 0 54
+                 L 7 27
+                 L 31 2" />
+      </symbol>
+    </defs>
+
+    <g id="eyes" class="eyes">
+      <use href="#eye" transform="translate(150)" />
+      <use href="#eye" transform="translate(92) scale(-1 1)" />
+    </g>
+  </svg>
+  
+  <h1 id="boo" class="boo">BOO!</h1>
+</div>
+<!-- partial <script  src="./sneaky-monster.js"></script> -->
+  
+  <script>const eyes = document.querySelector("#eyes");
+    const instructions = document.querySelector("#instructions");
+    const boo = document.querySelector("#boo");
+    
+    const scaleEyesUp = () => {
+      const currentScale = Number(eyes.style.transform.slice(6, -1)) || 0.05;
+      
+      if (document["hidden"] && currentScale < 1) {
+        const newScale = currentScale + 0.19;
+        eyes.style.transform = `scale(${newScale})`;
+      } else if (currentScale >= 1) {
+        instructions.style.display = "none";
+        boo.style.display = "block";
+      }
+    }
+    
+    document.addEventListener("visibilitychange", scaleEyesUp);</script>
+
+</body>
+</html>

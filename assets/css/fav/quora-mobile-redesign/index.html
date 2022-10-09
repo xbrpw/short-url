@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es-MX" > 
+<head>
+  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quora Mobile Redesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="phone">
+  <div id="main-wrapper" class="fancy-scrollbar">
+    <div id="main" data-nav="active">
+      <div id="top-wrapper">
+        <button class="nav-toggle" type="button" onclick="toggleNav()">
+          <i class="fa-regular fa-bars"></i>
+        </button>
+        <div class="top">
+          <a class="logo-link" href="#">
+            <img class="logo" src="https://assets.codepen.io/1468070/Quora+Logo.png" alt="Logo" />
+          </a>
+        </div>
+      </div>
+      <div id="nav-wrapper">
+        <div class="nav">
+          <div class="nav-group">
+            <a class="nav-link active" href="#">
+              <i class="fa-sharp fa-solid fa-house"></i>
+            </a>
+            <a class="nav-link" href="#">
+              <i class="fa-regular fa-compass"></i>
+            </a>
+            <a class="nav-link" href="#">
+              <i class="fa-regular fa-magnifying-glass"></i>
+            </a>
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+          </div>
+          <div class="nav-group">
+            <a class="nav-link language" href="#">
+              <i class="fa-light fa-globe"></i>
+            </a>
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-bell"></i>
+            </a>
+            <a class="nav-link profile" href="#">
+              <img src="https://assets.codepen.io/1468070/Hyperplexed+Logo.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="content-wrapper">
+        <div id="content">
+          <div class="post-section section">
+            <img src="https://assets.codepen.io/1468070/Hyperplexed+Logo.png" alt="" />
+            <input type="text" placeholder="What do you want to ask or share?" />
+          </div>
+          <div class="action-section section">
+            <button type="button">
+              <i class="fa-regular fa-comment-question"></i>
+              <span>Ask</span>
+            </button>
+            <button type="button">
+              <i class="fa-regular fa-comment-check"></i> 
+              <span>Answer</span>
+            </button>
+            <button type="button">
+              <i class="fa-regular fa-comment-lines"></i>
+              <span>Post</span>
+            </button>
+          </div>
+          <div class="feed">
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Chester</h3>
+                  <h3 class="role">Account Manager · Oct 1</h3>
+                </div>
+              </div>
+              <h3 class="title">Why are the sea turtles so angry these days?</h3>
+              <h3 class="desc">This place is so blue I can hardly stand it any longer. I have only seen blue my entire life. - A sea turtle.</h3>
+              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jasmine</h3>
+                  <h3 class="role">Executive Producer · Sept 26</h3>
+                </div>
+              </div>
+              <h3 class="title">Budget cuts leave tourist abandoned.</h3>
+              <h3 class="desc">One news network reported to spend $4.5 billion attempting to get an interview with the victim.</h3>
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jonas</h3>
+                  <h3 class="role">Founder · Aug 12</h3>
+                </div>
+              </div>
+              <h3 class="title">How many trees are in this canyon?</h3>
+              <h3 class="desc">My strategy for this monumental task began with a pair of binoculars and some sticks I found over there.</h3>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Chester</h3>
+                  <h3 class="role">Account Manager · Oct 1</h3>
+                </div>
+              </div>
+              <h3 class="title">Why are the sea turtles so angry these days?</h3>
+              <h3 class="desc">This place is so blue I can hardly stand it any longer. I have only seen blue my entire life. - A sea turtle.</h3>
+              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jasmine</h3>
+                  <h3 class="role">Executive Producer · Sept 26</h3>
+                </div>
+              </div>
+              <h3 class="title">Budget cuts leave tourist abandoned.</h3>
+              <h3 class="desc">One news network reported to spend $4.5 billion attempting to get an interview with the victim.</h3>
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jonas</h3>
+                  <h3 class="role">Founder · Aug 12</h3>
+                </div>
+              </div>
+              <h3 class="title">How many trees are in this canyon?</h3>
+              <h3 class="desc">My strategy for this monumental task began with a pair of binoculars and some sticks I found over there.</h3>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Chester</h3>
+                  <h3 class="role">Account Manager · Oct 1</h3>
+                </div>
+              </div>
+              <h3 class="title">Why are the sea turtles so angry these days?</h3>
+              <h3 class="desc">This place is so blue I can hardly stand it any longer. I have only seen blue my entire life. - A sea turtle.</h3>
+              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jasmine</h3>
+                  <h3 class="role">Executive Producer · Sept 26</h3>
+                </div>
+              </div>
+              <h3 class="title">Budget cuts leave tourist abandoned.</h3>
+              <h3 class="desc">One news network reported to spend $4.5 billion attempting to get an interview with the victim.</h3>
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jonas</h3>
+                  <h3 class="role">Founder · Aug 12</h3>
+                </div>
+              </div>
+              <h3 class="title">How many trees are in this canyon?</h3>
+              <h3 class="desc">My strategy for this monumental task began with a pair of binoculars and some sticks I found over there.</h3>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Chester</h3>
+                  <h3 class="role">Account Manager · Oct 1</h3>
+                </div>
+              </div>
+              <h3 class="title">Why are the sea turtles so angry these days?</h3>
+              <h3 class="desc">This place is so blue I can hardly stand it any longer. I have only seen blue my entire life. - A sea turtle.</h3>
+              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jasmine</h3>
+                  <h3 class="role">Executive Producer · Sept 26</h3>
+                </div>
+              </div>
+              <h3 class="title">Budget cuts leave tourist abandoned.</h3>
+              <h3 class="desc">One news network reported to spend $4.5 billion attempting to get an interview with the victim.</h3>
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jonas</h3>
+                  <h3 class="role">Founder · Aug 12</h3>
+                </div>
+              </div>
+              <h3 class="title">How many trees are in this canyon?</h3>
+              <h3 class="desc">My strategy for this monumental task began with a pair of binoculars and some sticks I found over there.</h3>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Chester</h3>
+                  <h3 class="role">Account Manager · Oct 1</h3>
+                </div>
+              </div>
+              <h3 class="title">Why are the sea turtles so angry these days?</h3>
+              <h3 class="desc">This place is so blue I can hardly stand it any longer. I have only seen blue my entire life. - A sea turtle.</h3>
+              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jasmine</h3>
+                  <h3 class="role">Executive Producer · Sept 26</h3>
+                </div>
+              </div>
+              <h3 class="title">Budget cuts leave tourist abandoned.</h3>
+              <h3 class="desc">One news network reported to spend $4.5 billion attempting to get an interview with the victim.</h3>
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jonas</h3>
+                  <h3 class="role">Founder · Aug 12</h3>
+                </div>
+              </div>
+              <h3 class="title">How many trees are in this canyon?</h3>
+              <h3 class="desc">My strategy for this monumental task began with a pair of binoculars and some sticks I found over there.</h3>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Chester</h3>
+                  <h3 class="role">Account Manager · Oct 1</h3>
+                </div>
+              </div>
+              <h3 class="title">Why are the sea turtles so angry these days?</h3>
+              <h3 class="desc">This place is so blue I can hardly stand it any longer. I have only seen blue my entire life. - A sea turtle.</h3>
+              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jasmine</h3>
+                  <h3 class="role">Executive Producer · Sept 26</h3>
+                </div>
+              </div>
+              <h3 class="title">Budget cuts leave tourist abandoned.</h3>
+              <h3 class="desc">One news network reported to spend $4.5 billion attempting to get an interview with the victim.</h3>
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jonas</h3>
+                  <h3 class="role">Founder · Aug 12</h3>
+                </div>
+              </div>
+              <h3 class="title">How many trees are in this canyon?</h3>
+              <h3 class="desc">My strategy for this monumental task began with a pair of binoculars and some sticks I found over there.</h3>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Chester</h3>
+                  <h3 class="role">Account Manager · Oct 1</h3>
+                </div>
+              </div>
+              <h3 class="title">Why are the sea turtles so angry these days?</h3>
+              <h3 class="desc">This place is so blue I can hardly stand it any longer. I have only seen blue my entire life. - A sea turtle.</h3>
+              <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jasmine</h3>
+                  <h3 class="role">Executive Producer · Sept 26</h3>
+                </div>
+              </div>
+              <h3 class="title">Budget cuts leave tourist abandoned.</h3>
+              <h3 class="desc">One news network reported to spend $4.5 billion attempting to get an interview with the victim.</h3>
+              <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" />
+            </div>
+            <div class="post">
+              <div class="profile">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDl8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                <div class="profile-info">
+                  <h3 class="name">Jonas</h3>
+                  <h3 class="role">Founder · Aug 12</h3>
+                </div>
+              </div>
+              <h3 class="title">How many trees are in this canyon?</h3>
+              <h3 class="desc">My strategy for this monumental task began with a pair of binoculars and some sticks I found over there.</h3>
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://kit.fontawesome.com/944eb371a4.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

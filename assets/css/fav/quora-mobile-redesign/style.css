@@ -1,0 +1,367 @@
+:root {
+  --font-color: 200, 200, 200;
+  --highlight-color: 3, 169, 244;
+  --body-color: 20, 30, 40;
+  
+  --theme-background: 38, 38, 38;
+  --theme-primary: 185, 43, 39;
+}
+
+body {
+  background-color: rgb(var(--body-color));
+  margin: 0px;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(var(--theme-background));
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, input, select, button, span, a, p {
+  color: rgb(var(--font-color));
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.highlight {
+  color: rgb(var(--highlight-color));
+}
+
+.fancy-scrollbar::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+.fancy-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.fancy-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+
+#phone {
+  background-color: rgb(var(--theme-background));
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  height: 851px;
+  width: 393px;  
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#main-wrapper {
+  height: 100%;
+  background-color: rgb(var(--theme-background));
+  overflow: auto;
+}
+
+#main[data-nav="active"] > #nav-wrapper {
+  transform: translateX(0%);
+}
+
+#main[data-nav="inactive"] > #nav-wrapper {
+  transform: translateX(-100%);
+}
+
+#main[data-nav="active"] > #content-wrapper {
+  margin-left: 3.5rem;
+}
+
+#main[data-nav="inactive"] > #content-wrapper {
+  margin-left: 0rem;
+}
+
+#top-wrapper {
+  width: calc(100% - 0.25rem);
+  display: flex;
+  background-color: rgb(20 20 20);
+  gap: 0.25rem;
+  margin: 0.25rem;
+  margin-left: 0rem;
+  margin-top: 0rem;
+  padding: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+}
+
+#top-wrapper > .nav-toggle {
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+#top-wrapper > .nav-toggle:hover,
+#top-wrapper > .nav-toggle:focus {
+  background-color: rgba(255 255 255 / 5%);
+}
+
+#top-wrapper > .nav-toggle > i {
+  font-size: 1.5rem; 
+}
+
+#top-wrapper > .top {  
+  width: calc(100% - 6rem);
+  display: flex;
+  justify-content: center;
+  border-radius: 0.25rem;
+  padding: 0rem 0.25rem;
+  position: relative;
+}
+
+#top-wrapper > .top > .logo-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+#top-wrapper > .top > .logo-link:hover,
+#top-wrapper > .top > .logo-link:focus {
+  background-color: rgba(255 255 255 / 5%);
+}
+
+#top-wrapper > .top > .logo-link > .logo {
+  height: 1.5rem;
+  object-fit: cover;
+}
+
+#nav-wrapper {
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding-left: 0rem;
+  padding-top: 3.25rem;
+  transition: transform 250ms;
+}
+
+#nav-wrapper > .nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(20 20 20);
+  gap: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+#nav-wrapper > .nav > .nav-group {  
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+
+#nav-wrapper > .nav .nav-link {  
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 0.25rem;
+  outline: none;
+  text-decoration: none;
+}
+
+#nav-wrapper > .nav .nav-link:hover,
+#nav-wrapper > .nav .nav-link:focus {  
+  background-color: rgba(255 255 255 / 5%);
+}
+
+#nav-wrapper > .nav .nav-link.active > i {  
+  color: rgb(var(--theme-primary));
+}
+
+#nav-wrapper > .nav .nav-link > i {
+  color: rgb(var(--font-color));
+  font-size: 1.5rem;
+}
+
+#nav-wrapper > .nav .nav-link.profile > img {
+  height: 2rem; 
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+#content-wrapper {
+  padding-top: 3.25rem;
+  padding-bottom: 0.25rem;  
+  transition: margin-left 250ms;
+}
+
+#content {  
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0rem 0.25rem;
+}
+
+#content > .section {  
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgb(20 20 20);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+#content > .post-section {  
+  cursor: pointer;
+}
+
+#content > .post-section > img {
+  height: 2rem; 
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+#content > .post-section > input {
+  background-color: rgba(255 255 255 / 5%);
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  padding: 0rem 1rem;
+  border-radius: 2rem;
+  width: 100%;  
+  cursor: pointer; 
+}
+
+#content > .action-section > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-grow: 1;
+  background-color: rgba(255 255 255 / 5%);
+  color: rgb(var(--font-color));
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#content > .action-section > button:hover,
+#content > .action-section > button:focus {
+  background-color: rgba(255 255 255 / 10%);
+}
+
+#content > .action-section > button > i {
+  font-size: 1.2rem; 
+}
+
+#content > .action-section > button > span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;  
+}
+
+#content > .feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+#content > .feed > .post {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: rgb(20 20 20);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+#content > .feed > .post > .profile {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#content > .feed > .post > .profile > img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+#content > .feed > .post > .profile > .profile-info > .name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#content > .feed > .post > .profile > .profile-info > .role {
+  font-size: 0.7rem;
+}
+
+#content > .feed > .post > .title { 
+  font-weight: 500; 
+  color: rgb(var(--font-color));
+}
+
+#content > .feed > .post > .desc {
+  font-size: 0.8rem;
+  color: rgb(180 180 180);
+}
+
+#content > .feed > .post > img {
+  width: 100%;
+  height: 12rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+@media(max-width: 500px) {
+  body {
+    overflow: auto;  
+  }
+  
+  #phone {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    margin: 0px auto;
+  }
+  
+  #main-wrapper {
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  #top-wrapper,
+  #nav-wrapper {
+    position: fixed;
+    top: 0px;
+  }
+  
+  #nav-wrapper {
+    padding-top: 3.25rem;
+  }
+}

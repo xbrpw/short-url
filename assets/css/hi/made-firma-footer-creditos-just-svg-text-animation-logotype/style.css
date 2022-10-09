@@ -1,0 +1,70 @@
+str-style,
+.title text,
+.title path {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 1000;
+  animation: dash 4s linear forwards;
+}
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', monospace;
+  background: #1d1e22;
+}
+.title {
+ 
+  font-size: 1rem;
+
+}
+.title text {
+  width: 100%;
+  letter-spacing: 2px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.title path {
+  stroke: #fff;
+  stroke-width: 4;
+  animation-delay: 1s;
+}
+@-moz-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+@-webkit-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+@-o-keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+@keyframes dash {
+  90% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}

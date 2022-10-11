@@ -1,0 +1,262 @@
+<!-- Read whole spreadsheet -->
+<div sheetsu="https://sheetsu.com/apis/v1.0bu/a7e27fe1f6b8">
+  <p>Name: {{name}}</p>
+  <p>Score: {{score}}</p>
+</div>
+
+<script src="//load.sheetsu.com"></script>
+<!-- Read first two rows from sheet "Sheet1" -->
+<div sheetsu="https://sheetsu.com/apis/v1.0bu/a7e27fe1f6b8" sheetsu-limit="2" sheetsu-sheet="Sheet1">
+  <p>Name: {{name}}</p>
+  <p>Score: {{score}}</p>
+</div>
+
+<script src="//load.sheetsu.com"></script>
+
+<!-- Get all records where score is 42 -->
+<div sheetsu="https://sheetsu.com/apis/v1.0bu/a7e27fe1f6b8" sheetsu-search='{"score": "42"}'>
+  <p>Name: {{name}}, score: {{score}}</p>
+</div>
+
+<script src="//load.sheetsu.com"></script>
+<!--
+  Get all records where score is 42
+  from sheet "Sheet1"
+-->
+<div sheetsu="https://sheetsu.com/apis/v1.0bu/a7e27fe1f6b8" sheetsu-search='{"score": "42"}' sheetsu-sheet="Sheet1">
+  <p>Name: {{name}}, score: {{score}}</p>
+</div>
+
+<script src="//load.sheetsu.com"></script>
+
+<!--
+  Display form, which will
+  save record to the Google Spreadsheet
+-->
+<form sheetsu="https://sheetsu.com/apis/v1.0dh/1c3c0ff33">
+  <input type="text" name="full_name">
+  <input type="text" name="email">
+  <textarea name="message"></textarea>
+
+  <input type="submit">
+</form>
+
+<script src="//load.sheetsu.com"></script>
+<!--
+  Display form, which will
+  save record to the Google Spreadsheet
+  to sheet "Sheet1"
+-->
+<form sheetsu="https://sheetsu.com/apis/v1.0dh/1c3c0ff33" sheetsu-sheet="Sheet1">
+  <input type="text" name="full_name">
+  <input type="text" name="email">
+  <textarea name="message"></textarea>
+
+  <input type="submit">
+</form>
+
+<script src="//load.sheetsu.com"></script>
+<!--
+  This code will get 3 first rows from
+  Google Spreadsheet and display them
+  in a table on a website
+-->
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Score</th>
+  </thead>
+  <tbody sheetsu="https://sheetsu.com/apis/v1.0/020b2c0f" sheetsu-limit="3">
+    <tr>
+      <td>{{id}}</td>
+      <td>{{name}}</td>
+      <td>{{score}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<script src="//load.sheetsu.com"></script>
+
+<!--
+  This code will get all rows from
+  Google Spreadsheet where role is parent
+  and display them with picture, name, email
+-->
+<div sheetsu="https://sheetsu.com/apis/v1.0/44317ab1d587" sheetsu-search='{"role": "parent"}'>
+  <img src="{{picture_url}}">
+  <p>
+    Name: {{name}}
+    <br>
+    Email: {{email}}
+  </p>
+</div>
+
+<script src="//load.sheetsu.com"></script>
+
+
+
+<!--
+  This code will display form, which will
+  save record to the Google Spreadsheet
+  (check it here: )
+-->
+<form sheetsu="https://sheetsu.com/apis/v1.0/1c3c0ff33">
+  <input type="text" name="full_name">
+  <input type="text" name="email">
+  <textarea name="message"></textarea>
+
+  <input type="submit">
+</form>
+
+<script src="https://load.sheetsu.com"></script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="Hoja de cálculo sin título - Sheetsu" name="description" />
+
+    <title>Hoja de cálculo sin título - Sheetsu</title>
+
+    <link rel="stylesheet" media="all" href="https://sheetsu.com/assets/readymades/application-49fdcdabecfbd2b419b4a649e4554e306c38810cf29212ba5eeee4d56bbc0ca9.css" data-turbolinks-track="true" />
+    <script type="text/javascript" src="https://sheetsu.com/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=H3y6iS2g2U5WISiCBvW5dGIwMu2z2uMX8JVZrqvXEQCC4hTTjWvN4b3jsosXU6S9mkGWhlkF0DWtBHUE5uLKwA" charset="UTF-8"></script>
+    <script src="https://sheetsu.com/assets/readymades/application-34e62adb52cbdb57116384e29fbe7526b7a3e7937506f8f41570ca55c2c25fc1.js"></script>
+
+	    <script type="text/javascript">
+	    	function imEmbedded() { return (window.location != parent.location); }
+
+	    	if (imEmbedded()) {
+	    		window.location = 'https://sheetsu.com/a/t/a7e27fe1f6b8?embedded=true';
+	    	}
+	    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+  <div class="row mt-3">
+    <div class="col-12">
+
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>score</th>
+                <th></th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>carousel-with-progress-bar/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/carousel-with-progress-bar/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>tachyons-details-component/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/tachyons-details-component/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>veiviser/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/veiviser/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>css-3d-redbull-can/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/css-3d-redbull-can/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td>details-summary-demo/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/details-summary-demo/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>grid-poster/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/grid-poster/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>hover-button-v4/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/hover-button-v4/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>8</td>
+                  <td>music-player-audio-player/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/music-player-audio-player/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td>random-picture-generator/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/random-picture-generator/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>10</td>
+                  <td>skeleton-screen-for-sns/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/skeleton-screen-for-sns/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>11</td>
+                  <td>planner5d/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/planner5d/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>12</td>
+                  <td>prtfolio/</td>
+                  <td></td>
+                  <td>https://xbrpw.github.io/assets/css/hi/prtfolio/dist/index.html</td>
+              </tr>
+              <tr>
+                  <td>13</td>
+                  <td>google </td>
+                  <td></td>
+                  <td>https://docs.google.com/spreadsheets/d/12ly-ZEhUKog5wL37O14pnsJOoo49DYiY0W0wlJOROQE/edit#gid=0</td>
+              </tr>
+              <tr>
+                  <td>14</td>
+                  <td>sheetsu</td>
+                  <td></td>
+                  <td>https://sheetsu.com/a/t/a7e27fe1f6b8</td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td>api?</td>
+                  <td></td>
+                  <td>https://sheetsu.com/apis/v1.0bu/a7e27fe1f6b8</td>
+              </tr>
+          </tbody>
+        </table>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="powered-by mb-1">
+        <a href="https://sheetsu.com/?utm_source=readymade&utm_medium=website&utm_campaign=table" target="_blank">
+
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </body>
+</html>

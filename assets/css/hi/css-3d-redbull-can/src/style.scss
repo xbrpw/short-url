@@ -1,0 +1,55 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #222;
+  background: radial-gradient(circle at center, #eee, #373A5E);
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.wrap {
+  perspective: 800px;
+  perspective-origin: top;
+  height: 100%;
+  transform: rotateZ(10deg);
+}
+
+.red-wrap {
+  position: relative;
+  margin: 0 auto;
+  top: 10%;
+  width: 30px;
+  height: 335px;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: rotate 10s infinite linear;
+}
+
+$total: 20;
+$deg: 360/$total;
+$imageWidth: 424;
+$imageHeight: 335;
+
+.side {
+  position: absolute;
+  height: $imageHeight+px;
+  width: 24px;
+  border-top: 5px solid gray;
+  border-bottom: 5px solid gray;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/red-bull-wrapper.jpg);
+}
+
+@for $i from 1 through $total {
+  .side:nth-child(#{$i}){
+    transform: rotateY($i * $deg+deg) translateZ(70px);
+    background-position: $imageWidth - ($i * $imageWidth/$total)+px 0;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg);
+  }
+}

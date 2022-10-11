@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Planner5d</title>
+  <link rel='stylesheet' href='https://rawcdn.githack.com/SochavaAG/example-mycode/master/_common/css/reset.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg xmlns="http://www.w3.org/2000/svg" display="none">
+  <symbol id="svg-logo" viewBox="0 0 109 33">
+    <g>
+      <path class="svg-logo_icon" d="M95.2627 20.2467V23.1562C95.2627 23.959 95.3626 24.9623 96.1589 24.9623C97.4529 24.9623 98.9458 24.7622 98.9458 24.5615V19.1422C98.0499 18.8412 97.1543 18.6405 96.1589 18.6405C95.3626 18.5401 95.2627 19.4439 95.2627 20.2467Z"/>
+      <path class="svg-logo_icon" d="M105.017 5.39447L92.2767 0.0761719L79.2378 5.39447C75.5549 6.49831 75.5547 9.10797 75.5547 12.0181V29.0774C75.6542 30.7834 77.0479 32.0879 78.7401 32.0879H104.918C106.61 32.1882 108.004 30.8833 108.103 29.1774V11.9172C108.103 9.20773 108.103 6.29761 105.017 5.39447ZM86.6029 17.9381C89.589 17.9381 91.0821 19.243 91.0821 22.3538V22.5547C91.0821 25.8663 88.6934 26.8696 85.8068 26.8696C84.5128 26.8696 83.3182 26.6685 82.1237 26.4678C81.8251 26.3674 81.7258 26.1673 81.8253 26.067C81.9249 25.6656 82.2237 24.7626 82.5223 24.7626C83.5176 24.9633 84.6122 25.0631 85.6075 25.1634C87.4987 25.1634 88.7929 24.6621 88.7929 22.5547C88.7929 20.8488 88.3952 20.146 86.2053 20.146C85.8072 20.146 85.0105 20.1464 84.8114 20.5478C84.5128 20.7485 84.4131 20.8486 84.1145 20.8486H83.02C82.7214 20.8486 82.6214 20.7479 82.6214 20.4468V14.9276C82.721 14.1248 83.5178 13.7242 84.7123 13.7242H90.8828C91.0819 13.7242 91.2813 13.824 91.2813 14.125V14.226C91.2813 14.4267 91.1814 15.6303 90.8828 15.6303H84.8114V18.7417C85.2096 18.1396 85.9061 17.8377 86.6029 17.9381V17.9381ZM101.136 25.1634C101.136 25.4645 101.036 25.7657 100.737 25.8661C99.1448 26.4682 97.453 26.669 95.6614 26.5687C93.5711 26.5687 93.0728 25.2638 93.0728 23.1564V20.046C93.0728 18.3401 93.1729 16.6338 95.6614 16.6338C96.7563 16.6338 97.8504 16.8347 98.8458 17.3364V13.3224C98.8458 12.7203 99.5427 12.9206 99.5427 12.9206L100.638 13.3224C101.036 13.4228 101.036 13.7236 101.036 14.125L101.136 25.1634V25.1634ZM102.927 11.1146C102.828 11.4156 102.529 12.6202 102.131 12.5198L91.6799 8.60584L81.2285 12.7207C81.0294 12.8211 80.6305 11.5162 80.4314 11.3155C80.2323 11.0144 80.4322 10.9141 80.7308 10.8137L91.4806 6.39796L98.6475 9.10758V7.80324C98.6475 7.60254 98.846 7.50239 99.045 7.50239L100.339 7.9032C100.737 8.1039 100.737 8.10448 100.737 8.50588V9.71026L102.43 10.4119C102.629 10.4119 102.827 10.713 102.827 10.9137C103.026 11.014 103.027 11.0142 102.927 11.1146V11.1146Z"/>
+
+      <path class="svg-logo_letter" d="M0.00585938 11.3152C0.00585938 10.9138 0.801961 10.8135 1.29965 10.8135H5.48039C9.66095 10.8135 10.9549 11.9173 10.9549 15.3292V15.731C10.9549 19.2432 9.66095 20.2467 5.48039 20.2467H2.09672V25.9658C2.09672 26.2668 1.89765 26.4675 1.59903 26.4675H1.49891C1.10077 26.4675 0.10598 26.3678 0.10598 26.0667L0.00585938 11.3152ZM2.09672 12.5196V18.3397H5.48039C8.26743 18.3397 8.86504 17.8381 8.86504 15.5301V15.1283C8.86504 12.9206 8.16789 12.3187 5.48039 12.3187L2.09672 12.5196V12.5196Z" />
+      <path class="svg-logo_letter" d="M18.0222 25.6654C18.1218 25.9665 17.9223 26.0668 17.6237 26.1672C17.0265 26.3679 16.3297 26.4686 15.633 26.569C14.339 26.569 13.1445 25.9671 13.1445 23.7594V10.5131C13.1445 10.2121 14.1397 10.1113 14.4383 10.1113C14.8365 10.1113 14.8369 10.3126 14.8369 10.714V23.3576C14.8369 24.2607 15.1357 24.6619 16.0315 24.6619C16.4296 24.6619 16.8274 24.5614 17.126 24.461C17.6237 24.6617 17.9227 25.264 18.0222 25.6654Z" />
+      <path class="svg-logo_letter" d="M27.5775 24.7631C27.5775 25.9673 24.1932 26.5692 21.6053 26.5692C19.0173 26.5692 18.6191 24.9636 18.6191 23.0569C18.6191 21.351 19.0173 19.7456 21.6053 19.7456C22.8992 19.7456 24.2927 19.9459 25.5867 20.3473V18.8421C25.5867 17.3368 25.1888 16.7344 24.2929 16.4333C23.6957 16.333 23.0987 16.3334 22.5015 16.3334C21.9043 16.3334 21.3063 16.4339 20.709 16.5343C20.3109 16.6346 20.0125 16.0323 19.9129 15.8316C19.8134 15.7313 19.8138 15.5302 19.8138 15.4298C19.8138 15.3295 19.9135 15.2299 20.013 15.2299C21.0084 15.0292 22.0034 14.8281 23.0983 14.8281C26.0844 14.8281 27.3782 16.1325 27.3782 19.1429L27.5775 24.7631V24.7631ZM25.6859 21.8526C25.4868 21.4512 23.8942 21.05 22.2021 21.05C20.9081 21.05 20.5107 21.8528 20.5107 23.0569C20.5107 24.2611 20.8086 25.0639 22.2021 25.0639C23.9937 25.0639 25.3873 24.6627 25.6859 24.2613V21.8526V21.8526Z" />
+      <path class="svg-logo_letter" d="M37.3324 19.3432C37.3324 18.0387 37.3329 16.4327 35.9394 16.4327C34.0482 16.4327 32.0571 16.9344 32.0571 17.4362V26.0668C32.0571 26.2675 31.8576 26.4676 31.6586 26.4676H31.5594C31.1613 26.4676 30.2656 26.3678 30.2656 26.0668V16.5336C30.2656 15.8312 32.8532 14.7275 36.337 14.7275C39.2236 14.7275 39.3231 16.7339 39.3231 18.6406V25.8659C39.3231 26.1669 39.1244 26.2677 38.7263 26.2677C38.3281 26.2677 37.4325 26.1669 37.4325 25.8659L37.3324 19.3432V19.3432Z" />
+      <path class="svg-logo_letter" d="M49.2767 19.3432C49.2767 18.0387 49.2773 16.4327 47.8838 16.4327C45.9926 16.4327 44.0014 16.9344 44.0014 17.4362V26.0668C44.0014 26.2675 43.802 26.4676 43.6029 26.4676H43.5037C43.1056 26.4676 42.21 26.3678 42.21 26.0668V16.5336C42.21 15.8312 44.7975 14.7275 48.2813 14.7275C51.1679 14.7275 51.2674 16.7339 51.2674 18.6406V25.8659C51.2674 26.1669 51.0688 26.2677 50.6706 26.2677C50.2725 26.2677 49.3768 26.1669 49.3768 25.8659L49.2767 19.3432V19.3432Z" />
+      <path class="svg-logo_letter" d="M58.235 26.5685C55.0498 26.5685 53.7559 24.7624 53.7559 21.2502V19.4432C53.7559 16.4327 54.7518 14.7275 58.3351 14.7275H58.7327C61.9179 14.7275 62.3166 16.634 62.3166 18.5406V19.3432C62.3166 20.146 61.4202 21.0489 55.7466 21.1493C55.7466 23.8587 56.3438 24.8624 58.235 24.8624C59.2304 24.8624 60.3259 24.6613 61.3213 24.4606C61.6199 24.3603 61.719 25.0633 61.9181 25.565C62.0176 25.9664 61.8182 25.9658 61.5196 25.9658C60.4246 26.3672 59.3299 26.5685 58.235 26.5685V26.5685ZM60.425 18.1388C60.425 16.8343 59.828 16.2328 58.6336 16.2328C56.7424 16.2328 55.6475 16.6336 55.6475 19.1423V20.1458C58.2354 20.1458 60.2258 19.9457 60.2258 19.2432V18.1388H60.425V18.1388Z" />
+      <path class="svg-logo_letter" d="M69.9802 16.3331C68.6863 16.3331 66.895 16.9352 66.895 17.3366V25.9662C66.895 26.1669 66.6955 26.368 66.4965 26.368H66.3973C65.9992 26.368 65.1035 26.2672 65.1035 25.9662V16.433C65.1035 15.8309 67.6915 14.627 70.0804 14.627C70.4785 14.627 70.976 14.6275 71.3742 14.7279C71.7723 14.7279 71.9718 14.928 71.7727 15.1287C71.6732 15.5301 71.3743 16.433 71.0757 16.433C70.6776 16.3327 70.2789 16.3331 69.9802 16.3331V16.3331Z" />
+    </g>
+  </symbol>
+
+  <symbol id="svg-bell" viewBox="0 0 448 512">
+    <g>
+      <path d="M439.39 362.29c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71zM67.53 368c21.22-27.97 44.42-74.33 44.53-159.42 0-.2-.06-.38-.06-.58 0-61.86 50.14-112 112-112s112 50.14 112 112c0 .2-.06.38-.06.58.11 85.1 23.31 131.46 44.53 159.42H67.53zM224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="svg-chart" viewBox="0 0 512 512">
+    <g>
+      <path d="M500 384c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v308h436zM372.7 159.5L288 216l-85.3-113.7c-5.1-6.8-15.5-6.3-19.9 1L96 248v104h384l-89.9-187.8c-3.2-6.5-11.4-8.7-17.4-4.7z"></path>
+    </g>
+  </symbol>
+
+  <symbol id="svg-setting" viewBox="0 0 640 512">
+    <g>
+      <path d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"></path>
+    </g>
+  </symbol>
+</svg>
+<div id="ag-page" class="ag-page">
+<header id="header" class="ag-header">
+  <div class="ag-format-container">
+    <div class="ag-header_box">
+      <a class="ag-logo_link" href="/">
+        <svg class="ag-logo_img">
+          <use xlink:href="#svg-logo"></use>
+        </svg>
+      </a>
+
+      <div class="js-header-menu_box ag-header-menu_box">
+        <nav id="ag-header-menu" class="ag-header-menu">
+          <ul class="ag-header-menu_list">
+            <li class="ag-header-menu_item">
+              <a href="/my-project" class="ag-header-menu_link">My projects</a>
+            </li>
+            <li class="ag-header-menu_item">
+              <a href="/get-ideas" class="ag-header-menu_link">Get ideas</a>
+            </li>
+            <li class="ag-header-menu_item">
+              <a href="/upload-a-plan" class="ag-header-menu_link">Upload a plan</a>
+            </li>
+            <li class="ag-header-menu_item">
+              <a href="/design-school" class="ag-header-menu_link">Design school</a>
+            </li>
+            <li class="ag-header-menu_item">
+              <a href="/design-battle" class="ag-header-menu_link ag-header-menu_link__new">Design battle</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="ag-header_bell">
+          <svg class="ag-bell_img">
+            <use xlink:href="#svg-bell"></use>
+          </svg>
+        </a>
+
+        <div class="ag-select-block">
+          <div class="ag-select_box ag-profile_box">
+            <div class="js-select_info ag-select_info">
+              <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/planner5d/images/ava.jpeg" class="ag-select_icon ag-profile_icon__ava" alt="Alexander Sochava">
+              <div class="ag-profile_name">Alexander Sochava</div>
+            </div>
+            <div class="js-select_info-box ag-select_info-box">
+              <div class="ag-profile_title-list">
+                Account
+              </div>
+              <ul class="ag-select_list">
+                <li class="ag-select_item">
+                  <a href="/setting" class="ag-select_link">Setting</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/help" class="ag-select_link">Help</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/lang" class="ag-select_link">Language</a>
+                </li>
+              </ul>
+              <div class="ag-profile_title-list">
+                Manage
+              </div>
+              <ul class="ag-select_list">
+                <li class="ag-select_item">
+                  <a href="/posts" class="ag-select_link">Posts &amp; Activity</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/job-posting" class="ag-select_link">Job Posting Account</a>
+                </li>
+              </ul>
+              <div class="ag-profile_logout">
+                <a href="/logout" class="ag-select_link">Log out</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ag-select_box ag-statistic_box">
+            <div class="js-select_info ag-select_info">
+              <svg class="ag-select_img ag-chart_img">
+                <use xlink:href="#svg-chart"></use>
+              </svg>
+              <div class="ag-chart_title">Statistic</div>
+            </div>
+            <div class="js-select_info-box ag-select_info-box">
+              <ul class="ag-select_list">
+                <li class="ag-select_item">
+                  <a href="/statistic-1" class="ag-select_link">Statistic 1</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/statistic-2" class="ag-select_link">Statistic 2</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/statistic-3" class="ag-select_link">Statistic 3</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/statistic-4" class="ag-select_link">Statistic 4</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ag-select_box ag-setting_box">
+            <div class="js-select_info ag-select_info ag-setting_info">
+              <svg class="ag-select_img ag-setting_img">
+                <use xlink:href="#svg-setting"></use>
+              </svg>
+              <div class="ag-setting_title">Setting</div>
+            </div>
+            <div class="js-select_info-box ag-select_info-box">
+              <ul class="ag-select_list">
+                <li class="ag-select_item">
+                  <a href="/setting-1" class="ag-select_link">Setting 1</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/setting-2" class="ag-select_link">Setting 2</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/setting-3" class="ag-select_link">Setting 3</a>
+                </li>
+                <li class="ag-select_item">
+                  <a href="/setting-4" class="ag-select_link">Setting 4</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="js-menu_btn-wrap ag-menu_btn-wrap">
+    <div class="ag-menu_btn"></div>
+  </div>
+</header>
+
+<main id="ag-page-content" class="ag-page-content">
+  <div class="ag-format-container">
+    <section class="ag-descr-block">
+      <article class="ag-descr_box">
+        <div class="ag-descr_title">
+          Rules and regulations for planner 5d interior design contest (Battle)
+        </div>
+        <div class="ag-descr_date">
+          Last updated:
+          <time>
+            December&#160;11<sup>th</sup>, 2020
+          </time>
+        </div>
+        <p class="ag-descr_text">
+          By entering (or otherwise participating) in planner 5d design contest, entrants agree to these rules and
+          regulations, which create a binding contract, so read them carefully before entering. Without limitation, such
+          contract includes grants of rights and indemnities to us from you, and a limitation of your rights and
+          remedies.
+        </p>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer id="ag-footer" class="ag-footer">
+  <div class="ag-format-container">
+    <nav id="ag-footer-menu" class="ag-footer-menu">
+      <div class="ag-footer-menu_box">
+        <div class="ag-footer-menu_title">
+          Company
+        </div>
+        <ul class="ag-footer-menu_list">
+          <li class="ag-footer-menu_item">
+            <a href="/terms-of-service" class="ag-footer-menu_link">Terms of Service</a>
+          </li>
+          <li>
+            <a href="/privacy-policy" class="ag-footer-menu_link">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ag-footer-menu_box">
+        <div class="ag-footer-menu_title">
+          Use cases
+        </div>
+        <ul class="ag-footer-menu_list">
+          <li class="ag-footer-menu_item">
+            <a href="/enterprise-solutions" class="ag-footer-menu_link">Enterprise Solutions</a>
+          </li>
+          <li class="ag-footer-menu_item">
+            <a href="/solutions-for-schools" class="ag-footer-menu_link">Solutions for Schools</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ag-footer-menu_box">
+        <div class="ag-footer-menu_title">Platforms</div>
+        <ul class="ag-footer-menu_list">
+          <li class="ag-footer-menu_item">
+            <a href="/web" class="ag-footer-menu_link">Web</a>
+          </li>
+          <li class="ag-footer-menu_item">
+            <a href="/ios" class="ag-footer-menu_link">iOS</a>
+          </li>
+          <li class="ag-footer-menu_item">
+            <a href="/android" class="ag-footer-menu_link">Android</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ag-footer-menu_box">
+        <div class="ag-footer-menu_title">
+          Features
+        </div>
+        <ul class="ag-footer-menu_list">
+          <li class="ag-footer-menu_item">
+            <a href="/plan" class="ag-footer-menu_link">AI Plan Recognition</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ag-footer-menu_box">
+        <div class="ag-footer-menu_title">
+          Design Ideas
+        </div>
+        <ul class="ag-footer-menu_list">
+          <li class="ag-footer-menu_item">
+            <a href="/blog" class="ag-footer-menu_link">Interior Design Blog</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  <div class="ag-footer_copyright">
+    <div class="ag-footer_copy">
+      Planner&#160;5D® © 2011—2021
+    </div>
+    <address class="ag-footer_address">
+      Planner&#160;5D UAB, Antakalnio St.17, Vilnius&#160;10312, Lithuania
+    </address>
+  </div>
+  </div>
+</footer>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<style>
+    .content-bio {
+        padding: 16px;
+    }
+    /*****************************************************       COMMON VARIABLES * */
+    
+    .section .title {
+        font-size: 36px;
+        height: 90px;
+        text-align: center;
+        color: #363636;
+        font-weight: 100;
+    }
+    
+    .card-subtitle {
+        font-size: 17px;
+        margin: 20px 0;
+        display: block;
+        font-weight: 400;
+        color: #363636;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif, helvetica;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        font-weight: 300;
+    }
+    /***************************************************** 
+     ::selection {
+        color: white;
+        background: #017dbb;
+    }    
+    /*****************************************************       material-bio START */
+    
+    .material-bio {
+        background: #ffffff;
+        border-radius: 1px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+        padding: 15px;
+        margin: 0 0 30px 0;
+    }
+    
+    .material-bio .card-subname {
+        margin: 0 0 10px 0;
+        padding: 1px 5px;
+        display: inline-block;
+        vertical-align: top;
+        background: #efefef;
+        font-size: 13px;
+        color: #363636;
+        border-radius: 2px;
+    }
+    
+    .material-bio .card-content {
+        margin-bottom: 0;
+    }
+    
+    .card-title {
+        position: relative;
+        margin: -57px 0 0 0;
+        text-align: center;
+    }
+    
+    .card-icon {
+        margin: 0 auto;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 62px;
+        height: 62px;
+        line-height: 62px;
+        background: #253137;
+        border-radius: 51%;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+        color: #fefefe;
+    }
+    
+    .section {
+        text-align: center;
+        padding: 35px 0;
+    }
+    /*****************************************************       material-bio END */
+    /*****************************************************       BOOTSTRAP START */
+    
+    .row-bio {
+        margin: 0 auto;
+        padding: 0 0 30px 0;
+        max-width: 1100px;
+    }
+    
+    @media (max-width: 1080px) {
+        .row-bio {
+            margin: 0 10px;
+        }
+    }
+    
+    @media (max-width: 420px) {
+        .row-bio {
+            margin: 0 5px;
+        }
+    }
+    
+    .row-bio:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+    .row-bio [class*="col-"] {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .row-bio .col-12 {
+            width: 99.996%;
+        }
+    }
+    /*****************************************************       BOOTSTRAP END */
+    
+    body.about-me .section.contact .content-bio .material-bio {
+        width: 100%;
+        max-width: 700px;
+    }
+    
+    body.about-me {
+        text-align: center;
+    }
+    
+    body.about-me .section.contact .content-bio .material-bio {
+        display: inline-block;
+    }
+    
+    body.about-me .section.contact .vcard.content-bio {
+        padding-bottom: 0;
+    }
+    
+    body.about-me .section.contact .vcard.content-bio .material-bio {
+        position: relative;
+        top: 15px;
+    }
+    
+    body.about-me .section.contact .vcard.content-bio .material-bio .card-icon {
+        background: url("https://hihellomonster.github.io/luisangel.maciel/img/me.webp") no-repeat center;
+        filter: grayscale(85%);
+        -webkit-filter: grayscale(85%);
+        -moz-filter: grayscale(85%);
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+    }
+    
+    body.about-me .section.contact .vcard.content-bio .material-bio .card-icon:hover {
+        background: url("https://hihellomonster.github.io/luisangel.maciel/img/me.webp") no-repeat center;
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+    }
+    
+    body.about-me .section.contact .vcard.content-bio .material-bio .card-subname {
+        padding: 2px 5px;
+        background: #253137;
+        color: #fefefe;
+        font-weight: 400;
+    }
+    
+    body.about-me .section.contact .vcard.content-bio .card-subtitle {
+        margin-top: 0px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    a:hover {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
+
+
+
+
+<div class="about-me">
+    <div class="section contact" id="contact">
+
+        <div class="subject">
+            <div class="title">
+                Estemos en contacto
+            </div>
+        </div>
+        <div class="vcard content-bio row-bio">
+            <div class="col-12">
+                <div class="material-bio">
+                    <div class="card-title">
+                        <div class="card-icon"></div>
+                        <div class="card-subtitle">Luis Angel Maciel</div>
+                        <div class="card-subname">luis.angel.maciel.padilla
+                            <i>[at]</i> gmail.com</div>
+                    </div>
+                    <div class="card-content">
+                        Entusiasta en temas de emprendimiento, sexualidad, investigación de mercados rosa, diseño, UI/UX.
+                        <br><br>Me siento bien cuando recibo un like o comentario de retroalimentación o agradecimiento a mi trabajo diciendo les ha ayudado, marcado la diferencia o gustado algo que hice.
+                        <br><br>Developer experience and marketer en la agencia de viajes
+                        <a href="https://www.xiiber.com/linktr.ee" target="_blank" title="Xiiber. Experiencias y viajes gay"><b>Xiiber</b>.</a>
+                        <!-- Siempre entusiasta -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

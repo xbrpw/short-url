@@ -1,0 +1,1505 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?w33u16');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?w33u16#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?w33u16') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?w33u16') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?w33u16##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.b-google-my-business {
+  &:before {
+    content: $b-google-my-business;     
+    color: #e1e1e1;
+  }
+}
+.b-grindr {
+  &:before {
+    content: $b-grindr;     
+    color: #e1e1e1;
+  }
+}
+.b-hornet {
+  &:before {
+    content: $b-hornet;     
+    color: #e1e1e1;
+  }
+}
+.b-mercado-libre {
+  &:before {
+    content: $b-mercado-libre;     
+    color: #e1e1e1;
+  }
+}
+.b-onlyfans {
+  &:before {
+    content: $b-onlyfans;     
+    color: #e1e1e1;
+  }
+}
+.b-scruff {
+  &:before {
+    content: $b-scruff;     
+    color: #e1e1e1;
+  }
+}
+.google-my-business .path1 {
+  &:before {
+    content: $google-my-business-path1;  
+    color: rgb(126, 172, 247);
+  }
+}
+.google-my-business .path2 {
+  &:before {
+    content: $google-my-business-path2;  
+    margin-left: -1em;  
+    color: rgb(126, 172, 247);
+  }
+}
+.google-my-business .path3 {
+  &:before {
+    content: $google-my-business-path3;  
+    margin-left: -1em;  
+    color: rgb(73, 89, 183);
+  }
+}
+.google-my-business .path4 {
+  &:before {
+    content: $google-my-business-path4;  
+    margin-left: -1em;  
+    color: rgb(73, 89, 183);
+  }
+}
+.google-my-business .path5 {
+  &:before {
+    content: $google-my-business-path5;  
+    margin-left: -1em;  
+    color: rgb(72, 129, 236);
+  }
+}
+.grindr {
+  &:before {
+    content: $grindr;     
+    color: #fcb83b;
+  }
+}
+.hornet .path1 {
+  &:before {
+    content: $hornet-path1;  
+    color: rgb(223, 84, 55);
+  }
+}
+.hornet .path2 {
+  &:before {
+    content: $hornet-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 254);
+  }
+}
+.hornet .path3 {
+  &:before {
+    content: $hornet-path3;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 254);
+  }
+}
+.hornet .path4 {
+  &:before {
+    content: $hornet-path4;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 254);
+  }
+}
+.hornet .path5 {
+  &:before {
+    content: $hornet-path5;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 254);
+  }
+}
+.hornet .path6 {
+  &:before {
+    content: $hornet-path6;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 254);
+  }
+}
+.hornet .path7 {
+  &:before {
+    content: $hornet-path7;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 254);
+  }
+}
+.hornet .path8 {
+  &:before {
+    content: $hornet-path8;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 254);
+  }
+}
+.mercado-libre .path1 {
+  &:before {
+    content: $mercado-libre-path1;  
+    color: rgb(242, 206, 0);
+  }
+}
+.mercado-libre .path2 {
+  &:before {
+    content: $mercado-libre-path2;  
+    margin-left: -1em;  
+    color: rgb(242, 206, 0);
+  }
+}
+.mercado-libre .path3 {
+  &:before {
+    content: $mercado-libre-path3;  
+    margin-left: -1em;  
+    color: rgb(242, 206, 0);
+  }
+}
+.mercado-libre .path4 {
+  &:before {
+    content: $mercado-libre-path4;  
+    margin-left: -1em;  
+    color: rgb(242, 206, 0);
+  }
+}
+.mercado-libre .path5 {
+  &:before {
+    content: $mercado-libre-path5;  
+    margin-left: -1em;  
+    color: rgb(254, 254, 254);
+  }
+}
+.mercado-libre .path6 {
+  &:before {
+    content: $mercado-libre-path6;  
+    margin-left: -1em;  
+    color: rgb(254, 254, 254);
+  }
+}
+.mercado-libre .path7 {
+  &:before {
+    content: $mercado-libre-path7;  
+    margin-left: -1em;  
+    color: rgb(49, 54, 115);
+  }
+}
+.onlyfans .path1 {
+  &:before {
+    content: $onlyfans-path1;  
+    color: rgb(0, 0, 0);
+  }
+}
+.onlyfans .path2 {
+  &:before {
+    content: $onlyfans-path2;  
+    margin-left: -1em;  
+    color: rgb(0, 174, 239);
+  }
+}
+.scruff .path1 {
+  &:before {
+    content: $scruff-path1;  
+    color: rgb(109, 109, 109);
+  }
+}
+.scruff .path2 {
+  &:before {
+    content: $scruff-path2;  
+    margin-left: -1em;  
+    color: rgb(109, 109, 109);
+  }
+}
+.scruff .path3 {
+  &:before {
+    content: $scruff-path3;  
+    margin-left: -1em;  
+    color: rgb(146, 146, 146);
+  }
+}
+.scruff .path4 {
+  &:before {
+    content: $scruff-path4;  
+    margin-left: -1em;  
+    color: rgb(146, 146, 146);
+  }
+}
+.scruff .path5 {
+  &:before {
+    content: $scruff-path5;  
+    margin-left: -1em;  
+    color: rgb(146, 146, 146);
+  }
+}
+.scruff .path6 {
+  &:before {
+    content: $scruff-path6;  
+    margin-left: -1em;  
+    color: rgb(146, 146, 146);
+  }
+}
+.scruff .path7 {
+  &:before {
+    content: $scruff-path7;  
+    margin-left: -1em;  
+    color: rgb(212, 212, 212);
+  }
+}
+.scruff .path8 {
+  &:before {
+    content: $scruff-path8;  
+    margin-left: -1em;  
+    color: rgb(212, 212, 212);
+  }
+}
+.scruff .path9 {
+  &:before {
+    content: $scruff-path9;  
+    margin-left: -1em;  
+    color: rgb(212, 212, 212);
+  }
+}
+.scruff .path10 {
+  &:before {
+    content: $scruff-path10;  
+    margin-left: -1em;  
+    color: rgb(212, 212, 212);
+  }
+}
+.scruff .path11 {
+  &:before {
+    content: $scruff-path11;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.scruff .path12 {
+  &:before {
+    content: $scruff-path12;  
+    margin-left: -1em;  
+    color: rgb(76, 76, 76);
+  }
+}
+.netflix-gayflix {
+  &:before {
+    content: $netflix-gayflix;     
+    color: #d9202b;
+  }
+}
+.netflix-gayflix1 {
+  &:before {
+    content: $netflix-gayflix1;     
+    color: #d9202b;
+  }
+}
+.tumblr {
+  &:before {
+    content: $tumblr;     
+    color: #36465d;
+  }
+}
+.youtube .path1 {
+  &:before {
+    content: $youtube-path1;  
+    color: rgb(255, 0, 0);
+  }
+}
+.youtube .path2 {
+  &:before {
+    content: $youtube-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.logo-tepozspa-2021 {
+  &:before {
+    content: $logo-tepozspa-2021; 
+  }
+}
+.tripadvisor {
+  &:before {
+    content: $tripadvisor;     
+    color: #08808a;
+  }
+}
+.google .path1 {
+  &:before {
+    content: $google-path1;  
+    color: rgb(1, 125, 187);
+  }
+}
+.google .path2 {
+  &:before {
+    content: $google-path2;  
+    margin-left: -1em;  
+    color: rgb(22, 182, 90);
+  }
+}
+.google .path3 {
+  &:before {
+    content: $google-path3;  
+    margin-left: -1em;  
+    color: rgb(43, 128, 247);
+  }
+}
+.google .path4 {
+  &:before {
+    content: $google-path4;  
+    margin-left: -1em;  
+    color: rgb(254, 186, 17);
+  }
+}
+.twitter-bird {
+  &:before {
+    content: $twitter-bird;     
+    color: #00afef;
+  }
+}
+.whatsapp {
+  &:before {
+    content: $whatsapp;     
+    color: #00a859;
+  }
+}
+.facebook-azul-letra .path1 {
+  &:before {
+    content: $facebook-azul-letra-path1;  
+    color: rgb(132, 134, 136);
+  }
+}
+.facebook-azul-letra .path2 {
+  &:before {
+    content: $facebook-azul-letra-path2;  
+    margin-left: -1em;  
+    color: rgb(132, 134, 136);
+  }
+}
+.facebook-azul-letra .path3 {
+  &:before {
+    content: $facebook-azul-letra-path3;  
+    margin-left: -1em;  
+    color: rgb(132, 134, 136);
+  }
+}
+.facebook-azul-letra .path4 {
+  &:before {
+    content: $facebook-azul-letra-path4;  
+    margin-left: -1em;  
+    color: rgb(62, 64, 149);
+  }
+}
+.gmail {
+  &:before {
+    content: $gmail;     
+    color: #d14836;
+  }
+}
+.tumbrl {
+  &:before {
+    content: $tumbrl; 
+  }
+}
+.intagram-camera {
+  &:before {
+    content: $intagram-camera;     
+    color: #aa1018;
+  }
+}
+.pinterest {
+  &:before {
+    content: $pinterest;     
+    color: #bd081c;
+  }
+}
+.viajes-one {
+  &:before {
+    content: $viajes-one; 
+  }
+}
+.entradas {
+  &:before {
+    content: $entradas; 
+  }
+}
+.faq {
+  &:before {
+    content: $faq; 
+  }
+}
+.send {
+  &:before {
+    content: $send;     
+    color: #e6e7e8;
+  }
+}
+.codepen {
+  &:before {
+    content: $codepen; 
+  }
+}
+.repliit {
+  &:before {
+    content: $repliit; 
+  }
+}
+.codesandbox .path1 {
+  &:before {
+    content: $codesandbox-path1;  
+    color: rgb(55, 52, 53);
+  }
+}
+.codesandbox .path2 {
+  &:before {
+    content: $codesandbox-path2;  
+    margin-left: -1em;  
+    color: rgb(24, 24, 24);
+  }
+}
+.github-logo {
+  &:before {
+    content: $github-logo; 
+  }
+}
+.github {
+  &:before {
+    content: $github; 
+  }
+}
+.w3spaces {
+  &:before {
+    content: $w3spaces;     
+    color: #04a96c;
+  }
+}
+.www {
+  &:before {
+    content: $www;     
+    color: #aa1018;
+  }
+}
+.hi5 .path1 {
+  &:before {
+    content: $hi5-path1;  
+    color: rgb(165, 170, 170);
+  }
+}
+.hi5 .path2 {
+  &:before {
+    content: $hi5-path2;  
+    margin-left: -1em;  
+    color: rgb(165, 170, 170);
+  }
+}
+.hi5 .path3 {
+  &:before {
+    content: $hi5-path3;  
+    margin-left: -1em;  
+    color: rgb(165, 170, 170);
+  }
+}
+.hi5 .path4 {
+  &:before {
+    content: $hi5-path4;  
+    margin-left: -1em;  
+    color: rgb(254, 254, 254);
+  }
+}
+.hi5 .path5 {
+  &:before {
+    content: $hi5-path5;  
+    margin-left: -1em;  
+    color: rgb(254, 254, 254);
+  }
+}
+.hi5 .path6 {
+  &:before {
+    content: $hi5-path6;  
+    margin-left: -1em;  
+    color: rgb(254, 254, 254);
+  }
+}
+.hi5 .path7 {
+  &:before {
+    content: $hi5-path7;  
+    margin-left: -1em;  
+    color: rgb(51, 62, 64);
+  }
+}
+.hi5 .path8 {
+  &:before {
+    content: $hi5-path8;  
+    margin-left: -1em;  
+    color: rgb(254, 148, 20);
+  }
+}
+.hi5 .path9 {
+  &:before {
+    content: $hi5-path9;  
+    margin-left: -1em;  
+    color: rgb(132, 139, 140);
+  }
+}
+.like {
+  &:before {
+    content: $like;     
+    color: #aa1018;
+  }
+}
+.twiiter-bird {
+  &:before {
+    content: $twiiter-bird;     
+    color: #aa1018;
+  }
+}
+.instagram .path1 {
+  &:before {
+    content: $instagram-path1;  
+    color: rgb(215, 66, 120);
+  }
+}
+.instagram .path2 {
+  &:before {
+    content: $instagram-path2;  
+    margin-left: -1em;  
+    color: rgb(153, 68, 132);
+  }
+}
+.instagram .path3 {
+  &:before {
+    content: $instagram-path3;  
+    margin-left: -1em;  
+    color: rgb(229, 92, 97);
+  }
+}
+.instagram .path4 {
+  &:before {
+    content: $instagram-path4;  
+    margin-left: -1em;  
+    color: rgb(239, 153, 65);
+  }
+}
+.instagram .path5 {
+  &:before {
+    content: $instagram-path5;  
+    margin-left: -1em;  
+    color: rgb(185, 67, 126);
+  }
+}
+.instagram .path6 {
+  &:before {
+    content: $instagram-path6;  
+    margin-left: -1em;  
+    color: rgb(185, 67, 126);
+  }
+}
+.instagram .path7 {
+  &:before {
+    content: $instagram-path7;  
+    margin-left: -1em;  
+    color: rgb(215, 66, 120);
+  }
+}
+.instagram .path8 {
+  &:before {
+    content: $instagram-path8;  
+    margin-left: -1em;  
+    color: rgb(215, 66, 120);
+  }
+}
+.instagram .path9 {
+  &:before {
+    content: $instagram-path9;  
+    margin-left: -1em;  
+    color: rgb(233, 114, 78);
+  }
+}
+.instagram .path10 {
+  &:before {
+    content: $instagram-path10;  
+    margin-left: -1em;  
+    color: rgb(229, 92, 97);
+  }
+}
+.instagram .path11 {
+  &:before {
+    content: $instagram-path11;  
+    margin-left: -1em;  
+    color: rgb(229, 92, 97);
+  }
+}
+.instagram .path12 {
+  &:before {
+    content: $instagram-path12;  
+    margin-left: -1em;  
+    color: rgb(185, 67, 126);
+  }
+}
+.instagram .path13 {
+  &:before {
+    content: $instagram-path13;  
+    margin-left: -1em;  
+    color: rgb(233, 114, 78);
+  }
+}
+.logo-ciudad-de-mexico {
+  &:before {
+    content: $logo-ciudad-de-mexico; 
+  }
+}
+.logo-morelos {
+  &:before {
+    content: $logo-morelos; 
+  }
+}
+.logo-acapulco {
+  &:before {
+    content: $logo-acapulco; 
+  }
+}
+.logo-puerto-vallarta {
+  &:before {
+    content: $logo-puerto-vallarta; 
+  }
+}
+.avatar-hihello {
+  &:before {
+    content: $avatar-hihello; 
+  }
+}
+.logo-dragvesti-negro {
+  &:before {
+    content: $logo-dragvesti-negro; 
+  }
+}
+.pokebola {
+  &:before {
+    content: $pokebola; 
+  }
+}
+.amazon {
+  &:before {
+    content: $amazon;     
+    color: #f90;
+  }
+}
+.codepen1 {
+  &:before {
+    content: $codepen1; 
+  }
+}
+.css3 {
+  &:before {
+    content: $css3;     
+    color: #1572b6;
+  }
+}
+.gitpod {
+  &:before {
+    content: $gitpod;     
+    color: #1aa6e4;
+  }
+}
+.html5 {
+  &:before {
+    content: $html5;     
+    color: #e34f26;
+  }
+}
+.mastodon {
+  &:before {
+    content: $mastodon;     
+    color: #3088d4;
+  }
+}
+.medium {
+  &:before {
+    content: $medium; 
+  }
+}
+.meetup {
+  &:before {
+    content: $meetup;     
+    color: #ed1c40;
+  }
+}
+.mega {
+  &:before {
+    content: $mega;     
+    color: #d9272e;
+  }
+}
+.logo-geus-bai-bai-cosmeticos {
+  &:before {
+    content: $logo-geus-bai-bai-cosmeticos; 
+  }
+}
+.logo-la-mas-draga-drag-queen .path1 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path1;  
+    color: rgb(252, 216, 232);
+  }
+}
+.logo-la-mas-draga-drag-queen .path2 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path2;  
+    margin-left: -1em;  
+    color: rgb(252, 216, 232);
+  }
+}
+.logo-la-mas-draga-drag-queen .path3 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path3;  
+    margin-left: -1em;  
+    color: rgb(252, 216, 232);
+  }
+}
+.logo-la-mas-draga-drag-queen .path4 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path4;  
+    margin-left: -1em;  
+    color: rgb(252, 216, 232);
+  }
+}
+.logo-la-mas-draga-drag-queen .path5 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path5;  
+    margin-left: -1em;  
+    color: rgb(177, 146, 174);
+  }
+}
+.logo-la-mas-draga-drag-queen .path6 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path6;  
+    margin-left: -1em;  
+    color: rgb(177, 146, 174);
+  }
+}
+.logo-la-mas-draga-drag-queen .path7 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path7;  
+    margin-left: -1em;  
+    color: rgb(222, 229, 92);
+  }
+}
+.logo-la-mas-draga-drag-queen .path8 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path8;  
+    margin-left: -1em;  
+    color: rgb(222, 229, 92);
+  }
+}
+.logo-la-mas-draga-drag-queen .path9 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path9;  
+    margin-left: -1em;  
+    color: rgb(107, 105, 233);
+  }
+}
+.logo-la-mas-draga-drag-queen .path10 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path10;  
+    margin-left: -1em;  
+    color: rgb(107, 105, 233);
+  }
+}
+.logo-la-mas-draga-drag-queen .path11 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path11;  
+    margin-left: -1em;  
+    color: rgb(210, 86, 175);
+  }
+}
+.logo-la-mas-draga-drag-queen .path12 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path12;  
+    margin-left: -1em;  
+    color: rgb(210, 86, 175);
+  }
+}
+.logo-la-mas-draga-drag-queen .path13 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path13;  
+    margin-left: -1em;  
+    color: rgb(210, 86, 175);
+  }
+}
+.logo-la-mas-draga-drag-queen .path14 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path14;  
+    margin-left: -1em;  
+    color: rgb(113, 174, 184);
+  }
+}
+.logo-la-mas-draga-drag-queen .path15 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path15;  
+    margin-left: -1em;  
+    color: rgb(113, 174, 184);
+  }
+}
+.logo-la-mas-draga-drag-queen .path16 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path16;  
+    margin-left: -1em;  
+    color: rgb(113, 174, 184);
+  }
+}
+.logo-la-mas-draga-drag-queen .path17 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path17;  
+    margin-left: -1em;  
+    color: rgb(147, 232, 110);
+  }
+}
+.logo-la-mas-draga-drag-queen .path18 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path18;  
+    margin-left: -1em;  
+    color: rgb(147, 232, 110);
+  }
+}
+.logo-la-mas-draga-drag-queen .path19 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path19;  
+    margin-left: -1em;  
+    color: rgb(229, 19, 214);
+  }
+}
+.logo-la-mas-draga-drag-queen .path20 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path20;  
+    margin-left: -1em;  
+    color: rgb(229, 19, 214);
+  }
+}
+.logo-la-mas-draga-drag-queen .path21 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path21;  
+    margin-left: -1em;  
+    color: rgb(138, 107, 182);
+  }
+}
+.logo-la-mas-draga-drag-queen .path22 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path22;  
+    margin-left: -1em;  
+    color: rgb(138, 107, 182);
+  }
+}
+.logo-la-mas-draga-drag-queen .path23 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path23;  
+    margin-left: -1em;  
+    color: rgb(205, 40, 170);
+  }
+}
+.logo-la-mas-draga-drag-queen .path24 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path24;  
+    margin-left: -1em;  
+    color: rgb(205, 40, 170);
+  }
+}
+.logo-la-mas-draga-drag-queen .path25 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path25;  
+    margin-left: -1em;  
+    color: rgb(104, 136, 203);
+  }
+}
+.logo-la-mas-draga-drag-queen .path26 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path26;  
+    margin-left: -1em;  
+    color: rgb(104, 136, 203);
+  }
+}
+.logo-la-mas-draga-drag-queen .path27 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path27;  
+    margin-left: -1em;  
+    color: rgb(77, 169, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path28 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path28;  
+    margin-left: -1em;  
+    color: rgb(77, 169, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path29 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path29;  
+    margin-left: -1em;  
+    color: rgb(77, 169, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path30 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path30;  
+    margin-left: -1em;  
+    color: rgb(243, 15, 143);
+  }
+}
+.logo-la-mas-draga-drag-queen .path31 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path31;  
+    margin-left: -1em;  
+    color: rgb(243, 15, 143);
+  }
+}
+.logo-la-mas-draga-drag-queen .path32 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path32;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path33 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path33;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path34 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path34;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path35 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path35;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path36 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path36;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path37 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path37;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path38 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path38;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path39 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path39;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path40 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path40;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path41 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path41;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path42 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path42;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path43 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path43;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path44 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path44;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path45 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path45;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path46 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path46;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path47 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path47;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path48 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path48;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path49 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path49;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path50 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path50;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path51 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path51;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path52 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path52;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path53 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path53;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path54 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path54;  
+    margin-left: -1em;  
+    color: rgb(231, 57, 115);
+  }
+}
+.logo-la-mas-draga-drag-queen .path55 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path55;  
+    margin-left: -1em;  
+    color: rgb(22, 213, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path56 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path56;  
+    margin-left: -1em;  
+    color: rgb(22, 213, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path57 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path57;  
+    margin-left: -1em;  
+    color: rgb(22, 213, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path58 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path58;  
+    margin-left: -1em;  
+    color: rgb(22, 213, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path59 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path59;  
+    margin-left: -1em;  
+    color: rgb(22, 213, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path60 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path60;  
+    margin-left: -1em;  
+    color: rgb(22, 213, 231);
+  }
+}
+.logo-la-mas-draga-drag-queen .path61 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path61;  
+    margin-left: -1em;  
+    color: rgb(37, 34, 35);
+  }
+}
+.logo-la-mas-draga-drag-queen .path62 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path62;  
+    margin-left: -1em;  
+    color: rgb(37, 34, 35);
+  }
+}
+.logo-la-mas-draga-drag-queen .path63 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path63;  
+    margin-left: -1em;  
+    color: rgb(84, 230, 204);
+  }
+}
+.logo-la-mas-draga-drag-queen .path64 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path64;  
+    margin-left: -1em;  
+    color: rgb(84, 230, 204);
+  }
+}
+.logo-la-mas-draga-drag-queen .path65 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path65;  
+    margin-left: -1em;  
+    color: rgb(84, 230, 204);
+  }
+}
+.logo-la-mas-draga-drag-queen .path66 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path66;  
+    margin-left: -1em;  
+    color: rgb(84, 230, 204);
+  }
+}
+.logo-la-mas-draga-drag-queen .path67 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path67;  
+    margin-left: -1em;  
+    color: rgb(84, 230, 204);
+  }
+}
+.logo-la-mas-draga-drag-queen .path68 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path68;  
+    margin-left: -1em;  
+    color: rgb(5, 6, 5);
+  }
+}
+.logo-la-mas-draga-drag-queen .path69 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path69;  
+    margin-left: -1em;  
+    color: rgb(5, 6, 5);
+  }
+}
+.logo-la-mas-draga-drag-queen .path70 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path70;  
+    margin-left: -1em;  
+    color: rgb(5, 6, 5);
+  }
+}
+.logo-la-mas-draga-drag-queen .path71 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path71;  
+    margin-left: -1em;  
+    color: rgb(5, 6, 5);
+  }
+}
+.logo-la-mas-draga-drag-queen .path72 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path72;  
+    margin-left: -1em;  
+    color: rgb(5, 6, 5);
+  }
+}
+.logo-la-mas-draga-drag-queen .path73 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path73;  
+    margin-left: -1em;  
+    color: rgb(5, 6, 5);
+  }
+}
+.logo-la-mas-draga-drag-queen .path74 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path74;  
+    margin-left: -1em;  
+    color: rgb(171, 229, 198);
+  }
+}
+.logo-la-mas-draga-drag-queen .path75 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path75;  
+    margin-left: -1em;  
+    color: rgb(148, 145, 209);
+  }
+}
+.logo-la-mas-draga-drag-queen .path76 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path76;  
+    margin-left: -1em;  
+    color: rgb(219, 214, 162);
+  }
+}
+.logo-la-mas-draga-drag-queen .path77 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path77;  
+    margin-left: -1em;  
+    color: rgb(239, 229, 49);
+  }
+}
+.logo-la-mas-draga-drag-queen .path78 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path78;  
+    margin-left: -1em;  
+    color: rgb(217, 134, 166);
+  }
+}
+.logo-la-mas-draga-drag-queen .path79 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path79;  
+    margin-left: -1em;  
+    color: rgb(167, 53, 226);
+  }
+}
+.logo-la-mas-draga-drag-queen .path80 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path80;  
+    margin-left: -1em;  
+    color: rgb(214, 186, 63);
+  }
+}
+.logo-la-mas-draga-drag-queen .path81 {
+  &:before {
+    content: $logo-la-mas-draga-drag-queen-path81;  
+    margin-left: -1em;  
+    color: rgb(5, 6, 5);
+  }
+}
+.logo-dragvesti {
+  &:before {
+    content: $logo-dragvesti; 
+  }
+}
+.logo-dragvesti-blanco {
+  &:before {
+    content: $logo-dragvesti-blanco;     
+    color: #fefefe;
+  }
+}
+.logo-hihello .path1 {
+  &:before {
+    content: $logo-hihello-path1;  
+    color: rgb(0, 0, 0);
+  }
+}
+.logo-hihello .path2 {
+  &:before {
+    content: $logo-hihello-path2;  
+    margin-left: -5.7314453125em;  
+    color: rgb(105, 54, 152);
+  }
+}
+.logo-hihello .path3 {
+  &:before {
+    content: $logo-hihello-path3;  
+    margin-left: -5.7314453125em;  
+    color: rgb(80, 201, 135);
+  }
+}
+.hhm {
+  &:before {
+    content: $hhm;     
+    color: #b00a8c;
+  }
+}
+.xiiber-logo-horizontal-color .path1 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path1;  
+    color: rgb(0, 56, 113);
+  }
+}
+.xiiber-logo-horizontal-color .path2 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path2;  
+    margin-left: -3.345703125em;  
+    color: rgb(0, 56, 113);
+  }
+}
+.xiiber-logo-horizontal-color .path3 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path3;  
+    margin-left: -3.345703125em;  
+    color: rgb(23, 8, 47);
+  }
+}
+.xiiber-logo-horizontal-color .path4 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path4;  
+    margin-left: -3.345703125em;  
+    color: rgb(232, 68, 59);
+  }
+}
+.xiiber-logo-horizontal-color .path5 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path5;  
+    margin-left: -3.345703125em;  
+    color: rgb(0, 77, 253);
+  }
+}
+.xiiber-logo-horizontal-color .path6 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path6;  
+    margin-left: -3.345703125em;  
+    color: rgb(254, 237, 1);
+  }
+}
+.xiiber-logo-horizontal-color .path7 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path7;  
+    margin-left: -3.345703125em;  
+    color: rgb(255, 139, 0);
+  }
+}
+.xiiber-logo-horizontal-color .path8 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path8;  
+    margin-left: -3.345703125em;  
+    color: rgb(118, 7, 137);
+  }
+}
+.xiiber-logo-horizontal-color .path9 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path9;  
+    margin-left: -3.345703125em;  
+    color: rgb(0, 129, 37);
+  }
+}
+.xiiber-logo-horizontal-color .path10 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path10;  
+    margin-left: -3.345703125em;  
+    color: rgb(62, 64, 149);
+  }
+}
+.xiiber-logo-horizontal-color .path11 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path11;  
+    margin-left: -3.345703125em;  
+    color: rgb(63, 46, 100);
+  }
+}
+.xiiber-logo-horizontal-color .path12 {
+  &:before {
+    content: $xiiber-logo-horizontal-color-path12;  
+    margin-left: -3.345703125em;  
+    color: rgb(96, 96, 98);
+  }
+}
+.logo-xiiber-2021c {
+  &:before {
+    content: $logo-xiiber-2021c;     
+    color: #e6e7e8;
+  }
+}
+.xiiber-circular-blanco-azul .path1 {
+  &:before {
+    content: $xiiber-circular-blanco-azul-path1;  
+    color: rgb(254, 254, 254);
+  }
+}
+.xiiber-circular-blanco-azul .path2 {
+  &:before {
+    content: $xiiber-circular-blanco-azul-path2;  
+    margin-left: -1em;  
+    color: rgb(61, 0, 116);
+  }
+}
+.xiiber-circular-blanco-azul .path3 {
+  &:before {
+    content: $xiiber-circular-blanco-azul-path3;  
+    margin-left: -1em;  
+    color: rgb(61, 0, 116);
+  }
+}
+.xiiber-logo-circular-rojo-negro .path1 {
+  &:before {
+    content: $xiiber-logo-circular-rojo-negro-path1;  
+    color: rgb(0, 53, 108);
+  }
+}
+.xiiber-logo-circular-rojo-negro .path2 {
+  &:before {
+    content: $xiiber-logo-circular-rojo-negro-path2;  
+    margin-left: -1em;  
+    color: rgb(0, 53, 108);
+  }
+}
+.xiiber-logo-circular-rojo-negro .path3 {
+  &:before {
+    content: $xiiber-logo-circular-rojo-negro-path3;  
+    margin-left: -1em;  
+    color: rgb(0, 0, 0);
+  }
+}
+.xiiber-recomienda-negro-curvas {
+  &:before {
+    content: $xiiber-recomienda-negro-curvas; 
+  }
+}
+.ico {
+  &:before {
+    content: $ico; 
+  }
+}
+.xiiber-circular {
+  &:before {
+    content: $xiiber-circular; 
+  }
+}
+

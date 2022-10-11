@@ -1,0 +1,476 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+[class^=social--] {
+    position: relative;
+    display: block;
+    font-size: 4vw;
+    color: rgba(255, 255, 255, 0.25);
+    width: 20%;
+    height: 16.75vh;
+    float: left;
+    transition: background 0.5s ease-in-out;
+    background: black;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 90em) {
+    [class^=social--] {
+        font-size: 6vw;
+        width: 25%;
+        height: 12.5625vh;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    [class^=social--] {
+        font-size: 8vw;
+        width: 33.3333%;
+        height: 10.05vh;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    [class^=social--] {
+        font-size: 10vw;
+        width: 50%;
+        height: 6.7006666667vh;
+    }
+}
+
+[class^=social--] i {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+}
+
+[class^=social--] i:nth-of-type(1) {
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: 0;
+}
+
+[class^=social--]:hover {
+    font-size: 18vw;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 40em) {
+    [class^=social--]:hover {
+        font-size: 22vw;
+    }
+}
+
+[class^=social--]:hover i {
+    transition: 0.5s ease-in-out;
+    transform: translate(-50%, -50%) rotate(-22.5deg);
+}
+
+[class^=social--]:hover i:nth-of-type(1) {
+    font-size: 60vw;
+    color: rgba(255, 255, 255, 0);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+[class*=social--facebook] {
+    background: #3b5998;
+    color: #899bc1;
+}
+
+[class*=social--facebook]:hover {
+    background: #4f6aa2;
+}
+
+[class*=social--facebook]:hover {
+    color: #23355b;
+}
+
+[class*=social--twitter] {
+    background: #00aced;
+    color: #66cdf4;
+}
+
+[class*=social--twitter]:hover {
+    background: #1ab4ef;
+}
+
+[class*=social--twitter]:hover {
+    color: #00678e;
+}
+
+[class*=social--gplus] {
+    background: #dd4b39;
+    color: #eb9388;
+}
+
+[class*=social--gplus]:hover {
+    background: #e05d4d;
+}
+
+[class*=social--gplus]:hover {
+    color: #852d22;
+}
+
+[class*=social--youtube] {
+    background: #bb0000;
+    color: #d66666;
+}
+
+[class*=social--youtube]:hover {
+    background: #c21a1a;
+}
+
+[class*=social--youtube]:hover {
+    color: #700000;
+}
+
+[class*=social--linkedin] {
+    background: #007bb6;
+    color: #66b0d3;
+}
+
+[class*=social--linkedin]:hover {
+    background: #1a88bd;
+}
+
+[class*=social--linkedin]:hover {
+    color: #004a6d;
+}
+
+[class*=social--instagram] {
+    background: #3f729b;
+    color: #8caac3;
+}
+
+[class*=social--instagram]:hover {
+    background: #5280a5;
+}
+
+[class*=social--instagram]:hover {
+    color: #26445d;
+}
+
+[class*=social--pinterest] {
+    background: #cb2027;
+    color: #e0797d;
+}
+
+[class*=social--pinterest]:hover {
+    background: #d0363d;
+}
+
+[class*=social--pinterest]:hover {
+    color: #7a1317;
+}
+
+[class*=social--vine] {
+    background: #00bf8f;
+    color: #66d9bc;
+}
+
+[class*=social--vine]:hover {
+    background: #1ac59a;
+}
+
+[class*=social--vine]:hover {
+    color: #007356;
+}
+
+[class*=social--flickr] {
+    background: #ff0084;
+    color: #ff66b5;
+}
+
+[class*=social--flickr]:hover {
+    background: #ff1a90;
+}
+
+[class*=social--flickr]:hover {
+    color: #99004f;
+}
+
+[class*=social--tumblr] {
+    background: #32506d;
+    color: #8496a7;
+}
+
+[class*=social--tumblr]:hover {
+    background: #47627c;
+}
+
+[class*=social--tumblr]:hover {
+    color: #1e3041;
+}
+
+[class*=social--vk] {
+    background: #45668e;
+    color: #8fa3bb;
+}
+
+[class*=social--vk]:hover {
+    background: #587599;
+}
+
+[class*=social--vk]:hover {
+    color: #293d55;
+}
+
+[class*=social--foursquare] {
+    background: #0072b1;
+    color: #66aad0;
+}
+
+[class*=social--foursquare]:hover {
+    background: #1a80b9;
+}
+
+[class*=social--foursquare]:hover {
+    color: #00446a;
+}
+
+[class*=social--dribbble] {
+    background: #ea4c89;
+    color: #f294b8;
+}
+
+[class*=social--dribbble]:hover {
+    background: #ec5e95;
+}
+
+[class*=social--dribbble]:hover {
+    color: #8c2e52;
+}
+
+[class*=social--behance] {
+    background: #1769ff;
+    color: #74a5ff;
+}
+
+[class*=social--behance]:hover {
+    background: #2e78ff;
+}
+
+[class*=social--behance]:hover {
+    color: #0e3f99;
+}
+
+[class*=social--digg] {
+    background: #000000;
+    color: #666666;
+}
+
+[class*=social--digg]:hover {
+    background: #1a1a1a;
+}
+
+[class*=social--digg]:hover {
+    color: black;
+}
+
+[class*=social--github] {
+    background: #333333;
+    color: #858585;
+}
+
+[class*=social--github]:hover {
+    background: #474747;
+}
+
+[class*=social--github]:hover {
+    color: #1f1f1f;
+}
+
+[class*=social--reddit] {
+    background: #5f99cf;
+    color: #9fc2e2;
+}
+
+[class*=social--reddit]:hover {
+    background: #6fa3d4;
+}
+
+[class*=social--reddit]:hover {
+    color: #395c7c;
+}
+
+[class*=social--skype] {
+    background: #00aff0;
+    color: #66cff6;
+}
+
+[class*=social--skype]:hover {
+    background: #1ab7f2;
+}
+
+[class*=social--skype]:hover {
+    color: #006990;
+}
+
+[class*=social--spotify] {
+    background: #7ab800;
+    color: #afd466;
+}
+
+[class*=social--spotify]:hover {
+    background: #87bf1a;
+}
+
+[class*=social--spotify]:hover {
+    color: #496e00;
+}
+
+[class*=social--yahoo] {
+    background: #400191;
+    color: #8c67bd;
+}
+
+[class*=social--yahoo]:hover {
+    background: #531a9c;
+}
+
+[class*=social--yahoo]:hover {
+    color: #260157;
+}
+
+[class*=social--yelp] {
+    background: #af0606;
+    color: #cf6a6a;
+}
+
+[class*=social--yelp]:hover {
+    background: #b71f1f;
+}
+
+[class*=social--yelp]:hover {
+    color: #690404;
+}
+
+[class*=social--lastfm] {
+    background: #c3000d;
+    color: #db666e;
+}
+
+[class*=social--lastfm]:hover {
+    background: #c91a25;
+}
+
+[class*=social--lastfm]:hover {
+    color: #750008;
+}
+
+[class*=social--twitch] {
+    background: #6441a5;
+    color: #a28dc9;
+}
+
+[class*=social--twitch]:hover {
+    background: #7454ae;
+}
+
+[class*=social--twitch]:hover {
+    color: #3c2763;
+}
+
+[class*=social--soundcloud] {
+    background: #ff8800;
+    color: #ffb866;
+}
+
+[class*=social--soundcloud]:hover {
+    background: #ff941a;
+}
+
+[class*=social--soundcloud]:hover {
+    color: #995200;
+}
+
+[class*=social--stumbleupon] {
+    background: #eb4924;
+    color: #f3927c;
+}
+
+[class*=social--stumbleupon]:hover {
+    background: #ed5b3a;
+}
+
+[class*=social--stumbleupon]:hover {
+    color: #8d2c16;
+}
+
+[class*=social--trello] {
+    background: #256a92;
+    color: #7ca6be;
+}
+
+[class*=social--trello]:hover {
+    background: #3b799d;
+}
+
+[class*=social--trello]:hover {
+    color: #164058;
+}
+
+[class*=social--xing] {
+    background: #026466;
+    color: #67a2a3;
+}
+
+[class*=social--xing]:hover {
+    background: #1b7475;
+}
+
+[class*=social--xing]:hover {
+    color: #013c3d;
+}
+
+[class*=social--dropbox] {
+    background: #007ee5;
+    color: #66b2ef;
+}
+
+[class*=social--dropbox]:hover {
+    background: #1a8be8;
+}
+
+[class*=social--dropbox]:hover {
+    color: #004c89;
+}
+
+[class*=social--android] {
+    background: #a4c639;
+    color: #c8dd88;
+}
+
+[class*=social--android]:hover {
+    background: #adcc4d;
+}
+
+[class*=social--android]:hover {
+    color: #627722;
+}
+
+[class*=social--delicious] {
+    background: #3399ff;
+    color: #85c2ff;
+}
+
+[class*=social--delicious]:hover {
+    background: #47a3ff;
+}
+
+[class*=social--delicious]:hover {
+    color: #1f5c99;
+}

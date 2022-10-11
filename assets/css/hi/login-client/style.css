@@ -1,0 +1,324 @@
+html {
+  min-height: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1.375;
+  height: 100%;
+  min-height: 100%;
+  background: white;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  background: #121212;
+}
+
+h4, .h4 {
+  font-size: 2.25rem;
+}
+
+.fs-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  transition: 800ms all cubic-bezier(1, 0.01, 0.73, 1);
+  -webkit-transform: scaley(0) translateZ(0);
+  transform: scaley(0) translateZ(0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.login-section, .login-section .section1, .login-section .section2, .login-side {
+  opacity: 0;
+  -webkit-transform: translatey(-50px) translateZ(0);
+  transform: translatey(-50px) translateZ(0);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.login-side {
+  transition: 800ms all cubic-bezier(0.4, 0, 0.2, 1) 800ms;
+}
+
+.login-section {
+  transition: 800ms all cubic-bezier(0.4, 0, 0.2, 1) 1650m;
+}
+
+.login-section .section1 {
+  transition: 800ms all cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+}
+
+.login-section .section2 {
+  transition: 800ms all cubic-bezier(0.4, 0, 0.2, 1) 1150ms;
+}
+
+.login-content {
+  transition: 800ms all cubic-bezier(0.4, 0, 0.2, 1) 800ms;
+  opacity: 0;
+  -webkit-transform: scalex(1) translateZ(0) translatex(100%);
+  transform: scalex(1) translateZ(0) translatex(100%);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  overflow: hidden;
+}
+
+.login-bg {
+  background-image: url();
+  background-image: url();
+  background-image: url();
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f849f1e6-b991-4b89-bd9b-7b86ae209054/d7xln1o-18120bdb-785a-4ea2-9fc3-8b291bf17448.png/v1/fill/w_1024,h_576,q_80,strp/casa_de_goku_dragon_ball_by_lwisf3rxd_d7xln1o-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvZjg0OWYxZTYtYjk5MS00Yjg5LWJkOWItN2I4NmFlMjA5MDU0XC9kN3hsbjFvLTE4MTIwYmRiLTc4NWEtNGVhMi05ZmMzLThiMjkxYmYxNzQ0OC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Tf9l3YCZG51hiAZJFvLPsK7IwUhdH5nT9sH7iQJlTF4);
+  /*background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f849f1e6-b991-4b89-bd9b-7b86ae209054/d7ggncj-f6f2200e-a4a9-4902-bd21-9291c73da441.png/v1/fill/w_622,h_350,q_70,strp/kaiosama_mundo_dragon_ball_z_by_lwisf3rxd_d7ggncj-350t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvZjg0OWYxZTYtYjk5MS00Yjg5LWJkOWItN2I4NmFlMjA5MDU0XC9kN2dnbmNqLWY2ZjIyMDBlLWE0YTktNDkwMi1iZDIxLTkyOTFjNzNkYTQ0MS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.y4AGyLP16p1VUN8fbwf4hkwyp_FxhqhKppgDteQwHEI);*/
+  /* 700x1050 https://s3-us-west-2.amazonaws.com/s.cdpn.io/143797/morning.jpg */
+  background-color: #045c8c;
+  background-blend-mode: luminosity;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 1;
+  -webkit-transform: translate(200px, 0px) translateZ(0) scale(1.3);
+  transform: translate(200px, 0px) translateZ(0) scale(1.4);
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  transition: 1750ms all cubic-bezier(0.4, 0, 0.2, 1) 600ms;
+}
+
+.fs-close {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  line-height: 1.05;
+  font-size: 28px;
+  color: #b1b3b3;
+  opacity: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transform: scale(0) translateZ(0);
+  transform: scale(0) translateZ(0);
+  transition: 250ms all cubic-bezier(0.4, 0, 0.2, 1) 1200ms;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  z-index: 1;
+}
+
+.fs-modal.fs-activate {
+  -webkit-transform: scaley(1) translateZ(0);
+  transform: scaley(1) translateZ(0);
+  opacity: 1;
+}
+
+.fs-modal.fs-activate .login-content {
+  -webkit-transform: scaley(1) translateZ(0);
+  transform: scaley(1) translateZ(0);
+  opacity: 1;
+}
+
+.fs-modal.fs-activate .login-section, .fs-modal.fs-activate .login-section .section2, .fs-modal.fs-activate .login-section .section1,
+.fs-modal.fs-activate .login-side {
+  -webkit-transform: scaley(1) translatey(0) translateZ(0);
+  transform: scaley(1) translatey(0) translateZ(0);
+  opacity: 1;
+}
+
+.fs-modal.fs-activate .login-bg {
+  -webkit-transform: translate(0px, 0px) translateZ(0) scale(1);
+  transform: translate(0px, 0px) translateZ(0) scale(1);
+  opacity: 0.2;
+}
+
+/*.fs-modal.fs-reverse, .fs-modal.fs-reverse .login-section, .fs-reverse.fs-activate .login-section .section2, .fs-modal.fs-reverse .login-section .section1 ,
+.fs-modal.fs-reverse .login-side, .fs-modal.fs-reverse .login-bg, .fs-modal.fs-reverse .fs-close {
+  transition: 400ms all cubic-bezier(0.4, 0, 0.2, 1) ;
+  opacity:0;
+
+} */
+.fs-modal.fs-reverse {
+  transition: 800ms all cubic-bezier(1, 0, 0.73, 1);
+  transform: translate(0, -100%);
+  -webkit-transform: translate(0, -100%);
+}
+
+.fs-modal.fs-activate .fs-close {
+  -webkit-transform: scale(1) translateZ(0);
+  transform: scale(1) translateZ(0);
+  opacity: 1;
+}
+
+.fs-close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  line-height: 1.05;
+  font-size: 28px;
+  color: #b1b3b3;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transform: scale(0) translateZ(0);
+  transform: scale(0) translateZ(0);
+  transition: 0.25s all cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  z-index: 1;
+}
+
+.login-modal .modal-dialog,
+[id^=event-modal] .modal-dialog {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.login-modal .modal-content,
+[id^=event-modal] .modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login-modal .modal-body,
+[id^=event-modal] .modal-body {
+  width: 100vw;
+  padding: 0;
+}
+
+.login-modal .login-side,
+.login-modal .login-content,
+[id^=event-modal] .login-side,
+[id^=event-modal] .login-content {
+  width: 50%;
+}
+
+.login-modal .login-content {
+  background: #254a5d;
+}
+
+.login-modal .form-group {
+  margin-bottom: 40px;
+}
+
+.login-modal .login-logo {
+  max-width: 200px;
+  margin-bottom: 50px;
+}
+
+.login-modal input:focus {
+  color: #101820;
+}
+
+.login-modal .forgot-password {
+  margin-top: 30px;
+  display: block;
+  color: #b1b3b3;
+}
+
+.login-content {
+  color: #fff;
+}
+
+.login-content .flex-child {
+  flex: 0 0 50%;
+  height: 50%;
+  width: 100%;
+}
+
+.login-content .flex-child:first-of-type {
+  border-bottom: 1px solid white;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .login-content {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .login-modal .login-side,
+.login-modal .login-content {
+    width: 100%;
+    padding-top: 60px;
+  }
+
+  #event-modal .close {
+    position: fixed;
+    color: #101820;
+  }
+}
+<style> /*##045c8c; #e27220 #000*/
+.rounded-pulse-button {
+  position: relative;
+  /*display: inline-block;*/
+  display: block;
+  width: 100% !important;
+  cursor: pointer;
+  padding: 15px 40px;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+  border-radius: 100px;
+  border: none;
+  background-color: #045c8c;  
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+.rounded-pulse-button:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: #1e658b; 
+  transition: all 0.4s;
+  z-index: -1;
+}
+.rounded-pulse-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.rounded-pulse-button:hover:after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.rounded-pulse-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+</style>

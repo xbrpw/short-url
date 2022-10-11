@@ -1,0 +1,85 @@
+
+body {
+  background-color: #e0f2f1;
+}
+
+form p {
+  font-size: 120%;
+}
+
+.ctrlqHeaderMast {
+  height: 278px;
+  background: #009688;
+}
+
+.ctrlqFormContent {
+  color: rgba(0,0,0,.87);
+  padding: 20px 35px
+}
+
+.ctrlqFormContentWrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column
+}
+
+.ctrlqAccent {
+  background-color: #a7ffeb;
+  height: 8px;
+}
+.ctrlqCenteredContent {
+  margin: auto;
+  width: 600px; 
+}
+.ctrlqFormCard {
+  background-color: #fff;
+  margin-bottom: 48px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+  word-wrap: break-word
+}
+
+.ctrlqFormCard:first-of-type {
+  margin-top: -100px
+}
+
+.ctrlqHeaderTitle {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 34px;
+  line-height: 135%;
+  max-width: 100%;
+  min-width: 0%;
+  margin-bottom: 22px
+}
+
+@media (max-width: 660px) {
+  .ctrlqHeaderMast {
+    height: 122px;
+  }
+  .ctrlqFormCard:first-of-type {
+    margin-top: -50px;
+  }
+
+  .ctrlqCenteredContent {
+    width: 90%;
+  }
+}
+
+div.error {
+  position: relative;
+  top: -1rem;
+  left: 0rem;
+  font-size: 0.8rem;
+  color: #FF4081;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}

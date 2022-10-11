@@ -1,0 +1,117 @@
+<div id="placaName">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:500);
+        @import url(https://fonts.googleapis.com/css?family=Teko:700);
+        .placaName {
+            font-family: 'Raleway', Arial, sans-serif;
+            position: relative;
+            display: inline-block;
+            color: #bdbdbd;
+            margin: 60px 20px;
+            max-width: 285px;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            line-height: 30px;
+        }
+        
+        .placaName h1,
+        .placaName h2 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+        
+        .placaName h1 {
+            font-family: 'Teko', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 54px;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+            line-height: 27px;
+        }
+        
+        .placaName h2 {
+            background-color: #bdbdbd;
+            color: #212121;
+            display: inline-block;
+            font-size: 0.6em;
+            font-weight: 700;
+            line-height: 18px;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        .placaName h2:before,
+        .placaName h2:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 2px;
+            border-width: 9px 5px;
+            border-style: solid;
+            opacity: 0.8;
+        }
+        
+        .placaName h2:before {
+            right: 100%;
+            border-color: #bdbdbd #bdbdbd #bdbdbd transparent;
+        }
+        
+        .placaName h2:after {
+            left: 100%;
+            border-color: #bdbdbd transparent #bdbdbd #bdbdbd;
+        }
+        
+        .placaName p {
+            margin: 0;
+            display: inline-block;
+            position: relative;
+            text-transform: uppercase;
+        }
+        
+        .placaName p:before,
+        .placaName p:after {
+            position: absolute;
+            height: 2px;
+            content: '';
+            width: 30px;
+            top: 50%;
+            border-top: 2px solid #bdbdbd;
+            border-bottom: 2px solid #bdbdbd;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            line-height: 20px;
+        }
+        
+        .placaName p:before {
+            left: -35px;
+        }
+        
+        .placaName p:after {
+            right: -35px;
+        }
+        
+        .placaName i {
+            font-size: 22px;
+            line-height: 36px;
+        }
+        /* Demo purposes only */
+        
+        body {
+            background-color: #212121;
+            text-align: center;
+        }
+    </style>
+
+    <div class="placaName">
+        <h1>Luis Angel</h1>
+        <p>Maciel Padilla</p><br/>
+        <h2>Est. 1987</h2><br/><i class="ion-star"></i>
+    </div>
+
+    <!-- partial -->
+</div>

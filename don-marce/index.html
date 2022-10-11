@@ -3,255 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>reproducir y parar musica</title>
+    <title></title>
 
     <link rel="stylesheet" href="./style.css">
-    <style>
-        /* The Modal (background) */
-        
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
-        }
-        /* Modal Content */
-        
-        .modal-content {
-            position: relative;
-            background-color: #000000;
-            margin: auto;
-            padding: 0;
-            width: 90%;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-        }
-        /* The Close Button */
-        
-        .close {
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: #999;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        .mySlides {
-            display: none;
-        }
-        
-        .cursor {
-            cursor: pointer;
-        }
-        /* Next & previous buttons */
-        
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-        /* Position the "next button" to the right */
-        
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        /* On hover, add a black background color with a little bit see-through */
-        
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        /* Number text (1/3 etc) */
-        
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-        
-        img {
-            margin-bottom: -4px;
-        }
-        
-        .caption-container {
-            text-align: center;
-            background-color: black;
-            padding: 2px 16px;
-            color: white;
-        }
-        
-        .demo {
-            opacity: 0.6;
-        }
-        
-        .active,
-        .demo:hover {
-            opacity: 1;
-        }
-        
-        img.hover-shadow {
-            transition: 0.3s;
-        }
-        
-        .hover-shadow:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        
-        .border {
-            border-radius: 5%;
-        }
-        
-        .box-shadow-pink {
-            box-shadow: 0 4px 8px 0 rgba(198, 17, 204, 0.432), 0 6px 20px 0 rgba(255, 0, 144, 0.288)
-        }
-    </style>
-    <Style>
-        .responsive {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-        }
-    </Style>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        .header {
-            text-align: center;
-            padding: 32px;
-        }
-        
-        .row {
-            display: -ms-flexbox;
-            /* IE 10 */
-            display: flex;
-            -ms-flex-wrap: wrap;
-            /* IE 10 */
-            flex-wrap: wrap;
-            padding: 0 4px;
-        }
-        /* Create two equal columns that sits next to each other */
-        
-        .column {
-            -ms-flex: 50%;
-            /* IE 10 */
-            flex: 50%;
-            padding: 0 4px;
-        }
-        
-        .column img {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            vertical-align: middle;
-        }
-        /* Style the buttons */
-        
-        .btn {
-            border: none;
-            outline: none;
-            padding: 10px 16px;
-            background-color: #f1f1f1;
-            cursor: pointer;
-            font-size: 18px;
-        }
-        
-        .btn:hover {
-            background-color: #ddd;
-        }
-        
-        .btn.active {
-            background-color: #666;
-            color: white;
-        }
-        
-        .image-wrapper {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            vertical-align: middle;
-            /*max-width: 400px;*/
-            background: #fff;
-            padding: 5px;
-            box-shadow: 2px 2px 8px #aaa;
-            position: relative;
-        }
-        
-        .image-wrapper:before,
-        .image-wrapper:after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        
-        .image-wrapper:before {
-            width: 130px;
-            height: 130px;
-            z-index: 1;
-            /* FF3.6+ */
-            background: -moz-linear-gradient(45deg, rgba(238, 102, 51, 0) 0%, rgba(238, 102, 51, 0) 49.9%, #ee6633 50%, #ee6633 74.9%, rgba(238, 102, 51, 0) 75%, rgba(238, 102, 51, 0) 100%);
-            /* Chrome10+,Safari5.1+ */
-            background: -webkit-linear-gradient(45deg, rgba(238, 102, 51, 0) 0%, rgba(238, 102, 51, 0) 49.9%, #ee6633 50%, #ee6633 74.9%, rgba(238, 102, 51, 0) 75%, rgba(238, 102, 51, 0) 100%);
-            /* Opera 11.10+ */
-            background: -o-linear-gradient(45deg, rgba(238, 102, 51, 0) 0%, rgba(238, 102, 51, 0) 49.9%, #ee6633 50%, #ee6633 74.9%, rgba(238, 102, 51, 0) 75%, rgba(238, 102, 51, 0) 100%);
-            /* IE10+ */
-            background: -ms-linear-gradient(45deg, rgba(238, 102, 51, 0) 0%, rgba(238, 102, 51, 0) 49.9%, #ee6633 50%, #ee6633 74.9%, rgba(238, 102, 51, 0) 75%, rgba(238, 102, 51, 0) 100%);
-            /* W3C */
-            background: linear-gradient(45deg, rgba(238, 102, 51, 0) 0%, rgba(238, 102, 51, 0) 49.9%, #ee6633 50%, #ee6633 74.9%, rgba(238, 102, 51, 0) 75%, rgba(238, 102, 51, 0) 100%);
-        }
-        
-        .image-wrapper:after {
-            content: attr(data-ribbon);
-            width: 130px;
-            height: 130px;
-            z-index: 1;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-            top: 32.5px;
-            right: 32.5px;
-            color: #fff;
-            text-align: center;
-            font-size: 20px;
-            line-height: 0;
-            text-shadow: 1px 1px 1px #7e2a0a;
-        }
-    </style>
+
     <script src="https://luisangelmaciel.github.io/js/lazysizes.min.js" rel="preload " as="script " async charset="utf-8 "></script>
 
 </head>
@@ -272,32 +27,43 @@
                     <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_sunburst.png'>
                 </div>
                 <div class='loader'>
-                    <div class='text'>
-                        <span>l</span>
-                        <span>u</span>
-                        <span>i</span>
-                        <span>s</span>
+                    <div class='text con-una-sombra-negra-en-el-texto'>
+                        <span>D</span>
+                        <span>o</span>
+                        <span>n</span>
                         <span>&nbsp</span>
-                        <div class='s'>
-                            <span>m</span>
+                        <span>P</span>
+                        <span>A</span>
+                        <span>D</span>
+                        <span>R</span>
+                        <span>E</span><br>
+                        <span>d</span>
+                        <span>e</span>
+                        <span>&nbsp</span>
+                        <div class=''> <span>D</span>
+                            <span>o</span>
+                            <span>n</span>
+                            <span>&nbsp</span>
+                            <span>M</span>
                             <span>a</span>
+                            <span>r</span>
                             <span>c</span>
-                            <span>i</span>
                             <span>e</span>
                             <span>l</span>
+                            <span>o</span>
                         </div>
                     </div>
                     <p>
-                        <button>Continuar</button>
+                        <button style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 24px;" class='con-una-sombra-negra-en-el-texto'>Bienvenido,<br> pase usted</button>
+                        <style>.con-una-sombra-negra-en-el-texto {color: white;text-shadow: 2px 2px 4px #000000;}</style>
+
                     </p>
                 </div>
             </div>
         </div>
 
         <!-- Header -->
-        <div class="header" id="myHeader">
-            <h1>Image Grid</h1>
-            <p>Click on the buttons to change the grid view.</p>
+        <div class="header" id="myHeader">            
             <button class="btn" onclick="one()">1</button>
             <button class="btn active" onclick="two()">2</button>
             <button class="btn" onclick="four()">4</button>
@@ -310,22 +76,22 @@
 
 
             <div class="column">
-                <div class="image-wrapper" data-ribbon="Psylor">
+                <div class="image-wrapper" data-ribbon="Padre">
                     <img src="daddy (1).webp" alt="random image" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
                 </div>
             </div>
             <div class="column">
-                <div class="image-wrapper" data-ribbon="Psylor">
+                <div class="image-wrapper" data-ribbon="Abuelo">
                     <img src="daddy (2).webp" alt="random image" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
                 </div>
             </div>
             <div class="column">
-                <div class="image-wrapper" data-ribbon="Psylor">
+                <div class="image-wrapper" data-ribbon="Esposo">
                     <img src="daddy (3).webp" alt="random image" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
                 </div>
             </div>
             <div class="column">
-                <div class="image-wrapper" data-ribbon="Psylor">
+                <div class="image-wrapper" data-ribbon="Compadre">
                     <img src="daddy (4).webp" alt="random image" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
                 </div>
             </div>

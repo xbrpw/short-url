@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Libros recomendados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <style>
+    :root {
+        --columns: 3;
+        --yellow: rgba(238, 188, 31, 1);
+        --red: rgb(223, 74, 29);
+        --pink: rgba(255, 82, 145, 1);
+        --blue: rgba(64, 98, 187, 1);
+        --green: rgba(6, 141, 126, 1);
+        --white: rgba(248, 255, 229, 1);
+    }
+
+    body {
+        background-color: #182028;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(var(--columns), 1fr);
+        margin: 200px -40px;
+    }
+
+    li {
+        grid-column-end: span 2;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%;
+        margin-top: -50%;
+    }
+
+    li:nth-child(2n) {
+        grid-column-start: 2;
+    }
+
+    li::before,
+    li::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: 50% 100%, 50% 100%;
+        background-position: left, right;
+    }
+
+    li::before {
+        z-index: -10;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        background-repeat: no-repeat;
+        background-image: linear-gradient(-45deg, var(--red) 53.5%, var(--white) 53.5%, var(--white) 60%, var(--red) 60%), linear-gradient(45deg, var(--red) 53.5%, var(--white) 53.5%, var(--white) 60%, var(--red) 60%);
+    }
+
+    li::after {
+        clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%, 80% 50%);
+        -webkit-clip-path: polygon(100% 50%, 50% 100%, 0 50%, 20% 50%, 50% 80%, 80% 50%);
+        background-repeat: no-repeat;
+        background-image: linear-gradient(45deg, var(--red) 40%, var(--white) 40%), linear-gradient(-45deg, var(--red) 40%, var(--white) 40%);
+    }
+
+    li:nth-child(2n)::before {
+        background-image: linear-gradient(-45deg, var(--pink) 53.5%, var(--blue) 53.5%, var(--blue) 60%, var(--pink) 60%), linear-gradient(45deg, var(--pink) 53.5%, var(--blue) 53.5%, var(--blue) 60%, var(--pink) 60%);
+    }
+
+    li:nth-child(2n)::after {
+        background-image: linear-gradient(45deg, var(--pink) 40%, var(--blue) 40%), linear-gradient(-45deg, var(--pink) 40%, var(--blue) 40%);
+    }
+
+    li:nth-child(5n)::before {
+        background-image: linear-gradient(-45deg, var(--green) 53.5%, var(--pink) 53.5%, var(--pink) 60%, var(--green) 60%), linear-gradient(45deg, var(--green) 53.5%, var(--pink) 53.5%, var(--pink) 60%, var(--green) 60%);
+    }
+
+    li:nth-child(5n)::after {
+        background-image: linear-gradient(45deg, var(--green) 40%, var(--pink) 40%), linear-gradient(-45deg, var(--green) 40%, var(--pink) 40%);
+    }
+
+    li:nth-child(7n)::before,
+    li:nth-child(7n-4)::before {
+        background-image: linear-gradient(-45deg, var(--blue) 53.5%, var(--white) 53.5%, var(--white) 60%, var(--blue) 60%), linear-gradient(45deg, var(--blue) 53.5%, var(--white) 53.5%, var(--white) 60%, var(--blue) 60%);
+    }
+
+    li:nth-child(7n)::after,
+    li:nth-child(7n-4)::after {
+        background-image: linear-gradient(45deg, var(--blue) 40%, var(--white) 40%), linear-gradient(-45deg, var(--blue) 40%, var(--white) 40%);
+    }
+
+    li:nth-child(9n)::before,
+    li:nth-child(9n-5)::before {
+        background-image: linear-gradient(-45deg, var(--white) 53.5%, var(--green) 53.5%, var(--green) 60%, var(--white) 60%), linear-gradient(45deg, var(--white) 53.5%, var(--green) 53.5%, var(--green) 60%, var(--white) 60%);
+    }
+
+    li:nth-child(9n)::after,
+    li:nth-child(9n-5)::after {
+        background-image: linear-gradient(45deg, var(--white) 40%, var(--green) 40%), linear-gradient(-45deg, var(--white) 40%, var(--green) 40%);
+    }
+
+    img {
+        position: absolute;
+        width: 43%;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-60%);
+        box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.3);
+        transition-property: transform;
+        transition-duration: .3s;
+    }
+
+    img:hover {
+        transform: translateX(-40%) translateY(-70%) rotatez(25deg);
+    }
+
+    @media (min-width:450px) {
+        ul {
+            margin: 190px 40px;
+        }
+    }
+
+    @media (min-width:600px) {
+        :root {
+            --columns: 5;
+        }
+        li:nth-child(2n) {
+            grid-column-start: auto;
+        }
+        li:nth-child(4n-1) {
+            grid-column-start: 2;
+        }
+    }
+
+    @media (min-width:900px) {
+        :root {
+            --columns: 7;
+        }
+        li:nth-child(4n-1) {
+            grid-column-start: auto;
+        }
+        li:nth-child(6n-2) {
+            grid-column-start: 2;
+        }
+    }
+
+    @media (min-width:1200px) {
+        :root {
+            --columns: 9;
+        }
+        li:nth-child(6n-2) {
+            grid-column-start: auto;
+        }
+        li:nth-child(8n-3) {
+            grid-column-start: 2;
+        }
+    }
+
+    @media (min-width:1500px) {
+        :root {
+            --columns: 11;
+        }
+        li:nth-child(8n-3) {
+            grid-column-start: auto;
+        }
+        li:nth-child(10n-4) {
+            grid-column-start: 2;
+        }
+    }
+
+    @media (min-width:1800px) {
+        :root {
+            --columns: 13;
+        }
+        li:nth-child(10n-4) {
+            grid-column-start: auto;
+        }
+        li:nth-child(12n-5) {
+            grid-column-start: 2;
+        }
+    }
+
+    @media (min-width:2100px) {
+        :root {
+            --columns: 15;
+        }
+        li:nth-child(12n-5) {
+            grid-column-start: auto;
+        }
+        li:nth-child(14n-6) {
+            grid-column-start: 2;
+        }
+    }</style>
+
+</head>
+
+<body>
+    <!-- Responsive CSS Grid - Books -->
+    <ul>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book10.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book02.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book03.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book04.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book05.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book06.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book07.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book08.jpg" alt="eBooks"></li>
+        <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/book09.jpg" alt="eBooks"></li>
+
+    </ul>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script>
+</body>
+
+</html>

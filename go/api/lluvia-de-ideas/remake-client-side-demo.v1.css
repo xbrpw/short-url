@@ -1,0 +1,125 @@
+body.dark {
+  color: #f8f8f2;
+  background-color: #212529;
+}
+
+body.dark .remake-menu {
+  background-color: transparent;
+}
+
+.remake-menu {
+  display: flex;
+  margin: 0 -1.5rem 0 -1.5rem;
+  padding: .75rem 1rem;
+  background-color: #1d2652;
+}
+
+.container .remake-menu {
+  margin: 0;
+}
+
+.app-data {
+  padding: 0 1.5rem;
+}
+
+.container .app-data {
+  padding: 0 3rem;
+}
+
+.remake-json {
+  white-space: pre;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  padding: 1rem 0 4rem;
+  font-size: 18px;
+}
+
+.remake-json .green-code {
+  color: #50fa7b;
+}
+
+.cool-button {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  align-content: center;
+  align-items: center;
+  background-color: #1a73e8;
+  background-position: 0 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  height: 36px;
+  justify-content: space-around;
+  letter-spacing: .5px;
+  margin: 0;
+  min-width: 72px;
+  overflow: hidden;
+  padding: 0px 14px 1px;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizelegibility;
+  text-shadow: 1px 1px 0 #1567d3;
+  transition: background-color .2s, box-shadow .2s, color .2s;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+
+.cool-button--secondary {
+  color: #343a40;
+  background-color: #fff;
+  text-shadow: none;
+}
+
+.cool-button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.cool-button:active {
+  background-color: #174ea6;
+  box-shadow: rgba(60,64,67,.3) 0 1px 2px 0,rgba(60,64,67,.15) 0 1px 3px 1px;
+  outline: 5px auto -webkit-focus-ring-color;
+  text-shadow: none;
+}
+
+.cool-button--secondary:active {
+  background-color: #e1e6eb;
+}
+
+.cool-button:hover {
+  background-color: #185abc;
+  box-shadow: rgba(60,64,67,.3) 0 1px 2px 0,rgba(60,64,67,.15) 0 1px 3px 1px;
+  outline: 0;
+  text-shadow: none;
+}
+
+.cool-button--secondary:hover {
+  background-color: #e1e6eb;
+}
+
+.cool-button:focus {
+  background-color: #185abc;
+  box-shadow: #aecbfa 0 0 0 2px;
+  outline: 0;
+  text-shadow: none;
+  transition: none 0s;
+}
+
+.cool-button--secondary:focus {
+  background-color: #e1e6eb;
+}
+
+.remake-menu .cool-button {
+  margin-left: 1rem;
+}
+
+.remake-menu .cool-button:first-child {
+  margin-left: auto;
+}

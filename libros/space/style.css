@@ -1,0 +1,335 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+body {
+  /*for demo only - 
+  this should really be applied to 
+  your container div*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  position: fixed;
+  padding: 0em;
+  background-color: #999;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.75em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*base style for book and chrome - no magic yet */
+.book-reader {
+  /*ios hacks*/
+}
+.book-reader header, .book-reader nav {
+  user-select: none;
+}
+.book-reader header {
+  height: 3.5em;
+  -moz-box-shadow: 0 0.25em rgba(0, 0, 0, 0.2), inset 0 -1px rgba(0, 0, 0, 0.6), inset 0 -2px rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0 0.25em rgba(0, 0, 0, 0.2), inset 0 -1px rgba(0, 0, 0, 0.6), inset 0 -2px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0.25em rgba(0, 0, 0, 0.2), inset 0 -1px rgba(0, 0, 0, 0.6), inset 0 -2px rgba(255, 255, 255, 0.15);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(99%, rgba(0, 0, 0, 0.4)));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 99%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 99%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 99%);
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  background-color: #555;
+}
+.book-reader header a {
+  line-height: 3.5em;
+  text-decoration: none;
+  display: inline-block;
+  color: #ccc;
+}
+.book-reader header a:hover {
+  color: white;
+}
+.book-reader header h1 {
+  position: absolute;
+  top: 0;
+  margin-left: -3em;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  font-size: 1.16667em;
+  line-height: 1.75em;
+}
+.book-reader header h1 a {
+  padding: 0 1em;
+  line-height: 1.75em;
+  display: inline;
+  z-index: 9;
+  box-shadow: none;
+}
+.book-reader header a[href="#home"] {
+  z-index: 9;
+  position: relative;
+  -moz-box-shadow: inset -1px 0 rgba(255, 255, 255, 0.2), inset -2px 0 rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: inset -1px 0 rgba(255, 255, 255, 0.2), inset -2px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: inset -1px 0 rgba(255, 255, 255, 0.2), inset -2px 0 rgba(0, 0, 0, 0.24);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.13);
+  display: block;
+  width: 8em;
+}
+.book-reader header a[href="#home"]:hover {
+  color: white;
+}
+.book-reader nav {
+  position: absolute;
+  z-index: 8;
+  bottom: 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC40Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.4)));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  display: table;
+  width: 100%;
+  padding: 0;
+  line-height: 3.5em;
+  height: 3.5em;
+  background-color: #ccc;
+  -moz-box-shadow: 0 -0.2em rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.16), inset 0 1px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 -0.2em rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.16), inset 0 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -0.2em rgba(0, 0, 0, 0.2), 0 -1px rgba(0, 0, 0, 0.16), inset 0 1px rgba(255, 255, 255, 0.3);
+  color: white;
+  text-transform: capitalize;
+}
+.book-reader nav ul {
+  display: table-row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.book-reader nav ul li {
+  display: table-cell;
+  width: 33.3333%;
+}
+.book-reader nav ul li a {
+  color: #333;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.book-reader nav ul li a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.book-reader header, .book-reader nav {
+  transition: all .2s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.book-reader section {
+  transition: all .13s ease;
+  background-color: #fafafa;
+  text-shadow: 0 1px #fff;
+  position: absolute;
+  padding: 2em;
+  overflow: auto;
+  top: 3.5em;
+  bottom: 3.5em;
+  width: 90%;
+  left: 5%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjxzdG9wIG9mZnNldD0iOSUiIHN0b3AtY29sb3I9IiNmYWZhZmEiLz48c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #dddddd), color-stop(9%, #fafafa), color-stop(91%, #fafafa), color-stop(100%, #dddddd));
+  background: -moz-linear-gradient(left, #dddddd 0%, #fafafa 9%, #fafafa 91%, #dddddd 100%);
+  background: -webkit-linear-gradient(left, #dddddd 0%, #fafafa 9%, #fafafa 91%, #dddddd 100%);
+  background: linear-gradient(to right, #dddddd 0%, #fafafa 9%, #fafafa 91%, #dddddd 100%);
+  -webkit-overflow-scrolling: touch;
+  /*you're welcome tablet users*/
+}
+.book-reader section * {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.book-reader section .page {
+  max-width: 40em;
+  margin: 1.75em auto;
+}
+.book-reader section p {
+  margin: 1.75em auto;
+  color: #888;
+}
+.book-reader section h1 {
+  font-size: 2.625em;
+  color: #555;
+  line-height: 1.75em;
+  font-weight: 300;
+}
+.book-reader img {
+  padding: 1em;
+  background-color: white;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.book-reader a {
+  transition: all .15s ease;
+  -moz-box-shadow: inset -1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: inset -1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: inset -1px 0 rgba(255, 255, 255, 0.2), inset 1px 0 rgba(0, 0, 0, 0.12);
+}
+.book-reader a, .book-reader label, .book-reader input {
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+.book-reader nav, .book-reader header {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.book-reader nav label, .book-reader nav a, .book-reader header label, .book-reader header a {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* 
+
+ ,__ __                      
+/|  |  |             o       
+ |  |  |   __,   __,     __  
+ |  |  |  /  |  /  | |  /    
+ |  |  |_/\_/|_/\_/|/|_/\___/
+                  /|         
+                  \|         
+
+Here is the fullscreen magic 
+
+You can use this technique to do other magic things like themed styles.  scaling text and anything else you can do with css and a toggle to invoke it 
+
+*/
+label[for="fullscreen"], label[for="invert"] {
+  transition: all .2s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 0;
+  right: 0%;
+  text-align: center;
+  padding: 0 2em;
+  z-index: 100;
+  color: #aaa;
+  height: 3.5em;
+  cursor: pointer;
+  width: 11em;
+  line-height: 3.5em;
+  user-select: none;
+  -moz-box-shadow: inset 1px 0 rgba(255, 255, 255, 0.2), inset 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 1px 0 rgba(255, 255, 255, 0.2), inset 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.2), inset 2px 0 rgba(0, 0, 0, 0.2);
+}
+label[for="fullscreen"]:hover, label[for="invert"]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+#fullscreen {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  /* neighbour selector all up in this*/
+}
+#fullscreen:checked ~ nav {
+  bottom: -3.5em;
+}
+#fullscreen:checked ~ header {
+  top: -3.5em;
+}
+#fullscreen:checked ~ section {
+  top: 0;
+  bottom: 0;
+}
+#fullscreen:checked ~ label[for="invert"] {
+  top: -3.5em;
+}
+#fullscreen:checked ~ label[for="fullscreen"] {
+  width: 7em;
+  padding: 0;
+  color: #aaa;
+  background-color: #fff;
+  -moz-box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 2px #eee, 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 2px #eee, 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 2px #eee, 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+}
+#fullscreen:checked ~ label[for="fullscreen"]:before {
+  content: "Exit";
+}
+
+label[for="invert"] {
+  right: 11em;
+  width: 6em;
+}
+
+#invert {
+  position: absolute;
+  top: 2em;
+  z-index: -1;
+  opacity: 0;
+}
+#invert:checked ~ label[for="invert"] {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+#invert:checked ~ label[for="invert"]:before {
+  content: "Day";
+}
+#invert:checked ~ section {
+  background-image: none;
+  background-color: #121212;
+  -moz-box-shadow: 0 0 0 5.5em #111;
+  -webkit-box-shadow: 0 0 0 5.5em #111;
+  box-shadow: 0 0 0 5.5em #111;
+  color: white;
+  text-shadow: none;
+}
+#invert:checked ~ section p, #invert:checked ~ section h1 {
+  color: white;
+}
+#invert:checked ~ nav, #invert:checked ~ header {
+  box-shadow: none;
+  background-color: #222;
+  color: #777;
+}
+#invert:checked ~ header a, #invert:checked ~ label, #invert:checked ~ nav a {
+  color: #777;
+  /* box-shadow: none !important*/
+}
+
+label[for="fullscreen"]:before {
+  content: "Fullscreen";
+}
+
+label[for="invert"]:before {
+  content: "Night";
+}
+
+/*small size hack*/
+@media (max-width: 50em), (max-height: 25em) {
+  body {
+    font-size: 12px;
+  }
+}
+@media (max-width: 30em) {
+  .book-reader header h1 {
+    display: none;
+  }
+  .book-reader header a[href="#home"] {
+    padding: 0;
+    width: 5em;
+  }
+}

@@ -1,0 +1,111 @@
+<body id="App"></body>
+
+<script>
+const App = document.querySelector('#App')
+
+const posts = [
+  {
+    title: `The Yellow River`,
+    author: `I.P. Daily`,
+    body: `Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.`,
+    label: `New!`
+  },
+  {
+    title: `Under the Bleachers`,
+    author: `Seymour Butts`,
+    body: `Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.`
+  },
+  {
+    title: `The Future of Robotics`,
+    author: `Cy Borg and Anne Droid`,
+    body: `Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper.`
+  }
+]
+
+document.registry = { }
+document.id = 0
+
+class Component {
+  constructor() {
+    this._id = ++document.id
+    document.registry[this._id] = this
+  }
+}
+
+class Header extends Component {
+	constructor(props) {
+		super()
+		this.state = {
+			title: props.title
+		}
+	}
+	  render() {
+  	return `<header>
+	            <div>${this.state.title}</div>
+	          </header>`
+  }
+}
+
+class Post extends Component {
+  constructor(props) {
+    super()
+    this.state = {
+      title: props.title,
+      author: props.author,
+      body: props.body,
+      label: props.label
+    }
+  }
+
+  render() {
+    return `<article data-id="${this._id}" ${this.state.label ? `data-label="${this.state.label}"` : ''}>
+              <h1>${this.state.title}</h1>
+              <strong>by ${this.state.author}</strong>
+              <p>${this.state.body}</p>
+            </article>`
+  }
+}
+
+// Using Array.forEach()
+const render = () => {
+	const main = document.createElement('main')
+	const mainEl = document.body.appendChild(main)
+	const header = new Header({ title: 'My favorite books' })
+	mainEl.innerHTML += header.render()
+  posts.forEach((post, i) => {
+    posts[i] = new Post(posts[i])
+    mainEl.innerHTML += posts[i].render()
+  })
+}
+
+// Using Array.map()
+// const renderUsingArrayMap = () => {
+//   App.innerHTML = posts.map((post, i) => {
+//     posts[i] = new Post(posts[i])
+//     return posts[i].render()
+//   }).join('')
+// }
+
+render()
+</script>
+
+<style>
+  html { margin: 2rem; }
+
+  main { max-width: 75ch; }
+
+  header, article {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  [data-label]::before {
+    content: attr(data-label);
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    float: right;
+  }
+
+  h1 { margin-bottom: 0.5rem }
+</style>

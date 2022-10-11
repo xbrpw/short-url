@@ -1,4 +1,117 @@
-<style>.ahover {position: relative;  grid-auto-flow: column;text-decoration: none;color:inherit;}.ahover::before {transform: scaleX(0);transform-origin: bottom right;color:inherit;}.ahover:hover::before {transform: scaleX(1);transform-origin: bottom left;color:inherit;}.ahover::before {content: " ";display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;inset: 0 0 0 0;background: hsl(200 100% 80%);z-index: -1;transition: transform .3s ease;color:inherit;}</style>
+<style>.ahover {position: relative;  grid-auto-flow: column;text-decoration: none;color:inherit;}.ahover::before {transform: scaleX(0);transform-origin: bottom right;color:inherit;}.ahover:hover::before {transform: scaleX(1);transform-origin: bottom left;color:inherit;}.ahover::before {content: " ";display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;inset: 0 0 0 0;background: hsl(200 100% 80%);z-index: -1;transition: transform .3s ease;color:inherit;}
+body {background-color: rgb(255, 255, 255);}
+ 
+
+    /* left footer start */
+    .l-footer > span {
+        float: left;
+        margin-right: 18px;
+        padding-right: 20px;
+        position: relative;
+        width: 6em;
+        background-color: #ffffff;  padding: 6px; border-radius: 8px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+    }
+    .l-footer > span:hover {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+    .l-footer > span button {
+        width: 32px;
+        height: 32px;
+        border: 0;
+        outline: none;
+        border-radius: 2px; /* background-color: #ffffff;  padding: 6px; border-radius: 8px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)*/
+    }
+    .l-footer > span button:before {
+        position: absolute;
+        margin-left: 16px;
+        font-size: 11px;
+        color: #181717e5;
+        content: "CREATED BY";
+        margin-top: -12px;
+        text-align: left;
+        padding-left: 12px;
+    }
+    .l-footer > span button.showing:before {
+        content: "lamp:!";
+    }
+    .l-footer button:after {
+        content: "\003F";
+        font-size: 16px;
+        color: #000000;
+        background: var(--dark-color);
+        border-radius: 100%;
+        padding: 2px;
+        line-height: 19px;
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        text-align: center;
+        margin-left: -10px;
+        margin-top: -10px;
+        text-indent: 1px;
+        font-weight: bold;
+    }
+
+    .l-footer > span button#imgGoku-01 {
+        background: url(https://www.luisangelmaciel.one/img/ico%20sombra%20silueta%20goku%20dragon%20ball.svg?width=45) no-repeat center center #ffffff;
+        /*background: url(https://assets.codepen.io/256997/internal/avatars/users/default.png?width=32) no-repeat center center #ffffff;*/
+        background-size: calc(45px);
+    }
+    .l-footer > span button#imgGoku-01:before {
+        content: "lamp:!";
+        color: #0c0c0c;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 0px;font-weight: bold; margin-left: 8px;  font-size: 11px;
+    }
+    .l-footer > span button#imgGoku-01:after {
+        content: "";
+        content: "CREATED BY";
+        font-size: 8px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: #030303;
+        width: auto;
+        border-radius: 0;
+        background: transparent;
+        margin-top: -17px;
+        margin-left: 8px;
+        padding-left: 12px;
+        
+    }
+    .l-footer > span button#imgGoku-01:hover:before {
+        color: #666;
+    }
+    .l-footer > span button#imgGoku-01:hover:after {
+        color: #666;
+    }
+   
+    /*** FOOTER END ***/    
+            </style>
 
 <br>
 <a href="#aHover"  class="ahover">Hover me</a>
+<hr>
+
+
+
+	<div class="l-footer">
+		<span  >
+			<button id="imgGoku-01" onclick="window.open('https://www.luisangelmaciel.one');"  ></button>
+		</span>
+	</div>	
+
+
+<hr>
+
+<style>
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 4px #000000;
+    }
+    </style>
+    
+    <h1>Text-shadow on white text</h1>
+
+
+    

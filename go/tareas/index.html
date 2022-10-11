@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title></title>
+  <title>Tareas to-do</title>
   <script>
 
 /*** FUNCTIONS ***/
@@ -300,7 +300,7 @@ function showHelp(){
 	elem('help').classList.toggle('showing');
 }
 
-</script><link rel="stylesheet" href="./style.css">
+</script><link rel="stylesheet" href="./tareas-todo.css">
 
 </head>
 <body>
@@ -322,7 +322,7 @@ function showHelp(){
 		<div class="btnAdd">
 			<button id="addToDo">&#10010;</button>
 		</div>
-		<div class="btnUrg" style="display:none">
+		<div class="btnUrg" >
 			<button id="addUrgent">&nbsp;</button>
 		</div>
 		<div id="deleteItem" style="display:none">
@@ -387,7 +387,7 @@ function showHelp(){
 	<div id="do-ne">
 		<h3>Done <span></span></h3>
 		<ul id="ul-done" class="section" ondrop="drop(event, this)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)" ondragleave="dragLeave(event)">
-			<li id="li-0001" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" class="sample"><span class="txt">Publish "Josetxu Kanban Board" on Codepen.</span><span class="idTask">0001</span><a class="up" href="#"></a><a class="down" href="#"></a><a class="delete" onclick="delTask(event, this.parentNode)" href="#"></a></li>
+			<li id="li-0001" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" class="sample"><span class="txt">Publish "Eevee Board".</span><span class="idTask">0001</span><a class="up" href="#"></a><a class="down" href="#"></a><a class="delete" onclick="delTask(event, this.parentNode)" href="#"></a></li>
 			<li id="li-0005" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" class="sample"><span class="txt">Improving background image functionality for the board.</span><span class="idTask">0005</span><a class="up" href="#"></a><a class="down" href="#"></a><a class="delete" onclick="delTask(event, this.parentNode)" href="#"></a></li>
 			<li id="li-0002" draggable="true" ondragstart="drag(event)" ontouchstart="drag(event)" class="sample"><span class="txt">Add a pencil icon to "Describe the Task..." text.</span><span class="idTask">0002</span><a class="up" href="#"></a><a class="down" href="#"></a><a class="delete" onclick="delTask(event, this.parentNode)" href="#"></a></li>
 		</ul>
@@ -406,22 +406,22 @@ function showHelp(){
 <!-- CONFIRM -->
 <div id="confirmDelete"></div>
 <div id="confirmBox">
-	<p><span id="confirmTitle">THE TASK</span> WILL BE DELETED...</p>
-	<div><input id="dontShowAgain" type="checkbox" /><label for="dontShowAgain">DON'T SHOW THIS MESSAGE AGAIN</label></div>
-	<button id="confirmBtn">DELETE</button>
-	<button id="confirmCls">CANCEL</button>
+	<p><span id="confirmTitle">SEGURO QUE ESTA TAREA</span> SERÁ BORRADA...</p>
+	<div><input id="dontShowAgain" type="checkbox" /><label for="dontShowAgain">NO MOSTRAR ESTE MENSAJE LA PRÓXIMA VEZ</label></div>
+	<button id="confirmBtn">SI, BORRAR</button>
+	<button id="confirmCls">NO, CANCELAR</button>
 </div>
 <div id="confirmUrgent">
 	<p><span id="numTaskUrg"></span> TASK<span id="pluralTsk">S</span> WITHIN THE URGENT LIST WILL BE DELETED TOO...</p>
 	<div><input id="dontShowAgainUrgent" type="checkbox" /><label for="dontShowAgainUrgent">DON'T SHOW THIS MESSAGE AGAIN</label></div>
 	<button id="confirmUrgentBtn">REMOVE ANYWAY</button>
-	<button id="confirmUrgentCls">CANCEL</button>
+	<button id="confirmUrgentCls">CANCELAR</button>
 </div>
 
-<footer style="display:none">
-	<div class="l-footer">
+<footer style="display: none;" >
+	<div class="l-footer"  >
 		<span>
-			<button id="josetxuBtn" onclick="window.open('https://josetxu.com');"></button>
+			<button id="josetxuBtn" onclick="window.open('https://www.luisangelmaciel.one');"></button>
 		</span>
 		<span>
 			<button id="help" onclick="showHelp()"></button>
@@ -429,11 +429,11 @@ function showHelp(){
 	</div>
 	<div class="r-footer">
 		<span>
-			<button id="impBrd" onclick="importBoard()"><span>IMPORT BOARD</span></button>
+			<button id="impBrd" onclick="importBoard()"><span>IMPORTAR BOARD</span></button>
 			<span id="getFile" style="display:none;"><input type="file" id="impFile"></span>
 		</span>
 		<span>
-			<button id="expBrd" onclick="exportBoard()" href="#"><span>EXPORT BOARD</span></button><a id="expHidden" href="#">&nbsp;</a>
+			<button id="expBrd" onclick="exportBoard()" href="#"><span>EXPORTAR BOARD</span></button><a id="expHidden" href="#">&nbsp;</a>
 		</span>
 	</div>
 </footer>
@@ -474,7 +474,7 @@ function showHelp(){
 	</div>
 </div>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script  src="./tareas-todo.js"></script>
 
 </body>
 </html>

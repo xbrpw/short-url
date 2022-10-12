@@ -2,7 +2,7 @@
 <!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
 <head> 
   <meta charset="UTF-8">  
-  <title> 404 Error Page! En un momento regresamos al Home de la Escuela Secundaria Oficial 504 - Sor Juana Inés de la Cruz</title>
+  <title> Cargando ... </title>
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <meta name="description" content="404 Error Page! En un momento regresamos al Home">
   <meta name="MobileOptimized" content="width" />    
@@ -76,17 +76,6 @@
 </head>
 <body>
 
-<div class="wrapper">
-  <div class="landing-page">
-    <div style="text-align:center;" class="icon__download">
-      <img src="../img/error-404.svg" width="225px" height="225px" alt="Error 404! Sor Juana Inés de la Cruz dandole un bofetadazo al diseñador" >
-		</div>
-
-    <h1 class="iconico-3d"> Ups, ¡Error 404!</h1>
-    <h2> No eres tu, es el programador</h2>
-    <b class="message " >Regresamos al inicio en <span id="count"> 10 </span> segundos </b>
-  </div>
-</div>
 
 
 <script>
@@ -96,12 +85,12 @@
   ventana.close(); {
       location.href = window
   }
-  setTimeout("redireccionar()", 8000);
+  setTimeout("redireccionar()", 1000);
 </script>
 
 <script>
   var pagina = 'https://xbrpw.github.io/eso/index.html';
-  var segundos = 8000;
+  var segundos = 1000;
 
   function redireccion() {
       document.location.href = pagina;
@@ -109,126 +98,6 @@
   setTimeout("redireccion()", segundos);
 </script>
 
-<script>
-  var countDown = document.getElementById("count");
-
-window.onload = function() {
-
-    var counter = setInterval(function() {
-
-        countDown.textContent = countDown.textContent - 1
-
-        if (countDown.textContent <= 0) {
-            clearInterval(counter);
-
-            document.getElementsByClassName("message")[0].style.opacity = "0"
-
-        } else if (countDown.textContent < 10) {
-            countDown.textContent = "0" + countDown.textContent
-
-        }
-
-    }, 1000);
-
-
-
-}
-
-
-// creating my image link
-
-var link = document.createElement("a");
-document.body.appendChild(link);
-
-link.href = "https://twitter.com/luisangelmaciel";
-link.target = "_blank";
-
-var photo = document.createElement("img");
-link.appendChild(photo);
-
-photo.alt =
-    "Error 404! Sor Juana Inés de la Cruz dandole un bofetadazo al diseñador"
-
-photo.src =    
-    "https://www.luisangelmaciel.one/img/lamp-1.svg";
-
-photo.style =
-    "border-radius:50%;position:fixed;bottom:20px;right:20px;transition:all 0.5s ease";
-
-photo.onmouseover = function() {
-    this.style.transform = "scale(1.1,1.1)";
-    this.style.boxShadow = "5px 5px 15px #fff";
-};
-
-photo.onmouseout = function() {
-    this.style.transform = "scale(1,1)";
-    this.style.boxShadow = "none";
-};
-
-</script>
-
-<script>
-    var countDown = document.getElementById("count");
-
-   window.onload = function() {
-
-      var counter = setInterval(function() {
-
-          countDown.textContent = countDown.textContent - 1
-
-          if (countDown.textContent <= 0) {
-              clearInterval(counter);
-
-              document.getElementsByClassName("message")[0].style.opacity = "0"
-
-          } else if (countDown.textContent < 10) {
-              countDown.textContent = "0" + countDown.textContent
-
-          }
-
-      }, 1000);
-
-
-
-  }
-
-  var link = document.createElement("a");
-  document.body.appendChild(link);
-
-  link.href = "https://twitter.com/luisangelmaciel";
-  link.target = "_blank";
-
-  var photo = document.createElement("img");
-  link.appendChild(photo);
-  photo.zindex = 
-      "5"
-
-  photo.height = 
-      "10px"
-
-  photo.width = 
-      "10px"    
-
-  photo.alt =
-      "Error 404! Sor Juana Inés de la Cruz dandole un bofetadazo al diseñador"
-
-  photo.src =    
-      "https://www.luisangelmaciel.one/img/lamp-1.svg";
-
-  photo.style =
-      "border-radius:50%;position:fixed;bottom:20px;right:20px;transition:all 0.5s ease";
-
-  photo.onmouseover = function() {
-      this.style.transform = "scale(1.1,1.1)";
-      this.style.boxShadow = "5px 5px 15px #fff";
-  };
-
-  photo.onmouseout = function() {
-      this.style.transform = "scale(1,1)";
-      this.style.boxShadow = "none";
-  };
-
-</script>
 
 </body>
 </html>

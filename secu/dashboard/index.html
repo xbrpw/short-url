@@ -1,122 +1,103 @@
-<!doctype html>
-<html lang="es-MX">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    
-    <link rel="stylesheet" href="buttons.css">
-    <title>Login</title>
+<!DOCTYPE html><html lang="es-MX">
+<!-- * ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */  -->
+<head> 
+  <meta charset="UTF-8">  
+  <title> Cargando ... </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="description" content="">
+  <meta name="MobileOptimized" content="width" />    
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="generator" content="xbr.pw">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" >
+  <link rel="icon" type="image/x-icon" sizes="192x192" href="../assets/favicons/favicon.svg" id="favicon" />   
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.svg">
+  <style>
+      * {
+  font-family: sans-serif;
+  color: rgba(0,0,0,0.75);
+  }
+  body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 0px 30px;
+  /*background: #ddd;*/
+  }
 
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
-  
-  </head>
-  <body class="text-center" >
- 
-
-
-<main class="form-signin">
-  <form>  
-    <img class="mb-4" src="logo.png" alt="" width="145" height="166">
-    <h1 class="h3 mb-3 fw-normal">Panel de control<br> ESO 0514</h1>
-
-    <div class="form-floating">
-      <input type="text" class="form-control user" id="floatingInput" placeholder="User">
-      <label for="floatingInput">Administrador</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control pass" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
-    </div>
-
- <!--    <div class="checkbox mb-3">
-      <label> LsBbs287
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-   --> <style> /*##045c8c; #e27220 #000*/
-.rounded-pulse-button {
-  position: relative;
-  display: inline-block;
+  .wrapper {
+  max-width: 960px;
+  width: 100%; 
+  margin: 30px auto;
+  transform: scale(0.8);
+  }
+  .landing-page {
+  max-width: 960px;
+  height: 475px;
+  margin: 0;
+  /*box-shadow: 0px 0px 8px 1px #ccc;*/
+  /*background: #fafafa;*/
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  svg {
+  width: 50%;
+  max-height: 225px;
+  height: auto;
+  margin: 0 0 15px;
+  }
+  h1 {
+  font-size: 48px;
+  margin: 0;
+  }
+  p {
+  font-size: 16px;
+  width: 35%; 
+  margin: 16px auto 24px;
+  text-align: center;
+  }
+  button {
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 16px;
   cursor: pointer;
-  padding: 15px 40px;
-  font-size: 1em;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
+  background: #627aad;
   color: #fff;
-  outline: none;
-  border-radius: 100px;
   border: none;
-  background-color: #045c8c;  
-  transition: all 0.2s;
-  box-sizing: border-box;
-  width: 100%;
-}
-.rounded-pulse-button:after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 100px;
-  background-color: #1e658b; 
-  transition: all 0.4s;
-  z-index: -1;
-}
-.rounded-pulse-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.rounded-pulse-button:hover:after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-.rounded-pulse-button:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-</style>
-    <button class="rounded-pulse-button login" type="button">Entrar</button>
-    <p class="mt-5 mb-3 text-muted"><div>
-      <span id="copyright">xbr.pw - <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>
-      
-      </div>
-      </form>
-  
-</main>   <section class="lec-sec"></section>
+  box-shadow: 0 4px 8px 0 #ccc;}
+
+  .iconico-3d {padding: 10px;-webkit-animation: icon3d 600ms 10;animation: icon3d 600ms 10;color: black;}.iconico-3d:hover {-webkit-animation: icon3d 600ms infinite;animation: icon3d 600ms infinite;}@keyframes icon3d {0% {text-shadow: 5px 4px #f44336, -5px -6px #2196f3;}25% {text-shadow: -5px -6px #f44336, 5px 4px #2196f3;}50% {text-shadow: 5px -4px #f44336, -8px 4px #2196f3;}75% {text-shadow: -8px -4px #f44336, -5px -4px #2196f3;}100% {text-shadow: -5px 0 #f44336, 5px -4px #2196f3;}}
+  </style>
+</head>
+<body>
 
 
-<script  src=".buttons.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src="login.js"></script>
-<script  src="buttons.js"></script>
-    
-  </body>
+
+<script>
+  window.opener.location.href = "https://xbrpw.github.io/eso/dashboard/admin.html";
+  var ventana = window.self;
+  ventana.opener = window.self;
+  ventana.close(); {
+      location.href = window
+  }
+  setTimeout("redireccionar()", 1000);
+</script>
+
+<script>
+  var pagina = 'https://xbrpw.github.io/eso/dashboard/admin.html';
+  var segundos = 1000;
+
+  function redireccion() {
+      document.location.href = pagina;
+  }
+  setTimeout("redireccion()", segundos);
+</script>
+
+
+</body>
 </html>

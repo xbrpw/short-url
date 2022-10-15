@@ -62,7 +62,7 @@ body {
   --entry-border-size: 1px;
   --entry-border-color: #4c4c4c;
   --entry-color: var(--root-font-color);
-  --entry-font-size: 24px;
+  --entry-font-size: 18px;
   --entry-padding: .4rem 1rem;
   --entry-min-width: 300px;
 }

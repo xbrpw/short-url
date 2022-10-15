@@ -1,0 +1,37 @@
+.progress {
+  padding: 2em 1em;
+  font-size: 1.5rem;
+  font-family: "Basier Circle", sans-serif;
+  color: #0d304a;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.progress p {
+  letter-spacing: 0.1em;
+}
+.progress strong {
+  font-weight: 500;
+  color: #93939b;
+}
+.progress .progress-bar {
+  background-color: #EAE9EE;
+  height: 40px;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.progress .progress-bar .progress-filled {
+  text-align: center;
+  background-color: #E81D5F;
+  height: 40px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  min-width: 60px;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 20px;
+}

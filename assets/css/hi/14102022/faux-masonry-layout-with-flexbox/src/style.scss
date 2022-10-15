@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 300vh;
+  align-content: center;
+  overflow-y: scroll;
+  gap: 0.5em;
+}

@@ -1,0 +1,123 @@
+$green: #81ff00;
+$purple: #7e00ff;
+
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@font-face {
+  font-family: "Ascii Organic";
+  src: url("https://assets.codepen.io/450456/ascii-font--circles.woff2")
+    format("woff2");
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow: hidden;
+  background: $purple;
+}
+.title {
+  user-select: none;
+  position: absolute;
+  font-family: "Major Mono Display", monospace;
+  color: white;
+  top: 16px;
+  left: 16px;
+  right: 100px;
+  font-size: 28px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-spacing: -5px;
+  letter-spacing: -1.5px;
+  padding-bottom: 15px;
+  text-shadow: 4px 4px 2px rgba(black, 0.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    opacity: 0.25;
+    left: 0px;
+    height: 3px;
+    width: 87px;
+    background: white;
+  }
+
+  small {
+    font-size: 16px;
+    position: absolute;
+    top: 120%;
+    left: 0;
+  }
+
+  span {
+    color: $green;
+    text-shadow: 0px 0px 10px $green;
+  }
+}
+
+.container {
+  margin: 0px auto;
+  flex: 0 0 50%;
+  padding-top: 26.8%;
+  position: relative;
+
+  &--hide {
+    position: absolute;
+    top: -9999px;
+    let: -9999px;
+    width: 50%;
+  }
+
+  &--ascii {
+    flex: 0 0 100%;
+    padding-top: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: darken($purple, 5%);
+  }
+}
+#asciiElem {
+  max-height: 60vh;
+  // max-width: 800px;
+  overflow: hidden;
+  margin-top: -10px;
+  font: 400 2vw/0.8 "Ascii Organic", "Major Mono Display", monospace;
+  font-size: 12px;
+  white-space: pre;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px 10px;
+  border: 10px solid darken($purple, 20%);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 2px rgba(darken($purple, 20%), 0.5);
+  background: linear-gradient(130deg, $green, lighten($green, 50%), $green);
+  background-size: 250% 250%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba($green, 0.2);
+  animation: Animation 5s ease infinite;
+  text-shadow: 2px 2px 0px rgba(black, 0.075);
+
+  span {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}

@@ -1,0 +1,306 @@
+<div id="app">
+      <div id="form" class="container">
+        <div v-for="(perso, i) in personal">
+          <label :for="i">{{perso.label}}</label>
+          <input v-model="personal[i].value" :key="i">
+        </div>
+
+        <div>
+          <label for="brand">Brand</label>
+          <select name="brand" v-model="selectedBrand">
+            <option v-for="(brand, index) in brands" :value="index">
+              {{brand[0]}}
+            </option>
+            ';
+          </select>
+        </div>
+
+        <div>
+          <label for="address">Office</label>
+          <select name="address" v-model="selectedAddress">
+            <option v-for="(address, index) in addresses" :value="index">
+              {{address[0]}}
+            </option>
+            ';
+          </select>
+        </div>
+
+        <br>
+        <br>
+
+        <button @click="copyClick" type="button" name="button">
+          Copy raw HTML
+        </button>
+        <button @click="copyWithFormatting" type="button" name="button">
+          Copy with formatting
+        </button>
+
+        <transition name="copied">
+          <p v-if="wasCopied" class="copied">Copied !</p>
+        </transition>
+      </div>
+
+      <div id="signature_container" class="container">
+        <table id="signature" style="
+            border-collapse: separate !important;
+            table-layout: fixed;
+            text-size-adjust: none !important;
+            -ms-text-size-adjust: none !important;
+            -webkit-text-size-adjust: none !important;
+          " class="" width="450" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td v-if="selectedBrand=='cbtw'" width="220" valign="top" align="right">
+                <p :style="'font-size:11pt;font-family:Calibri,sans-serif;margin:0;'">
+                  <span :style="'font-size: 8pt; font-family: &quot;General Sans&quot;, serif, EmojiFont;'">
+                    <a :href="brandHref" target="_blank" style="text-decoration: none">
+                    <img :width="'210'" :src="assetsUrl+selectedBrand+'.png'" :alt="'Logo ' + selectedBrand" border="0">
+                  </a>
+                  </span>
+                </p>
+              </td>
+
+              <td v-else="" width="160" valign="top" align="right">
+                <span style="
+                    margin: 0px;
+                    padding: 0px;
+                    display: block;
+                    font-family: Tahoma, Verdana, Segoe, sans-serif;
+                  ">
+                  <a v-if="brandHref==' '" target="_blank" style="text-decoration: none">
+                    <img :src="assetsUrl+selectedBrand+'.png'" :alt="'Logo ' + selectedBrand" border="0"></a>
+                  <a v-if="brandHref!=' '" target="_blank" style="text-decoration: none" :href="brandHref+'?utm_source=email&amp;utm_medium=signature&amp;utm_campaign=email-banner'">
+                    <img :src="assetsUrl+selectedBrand+'.png'" :alt="'Logo ' + selectedBrand" border="0">
+                  </a>
+                  <p v-if="selectedBrand!='positivethinkingcompany'" style="
+                      margin: 0;
+                      padding: 0;
+                      line-height: 10px;
+                      display: block;
+                      width: 100%;
+                      font-size: 1;
+                    ">
+                    <img :src="assetsUrl+'/spacer.gif'" style="display: block; width: 100%; height: 10px" width="160" height="10">
+                  </p>
+                  <!--<a
+                    v-if="selectedBrand!='positivethinkingcompanyecosytem'"
+                    target="_blank"
+                    style="text-decoration: none"
+                    href="https://www.positivethinkingcompany.com/?utm_source=email&amp;utm_medium=signature&amp;utm_campaign=email-banner"
+                  >
+                    <img
+                      v-if="selectedBrand!='positivethinkingcompanybrand'"
+                      :src="assetsUrl+'/ptc'+selectedBrand+'.png'"
+                      alt="Logo Positive Thinking Company"
+                      border="0"
+                      width="160"
+                      height="28"
+                    />
+                  </a>-->
+                  <p style="
+                      margin: 0;
+                      padding: 0;
+                      line-height: 10px;
+                      display: block;
+                      width: 100%;
+                      font-size: 1;
+                    ">
+                    <img :src="assetsUrl+'/spacer.gif'" style="display: block; width: 100%; height: 5px" width="160" height="10">
+                  </p>
+                </span>
+                <span style="
+                    text-align: right;
+                    margin: 0px;
+                    padding: 0px;
+                    line-height: 100%;
+                    font-size: 0px;
+                    display: block;
+                    font-family: Tahoma, Verdana, Segoe, sans-serif;
+                  ">
+                  <a v-if="selectedBrand!='positivethinkingcompanyecosytem'" style="text-decoration: none; display: inline" target="_blank" :href="linkedin"><img style="margin-bottom: 2px; border: none; display: inline" data-filename="linkedin.png" src="https://www.positivethinking.tech/youremailsignature/email-assets/images/linkedin_blue.png" alt="LinkedIn" width="24" height="24"></a>
+                  <span style="
+                      white-space: nowrap;
+                      font-family: Tahoma, Verdana, Segoe, sans-serif;
+                      display: inline;
+                    ">
+                    <img :src="assetsUrl+'/spacer.gif'" width="2">
+                  </span>
+                  <a v-if="twitter" style="text-decoration: none; display: inline" target="_blank" :href="twitter"><img style="margin-bottom: 2px; border: none; display: inline" data-filename="instagram.png" src="https://www.positivethinking.tech/youremailsignature/email-assets/images/twitter-original.png" alt="Instagram" width="24" height="24"></a>
+                  <span style="
+                      white-space: nowrap;
+                      font-family: Tahoma, Verdana, Segoe, sans-serif;
+                      display: inline;
+                    ">
+                    <img :src="assetsUrl+'/spacer.gif'" width="2">
+                  </span>
+                  <a v-if="selectedBrand!='positivethinkingcompanyecosytem'" style="text-decoration: none; display: inline" target="_blank" :href="instagram"><img style="margin-bottom: 2px; border: none; display: inline" data-filename="instagram.png" src="https://www.positivethinking.tech/youremailsignature/email-assets/images/instagram_grad.png" alt="Instagram" width="24" height="24"></a>
+                  <span style="
+                      white-space: nowrap;
+                      font-family: Tahoma, Verdana, Segoe, sans-serif;
+                      display: inline;
+                    ">
+                    <img :src="assetsUrl+'/spacer.gif'" width="2">
+                  </span>
+                  <a v-if="youtube" style="text-decoration: none; display: inline" target="_blank" :href="youtube"><img style="margin-bottom: 2px; border: none; display: inline" data-filename="youtube-original.png" src="https://www.positivethinking.tech/youremailsignature/email-assets/images/youtube-original.png" alt="Instagram" width="24" height="24"></a>
+                  <span style="
+                      white-space: nowrap;
+                      font-family: Tahoma, Verdana, Segoe, sans-serif;
+                      display: inline;
+                    ">
+                    <img :src="assetsUrl+'/spacer.gif'" width="2">
+                  </span>
+                  <a v-if="vimeo" style="text-decoration: none; display: inline" target="_blank" :href="vimeo"><img style="margin-bottom: 2px; border: none; display: inline" data-filename="vimeo.png" src="https://www.positivethinking.tech/youremailsignature/email-assets/images/vimeo.png" alt="Vimeo" width="24" height="24"></a>
+                  <span style="
+                      white-space: nowrap;
+                      font-family: Tahoma, Verdana, Segoe, sans-serif;
+                      display: inline;
+                    ">
+                    <img :src="assetsUrl+'/spacer.gif'" width="2">
+                  </span>
+                  <a v-if="xing" style="text-decoration: none; display: inline" target="_blank" :href="xing"><img style="margin-bottom: 2px; border: none; display: inline" data-filename="youtube.png" src="https://www.positivethinking.tech/youremailsignature/email-assets/images/xing.png" alt="Xing" width="24" height="24"></a>
+                </span>
+                <p style="
+                    margin: 0;
+                    padding: 0;
+                    line-height: 10px;
+                    display: block;
+                    width: 100%;
+                    font-size: 1;
+                  ">
+                  <img :src="assetsUrl+'/spacer.gif'" style="display: block; width: 100%; height: 6px" width="160" height="10">
+                </p>
+              </td>
+              <td width="10" valign="top" nowrap="nowrap" align="left">
+                <span style="
+                    margin: 0px;
+                    padding: 0px;
+                    line-height: 100%;
+                    font-family: Tahoma, Verdana, Segoe, sans-serif;
+                  "><img :src="assetsUrl+'/spacer.gif'" width="10"></span>
+              </td>
+              <td :style="'border-left: 4px solid ' + brandColor + ';'" width="16" valign="top" nowrap="nowrap" align="left">
+                <span style="
+                    margin: 0px;
+                    padding: 0px;
+                    line-height: 100%;
+                    font-family: Tahoma, Verdana, Segoe, sans-serif;
+                  "><img :src="assetsUrl+'/spacer.gif'" width="10"></span>
+              </td>
+              <td width="400" valign="top" nowrap="nowrap" align="left">
+                <div v-if="selectedBrand=='cbtw'">
+                    <p :style="'font-size:21px;font-family:' + font + ',Calibri,sans-serif;margin:0;'">
+                      <b>
+                        <span :style="'color: rgb(28, 28, 28); font-size: 21px; font-family:' + font + ', sans-serif, serif, EmojiFont;'">
+                          {{fullName}}
+                        </span>
+                      </b>
+                    </p>
+                    <p :style="'font-size:16px;font-family:' + font + ',Calibri,sans-serif;margin:0;'">
+                      <span :style="'color: rgb(28, 28, 28); font-size: 16px; font-family:' + font2 + ', sans-serif, serif, EmojiFont;'">
+                        {{personal.position.value}}
+                      </span>
+                    </p>
+                    <p :style="'font-size:12px;font-family:' + font + ',Calibri,sans-serif;margin:0;'">
+                      <span :style="'color: rgb(119, 119, 119); font-size: 12px; font-family:' + font2 + ', sans-serif, serif, EmojiFont;'">
+                        <br>
+                      </span>
+                      <span :style="'color: rgb(28, 28, 28); font-size: 12px; font-family:' + font2 + ', sans-serif, serif, EmojiFont;'">
+                        {{personal.phoneA.value}}
+                      </span>
+                      <span :style="'font-size: 12px; font-family:' + font2 + ', sans-serif, serif, EmojiFont;'"></span>
+                    </p>
+
+                    <p :style="'font-size:12px;font-family:' + font2 + ',Calibri,sans-serif;margin:0;'">
+                      <span :style="'color: rgb(28, 28, 28); font-size: 12px; font-family:' + font2 + ', sans-serif, serif, EmojiFont;'" v-html="replaceWithBr">
+                      </span>
+                      <span :style="'font-size: 12px; font-family:' + font2 + ', sans-serif, serif, EmojiFont;'"></span>
+                    </p>
+
+                    <p :style="'font-size:12px;font-family:' + font2 + ',Calibri,sans-serif;margin:0;'">
+                      <span :style="'font-size: 12px; font-family:' + font2 + ', sans-serif, serif, EmojiFont;'">&nbsp;</span>
+                    </p>
+
+                    <p :style="'font-size:12px;font-family:' + font2 + ',Calibri,sans-serif;margin:0;'">
+                      <span :style="'font-size: 12px;'">
+                        <a v-if="selectedBrand=='cbtw'" style="text-decoration: none; display: inline" target="_blank" :href="linkedin"><img style="margin-bottom: 2px; border: none; display: inline" data-filename="linkedin.png" src="https://www.positivethinking.tech/youremailsignature/email-assets/images/linkedin_black.png" alt="LinkedIn" width="28" height="28"></a>
+                      </span>
+                    </p>
+
+                </div>
+
+                <div v-else="">
+                  <span :style="'margin: 0px; padding: 0px; font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif; font-size: 12px; line-height: 14.4px; color: rgb(33, 33, 33); display: block;'">
+                    <span :style="'font-weight: bold; color: ' + brandColor + '; font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif; display: inline;'">{{fullName}}</span>
+                    <span :style="'display: inline; font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif;'">
+                    </span>
+                    <span :style="'color: rgb(119, 119, 119); font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif; display: inline;'">{{personal.position.value}}</span>
+                    <span :style="'display: inline; font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif;'"><br></span>
+                    <a :href="'mailto:'+personal.email.value" :style="'color: ' + brandColor + '; text-decoration: none; display: inline;'">{{personal.email.value}}</a>
+                    <span :style="'display: inline; font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif;'">
+                    </span><span :style="'color: rgb(119, 119, 119); font-family: ' + font + ',Tahoma, Verdana, Segoe, sans-serif; display: inline;'">{{personal.phoneA.value}}</span><span v-if="personal.phoneB.value" :style="'color: rgb(119, 119, 119); font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif; display: inline;'">
+                      | {{personal.phoneB.value}}</span></span>
+                  <p style="
+                      margin: 0;
+                      padding: 0;
+                      line-height: 10px;
+                      display: block;
+                      width: 100%;
+                      font-size: 1;
+                    ">
+
+                    <img :src="assetsUrl+'/spacer.gif'" style="display: block; width: 100%; height: 15px" width="400" height="15">
+                  </p>
+                  <span :style="'color: rgb(119, 119, 119); font-family:  ' + font + ',Tahoma, Verdana, Segoe, sans-serif; display: inline; font-size: 12px;'">{{address}}</span><br>
+                  <span :style="'margin: 0px; padding: 0px; font-family:  ' + font + ', Tahoma, Verdana, Segoe, sans-serif; font-size: 12px; line-height: 14.4px; display: block;'">
+                    <span v-if="selectedBrand=='positivethinkingcompanyecosytem'">
+                      <span v-if="selectedBrand=='positivethinkingcompanyecosytem'" :style="'font-weight: bold; color: ' + brandColor + '; font-family: ' + font + ', Tahoma, Verdana, Segoe, sans-serif; display: inline;'">
+                        Positive Thinking Company
+                        <a target="_blank" :href="brandHref+'?utm_source=email&amp;utm_medium=signature&amp;utm_campaign=email-banner'" :style="'color: ' + brandColor + '; text-decoration: none; display: inline; font-weight:normal;'">{{brandDomain}}</a></span>
+                      <span v-else="" :style="'font-weight: bold; color: ' + brandColor + '; font-family: ' + font + ', Tahoma, Verdana, Segoe, sans-serif; display: inline;'">{{brandName}}
+                        <a target="_blank" :href="brandHref+'?utm_source=email&amp;utm_medium=signature&amp;utm_campaign=email-banner'" :style="'color: ' + brandColor + '; text-decoration: none; display: inline; font-weight:normal;'">{{brandDomain}}</a></span>
+                    </span>
+                    <span v-if="selectedBrand!='positivethinkingcompanyecosytem'">
+                      <span v-if="selectedBrand=='positivethinkingcompanybrand'" :style="'font-weight: bold; color: ' + brandColor + '; font-family: ' + font + ', Tahoma, Verdana, Segoe, sans-serif; display: inline;'">
+                        Positive Thinking Company
+                        <a target="_blank" :href="brandHref+'?utm_source=email&amp;utm_medium=signature&amp;utm_campaign=email-banner'" :style="'color: ' + brandColor + '; text-decoration: none; display: inline; font-weight:normal;'">{{brandDomain}}</a></span>
+                      <span v-else="" :style="'font-weight: bold; color: ' + brandColor + '; font-family: ' + font + ', Tahoma, Verdana, Segoe, sans-serif; display: inline;'">{{brandName}}
+                        <a target="_blank" :href="brandHref+'?utm_source=email&amp;utm_medium=signature&amp;utm_campaign=email-banner'" :style="'color: ' + brandColor + '; text-decoration: none; display: inline; font-weight:normal;'">{{brandDomain}}</a></span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4" style="font-size: 0">
+                <img :src="assetsUrl+'/spacer.gif'" height="10">
+              </td>
+            </tr>
+            <tr cclass="hide-on-show">
+              <td colspan="4"></td>
+            </tr>
+            <tr v-if="selectedBrand=='adneom'">
+              <td v-if="selectedAddress == 'lyon'" colspan="4">
+                <img :src="assetsUrl+'happy_at_work_adneom.jpg'">
+              </td>
+              <td v-if="selectedAddress == 'paris'" colspan="4">
+                <img :src="assetsUrl+'happy_at_work_adneom.jpg'">
+              </td>
+              <td v-if="selectedAddress == 'lille'" colspan="4">
+                <img :src="assetsUrl+'happy_at_work_adneom.jpg'">
+              </td>
+              <td v-if="selectedAddress == 'chambery'" colspan="4">
+                <img :src="assetsUrl+'happy_at_work_adneom.jpg'">
+              </td>
+              <td v-if="selectedAddress == 'nantes'" colspan="4">
+                <img :src="assetsUrl+'happy_at_work_adneom.jpg'">
+              </td>
+            </tr>
+            <tr v-if="selectedBrand=='worldofdigits'">
+              <td v-if="selectedAddress == 'paris'" colspan="4">
+                <img :src="assetsUrl+'happy_at_work_wod.jpg'">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

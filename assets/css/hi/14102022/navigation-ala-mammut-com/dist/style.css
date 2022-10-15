@@ -1,0 +1,197 @@
+/**
+Hide navigation and chrome by default
+when menu "stub" is hovered over show the navigation.
+**/
+.menu:before, .menu:after, .menu {
+  position: absolute;
+  background-color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 400ms;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+}
+.menu nav {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  top: -40px;
+  left: 0;
+  height: 0;
+  transition: all 400ms;
+  overflow: hidden;
+  justify-content: center;
+}
+.menu ul,
+.menu li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+}
+.menu ul {
+  display: flex;
+}
+.menu li {
+  height: 100%;
+  width: calc((100vw / 4) - 1.5rem);
+}
+.menu li a {
+  padding: 2.7rem 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  border-top: 8px solid #888;
+  margin-right: 3px;
+  color: #000;
+}
+.menu li a:hover {
+  color: #333;
+  border-top-color: #333;
+}
+.menu li div {
+  display: block;
+  color: #888;
+}
+.menu .stub {
+  position: absolute;
+  background-color: #fff;
+  width: 168px;
+  height: 34px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-84px);
+  transition: all 400ms;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-clip-path: url(#Stub-Button-Clip);
+  clip-path: url(#Stub-Button-Clip);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu .stub::before, .menu .stub::after {
+  content: " ";
+  display: inline-flex;
+  width: 2rem;
+  border-bottom: 2px solid #888;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
+  margin: 0 0 8px;
+}
+.menu .stub:before {
+  margin-top: 0.5rem;
+}
+.menu .stub-clip-svg {
+  position: absolute;
+  left: -100vw;
+  top: -100vh;
+}
+.menu:before, .menu:after {
+  content: " ";
+  height: 100vh;
+  width: 0;
+  transition: width 400ms ease-in-out;
+}
+.menu::before {
+  top: 0;
+  left: 0;
+}
+.menu::after {
+  top: 0;
+  right: 0;
+}
+.menu:hover {
+  height: 140px;
+}
+.menu:hover nav {
+  height: 140px;
+  top: 0;
+}
+.menu:hover .stub {
+  top: 130px;
+}
+.menu:hover::before, .menu:hover::after {
+  width: 1.5rem;
+}
+
+body {
+  background-color: #c0e2fe;
+  background-image: url(https://images.unsplash.com/photo-1565150271841-262d0854c5c6?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODI2ODE0OQ&ixlib=rb-1.2.1&q=85);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  color: #000;
+}
+
+a {
+  color: blue;
+}
+a:visited, a:active {
+  color: blue;
+}
+
+.main {
+  display: flex;
+  min-height: 2000px;
+  padding: 0;
+  font-family: sans-serif;
+}
+.main .cb-header {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 25vh auto 0;
+  justify-content: flex-start;
+  color: #fff;
+  padding: 0 16vw;
+  text-align: center;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  line-height: 0.9;
+  letter-spacing: -0.8px;
+}
+.main .cb-header a {
+  color: #fff;
+}
+.main .cb-header h1 {
+  font-size: 12vw;
+  text-transform: uppercase;
+  margin: 0;
+}
+.main .cb-header p {
+  font-size: 5vw;
+  margin: 0;
+}
+.main .cb-article {
+  background-color: white;
+  display: inline-flex;
+  flex-direction: column;
+  min-height: 10vh;
+  max-width: 400px;
+  left: 80px;
+  transform: translateX(10px);
+  top: 800px;
+  position: absolute;
+  padding: 2.5rem 3.5rem;
+}
+.main .cb-article a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}

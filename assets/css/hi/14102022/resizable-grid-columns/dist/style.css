@@ -1,0 +1,44 @@
+:root {
+  --sidebar-width: 12em;
+  --article-width: 1fr;
+}
+
+main {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) var(--article-width);
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: salmon;
+  position: relative;
+  display: flex;
+}
+
+.content {
+  background-color: seagreen;
+  padding: 1em;
+  text-align: center;
+}
+
+.handle {
+  height: 3em;
+  width: 1em;
+  background-color: darkgrey;
+  border: 1px solid;
+  margin: auto 0 auto auto;
+  position: relative;
+  right: -0.5em;
+  border-radius: 0.25em;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.handle:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+p {
+  font-size: calc(1vw + 1em);
+}

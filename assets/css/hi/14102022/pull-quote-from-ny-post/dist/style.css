@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/questrial/v18/QdVUSTchPBm7nuUeVf70viFg.ttf) format('truetype');
+}
+.pullquote {
+  padding: 25px 20px 30px 43px;
+  margin: 0 20px 10px -30px;
+  width: 245px;
+  display: inline-block;
+  float: left;
+  font: 30px/32px 'Questrial', "founders-grotesk-x-cn-nypost", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #2F2F2F;
+  text-transform: uppercase;
+  border: 2px solid #2F2F2F;
+}
+.pullquote p {
+  position: relative;
+}
+.pullquote p:before,
+.pullquote p:after {
+  content: "‘";
+  margin-top: 12px;
+  margin-left: -36px;
+  float: left;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  color: #F7CB00;
+  font-style: normal;
+  font-size: 137px;
+  font-family: sans-serif;
+}
+.pullquote p:after {
+  content: "’";
+  margin-top: 32px;
+  float: right;
+}
+.pullquote .author {
+  font: bold 26px/28px 'Questrial', "founders-grotesk-x-cn-nypost", Helvetica, sans-serif;
+  color: #C33;
+  width: auto;
+  display: block;
+  margin-top: 5px;
+  text-transform: capitalize;
+}
+body {
+  padding: 20px 100px;
+  font: 16px/1.4 Georgia, Sans-Serif;
+}

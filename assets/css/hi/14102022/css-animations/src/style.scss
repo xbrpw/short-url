@@ -1,0 +1,289 @@
+@import "compass/reset";
+@import "compass/css3";
+//fonts   
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
+//font
+$lato: 'Lato', sans-serif;
+//colors
+$mainColor: #3498DB;
+$red: #EF4836;
+//easing
+$bounce: cubic-bezier(0.6,1.5,0.6,1);
+//timing
+$timing: 5s;
+//mixins 
+@mixin bp($bp, $min-max: min-width) {
+    $em: $bp/16;
+    @media(#{$min-max}: #{$em}em) {
+        @content;
+    }
+}
+@mixin bounce() { animation-timing-function: $bounce; }
+@mixin part($num) { animation: part#{$num} $timing infinite; }
+@mixin small-part($num) { animation: small-part#{$num} $timing infinite; }
+@mixin code { animation: code $timing infinite; }
+
+
+
+html,
+body {
+    font-family: $lato; 
+    font-size: 90%;
+    height: 100%;
+    width: 100%; 
+    
+    @include bp(600) { font-size: 100%; }
+}
+
+.section {
+    background: $red;
+    display: table;
+    height: 100%;
+    min-height: 43.75em; 
+    position: relative;
+    width: 100%;
+  
+    @include bp (640, max-height) {
+        display: block;
+        padding-top: 4em;
+    }
+	
+	&__wrap {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+    
+        @include bp (640, max-height) { display: block; }
+	}
+	
+	h1 {
+        color: #fff;
+        font-size: 1.8em;
+        font-weight: 300;
+        margin: 1em auto .5em;
+        text-align: center;
+        
+        @include bp(600) { font-size: 2em; }
+    }
+}
+
+p {
+    color: darken($red, 15%);
+    font-size: .75em;
+    text-align: center;
+    transform: translateY(4em);
+
+    a { color: darken($red, 15%); }
+}
+
+.center {
+	background: #fff;
+	border-radius: 50%;
+	height: 22em;
+	margin: 1em auto;
+	overflow: hidden;
+	position: relative;
+	width: 22em;
+}
+
+
+.part {
+	position: absolute;
+	border: 0 solid transparent; 
+}
+
+// button and stand
+.part-1 {
+	background: darken( $mainColor, 17% );
+    left: 50%;
+    transform: translateX(-50%);
+	z-index: 15;
+	@include part(1);
+	@include bounce;
+}
+//screen
+.part-2 {
+    background: #fff;
+	border-radius: 0.25em;
+	display: table;
+	left: 50%;
+	text-align: center;
+    transform: translateX(-50%);
+	z-index: 10;
+	@include part(2);
+	@include bounce;
+    
+	span {
+		color: $mainColor;
+		display: table-cell;
+		font-weight: 700;
+		vertical-align: middle;
+		@include code;
+		@include bounce;
+	}
+}
+//body and band
+.part-3 {
+    background: $mainColor;
+	border-radius: 0.625em;
+    left: 50%;
+    transform: translateX(-50%);
+	z-index: 9;
+	@include part(3);
+	@include bounce;
+}
+
+
+
+////////////////////////////////////
+// Keyframes ////////////////////
+//////////////////////////////////
+
+// Button/Stand
+@include keyframes(part1) {
+    0%, 5% {
+        border-radius: 0;
+        height: 0.3125em; 
+        top: 13em;  
+        width: 1.5625em;
+    }
+    15%, 25% {
+        border-radius: 3.75em;
+        height: 1.5em; 
+        top: 14.875em;
+        width: 1.5em;
+    }
+    35%, 45% {
+        border-radius: 3.75em;
+        height: 1.5em; 
+        top: 16.5625em;
+        width: 1.5em;
+    }
+    55%, 65% {
+        border-radius: 6.25em;
+        height: 1.25em;
+        top: 15.625em; 
+        width: 15.625em;
+    }
+    75%, 85% {
+        border-radius: 6.25em;
+        height: 1.25em;
+        top: 17.1875em;
+        width: 5.625em; 
+    }
+    95%, 100% {
+        border-radius: 0;
+        height: 0.3125em; 
+        top: 13em;  
+        width: 1.5625em;
+    }
+}
+
+
+//SCREEN
+@include keyframes(part2) {
+    0%, 5% {
+        border: 0.25em solid $mainColor;
+        border-radius: 0.5em;
+        height: 3.125em;
+        top: 9.375em;
+        width: 3.125em;
+    }
+    15%, 25% {
+        border: 0 solid $mainColor;
+        border-radius: 0.5em;
+        height: 8.125em;
+        top: 6.0625em;
+        width: 4.75em;
+    }
+    35%, 45% {
+        border: 0 solid $mainColor;
+        border-radius: 0.5em;
+        height: 11.25em;
+        top: 4.6875em;
+        width: 6.875em;
+    }
+    55%, 65% {
+        border: 0 solid $mainColor;
+        border-radius: 0.5em;
+        height: 8.125em;
+        top: 5.9375em;
+        width: 13.5em;
+    }
+    75%, 85% {
+        border: 0 solid $mainColor;
+        border-radius: 0.5em;
+        height: 9.375em;
+        top: 5.9375em; 
+        width: 15em;
+    }
+    95%, 100%  {
+        border: 0.25em solid $mainColor;
+        border-radius: 0.5em;
+        height: 3.125em;
+        top: 9.375em;
+        width: 3.125em;
+    }
+}
+
+//Body/Band
+@include keyframes(part3) {
+    0%, 5% {
+        border-radius: 0.3125em;
+        height: 9.375em;
+        top: 6.4375em;
+        width: 2.5em;
+    }
+    15%, 25% {
+        border-radius: 0.625em;
+        height: 11.875em;
+        top: 5em;
+        width: 6.625em;
+    }
+    35%, 45% {
+        border-radius: 0.625em;
+        height: 15em;
+        top: 3.75em;
+        width: 8.75em; 
+    }
+    55%, 65% {
+        border-radius: 0.625em;
+        height: 10em;
+        top: 5em;
+        width: 15em;
+    }
+    75%, 85% {
+        border-radius: 0.625em;
+        height: 11.25em;
+        top: 5em; 
+        width: 16.875em;
+    }
+    95%, 100%  {
+        border-radius: 0.3125em;
+        height: 9.375em;
+        top: 6.4375em;
+        width: 2.5em;
+    }
+}
+
+// {}
+@include keyframes(code) {
+    0%, 5% {
+        font-size: 1em;
+    }
+    15%, 25% {
+        font-size: 1.5625em;
+    }
+    35%, 45% {
+        font-size: 2.1875em;
+    }
+    55%, 65% {
+        font-size: 2.8125em;
+    }
+    75%, 85% {
+        font-size: 3.4375em;
+    }
+    95%, 100% {
+        font-size: 1em;
+    }                        
+}

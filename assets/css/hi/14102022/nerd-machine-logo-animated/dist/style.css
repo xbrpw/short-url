@@ -1,0 +1,382 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(ellipse at center, white 0%, #c6c6c6 100%);
+  height: 100%;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 3em;
+}
+
+button {
+  z-index: 100;
+  position: relative;
+  background: #ec2424;
+  border: 0;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  transition: transform 250ms ease;
+}
+button:hover {
+  background: #e31414;
+}
+button:focus {
+  outline: none;
+}
+button:active {
+  transform: translate(0, 5%);
+}
+
+#nerdmachine {
+  max-width: 400px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  display: block;
+}
+
+#nerdmachine svg {
+  width: 100%;
+  height: auto;
+}
+
+.shine1,
+.shine2 {
+  stroke: #fff;
+}
+
+.outerring {
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
+  transform: rotate(0);
+  transform-origin: 50% 50%;
+  fill: #ec2424;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.face1 {
+  fill: #ed1c24;
+}
+
+.face2 {
+  fill: #af0911;
+}
+
+.head {
+  transform-origin: 50% 50%;
+}
+
+.glasses path {
+  fill: #0a72a7;
+}
+
+@-webkit-keyframes tada {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.head.is-ready {
+  -webkit-animation: tada 1s both;
+          animation: tada 1s both;
+}
+
+.shine1, .shine2 {
+  opacity: 0;
+}
+
+.shine1.done, .shine2.done {
+  opacity: 1;
+  transition: opacity 250ms 250ms;
+}
+
+.shine1.cool-dude,
+.shine2.cool-dude {
+  -webkit-animation: shine 350ms ease-in-out forwards;
+          animation: shine 350ms ease-in-out forwards;
+}
+
+@-webkit-keyframes shine {
+  0% {
+    opacity: 1;
+    transform: translate(130%, 0);
+  }
+  80% {
+    transform: translate(-120%, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes shine {
+  0% {
+    opacity: 1;
+    transform: translate(130%, 0);
+  }
+  80% {
+    transform: translate(-120%, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+.face1.disco {
+  fill: #11d8df;
+  -webkit-animation: disco1 1200ms infinite;
+          animation: disco1 1200ms infinite;
+}
+
+.face2.disco {
+  fill: #e41ed8;
+  -webkit-animation: disco2 1000ms infinite alternate;
+          animation: disco2 1000ms infinite alternate;
+}
+
+.glasses.disco path {
+  fill: #8a34ff;
+}
+
+.head.disco {
+  -webkit-animation: pulse 1s infinite ease-in-out;
+          animation: pulse 1s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes disco1 {
+  0% {
+    fill: #7bf927;
+  }
+  20% {
+    fill: #e41ed8;
+  }
+  40% {
+    fill: #ece914;
+  }
+  60% {
+    fill: #3434ff;
+  }
+  80% {
+    fill: #11d8df;
+  }
+  100% {
+    fill: #7bf927;
+  }
+}
+@keyframes disco1 {
+  0% {
+    fill: #7bf927;
+  }
+  20% {
+    fill: #e41ed8;
+  }
+  40% {
+    fill: #ece914;
+  }
+  60% {
+    fill: #3434ff;
+  }
+  80% {
+    fill: #11d8df;
+  }
+  100% {
+    fill: #7bf927;
+  }
+}
+@-webkit-keyframes disco2 {
+  0% {
+    fill: #ece914;
+  }
+  20% {
+    fill: #f92727;
+  }
+  40% {
+    fill: #3434ff;
+  }
+  60% {
+    fill: #7bf927;
+  }
+  80% {
+    fill: #11d8df;
+  }
+  100% {
+    fill: #e41ed8;
+  }
+}
+@keyframes disco2 {
+  0% {
+    fill: #ece914;
+  }
+  20% {
+    fill: #f92727;
+  }
+  40% {
+    fill: #3434ff;
+  }
+  60% {
+    fill: #7bf927;
+  }
+  80% {
+    fill: #11d8df;
+  }
+  100% {
+    fill: #e41ed8;
+  }
+}
+#disco {
+  background: #8a34ff;
+}
+
+#nodisco {
+  margin-top: 0.25em;
+}
+
+.disco-msg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 3em 2em;
+  color: #fff;
+  background: #e41ed8;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+#nodisco {
+  display: none;
+}
+
+.disco-msg.show {
+  opacity: 1;
+}
+
+.disco-msg__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.face1.noir {
+  fill: #555555;
+}
+
+.face2.noir {
+  fill: #3f3f3f;
+}
+
+.glasses.noir path {
+  fill: #777;
+}
+
+.outerring.noir {
+  fill: #000;
+}
+
+.shine2.noir,
+.shine1.noir {
+  stroke: #4F4F4F;
+}
+
+body.noir {
+  background: radial-gradient(ellipse at center, #4f4f4f 19%, #000105 100%);
+}
+
+.noir-msg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 3em 2em;
+  color: #fff;
+  background: #000;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.noir-msg.show {
+  opacity: 1;
+}
+
+.noir-msg__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

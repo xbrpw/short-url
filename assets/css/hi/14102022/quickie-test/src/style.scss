@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3;
+  color: #777777;
+  font-family: sans-serif;
+}
+
+.blue-changer {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+#app {
+}
+
+.container {
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+#form {
+  position: relative;
+  max-width: 100%;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+label {
+  font-size: 14px;
+  width: 180px;
+}
+
+label,
+select,
+input {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+select,
+input {
+  color: #333;
+  width: 274px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid grey;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 7px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid grey;
+  background-color: white;
+  color: #333;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #aaa;
+  color: white;
+}
+
+#signature_container {
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.copied {
+  display: inline-block;
+  margin: 0;
+}
+
+.copied-enter-active,
+.copied-leave-active {
+  transition: all 0.2s ease;
+}
+
+.copied-enter, .copied-leave-to
+/* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(10px);
+}

@@ -1,0 +1,40 @@
+$height: 40px;
+$width: 700px;
+
+.progress{
+	padding: 2em 1em;
+	font-size: 1.5rem;
+	font-family: "Basier Circle", sans-serif;
+	p{
+		letter-spacing: 0.1em;
+	}
+	color: #0d304a;
+	strong{
+		font-weight: 500;
+		color: #93939b;
+	}
+	max-width: $width;
+	text-align: center;
+	margin: 0 auto;
+	text-transform: uppercase;
+	.progress-bar{
+	background-color: #EAE9EE;
+	height: $height;
+	border-radius: $height / 2;
+	width: 100%;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		
+	.progress-filled{
+		text-align: center;
+		background-color: #E81D5F;
+		height: $height;
+		font-weight: 700;
+		font-size: 1.25rem;
+		letter-spacing: 0;
+		min-width: $height * 1.5;
+		color: #fff;
+		line-height: $height;
+		border-radius: $height / 2;
+	}
+}}

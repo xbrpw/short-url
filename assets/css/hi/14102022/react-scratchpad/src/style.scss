@@ -1,0 +1,27 @@
+main {
+  font-size: 2em;
+  display: flex;
+  height: 100vh;
+  line-height: 1.4;
+}
+
+main > * {
+  margin: auto;
+  text-align: center;
+}
+
+span {
+  margin-bottom: 0.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label,
+input,
+button {
+  font-size: inherit;
+  margin-bottom: 0.5em;
+}

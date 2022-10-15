@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+
+body {
+  background: #eee;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.frame {
+  position: relative;
+  width: 330px;
+  height: 480px;
+  padding: 6px;
+  background: #fff;
+  margin: 80px auto;
+}
+.shadow-top {
+  position: absolute;
+  top: 0;
+  left: -20px;
+	width: 0;
+	height: 0;
+	border-bottom: 471px solid #bbb;
+	border-left: 20px solid transparent;
+}
+.shadow-bottom {
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+	width: 0;
+	height: 0;
+	border-top: 21px solid #aaa;
+	border-left: 20px solid transparent;
+}
+
+@bgc: #e74c3c;
+@txtc: #ecf0f1;
+
+.canvas {
+  padding: 30px;
+  width: 270px;
+  height: 420px;
+  background: @bgc;
+  box-shadow: inset -2px 2px 0 #777;
+  
+  p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 200%;
+    color: @txtc;
+    text-shadow: darken(@bgc,10%) -2px 2px 1px;
+    
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      line-height: 400%;
+    }
+    &:nth-of-type(2){
+      font-family: 'Great Vibes', sans-serif; 
+      text-transform: lowercase;
+      font-weight: 300;
+    }
+    &:nth-of-type(5){
+      font-weight: 300;
+    }
+    &:nth-of-type(6) {
+      line-height: 450%;
+    }
+  }
+  .line {
+    width: 90px;
+    height: 1px;
+    background: darken(@bgc,20%); 
+    margin: 30px auto 5px;
+  }
+  .sign {
+    font-size: 8px;
+    color: @txtc;
+  }
+}
+.ground {
+  position: absolute;
+  top: 550px;
+  width: 100%;
+  min-width: 250px;
+  height: 200px;
+  background: #ddd;
+  overflow: hidden;
+}
+
+/* SlabText Specific Styles */
+.slabtexted .slabtext {
+  display:-moz-inline-box;
+  display:inline-block;
+  white-space:nowrap;
+}
+.slabtextinactive .slabtext {
+  display:inline;
+  white-space:normal;
+  font-size:1em !important;
+  letter-spacing:inherit !important;
+  word-spacing:inherit !important;
+  *letter-spacing:0 !important;
+  *word-spacing:0 !important;
+}
+.slabtextdone .slabtext {
+  display:block;
+}

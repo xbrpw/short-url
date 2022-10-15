@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple Audio Visualisation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id='container'></div>
+<div class='message' id='warning1'>
+  <h1>
+    This experiment requires the
+    <a href='https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html' target='_blank'>Web Audio API</a>
+  </h1>
+  <h2>
+    Please try in one of
+    <a href='http://caniuse.com/#feat=audio-api' target='_blank'>these browsers</a>
+  </h2>
+</div>
+<div class='message' id='warning2'>
+  <h1>
+    Safari users. You may hear audio but see no visuals. This is due to
+    <a href='https://goo.gl/6WLx1' target='_blank'>this bug</a>
+    in Safari 6
+  </h1>
+</div>
+<div class='message' id='intro'>
+  <h1>Simple music visualiser</h1>
+  <h2>Loading audio&hellip;</h2>
+</div>
+<!-- partial -->
+  <script src='https://raw.github.com/soulwire/sketch.js/master/js/sketch.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

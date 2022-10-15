@@ -1,0 +1,112 @@
+<h1>SVG Filters <small>(feColorMatrix, feComponentTransfer)</small></h1>
+
+<div class="grid">
+  <svg viewBox="0 0 640 960">
+
+    <filter id="duotone-green" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix"
+                     values="0 1 0 0 0
+                             0 1 0 0 0
+                             0 1 0 0 0
+                             0 0 0 1 0"
+                     in="SourceGraphic" result="colormatrix"></feColorMatrix>
+
+      <feComponentTransfer in="colormatrix" result="componentTransfer">
+        <feFuncR type="table" tableValues="0.03 1"></feFuncR>
+        <feFuncG type="table" tableValues="0.57 1"></feFuncG>
+        <feFuncB type="table" tableValues="0.49 1"></feFuncB>
+        <feFuncA type="table" tableValues="0 1"></feFuncA>
+      </feComponentTransfer>
+
+      <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"></feBlend>
+    </filter>
+
+    <image xlink:href="https://caohim.com/static/img/pexels-photo-woman-smiling-1426701.jpg"
+           class="is--original"
+           width="100%" x="0" y="0" height="100%"></image>
+    <image xlink:href="https://caohim.com/static/img/pexels-photo-woman-smiling-1426701.jpg"
+           class="is--duotone"
+           width="100%" x="0" y="0" height="100%" 
+           filter="url(#duotone-green)"></image>
+
+  </svg>
+  
+  
+  
+  
+  
+  
+  <svg viewBox="0 0 640 960">
+
+    <filter id="duotone" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix"
+                     values=".33 .33 .33 0 0
+                .33 .33 .33 0 0
+                .33 .33 .33 0 0
+                0 0 0 1 0"
+                     in="SourceGraphic" result="colormatrix"></feColorMatrix>
+
+      <feComponentTransfer in="colormatrix" result="componentTransfer">
+        <feFuncR type="table" tableValues=".996078431 .984313725"></feFuncR>
+        <feFuncG type="table" tableValues=".125490196 .941176471"></feFuncG>
+        <feFuncB type="table" tableValues=".552941176 .478431373"></feFuncB>
+      </feComponentTransfer>
+
+      <feComponentTransfer color-interpolation-filters="sRGB">
+        <feFuncR type="gamma" exponent="1" amplitude="1" offset="0"></feFuncR>
+        <feFuncG type="gamma" exponent="1" amplitude="1" offset="0"></feFuncG>
+        <feFuncB type="gamma" exponent="1" amplitude="1" offset="0"></feFuncB>
+      </feComponentTransfer>
+
+      <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"></feBlend>
+    </filter>
+
+    <image xlink:href="https://caohim.com/static/img/adolescence-attractive-beautiful-573299.jpg"
+           class="is--original"
+           width="100%" x="0" y="0" height="100%"></image>
+    <image xlink:href="https://caohim.com/static/img/adolescence-attractive-beautiful-573299.jpg"
+           class="is--duotone"
+           width="100%" x="0" y="0" height="100%" 
+           filter="url(#duotone)"></image>
+
+  </svg>
+  <svg viewBox="0 0 640 960">
+
+    <filter id="duotone-sepia" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="1 0 0 0 0
+              1 0 0 0 0
+              1 0 0 0 0
+              0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+
+      <feComponentTransfer in="colormatrix" result="componentTransfer">
+        <feFuncR type="table" tableValues="0.26 0.95"/>
+        <feFuncG type="table" tableValues="0.19 0.78"/>
+        <feFuncB type="table" tableValues="0.11 0.59"/>
+        <feFuncA type="table" tableValues="0 1"/>
+      </feComponentTransfer>
+
+      <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"></feBlend>
+    </filter>
+
+    <image xlink:href="https://caohim.com/static/img/pexels-photo-1857039.jpg"
+           class="is--original"
+           width="100%" x="0" y="0" height="100%"></image>
+    <image xlink:href="https://caohim.com/static/img/pexels-photo-1857039.jpg"
+           class="is--duotone"
+           width="100%" x="0" y="0" height="100%" 
+           filter="url(#duotone-sepia)"></image>
+
+  </svg>
+</div>
+
+<!--
+
+Following Sara Soueidan's tutorial on Tympanus
+https://tympanus.net/codrops/2019/02/05/svg-filter-effects-duotone-images-with-fecomponenttransfer/
+
+Photo
+https://www.pexels.com/photo/woman-smiling-1426701/
+https://www.pexels.com/photo/adolescence-attractive-beautiful-blur-573299/
+https://www.pexels.com/photo/high-angle-shot-of-man-wearing-collared-shirt-1857039/
+
+-->

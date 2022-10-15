@@ -1,0 +1,592 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 90%;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 37.5em) {
+  html,
+  body {
+    font-size: 100%;
+  }
+}
+
+.section {
+  background: #EF4836;
+  display: table;
+  height: 100%;
+  min-height: 43.75em;
+  position: relative;
+  width: 100%;
+}
+@media (max-height: 40em) {
+  .section {
+    display: block;
+    padding-top: 4em;
+  }
+}
+.section__wrap {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+@media (max-height: 40em) {
+  .section__wrap {
+    display: block;
+  }
+}
+.section h1 {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 300;
+  margin: 1em auto .5em;
+  text-align: center;
+}
+@media (min-width: 37.5em) {
+  .section h1 {
+    font-size: 2em;
+  }
+}
+
+p {
+  color: #c92210;
+  font-size: .75em;
+  text-align: center;
+  transform: translateY(4em);
+}
+p a {
+  color: #c92210;
+}
+
+.center {
+  background: #fff;
+  border-radius: 50%;
+  height: 22em;
+  margin: 1em auto;
+  overflow: hidden;
+  position: relative;
+  width: 22em;
+}
+
+.part {
+  position: absolute;
+  border: 0 solid transparent;
+}
+
+.part-1 {
+  background: #1c699d;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  animation: part1 5s infinite;
+  animation-timing-function: cubic-bezier(0.6, 1.5, 0.6, 1);
+}
+
+.part-2 {
+  background: #fff;
+  border-radius: 0.25em;
+  display: table;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: part2 5s infinite;
+  animation-timing-function: cubic-bezier(0.6, 1.5, 0.6, 1);
+}
+.part-2 span {
+  color: #3498DB;
+  display: table-cell;
+  font-weight: 700;
+  vertical-align: middle;
+  animation: code 5s infinite;
+  animation-timing-function: cubic-bezier(0.6, 1.5, 0.6, 1);
+}
+
+.part-3 {
+  background: #3498DB;
+  border-radius: 0.625em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  animation: part3 5s infinite;
+  animation-timing-function: cubic-bezier(0.6, 1.5, 0.6, 1);
+}
+
+@-moz-keyframes part1 {
+  0%, 5% {
+    border-radius: 0;
+    height: 0.3125em;
+    top: 13em;
+    width: 1.5625em;
+  }
+  15%, 25% {
+    border-radius: 3.75em;
+    height: 1.5em;
+    top: 14.875em;
+    width: 1.5em;
+  }
+  35%, 45% {
+    border-radius: 3.75em;
+    height: 1.5em;
+    top: 16.5625em;
+    width: 1.5em;
+  }
+  55%, 65% {
+    border-radius: 6.25em;
+    height: 1.25em;
+    top: 15.625em;
+    width: 15.625em;
+  }
+  75%, 85% {
+    border-radius: 6.25em;
+    height: 1.25em;
+    top: 17.1875em;
+    width: 5.625em;
+  }
+  95%, 100% {
+    border-radius: 0;
+    height: 0.3125em;
+    top: 13em;
+    width: 1.5625em;
+  }
+}
+@-webkit-keyframes part1 {
+  0%, 5% {
+    border-radius: 0;
+    height: 0.3125em;
+    top: 13em;
+    width: 1.5625em;
+  }
+  15%, 25% {
+    border-radius: 3.75em;
+    height: 1.5em;
+    top: 14.875em;
+    width: 1.5em;
+  }
+  35%, 45% {
+    border-radius: 3.75em;
+    height: 1.5em;
+    top: 16.5625em;
+    width: 1.5em;
+  }
+  55%, 65% {
+    border-radius: 6.25em;
+    height: 1.25em;
+    top: 15.625em;
+    width: 15.625em;
+  }
+  75%, 85% {
+    border-radius: 6.25em;
+    height: 1.25em;
+    top: 17.1875em;
+    width: 5.625em;
+  }
+  95%, 100% {
+    border-radius: 0;
+    height: 0.3125em;
+    top: 13em;
+    width: 1.5625em;
+  }
+}
+@keyframes part1 {
+  0%, 5% {
+    border-radius: 0;
+    height: 0.3125em;
+    top: 13em;
+    width: 1.5625em;
+  }
+  15%, 25% {
+    border-radius: 3.75em;
+    height: 1.5em;
+    top: 14.875em;
+    width: 1.5em;
+  }
+  35%, 45% {
+    border-radius: 3.75em;
+    height: 1.5em;
+    top: 16.5625em;
+    width: 1.5em;
+  }
+  55%, 65% {
+    border-radius: 6.25em;
+    height: 1.25em;
+    top: 15.625em;
+    width: 15.625em;
+  }
+  75%, 85% {
+    border-radius: 6.25em;
+    height: 1.25em;
+    top: 17.1875em;
+    width: 5.625em;
+  }
+  95%, 100% {
+    border-radius: 0;
+    height: 0.3125em;
+    top: 13em;
+    width: 1.5625em;
+  }
+}
+@-moz-keyframes part2 {
+  0%, 5% {
+    border: 0.25em solid #3498DB;
+    border-radius: 0.5em;
+    height: 3.125em;
+    top: 9.375em;
+    width: 3.125em;
+  }
+  15%, 25% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 8.125em;
+    top: 6.0625em;
+    width: 4.75em;
+  }
+  35%, 45% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 11.25em;
+    top: 4.6875em;
+    width: 6.875em;
+  }
+  55%, 65% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 8.125em;
+    top: 5.9375em;
+    width: 13.5em;
+  }
+  75%, 85% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 9.375em;
+    top: 5.9375em;
+    width: 15em;
+  }
+  95%, 100% {
+    border: 0.25em solid #3498DB;
+    border-radius: 0.5em;
+    height: 3.125em;
+    top: 9.375em;
+    width: 3.125em;
+  }
+}
+@-webkit-keyframes part2 {
+  0%, 5% {
+    border: 0.25em solid #3498DB;
+    border-radius: 0.5em;
+    height: 3.125em;
+    top: 9.375em;
+    width: 3.125em;
+  }
+  15%, 25% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 8.125em;
+    top: 6.0625em;
+    width: 4.75em;
+  }
+  35%, 45% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 11.25em;
+    top: 4.6875em;
+    width: 6.875em;
+  }
+  55%, 65% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 8.125em;
+    top: 5.9375em;
+    width: 13.5em;
+  }
+  75%, 85% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 9.375em;
+    top: 5.9375em;
+    width: 15em;
+  }
+  95%, 100% {
+    border: 0.25em solid #3498DB;
+    border-radius: 0.5em;
+    height: 3.125em;
+    top: 9.375em;
+    width: 3.125em;
+  }
+}
+@keyframes part2 {
+  0%, 5% {
+    border: 0.25em solid #3498DB;
+    border-radius: 0.5em;
+    height: 3.125em;
+    top: 9.375em;
+    width: 3.125em;
+  }
+  15%, 25% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 8.125em;
+    top: 6.0625em;
+    width: 4.75em;
+  }
+  35%, 45% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 11.25em;
+    top: 4.6875em;
+    width: 6.875em;
+  }
+  55%, 65% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 8.125em;
+    top: 5.9375em;
+    width: 13.5em;
+  }
+  75%, 85% {
+    border: 0 solid #3498DB;
+    border-radius: 0.5em;
+    height: 9.375em;
+    top: 5.9375em;
+    width: 15em;
+  }
+  95%, 100% {
+    border: 0.25em solid #3498DB;
+    border-radius: 0.5em;
+    height: 3.125em;
+    top: 9.375em;
+    width: 3.125em;
+  }
+}
+@-moz-keyframes part3 {
+  0%, 5% {
+    border-radius: 0.3125em;
+    height: 9.375em;
+    top: 6.4375em;
+    width: 2.5em;
+  }
+  15%, 25% {
+    border-radius: 0.625em;
+    height: 11.875em;
+    top: 5em;
+    width: 6.625em;
+  }
+  35%, 45% {
+    border-radius: 0.625em;
+    height: 15em;
+    top: 3.75em;
+    width: 8.75em;
+  }
+  55%, 65% {
+    border-radius: 0.625em;
+    height: 10em;
+    top: 5em;
+    width: 15em;
+  }
+  75%, 85% {
+    border-radius: 0.625em;
+    height: 11.25em;
+    top: 5em;
+    width: 16.875em;
+  }
+  95%, 100% {
+    border-radius: 0.3125em;
+    height: 9.375em;
+    top: 6.4375em;
+    width: 2.5em;
+  }
+}
+@-webkit-keyframes part3 {
+  0%, 5% {
+    border-radius: 0.3125em;
+    height: 9.375em;
+    top: 6.4375em;
+    width: 2.5em;
+  }
+  15%, 25% {
+    border-radius: 0.625em;
+    height: 11.875em;
+    top: 5em;
+    width: 6.625em;
+  }
+  35%, 45% {
+    border-radius: 0.625em;
+    height: 15em;
+    top: 3.75em;
+    width: 8.75em;
+  }
+  55%, 65% {
+    border-radius: 0.625em;
+    height: 10em;
+    top: 5em;
+    width: 15em;
+  }
+  75%, 85% {
+    border-radius: 0.625em;
+    height: 11.25em;
+    top: 5em;
+    width: 16.875em;
+  }
+  95%, 100% {
+    border-radius: 0.3125em;
+    height: 9.375em;
+    top: 6.4375em;
+    width: 2.5em;
+  }
+}
+@keyframes part3 {
+  0%, 5% {
+    border-radius: 0.3125em;
+    height: 9.375em;
+    top: 6.4375em;
+    width: 2.5em;
+  }
+  15%, 25% {
+    border-radius: 0.625em;
+    height: 11.875em;
+    top: 5em;
+    width: 6.625em;
+  }
+  35%, 45% {
+    border-radius: 0.625em;
+    height: 15em;
+    top: 3.75em;
+    width: 8.75em;
+  }
+  55%, 65% {
+    border-radius: 0.625em;
+    height: 10em;
+    top: 5em;
+    width: 15em;
+  }
+  75%, 85% {
+    border-radius: 0.625em;
+    height: 11.25em;
+    top: 5em;
+    width: 16.875em;
+  }
+  95%, 100% {
+    border-radius: 0.3125em;
+    height: 9.375em;
+    top: 6.4375em;
+    width: 2.5em;
+  }
+}
+@-moz-keyframes code {
+  0%, 5% {
+    font-size: 1em;
+  }
+  15%, 25% {
+    font-size: 1.5625em;
+  }
+  35%, 45% {
+    font-size: 2.1875em;
+  }
+  55%, 65% {
+    font-size: 2.8125em;
+  }
+  75%, 85% {
+    font-size: 3.4375em;
+  }
+  95%, 100% {
+    font-size: 1em;
+  }
+}
+@-webkit-keyframes code {
+  0%, 5% {
+    font-size: 1em;
+  }
+  15%, 25% {
+    font-size: 1.5625em;
+  }
+  35%, 45% {
+    font-size: 2.1875em;
+  }
+  55%, 65% {
+    font-size: 2.8125em;
+  }
+  75%, 85% {
+    font-size: 3.4375em;
+  }
+  95%, 100% {
+    font-size: 1em;
+  }
+}
+@keyframes code {
+  0%, 5% {
+    font-size: 1em;
+  }
+  15%, 25% {
+    font-size: 1.5625em;
+  }
+  35%, 45% {
+    font-size: 2.1875em;
+  }
+  55%, 65% {
+    font-size: 2.8125em;
+  }
+  75%, 85% {
+    font-size: 3.4375em;
+  }
+  95%, 100% {
+    font-size: 1em;
+  }
+}

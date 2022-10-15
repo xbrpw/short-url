@@ -1,0 +1,16 @@
+.logo-almagro {
+  background-color: #d3212b;
+  color: white;
+  width: 200px;
+  height: 66.66666667px;
+  padding-top: 140px;
+  border-radius: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 42.55319149px;
+  text-align: center;
+  text-transform: lowercase;
+  line-height: 100%;
+}
+.logo-almagro sub {
+  font-size: 20%;
+}

@@ -1,0 +1,84 @@
+/* main container */ 
+
+  .cs-home-main-mobile {
+    position: relative;
+    text-align: center;
+    }
+
+  .cs-home-words-mobile {
+    margin-bottom: 10px;
+    font-weight: 800;
+    line-height: 2;
+  }
+  
+  .cs-home-words:last-child {
+    margin-bottom: 30px;
+  }
+  
+  .cs-words-mobile {
+    margin-right: 25px;
+}
+
+  .cs-words-mobile:hover {
+    cursor: pointer;
+    color: green;
+}
+
+  .cs-ba {
+    margin-right: 30px;
+}
+
+
+/* changing div */
+
+  .cs-home-we-do-container-mobile {
+    display: none;
+    position: absolute;
+    width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+  .cs-home-img-mobile {
+    background-image: url('http://ldservices.connect-strategic.com/wp-content/uploads/2022/09/dd-500.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: grey;
+    height: 180px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+  #cs-home-text-mobile {
+    padding: 5%;
+    min-height: 50px;
+    width: auto;
+    background-color: #178546;
+    color: #fff;
+    font-size: 20px;
+}
+
+  #cs-home-text-mobile h4 {
+    color: #fff !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+
+#cs-close-mobile {
+  position: absolute;
+  color: #000;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 88%;
+  margin-top: 2%;
+  font-family: sans-serif;
+  opacity: .8;
+  padding: 10px;
+}

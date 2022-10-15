@@ -1,0 +1,50 @@
+body {
+  background: #111;
+  overflow: hidden;
+}
+
+.bg {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  background: #fff;
+  animation: move infinite 2s;
+}
+
+.text {
+  position: absolute;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.25em;
+  font-size: 3em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+
+svg {
+  height: 30vh;
+  position: absolute;
+  left: 50%;
+}
+svg path {
+  mix-blend-mode: difference;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(3.5);
+  }
+}

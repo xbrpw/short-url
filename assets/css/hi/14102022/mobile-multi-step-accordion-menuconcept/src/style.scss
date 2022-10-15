@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
+
+html,body{height:100%}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+$baseColor: #1abc9c;
+
+.mobile-accordion-multiplesteps {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  font-size: 5vmin;
+  
+  > ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $baseColor;
+    
+    li {
+      
+      a {
+        display: block;
+        padding: .6em 0;
+        border-bottom: 1px solid darken($baseColor, 30%);
+        color: #ecf0f1;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        
+        &.active {}
+      }
+    }
+  }
+  ul ul {
+    display: none;
+    box-shadow: inset rgba(0,0,0,.3) 0 3px 3px;
+    background-color: darken($baseColor, 10%);
+  }
+  ul ul ul {
+    background-color: darken($baseColor, 20%);
+  }
+//  a.active + ul {
+//    display: block;
+//  }
+}

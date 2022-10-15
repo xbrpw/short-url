@@ -1,0 +1,74 @@
+/* util class */
+.grid {
+    display: grid;
+}
+.d-block {
+    display: block;
+}
+.d-flex {
+    display: flex;
+}
+.d-inline-flex {
+    display: inline-flex;
+}
+.text-center {
+    text-align: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: end;
+}
+.align-center {
+    align-items: center;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.decoration-none {
+    text-decoration: none;
+}
+.decoration-through {
+    text-decoration: line-through;
+}
+.full-width {
+    width: var(--width);
+}
+.full-height {
+    height: var(--height);
+}
+
+.main {
+    margin-top: 100px;
+}
+.section {
+    position: relative;
+}
+
+.btn {
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+}
+
+
+
+.btn-primary {
+    color: var(--color-white);
+    background-color: var(--color-official);
+    width: 100%;
+    max-width: 180px;
+    height: 56px;
+    font-size: 2.4rem;
+    line-height: 56px;
+    border-radius: 5px;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);    
+}
+
+.btn-primary:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+/* end/ util class */

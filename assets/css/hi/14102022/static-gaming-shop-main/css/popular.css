@@ -1,0 +1,124 @@
+/* section popular */
+.section-popular {
+    padding-top: 50px;
+}
+.section-popular .container .grid {
+    grid-template-columns: 1fr;
+    grid-gap: var(--gutter);
+    padding-top: 50px;
+}
+
+@media (min-width: 992px) {
+    .section-popular .container > .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .section-popular .grid .grid-item > .grid {
+        grid-gap: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .section-popular .grid .grid-item > .grid .price {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .section-popular .grid .grid-item > .grid .desc {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .section-popular .grid .grid-item > .grid .figure {
+        grid-column: 2;
+        grid-row: span 2 / 3;
+    }    
+}
+
+.section-popular .grid .grid-item > .grid {
+    padding-top: var(--gutter);
+}
+
+
+.section-popular .grid .grid-item > .grid .figure {
+    width: 100%;
+    height: 302px;
+    background-position: center; /* bottom right; */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 992px) {
+    .section-popular .grid .grid-item > .grid .figure {
+        height: 100%;
+        background-position: bottom right; 
+    }
+
+    .section-popular .grid .grid-item:nth-child(1) {
+        border-right: 1px solid #5F5F5F;
+        border-bottom: 1px solid #5F5F5F;
+    }
+    .section-popular .grid .grid-item:nth-child(2) {
+        border-right: 1px solid #5F5F5F;
+        border-bottom: 1px solid #5F5F5F;
+    }    
+
+    .section-popular .grid .grid-item:nth-child(3) {
+        border-right: 1px solid #5F5F5F;
+        border-bottom: 1px solid #5F5F5F;
+    }
+    .section-popular .grid .grid-item:nth-child(4) {
+        border-right: 1px solid #5F5F5F;
+        border-bottom: 1px solid #5F5F5F;
+    }       
+    .section-popular .grid .grid-item > .grid .btn {
+        margin-bottom: 50px;
+    }
+    
+}
+
+
+
+/* media max width - screen(md) */
+@media (max-width: 767.98px) {
+    .section-popular .title {
+        text-align: center;
+    }
+}
+/* end - media max width - screen(md) */
+/* end / section popular */
+
+.section-popular .grid > .title {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    font-size: 2.4rem;
+    color: var(--color-deep-gray);
+    font-weight: var(--font-weight-7);
+}
+
+.section-popular .price h3 {
+    font-size: 3.6rem;
+    font-weight: var(--font-weight-7);
+    margin: 0;
+    text-align: center;
+}
+
+.section-popular .desc .subtitle {
+    font-weight: var(--font-weight-4);
+    font-size: 2.4rem;
+    color: var(--color-white);
+    margin: 0;
+    text-align: center;
+}
+
+.section-popular .desc .title {
+    font-weight: var(--font-weight-7);
+    font-size: 2.4rem;
+    color: var(--color-white);
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.section-popular .desc .btn {
+    margin: auto;
+}

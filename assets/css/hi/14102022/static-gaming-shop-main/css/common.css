@@ -1,0 +1,62 @@
+/* color and background */
+
+/* color */
+.c-white {
+    color: var(--color-white);
+}
+.c-black {
+    color: var(--color-black);
+}
+.c-official {
+    color: var(--color-official);
+}
+.c-light {
+    color: var(--color-light);
+}
+.c-dimgray {
+    color: var(--color-dimgray);
+}
+.c-silver {
+    color: var(--color-silver);
+}
+.c-gunmetal {
+    color: var(--color-gunmetal);
+}
+.c-stone-green {
+    color: var(--color-stone-green);
+}
+.c-dark-silver {
+    color: var(--color-dark-silver);
+}
+/* end */
+
+/* background */
+.bg-white {
+    background-color: var(--color-white);
+}
+.bg-black {
+    background-color: var(--color-black);
+}
+.bg-official {
+    background-color: var(--color-official);
+}
+.bg-light {
+    background-color: var(--color-light);
+}
+.bg-dimgray {
+    background-color: var(--color-dimgray);
+}
+.bg-silver {
+    background-color: var(--color-silver);
+}
+.bg-gunmetal {
+    background-color: var(--color-gunmetal);
+}
+.bg-stone-green {
+    background-color: var(--color-stone-green);
+}
+.bg-dark-silver {
+    background-color: var(--color-dark-silver);
+}
+/* end */
+/* end / color and background */

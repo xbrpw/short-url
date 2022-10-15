@@ -1,0 +1,87 @@
+ 
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-white);
+    z-index: 100;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 3px 6px rgb(0 0 0 / 10%);
+}
+@media (max-width: 991.98px) {
+    .header {
+        z-index: 100;
+        position: fixed;
+   }
+}
+.header > .grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    place-items: center;
+    height: 100%;
+}
+.header .start .logo-brand {
+    display: block;
+    font-weight: var(--font-weight-7);
+    font-size: 2.8rem;
+    color: var(--color-black);
+}
+.header .end {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: var(--gutter);
+}
+.header .end .btn {
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+.header .end .btn span {
+    position: relative;
+    display: grid;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header .end .icon-search {
+    background-size: 18px 18px;
+    background-image: url('../img/assets/search-icon.svg');
+}
+.header .end .icon-cart {
+    background-size: 24px 24px;
+    background-image: url('../img/assets/cart-icon.svg');
+}
+.header .end .icon-account {
+    background-size: 18px 18px;
+    background-image: url('../img/assets/account-icon.svg');
+}
+.header .end .icon-cart .cart-count {
+    position: absolute;
+    top: -7px;
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    color: var(--color-white);
+    font-size: 13px;
+    background-color: var(--color-official);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+/* end / header */

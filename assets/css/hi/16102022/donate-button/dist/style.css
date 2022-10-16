@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap");
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: max(5vmin, 16px);
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  position: relative;
+  background: linear-gradient(to bottom right, #1d74ff 40%, #4ebeff 100%);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 0.5em 0.05em #4ebeff, inset 0.05em 0.05em 0.1em 0.01em rgba(255, 255, 255, 0.5), inset -0.05em -0.05em 0.1em 0.01em rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: white;
+  font-family: "Recursive", sans-serif;
+  font-size: inherit;
+  padding: 30px 40px;
+  transition: transform 0.05s ease-in;
+}
+
+button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top left, #1d74ff 40%, #4ebeff 100%);
+  border: none;
+  border-radius: 20px;
+  box-shadow: inset 0.05em 0.05em 0.1em 0.01em rgba(255, 255, 255, 0.5), inset -0.05em -0.05em 0.1em 0.01em rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+button:hover:after {
+  opacity: 1;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}

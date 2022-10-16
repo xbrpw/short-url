@@ -1,0 +1,136 @@
+<div id="app">
+  <div class="iphone">
+     <div class="iphone-top">
+      <span class="camera"></span>
+      <span class="sensor"></span>
+      <span class="speaker"></span>
+    </div>
+    <div class="top-bar"></div>
+    <div class="iphone-screen">
+      <transition name="fade">
+        <div v-if="!step" class="loading" key="app_transition_1">
+          <i class="fab fa-twitter fa-3x" aria-hidden="true"></i>
+        </div>
+        <div v-if="step" class="app" key="app_transition_2">
+          <div class="phone-header">
+            <div v-if="step === 1"
+                 style="border-bottom: 1px solid #e6ecf1; padding-bottom: 10px;">
+              <p>Home</p>
+              <img class="img-1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/codepen_logo.png" />
+              <img class="img-2"
+                   src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/tweet_icon.png"
+                   @click="step++" />
+            </div>
+            <div v-if="step === 2">
+              <i class="fas fa-times" @click="goToHome"></i>
+              <button class="button is-primary is-small"
+                 @click="shareTweet"
+                 :disabled="description === ''">
+                 Tweet
+              </button>
+            </div>
+          </div>
+          <transition name="fade">
+            <div class="feed" id="feed" v-if="step === 1" v-dragscroll.y="true">
+              <tweet-component
+                v-for="tweet in tweets"
+                :tweet="tweet"
+                :key="tweets.indexOf(tweet)"
+              />
+            </div>
+            <div class="make-tweet" v-if="step === 2">
+              <img class="img-1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/codepen_logo.png" />
+              <div class="caption-container">
+                <textarea
+                  placeholder="What's happening?"
+                  type="text"
+                  class="caption-input"
+                  maxlength="280"
+                  v-model="description">
+                </textarea>
+                <i></i>
+              </div>
+              <div class="text-limit">
+                {{description.length}}/280
+                <span class="right">Tag others with <span class="highlighted">@</span> and create hashtags with <span class="highlighted">#</span></span>
+              </div>
+              <div class="image-container" v-if="image">
+                <img :src="image">
+                  <i class="fas fa-times-circle"
+                     @click="image = ''">
+                  </i>
+                </img>
+              </div>
+            </div>
+          </transition>
+          <div class="phone-footer">
+          <div v-if="step === 1" class="step-1">
+            <div class="home-cta" @click="goToHome">
+              <i class="fas fa-home fa-lg"></i>
+            </div>
+          </div>
+          <div v-if="step === 2" class="step-2">
+            <div class="home-cta" @click="goToHome">
+              <i class="fas fa-home fa-lg"></i>
+            </div>
+            <div class="upload-cta">
+              <input type="file"
+                     name="file"
+                     id="file"
+                     class="inputfile"
+                     @change="fileUpload"
+                     v-model="fileInput"
+                     :disabled="step !== 2"/>
+              <label for="file">
+                <i class="fas fa-image fa-lg"></i>
+              </label>
+            </div>
+            <p class="helper-text">Click <a @click="uploadRandomImage">here for a random image!</a> or upload your own! <i class="fas fa-chevron-right"></i></p>
+          </div>
+        </div>
+        </div>
+      </transition>
+    </div>
+    <div class="iphone-buttons">
+      <span class="on-off"></span>
+      <span class="sleep"></span>
+      <span class="up"></span>
+      <span class="down"></span>
+    </div>
+    <div class="bottom-bar"></div>
+    <div class="iphone-bottom">
+      <span></span>
+    </div>
+  </div>
+
+  <div class="details">
+    <a class="button is-primary is-small is-info" v-if="!showDetails" @click="showDetails = !showDetails">Details</a>
+    <ul v-else>
+      <li>Navigate the feed by <span>dragging (or scrolling)</span></li>
+      <li>Like a post with <span><i class="far fa-heart fa-lg"></i></span>
+      <li>Create tweets and upload photos!</li>
+    </ul>
+</div>
+<a href="https://twitter.com/djirdehh" target="_blank" class="footer-contact">
+  <i class="fab fa-twitter" aria-hidden="true"></i>
+    <a>
+</div>
+
+<!--  Prefetch random images -->
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/tropical_beach.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/nice_for_what.jpeg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/toronto_skyline.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/puppers.jpg" />
+
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/twitter_mobile.png" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/cn-tower.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/prism-goggles-at-concert.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/working-at-night.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/busy-beach.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/grand-canyon.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/carnival-lights-at-dusk.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/codepen_logo.png" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/jaden_twitter_profile.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/drizzy_twitter.png" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/me-formal.jpg" />
+<link rel="prefetch" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1211695/pug_personal.jpg" />

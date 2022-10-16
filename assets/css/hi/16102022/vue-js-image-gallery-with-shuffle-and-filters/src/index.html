@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+<div id="list-complete-demo" class="demo">
+  <button v-on:click="shuffle">Shuffle</button>
+  Filter:
+  <button v-on:click="filter('all')">All</button>
+  <button v-on:click="filter('tag1')">Tag 1</button>
+  <button v-on:click="filter('tag2')">Tag 2</button>
+  <transition-group name="list-complete"
+ class="list-complete"      tag="section">
+    <div
+      v-for="item in filteredItems"
+      v-bind:key="item.id"
+      class="list-complete-item"
+    >
+      <img class="list-complete-img" :src="'http://placehold.it/450x200?text='+item.id" alt="" />
+    </span>
+  </transition-group>
+</div>

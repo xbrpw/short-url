@@ -1,0 +1,8 @@
+<div id="app" class="columns">
+  <div class="column">
+    <button class="is-primary button" @click="shuffle">Shuffle!</button>
+    <transition-group name="tweets" tag="div">
+      <tweet-component v-for="tweet in tweets" :tweet="tweet" :key="tweet.id"/>
+    </transition-group>
+  </div>
+</div>

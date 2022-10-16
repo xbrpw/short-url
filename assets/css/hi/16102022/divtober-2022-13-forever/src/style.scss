@@ -1,0 +1,257 @@
+$t: transparent;
+$p: #efefef;
+$r: #222;
+$b: #ccc;
+$bl: #000;
+
+
+@font-face {
+  font-family: "Rebel";
+  src: url("https://assets.codepen.io/383755/RebelBonesBold.woff2")
+    format("woff2");
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: radial-gradient(
+      circle at center,
+      rgba(0,0,0,0.75) 250px,
+      $bl 250px
+    ),
+    radial-gradient(circle at center, $r 1px, $t 1px, $t 5px)
+      calc(50% - 10px) calc(50% - 10px) / 20px 20px,
+    radial-gradient(circle at center, $b 1px, #fff 1px, #fff 5px) 50% 50% /
+      20px 20px;
+  position: relative;
+  animation: bgshift 2s linear infinite;
+  @keyframes bgshift {
+    to {
+      background-position: 50% 50%, calc(50% - 30px) calc(50% - 30px),
+        calc(50% - 20px) calc(50% - 20px);
+    }
+  }
+
+  div {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    filter: drop-shadow(1px 0 0 $bl) drop-shadow(0px 1px 0 $bl)
+      drop-shadow(-1px 0 0 $bl) drop-shadow(0 -1px 0 $bl)
+      drop-shadow(0 20px 20px rgba(0, 0, 0, 0.5));
+    &:after {
+      font-family: "Rebel";
+      content: "TACO BELL";
+      font-size: 30px;
+      letter-spacing: 26px;
+      position: absolute;
+      top: calc(50% - 30px);
+      left: calc(50% + 12px);
+      transform: translate(-50%, 0);
+      width: 100%;
+      text-align: center;
+      color: #444;
+      -webkit-text-fill-color:transparent;
+      background-image:linear-gradient(to top, $r 50%, $t 50%);
+      -webkit-background-clip:text;
+      -webkit-text-stroke:1.5px #444;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 180px;
+      left: calc(50% - 190px);
+      top: calc(50% - 90px);
+      background: radial-gradient(
+            ellipse at bottom left,
+            $t 10px,
+            rgba(255, 255, 255, 0.5) 10px,
+            rgba(255, 255, 255, 0.5) 20px,
+            $bl 20px,
+            $bl 22px,
+            $t 22px
+          )
+          95px 0px / 70% 80% no-repeat,
+        radial-gradient(
+            circle at bottom,
+            $p 50%,
+            $bl 50%,
+            $bl calc(50% + 2px),
+            $t calc(50% + 2px)
+          )
+          0px 12.5px / 50px 35px no-repeat,
+        radial-gradient(
+            circle at bottom,
+            $p 50%,
+            $bl 50%,
+            $bl calc(50% + 2px),
+            $t calc(50% + 2px)
+          )
+          40px 5px / 50px 35px no-repeat,
+        radial-gradient(
+            circle at bottom,
+            $p 50%,
+            $bl 50%,
+            $bl calc(50% + 2px),
+            $t calc(50% + 2px)
+          )
+          82px 0px / 50px 35px no-repeat,
+        radial-gradient(
+            circle at bottom,
+            $p 50%,
+            $bl 50%,
+            $bl calc(50% + 2px),
+            $t calc(50% + 2px)
+          )
+          115px 15px / 55px 20px no-repeat,
+        linear-gradient(
+            13deg,
+            $t 20%,
+            $bl 20%,
+            $bl calc(20% + 2px),
+            darken($p, 10%) calc(20% + 2px),
+            $p calc(50% - 2px),
+            $bl calc(50% - 2px),
+            $bl 50%,
+            $t 50%
+          )
+          110px 64px / 55px 105px no-repeat,
+        radial-gradient(
+            circle at right,
+            darken($p, 5%) 40%,
+            $bl 40%,
+            $bl calc(40% + 2px),
+            $t calc(40% + 2px)
+          )
+          75px 110px / 35px 35px no-repeat,
+        radial-gradient(
+            ellipse at left,
+            darken($p, 5%),
+            darken($p, 10%) 40%,
+            $bl 40%,
+            $bl calc(40% + 1.5px),
+            $t calc(40% + 1.5px)
+          )
+          165px 99px / 30px 73px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $t 50%,
+            darken($p, 10%) 50%,
+            darken($p, 10%) calc(50% + 2px),
+            darken($p, 5%) calc(50% + 2.5px)
+          )
+          5px 95px / 35px 10px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $t 50%,
+            darken($p, 10%) 50%,
+            darken($p, 10%) calc(50% + 2px),
+            darken($p, 5%) calc(50% + 2.5px)
+          )
+          42.5px 95px / 46px 10px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $t 50%,
+            darken($p, 10%) 50%,
+            darken($p, 10%) calc(50% + 2px),
+            darken($p, 5%) calc(50% + 2.5px)
+          )
+          91px 95px / 46px 10px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $t 50%,
+            darken($p, 10%) 50%,
+            darken($p, 10%) calc(50% + 2px),
+            darken($p, 5%) calc(50% + 2.5px)
+          )
+          139px 95px / 29px 10px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $p 30%,
+            darken($p, 10%) 50%,
+            $bl 50%,
+            $bl calc(50% + 2.5px),
+            $t calc(50% + 2px)
+          ) -3px 105px / 50px 15px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $p 30%,
+            darken($p, 10%) 50%,
+            $bl 50%,
+            $bl calc(50% + 2.5px),
+            $t calc(50% + 2px)
+          )
+          33px 105px / 65px 15px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $p 30%,
+            darken($p, 10%) 50%,
+            $bl 50%,
+            $bl calc(50% + 2.5px),
+            $t calc(50% + 2px)
+          )
+          83px 105px / 62px 15px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            $p 30%,
+            darken($p, 10%) 50%,
+            $bl 50%,
+            $bl calc(50% + 2.5px),
+            $t calc(50% + 2px)
+          )
+          133px 105px / 45px 15px no-repeat,
+        linear-gradient(to right, $t 1.5px, $bl 1.5px, $bl 3.5px, $t 3.5px)
+          50% 45px / 100% 60px no-repeat,
+        linear-gradient(
+            80deg,
+            $t 50%,
+            $bl 50%,
+            $bl calc(50% + 2px),
+            $t calc(50% + 2px)
+          )
+          66.5px 35px / 100% 70px no-repeat,
+        linear-gradient(
+            85deg,
+            $t 50%,
+            $bl 50%,
+            $bl calc(50% + 2px),
+            $t calc(50% + 2px)
+          )
+          35px 55px / 100% 50px no-repeat,
+        linear-gradient(
+            90deg,
+            $t 3px,
+            $p 3px,
+            $p 40px,
+            $bl 40px,
+            $bl 42px,
+            $p 42px,
+            $p 89px,
+            $bl 89px,
+            $bl 91px,
+            $p 91px,
+            $p 150px,
+            $t 100px
+          )
+          50% 70px / 200px 40px no-repeat,
+        linear-gradient(80deg, $t 91px, $p 91px, $p 172px, $t 100px) 50% 65px /
+          200px 40px no-repeat,
+        radial-gradient(
+            ellipse at top,
+            darken($p, 5%) 30%,
+            darken($p, 10%) 40%,
+            $bl 40%,
+            $bl calc(40% + 2px),
+            $t calc(40% + 2px)
+          ) -25px 95px / 200px 75px no-repeat,
+        linear-gradient(80deg, $t 20%, $p 20%, $p 80%, $t 80%) 2px 35px / 200px
+          50px no-repeat,
+        linear-gradient(to right, $p, $p) 2px 40px / 50px 40px no-repeat,
+        linear-gradient(to right, darken($p, 12.5%), darken($p, 10%)) 120px 90px /
+          50px 40px no-repeat;
+      -webkit-box-reflect: right -20px;
+    }
+  }
+}

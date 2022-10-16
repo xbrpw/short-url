@@ -1,0 +1,7 @@
+  <div id="app">
+    <div class="view">
+      <button :class="[ user_type === 'all' ? 'selected' : '']" @click="update_source('all')">All Posts</button>
+      <button :class="[ user_type === 'friend' ? 'selected' : '']" @click="update_source('friend')">Friends' Posts</button>
+    </div>
+    <tweet-component v-for="tweet in tweets" :tweet="tweet" v-if="(tweet.user_type === user_type) || (user_type === 'all')"/>
+  </div>

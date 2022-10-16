@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple Twitter Feed #3</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app" class="columns">
+  <div class="column">
+    <button class="is-primary button" @click="shuffle">Shuffle!</button>
+    <transition-group name="tweets" tag="div">
+      <tweet-component v-for="tweet in tweets" :tweet="tweet" :key="tweet.id"/>
+    </transition-group>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1062 @@
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel, Inc.! Marketing Technology Stack ¿Quién hizo todo esto? http://twitter.com/luisangelmaciel -->
+<html lang="es-MX" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" >  <head>
+<title>MDS</title><link rel="icon" type="image/x-icon" sizes="192x192" href="favicon.sgv" id="favicon" />   
+<link rel="stylesheet" href="css/dashboard.css"> 
+<link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet">   
+<!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">    -->
+<link rel="stylesheet" href="eevee.css">   <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">  -->
+<link rel='dns-prefetch' href="https://fonts.googleapis.com">  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<script src="https://www.w3schools.com/lib/w3.js"></script> <link rel="stylesheet" href="https://www.xbr.pw/go/eevee.css">
+<style>a {text-decoration: none;}a{background-color:transparent}a:active,a:hover{outline-width:0}a:link, a:visited {color: inherit;text-decoration: none;} a:hover, a:active {color: inherit; text-decoration: none;}a:hover {text-decoration: underline;} b{font-size: large;}</style>
+
+<script>function includeHTML() {var z, i, elmnt, file, xhttp;/*loop through a collection of all HTML elements:*/z = document.getElementsByTagName("*");for (i = 0; i < z.length; i++) {elmnt = z[i];/*search for elements with a certain atrribute:*/file = elmnt.getAttribute("incluye-html");if (file) {/*make an HTTP request using the attribute value as the file name:*/xhttp = new XMLHttpRequest();xhttp.onreadystatechange = function() {if (this.readyState == 4) {if (this.status == 200) {elmnt.innerHTML = this.responseText;}if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}/*remove the attribute, and call this function once more:*/elmnt.removeAttribute("incluye-html");includeHTML();}}
+  xhttp.open("GET", file, true);xhttp.send();/*exit the function:*/return;}}};</script>
+
+<style>:root {
+  --font-Lato: font-family: "Lato", sans-serif;
+  --bg-color-initial: rgb(20, 20, 20); 
+  --card-color-initial: rgb(23, 23, 23);}</style> 
+
+<style>.icon-bar-sticky {position: fixed;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); margin-top: 50px;}.icon-bar-sticky a {display: block;text-align: center;padding: 16px;transition: all 0.3s ease;color: white;font-size: 20px;}/*.icon-bar-sticky a:hover {background-color: #000;}*/.facebook {background: #3B5998;color: white;}.twitter {background: #55ACEE;color: white;}.google {background: #dd4b39;color: white;}.linkedin {background: #007bb5;color: white;}.youtube {background: #bb0000;color: white;}.xbrpw {background: #000000;color: white;}</style>
+<style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
+<style>.aBlanco:link {color: white;text-decoration: none;}.aBlanco:visited {color: white;text-decoration: none;} .aBlanco:hover {color: white;text-decoration: none;}.aBlanco:active {color: white; text-decoration: none;}</style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet">   
+  <style>
+  .list li {cursor: pointer;list-style-type: none;margin: 0;padding: 0; }
+  .list li:hover:before,
+  .list li.fav:before {  font-size: 18px; content: ' \2605';  color: rgb(255, 203, 0);}
+  .list li.fav:hover:before {  font-size: 18px; content: ' \2606';}
+    
+    #myInput {
+      background-image: url('https://www.w3schools.com/css/searchicon.png');
+      background-position: 10px 12px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }    
+
+    </style>
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<body>
+    <div class="container"><br><br>
+        <input id="myInput" type="text"  placeholder="Buscar..." title="Buscar">
+        </div>
+        
+
+<div id="myDIV" style="w3-container">
+    <br><br>
+   
+
+        <div class="container">
+    <ul class="list" id="cssFAV">    
+        <li id="icecream" w3-repeat="snipdoradafav"><span onclick="document.location='{{url}}'"> {{fav}}  </span></li>        
+      </ul>
+    </div>
+
+      <div class="container">
+
+       
+         <br>
+         <ul class="list-group" id="myList">
+           <ul id="idFilter" style="list-style: none; margin-left: 0%; padding-left: 0%;"  >
+           <ul id="cssFAV" style="  list-style-type: none;margin: 0;padding: 0;" >
+             <li  w3-repeat="snipdoradafav" style="list-style-type: none;margin: 0;padding: 0;" >
+               <a href={{url}} class="list-group-item"> {{fav}}    
+             <i class="fas fa-external-link-alt" style="float: right;"  onclick="document.location='{{url}}'">  </i></a>           
+             </li>       
+         </ul>
+         </ul>
+         </ul>
+         </div>
+
+         
+ 
+</div><!-- /busqueda-->
+
+<script>
+    var myObject= {"snipdoradafav":[
+  {"fav" : "<b>CSS/FAV</b>","url" : "https://www.xbr.pw/assets/css/fav/index.html"},
+  {"fav" : "app-lectura-dapida-test/","url" : "https://www.xbr.pw/assets/css/fav/app-lectura-dapida-test/index.html"},
+  {"fav" : "card-article-ui/","url" : "https://www.xbr.pw/assets/css/fav/card-article-ui/index.html"},
+  {"fav" : "centered-vertically-and-horizontally-element/","url" : "https://www.xbr.pw/assets/css/fav/centered-vertically-and-horizontally-element/index.html"},
+  {"fav" : "colormode/","url" : "https://www.xbr.pw/assets/css/fav/colormode/index.html"},
+  {"fav" : "contentEditable/","url" : "https://www.xbr.pw/assets/css/fav/contentEditable/index.html"},
+  {"fav" : "craigslist-mobile-redesign/","url" : "https://www.xbr.pw/assets/css/fav/craigslist-mobile-redesign/index.html"},
+  {"fav" : "crear-logi/","url" : "https://www.xbr.pw/assets/css/fav/crear-logi/index.html"},
+  {"fav" : "css3-poster/","url" : "https://www.xbr.pw/assets/css/fav/css3-poster/index.html"},
+  {"fav" : "dark-templete-tipo-app/","url" : "https://www.xbr.pw/assets/css/fav/dark-templete-tipo-app/index.html"},
+  {"fav" : "date-time-layout/","url" : "https://www.xbr.pw/assets/css/fav/date-time-layout/index.html"},
+  {"fav" : "diagonal-background-contenido/","url" : "https://www.xbr.pw/assets/css/fav/diagonal-background-contenido/index.html"},
+  {"fav" : "download-button-animation/","url" : "https://www.xbr.pw/assets/css/fav/download-button-animation/index.html"},
+  {"fav" : "form-app/","url" : "https://www.xbr.pw/assets/css/fav/form-app/index.html"},
+  {"fav" : "horario/","url" : "https://www.xbr.pw/assets/css/fav/horario/index.html"},
+  {"fav" : "html-form-to-google-sheet-master/","url" : "https://www.xbr.pw/assets/css/fav/html-form-to-google-sheet-master/index.html"},
+  {"fav" : "html-to-google-form/","url" : "https://www.xbr.pw/assets/css/fav/html-to-google-form/index.html"},
+  {"fav" : "intro-animacion-presentacion/","url" : "https://www.xbr.pw/assets/css/fav/intro-animacion-presentacion/index.html"},
+  {"fav" : "jquery-pagination-with-simplepagination-js/","url" : "https://www.xbr.pw/assets/css/fav/jquery-pagination-with-simplepagination-js/index.html"},
+  {"fav" : "learn-to-send-email-via-google-script-html-no-server-master/","url" : "https://www.xbr.pw/assets/css/fav/learn-to-send-email-via-google-script-html-no-server-master/index.html"},
+  {"fav" : "localstorage-fun/","url" : "https://www.xbr.pw/assets/css/fav/localstorage-fun/index.html"},
+  {"fav" : "login-bootstrap-5/","url" : "https://www.xbr.pw/assets/css/fav/login-bootstrap-5/index.html"},
+  {"fav" : "logo-button/","url" : "https://www.xbr.pw/assets/css/fav/logo-button/index.html"},
+  {"fav" : "lostamales/","url" : "https://www.xbr.pw/assets/css/fav/lostamales/index.html"},
+  {"fav" : "mi-partner/","url" : "https://www.xbr.pw/assets/css/fav/mi-partner/index.html"},
+  {"fav" : "movimiento-del-mouse-ui-ux-interactive/","url" : "https://www.xbr.pw/assets/css/fav/movimiento-del-mouse-ui-ux-interactive/index.html"},
+  {"fav" : "paper-ripple-effect/","url" : "https://www.xbr.pw/assets/css/fav/paper-ripple-effect/index.html"},
+  {"fav" : "plus/","url" : "https://www.xbr.pw/assets/css/fav/plus/index.html"},
+  {"fav" : "producto-a-la-venta-UIO/","url" : "https://www.xbr.pw/assets/css/fav/producto-a-la-venta-UIO/index.html"},
+  {"fav" : "publicacion-post-okey-challenge-article-details/","url" : "https://www.xbr.pw/assets/css/fav/publicacion-post-okey-challenge-article-details/index.html"},
+  {"fav" : "que-bonito/","url" : "https://www.xbr.pw/assets/css/fav/que-bonito/index.html"},
+  {"fav" : "quora-mobile-redesign/","url" : "https://www.xbr.pw/assets/css/fav/quora-mobile-redesign/index.html"},
+  {"fav" : "responsive-form/","url" : "https://www.xbr.pw/assets/css/fav/responsive-form/index.html"},
+  {"fav" : "responsive-off-canvas-menu-slide-paneljquery/","url" : "https://www.xbr.pw/assets/css/fav/responsive-off-canvas-menu-slide-paneljquery/index.html"},
+  {"fav" : "responsive-typographic-grid-layouts-contenido/","url" : "https://www.xbr.pw/assets/css/fav/responsive-typographic-grid-layouts-contenido/index.html"},
+  {"fav" : "rich-editor/","url" : "https://www.xbr.pw/assets/css/fav/rich-editor/index.html"},
+  {"fav" : "salva-automaticamente/","url" : "https://www.xbr.pw/assets/css/fav/salva-automaticamente/index.html"},
+  {"fav" : "search-pretty/","url" : "https://www.xbr.pw/assets/css/fav/search-pretty/index.html"},
+  {"fav" : "section-separator-inspiration/","url" : "https://www.xbr.pw/assets/css/fav/section-separator-inspiration/index.html"},
+  {"fav" : "showreel-intro-text/","url" : "https://www.xbr.pw/assets/css/fav/showreel-intro-text/index.html"},
+  {"fav" : "side-shopping-cart-nav/","url" : "https://www.xbr.pw/assets/css/fav/side-shopping-cart-nav/index.html"},
+  {"fav" : "simple-responsive-table-in-css/","url" : "https://www.xbr.pw/assets/css/fav/simple-responsive-table-in-css/index.html"},
+  {"fav" : "smooth-backdrop-filter-on-sticky-navigation/","url" : "https://www.xbr.pw/assets/css/fav/smooth-backdrop-filter-on-sticky-navigation/index.html"},
+  {"fav" : "solicitud-paso-a-paso/","url" : "https://www.xbr.pw/assets/css/fav/solicitud-paso-a-paso/index.html"},
+  {"fav" : "speak/","url" : "https://www.xbr.pw/assets/css/fav/speak/index.html"},
+  {"fav" : "star-wars-poster-personaliser/","url" : "https://www.xbr.pw/assets/css/fav/star-wars-poster-personaliser/index.html"},
+  {"fav" : "super-blog/","url" : "https://www.xbr.pw/assets/css/fav/super-blog/index.html"},
+  {"fav" : "swipe-and-delete-action-for-mobile-background/","url" : "https://www.xbr.pw/assets/css/fav/swipe-and-delete-action-for-mobile-background/index.html"},
+  {"fav" : "T-shirt/","url" : "https://www.xbr.pw/assets/css/fav/T-shirt/index.html"},
+  {"fav" : "tabs-slider-slick-json-data-app-store-contenido/","url" : "https://www.xbr.pw/assets/css/fav/tabs-slider-slick-json-data-app-store-contenido/index.html"},
+  {"fav" : "thank-you-page/","url" : "https://www.xbr.pw/assets/css/fav/thank-you-page/index.html"},
+  {"fav" : "tmd/buton-love","url" : "https://www.xbr.pw/assets/css/fav/tmd/buton-loveindex.html"}, 
+  {"fav" : "tmd/card-items","url" : "https://www.xbr.pw/assets/css/fav/tmd/card-items/index.html"}, 
+  {"fav" : "tmd/copy-text-lib-clipboardjs-com","url" : "https://www.xbr.pw/assets/css/fav/tmd/copy-text-lib-clipboardjs-comindex.html"}, 
+  {"fav" : "tmd/expanding-contact-form","url" : "https://www.xbr.pw/assets/css/fav/tmd/index.html"}, 
+  {"fav" : "tmd/piggy-bank","url" : "https://www.xbr.pw/assets/css/fav/tmd/expanding-contact-form/piggy-bank/index.html"}, 
+  {"fav" : "tmd/video-background-to-video-player","url" : "https://www.xbr.pw/assets/css/fav/tmd/video-background-to-video-player/index.html"}, 
+  
+  
+  
+  {"fav" : "twitter-card-ui/","url" : "https://www.xbr.pw/assets/css/fav/twitter-card-ui/index.html"},
+  {"fav" : "uris/","url" : "https://www.xbr.pw/assets/css/fav/uris/index.html"},
+  {"fav" : "vs-ansiedad/","url" : "https://www.xbr.pw/assets/css/fav/vs-ansiedad/index.html"},
+  {"fav" : "wheel-control-fullpage-contenido/","url" : "https://www.xbr.pw/assets/css/fav/wheel-control-fullpage-contenido/index.html"},
+  {"fav" : "work-day-clock/","url" : "https://www.xbr.pw/assets/css/fav/work-day-clock/index.html"},
+  {"fav" : "zone/","url" : "https://www.xbr.pw/assets/css/fav/zone/index.html"},
+  {"fav" : "ahover.html","url" : "https://www.xbr.pw/assets/css/fav/ahover.html"},
+  {"fav" : "cgt-is-xbr.html","url" : "https://www.xbr.pw/assets/css/fav/cgt-is-xbr.html"},
+  {"fav" : "desplegar-masMuchomas.html","url" : "https://www.xbr.pw/assets/css/fav/desplegar-masMuchomas.html"},
+  {"fav" : "download-button-animation.html","url" : "https://www.xbr.pw/assets/css/fav/download-button-animation.html"},
+  {"fav" : "dual-content.html","url" : "https://www.xbr.pw/assets/css/fav/dual-content.html"},
+  {"fav" : "loginalumnos.html","url" : "https://www.xbr.pw/assets/css/fav/loginalumnos.html"},
+  {"fav" : "nav-boton-mobile.html","url" : "https://www.xbr.pw/assets/css/fav/nav-boton-mobile.html"},
+  {"fav" : "nav-bottom.html","url" : "https://www.xbr.pw/assets/css/fav/nav-bottom.html"},
+  {"fav" : "navResponsive.htm","url" : "https://www.xbr.pw/assets/css/fav/navResponsive.html"},
+  {"fav" : "placaName.html","url" : "https://www.xbr.pw/assets/css/fav/placaName.html"},
+  {"fav" : "preloder.html","url" : "https://www.xbr.pw/assets/css/fav/preloder.html"},
+  {"fav" : "slideshow.html","url" : "https://www.xbr.pw/assets/css/fav/slideshow.html"},
+  {"fav" : "soporte-pulpop.html","url" : "https://www.xbr.pw/assets/css/fav/soporte-pulpop.html"},
+  {"fav" : "terminaste-regresar-a-inicio.html","url" : "https://www.xbr.pw/assets/css/fav/terminaste-regresar-a-inicio.html"},
+  {"fav" : "texto-contenido-centrado-responsive.html","url" : "https://www.xbr.pw/assets/css/fav/texto-contenido-centrado-responsive.html"},
+  
+  
+  
+  
+  
+  
+  {"fav" : "mouse-position-as-custom-css-property/", "url" : "../assets/css/hi/mouse-position-as-custom-css-property/index.html"},
+  {"fav" : "gsap-menu-animation/", "url" : "../assets/css/hi/gsap-menu-animation//index.html"},
+  {"fav" : "alpine-js-pricing-table-toggle/", "url" : "../assets/css/hi/alpine-js-pricing-table-toggle/index.html"},
+  {"fav" : "app-menu-with-lock-screen/", "url" : "../assets/css/hi/app-menu-with-lock-screen//index.html"},
+  {"fav" : "single-element-pixel-art/", "url" : "../assets/css/hi/single-element-pixel-art//index.html"},
+  {"fav" : "corner-ribbons/", "url" : "../assets/css/hi/corner-ribbons//index.html"},
+  {"fav" : "easings-are-rad/easings-are-rad/", "url" : "../assets/css/hi/easings-are-rad//index.html"},
+  {"fav" : "focus/", "url" : "../assets/css/hi/focus//index.html"},
+  {"fav" : "lotsa-notifications/", "url" : "../assets/css/hi/lotsa-notifications//index.html"},
+  {"fav" : "stacking-cards-final-version/", "url" : "../assets/css/hi/stacking-cards-final-version/index.html"},
+  {"fav" : "tailwind-landing-page-main/", "url" : "../assets/css/hi/tailwind-landing-page-main/index.html"},
+  {"fav" : "twitter-layout-with-daisyui/", "url" : "../assets/css/hi/twitter-layout-with-daisyui//index.html"},
+  {"fav" : "2024/", "url" : "../assets/css/hi/2024//index.html"},
+  {"fav" : "alerts/", "url" : "../assets/css/hi/alerts//index.html"},
+  {"fav" : "calendario/", "url" : "../assets/css/hi/calendario//index.html"},
+  {"fav" : "feeds/", "url" : "../assets/css/hi/feeds//index.html"},
+  {"fav" : "github-redirect-for-codepen/", "url" : "../assets/css/hi/github-redirect-for-codepen//index.html"},
+  {"fav" : "local/", "url" : "../assets/css/hi/local//index.html"},
+  {"fav" : "pantalla-bloqueada-para-apps/", "url" : "../assets/css/hi/pantalla-bloqueada-para-apps//index.html"},
+  {"fav" : "paso-a-paso/", "url" : "../assets/css/hi/paso-a-paso//index.html"},
+  {"fav" : "pomodoro/", "url" : "../assets/css/hi/pomodoro//index.html"},
+  {"fav" : "responsive-off-canvas-menu-slide-paneljquery/", "url" : "../assets/css/hi/responsive-off-canvas-menu-slide-paneljquery//index.html"},
+  {"fav" : "s/", "url" : "../assets/css/hi/s//index.html"},
+  {"fav" : "crear-perfil-completo-paso-a-paso.html", "url" : "../assets/css/hi/crear-perfil-completo-paso-a-paso.html/index.html"},
+  {"fav" : "full-screen.html", "url" : "../assets/css/hi/full-screen.html/index.html"},
+  {"fav" : "social-cards-with-tailwind-css", "url" : "../assets/css/hi/social-cards-with-tailwind-css/index.html"},
+  {"fav" : "favorite-list", "url" : "../assets/css/hi/favorite-list/index.html"},
+  {"fav" : "random", "url" : "../assets/css/hi/random/index.html"},
+  {"fav" : "self-destruct-button", "url" : "../assets/css/hi/self-destruct-button/index.html"},
+  {"fav" : "tab", "url" : "../assets/css/hi/tab.html/"},
+  {"fav" : "social-c", "url" : "../assets/css/hi/social-c/index.html"},
+  {"fav" : "app-lectura-dapida-test/", "url" : "../assets/css/fav/app-lectura-dapida-test//index.html"},
+  {"fav" : "dark-templete-tipo-app/", "url" : "../assets/css/fav/dark-templete-tipo-app//index.html"},
+  {"fav" : "form-app/", "url" : "../assets/css/fav/form-app//index.html"},
+  {"fav" : "producto-a-la-venta-UIO/", "url" : "../assets/css/fav/producto-a-la-venta-UIO//index.html"},
+  {"fav" : "rich-editor/", "url" : "../assets/css/fav/rich-editor//index.html"},
+  {"fav" : "salva-automaticamente/", "url" : "../assets/css/fav/salva-automaticamente//index.html"},
+  {"fav" : "speak/", "url" : "../assets/css/fav/speak//index.html"},
+  {"fav" : "vs-ansiedad/", "url" : "../assets/css/fav/vs-ansiedad/index.html"},
+  {"fav" : "article-details/", "url" : "../assets/css/hi/article-details//index.html"},
+  {"fav" : "boton-logout/", "url" : "../assets/css/hi/boton-logout//index.html"},
+  {"fav" : "custom-properties-based-parallax/", "url" : "../assets/css/hi/custom-properties-based-parallax//index.html"},
+  {"fav" : "diapositivas/", "url" : "../assets/css/hi/diapositivas//index.html"},
+  {"fav" : "layout-with-text-effects-and-clip-path/", "url" : "../assets/css/hi/layout-with-text-effects-and-clip-path//index.html"},
+  {"fav" : "lista-de-reproduccion/", "url" : "../assets/css/hi/lista-de-reproduccion//index.html"},
+  {"fav" : "shadow-parallax-reactjs/", "url" : "../assets/css/hi/shadow-parallax-reactjs//index.html"},
+  {"fav" : "simple-aspect-ratio-containers/", "url" : "../assets/css/hi/simple-aspect-ratio-containers//index.html"},
+  {"fav" : "theme-picker-one-line-of-js/", "url" : "../assets/css/hi/theme-picker-one-line-of-js//index.html"},
+  {"fav" : "variable-font-effect/", "url" : "../assets/css/hi/variable-font-effect//index.html"},
+  {"fav" : "vibrate-api/", "url" : "../assets/css/hi/vibrate-api//index.html"},
+  {"fav" : "index.html", "url" : "../assets/css/hi/index.html"},
+  {"fav" : "logout.html", "url" : "../assets/css/hi/logout.html"},
+  {"fav" : "roundedFolded.html", "url" : "../assets/css/hi/roundedFolded.html"},
+  {"fav" : "Triangle-section-Divider.html", "url" : "../assets/css/hi/Triangle-section-Divider.html"},
+  {"fav" : "una-propinita.html", "url" : "../assets/css/hi/una-propinita.html"},
+  {"fav" : "vibrate-api.html", "url" : "../assets/css/hi/vibrate-api.html"},
+  {"fav" : "s/size", "url" : "../assets/css/hi/s/size.html"},
+  {"fav" : "bar-buttom-nav/", "url" : "../assets/css/hi/bar-buttom-nav//index.html"},
+  {"fav" : "bob-the-minion/", "url" : "../assets/css/hi/bob-the-minion//index.html"},
+  {"fav" : "dashboard-e/", "url" : "../assets/css/hi/dashboard-e//index.html"},
+  {"fav" : "dashboard-with-tailwindcss-and-alpinejs/", "url" : "../assets/css/hi/dashboard-with-tailwindcss-and-alpinejs//index.html"},
+  {"fav" : "html5-filereader-api-demo-text/", "url" : "../assets/css/hi/html5-filereader-api-demo-text//index.html"},
+  {"fav" : "side-menu-responsive-dashboard-puto-bootstrap/", "url" : "../assets/css/hi/side-menu-responsive-dashboard-puto-bootstrap/index.html"},
+  {"fav" : "card-article-ui", "url" : "../assets/css/fav/card-article-ui/index.html"},
+  {"fav" : "css3-poster", "url" : "../assets/css/fav/css3-poster/index.html"},
+  {"fav" : "paper-ripple-effect", "url" : "../assets/css/fav/paper-ripple-effect/index.html"},
+  {"fav" : "section-separator-inspiration", "url" : "../assets/css/fav/section-separator-inspiration/index.html"},
+  {"fav" : "simple-responsive-table-in-css", "url" : "../assets/css/fav/simple-responsive-table-in-css/index.html"},
+  {"fav" : "nav-boton-mobile.html", "url" : "../assets/css/fav/nav-boton-mobile.html"},
+  {"fav" : "00-5paginas-dinamicas/", "url" : "../assets/css/hey/00-5paginas-dinamicas/index.html"},
+  {"fav" : "01/", "url" : "../assets/css/hey/01/index.html"},
+  {"fav" : "01-slider/", "url" : "../assets/css/hey/01-slider/index.html"},
+  {"fav" : "404-tittle-not-found-/", "url" : "../assets/css/hey/404-tittle-not-found-/index.html"},
+  {"fav" : "5-taps/", "url" : "../assets/css/hey/5-taps//index.html"},
+  {"fav" : "9-post/", "url" : "../assets/css/hey/9-post//index.html"},
+  {"fav" : "alerts/", "url" : "../assets/css/hey/alerts//index.html"},
+  {"fav" : "angular-material-design-starter-app/", "url" : "../assets/css/hey/angular-material-design-starter-app//index.html"},
+  {"fav" : "animated-quote/", "url" : "../assets/css/hey/animated-quote//index.html"},
+  {"fav" : "animated-skill-metercss/", "url" : "../assets/css/hey/animated-skill-metercss//index.html"},
+  {"fav" : "app-menu-with-lock-screen/", "url" : "../assets/css/hey/app-menu-with-lock-screen//index.html"},
+  {"fav" : "aqui-va-el-search/", "url" : "../assets/css/hey/aqui-va-el-search//index.html"},
+  {"fav" : "author-de-negro-a-spacio-morado/", "url" : "../assets/css/hey/author-de-negro-a-spacio-morado//index.html"},
+  {"fav" : "background/", "url" : "../assets/css/hey/background//index.html"},
+  {"fav" : "banner-2/", "url" : "../assets/css/hey/banner-2//index.html"},
+  {"fav" : "bloc-blanco/", "url" : "../assets/css/hey/bloc-blanco//index.html"},
+  {"fav" : "Bootstrap-starter-fav/", "url" : "../assets/css/hey/Bootstrap-starter-fav//index.html"},
+  {"fav" : "bost/", "url" : "../assets/css/hey/bost//index.html"},
+  {"fav" : "boton-enviar/", "url" : "../assets/css/hey/boton-enviar//index.html"},
+  {"fav" : "boton-enviar2/", "url" : "../assets/css/hey/boton-enviar2//index.html"},
+  {"fav" : "Boton-flotante-draggable-en-JavaScript/", "url" : "../assets/css/hey/Boton-flotante-draggable-en-JavaScript//index.html"},
+  {"fav" : "boton-menu-blue/", "url" : "../assets/css/hey/boton-menu-blue//index.html"},
+  {"fav" : "boton-soporte-modal/", "url" : "../assets/css/hey/boton-soporte-modal//index.html"},
+  {"fav" : "box-moving-illusion/", "url" : "../assets/css/hey/box-moving-illusion//index.html"},
+  {"fav" : "button-highlight-styles/", "url" : "../assets/css/hey/button-highlight-styles//index.html"},
+  {"fav" : "calculadora-cientifica-sin-js/", "url" : "../assets/css/hey/calculadora-cientifica-sin-js//index.html"},
+  {"fav" : "card-start/", "url" : "../assets/css/hey/card-start//index.html"},
+  {"fav" : "cards-boostramp-ok/", "url" : "../assets/css/hey/cards-boostramp-ok//index.html"},
+  {"fav" : "cards-carrusel-horizontal/", "url" : "../assets/css/hey/cards-carrusel-horizontal//index.html"},
+  {"fav" : "carrual/", "url" : "../assets/css/hey/carrual//index.html"},
+  {"fav" : "carrusel/", "url" : "../assets/css/hey/carrusel//index.html"},
+  {"fav" : "carrusel-tipo-yb/", "url" : "../assets/css/hey/carrusel-tipo-yb//index.html"},
+  {"fav" : "chat-recomendaciones/", "url" : "../assets/css/hey/chat-recomendaciones//index.html"},
+  {"fav" : "close dialog/", "url" : "../assets/css/hey/close dialog//index.html"},
+  {"fav" : "codepen-team-member-listeven-odd-styles/", "url" : "../assets/css/hey/codepen-team-member-listeven-odd-styles//index.html"},
+  {"fav" : "colapsable/", "url" : "../assets/css/hey/colapsable//index.html"},
+  {"fav" : "collapsable-css/", "url" : "../assets/css/hey/collapsable-css//index.html"},
+  {"fav" : "color-mode/", "url" : "../assets/css/hey/color-mode//index.html"},
+  {"fav" : "como-se-ve/", "url" : "../assets/css/hey/como-se-ve//index.html"},
+  {"fav" : "contentEditable/", "url" : "../assets/css/hey/contentEditable//index.html"},
+  {"fav" : "crea-contador-regresivo/", "url" : "../assets/css/hey/crea-contador-regresivo//index.html"},
+  {"fav" : "crear-login-sing-up-user/", "url" : "../assets/css/hey/crear-login-sing-up-user//index.html"},
+  {"fav" : "cursor/", "url" : "../assets/css/hey/cursor//index.html"},
+  {"fav" : "dashboard-uno/", "url" : "../assets/css/hey/dashboard-uno//index.html"},
+  {"fav" : "descuento/", "url" : "../assets/css/hey/descuento//index.html"},
+  {"fav" : "destroy/", "url" : "../assets/css/hey/destroy//index.html"},
+  {"fav" : "editor de imagen/", "url" : "../assets/css/hey/editor de imagen//index.html"},
+  {"fav" : "efecto-tipo-reflejo-lampara/", "url" : "../assets/css/hey/efecto-tipo-reflejo-lampara//index.html"},
+  {"fav" : "el-bg-rojo-azul-negro-wow/", "url" : "../assets/css/hey/el-bg-rojo-azul-negro-wow//index.html"},
+  {"fav" : "emojis-teclado-3x3/", "url" : "../assets/css/hey/emojis-teclado-3x3//index.html"},
+  {"fav" : "en/", "url" : "../assets/css/hey/en//index.html"},
+  {"fav" : "encabezados-titulares/", "url" : "../assets/css/hey/encabezados-titulares//index.html"},
+  {"fav" : "encuesta-con-caritas/", "url" : "../assets/css/hey/encuesta-con-caritas//index.html"},
+  {"fav" : "enviar-mensaje-btn-animado/", "url" : "../assets/css/hey/enviar-mensaje-btn-animado//index.html"},
+  {"fav" : "ese-que-nunca-le-toca/", "url" : "../assets/css/hey/ese-que-nunca-le-toca//index.html"},
+  {"fav" : "eshop-ecommerce-html5-template/", "url" : "../assets/css/hey/eshop-ecommerce-html5-template//index.html"},
+  {"fav" : "estilo-push/", "url" : "../assets/css/hey/estilo-push//index.html"},
+  {"fav" : "faq/", "url" : "../assets/css/hey/faq//index.html"},
+  {"fav" : "ff/", "url" : "../assets/css/hey/ff//index.html"},
+  {"fav" : "fill-the-text-with-a-video/", "url" : "../assets/css/hey/fill-the-text-with-a-video//index.html"},
+  {"fav" : "fixing-the-overflow/", "url" : "../assets/css/hey/fixing-the-overflow//index.html"},
+  {"fav" : "fondo-centrado/", "url" : "../assets/css/hey/fondo-centrado//index.html"},
+  {"fav" : "fondo-del-buuble/", "url" : "../assets/css/hey/fondo-del-buuble//index.html"},
+  {"fav" : "footer-new/", "url" : "../assets/css/hey/footer-new//index.html"},
+  {"fav" : "footer-responsive/", "url" : "../assets/css/hey/footer-responsive//index.html"},
+  {"fav" : "form-app/", "url" : "../assets/css/hey/form-app//index.html"},
+  {"fav" : "form-paso-por-paso/", "url" : "../assets/css/hey/form-paso-por-paso//index.html"},
+  {"fav" : "form-xbr/", "url" : "../assets/css/hey/form-xbr//index.html"},
+  {"fav" : "formato-blog-centrado/", "url" : "../assets/css/hey/formato-blog-centrado//index.html"},
+  {"fav" : "formulario-hello/", "url" : "../assets/css/hey/formulario-hello//index.html"},
+  {"fav" : "fusion/", "url" : "../assets/css/hey/fusion//index.html"},
+  {"fav" : "Gradient-hover-animated-button/", "url" : "../assets/css/hey/Gradient-hover-animated-button//index.html"},
+  {"fav" : "grindersite/", "url" : "../assets/css/hey/grindersite//index.html"},
+  {"fav" : "guardarcomo/", "url" : "../assets/css/hey/guardarcomo//index.html"},
+  {"fav" : "halftone-square-backgroundno-divpure-css/", "url" : "../assets/css/hey/halftone-square-backgroundno-divpure-css//index.html"},
+  {"fav" : "herstory/", "url" : "../assets/css/hey/herstory//index.html"},
+  {"fav" : "html-form-to-google-sheet-master/", "url" : "../assets/css/hey/html-form-to-google-sheet-master//index.html"},
+  {"fav" : "html5-canvas-overlay-erase-effect/", "url" : "../assets/css/hey/html5-canvas-overlay-erase-effect//index.html"},
+  {"fav" : "iconic-tab-barpure-css/", "url" : "../assets/css/hey/iconic-tab-barpure-css//index.html"},
+  {"fav" : "image-gallery-with-detailed-info/", "url" : "../assets/css/hey/image-gallery-with-detailed-info//index.html"},
+  {"fav" : "img/", "url" : "../assets/css/hey/img//index.html"},
+  {"fav" : "insignias/", "url" : "../assets/css/hey/insignias//index.html"},
+  {"fav" : "intro-animacion-presentacion/", "url" : "../assets/css/hey/intro-animacion-presentacion//index.html"},
+  {"fav" : "intro-vanish/", "url" : "../assets/css/hey/intro-vanish//index.html"},
+  {"fav" : "juego de palabras/", "url" : "../assets/css/hey/juego de palabras//index.html"},
+  {"fav" : "just-studying-this/", "url" : "../assets/css/hey/just-studying-this//index.html"},
+  {"fav" : "justo-estudiando/", "url" : "../assets/css/hey/justo-estudiando//index.html"},
+  {"fav" : "lectura puo up/", "url" : "../assets/css/hey/lectura puo up//index.html"},
+  {"fav" : "light-to-darkclick-holdpure-css/", "url" : "../assets/css/hey/light-to-darkclick-holdpure-css//index.html"},
+  {"fav" : "loading-one/", "url" : "../assets/css/hey/loading-one//index.html"},
+  {"fav" : "loading-two/", "url" : "../assets/css/hey/loading-two//index.html"},
+  {"fav" : "localStorage_login/", "url" : "../assets/css/hey/localStorage_login//index.html"},
+  {"fav" : "locking-smart-home-dashboard/", "url" : "../assets/css/hey/locking-smart-home-dashboard//index.html"},
+  {"fav" : "login-bootstrap-5/", "url" : "../assets/css/hey/login-bootstrap-5//index.html"},
+  {"fav" : "login-bootstrap-form/", "url" : "../assets/css/hey/login-bootstrap-form//index.html"},
+  {"fav" : "login-colorMode-2col/", "url" : "../assets/css/hey/login-colorMode-2col//index.html"},
+  {"fav" : "login-colorMode-2col1/", "url" : "../assets/css/hey/login-colorMode-2col1//index.html"},
+  {"fav" : "login-formato-firebase/", "url" : "../assets/css/hey/login-formato-firebase//index.html"},
+  {"fav" : "low-poly-experiment/", "url" : "../assets/css/hey/low-poly-experiment//index.html"},
+  {"fav" : "luisemoji.github.io/", "url" : "../assets/css/hey/luisemoji.github.io//index.html"},
+  {"fav" : "macron-punch-game-css-html/", "url" : "../assets/css/hey/macron-punch-game-css-html//index.html"},
+  {"fav" : "magic-card/", "url" : "../assets/css/hey/magic-card//index.html"},
+  {"fav" : "mensaje-de-autodestruccion-con-setinterval-js-bom/", "url" : "../assets/css/hey/mensaje-de-autodestruccion-con-setinterval-js-bom//index.html"},
+  {"fav" : "modal-second/", "url" : "../assets/css/hey/modal-second//index.html"},
+  {"fav" : "multicopyv1/", "url" : "../assets/css/hey/multicopyv1//index.html"},
+  {"fav" : "nav-thing/", "url" : "../assets/css/hey/nav-thing//index.html"},
+  {"fav" : "neont-text-and-buttons/", "url" : "../assets/css/hey/neont-text-and-buttons//index.html"},
+  {"fav" : "neuomorphic-section/", "url" : "../assets/css/hey/neuomorphic-section//index.html"},
+  {"fav" : "opening-popup-animation/", "url" : "../assets/css/hey/opening-popup-animation//index.html"},
+  {"fav" : "page-contenido-editable-/", "url" : "../assets/css/hey/page-contenido-editable-//index.html"},
+  {"fav" : "para alguna app/", "url" : "../assets/css/hey/para alguna app//index.html"},
+  {"fav" : "para-footer-random/", "url" : "../assets/css/hey/para-footer-random//index.html"},
+  {"fav" : "para-nav/", "url" : "../assets/css/hey/para-nav//index.html"},
+  {"fav" : "pdf-hace-v1/", "url" : "../assets/css/hey/pdf-hace-v1//index.html"},
+  {"fav" : "pdf-hace-v2/", "url" : "../assets/css/hey/pdf-hace-v2//index.html"},
+  {"fav" : "pdf-hace-v3/", "url" : "../assets/css/hey/pdf-hace-v3//index.html"},
+  {"fav" : "pen-export-EymdpE/", "url" : "../assets/css/hey/pen-export-EymdpE//index.html"},
+  {"fav" : "perfect-center-all-views/", "url" : "../assets/css/hey/perfect-center-all-views//index.html"},
+  {"fav" : "personalizando-tu-nombre/", "url" : "../assets/css/hey/personalizando-tu-nombre//index.html"},
+  {"fav" : "photos-agrupadas/", "url" : "../assets/css/hey/photos-agrupadas//index.html"},
+  {"fav" : "planetsgenerative-arttetradic/", "url" : "../assets/css/hey/planetsgenerative-arttetradic//index.html"},
+  {"fav" : "pure-css-frida-kahlo/", "url" : "../assets/css/hey/pure-css-frida-kahlo//index.html"},
+  {"fav" : "quirky-button/", "url" : "../assets/css/hey/quirky-button//index.html"},
+  {"fav" : "random/", "url" : "../assets/css/hey/random//index.html"},
+  {"fav" : "random goku/", "url" : "../assets/css/hey/random goku//index.html"},
+  {"fav" : "responsive-gallery/", "url" : "../assets/css/hey/responsive-gallery//index.html"},
+  {"fav" : "responsive-typography-generator/", "url" : "../assets/css/hey/responsive-typography-generator//index.html"},
+  {"fav" : "responsive-video-header-with-gradient/", "url" : "../assets/css/hey/responsive-video-header-with-gradient//index.html"},
+  {"fav" : "reveling pago/", "url" : "../assets/css/hey/reveling pago//index.html"},
+  {"fav" : "rick-and-morty/", "url" : "../assets/css/hey/rick-and-morty//index.html"},
+  {"fav" : "sat-nav-for-your-website/", "url" : "../assets/css/hey/sat-nav-for-your-website//index.html"},
+  {"fav" : "sea-debris-concept/", "url" : "../assets/css/hey/sea-debris-concept//index.html"},
+  {"fav" : "section-separator-inspiration/", "url" : "../assets/css/hey/section-separator-inspiration//index.html"},
+  {"fav" : "shop-list/", "url" : "../assets/css/hey/shop-list//index.html"},
+  {"fav" : "shops/", "url" : "../assets/css/hey/shops//index.html"},
+  {"fav" : "show-password/", "url" : "../assets/css/hey/show-password//index.html"},
+  {"fav" : "significado-de-xiiber/", "url" : "../assets/css/hey/significado-de-xiiber//index.html"},
+  {"fav" : "simple-blog-concept-pure-modal-tab-icon-efect-css/", "url" : "../assets/css/hey/simple-blog-concept-pure-modal-tab-icon-efect-css//index.html"},
+  {"fav" : "size-app/", "url" : "../assets/css/hey/size-app//index.html"},
+  {"fav" : "songokugrande/", "url" : "../assets/css/hey/songokugrande//index.html"},
+  {"fav" : "spoiler/", "url" : "../assets/css/hey/spoiler//index.html"},
+  {"fav" : "star-fieldpure-css/", "url" : "../assets/css/hey/star-fieldpure-css//index.html"},
+  {"fav" : "star-wars-dark-light-toggle-w-gsap-3/", "url" : "../assets/css/hey/star-wars-dark-light-toggle-w-gsap-3//index.html"},
+  {"fav" : "step-by-stepcss-js/", "url" : "../assets/css/hey/step-by-stepcss-js//index.html"},
+  {"fav" : "stripe-website-gradient-animatio/", "url" : "../assets/css/hey/stripe-website-gradient-animatio//index.html"},
+  {"fav" : "student/", "url" : "../assets/css/hey/student//index.html"},
+  {"fav" : "Tab-Pure-CSS/", "url" : "../assets/css/hey/Tab-Pure-CSS//index.html"},
+  {"fav" : "table-page-contenido-editable- - copia/", "url" : "../assets/css/hey/table-page-contenido-editable- - copia//index.html"},
+  {"fav" : "table-shopping-layout/", "url" : "../assets/css/hey/table-shopping-layout//index.html"},
+  {"fav" : "templete-twotwo/", "url" : "../assets/css/hey/templete-twotwo//index.html"},
+  {"fav" : "terrifying-spotlight/", "url" : "../assets/css/hey/terrifying-spotlight//index.html"},
+  {"fav" : "texto escondido y emoji/", "url" : "../assets/css/hey/texto escondido y emoji//index.html"},
+  {"fav" : "thank-you-1000-followers3d-rotating-counter/", "url" : "../assets/css/hey/thank-you-1000-followers3d-rotating-counter//index.html"},
+  {"fav" : "the-end/", "url" : "../assets/css/hey/the-end//index.html"},
+  {"fav" : "twitter-follow-boton-door/", "url" : "../assets/css/hey/twitter-follow-boton-door//index.html"},
+  {"fav" : "type/", "url" : "../assets/css/hey/type//index.html"},
+  {"fav" : "ver-size/", "url" : "../assets/css/hey/ver-size//index.html"},
+  {"fav" : "verticalslides/", "url" : "../assets/css/hey/verticalslides//index.html"},
+  {"fav" : "vintage-phone-keyboard-with-sound/", "url" : "../assets/css/hey/vintage-phone-keyboard-with-sound//index.html"},
+  {"fav" : "whalefacts/", "url" : "../assets/css/hey/whalefacts//index.html"},
+  {"fav" : "z/", "url" : "../assets/css/hey/z//index.html"},
+  {"fav" : "27-marzo-dia-del-queso.html", "url" : "../assets/css/hey/27-marzo-dia-del-queso.html/index.html"},
+  {"fav" : "apuntes-w3.html", "url" : "../assets/css/hey/apuntes-w3.html/index.html"},
+  {"fav" : "auto typewritter.html", "url" : "../assets/css/hey/auto typewritter.html/index.html"},
+  {"fav" : "banners.html", "url" : "../assets/css/hey/banners.html/index.html"},
+  {"fav" : "card.css", "url" : "../assets/css/hey/card.css/index.html"},
+  {"fav" : "card.html", "url" : "../assets/css/hey/card.html/index.html"},
+  {"fav" : "card.js", "url" : "../assets/css/hey/card.js/index.html"},
+  {"fav" : "center-center.txt", "url" : "../assets/css/hey/center-center.txt/index.html"},
+  {"fav" : "colum-gallery-big.html", "url" : "../assets/css/hey/colum-gallery-big.html/index.html"},
+  {"fav" : "crear-perfil-completo-paso-a-paso.html", "url" : "../assets/css/hey/crear-perfil-completo-paso-a-paso.html/index.html"},
+  {"fav" : "css-GalleryResponsive-ImageModal.html", "url" : "../assets/css/hey/css-GalleryResponsive-ImageModal.html/index.html"},
+  {"fav" : "cual_es_la_edad_de_la_felicidad_sexual.html", "url" : "../assets/css/hey/cual_es_la_edad_de_la_felicidad_sexual.html/index.html"},
+  {"fav" : "data-nosnippet.txt", "url" : "../assets/css/hey/data-nosnippet.txt/index.html"},
+  {"fav" : "espacio-en-blanco.html", "url" : "../assets/css/hey/espacio-en-blanco.html/index.html"},
+  {"fav" : "fases-de-la-luna.html", "url" : "../assets/css/hey/fases-de-la-luna.html/index.html"},
+  {"fav" : "footerRandom.html", "url" : "../assets/css/hey/footerRandom.html/index.html"},
+  {"fav" : "form-whats.html", "url" : "../assets/css/hey/form-whats.html/index.html"},
+  {"fav" : "h8_neon_text.html", "url" : "../assets/css/hey/h8_neon_text.html/index.html"},
+  {"fav" : "htmlsnipe-iframe.html", "url" : "../assets/css/hey/htmlsnipe-iframe.html/index.html"},
+  {"fav" : "iframe.txt", "url" : "../assets/css/hey/iframe.txt/index.html"},
+  {"fav" : "img-4-2-1-colum.html", "url" : "../assets/css/hey/img-4-2-1-colum.html/index.html"},
+  {"fav" : "index-bg-black.html", "url" : "../assets/css/hey/index-bg-black.html/index.html"},
+  {"fav" : "index-browser-con-iframe-nav-scroll.html", "url" : "../assets/css/hey/index-browser-con-iframe-nav-scroll.html/index.html"},
+  {"fav" : "mobile.html", "url" : "../assets/css/hey/mobile.html/index.html"},
+  {"fav" : "multicolores.html", "url" : "../assets/css/hey/multicolores.html/index.html"},
+  {"fav" : "navbotton+tabs.html", "url" : "../assets/css/hey/navbotton+tabs.html/index.html"},
+  {"fav" : "navResponsive con modalfull.html", "url" : "../assets/css/hey/navResponsive con modalfull.html/index.html"},
+  {"fav" : "no-download.html", "url" : "../assets/css/hey/no-download.html/index.html"},
+  {"fav" : "notificaciones.html", "url" : "../assets/css/hey/notificaciones.html/index.html"},
+  {"fav" : "para-imagenes-svg.txt", "url" : "../assets/css/hey/para-imagenes-svg.txt"},
+  {"fav" : "para-usar-jquary.html", "url" : "../assets/css/hey/para-usar-jquary.html/index.html"},
+  {"fav" : "Preloder.html", "url" : "../assets/css/hey/Preloder.html/index.html"},
+  {"fav" : "scroll-ba-bottom.html", "url" : "../assets/css/hey/scroll-ba-bottom.html/index.html"},
+  {"fav" : "sidenav-derecho.html", "url" : "../assets/css/hey/sidenav-derecho.html/index.html"},
+  {"fav" : "sidenav-izquierdo.html", "url" : "../assets/css/hey/sidenav-izquierdo.html/index.html"},
+  {"fav" : "sine-estilo-en-listas.txt", "url" : "../assets/css/hey/sine-estilo-en-listas.txt/index.html"},
+  {"fav" : "subscription-button.html", "url" : "../assets/css/hey/subscription-button.html/index.html"},
+  {"fav" : "tabs.txt", "url" : "../assets/css/hey/tabs.txt/index.html"},
+  {"fav" : "templete-de-venta-de-producto.html", "url" : "../assets/css/hey/templete-de-venta-de-producto.html/index.html"},
+  {"fav" : "templete-oneone.html", "url" : "../assets/css/hey/templete-oneone.html/index.html"},
+  {"fav" : "test-w3-spaces.html", "url" : "../assets/css/hey/test-w3-spaces.html/index.html"},
+  {"fav" : "text-shadow.txt", "url" : "../assets/css/hey/text-shadow.txt/index.html"},
+  {"fav" : "twitter-boton.html", "url" : "../assets/css/hey/twitter-boton.html/index.html"},
+  {"fav" : "typewritter-firma.html", "url" : "../assets/css/hey/typewritter-firma.html/index.html"},
+  
+  
+  
+  
+  
+  
+  {"fav" : "<b>CSS HEY</b>","url" : "https://www.xbr.pw/assets/css/hey/00-5paginas-dinamicas/index.html"},
+  {"fav" : "00-5paginas-dinamicas/","url" : "https://www.xbr.pw/assets/css/hey/00-5paginas-dinamicas/index.html"},
+  {"fav" : "01/","url" : "https://www.xbr.pw/assets/css/hey/01/index.html"},
+  {"fav" : "01-slider/","url" : "https://www.xbr.pw/assets/css/hey/01-slider/index.html"},
+  {"fav" : "404-tittle-not-found-/","url" : "https://www.xbr.pw/assets/css/hey/404-tittle-not-found-/index.html"},
+  {"fav" : "5-taps/","url" : "https://www.xbr.pw/assets/css/hey/5-taps/index.html"},
+  {"fav" : "9-post/","url" : "https://www.xbr.pw/assets/css/hey/9-post/index.html"},
+  {"fav" : "alerts/","url" : "https://www.xbr.pw/assets/css/hey/alerts/index.html"},
+  {"fav" : "angular-material-design-starter-app/","url" : "https://www.xbr.pw/assets/css/hey/angular-material-design-starter-app/index.html"},
+  {"fav" : "animated-quote/","url" : "https://www.xbr.pw/assets/css/hey/animated-quote/index.html"},
+  {"fav" : "animated-skill-metercss/","url" : "https://www.xbr.pw/assets/css/hey/animated-skill-metercss/index.html"},
+  {"fav" : "app-menu-with-lock-screen/","url" : "https://www.xbr.pw/assets/css/hey/app-menu-with-lock-screen/index.html"},
+  {"fav" : "aqui-va-el-search/","url" : "https://www.xbr.pw/assets/css/hey/aqui-va-el-search/index.html"},
+  {"fav" : "author-de-negro-a-spacio-morado/","url" : "https://www.xbr.pw/assets/css/hey/author-de-negro-a-spacio-morado/index.html"},
+  {"fav" : "background/","url" : "https://www.xbr.pw/assets/css/hey/background/index.html"},
+  {"fav" : "banner-2/","url" : "https://www.xbr.pw/assets/css/hey/banner-2/index.html"},
+  {"fav" : "Bootstrap-starter-fav/","url" : "https://www.xbr.pw/assets/css/hey/Bootstrap-starter-fav/index.html"},
+  {"fav" : "bost/","url" : "https://www.xbr.pw/assets/css/hey/bost/index.html"},
+  {"fav" : "boton-enviar/","url" : "https://www.xbr.pw/assets/css/hey/boton-enviar/index.html"},
+  {"fav" : "boton-enviar2/","url" : "https://www.xbr.pw/assets/css/hey/boton-enviar2/index.html"},
+  {"fav" : "Boton-flotante-draggable-en-JavaScript/","url" : "https://www.xbr.pw/assets/css/hey/Boton-flotante-draggable-en-JavaScript/index.html"},
+  {"fav" : "boton-menu-blue/","url" : "https://www.xbr.pw/assets/css/hey/boton-menu-blue/index.html"},
+  {"fav" : "boton-soporte-modal/","url" : "https://www.xbr.pw/assets/css/hey/boton-soporte-modal/index.html"},
+  {"fav" : "box-moving-illusion/","url" : "https://www.xbr.pw/assets/css/hey/box-moving-illusion/index.html"},
+  {"fav" : "button-highlight-styles/","url" : "https://www.xbr.pw/assets/css/hey/button-highlight-styles/index.html"},
+  {"fav" : "calculadora-cientifica-sin-js/","url" : "https://www.xbr.pw/assets/css/hey/calculadora-cientifica-sin-js/index.html"},
+  {"fav" : "card-start/","url" : "https://www.xbr.pw/assets/css/hey/card-start/index.html"},
+  {"fav" : "cards-boostramp-ok/","url" : "https://www.xbr.pw/assets/css/hey/cards-boostramp-ok/index.html"},
+  {"fav" : "cards-carrusel-horizontal/","url" : "https://www.xbr.pw/assets/css/hey/cards-carrusel-horizontal/index.html"},
+  {"fav" : "carrual/","url" : "https://www.xbr.pw/assets/css/hey/carrual/index.html"},
+  {"fav" : "carrusel/","url" : "https://www.xbr.pw/assets/css/hey/carrusel/index.html"},
+  {"fav" : "carrusel-tipo-yb/","url" : "https://www.xbr.pw/assets/css/hey/carrusel-tipo-yb/index.html"},
+  {"fav" : "chat-recomendaciones/","url" : "https://www.xbr.pw/assets/css/hey/chat-recomendaciones/index.html"},
+  {"fav" : "close dialog/","url" : "https://www.xbr.pw/assets/css/hey/close dialog/index.html"},
+  {"fav" : "codepen-team-member-listeven-odd-styles/","url" : "https://www.xbr.pw/assets/css/hey/codepen-team-member-listeven-odd-styles/index.html"},
+  {"fav" : "colapsable/","url" : "https://www.xbr.pw/assets/css/hey/colapsable/index.html"},
+  {"fav" : "collapsable-css/","url" : "https://www.xbr.pw/assets/css/hey/collapsable-css/index.html"},
+  {"fav" : "color-mode/","url" : "https://www.xbr.pw/assets/css/hey/color-mode/index.html"},
+  {"fav" : "como-se-ve/","url" : "https://www.xbr.pw/assets/css/hey/como-se-ve/index.html"},
+  {"fav" : "contentEditable/","url" : "https://www.xbr.pw/assets/css/hey/contentEditable/index.html"},
+  {"fav" : "crea-contador-regresivo/","url" : "https://www.xbr.pw/assets/css/hey/crea-contador-regresivo/index.html"},
+  {"fav" : "crear-login-sing-up-user/","url" : "https://www.xbr.pw/assets/css/hey/crear-login-sing-up-user/index.html"},
+  {"fav" : "cursor/","url" : "https://www.xbr.pw/assets/css/hey/cursor/index.html"},
+  {"fav" : "dashboard-uno/","url" : "https://www.xbr.pw/assets/css/hey/dashboard-uno/index.html"},
+  {"fav" : "descuento/","url" : "https://www.xbr.pw/assets/css/hey/descuento/index.html"},
+  {"fav" : "destroy/","url" : "https://www.xbr.pw/assets/css/hey/destroy/index.html"},
+  {"fav" : "editor de imagen/","url" : "https://www.xbr.pw/assets/css/hey/editor de imagen/index.html"},
+  {"fav" : "el-bg-rojo-azul-negro-wow/","url" : "https://www.xbr.pw/assets/css/hey/el-bg-rojo-azul-negro-wow/index.html"},
+  {"fav" : "emojis-teclado-3x3/","url" : "https://www.xbr.pw/assets/css/hey/emojis-teclado-3x3/index.html"},
+  {"fav" : "en/","url" : "https://www.xbr.pw/assets/css/hey/en/index.html"},
+  {"fav" : "encabezados-titulares/","url" : "https://www.xbr.pw/assets/css/hey/encabezados-titulares/index.html"},
+  {"fav" : "encuesta-con-caritas/","url" : "https://www.xbr.pw/assets/css/hey/encuesta-con-caritas/index.html"},
+  {"fav" : "enviar-mensaje-btn-animado/","url" : "https://www.xbr.pw/assets/css/hey/enviar-mensaje-btn-animado/index.html"},
+  {"fav" : "ese-que-nunca-le-toca/","url" : "https://www.xbr.pw/assets/css/hey/ese-que-nunca-le-toca/index.html"},
+  {"fav" : "eshop-ecommerce-html5-template/","url" : "https://www.xbr.pw/assets/css/hey/eshop-ecommerce-html5-template/index.html"},
+  {"fav" : "estilo-push/","url" : "https://www.xbr.pw/assets/css/hey/estilo-push/index.html"},
+  {"fav" : "faq/","url" : "https://www.xbr.pw/assets/css/hey/faq/index.html"},
+  {"fav" : "ff/","url" : "https://www.xbr.pw/assets/css/hey/ff/index.html"},
+  {"fav" : "fill-the-text-with-a-video/","url" : "https://www.xbr.pw/assets/css/hey/fill-the-text-with-a-video/index.html"},
+  {"fav" : "fixing-the-overflow/","url" : "https://www.xbr.pw/assets/css/hey/fixing-the-overflow/index.html"},
+  {"fav" : "fondo-centrado/","url" : "https://www.xbr.pw/assets/css/hey/fondo-centrado/index.html"},
+  {"fav" : "fondo-del-buuble/","url" : "https://www.xbr.pw/assets/css/hey/fondo-del-buuble/index.html"},
+  {"fav" : "footer-new/","url" : "https://www.xbr.pw/assets/css/hey/footer-new/index.html"},
+  {"fav" : "footer-responsive/","url" : "https://www.xbr.pw/assets/css/hey/footer-responsive/index.html"},
+  {"fav" : "form-app/","url" : "https://www.xbr.pw/assets/css/hey/form-app/index.html"},
+  {"fav" : "form-paso-por-paso/","url" : "https://www.xbr.pw/assets/css/hey/form-paso-por-paso/index.html"},
+  {"fav" : "form-xbr/","url" : "https://www.xbr.pw/assets/css/hey/form-xbr/index.html"},
+  {"fav" : "formato-blog-centrado/","url" : "https://www.xbr.pw/assets/css/hey/formato-blog-centrado/index.html"},
+  {"fav" : "formulario-hello/","url" : "https://www.xbr.pw/assets/css/hey/formulario-hello/index.html"},
+  {"fav" : "fusion/","url" : "https://www.xbr.pw/assets/css/hey/fusion/index.html"},
+  {"fav" : "Gradient-hover-animated-button/","url" : "https://www.xbr.pw/assets/css/hey/Gradient-hover-animated-button/index.html"},
+  {"fav" : "grindersite/","url" : "https://www.xbr.pw/assets/css/hey/grindersite/index.html"},
+  {"fav" : "guardarcomo/","url" : "https://www.xbr.pw/assets/css/hey/guardarcomo/index.html"},
+  {"fav" : "halftone-square-backgroundno-divpure-css/","url" : "https://www.xbr.pw/assets/css/hey/halftone-square-backgroundno-divpure-css/index.html"},
+  {"fav" : "herstory/","url" : "https://www.xbr.pw/assets/css/hey/herstory/index.html"},
+  {"fav" : "html-form-to-google-sheet-master/","url" : "https://www.xbr.pw/assets/css/hey/html-form-to-google-sheet-master/index.html"},
+  {"fav" : "html5-canvas-overlay-erase-effect/","url" : "https://www.xbr.pw/assets/css/hey/html5-canvas-overlay-erase-effect/index.html"},
+  {"fav" : "iconic-tab-barpure-css/","url" : "https://www.xbr.pw/assets/css/hey/iconic-tab-barpure-css/index.html"},
+  {"fav" : "image-gallery-with-detailed-info/","url" : "https://www.xbr.pw/assets/css/hey/image-gallery-with-detailed-info/index.html"},
+  {"fav" : "img/","url" : "https://www.xbr.pw/assets/css/hey/img/index.html"},
+  {"fav" : "insignias/","url" : "https://www.xbr.pw/assets/css/hey/insignias/index.html"},
+  {"fav" : "intro-animacion-presentacion/","url" : "https://www.xbr.pw/assets/css/hey/intro-animacion-presentacion/index.html"},
+  {"fav" : "intro-vanish/","url" : "https://www.xbr.pw/assets/css/hey/intro-vanish/index.html"},
+  {"fav" : "juego de palabras/","url" : "https://www.xbr.pw/assets/css/hey/juego de palabras/index.html"},
+  {"fav" : "just-studying-this/","url" : "https://www.xbr.pw/assets/css/hey/just-studying-this/index.html"},
+  {"fav" : "justo-estudiando/","url" : "https://www.xbr.pw/assets/css/hey/justo-estudiando/index.html"},
+  {"fav" : "lectura puo up/","url" : "https://www.xbr.pw/assets/css/hey/lectura puo up/index.html"},
+  {"fav" : "light-to-darkclick-holdpure-css/","url" : "https://www.xbr.pw/assets/css/hey/light-to-darkclick-holdpure-css/index.html"},
+  {"fav" : "loading-one/","url" : "https://www.xbr.pw/assets/css/hey/loading-one/index.html"},
+  {"fav" : "loading-two/","url" : "https://www.xbr.pw/assets/css/hey/loading-two/index.html"},
+  {"fav" : "localStorage_login/","url" : "https://www.xbr.pw/assets/css/hey/localStorage_login/index.html"},
+  {"fav" : "locking-smart-home-dashboard/","url" : "https://www.xbr.pw/assets/css/hey/locking-smart-home-dashboard/index.html"},
+  {"fav" : "login-bootstrap-5/","url" : "https://www.xbr.pw/assets/css/hey/login-bootstrap-5/index.html"},
+  {"fav" : "login-bootstrap-form/","url" : "https://www.xbr.pw/assets/css/hey/login-bootstrap-form/index.html"},
+  {"fav" : "login-colorMode-2col/","url" : "https://www.xbr.pw/assets/css/hey/login-colorMode-2col/index.html"},
+  {"fav" : "login-colorMode-2col1/","url" : "https://www.xbr.pw/assets/css/hey/login-colorMode-2col1/index.html"},
+  {"fav" : "login-formato-firebase/","url" : "https://www.xbr.pw/assets/css/hey/login-formato-firebase/index.html"},
+  {"fav" : "low-poly-experiment/","url" : "https://www.xbr.pw/assets/css/hey/low-poly-experiment/index.html"},
+  {"fav" : "luisemoji.github.io/","url" : "https://www.xbr.pw/assets/css/hey/luisemoji.github.io/index.html"},
+  {"fav" : "macron-punch-game-css-html/","url" : "https://www.xbr.pw/assets/css/hey/macron-punch-game-css-html/index.html"},
+  {"fav" : "magic-card/","url" : "https://www.xbr.pw/assets/css/hey/magic-card/index.html"},
+  {"fav" : "mensaje-de-autodestruccion-con-setinterval-js-bom/","url" : "https://www.xbr.pw/assets/css/hey/mensaje-de-autodestruccion-con-setinterval-js-bom/index.html"},
+  {"fav" : "modal-second/","url" : "https://www.xbr.pw/assets/css/hey/modal-second/index.html"},
+  {"fav" : "multicopyv1/","url" : "https://www.xbr.pw/assets/css/hey/multicopyv1/index.html"},
+  {"fav" : "nav-thing/","url" : "https://www.xbr.pw/assets/css/hey/nav-thing/index.html"},
+  {"fav" : "neont-text-and-buttons/","url" : "https://www.xbr.pw/assets/css/hey/neont-text-and-buttons/index.html"},
+  {"fav" : "neuomorphic-section/","url" : "https://www.xbr.pw/assets/css/hey/neuomorphic-section/index.html"},
+  {"fav" : "opening-popup-animation/","url" : "https://www.xbr.pw/assets/css/hey/opening-popup-animation/index.html"},
+  {"fav" : "page-contenido-editable-/","url" : "https://www.xbr.pw/assets/css/hey/page-contenido-editable-/index.html"},
+  {"fav" : "para alguna app/","url" : "https://www.xbr.pw/assets/css/hey/para alguna app/index.html"},
+  {"fav" : "para-footer-random/","url" : "https://www.xbr.pw/assets/css/hey/para-footer-random/index.html"},
+  {"fav" : "para-nav/","url" : "https://www.xbr.pw/assets/css/hey/para-nav/index.html"},
+  {"fav" : "pdf-hace-v1/","url" : "https://www.xbr.pw/assets/css/hey/pdf-hace-v1/index.html"},
+  {"fav" : "pdf-hace-v2/","url" : "https://www.xbr.pw/assets/css/hey/pdf-hace-v2/index.html"},
+  {"fav" : "pdf-hace-v3/","url" : "https://www.xbr.pw/assets/css/hey/pdf-hace-v3/index.html"},
+  {"fav" : "pen-export-EymdpE/","url" : "https://www.xbr.pw/assets/css/hey/pen-export-EymdpE/index.html"},
+  {"fav" : "perfect-center-all-views/","url" : "https://www.xbr.pw/assets/css/hey/perfect-center-all-views/index.html"},
+  {"fav" : "personalizando-tu-nombre/","url" : "https://www.xbr.pw/assets/css/hey/personalizando-tu-nombre/index.html"},
+  {"fav" : "photos-agrupadas/","url" : "https://www.xbr.pw/assets/css/hey/photos-agrupadas/index.html"},
+  {"fav" : "planetsgenerative-arttetradic/","url" : "https://www.xbr.pw/assets/css/hey/planetsgenerative-arttetradic/index.html"},
+  {"fav" : "pure-css-frida-kahlo/","url" : "https://www.xbr.pw/assets/css/hey/pure-css-frida-kahlo/index.html"},
+  {"fav" : "quirky-button/","url" : "https://www.xbr.pw/assets/css/hey/quirky-button/index.html"},
+  {"fav" : "random/","url" : "https://www.xbr.pw/assets/css/hey/random/index.html"},
+  {"fav" : "random goku/","url" : "https://www.xbr.pw/assets/css/hey/random goku/index.html"},
+  {"fav" : "responsive-gallery/","url" : "https://www.xbr.pw/assets/css/hey/responsive-gallery/index.html"},
+  {"fav" : "responsive-typography-generator/","url" : "https://www.xbr.pw/assets/css/hey/responsive-typography-generator/index.html"},
+  {"fav" : "responsive-video-header-with-gradient/","url" : "https://www.xbr.pw/assets/css/hey/responsive-video-header-with-gradient/index.html"},
+  {"fav" : "reveling pago/","url" : "https://www.xbr.pw/assets/css/hey/reveling pago/index.html"},
+  {"fav" : "rick-and-morty/","url" : "https://www.xbr.pw/assets/css/hey/rick-and-morty/index.html"},
+  {"fav" : "sat-nav-for-your-website/","url" : "https://www.xbr.pw/assets/css/hey/sat-nav-for-your-website/index.html"},
+  {"fav" : "sea-debris-concept/","url" : "https://www.xbr.pw/assets/css/hey/sea-debris-concept/index.html"},
+  {"fav" : "section-separator-inspiration/","url" : "https://www.xbr.pw/assets/css/hey/section-separator-inspiration/index.html"},
+  {"fav" : "shop-list/","url" : "https://www.xbr.pw/assets/css/hey/shop-list/index.html"},
+  {"fav" : "shops/","url" : "https://www.xbr.pw/assets/css/hey/shops/index.html"},
+  {"fav" : "show-password/","url" : "https://www.xbr.pw/assets/css/hey/show-password/index.html"},
+  {"fav" : "significado-de-xiiber/","url" : "https://www.xbr.pw/assets/css/hey/significado-de-xiiber/index.html"},
+  {"fav" : "simple-blog-concept-pure-modal-tab-icon-efect-css/","url" : "https://www.xbr.pw/assets/css/hey/simple-blog-concept-pure-modal-tab-icon-efect-css/index.html"},
+  {"fav" : "size-app/","url" : "https://www.xbr.pw/assets/css/hey/size-app/index.html"},
+  {"fav" : "songokugrande/","url" : "https://www.xbr.pw/assets/css/hey/songokugrande/index.html"},
+  {"fav" : "spoiler/","url" : "https://www.xbr.pw/assets/css/hey/spoiler/index.html"},
+  {"fav" : "star-fieldpure-css/","url" : "https://www.xbr.pw/assets/css/hey/star-fieldpure-css/index.html"},
+  {"fav" : "star-wars-dark-light-toggle-w-gsap-3/","url" : "https://www.xbr.pw/assets/css/hey/star-wars-dark-light-toggle-w-gsap-3/index.html"},
+  {"fav" : "step-by-stepcss-js/","url" : "https://www.xbr.pw/assets/css/hey/step-by-stepcss-js/index.html"},
+  {"fav" : "stripe-website-gradient-animatio/","url" : "https://www.xbr.pw/assets/css/hey/stripe-website-gradient-animatio/index.html"},
+  {"fav" : "student/","url" : "https://www.xbr.pw/assets/css/hey/student/index.html"},
+  {"fav" : "Tab-Pure-CSS/","url" : "https://www.xbr.pw/assets/css/hey/Tab-Pure-CSS/index.html"},
+  {"fav" : "table-page-contenido-editable- - copia/","url" : "https://www.xbr.pw/assets/css/hey/table-page-contenido-editable- - copia/index.html"},
+  {"fav" : "table-shopping-layout/","url" : "https://www.xbr.pw/assets/css/hey/table-shopping-layout/index.html"},
+  {"fav" : "templete-twotwo/","url" : "https://www.xbr.pw/assets/css/hey/templete-twotwo/index.html"},
+  {"fav" : "terrifying-spotlight/","url" : "https://www.xbr.pw/assets/css/hey/terrifying-spotlight/index.html"},
+  {"fav" : "texto escondido y emoji/","url" : "https://www.xbr.pw/assets/css/hey/texto escondido y emoji/index.html"},
+  {"fav" : "thank-you-1000-followers3d-rotating-counter/","url" : "https://www.xbr.pw/assets/css/hey/thank-you-1000-followers3d-rotating-counter/index.html"},
+  {"fav" : "the-end/","url" : "https://www.xbr.pw/assets/css/hey/the-end/index.html"},
+  {"fav" : "twitter-follow-boton-door/","url" : "https://www.xbr.pw/assets/css/hey/twitter-follow-boton-door/index.html"},
+  {"fav" : "type/","url" : "https://www.xbr.pw/assets/css/hey/type/index.html"},
+  {"fav" : "ver-size/","url" : "https://www.xbr.pw/assets/css/hey/ver-size/index.html"},
+  {"fav" : "verticalslides/","url" : "https://www.xbr.pw/assets/css/hey/verticalslides/index.html"},
+  {"fav" : "vintage-phone-keyboard-with-sound/","url" : "https://www.xbr.pw/assets/css/hey/vintage-phone-keyboard-with-sound/index.html"},
+  {"fav" : "whalefacts/","url" : "https://www.xbr.pw/assets/css/hey/whalefacts/index.html"},
+  {"fav" : "z/","url" : "https://www.xbr.pw/assets/css/hey/z/index.html"},
+  {"fav" : "27-marzo-dia-del-queso.html","url" : "https://www.xbr.pw/assets/css/hey/27-marzo-dia-del-queso.html"},
+  {"fav" : "apuntes-w3.html","url" : "https://www.xbr.pw/assets/css/hey/apuntes-w3.html"},
+  {"fav" : "auto typewritter.html","url" : "https://www.xbr.pw/assets/css/hey/auto typewritter.html"},
+  {"fav" : "banners.html","url" : "https://www.xbr.pw/assets/css/hey/banners.html"},
+  {"fav" : "card.css","url" : "https://www.xbr.pw/assets/css/hey/card.css"},
+  {"fav" : "card.html","url" : "https://www.xbr.pw/assets/css/hey/card.html"},
+  {"fav" : "card.js","url" : "https://www.xbr.pw/assets/css/hey/card.js"},
+  {"fav" : "center-center.txt","url" : "https://www.xbr.pw/assets/css/hey/center-center.txt"},
+  {"fav" : "colum-gallery-big.html","url" : "https://www.xbr.pw/assets/css/hey/colum-gallery-big.html"},
+  {"fav" : "crear-perfil-completo-paso-a-paso.html","url" : "https://www.xbr.pw/assets/css/hey/crear-perfil-completo-paso-a-paso.html"},
+  {"fav" : "css-GalleryResponsive-ImageModal.html","url" : "https://www.xbr.pw/assets/css/hey/css-GalleryResponsive-ImageModal.html"},
+  {"fav" : "cual_es_la_edad_de_la_felicidad_sexual.html","url" : "https://www.xbr.pw/assets/css/hey/cual_es_la_edad_de_la_felicidad_sexual.html"},
+  {"fav" : "data-nosnippet.txt","url" : "https://www.xbr.pw/assets/css/hey/data-nosnippet.txt"},
+  {"fav" : "espacio-en-blanco.html","url" : "https://www.xbr.pw/assets/css/hey/espacio-en-blanco.html"},
+  {"fav" : "fases-de-la-luna.html","url" : "https://www.xbr.pw/assets/css/hey/fases-de-la-luna.html"},
+  {"fav" : "footerRandom.html","url" : "https://www.xbr.pw/assets/css/hey/footerRandom.html"},
+  {"fav" : "form-whats.html","url" : "https://www.xbr.pw/assets/css/hey/form-whats.html"},
+  {"fav" : "h8_neon_text.html","url" : "https://www.xbr.pw/assets/css/hey/h8_neon_text.html"},
+  {"fav" : "htmlsnipe-iframe.html","url" : "https://www.xbr.pw/assets/css/hey/htmlsnipe-iframe.html"},
+  {"fav" : "iframe.txt","url" : "https://www.xbr.pw/assets/css/hey/iframe.txt"},
+  {"fav" : "img-4-2-1-colum.html","url" : "https://www.xbr.pw/assets/css/hey/img-4-2-1-colum.html"},
+  {"fav" : "index-bg-black.html","url" : "https://www.xbr.pw/assets/css/hey/index-bg-black.html"},
+  {"fav" : "index-browser-con-iframe-nav-scroll.html","url" : "https://www.xbr.pw/assets/css/hey/index-browser-con-iframe-nav-scroll.html"},
+  {"fav" : "mobile.html","url" : "https://www.xbr.pw/assets/css/hey/mobile.html"},
+  {"fav" : "multicolores.html","url" : "https://www.xbr.pw/assets/css/hey/multicolores.html"},
+  {"fav" : "navbotton+tabs.html","url" : "https://www.xbr.pw/assets/css/hey/navbotton+tabs.html"},
+  {"fav" : "navResponsive con modalfull.html","url" : "https://www.xbr.pw/assets/css/hey/navResponsive con modalfull.html"},
+  {"fav" : "no-download.html","url" : "https://www.xbr.pw/assets/css/hey/no-download.html"},
+  {"fav" : "notificaciones.html","url" : "https://www.xbr.pw/assets/css/hey/notificaciones.html"},
+  {"fav" : "para-imagenes-svg.txt","url" : "https://www.xbr.pw/assets/css/hey/para-imagenes-svg.txt"},
+  {"fav" : "para-usar-jquary.html","url" : "https://www.xbr.pw/assets/css/hey/para-usar-jquary.html"},
+  {"fav" : "Preloder.html","url" : "https://www.xbr.pw/assets/css/hey/Preloder.html"},
+  {"fav" : "scroll-ba-bottom.html","url" : "https://www.xbr.pw/assets/css/hey/scroll-ba-bottom.html"},
+  {"fav" : "sidenav-derecho.html","url" : "https://www.xbr.pw/assets/css/hey/sidenav-derecho.html"},
+  {"fav" : "sidenav-izquierdo.html","url" : "https://www.xbr.pw/assets/css/hey/sidenav-izquierdo.html"},
+  {"fav" : "sine-estilo-en-listas.txt","url" : "https://www.xbr.pw/assets/css/hey/sine-estilo-en-listas.txt"},
+  {"fav" : "subscription-button.html","url" : "https://www.xbr.pw/assets/css/hey/subscription-button.html"},
+  {"fav" : "tabs.txt","url" : "https://www.xbr.pw/assets/css/hey/tabs.txt"},
+  {"fav" : "templete-de-venta-de-producto.html","url" : "https://www.xbr.pw/assets/css/hey/templete-de-venta-de-producto.html"},
+  {"fav" : "templete-oneone.html","url" : "https://www.xbr.pw/assets/css/hey/templete-oneone.html"},
+  {"fav" : "test-w3-spaces.html","url" : "https://www.xbr.pw/assets/css/hey/test-w3-spaces.html"},
+  {"fav" : "text-shadow.txt","url" : "https://www.xbr.pw/assets/css/hey/text-shadow.txt"},
+  {"fav" : "twitter-boton.html","url" : "https://www.xbr.pw/assets/css/hey/twitter-boton.html"},
+  {"fav" : "typewritter-firma.html","url" : "https://www.xbr.pw/assets/css/hey/typewritter-firma.html"},
+  {"fav" : "<b>CSS/Con palitos</b>","url" : "...assets/css/con-palitos-y-bolitas/a/banner-amarillo-con-estilos-cool.htmlindex.html"},
+  {"fav" : "banner-amarillo-con-estilos-cool.html","url" : "...assets/css/con-palitos-y-bolitas/a/banner-amarillo-con-estilos-cool.htmlindex.html"},
+  {"fav" : "banner-amarillo-cuando-se-use-1.html","url" : "...assets/css/con-palitos-y-bolitas/a/banner-amarillo-cuando-se-use-1.htmlindex.html"},
+  {"fav" : "copy-random.html","url" : "...assets/css/con-palitos-y-bolitas/a/copy-random.htmlindex.html"},
+  {"fav" : "desplegar-masMuchomas.html","url" : "...assets/css/con-palitos-y-bolitas/a/desplegar-masMuchomas.htmlindex.html"},
+  {"fav" : "ejemplo-en.html","url" : "...assets/css/con-palitos-y-bolitas/a/ejemplo-en.htmlindex.html"},
+  {"fav" : "explosive-nav.html","url" : "...assets/css/con-palitos-y-bolitas/a/explosive-nav.htmlindex.html"},
+  {"fav" : "firma-abajo-derecha.html","url" : "...assets/css/con-palitos-y-bolitas/a/firma-abajo-derecha.htmlindex.html"},
+  {"fav" : "firma-abajo-derecha.js","url" : "...assets/css/con-palitos-y-bolitas/a/firma-abajo-derecha.jsindex.html"},
+  {"fav" : "galeria-5medium-big4small.html","url" : "...assets/css/con-palitos-y-bolitas/a/galeria-5medium-big4small.htmlindex.html"},
+  {"fav" : "iframe-responsive.html","url" : "...assets/css/con-palitos-y-bolitas/a/iframe-responsive.htmlindex.html"},
+  {"fav" : "img-responsive-lazy.html","url" : "...assets/css/con-palitos-y-bolitas/a/img-responsive-lazy.htmlindex.html"},
+  {"fav" : "important-seo-details-en-summary-table.html","url" : "...assets/css/con-palitos-y-bolitas/a/important-seo-details-en-summary-table.htmlindex.html"},
+  {"fav" : "includeHTMLconw3js.html","url" : "...assets/css/con-palitos-y-bolitas/a/includeHTMLconw3js.htmlindex.html"},
+  {"fav" : "logo-en-posicion-arriba-derecha.html","url" : "...assets/css/con-palitos-y-bolitas/a/logo-en-posicion-arriba-derecha.htmlindex.html"},
+  {"fav" : "method-dialog.html","url" : "...assets/css/con-palitos-y-bolitas/a/method-dialog.htmlindex.html"},
+  {"fav" : "old-icon-nav-footer.html","url" : "...assets/css/con-palitos-y-bolitas/a/old-icon-nav-footer.htmlindex.html"},
+  {"fav" : "old-nav.html","url" : "...assets/css/con-palitos-y-bolitas/a/old-nav.htmlindex.html"},
+  {"fav" : "Preloder.html","url" : "...assets/css/con-palitos-y-bolitas/a/Preloder.htmlindex.html"},
+  {"fav" : "se-va-a-teletransportar.html","url" : "...assets/css/con-palitos-y-bolitas/a/se-va-a-teletransportar.htmlindex.html"},
+  {"fav" : "search.html","url" : "...assets/css/con-palitos-y-bolitas/a/search.htmlindex.html"},
+  {"fav" : "super-titulo.html","url" : "...assets/css/con-palitos-y-bolitas/a/super-titulo.htmlindex.html"},
+  {"fav" : "titulo01-html.html","url" : "...assets/css/con-palitos-y-bolitas/a/titulo01-html.htmlindex.html"},
+  {"fav" : "twitt-publicacion.html","url" : "...assets/css/con-palitos-y-bolitas/a/twitt-publicacion.htmlindex.html"},
+  {"fav" : "vecesVista.html","url" : "...assets/css/con-palitos-y-bolitas/a/vecesVista.htmlindex.html"},
+  {"fav" : "<b>css/con-palitos-y-bolitas/</b>","url" : "...assets/css/con-palitos-y-bolitas/a/vecesVista.htmlindex.html"},
+  {"fav" : "vecesVista.html","url" : "...assets/css/con-palitos-y-bolitas/vecesVista.htmlindex.html"},
+  {"fav" : "login-materialize-full-page-responsive/","url" : "...assets/css/con-palitos-y-bolitas/login-materialize-full-page-responsive/index.html"},
+  {"fav" : "alertas.html","url" : "...assets/css/con-palitos-y-bolitas/alertas.html"},
+  {"fav" : "back.html","url" : "...assets/css/con-palitos-y-bolitas/back.html"},
+  {"fav" : "boton-modal-flotante.html","url" : "...assets/css/con-palitos-y-bolitas/boton-modal-flotante.html"},
+  {"fav" : "cambio_de_texto.html","url" : "...assets/css/con-palitos-y-bolitas/cambio_de_texto.html"},
+  {"fav" : "code-tab-in-tab.html","url" : "...assets/css/con-palitos-y-bolitas/code-tab-in-tab.html"},
+  {"fav" : "compara.html","url" : "...assets/css/con-palitos-y-bolitas/compara.html"},
+  {"fav" : "compare.html","url" : "...assets/css/con-palitos-y-bolitas/compare.html"},
+  {"fav" : "contentscroll+notas+tooltip+tabs+grindphoto+toparriba.html","url" : "...assets/css/con-palitos-y-bolitas/contentscroll+notas+tooltip+tabs+grindphoto+toparriba.html"},
+  {"fav" : "css_dropdown_card.html","url" : "...assets/css/con-palitos-y-bolitas/css_dropdown_card.html"},
+  {"fav" : "css-animated-text-reveal.html","url" : "...assets/css/con-palitos-y-bolitas/css-animated-text-reveal.html"},
+  {"fav" : "css-image-modal.html","url" : "...assets/css/con-palitos-y-bolitas/css-image-modal.html"},
+  {"fav" : "cursor.html","url" : "...assets/css/con-palitos-y-bolitas/cursor.html"},
+  {"fav" : "dark-mode.html","url" : "...assets/css/con-palitos-y-bolitas/dark-mode.html"},
+  {"fav" : "DateTime.html","url" : "...assets/css/con-palitos-y-bolitas/DateTime.html"},
+  {"fav" : "descuento.html","url" : "...assets/css/con-palitos-y-bolitas/descuento.html"},
+  {"fav" : "detalles-en-table.html","url" : "...assets/css/con-palitos-y-bolitas/detalles-en-table.html"},
+  {"fav" : "Expanding-Menu-Concept.html","url" : "...assets/css/con-palitos-y-bolitas/Expanding-Menu-Concept.html"},
+  {"fav" : "ficha-de-producto.html","url" : "...assets/css/con-palitos-y-bolitas/ficha-de-producto.html"},
+  {"fav" : "footer-loader.html","url" : "...assets/css/con-palitos-y-bolitas/footer-loader.html"},
+  {"fav" : "full_screen_modal-bootstrap.html","url" : "...assets/css/con-palitos-y-bolitas/full_screen_modal-bootstrap.html"},
+  {"fav" : "gallery-con-modal-vista-abajo.html","url" : "...assets/css/con-palitos-y-bolitas/gallery-con-modal-vista-abajo.html"},
+  {"fav" : "hamburguesas.html","url" : "...assets/css/con-palitos-y-bolitas/hamburguesas.html"},
+  {"fav" : "header-ico-en-movimiento.css","url" : "...assets/css/con-palitos-y-bolitas/header-ico-en-movimiento.css"},
+  {"fav" : "header-ico-en-movimiento.html","url" : "...assets/css/con-palitos-y-bolitas/header-ico-en-movimiento.html"},
+  {"fav" : "iconsex.html","url" : "...assets/css/con-palitos-y-bolitas/iconsex.html"},
+  {"fav" : "iframe-responsive.html","url" : "...assets/css/con-palitos-y-bolitas/iframe-responsive.html"},
+  {"fav" : "index-browser-con-iframe-nav-scroll.html","url" : "...assets/css/con-palitos-y-bolitas/index-browser-con-iframe-nav-scroll.html"},
+  {"fav" : "index-mininav-con-search-e-iframe.html","url" : "...assets/css/con-palitos-y-bolitas/index-mininav-con-search-e-iframe.html"},
+  {"fav" : "intro-con-movimiento.html","url" : "...assets/css/con-palitos-y-bolitas/intro-con-movimiento.html"},
+  {"fav" : "Lightbox+Horizontal_Scrollable_menu.html","url" : "...assets/css/con-palitos-y-bolitas/Lightbox+Horizontal_Scrollable_menu.html"},
+  {"fav" : "love.html","url" : "...assets/css/con-palitos-y-bolitas/love.html"},
+  {"fav" : "mapa-de-sitio.html","url" : "...assets/css/con-palitos-y-bolitas/mapa-de-sitio.html"},
+  {"fav" : "menu-flotante.html","url" : "...assets/css/con-palitos-y-bolitas/menu-flotante.html"},
+  {"fav" : "menuModal.html","url" : "...assets/css/con-palitos-y-bolitas/menuModal.html"},
+  {"fav" : "micro-post-twitt.html","url" : "...assets/css/con-palitos-y-bolitas/micro-post-twitt.html"},
+  {"fav" : "mini-search-content.html","url" : "...assets/css/con-palitos-y-bolitas/mini-search-content.html"},
+  {"fav" : "modal-CSS-full.html","url" : "...assets/css/con-palitos-y-bolitas/modal-CSS-full.html"},
+  {"fav" : "modal-CSS.html","url" : "...assets/css/con-palitos-y-bolitas/modal-CSS.html"},
+  {"fav" : "Nav-Expanding-Menu-Concept.html","url" : "...assets/css/con-palitos-y-bolitas/Nav-Expanding-Menu-Concept.html"},
+  {"fav" : "nav-topnav-loader.html","url" : "...assets/css/con-palitos-y-bolitas/nav-topnav-loader.html"},
+  {"fav" : "popup-window-opener-location-href-document-location.html","url" : "...assets/css/con-palitos-y-bolitas/popup-window-opener-location-href-document-location.html"},
+  {"fav" : "scroll-footer.html","url" : "...assets/css/con-palitos-y-bolitas/scroll-footer.html"},
+  {"fav" : "scroll+header.html","url" : "...assets/css/con-palitos-y-bolitas/scroll+header.html"},
+  {"fav" : "ScrollDownHorizontalScrollableMenu.html","url" : "...assets/css/con-palitos-y-bolitas/ScrollDownHorizontalScrollableMenu.html"},
+  {"fav" : "simple-presentation.html","url" : "...assets/css/con-palitos-y-bolitas/simple-presentation.html"},
+  {"fav" : "simple-tab.html","url" : "...assets/css/con-palitos-y-bolitas/simple-tab.html"},
+  {"fav" : "simple-User-Profile-Widget.html","url" : "...assets/css/con-palitos-y-bolitas/simple-User-Profile-Widget.html"},
+  {"fav" : "simpleModal.html","url" : "...assets/css/con-palitos-y-bolitas/simpleModal.html"},
+  {"fav" : "snackbar.html","url" : "...assets/css/con-palitos-y-bolitas/snackbar.html"},
+  {"fav" : "star-wars-himno-nacional-mexicano.html","url" : "...assets/css/con-palitos-y-bolitas/star-wars-himno-nacional-mexicano.html"},
+  {"fav" : "summary-details-box.html","url" : "...assets/css/con-palitos-y-bolitas/summary-details-box.html"},
+  {"fav" : "summary.html","url" : "...assets/css/con-palitos-y-bolitas/summary.html"},
+  {"fav" : "tab-in-tab.html","url" : "...assets/css/con-palitos-y-bolitas/tab-in-tab.html"},
+  {"fav" : "tab-only-css.html","url" : "...assets/css/con-palitos-y-bolitas/tab-only-css.html"},
+  {"fav" : "tabs.html","url" : "...assets/css/con-palitos-y-bolitas/tabs.html"},
+  {"fav" : "templete-blog.html","url" : "...assets/css/con-palitos-y-bolitas/templete-blog.html"},
+  {"fav" : "tex-animation.html","url" : "...assets/css/con-palitos-y-bolitas/tex-animation.html"},
+  {"fav" : "text-file-reader.html","url" : "...assets/css/con-palitos-y-bolitas/text-file-reader.html"},
+  {"fav" : "texto-girando-en-espiral.html","url" : "...assets/css/con-palitos-y-bolitas/texto-girando-en-espiral.html"},
+  {"fav" : "titulo01-html.html","url" : "...assets/css/con-palitos-y-bolitas/titulo01-html.html"},
+  {"fav" : "tooltip.html","url" : "...assets/css/con-palitos-y-bolitas/tooltip.html"},
+  {"fav" : "twitter_boton_de_colors.html","url" : "...assets/css/con-palitos-y-bolitas/twitter_boton_de_colors.html"},
+  {"fav" : "twitter-follow-boton-logo.html","url" : "...assets/css/con-palitos-y-bolitas/twitter-follow-boton-logo.html"},
+  {"fav" : "<b>css/reference-master</b>","url" : "...assets/css/reference-masterjs-html-template-imports/index.html"},
+  {"fav" : "js-html-template-imports/","url" : "...assets/css/reference-masterjs-html-template-imports/index.html"},
+  {"fav" : "js-stripe-checkout-custom-button/","url" : "...assets/css/reference-masterjs-stripe-checkout-custom-button/index.html"},
+  {"fav" : "js-stripe-elements/","url" : "...assets/css/reference-masterjs-stripe-elements/index.html"},
+  {"fav" : "scss-in-browser-compiling/","url" : "...assets/css/reference-masterscss-in-browser-compiling/index.html"},
+  {"fav" : "vue-css-live-editor/","url" : "...assets/css/reference-mastervue-css-live-editor/index.html"},
+  {"fav" : "css-all-properties.md","url" : "...assets/css/reference-mastercss-all-properties.md"},
+  {"fav" : "css-button-example.html","url" : "...assets/css/reference-mastercss-button-example.html"},
+  {"fav" : "css-grid-options.scss","url" : "...assets/css/reference-mastercss-grid-options.scss"},
+  {"fav" : "css-select-styling.html","url" : "...assets/css/reference-mastercss-select-styling.html"},
+  {"fav" : "editorconfig.txt","url" : "...assets/css/reference-mastereditorconfig.txt"},
+  {"fav" : "js-by-example.js","url" : "...assets/css/reference-masterjs-by-example.js"},
+  {"fav" : "js-es6-tutorials.js","url" : "...assets/css/reference-masterjs-es6-tutorials.js"},
+  {"fav" : "js-fetch-api-example.html","url" : "...assets/css/reference-masterjs-fetch-api-example.html"},
+  {"fav" : "js-fetch-api-github-example.html","url" : "...assets/css/reference-masterjs-fetch-api-github-example.html"},
+  {"fav" : "js-FizzBuzz-examples.js","url" : "...assets/css/reference-masterjs-FizzBuzz-examples.js"},
+  {"fav" : "js-functional-ui-with-classes.html","url" : "...assets/css/reference-masterjs-functional-ui-with-classes.html"},
+  {"fav" : "js-functional-ui.html","url" : "...assets/css/reference-masterjs-functional-ui.html"},
+  {"fav" : "js-get-hostname-from-url.js","url" : "...assets/css/reference-masterjs-get-hostname-from-url.js"},
+  {"fav" : "js-jquery-canvas-dot-grid.html","url" : "...assets/css/reference-masterjs-jquery-canvas-dot-grid.html"},
+  {"fav" : "js-jquery-like-selector-functions.html","url" : "...assets/css/reference-masterjs-jquery-like-selector-functions.html"},
+  {"fav" : "js-mutation-observer-localstorage.html","url" : "...assets/css/reference-masterjs-mutation-observer-localstorage.html"},
+  {"fav" : "js-overlay.html","url" : "...assets/css/reference-masterjs-overlay.html"},
+  {"fav" : "js-plasso-custom-form.html","url" : "...assets/css/reference-masterjs-plasso-custom-form.html"},
+  {"fav" : "js-resize-textarea-to-fit-content.js","url" : "...assets/css/reference-masterjs-resize-textarea-to-fit-content.js"},
+  {"fav" : "js-scroll-monitor.html","url" : "...assets/css/reference-masterjs-scroll-monitor.html"},
+  {"fav" : "js-simple-dropdown.html","url" : "...assets/css/reference-masterjs-simple-dropdown.html"},
+  {"fav" : "js-templating.html","url" : "...assets/css/reference-masterjs-templating.html"},
+  {"fav" : "js-time-ago.js","url" : "...assets/css/reference-masterjs-time-ago.js"},
+  {"fav" : "LICENSE","url" : "...assets/css/reference-masterLICENSE"},
+  {"fav" : "node-create-filenames-array.js","url" : "...assets/css/reference-masternode-create-filenames-array.js"},
+  {"fav" : "regex-exclude-containing.txt","url" : "...assets/css/reference-masterregex-exclude-containing.txt"},
+  {"fav" : "regex-remove-newlines-keep-paragraphs.txt","url" : "...assets/css/reference-masterregex-remove-newlines-keep-paragraphs.txt"},
+  {"fav" : "scss-fancy-underline-mixin.scss","url" : "...assets/css/reference-masterscss-fancy-underline-mixin.scss"},
+  {"fav" : "scss-flex-mixin.scss","url" : "...assets/css/reference-masterscss-flex-mixin.scss"},
+  {"fav" : "scss-staggered-animation.scss","url" : "...assets/css/reference-masterscss-staggered-animation.scss"},
+  {"fav" : "svg-animate-transform-examples.html","url" : "...assets/css/reference-mastersvg-animate-transform-examples.html"},
+  {"fav" : "<b>14102022/dist/</b>","url" : "...assets/css/hi/14102022/dist/3d-earth/index.html"},
+  {"fav" : "3d-earth/","url" : "...assets/css/hi/14102022/dist/3d-earth/index.html"},
+  {"fav" : "amen/","url" : "...assets/css/hi/14102022/dist/amen/index.html"},
+  {"fav" : "bey-timer/","url" : "...assets/css/hi/14102022/dist/bey-timer/index.html"},
+  {"fav" : "blend-mode-test/","url" : "...assets/css/hi/14102022/dist/blend-mode-test/index.html"},
+  {"fav" : "book-icon-css-animation/","url" : "...assets/css/hi/14102022/dist/book-icon-css-animation/index.html"},
+  {"fav" : "book-layout/","url" : "...assets/css/hi/14102022/dist/book-layout/index.html"},
+  {"fav" : "border-radius-blob-background/","url" : "...assets/css/hi/14102022/dist/border-radius-blob-background/index.html"},
+  {"fav" : "box-alignment-and-overflow/","url" : "...assets/css/hi/14102022/dist/box-alignment-and-overflow/index.html"},
+  {"fav" : "box-layout/","url" : "...assets/css/hi/14102022/dist/box-layout/index.html"},
+  {"fav" : "chrome-no-js-range-slider-uv-filter-effect/","url" : "...assets/css/hi/14102022/dist/chrome-no-js-range-slider-uv-filter-effect/index.html"},
+  {"fav" : "content-editable/","url" : "...assets/css/hi/14102022/dist/content-editable/index.html"},
+  {"fav" : "conversational-formscss-override-theming/","url" : "...assets/css/hi/14102022/dist/conversational-formscss-override-theming/index.html"},
+  {"fav" : "css-animations/","url" : "...assets/css/hi/14102022/dist/css-animations/index.html"},
+  {"fav" : "css-svg-tick-animation/","url" : "...assets/css/hi/14102022/dist/css-svg-tick-animation/index.html"},
+  {"fav" : "css3-blur-text-effect/","url" : "...assets/css/hi/14102022/dist/css3-blur-text-effect/index.html"},
+  {"fav" : "dark-mode-with-toggle-localstorage/","url" : "...assets/css/hi/14102022/dist/dark-mode-with-toggle-localstorage/index.html"},
+  {"fav" : "dynamic-slideshow-less-jade-js/","url" : "...assets/css/hi/14102022/dist/dynamic-slideshow-less-jade-js/index.html"},
+  {"fav" : "faux-masonry-layout-with-flexbox/","url" : "...assets/css/hi/14102022/dist/faux-masonry-layout-with-flexbox/index.html"},
+  {"fav" : "faux-pagination-with-scroll-snap-and-fallbacks/","url" : "...assets/css/hi/14102022/dist/faux-pagination-with-scroll-snap-and-fallbacks/index.html"},
+  {"fav" : "feedback-reactions/","url" : "...assets/css/hi/14102022/dist/feedback-reactions/index.html"},
+  {"fav" : "gooey-menucss-only/","url" : "...assets/css/hi/14102022/dist/gooey-menucss-only/index.html"},
+  {"fav" : "jumpingballs/","url" : "...assets/css/hi/14102022/dist/jumpingballs/index.html"},
+  {"fav" : "link-underline-animation/","url" : "...assets/css/hi/14102022/dist/link-underline-animation/index.html"},
+  {"fav" : "logo-almagro/","url" : "...assets/css/hi/14102022/dist/logo-almagro/index.html"},
+  {"fav" : "maintenance-poc4/","url" : "...assets/css/hi/14102022/dist/maintenance-poc4/index.html"},
+  {"fav" : "mangaline/","url" : "...assets/css/hi/14102022/dist/mangaline/index.html"},
+  {"fav" : "mobile-multi-step-accordion-menuconcept/","url" : "...assets/css/hi/14102022/dist/mobile-multi-step-accordion-menuconcept/index.html"},
+  {"fav" : "mobile-version/","url" : "...assets/css/hi/14102022/dist/mobile-version/index.html"},
+  {"fav" : "multiplication-table-game/","url" : "...assets/css/hi/14102022/dist/multiplication-table-game/index.html"},
+  {"fav" : "music-player/","url" : "...assets/css/hi/14102022/dist/music-player/index.html"},
+  {"fav" : "navigation-ala-mammut-com/","url" : "...assets/css/hi/14102022/dist/navigation-ala-mammut-com/index.html"},
+  {"fav" : "nerd-machine-logo-animated/","url" : "...assets/css/hi/14102022/dist/nerd-machine-logo-animated/index.html"},
+  {"fav" : "pen-export-WNdQvgv/","url" : "...assets/css/hi/14102022/dist/pen-export-WNdQvgv/index.html"},
+  {"fav" : "pen-export-YVaxNY/","url" : "...assets/css/hi/14102022/dist/pen-export-YVaxNY/index.html"},
+  {"fav" : "pen-export-zYxBQzw/","url" : "...assets/css/hi/14102022/dist/pen-export-zYxBQzw/index.html"},
+  {"fav" : "pro-sidebar-template/","url" : "...assets/css/hi/14102022/dist/pro-sidebar-template/index.html"},
+  {"fav" : "progress-bar-liquid-bubble/","url" : "...assets/css/hi/14102022/dist/progress-bar-liquid-bubble/index.html"},
+  {"fav" : "pull-quote-from-ny-post/","url" : "...assets/css/hi/14102022/dist/pull-quote-from-ny-post/index.html"},
+  {"fav" : "pure-css-responsive-svg-icon/","url" : "...assets/css/hi/14102022/dist/pure-css-responsive-svg-icon/index.html"},
+  {"fav" : "quickie-test/","url" : "...assets/css/hi/14102022/dist/quickie-test/index.html"},
+  {"fav" : "react-scratchpad/","url" : "...assets/css/hi/14102022/dist/react-scratchpad/index.html"},
+  {"fav" : "resizable-grid-columns/","url" : "...assets/css/hi/14102022/dist/resizable-grid-columns/index.html"},
+  {"fav" : "responsive-css-vertical-slider-with-thumbnails/","url" : "...assets/css/hi/14102022/dist/responsive-css-vertical-slider-with-thumbnails/index.html"},
+  {"fav" : "search-box/","url" : "...assets/css/hi/14102022/dist/search-box/index.html"},
+  {"fav" : "secuencia-de-idea-web/","url" : "...assets/css/hi/14102022/dist/secuencia-de-idea-web/index.html"},
+  {"fav" : "simple-audio-visualisation/","url" : "...assets/css/hi/14102022/dist/simple-audio-visualisation/index.html"},
+  {"fav" : "simple-javascript-calculator/","url" : "...assets/css/hi/14102022/dist/simple-javascript-calculator/index.html"},
+  {"fav" : "static-css-framework-master/","url" : "...assets/css/hi/14102022/dist/static-css-framework-master/index.html"},
+  {"fav" : "static-gaming-shop-main/","url" : "...assets/css/hi/14102022/dist/static-gaming-shop-main/index.html"},
+  {"fav" : "svg-filters-fecolormatrix-fecomponenttransfer/","url" : "...assets/css/hi/14102022/dist/svg-filters-fecolormatrix-fecomponenttransfer/index.html"},
+  {"fav" : "taiwind-css-daisyui/","url" : "...assets/css/hi/14102022/dist/taiwind-css-daisyui/index.html"},
+  {"fav" : "the-halftone-mirror-webcam/","url" : "...assets/css/hi/14102022/dist/the-halftone-mirror-webcam/index.html"},
+  {"fav" : "what-do-you-have-to-be-scared-of/","url" : "...assets/css/hi/14102022/dist/what-do-you-have-to-be-scared-of/index.html"},
+  {"fav" : "xbr-pw-gradient-text-fun/","url" : "...assets/css/hi/14102022/dist/xbr-pw-gradient-text-fun/index.html"},
+  {"fav" : "zoom-image-on-hover-mouse-move/","url" : "...assets/css/hi/14102022/dist/zoom-image-on-hover-mouse-move/index.html"},
+  {"fav" : "<b>CSS HI</b>","url" : "https://www.xbr.pw/assets/css/hi/2024/index.html"},
+  {"fav" : "2024/","url" : "https://www.xbr.pw/assets/css/hi/2024/index.html"},
+  {"fav" : "alarm-clock-in-vanilla-javascript/","url" : "https://www.xbr.pw/assets/css/hi/alarm-clock-in-vanilla-javascript/index.html"},
+  {"fav" : "alerts/","url" : "https://www.xbr.pw/assets/css/hi/alerts/index.html"},
+  {"fav" : "alpine-js-pricing-table-toggle/","url" : "https://www.xbr.pw/assets/css/hi/alpine-js-pricing-table-toggle/index.html"},
+  {"fav" : "animated-mail-button/","url" : "https://www.xbr.pw/assets/css/hi/animated-mail-button/index.html"},
+  {"fav" : "animation-lines-text/","url" : "https://www.xbr.pw/assets/css/hi/animation-lines-text/index.html"},
+  {"fav" : "app-menu-with-lock-screen/","url" : "https://www.xbr.pw/assets/css/hi/app-menu-with-lock-screen/index.html"},
+  {"fav" : "article-details/","url" : "https://www.xbr.pw/assets/css/hi/article-details/index.html"},
+  {"fav" : "bar-buttom-nav/","url" : "https://www.xbr.pw/assets/css/hi/bar-buttom-nav/index.html"},
+  {"fav" : "black-invisible-button/","url" : "https://www.xbr.pw/assets/css/hi/black-invisible-button/index.html"},
+  {"fav" : "blog-ui-with-tailwind-css/","url" : "https://www.xbr.pw/assets/css/hi/blog-ui-with-tailwind-css/index.html"},
+  {"fav" : "boton-logout/","url" : "https://www.xbr.pw/assets/css/hi/boton-logout/index.html"},
+  {"fav" : "calendario/","url" : "https://www.xbr.pw/assets/css/hi/calendario/index.html"},
+  {"fav" : "cara/","url" : "https://www.xbr.pw/assets/css/hi/cara/index.html"},
+  {"fav" : "carousel-with-progress-bar/","url" : "https://www.xbr.pw/assets/css/hi/carousel-with-progress-bar/index.html"},
+  {"fav" : "checklist-2023/","url" : "https://www.xbr.pw/assets/css/hi/checklist-2023/index.html"},
+  {"fav" : "codevember-windows-10-desktop/","url" : "https://www.xbr.pw/assets/css/hi/codevember-windows-10-desktop/index.html"},
+  {"fav" : "corner-ribbons/","url" : "https://www.xbr.pw/assets/css/hi/corner-ribbons/index.html"},
+  {"fav" : "crear-logi/","url" : "https://www.xbr.pw/assets/css/hi/crear-logi/index.html"},
+  {"fav" : "css-3d-redbull-can/","url" : "https://www.xbr.pw/assets/css/hi/css-3d-redbull-can/index.html"},
+  {"fav" : "custom-properties-based-parallax/","url" : "https://www.xbr.pw/assets/css/hi/custom-properties-based-parallax/index.html"},
+  {"fav" : "dashboard-e/","url" : "https://www.xbr.pw/assets/css/hi/dashboard-e/index.html"},
+  {"fav" : "dashboard-eso/","url" : "https://www.xbr.pw/assets/css/hi/dashboard-eso/index.html"},
+  {"fav" : "dashboard-with-tailwindcss-and-alpinejs/","url" : "https://www.xbr.pw/assets/css/hi/dashboard-with-tailwindcss-and-alpinejs/index.html"},
+  {"fav" : "dashboard-with-tailwindcss-and-alpinejs-use-de-base/","url" : "https://www.xbr.pw/assets/css/hi/dashboard-with-tailwindcss-and-alpinejs-use-de-base/index.html"},
+  {"fav" : "details-summary-demo/","url" : "https://www.xbr.pw/assets/css/hi/details-summary-demo/index.html"},
+  {"fav" : "diapositivas/","url" : "https://www.xbr.pw/assets/css/hi/diapositivas/index.html"},
+  {"fav" : "digital-clock-with-alarm/","url" : "https://www.xbr.pw/assets/css/hi/digital-clock-with-alarm/index.html"},
+  {"fav" : "easings-are-rad/","url" : "https://www.xbr.pw/assets/css/hi/easings-are-rad/index.html"},
+  {"fav" : "en-construccion/","url" : "https://www.xbr.pw/assets/css/hi/en-construccion/index.html"},
+  {"fav" : "esto-te-puede-interesar/","url" : "https://www.xbr.pw/assets/css/hi/esto-te-puede-interesar/index.html"},
+  {"fav" : "favorite-list/","url" : "https://www.xbr.pw/assets/css/hi/favorite-list/index.html"},
+  {"fav" : "feeds/","url" : "https://www.xbr.pw/assets/css/hi/feeds/index.html"},
+  {"fav" : "focus/","url" : "https://www.xbr.pw/assets/css/hi/focus/index.html"},
+  {"fav" : "gallery-swiper-slider2/","url" : "https://www.xbr.pw/assets/css/hi/gallery-swiper-slider2/index.html"},
+  {"fav" : "github-redirect-for-codepen/","url" : "https://www.xbr.pw/assets/css/hi/github-redirect-for-codepen/index.html"},
+  {"fav" : "google-form/","url" : "https://www.xbr.pw/assets/css/hi/google-form/index.html"},
+  {"fav" : "google-formsspreadsheet-database/","url" : "https://www.xbr.pw/assets/css/hi/google-formsspreadsheet-database/index.html"},
+  {"fav" : "grid-poster/","url" : "https://www.xbr.pw/assets/css/hi/grid-poster/index.html"},
+  {"fav" : "gsap-menu-animation/","url" : "https://www.xbr.pw/assets/css/hi/gsap-menu-animation/index.html"},
+  {"fav" : "headline-balancing/","url" : "https://www.xbr.pw/assets/css/hi/headline-balancing/index.html"},
+  {"fav" : "hover-button-v4/","url" : "https://www.xbr.pw/assets/css/hi/hover-button-v4/index.html"},
+  {"fav" : "html5-filereader-api-demo-text/","url" : "https://www.xbr.pw/assets/css/hi/html5-filereader-api-demo-text/index.html"},
+  {"fav" : "just-studying-this/","url" : "https://www.xbr.pw/assets/css/hi/just-studying-this/index.html"},
+  {"fav" : "layout-with-text-effects-and-clip-path/","url" : "https://www.xbr.pw/assets/css/hi/layout-with-text-effects-and-clip-path/index.html"},
+  {"fav" : "lista-de-reproduccion/","url" : "https://www.xbr.pw/assets/css/hi/lista-de-reproduccion/index.html"},
+  {"fav" : "local/","url" : "https://www.xbr.pw/assets/css/hi/local/index.html"},
+  {"fav" : "localstorage-fun/","url" : "https://www.xbr.pw/assets/css/hi/localstorage-fun/index.html"},
+  {"fav" : "login-bootstrap-5/","url" : "https://www.xbr.pw/assets/css/hi/login-bootstrap-5/index.html"},
+  {"fav" : "login-client/","url" : "https://www.xbr.pw/assets/css/hi/login-client/index.html"},
+  {"fav" : "lotsa-notifications/","url" : "https://www.xbr.pw/assets/css/hi/lotsa-notifications/index.html"},
+  {"fav" : "made-firma-footer-creditos-just-svg-text-animation-logotype/","url" : "https://www.xbr.pw/assets/css/hi/made-firma-footer-creditos-just-svg-text-animation-logotype/index.html"},
+  {"fav" : "mouse-position-as-custom-css-property/","url" : "https://www.xbr.pw/assets/css/hi/mouse-position-as-custom-css-property/index.html"},
+  {"fav" : "music-player-audio-player/","url" : "https://www.xbr.pw/assets/css/hi/music-player-audio-player/index.html"},
+  {"fav" : "opening-popup-animation/","url" : "https://www.xbr.pw/assets/css/hi/opening-popup-animation/index.html"},
+  {"fav" : "pantalla-bloqueada-para-apps/","url" : "https://www.xbr.pw/assets/css/hi/pantalla-bloqueada-para-apps/index.html"},
+  {"fav" : "paso-a-paso/","url" : "https://www.xbr.pw/assets/css/hi/paso-a-paso/index.html"},
+  {"fav" : "password-error-success-animation/","url" : "https://www.xbr.pw/assets/css/hi/password-error-success-animation/index.html"},
+  {"fav" : "planner5d/","url" : "https://www.xbr.pw/assets/css/hi/planner5d/index.html"},
+  {"fav" : "pomodoro/","url" : "https://www.xbr.pw/assets/css/hi/pomodoro/index.html"},
+  {"fav" : "pomodoro-podomoro-okey/","url" : "https://www.xbr.pw/assets/css/hi/pomodoro-podomoro-okey/index.html"},
+  {"fav" : "poo-magic/","url" : "https://www.xbr.pw/assets/css/hi/poo-magic/index.html"},
+  {"fav" : "preloader-animations-fract-and-circles/","url" : "https://www.xbr.pw/assets/css/hi/preloader-animations-fract-and-circles/index.html"},
+  {"fav" : "project-pillowdesktop-system/","url" : "https://www.xbr.pw/assets/css/hi/project-pillowdesktop-system/index.html"},
+  {"fav" : "prtfolio/","url" : "https://www.xbr.pw/assets/css/hi/prtfolio/index.html"},
+  {"fav" : "pure-css-windows-10-desktop/","url" : "https://www.xbr.pw/assets/css/hi/pure-css-windows-10-desktop/index.html"},
+  {"fav" : "random/","url" : "https://www.xbr.pw/assets/css/hi/random/index.html"},
+  {"fav" : "random-picture-generator/","url" : "https://www.xbr.pw/assets/css/hi/random-picture-generator/index.html"},
+  {"fav" : "reloj-desktop/","url" : "https://www.xbr.pw/assets/css/hi/reloj-desktop/index.html"},
+  {"fav" : "resolution-mobile/","url" : "https://www.xbr.pw/assets/css/hi/resolution-mobile/index.html"},
+  {"fav" : "responsive-off-canvas-menu-slide-paneljquery/","url" : "https://www.xbr.pw/assets/css/hi/responsive-off-canvas-menu-slide-paneljquery/index.html"},
+  {"fav" : "s/","url" : "https://www.xbr.pw/assets/css/hi/s/index.html"},
+  {"fav" : "scaled-iframes-for-responsive-demo/","url" : "https://www.xbr.pw/assets/css/hi/scaled-iframes-for-responsive-demo/index.html"},
+  {"fav" : "self-destruct-button/","url" : "https://www.xbr.pw/assets/css/hi/self-destruct-button/index.html"},
+  {"fav" : "shadow-parallax-reactjs/","url" : "https://www.xbr.pw/assets/css/hi/shadow-parallax-reactjs/index.html"},
+  {"fav" : "side-menu-responsive-dashboard-puto-bootstrap/","url" : "https://www.xbr.pw/assets/css/hi/side-menu-responsive-dashboard-puto-bootstrap/index.html"},
+  {"fav" : "simple-aspect-ratio-containers/","url" : "https://www.xbr.pw/assets/css/hi/simple-aspect-ratio-containers/index.html"},
+  {"fav" : "single-element-pixel-art/","url" : "https://www.xbr.pw/assets/css/hi/single-element-pixel-art/index.html"},
+  {"fav" : "skeleton-screen-for-sns/","url" : "https://www.xbr.pw/assets/css/hi/skeleton-screen-for-sns/index.html"},
+  {"fav" : "sneaky-monster/","url" : "https://www.xbr.pw/assets/css/hi/sneaky-monster/index.html"},
+  {"fav" : "social-c/","url" : "https://www.xbr.pw/assets/css/hi/social-c/index.html"},
+  {"fav" : "social-cards-with-tailwind-css/","url" : "https://www.xbr.pw/assets/css/hi/social-cards-with-tailwind-css/index.html"},
+  {"fav" : "stacking-cards-final-version/","url" : "https://www.xbr.pw/assets/css/hi/stacking-cards-final-version/index.html"},
+  {"fav" : "svg-image-clip-gallery/","url" : "https://www.xbr.pw/assets/css/hi/svg-image-clip-gallery/index.html"},
+  {"fav" : "svg-line-animation/","url" : "https://www.xbr.pw/assets/css/hi/svg-line-animation/index.html"},
+  {"fav" : "tachyons-details-component/","url" : "https://www.xbr.pw/assets/css/hi/tachyons-details-component/index.html"},
+  {"fav" : "tailwind-landing-page-main/","url" : "https://www.xbr.pw/assets/css/hi/tailwind-landing-page-main/index.html"},
+  {"fav" : "tareas-por-agregar/","url" : "https://www.xbr.pw/assets/css/hi/tareas-por-agregar/index.html"},
+  {"fav" : "text-shadow-compilation/","url" : "https://www.xbr.pw/assets/css/hi/text-shadow-compilation/index.html"},
+  {"fav" : "theme-picker-one-line-of-js/","url" : "https://www.xbr.pw/assets/css/hi/theme-picker-one-line-of-js/index.html"},
+  {"fav" : "twitter-layout-with-daisyui/","url" : "https://www.xbr.pw/assets/css/hi/twitter-layout-with-daisyui/index.html"},
+  {"fav" : "variable-font-effect/","url" : "https://www.xbr.pw/assets/css/hi/variable-font-effect/index.html"},
+  {"fav" : "veiviser/","url" : "https://www.xbr.pw/assets/css/hi/veiviser/index.html"},
+  {"fav" : "vibrate-api/","url" : "https://www.xbr.pw/assets/css/hi/vibrate-api/index.html"},
+  {"fav" : "windows-ui/","url" : "https://www.xbr.pw/assets/css/hi/windows-ui/index.html"},
+  {"fav" : "xbr-pw-gradient-text-fun/","url" : "https://www.xbr.pw/assets/css/hi/xbr-pw-gradient-text-fun/index.html"},
+  {"fav" : "crear-perfil-completo-paso-a-paso.html","url" : "https://www.xbr.pw/assets/css/hi/crear-perfil-completo-paso-a-paso.html"},
+  {"fav" : "footer-previo.html","url" : "https://www.xbr.pw/assets/css/hi/footer-previo.html"},
+  {"fav" : "full-screen.html","url" : "https://www.xbr.pw/assets/css/hi/full-screen.html"},
+  {"fav" : "index.html","url" : "https://www.xbr.pw/assets/css/hi/index.html"},
+  {"fav" : "logout.html","url" : "https://www.xbr.pw/assets/css/hi/logout.html"},
+  {"fav" : "roundedFolded.html","url" : "https://www.xbr.pw/assets/css/hi/roundedFolded.html"},
+  {"fav" : "tab.html","url" : "https://www.xbr.pw/assets/css/hi/tab.html"},
+  {"fav" : "tiempo-faltante-para.html","url" : "https://www.xbr.pw/assets/css/hi/tiempo-faltante-para.html"},
+  {"fav" : "Triangle-section-Divider.html","url" : "https://www.xbr.pw/assets/css/hi/Triangle-section-Divider.html"},
+  {"fav" : "una-propinita.html","url" : "https://www.xbr.pw/assets/css/hi/una-propinita.html"},
+  {"fav" : "vibrate-api.html","url" : "https://www.xbr.pw/assets/css/hi/vibrate-api.html"}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    ]};
+    </script>
+    
+    <script>w3.displayObject("cssFAV", myObject);</script> 
+        <script>
+                // get favorites from local storage or empty array
+            var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            // add class 'fav' to each favorite
+            favorites.forEach(function(favorite) {
+            document.getElementById(favorite).className = 'fav';
+            });
+            // register click event listener
+            document.querySelector('.list').addEventListener('click', function(e) {
+            var id = e.target.id,
+                item = e.target,
+                index = favorites.indexOf(id);
+            // return if target doesn't have an id (shouldn't happen)
+            if (!id) return;
+            // item is not favorite
+            if (index == -1) {
+                favorites.push(id);
+                item.className = 'fav';
+            // item is already favorite
+            } else {
+                favorites.splice(index, 1);
+                item.className = '';
+            }
+            // store array in local storage
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            });
+
+            // local storage stores strings so we use JSON to stringify for storage and parse to get out of storage
+        </script>
+
+</body>
+</html>
+
+
+

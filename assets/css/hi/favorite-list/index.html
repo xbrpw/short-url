@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <style>.list li {cursor: pointer;list-style-type: none;margin: 0;padding: 0;}.list li:hover:after,.list li.fav:after {  content: ' \2605';  color: rgb(255, 203, 0);}.list li.fav:hover:after {  content: ' \2606';}</style>
-
+  <style>
+  .list li {cursor: pointer;list-style-type: none;margin: 0;padding: 0;}
+  .list li:hover:after,
+  .list li.fav:after {  content: ' \2605';  color: rgb(255, 203, 0);}
+  .list li.fav:hover:after {  content: ' \2606';}</style>
 </head>
 <body>
 <ul class="list">
-  <li id="pancakes">Pancakes</li>
+  <li id="pancakes">Pancakes  <a class="fas fa-external-link-alt" style="float: right;"  onclick="document.location='{{url}}'"> ir al link </a> </li>
   <li id="donuts">Donuts</li>
   <li id="cupcakes">Cupcakes</li>
   <li id="icecream">Icecream</li>

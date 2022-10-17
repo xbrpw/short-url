@@ -14,75 +14,10 @@
   <style>:root {
     --font-Lato: font-family: "Lato", sans-serif;
     --bg-color-initial: rgb(20, 20, 20); 
-    --card-color-initial: rgb(23, 23, 23);}</style> 
-
-  <style>.icon-bar-sticky {position: fixed;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); margin-top: 50px;}.icon-bar-sticky a {display: block;text-align: center;padding: 16px;transition: all 0.3s ease;color: white;font-size: 20px;}/*.icon-bar-sticky a:hover {background-color: #000;}*/.facebook {background: #3B5998;color: white;}.twitter {background: #55ACEE;color: white;}.google {background: #dd4b39;color: white;}.linkedin {background: #007bb5;color: white;}.youtube {background: #bb0000;color: white;}.xbrpw {background: #000000;color: white;}</style>
-  <style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
-  <style>.aBlanco:link {color: white;text-decoration: none;}.aBlanco:visited {color: white;text-decoration: none;} .aBlanco:hover {color: white;text-decoration: none;}.aBlanco:active {color: white; text-decoration: none;}</style>
+    --card-color-initial: rgb(23, 23, 23);}
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-<div class="container">
- 
-  <h2>Snippets</h2>
-  <p>Algunos de los diseños y snippes, selección de la casa</p>  
-  <input class="form-control" id="myInput" type="text" placeholder=" Buscar..." class="list-group list-group-item" >
-  <br>
-  <ul class="list-group" id="myList">
-    <ul id="idFilter" style="list-style: none; margin-left: 0%; padding-left: 0%;"  >
-    <ul id="cssFAV" style="  list-style-type: none;margin: 0;padding: 0;" >
-      <li  w3-repeat="snipdoradafav" style="  list-style-type: none;margin: 0;padding: 0;" >
-        <a href={{hreffav}} class="list-group-item"   > {{fav}}    
-      <i class="fas fa-external-link-alt" style="  float: right;"  onclick="document.location='{{hreffav}}'">  </i></a>           
-      </li>       
-  </ul>
-</ul>
-</ul>
-<!-- <a href={{hreffav}} class="list-group-item" target="copy" onclick="myFunctionDemoShow()" > {{fav}}     -->
-</div>
-
-<style>
   #myDIVFramehidden {        visibility: hidden;}
-  </style>
   
-   
-  <script>
-  function myDIVFramehidden() {
-    var x = document.getElementById("myDIVFramehidden");
-    if (window.getComputedStyle(x).visibility === "hidden") {
-      x.style.visibility = "visible";
-    }
-  }
-  </script>
-
-<script>
-  function myFunctionDemoShow() {
-    var x = document.getElementById("DemoShow");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-  </script>
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myList li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
-
-  <style>
    
     
     /* Style the tab */
@@ -121,6 +56,49 @@ $(document).ready(function(){
       border-top: none;
     }
     </style>
+  <style>.icon-bar-sticky {position: fixed;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); margin-top: 50px;}.icon-bar-sticky a {display: block;text-align: center;padding: 16px;transition: all 0.3s ease;color: white;font-size: 20px;}/*.icon-bar-sticky a:hover {background-color: #000;}*/.facebook {background: #3B5998;color: white;}.twitter {background: #55ACEE;color: white;}.google {background: #dd4b39;color: white;}.linkedin {background: #007bb5;color: white;}.youtube {background: #bb0000;color: white;}.xbrpw {background: #000000;color: white;}</style>
+  <style>a:link {color: #000;text-decoration: none;}a:visited {color: #000;text-decoration: none;} a:hover {color: inherit;text-decoration: none;}a:active {color: inherit; text-decoration: none;}</style>
+  <style>.aBlanco:link {color: white;text-decoration: none;}.aBlanco:visited {color: white;text-decoration: none;} .aBlanco:hover {color: white;text-decoration: none;}.aBlanco:active {color: white; text-decoration: none;}</style>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<div class="container">
+ 
+  <h2>Snippets</h2>
+  <p>Algunos de los diseños y snippes, selección de la casa</p>  
+  <input class="form-control" id="myInput" type="text" placeholder=" Buscar..." class="list-group list-group-item" >
+  <br>
+  <ul class="list-group" id="myList">
+    <ul id="idFilter" style="list-style: none; margin-left: 0%; padding-left: 0%;"  >
+    <ul id="cssFAV" style="  list-style-type: none;margin: 0;padding: 0;" >
+      <li  w3-repeat="snipdoradafav" style="  list-style-type: none;margin: 0;padding: 0;" >
+        <a href={{hreffav}} class="list-group-item"   > {{fav}}    
+      <i class="fas fa-external-link-alt" style="  float: right;"  onclick="document.location='{{hreffav}}'">  </i></a>           
+      </li>       
+  </ul>
+</ul>
+</ul>
+
+</div>
+
+
+  
+   
+  <script>
+  function myDIVFramehidden() {
+    var x = document.getElementById("myDIVFramehidden");
+    if (window.getComputedStyle(x).visibility === "hidden") {
+      x.style.visibility = "visible";
+    }
+  }
+  </script>
+
 
   <!-- <div class="container mt-3">
     <h3>Extra Large Modal Example</h3>
@@ -425,6 +403,27 @@ $(document).ready(function(){
 
 <!-- <input oninput="w3.filterHTML('#idFilter', 'li', this.value)" placeholder="Buscar..." > -->
 
+
+<script>
+  function myFunctionDemoShow() {
+    var x = document.getElementById("DemoShow");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
 
 

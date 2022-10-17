@@ -100,417 +100,741 @@
 
 
 
-  * {
+        * {
 
-      box-sizing: border-box;
+            box-sizing: border-box;
 
-  }
+        }
 
-  
+        
 
-  body {
+        body {
 
-      margin: 0;
+            margin: 0;
 
-  }
+        }
 
-  
+        
 
-  .header {
+        .header {
 
-      text-align: center;
+            text-align: center;
 
-      padding: 32px;
+            padding: 32px;
 
-  }
+        }
 
-  
+        
 
-  .row {
+        .row {
 
-      display: -ms-flexbox;
+            display: -ms-flexbox;
 
-      /* IE 10 */
+            /* IE 10 */
 
-      display: flex;
+            display: flex;
 
-      -ms-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
 
-      /* IE 10 */
+            /* IE 10 */
 
-      flex-wrap: wrap;
+            flex-wrap: wrap;
 
-      padding: 0 4px;
+            padding: 0 4px;
 
-      overflow: hidden;
+            overflow: hidden;
 
-  }
+        }
 
-  /* Create two equal columns that sits next to each other */
+        /* Create two equal columns that sits next to each other */
 
-  
+        
 
-  .column {
+        .column {
 
-      -ms-flex: 50%;
+            -ms-flex: 50%;
 
-      /* IE 10 */
+            /* IE 10 */
 
-      flex: 50%;
+            flex: 50%;
 
-      padding: 0 4px;
+            padding: 0 4px;
 
-  }
+        }
 
-  
+        
 
-  .column img {
+        .column img {
 
-      margin-top: 8px;
+            margin-top: 8px;
 
-      vertical-align: middle;
+            vertical-align: middle;
 
-  }
+        }
 
-  /* Style the buttons */
+        /* Style the buttons */
 
-  
+        
 
-  .btn {
+        .btn {
 
-      border: none;
+            border: none;
 
-      outline: none;
+            outline: none;
 
-      padding: 10px 16px;
+            padding: 10px 16px;
 
-      background-color: #f1f1f1;
+            background-color: #f1f1f1;
 
-      cursor: pointer;
+            cursor: pointer;
 
-      font-size: 18px;
+            font-size: 18px;
 
-  }
+        }
 
-  
+        
 
-  .btn:hover {
+        .btn:hover {
 
-      background-color: #ddd;
+            background-color: #ddd;
 
-  }
+        }
 
-  
+        
 
-  .btn.active {
+        .btn.active {
 
-      background-color: #666;
+            background-color: #666;
 
-      color: white;
+            color: white;
 
-  }
+        }
 
-  /* The Modal (background) */
+        /* The Modal (background) */
 
-  
+        
 
-  .modal {
+        .modal {
 
-      display: none;
+            display: none;
 
-      position: fixed;
+            position: fixed;
 
-      z-index: 1;
+            z-index: 1;
 
-      padding-top: 100px;
+            padding-top: 100px;
 
-      left: 0;
+            left: 0;
 
-      top: 0;
+            top: 0;
 
-      width: 100%;
+            width: 100%;
 
-      height: 100%;
+            height: 100%;
 
-      overflow: auto;
+            overflow: auto;
 
-      background-color: black;
+            background-color: black;
 
-  }
+        }
 
-  /* Modal Content */
+        /* Modal Content */
 
-  
+        
 
-  .modal-content {
+        .modal-content {
 
-      position: relative;
+            position: relative;
 
-      margin: auto;
+            margin: auto;
 
-      padding: 0;
+            padding: 0;
 
-      width: 100%;
+            width: 100%;
 
-      max-width: 600px;
+            max-width: 600px;
 
-      height: auto;
+            height: auto;
 
-      overflow: hidden;
+            overflow: hidden;
 
-  }
+        }
 
-  /* The Close Button */
+        /* The Close Button */
 
-  
+        
 
-  .close {
+        .close {
 
-      color: white;
+            color: white;
 
-      position: absolute;
+            position: absolute;
 
-      top: 10px;
+            top: 10px;
 
-      right: 25px;
+            right: 25px;
 
-      font-size: 35px;
+            font-size: 35px;
 
-      font-weight: bold;
+            font-weight: bold;
 
-  }
+        }
 
-  
+        
 
-  .close:hover,
+        .close:hover,
 
-  .close:focus {
+        .close:focus {
 
-      color: #999;
+            color: #999;
 
-      text-decoration: none;
+            text-decoration: none;
 
-      cursor: pointer;
+            cursor: pointer;
 
-  }
+        }
 
-  
+        
 
-  .mySlides {
+        .mySlides {
 
-      display: none;
+            display: none;
 
-      background-color: black;
+            background-color: black;
 
-  }
+        }
 
-  
+        
 
-  .cursor {
+        .cursor {
 
-      cursor: pointer;
+            cursor: pointer;
 
-  }
+        }
 
-  /* Next & previous buttons */
+        /* Next & previous buttons */
 
-  
+        
 
-  .prev,
+        .prev,
 
-  .next {
+        .next {
 
-      cursor: pointer;
+            cursor: pointer;
 
-      position: absolute;
+            position: absolute;
 
-      top: 50%;
+            top: 50%;
 
-      width: auto;
+            width: auto;
 
-      padding: 16px;
+            padding: 16px;
 
-      margin-top: -50px;
+            margin-top: -50px;
 
-      color: white;
+            color: white;
 
-      font-weight: bold;
+            font-weight: bold;
 
-      font-size: 20px;
+            font-size: 20px;
 
-      transition: 0.6s ease;
+            transition: 0.6s ease;
 
-      border-radius: 0 3px 3px 0;
+            /*border-radius: 0 3px 3px 0;*/
 
-      user-select: none;
+            user-select: none;
 
-      -webkit-user-select: none;
+            -webkit-user-select: none;
 
-  }
+        }
 
-  /* Position the "next button" to the right */
+        /* Position the "next button" to the right */
 
-  
+        
 
-  .next {
+        .next {
 
-      right: 0;
+            right: 0;
 
-      border-radius: 3px 0 0 3px;
+            /*border-radius: 3px 0 0 3px;*/
 
-  }
+        }
 
-  /* On hover, add a black background color with a little bit see-through */
+        /* On hover, add a black background color with a little bit see-through */
 
-  
+        
 
-  .prev:hover,
+        .prev:hover,
 
-  .next:hover {
+        .next:hover {
 
-      background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);
 
-  }
+        }
 
-  /* Number text (1/3 etc) */
+        /* Number text (1/3 etc) */
 
-  
+        
 
-  .numbertext {
+        .numbertext {
 
-      color: #f2f2f2;
+            color: #f2f2f2;
 
-      font-size: 12px;
+            font-size: 12px;
 
-      padding: 8px 12px;
+            padding: 8px 12px;
 
-      position: absolute;
+            position: absolute;
 
-      top: 0;
+            top: 0;
 
-  }
+        }
 
-  
+        
 
-  img {
+        img {
 
-      margin-bottom: -4px;
+            margin-bottom: -4px;
 
-  }
+        }
 
-  
+        
 
-  .caption-container {
+        .caption-container {
 
-      text-align: center;
+            text-align: center;
 
-      background-color: black;
+            background-color: black;
 
-      padding: 2px 16px;
+            padding: 2px 16px;
 
-      color: white;
+            color: white;
 
-  }
+        }
 
-  
+        
 
-  .demo {
+        .demo {
 
-      opacity: 0.6;
+            opacity: 0.6;
 
-  }
+        }
 
-  
+        
 
-  .active,
+        .active,
 
-  .demo:hover {
+        .demo:hover {
 
-      opacity: 1;
+            opacity: 1;
 
-  }
+        }
 
-  
+        
 
-  img.hover-shadow {
+        img. {
 
-      transition: 0.3s;
+            transition: 0.3s;
 
-  }
+        }
 
-  
+        
 
-  .hover-shadow:hover {
+        .:hover {
 
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-  }
+        }
 
 
-  .w3-container {
-      padding: 0.01em 16px
-  }
-  
-  .w3-center {
-      text-align: center!important
-  }
-  
-  .responsive5 {
-      padding: 0 6px;
-      margin: 6px 0;
-      float: left;
-      width: 20%;
-      display: grid;
-  }
-  
-  @media only screen and (max-width: 700px) {
-      .responsive5 {
-          width: 50%;
-          margin: 6px 0;
-          padding: 0 6px;
-          display: grid;
-          width: 20%;
-      }
-  }
-  
-  @media only screen and (max-width: 1200px) {
-      .responsive5 {
-          width: 50%;
-          margin: 6px 0;
-          padding: 0 6px;
-          display: grid;
-          width: 20%;
-      }
-  }
-  
-  @media only screen and (max-width: 500px) {
-      .responsive5 {
-          width: 50%;
-          margin: 6px 0;
-          padding: 0 6px;
-          display: grid;
-          width: 25%;
-      }
-  }
+        .w3-container {
+            padding: 0.01em 16px
+        }
+        
+        .w3-center {
+            text-align: center!important
+        }
+        
+        .responsive5 {
+            padding: 0 6px;
+            margin: 6px 0;
+            float: left;
+            width: 20%;
+            display: grid;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive5 {
+                width: 50%;
+                margin: 6px 0;
+                padding: 0 6px;
+                display: grid;
+                width: 20%;
+            }
+        }
+        
+        @media only screen and (max-width: 1200px) {
+            .responsive5 {
+                width: 50%;
+                margin: 6px 0;
+                padding: 0 6px;
+                display: grid;
+                width: 20%;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive5 {
+                width: 50%;
+                margin: 6px 0;
+                padding: 0 6px;
+                display: grid;
+                width: 25%;
+            }
+        }
 </style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<br><br><br><br>
+
+
+</head>
+
+<Style>
+    .responsive {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+</Style>
+
+<script src="https://luisangelmaciel.github.io/js/lazysizes.min.js" rel="preload " as="script " async charset="utf-8 "></script>
+<script>
+    if ("loading" in HTMLImageElement.prototype) {
+        // Si el navegador soporta lazy-load, tomamos todas las imágenes que tienen la clase
+        // `lazyload`, obtenemos el valor de su atributo `data-src` y lo inyectamos en el `src`.
+        const images = document.querySelectorAll("img.lazyload");
+        images.forEach((img) => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Importamos dinámicamente la libreria `lazysizes`
+        let script = document.createElement("script");
+        script.async = true;
+        script.src =
+            "https://luisangelmaciel.github.io/js/lazysizes.min.js";
+        document.body.appendChild(script);
+    }
+</script>
+
+
+<body>
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Image Grid</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Image Grid</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .row {
+            display: -ms-flexbox;
+            /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+            overflow: hidden;
+        }
+        /* Create two equal columns that sits next to each other */
+        
+        .column {
+            -ms-flex: 50%;
+            /* IE 10 */
+            flex: 50%;
+            padding: 0 4px;
+        }
+        
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+        /* Style the buttons */
+        
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .btn:hover {
+            background-color: #ddd;
+        }
+        
+        .btn.active {
+            background-color: #666;
+            color: white;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(255, 255, 255);
+        }
+        /* Modal Content */
+        
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            overflow: hidden;
+        }
+        /* The Close Button */
+        
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .mySlides {
+            display: none;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .cursor {
+            cursor: pointer;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            /*border-radius: 0 3px 3px 0;*/
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            /*border-radius: 3px 0 0 3px;*/
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(255, 255, 255, 0.432);
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        img {
+            margin-bottom: -4px;
+        }
+        
+        .caption-container {
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            padding: 2px 16px;
+            color: rgb(0, 0, 0);
+        }
+        
+        .demo {
+            opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+        
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+        
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+    <body>
+    
+
+    
+
+    
+    <div id="myModal" class="modal" >
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">        
+          <img src="icon-xbrpw/dedos-invitando-a-cochinadas.svg" style="width:100%" class="img w3-image w3-responsive">
+        </div>
+    
+        <div class="mySlides">          
+          <img src="icon-xbrpw/esfera-del-dragon-negra.svg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">        
+          <img src="img_mountains_wide.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides">        
+          <img src="img_lights_wide.jpg" style="width:100%">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">         
+        </div>  
+    
+               
+      </div>
+    </div>
+    
+    <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+<br><br><br><br>  <img src="img_nature.jpg" style="width:100%" >
 <div class="containerOK">
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/dedos-invitando-a-cochinadas.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div> 
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/esfera-del-dragon-negra.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/esfera-del-dragon.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/fumando-ando.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/goku-feliz-dia-del-padre-recordando.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/goku-viendo-algo-y-sonriendo.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-blanca.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-con-cris.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-icon.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-negra.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/recibiendo-sexo-oral.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/signal-dedo-grosero.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/signal-haciendo-el-delicioso.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/siluetas-meth-slam.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/user-music-anonimo.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/usuario-verificado.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
-<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/who-homero-escondiendose-en-una-bolsa.svg" class="img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/dedos-invitando-a-cochinadas.svg" onclick="openModal();currentSlide(1)" class=" cursor img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div> 
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/esfera-del-dragon-negra.svg" onclick="openModal();currentSlide(2)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/esfera-del-dragon.svg" onclick="openModal();currentSlide(3)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/fumando-ando.svg" onclick="openModal();currentSlide(4)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/goku-feliz-dia-del-padre-recordando.svg" onclick="openModal();currentSlide(5)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/goku-viendo-algo-y-sonriendo.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-blanca.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-con-cris.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-icon.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/pipa-negra.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/recibiendo-sexo-oral.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/signal-dedo-grosero.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/signal-haciendo-el-delicioso.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/siluetas-meth-slam.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/user-music-anonimo.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/usuario-verificado.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
+<div class="responsive5 "><div class="gallery "><p><img src="icon-xbrpw/who-homero-escondiendose-en-una-bolsa.svg" onclick="openModal();currentSlide(1)" class=" cursor    img w3-image" width="600 " height="400 " alt=" ESO 0514" loading="lazy "></p></div></div>
 </div>

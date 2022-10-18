@@ -1,0 +1,1044 @@
+
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Size de WhatsApp</title>
+    <link rel="icon" type="image/png" href="sticker-studio.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    
+<style>
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f6f6f6;
+}
+
+.content {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+}
+
+.content .screens {
+    position: relative;
+    display: block;
+    width: 200%;
+    height: 100%;
+}
+
+.content .screen {
+    position: relative;
+    display: block;
+    float: left;
+    width: 300px;
+    height: 100%;
+}
+
+.content .stickerpack header {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    padding-top: 30px;
+    border-bottom: solid 2px #eaeaea;
+}
+
+.content .stickerpack header .tray {
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+}
+
+.content .stickerpack header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Roboto', serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content .stickerpack header p {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto', serif;
+    color: #696969;
+}
+
+.content .stickerpack main {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(500px - 152px);
+    overflow: hidden
+}
+
+.content .stickerpack main .stickers {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.content .stickerpack main .stickers .sticker {
+    position: relative;
+    display: block;
+    float: left;
+    width: calc(33% - 10px);
+    height: 100px;
+    background-size: 85px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.content .stickerpack main .stickers .sticker:last-child {
+    margin-bottom: 90px;
+}
+
+.content .stickerpack footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.content .stickerpack footer .button {
+    position: relative;
+    display: block;
+    width: calc(100% - 10px);
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    background-color: #00ab93;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 50px;
+    color: #fafafa;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Roboto', serif;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+}
+
+.content .stickerpack footer .button img {
+    position: relative;
+    display: inline-block;
+    top: 5px;
+}
+
+.content .download {
+    padding-top: 20%;
+}
+
+.content .download .logo {
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/sticker-studio.png");
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content .download h1 {
+    margin: 0;
+    font-family: 'Roboto', serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+.content .download p {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto', serif;
+    color: #696969;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.content .download .downloadBtn {
+    position: relative;
+    display: block;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-size: cover, cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/harold-pc.jpg');
+    background-position: center;
+}
+
+.error h1 {
+    padding-top: 45vh;
+    margin: 0;
+    text-align: center;
+    color: #000;
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        border-radius: 4px;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.25);
+    }
+
+    .content .screens {
+        position: relative;
+        display: block;
+        width: 200vw;
+        height: 100%;
+    }
+
+    .content .screen {
+        position: relative;
+        display: block;
+        float: left;
+        width: 100vw;
+        height: 100%;
+    }
+
+    .content .stickerpack header {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 150px;
+        background-color: #f0f0f0;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        padding-top: 30px;
+    }
+
+    .content .stickerpack header .tray {
+        position: relative;
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content .stickerpack header h1 {
+        margin: 0;
+        text-align: center;
+        font-size: 17px;
+        font-family: 'Roboto', serif;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .content .stickerpack header p {
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Roboto', serif;
+        color: #696969;
+    }
+
+    .content .stickerpack main {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: calc(100vh - 152px);
+    }
+
+    .content .stickerpack main .stickers {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content .stickerpack main .stickers .sticker {
+        position: relative;
+        display: block;
+        float: left;
+        width: calc(33% - 10px);
+        height: 160px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-size: 95px;
+    }
+
+    .content .stickerpack footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .content .stickerpack footer .button {
+        position: relative;
+        display: block;
+        width: calc(100% - 10px);
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        background-color: #00ab93;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 50px;
+        color: #fafafa;
+        font-size: 14px;
+        text-decoration: none;
+        font-family: 'Roboto', serif;
+        -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+        box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+    }
+
+    .content .download {
+        padding-top: 20%;
+    }
+
+    .content .download .logo {
+        position: relative;
+        display: block;
+        width: 70px;
+        height: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: cover, cover;
+        background-repeat: no-repeat;
+        background-image: url("../images/sticker-studio.png");
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .content .download h1 {
+        margin: 0;
+        font-family: 'Roboto', serif;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .content .download p {
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Roboto', serif;
+        color: #696969;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .content .download .downloadBtn {
+        position: relative;
+        display: block;
+        width: 170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .content .stickerpack main .stickers .sticker {
+        height: 120px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* make scrollbar transparent */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+    /** 
+    @chrisbautista @codespud
+    animated tabs using only css transitions.
+    
+    I wanted to test how much we can accomplish with just CSS transitions. No keyframe animations at all.
+    **/
+    :root {
+      --accent-color: #1fa8f5;
+      --accent-color-fg: #fefefe;
+      /*--backdrop-color: #89d4fe;*/
+      --app-content-background-color: #c0d8ec;
+      /*--inset-shadow: rgba(7, 43, 74, 0.3);*/
+    /*  --outset-shadow: rgba(223, 240, 255, 0.25);
+      /*--clay-box-shadow: rgba(7, 43, 74, 0.3);*/
+      /*--clay-background-color: #c0d8ec;*/
+      --clay-fg-color: #444;
+    }
+    
+    .flex-center {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .container {
+      padding: 0rem 1rem 1.5rem;
+    }
+    
+    .stage {
+      max-width: 400px;
+      width: 400px;
+      margin: 0 auto;
+    }
+    
+    .home.active {
+      color: var(--accent-color);
+    }
+    .home-style {
+      --app-content-background-color: #c0d8ec;
+    }
+    
+    .products.active {
+      /*--outset-shadow: rgba(247, 167, 103, 0.45);
+      --inset-shadow: rgba(149, 62, 8, 0.45);
+      --clay-box-shadow: rgba(211, 69, 20, 0.4);
+      --clay-background-color: #d34514;*/
+      --clay-fg-color: #f1f2f3;
+      color: #690c0c;
+    }
+    .products-style {
+      --app-content-background-color: #d36e5a;
+    }
+    
+    .services.active {
+    /*  --outset-shadow: rgba(255, 159, 40, 0.45);
+      --inset-shadow: rgba(88, 54, 13, 0.45);
+      --clay-box-shadow: rgba(88, 54, 13, 0.4);
+      --clay-background-color: #ed9426;
+      --clay-fg-color: #f1f2f3;*/
+      color: #cf5c0f;
+    }
+    .services-style {
+      --app-content-background-color: #ed9426;
+    }
+    
+    .about.active {
+      /*--outset-shadow: rgba(93, 255, 85, 0.45);
+      --inset-shadow: rgba(28, 78, 26, 0.45);
+      --clay-box-shadow: rgba(28, 78, 26, 0.4);
+      /*--clay-background-color: #4dd146;*/
+      --clay-fg-color: #f1f2f3;
+      color: #4dd146;
+    }
+    .about-style {
+      --app-content-background-color: #4dd146;
+    }
+    
+    .help.active {
+      --outset-shadow: rgba(230, 230, 230, 0.45);
+      --inset-shadow: rgba(81, 81, 81, 0.45);
+      --clay-box-shadow: rgba(81, 81, 81, 0.4);
+      --clay-background-color: #a3a3a3;
+      --clay-fg-color: #f1f2f3;
+      color: #783896;
+    }
+    .help-style {
+      --app-content-background-color: #a3a3a3;
+    }
+    
+    .tabbar {
+      background-color: var(--app-content-background-color);
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      box-sizing: content-box;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.4s;
+    }
+    .tabbar ul,
+    .tabbar li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .tabbar ul {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #f9f8fa;
+      align-self: flex-end;
+      justify-content: center;
+      height: 50px;
+    }
+    .tabbar li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      margin-right: 5px;
+      transition: all 0.4s;
+      background-color: #f9f8fa;
+      width: 60px;
+      height: 60px;
+      position: relative;
+      color: #888;
+      cursor: pointer;
+    }
+    .tabbar li:last-child {
+      margin-right: 0;
+    }
+    
+    .tab-style1 ul {
+      justify-content: center;
+    }
+    .tab-style1 li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 1px;
+      left: 0;
+      width: 60px;
+      height: 50px;
+      transition: top 0.2s ease-out, width 0.4s, border-radius 0.4s, box-shadow 0.4s;
+    }
+    .tab-style1 li.follow {
+      position: absolute;
+      border-radius: 100%;
+      content: " ";
+      width: 60px;
+      height: 60px;
+      border: 10px solid var(--app-content-background-color);
+      background-color: var(--app-content-background-color);
+      top: -3rem;
+      transition: left 0.4s ease-in, background-color 0.4s, border-color 0.4s;
+    }
+    .tab-style1 li.follow:before, .tab-style1 li.follow:after {
+      content: " ";
+      position: absolute;
+      top: 27px;
+      right: -27px;
+      border-top: 11px solid var(--app-content-background-color);
+      background-color: #f9f8fa;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      transition: border-color 0.4s;
+    }
+    .tab-style1 li.follow::after {
+      border-top-left-radius: 100%;
+    }
+    .tab-style1 li.follow:before {
+      left: -27px;
+      right: unset;
+      border-top-right-radius: 100%;
+    }
+    .tab-style1 li:nth-child(1).active ~ .follow {
+      left: 12px;
+    }
+    .tab-style1 li:nth-child(2).active ~ .follow {
+      left: 75px;
+    }
+    .tab-style1 li:nth-child(3).active ~ .follow {
+      left: 140px;
+    }
+    .tab-style1 li:nth-child(4).active ~ .follow {
+      left: 205px;
+    }
+    .tab-style1 li:nth-child(5).active ~ .follow {
+      left: 270px;
+    }
+    .tab-style1 .active {
+      z-index: 100;
+      width: 60px;
+      height: 60px;
+      top: -2rem;
+      border-radius: 100%;
+      /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.2);*/
+    }
+    
+    .tab-style2 ul {
+      justify-content: center;
+    }
+    .tab-style2 li {
+      border-top-left-radius: 100%;
+      border-top-right-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 1px;
+      left: 0;
+      width: 60px;
+      height: 50px;
+    }
+    .tab-style2 .active {
+      width: 60px;
+      height: 60px;
+      top: -1rem;
+    }
+    .tab-style2 .active span {
+      font-size: 2rem;
+    }
+    .tab-style2 .active:before, .tab-style2 .active:after {
+      position: absolute;
+      content: " ";
+      width: 13px;
+      height: 13px;
+      border-bottom: 4px solid #f9f8fa;
+      top: 8px;
+    }
+    .tab-style2 .active:before {
+      border-bottom-right-radius: 100%;
+      left: -7px;
+    }
+    .tab-style2 .active:after {
+      border-bottom-left-radius: 100%;
+      right: -7px;
+    }
+    
+    .tab-style3 li {
+      top: -8px;
+      width: 60px;
+      height: 35px;
+      background-color: transparent;
+      padding-top: 3px;
+    }
+    .tab-style3 li.follow {
+      position: absolute;
+      top: 0;
+      display: flex;
+      border-top: 3px solid #333;
+      width: 60px;
+      height: 1px;
+      transition: all 0.3s ease-out;
+    }
+    .tab-style3 li:nth-child(1).active ~ .follow {
+      left: 20px;
+      z-index: 20;
+    }
+    .tab-style3 li:nth-child(2).active ~ .follow {
+      left: 88px;
+      z-index: 20;
+    }
+    .tab-style3 li:nth-child(3).active ~ .follow {
+      left: 149px;
+      z-index: 20;
+    }
+    .tab-style3 li:nth-child(4).active ~ .follow {
+      left: 216px;
+      z-index: 20;
+    }
+    .tab-style3 li:nth-child(5).active ~ .follow {
+      left: 283px;
+      z-index: 20;
+    }
+    
+    .tab-style4 li {
+      width: 60px;
+      height: 40px;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .tab-style4 li span {
+      position: relative;
+      top: 3px;
+      transition: top 0.4s ease-out, font-size 0.2s ease-out;
+      text-shadow: inset 2px 2px 4px var(--clay-box-shadow);
+    }
+    .tab-style4 li:after {
+      width: 100%;
+      height: 10px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 8px;
+      font-weight: bold;
+      position: relative;
+      bottom: -30px;
+      opacity: 0;
+      transition: bottom 0.2s ease-out, opacity 0.4s ease-out;
+    }
+    .tab-style4 li.active:after {
+      opacity: 1;
+      bottom: 2px;
+      text-shadow: inset 2px 2px 8px var(--clay-box-shadow);
+    }
+    .tab-style4 li:nth-child(1):after {
+      content: "home";
+    }
+    .tab-style4 li:nth-child(2):after {
+      content: "products";
+    }
+    .tab-style4 li:nth-child(3):after {
+      content: "services";
+    }
+    .tab-style4 li:nth-child(4):after {
+      content: "company";
+    }
+    .tab-style4 li:nth-child(5):after {
+      content: "help";
+    }
+    .tab-style4 .active span {
+      font-size: 1.1rem;
+      top: -4px;
+    }
+    
+    .tab-style5 ul {
+      justify-content: center;
+    }
+    .tab-style5 li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 1px;
+      left: 0;
+      width: 60px;
+      height: 50px;
+      transition: top 0.4s ease-out, border-radius 0.4s ease-out, box-shadow 0.4s ease-out;
+    }
+    .tab-style5 .active {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      top: -1rem;
+      background-color: var(--clay-background-color);
+      box-shadow: 1px 2px 4px 0 var(--clay-box-shadow), 2px 4px 8px 0 var(--clay-box-shadow), inset 2px 2px 8px var(--outset-shadow), inset -2px -2px 8px var(--inset-shadow);
+      color: var(--clay-fg-color);
+    }
+    .tab-style5 .active span {
+      font-size: 2rem;
+    }</style>
+    <meta name="description" content=""/>
+</head>
+<body>
+    <div class="content">      
+        <div class="screens">          
+            <div class="screen stickerpack">
+              
+                <header>
+                    <div class="tray" style="background-image: url('https://stickerstud.io//api/v1/sticker/626963/sticker1664153824764')"></div>
+                    <h1>ESO 0514</h1>
+                    <p>By Luis Ángel</p>                    
+                </header>
+                <main>
+                    <div class="stickers">                                              
+                            <div class="sticker" style="background-image: url('https://stickerstud.io//api/v1/sticker/626963/sticker1664153824764')"></div>
+                        
+                            <div class="sticker" style="background-image: url('https://stickerstud.io//api/v1/sticker/626963/sticker1664154023691')"></div>                          
+                    </div>
+                    
+                </main>
+                <footer>
+                  <Center><button class="mail-btn" type="submit">Enviar</button></Center><br>
+                    <a href="#" class="button"><img src="whatsapp.svg" width="20" height="20"> Add stickerpack to WhatsApp</a>
+                   
+                     <div class="tabbar tab-style1">
+      <ul class="flex-center">
+        <li class="home active" data-where="home"><span class="material-icons-outlined">
+            home
+          </span></li>
+        <li class="products" data-where="products"><span class="material-icons-outlined">
+            shopping_bag
+          </span></li>
+        <li class="services" data-where="services"><span class="material-icons-outlined">
+            plumbing
+          </span></li>
+        <li class="about" data-where="about"><span class="material-icons-outlined">
+            business
+          </span></li>
+        <li class="help" data-where="help"><span class="material-icons-outlined">
+            help_outline
+          </span></li>        
+      </ul>
+    </div>
+                </footer>
+                <br>
+            </div>
+            <div class="screen download">
+                <div class="logo"></div>
+                <h1>Sticker Studio - Sticker Maker for WhatsApp</h1>
+                <p>Download Sticker Studio to use this stickerpack or make your own personal stickers!</p>
+                <a href='https://play.google.com/store/apps/details?id=stickermaker.android.stickermaker&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' class="downloadBtn"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="170"/></a>
+            </div>
+        </div>
+    </div>
+  
+
+   
+
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button").click(function (e) {
+                e.preventDefault();
+                setTimeout(function () {
+                    $(".content").animate({
+                        scrollLeft: $(".download").offset().left
+                    }, 500);
+                }, 1000);
+                window.location = 'stickerstudio://stickerpack/p/rjgrEE1dcUAUv1G4WVWu1cwWcCBatCDuVxXJiKp55D0L8pYT9y';
+            });
+        });
+    </script>
+  
+  <script>/**
+    @chrisbautista @codespud
+    I did not want to add a bunch of checkboxes so I opted for setting the `active` class via javascript
+    **/
+    
+    const uls = document.querySelectorAll("ul");
+    
+    uls.forEach((ul) => {
+      const resetClass = ul.parentNode.getAttribute("class");
+      const lis = ul.querySelectorAll("li");
+    
+      lis.forEach((li) => {
+        li.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const target = e.currentTarget;
+    
+          if (
+            target.classList.contains("active") ||
+            target.classList.contains("follow")
+          ) {
+            return;
+          }
+    
+          ul.parentNode.setAttribute(
+            "class",
+            `${resetClass} ${target.getAttribute("data-where")}-style`
+          );
+    
+          lis.forEach((item) => clearClass(item, "active"));
+    
+          setClass(target, "active");
+        });
+      });
+    });
+    
+    function clearClass(node, className) {
+      node.classList.remove(className);
+    }
+    
+    function setClass(node, className) {
+      node.classList.add(className);
+    }</script>
+
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400);
+*, *:before, *:after {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+/*html,
+body {
+width:100%;
+height:100%;
+}
+body {
+overflow-x:hidden;
+text-align:center;
+background:#2980b9;
+
+}*/
+.mail-btn {  font-family: 'Open Sans', sans-serif;
+position:relative;
+display:inline-block;
+padding:0.5rem 1rem;
+border:2px solid #2980b9;
+background:none;
+outline:none;
+-webkit-appearance: none;
+font-size:2rem;
+color:#2980b9;
+text-decoration:none;
+text-transform:uppercase;
+letter-spacing:0.5rem;
+text-indent:0.5rem;
+cursor:pointer;
+transition:
+  color 1.5s .5s,
+  border 3s 1s;
+
+}
+.mail-btn:before,
+.mail-btn:after {
+content:'';
+position:absolute;
+opacity:0;
+backface-visibility:visible;
+transform-style:preserve-3d;
+perspective:400px;
+transform-origin:50% -50%;
+transform:rotateX(360deg) rotateY(0) translateX(-50%) translateY(0) scale(0.2);
+transition:all 0.5s;
+}
+.mail-btn:before {
+top:5px;
+left:50%;
+height:3rem;
+background:#2980b9;
+border-top:2rem solid #04273f;
+border-right:3rem solid transparent;
+border-left:3rem solid transparent;
+}
+.mail-btn:after {
+top:0;
+left:50%;
+border-top:2rem solid #2980b9;
+border-right:3rem solid transparent;
+border-left:3rem solid transparent;
+}
+.mail-btn:hover {
+color:rgba(255,255,255,0);
+border:2px solid rgba(255,255,255,0);
+transition:
+  color .25s,
+  border .25s;
+}
+.mail-btn:hover:before,
+.mail-btn:hover:after {
+opacity:1;
+transform:rotateX(0) rotateY(-10deg) translateX(-50%) translateY(0) scale(1);
+}
+.fly {
+color:rgba(255,255,255,0);
+border:2px solid rgba(255,255,255,0);
+animation:sended 4s 0.8s forwards;
+}
+@keyframes sended {
+0% {
+  height:2rem;
+  width:3.5rem;
+  border-top:0;
+  border-right:0;
+  border-bottom:10px solid #2980b9;
+  border-left:10px solid #2980b9;
+  opacity:0;
+  transform:rotate(-45deg) translateX(300%) translateY(-500%);
+}
+5% {
+  height:2rem;
+  width:3.5rem;
+  border-top:0;
+  border-right:0;
+  border-bottom:10px solid #2980b9;
+  border-left:10px solid #2980b9;
+  opacity:1;
+  transform:rotate(-45deg) translateX(0) translateY(0);
+}
+78% {
+  height:2rem;
+  width:3.5rem;
+  border-top:0;
+  border-right:0;
+  border-bottom:10px solid #2980b9;
+  border-left:10px solid #2980b9;
+  opacity:1;
+  transform:rotate(-45deg) translateX(0) translateY(0);
+}
+79% {
+  height:2rem;
+  width:3.5rem;
+  border-top:0;
+  border-right:0;
+  border-bottom:10px solid #2980b9;
+  border-left:10px solid #2980b9;
+  opacity:0;
+  transform:rotate(-45deg) translateX(0) translateY(0);
+}
+80% {
+  height:auto;
+  width:auto;
+  color:rgba(255,255,255,0);
+  border:2px solid rgba(255,255,255,0);
+  opacity:0;
+  transform:rotate(0) translateX(0) translateY(0);
+}
+100% {
+  height:auto;
+  width:auto;
+  color:#2980b9;
+  border:2px solid rgba(255, 255, 255, 0.274)
+  opacity:1;
+  transform:rotate(0) translateX(0) translateY(0);
+}
+}
+.fly:before,
+.fly:after {animation:flyout .6s forwards;}
+@keyframes flyout {
+0% {
+  opacity:1;
+  transform:rotateX(0) rotateZ(0) translateX(-50%) translateY(0) scale(1);
+}
+33% {
+  opacity:0.66;
+  transform:rotateX(0) rotateZ(-5deg) translateX(-100%) translateY(0) scale(1);
+}
+100% {
+  opacity:0;
+  transform:rotateX(0) rotateZ(0) translateX(1000%) translateY(0) scale(1);
+}
+}
+</style>
+<script>$(".mail-btn").on("click touchstart", function () {
+  $(this).addClass("fly");
+  that = this
+  setTimeout(function() {
+      $(that).removeClass("fly");
+  }, 5400)
+});</script>
+
+</body>
+</html>

@@ -1,3 +1,45 @@
+/* -------------- reset.css -------------- */
+html, body, div, span, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 100%;
+}
+a {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+img {
+  vertical-align: middle;
+}
+/* -------------- /reset.css -------------- */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+html {
+  overflow-y: scroll;
+}
+body {
+  line-height: 1.2;
+
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  
+  -webkit-text-size-adjust: 100%;
+}
+/*_\*/
+
 .ag-format-container {
   width: 1142px;
   margin: 0 auto;

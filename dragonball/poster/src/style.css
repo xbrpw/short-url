@@ -1,0 +1,66 @@
+@import url("https://rsms.me/inter/inter-ui.css");
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter UI", "Helvetica", san-serif;
+}
+
+.ls-1 {
+  letter-spacing: 1px;
+}
+.ls-2 {
+  letter-spacing: 2px;
+}
+.ls-1-minus {
+  letter-spacing: -1px;
+}
+.ls-2-minus {
+  letter-spacing: -2px;
+}
+.ls-3-minus {
+  letter-spacing: -3px;
+}
+
+.text-white-light {
+  color: rgba(255, 255, 255, 0.75);
+}
+a.text-white-light:hover,
+a.text-white-light:focus {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+}
+
+/* Featured title */
+
+.featured-subtitle:before,
+.featured-subtitle:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 6px;
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.featured-subtitle:before {
+  margin: 6px 0 0 -110px;
+}
+
+.featured-subtitle:after {
+  margin: 6px 0 0 10px;
+}
+
+p.featured-subtitle:before {
+  margin: 11px 0 0 -110px;
+}
+
+p.featured-subtitle:after {
+  margin: 11px 0 0 10px;
+}

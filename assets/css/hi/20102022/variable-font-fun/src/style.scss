@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Roboto VF';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/57225/Roboto-VF.woff2") format("woff2-variations");
+  font-stretch: 75% 100%;
+  font-style: oblique 0deg 12deg;
+  font-weight: 100 900;
+}
+* {
+  box-sizing: border-box;
+}
+:root {
+  --text-weight: 500;
+  --text-width: 100;
+  --text-slant: 0;
+}
+body {
+  font-family: "Roboto VF", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #262626;
+  color: #fff;
+  padding: 7vmin;
+}
+p {
+  max-width: 45ch;
+  text-align: center;
+  font-size: 10vw;
+}
+.line1,
+.line2 {
+  display: block;
+}
+.line1 {
+  font-size: 3vw;
+  font-weight: 845;
+  color: #ffffff2e;
+}
+.char {
+  font-stretch: var(--text-width);
+  font-style: oblique var(--text-slant);
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight), "wdth" var(--text-width), "slnt" var(--text-slant);
+  --glow-hue: 0;
+  --glow-size: 10;
+  text-shadow: 0 0 calc(var(--glow-size) * 1px) hsla(var(--glow-hue), 100%, 77%, 1);
+}

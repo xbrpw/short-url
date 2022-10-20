@@ -1,0 +1,50 @@
+body {
+  min-height: 320px;
+  height: 100vh;
+  position: relative;
+  background-color: #191970;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div::before,
+div::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#pun {
+  width: 380px;
+  height: 380px;
+  margin-left: -190px;
+  margin-top: -190px;
+  background: linear-gradient(130deg, rgba(255,255,255,0) 49.5%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.6) 50.5%, rgba(255,255,255,0) 51%) 38% 41%/5em 6em, linear-gradient(-130deg, rgba(255,255,255,0) 49.5%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.6) 50.5%, rgba(255,255,255,0) 51%) 62% 41%/5em 6em;
+  background-repeat: no-repeat;
+}
+#pun::before {
+  width: 334px;
+  height: 98px;
+  left: 50%;
+  bottom: 20%;
+  margin-left: -167px;
+  background: linear-gradient(-45deg, rgba(255,255,255,0) 32.7%, white 33%) 42px 55.9px/14px 28px, linear-gradient(to left, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 14px 69.9px /28px 14px, linear-gradient(45deg, rgba(255,255,255,0) 32.7%, white 33%) 14px 69.9px /28px 14px, linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 14px 14px/14px 56px, linear-gradient(138deg, rgba(255,255,255,0) 17.9%, white 18.2%) 14px 14px/14px 56px, linear-gradient(-138deg, rgba(255,255,255,0) 30.5%, white 30.8%) 41.9px 14px/14px 28px, linear-gradient(to right, #aaa, white 35%, white 65%, #aaa) 27.9px 14px/14px 14px, linear-gradient(45deg, rgba(255,255,255,0) 29.7%, white 30%) 70px 69.9px /32.199999999999996px 14px, linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 70px 14px/14px 56px, linear-gradient(white, white) 70px 14px/14px 56px, linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 125.9px 14px /28px 14px, linear-gradient(-138deg, rgba(255,255,255,0) 34.5%, white 34.8%) 125.9px 14px /28px 14px, linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 140px 27.9px/14px 56px, linear-gradient(-45deg, rgba(255,255,255,0) 20%, white 20.3%) 140px 27.9px/14px 56px, linear-gradient(to left, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 112px 69.9px /28px 14px, linear-gradient(45deg, rgba(255,255,255,0) 32.7%, white 33%) 112px 69.9px /28px 14px, linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 112px 14px/14px 56px, linear-gradient(138deg, rgba(255,255,255,0) 17.9%, white 18.2%) 112px 14px/14px 56px, linear-gradient(135deg, rgba(255,255,255,0) 39%, white 39.3%) 168px 14px /21px 14px, linear-gradient(-135deg, rgba(255,255,255,0) 39%, white 39.3%) 188.9px 14px /21px 14px, linear-gradient(45deg, rgba(255,255,255,0) 24.7%, white 25%, white 75%, rgba(255,255,255,0) 75.3%) 168px 41.9px /42px 14px, linear-gradient(45deg, rgba(255,255,255,0) 39%, white 39.3%) 168px 69.9px /21px 14px, linear-gradient(-45deg, rgba(255,255,255,0) 39%, white 39.3%) 188.9px 69.9px /21px 14px, linear-gradient(to bottom, #aaa, white 35%, white 65%, #aaa) 168px 27.9px/14px 14px, linear-gradient(to bottom, #aaa, white 35%, white 65%, #aaa) 196px 55.9px/14px 14px, linear-gradient(138deg, rgba(255,255,255,0) 26%, white 26.3%) 224px 14px /42px 14px, linear-gradient(45deg, rgba(255,255,255,0) 25%, white 25.3%) 224px 69.9px /42px 14px, linear-gradient(to bottom, #aaa, white 20%, white 80%, #aaa) 224px 27.9px/14px 42px, linear-gradient(to right, #aaa, white 25%) 237.9px 42px/14px 14px, linear-gradient(to top, #aaa, white 20%) 280px 14px/14px 56px, linear-gradient(-45deg, rgba(255,255,255,0) 25%, white 25.3%) 280px 69.9px /42px 14px, linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0) 25%) 293.9px 14px /28px 14px, linear-gradient(-138deg, rgba(255,255,255,0) 34.5%, white 34.8%) 293.9px 14px /28px 14px, linear-gradient(to bottom, #aaa, white 20%, white 80%, #aaa) 308px 27.9px/14px 42px;
+  background-repeat: no-repeat;
+  background-color: #dc143c;
+  box-shadow: 0 0 0 0.2em white, 0 0.5em 1em 0 rgba(0,0,0,0.5);
+}
+#pun::after {
+  width: 6em;
+  height: 5em;
+  left: 38%;
+  top: 19%;
+  background: linear-gradient(135deg, rgba(128,0,0,0) 49%, rgba(128,0,0,0.4) 50%, rgba(128,0,0,0) 55%) 1.87em 1.94em/0.88em 0.88em, linear-gradient(45deg, rgba(255,165,0,0) 54.5%, #ffa500 55%) 0.78em 1.94em/2.1em 2.1em, linear-gradient(-85deg, rgba(128,0,0,0) 3%, rgba(128,0,0,0.5) 8.3%, rgba(128,0,0,0) 8.4%) 1.28em 0.36em/1.6em 1.6em, linear-gradient(-85deg, #ffa500 7.5%, rgba(255,165,0,0) 8.5%) 1.28em 0.36em/1.6em 1.6em, linear-gradient(-45deg, #ff6347 50.5%, rgba(255,99,71,0) 51%) 1.28em 0.35em/1.6em 1.6em, linear-gradient(85deg, rgba(128,0,0,0.7), rgba(128,0,0,0) 15%) 2.86em 0.35em/2.5em 3.45em, linear-gradient(-45deg, rgba(255,99,71,0) 54%, #ff6347 54.5%) 2.86em 0.35em/2.5em 2.5em, linear-gradient(120deg, rgba(128,0,0,0.5) 30%, rgba(128,0,0,0) 40%) 2.9em 2.05em/0.55em 1.75em, linear-gradient(148deg, rgba(128,0,0,0) 35%, rgba(128,0,0,0.5) 50%) 1em 0.95em/2em 1em, linear-gradient(45deg, rgba(255,99,71,0) 22%, #ff6347 22.1%, #ff6347 49.2%, rgba(255,99,71,0) 49.3%) 1em 0.3em/5em 3.5em, linear-gradient(24deg, #ff6347 53.5%, rgba(255,99,71,0) 54%) 1em 0/0.68em 0.35em, linear-gradient(-83deg, rgba(128,0,0,0.5) 5%, rgba(128,0,0,0) 15%) 0em 0/1em 1em, linear-gradient(130deg, rgba(255,165,0,0) 54%, #ffa500 54.5%) 0 0/1em 1em;
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+}

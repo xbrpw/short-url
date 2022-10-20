@@ -1,0 +1,35 @@
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<script>
+var myObject= {"galleryBig":[
+{"img" : "AlfredsFutterkiste","onclick" : "1","alt" : "Gallery img"},
+{"img" : "WolskiZajazd","onclick" : "2","alt" : "Gallery img"}
+]};
+</script>
+<body>
+
+<table id="myGallery01">
+  <tr>
+    <th>Customer</th>
+    <th>City</th>
+    <th>Country</th>
+  </tr>
+  <tr w3-repeat="galleryBig">
+    <td>{{img}}</td>
+    <td>{{onclick}}</td>
+    <td>{{alt}}</td>
+  </tr>
+</table>
+
+<a href="https://docs.google.com/spreadsheets/d/1GLc5sFFwpSHO8S9ten7RwHLzKH3wteewjHZDlqbqxII/edit#gid=1853943448" 
+target="_blank" tittle="Google">
+Editar en Google Sheets
+</a> 
+
+<script>
+w3.displayObject("myGallery01", myObject);
+</script>
+
+</body>
+</html> 

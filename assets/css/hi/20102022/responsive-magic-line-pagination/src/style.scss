@@ -1,0 +1,390 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+/*-- Variables --*/
+$white: unquote(#fff);
+$grey: #bec2d8;
+$purple: #313868;
+
+$pgn-top-border-color: $white;
+$pgn-normal-color: $purple;
+$pgn-disabled-color: #bec2d8;
+
+$mq-tablet-small: "screen and (min-width: 37.500em)"; // 600px
+$mq-tablet: "screen and (min-width: 48.000em)"; // 768px
+$mq-desktop: "screen and (min-width: 64.000em)"; // 1024px
+
+$base-font-pixel: 16;
+
+@function rem($pixel) {
+  @return $pixel / 16 + rem;
+}
+
+/*-- Placeholder --*/
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%clearfix {
+  // credit: http://nicolasgallagher.com/micro-clearfix-hack/
+  .cf:before,
+  .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    line-height: 0;
+  }
+
+  .cf:after {
+    clear: both;
+  }
+
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  .cf {
+    *zoom: 1;
+  }
+}
+
+/*-- Mixins --*/
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * $base-font-pixel) + px;
+  font-size: $sizeValue + rem;
+}
+
+/*-- General --*/
+body {
+  font-family: 'Droid Sans', sans-serif;
+  background-color: #e1e3f2;
+}
+
+h1 {
+  color: #313868;
+  text-align: center;
+  margin-bottom: 100px;
+
+  @include font-size(2.25);
+}
+
+h2 {
+  color: #5a629b;
+
+  @include font-size(1.25);
+}
+
+.container {
+  padding: 20px;
+}
+
+.mainbox {
+  width: 80%;
+  margin: 0 auto;
+}
+
+// learn more
+.learnmore {
+  margin: 150px 0 18px;
+  overflow: hidden;
+}
+
+// browsers
+.browsers {
+  margin: 0 0 50px;
+  overflow: hidden;
+
+  ul {
+    @extend %list-reset;
+  }
+
+  li {
+    float: left;
+    text-align: center;
+    padding-top: 80px;
+    margin-right: 25px;
+    background-size: 400px;
+    background-image: url('http://outdatedbrowser.com/public/imgs/browsers-bg.png');
+    background-repeat: no-repeat;
+
+    @include font-size(.8125);
+  }
+
+  .chrome {
+    width: 67px;
+    background-position: -6px -83px;
+  }
+
+  .firefox {
+    width: 69px;
+    background-position: -85px -83px;
+  }
+
+  .safari {
+    width: 69px;
+    background-position: -246px -83px;
+  }
+
+  .opera {
+    width: 66px;
+    background-position: -327px -83px;
+  }
+
+  .ie {
+    width: 70px;
+    background-position: -165px -83px;
+  }
+}
+
+// credit
+.credit {
+  margin: 0 0 50px;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+/*-- Pagination --*/
+.pgn {
+  width: 100%;
+  border-top: 3px solid $pgn-top-border-color;
+  clear: both;
+  
+  li {
+    float: left;
+  }
+  
+  a,
+  span,
+  strong {
+    float: left;
+    text-align:center;
+    padding-top: 20px;
+    color: $pgn-normal-color;
+    
+    @media #{$mq-tablet} {
+      display: block;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .prev,
+  .next {
+    width: 33.33333%;
+    
+    @media #{$mq-tablet-small} {
+      width: 20%;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  .prev {
+    float: left;
+    
+    a {
+      text-align: left;
+    }
+  }
+  
+  .next {
+    float: right;
+      
+    a {
+      text-align: right;
+    }
+  }
+}
+
+/* <ul> */
+.pgn__list {
+  @extend %list-reset;
+    
+  width: 100%;
+  position: relative;
+  top: -3px;
+}
+
+/* <li> - pagination numbers */
+.pgn__item {
+  width: 33.33333%;
+  
+  @media #{$mq-tablet} {
+    width: calc(100% - 230px);
+  }
+  
+  a,
+  span,
+  strong {
+    display: none;
+    text-align: center;
+    width: 100%;
+    
+    &.current {
+      display: block;
+      
+    }
+  }
+
+  a {
+    @media #{$mq-tablet-small} {
+      display: block;
+    }
+  }
+}
+
+/* prev/next icon */
+.pgn__prev-icon,
+.pgn__next-icon {
+  margin-top: 1px;
+
+  .disabled & {
+    color: $pgn-disabled-color;
+  }
+}
+
+.pgn__prev-icon {
+  .fullprevnext & {
+    float: left;
+  }
+}
+
+.pgn__next-icon {
+  .fullprevnext & {
+    float: right;
+  }
+}
+
+/* prev/next text */
+.pgn__prev-txt,
+.pgn__next-txt {
+  display: none;
+
+  .disabled & {
+    color: $pgn-disabled-color;
+  }
+
+  .fullprevnext & {
+    display: inline-block;
+    padding-top: 0;
+  }
+}
+
+.pgn__prev-txt {
+  .fullprevnext & {
+    float: left;
+  }
+}
+
+.pgn__next-txt {
+  .fullprevnext & {
+    float: right;
+  }
+}
+
+.pgn__magic-line {
+  background-color: $pgn-normal-color;
+  position: absolute;
+  height: 3px;
+}
+
+/* =Variables
+------------------------------------- */
+// Colors
+$pure-white: hsla(0, 0%, 100%, 1); // #fff
+$pure-black: hsla(0, 0%, 0%, 1); // #000
+$grey-dark: hsla(0, 0%, 25%, 1); // #404040
+$white-dark: hsla(0, 0%, 95%, 1); /// #f1f1f1
+$fuel-yellow: hsla(36, 100%, 49%, 1); // #f89500
+
+$white: hsla(0, 0%, 100%, 1);
+$charade: hsla(220, 13%, 18%, 1);
+$light-grey: hsla(0, 0%, 83%, 1);
+$fuel-yellow: hsla(39, 84%, 53%, 1);
+$red: hsla(0, 100%, 50%, 1);
+$jade: hsla(158, 100%, 34%, 1);
+$gable-green: hsla(180, 49%, 14%, 1);
+
+// Fonts
+$droid-serif: 'Droid Serif', serif;
+$kalam: 'Kalam', cursive;
+$open-sans: 'Open Sans', sans-serif;
+
+// transition
+$transition: .5s cubic-bezier(.77, 0, .175, 1);
+$transition-fast: .2s cubic-bezier(.77, 0, .175, 1);
+
+.c-intro {
+  position: relative;
+}
+
+.c-ryanyu {
+  background-color: transparent;
+  display: block;
+  font-family: $kalam;
+  height: rem(77);
+  margin: rem(20) 0;
+  position: relative;
+  text-align: center;
+  width: rem(77);
+
+  img {
+    background-color: $pure-white;
+    border: rem(3) solid $fuel-yellow;
+    border-radius: 50%;
+    height: rem(70);
+    object-fit: contain;
+    width: rem(70);
+  }
+}
+
+.c-ryanyu__front {
+  backface-visibility: hidden;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  transform: rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+  transition: all $transition;
+  z-index: 2000;
+
+  .c-ryanyu:hover & {
+    transform: rotateY(180deg);
+  }
+}
+
+.c-ryanyu__back {
+  background-color: $pure-black;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  color: $fuel-yellow;
+  height: inherit;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: all $transition;
+  width: inherit;
+  z-index: 1000;
+
+  &::before {
+    content: 'Ryan Yu';
+    display: block;
+    transform: rotate(-45deg) translate(-6px, 27px);
+    width: rem(50);
+  }
+
+  .c-ryanyu:hover & {
+    transform: rotateY(0);
+  }
+}

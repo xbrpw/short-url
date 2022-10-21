@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>contentEditable </title>
+  <link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet"> <link href="https://xbrpw.github.io/assets/fontawesome/css/regular.min.css" rel="stylesheet">  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">    -->  
+  <link href='https://fonts.googleapis.com/css?family=Dosis|Rajdhani' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    
+.headline{
+  font-size: 2em;
+  text-align: center;
+}
+
+#wrapper {
+  /*width: 600px;*/
+  background: #FFF;
+  padding: 1em;
+  margin: 1em auto;
+  /*box-shadow: 0 2px 5px rgba(0,0,0,0.3);*/
+  border-radius: 3px;
+}
+
+button {
+  border: none;
+  padding: 0.8em;
+  background: #F96;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 1em;
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+#editor {
+  padding: 1em;
+  background: #E6E6E6;
+  border-radius: 3px;
+}
+
+#editor:focus {
+  background: #FFF;
+  border-color: #69c773;
+}
+
+[contenteditable="true"] {
+  font-family: "Rajdhani";
+  color: #C00;
+}
+  </style>
+</head>
+<body>
+  <div class="w3-container" sheetsu="https://sheetsu.com/apis/v1.0/d49de1401d62" sheetsu-limit="1" sheetsu-sheet="Sheet1">{{Ticket}} {{Nickname}} {{Email}}</div>
+    	
+<div id="wrapper">
+  <section>
+      <button id="editBtn" type="button">Editar</button>      
+        <div id="editDocument">
+         
+            <h1 id="title">{{Ticket}}</h1>
+            <h2 id="subtitle">Subtitle</h2>
+            <p>Editado por <span id="author">{{Nickname}}</span></p>
+            <p id="content">{{Email}}	Puede cambiar el encabezado, el nombre del autor y este contenido en sí. Haga clic en Editar documento para comenzar a editar. Todo el contenido editable tiene un estilo diferente. El contenido final se guarda en localStorage y se recupera más tarde cuando recarga la página web.</p>
+            <h3 id="Ticket">Subtitle</h3>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+<div class="w3-container" sheetsu="https://sheetsu.com/apis/v1.0/d49de1401d62" sheetsu-limit="1" sheetsu-sheet="Sheet1">
+  <section>
+    <button id="editBtn" type="button">Editar</button>      
+      <div id="editDocument">
+       
+          <h1 id="title">{{Ticket}}</h1>
+          <h2 id="subtitle">Subtitle</h2>
+          <p>Editado por <span id="author">{{Nickname}}</span></p>
+          <p id="content">{{Email}}	Puede cambiar el encabezado, el nombre del autor y este contenido en sí. Haga clic en Editar documento para comenzar a editar. Todo el contenido editable tiene un estilo diferente. El contenido final se guarda en localStorage y se recupera más tarde cuando recarga la página web.</p>
+          <h3 id="Ticket">Subtitle</h3>
+      </div>
+  </section>
+  {{Ticket}}  {{Nickname}} /f4ff {{Email}}
+</div>
+
+<i class="fa-duotone fa-apartment"></i>
+<i class="fa-duotone fa-floppy-disk"></i>
+<i class="fa-solid fa-user-pen"></i> <i class="fa-solid fa-floppy-disk"></i>   <i class="fa-duotone fa-user-pen"></i> 
+
+
+<script src="https://load.sheetsu.com"></script>
+<script>
+  var editBtn = document.getElementById('editBtn');
+var editables = document.querySelectorAll('#title, #author, #content, #subtitle, #Ticket');
+
+if (typeof(Storage) !== "undefined") {
+  if (localStorage.getItem('title') !== null) {
+    editables[0].innerHTML = localStorage.getItem('title');
+  }
+  if (localStorage.getItem('author') !== null) {
+    editables[1].innerHTML = localStorage.getItem('author');
+  }
+  if (localStorage.getItem('content') !== null) {
+    editables[2].innerHTML = localStorage.getItem('content');
+  }
+  if (localStorage.getItem('subtitle') !== null) {
+    editables[3].innerHTML = localStorage.getItem('subtitle');
+  }
+  if (localStorage.getItem('Ticket') !== null) {
+    editables[3].innerHTML = localStorage.getItem('Ticket');
+  }
+}
+
+editBtn.addEventListener('click', function(e) {
+  if (!editables[0].isContentEditable) {
+    editables[0].contentEditable = 'true';
+    editables[1].contentEditable = 'true';
+    editables[2].contentEditable = 'true';
+    editables[3].contentEditable = 'true';
+    editables[4].contentEditable = 'true';
+    editBtn.innerHTML = 'Guardar';
+    editBtn.style.backgroundColor = '#6F9';
+  } else {
+    // Disable Editing
+    editables[0].contentEditable = 'false';
+    editables[1].contentEditable = 'false';
+    editables[2].contentEditable = 'false';
+    editables[3].contentEditable = 'false';
+    editables[4].contentEditable = 'false';
+    // Change Button Text and Color
+    editBtn.innerHTML = 'Activar edición';
+    editBtn.style.backgroundColor = '#F96';
+    // Save the data in localStorage 
+    for (var i = 0; i < editables.length; i++) {
+      localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
+    }
+  }
+});
+
+setInterval(function() {
+  for (var i = 0; i < editables.length; i++) {
+    localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
+  }
+}, 5000);
+
+</script>
+<!-- <script src='https://codepen.io/Hyperplexed/pen/xxYJYjM/54407644e24173ad6019b766443bf2a6.js'></script> -->
+<script src='https://kit.fontawesome.com/944eb371a4.js'></script>
+
+</body>
+</html>

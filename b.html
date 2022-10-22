@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenavAlerts {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.aBlanco:link, .aBlanco:visited, .aBlanco:hover, .aBlanco:active {color: white;text-decoration: none;}
+
+#mainESO {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenavAlerts {padding-top: 15px;}
+  .sidenavAlerts a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenavAlerts" class="sidenavAlerts">
+  <a href="javascript:void(0)" class="closebtn aBlanco" onclick="closeNav()">&times;</a>
+  <a href="#" onclick="closeNav()">About</a>
+  <a href="#" onclick="closeNav()">Services</a>
+  <a href="#" onclick="closeNav()">Clients</a>
+  <a href="#" onclick="closeNav()">Contact</a>
+</div>
+
+<div id="mainESO">
+  <h2>Sidenav Push Example</h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenavAlerts").style.width = "100%";
+  document.getElementById("mainESO").style.marginLeft = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenavAlerts").style.width = "0";
+  document.getElementById("mainESO").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 

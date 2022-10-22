@@ -49,6 +49,10 @@ img {vertical-align: middle;border-style:none}/* End extract & Start Eevee*/
 @media (min-width:993px) {.susan-storm-large {display: none!important}
 @media (max-width:992px) and (min-width:601px) {.susan-storm-medium {display: none!important}
 @media (max-width:600px) {.susan-storm-small {display: none!important}
+/* New  */ 
+@keyframes w3-spin {0% {transform: rotate(0deg)}100% {transform: rotate(359deg)}}.w3-animate-fadingx5 {animation: fading 50s infinite}
+@keyframes fading {0% {opacity: 0}80% {opacity: 1}100% {opacity: 0}}.w3-animate-opacity {animation: opac 0.8s}
+
 /* Preloder */ #preloder {position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 999999;justify-content: center;gap: 2rem;padding: 3rem;background-color: #02251288;align-items: center;text-align: center;/*min-height: 80vh;*/}
 .loader {width: 40px;height: 40px;position: absolute;top: 50%;left: 50%;margin-top: -13px;margin-left: -13px;border-radius: 60px;animation: loader 0.8s linear infinite;-webkit-animation: loader 0.8s linear infinite;}
 @keyframes loader 

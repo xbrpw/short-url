@@ -1,0 +1,50 @@
+:root {
+  --base-animation-duration: 350ms;
+  --base-easing: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+#ninos-awesome-app {
+  padding: 30px;
+}
+
+.article {
+  --transition-easing: var(--base-easing);
+  --transition-duration: var(--base-animation-duration);
+  --padding: 30px;
+
+  background-color: Salmon;
+  border-radius: 30px;
+  transition-property: background-color, width;
+  transition-timing-function: var(--transition-easing);
+  transition-duration: var(--transition-duration);
+  transition-delay: var(--transition-duration);
+  width: 50vw;
+
+  &.is-open {
+    transition-delay: 0s;
+    background-color: tomato;
+    width: 80vw;
+
+    .article__drawer {
+      transition-delay: var(--transition-duration);
+    }
+  }
+}
+
+.article__header {
+  padding: var(--padding) var(--padding) 0 var(--padding);
+}
+
+.article__section {
+  padding: 0 var(--padding) var(--padding) var(--padding);
+}
+
+.article__drawer {
+  // you can get super granular by adding css vars even to the drawer
+  // and controlling those as well with the `anim-STATE` classes
+  transition-property: height;
+  transition-duration: var(--transition-duration);
+  height: 0px;
+  overflow: hidden;
+  // add all accessibility things here!
+}

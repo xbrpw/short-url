@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - [CSS] Rate Your Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1 class="intro">Rate your Experience</h1>
+<div class="box">
+  <form class="app">
+    <section class="step step-1 is-rated">
+      <header class="header">
+        <div class="cover"></div>
+        <h2 class="title">Rate your experience</h2>
+        <p class="desc">Help your caterer improve their serice by rating them</p>
+      </header>
+      <div class="rate">
+        <input class="rate__radio sr-only" type="radio" id="rate-0" name="rate" value="5"/>
+        <label class="rate__label" for="rate-0"></label>
+        <input class="rate__radio sr-only" type="radio" id="rate-1" name="rate" value="4"/>
+        <label class="rate__label" for="rate-1"></label>
+        <input class="rate__radio sr-only" type="radio" id="rate-2" name="rate" value="3"/>
+        <label class="rate__label" for="rate-2"></label>
+        <input class="rate__radio sr-only" type="radio" id="rate-3" name="rate" value="2"/>
+        <label class="rate__label" for="rate-3"></label>
+        <input class="rate__radio sr-only" type="radio" id="rate-4" name="rate" value="1"/>
+        <label class="rate__label" for="rate-4"></label>
+      </div>
+    </section>
+    <section class="step step-2">
+      <div class="suggestions">
+        <h2 class="title">What went well?</h2>
+        <input class="suggestion__checkbox sr-only" type="checkbox" id="suggestion-0" name="suggestions" value="food quality"/>
+        <label class="suggestion__label" for="suggestion-0">food quality</label>
+        <input class="suggestion__checkbox sr-only" type="checkbox" id="suggestion-1" name="suggestions" value="quality"/>
+        <label class="suggestion__label" for="suggestion-1">quality</label>
+        <input class="suggestion__checkbox sr-only" type="checkbox" id="suggestion-2" name="suggestions" value="variety"/>
+        <label class="suggestion__label" for="suggestion-2">variety</label>
+        <input class="suggestion__checkbox sr-only" type="checkbox" id="suggestion-3" name="suggestions" value="price"/>
+        <label class="suggestion__label" for="suggestion-3">price</label>
+        <input class="suggestion__checkbox sr-only" type="checkbox" id="suggestion-4" name="suggestions" value="vendor service"/>
+        <label class="suggestion__label" for="suggestion-4">vendor service</label>
+        <input class="suggestion__checkbox sr-only" type="checkbox" id="suggestion-5" name="suggestions" value="other"/>
+        <label class="suggestion__label" for="suggestion-5">other</label>
+      </div>
+      <input class="submit" type="submit" value="submit"/>
+    </section>
+  </form>
+</div>
+<blockquote class="info">inspired from <a href="https://dribbble.com/saptarshipr">Saptarshi Prakash</a>'s <a href="https://dribbble.com/shots/3562574-Rate-your-Experience">Rate your Experience</a></blockquote>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

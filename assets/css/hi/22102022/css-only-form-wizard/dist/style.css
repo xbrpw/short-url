@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+html, body {
+  font-family: Raleway, sans-serif;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.window-switch {
+  display: none;
+}
+
+#switch1:checked ~ .wrapper > .windows {
+  margin-left: 0vw;
+}
+
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch0] {
+  color: #ffffff;
+  background-color: #94b6df;
+  display: flex;
+}
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch0]:hover {
+  background-color: #a8c3e5;
+}
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch0]:focus, #switch1:checked ~ .wrapper > .controls > .buttons label[for=switch0]:active {
+  background-color: #bbd1eb;
+}
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch0]:after {
+  content: "Previous";
+}
+
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch2],
+#switch1:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch2] {
+  color: #ffffff;
+  background-color: #2f42ff;
+  display: flex;
+}
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch2]:hover,
+#switch1:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch2]:hover {
+  background-color: #4959ff;
+}
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch2]:focus, #switch1:checked ~ .wrapper > .controls > .buttons label[for=switch2]:active,
+#switch1:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch2]:focus,
+#switch1:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch2]:active {
+  background-color: #6270ff;
+}
+#switch1:checked ~ .wrapper > .controls > .buttons label[for=switch2]:after,
+#switch1:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch2]:after {
+  content: "Next";
+}
+
+#switch2:checked ~ .wrapper > .windows {
+  margin-left: -100vw;
+}
+
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch1] {
+  color: #ffffff;
+  background-color: #94b6df;
+  display: flex;
+}
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch1]:hover {
+  background-color: #a8c3e5;
+}
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch1]:focus, #switch2:checked ~ .wrapper > .controls > .buttons label[for=switch1]:active {
+  background-color: #bbd1eb;
+}
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch1]:after {
+  content: "Previous";
+}
+
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch3],
+#switch2:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch3] {
+  color: #ffffff;
+  background-color: #2f42ff;
+  display: flex;
+}
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch3]:hover,
+#switch2:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch3]:hover {
+  background-color: #4959ff;
+}
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch3]:focus, #switch2:checked ~ .wrapper > .controls > .buttons label[for=switch3]:active,
+#switch2:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch3]:focus,
+#switch2:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch3]:active {
+  background-color: #6270ff;
+}
+#switch2:checked ~ .wrapper > .controls > .buttons label[for=switch3]:after,
+#switch2:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch3]:after {
+  content: "Next";
+}
+
+#switch3:checked ~ .wrapper > .windows {
+  margin-left: -200vw;
+}
+
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch2] {
+  color: #ffffff;
+  background-color: #94b6df;
+  display: flex;
+}
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch2]:hover {
+  background-color: #a8c3e5;
+}
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch2]:focus, #switch3:checked ~ .wrapper > .controls > .buttons label[for=switch2]:active {
+  background-color: #bbd1eb;
+}
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch2]:after {
+  content: "Previous";
+}
+
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch4],
+#switch3:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch4] {
+  color: #ffffff;
+  background-color: #2f42ff;
+  display: flex;
+}
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch4]:hover,
+#switch3:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch4]:hover {
+  background-color: #4959ff;
+}
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch4]:focus, #switch3:checked ~ .wrapper > .controls > .buttons label[for=switch4]:active,
+#switch3:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch4]:focus,
+#switch3:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch4]:active {
+  background-color: #6270ff;
+}
+#switch3:checked ~ .wrapper > .controls > .buttons label[for=switch4]:after,
+#switch3:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch4]:after {
+  content: "Next";
+}
+
+#switch4:checked ~ .wrapper > .windows {
+  margin-left: -300vw;
+}
+
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch3] {
+  color: #ffffff;
+  background-color: #94b6df;
+  display: flex;
+}
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch3]:hover {
+  background-color: #a8c3e5;
+}
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch3]:focus, #switch4:checked ~ .wrapper > .controls > .buttons label[for=switch3]:active {
+  background-color: #bbd1eb;
+}
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch3]:after {
+  content: "Previous";
+}
+
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch5],
+#switch4:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch5] {
+  color: #ffffff;
+  background-color: #2f42ff;
+  display: flex;
+}
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch5]:hover,
+#switch4:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch5]:hover {
+  background-color: #4959ff;
+}
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch5]:focus, #switch4:checked ~ .wrapper > .controls > .buttons label[for=switch5]:active,
+#switch4:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch5]:focus,
+#switch4:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch5]:active {
+  background-color: #6270ff;
+}
+#switch4:checked ~ .wrapper > .controls > .buttons label[for=switch5]:after,
+#switch4:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch5]:after {
+  content: "Next";
+}
+
+#switch5:checked ~ .wrapper > .windows {
+  margin-left: -400vw;
+}
+
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch4] {
+  color: #ffffff;
+  background-color: #94b6df;
+  display: flex;
+}
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch4]:hover {
+  background-color: #a8c3e5;
+}
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch4]:focus, #switch5:checked ~ .wrapper > .controls > .buttons label[for=switch4]:active {
+  background-color: #bbd1eb;
+}
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch4]:after {
+  content: "Previous";
+}
+
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch6],
+#switch5:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch6] {
+  color: #ffffff;
+  background-color: #2f42ff;
+  display: flex;
+}
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch6]:hover,
+#switch5:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch6]:hover {
+  background-color: #4959ff;
+}
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch6]:focus, #switch5:checked ~ .wrapper > .controls > .buttons label[for=switch6]:active,
+#switch5:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch6]:focus,
+#switch5:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch6]:active {
+  background-color: #6270ff;
+}
+#switch5:checked ~ .wrapper > .controls > .buttons label[for=switch6]:after,
+#switch5:checked ~ .wrapper > .controls > .buttons input[type=submit][for=switch6]:after {
+  content: "Submit";
+}
+
+.wrapper {
+  background-color: #eaeaf2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .windows {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  transition: 500ms margin-left ease-out;
+}
+.wrapper .windows .window {
+  width: 100vw;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+.wrapper .controls {
+  background-color: #d2d2f2;
+  height: 80px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3);
+}
+.wrapper .controls .buttons {
+  width: 280px;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.wrapper .controls .buttons label, .wrapper .controls .buttons input[type=submit] {
+  font-weight: bold;
+  width: 130px;
+  height: 100%;
+  margin-left: 10px;
+  border: solid 2px black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: 100ms background-color ease, 100ms transform ease-out;
+}
+
+.input {
+  font-family: inherit;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  border: solid 2px #525252;
+  box-sizing: border-box;
+  transition: 250ms border ease-out;
+}
+.input:focus {
+  border: solid 2px black;
+}

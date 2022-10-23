@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	background: #1d1d1d;
+	color: #fff;
+}
+
+.wrapper {
+	overflow: hidden;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.pumpkin {
+	font-size: 2.25em;
+}
+
+p {
+	font-size: 1.75em;
+	margin-left: 1em;
+	color: #f87217;
+}

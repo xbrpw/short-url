@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Quote Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <figure>
+    <blockquote>
+      <p v-html="splitQuote"></p><span class="quote__before">“</span><span class="quote__after">”</span>
+    </blockquote>
+    <figcaption><span class="caption__line"></span>
+      <p>{{ quoteAuthor }}</p>
+    </figcaption>
+  </figure>
+  <button @click="newQuote">New Quote</button>
+</div>
+<footer>
+  <p>Quotes using <a href="https://forismatic.com/en/" target="_blank">Forismatic</a> API</p>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

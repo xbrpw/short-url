@@ -1,0 +1,90 @@
+body {
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	place-items: center;
+	color: white;
+	background: rgb(195, 238, 95);
+	background: linear-gradient(
+		180deg,
+		rgba(195, 238, 95, 1) 0%,
+		rgba(180, 227, 72, 1) 29%,
+		rgba(146, 199, 25, 1) 70%,
+		rgba(110, 152, 13, 1) 100%
+	);
+}
+
+h1 {
+	bottom: 1em;
+	font-size: 3em;
+	margin: 0;
+	position: absolute;
+	right: 1em;
+}
+
+.dot {
+	animation: animationLoaderDown 5s ease-out infinite;
+	background: rgb(45, 20, 44);
+	background: linear-gradient(
+		180deg,
+		rgba(45, 20, 44, 1) 0%,
+		rgba(86, 8, 84, 1) 29%,
+		rgba(88, 14, 86, 1) 70%,
+		rgba(110, 4, 108, 1) 100%
+	);
+	box-shadow: none;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100vw;
+	z-index: -1;
+}
+
+@keyframes animationLoaderDown {
+	0% {
+		box-shadow: 0 0 1vmin 1vmin rgba(88, 14, 86, 1);
+		height: 1vmin;
+	}
+	100% {
+		box-shadow: 0 0 10vmin 10vmin rgba(88, 14, 86, 1);
+		height: 100vh;
+	}
+}
+.gengar {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+@keyframes w3-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+.w3-animate-fadingx5 {
+	animation: fading 20s infinite;
+}
+@keyframes fading {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+.w3-animate-opacity {
+	animation: opac 0.6s infinite;
+}
+
+.boo {
+	font-size: 12rem;
+	margin: auto;
+}

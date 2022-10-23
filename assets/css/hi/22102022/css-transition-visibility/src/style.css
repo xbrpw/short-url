@@ -1,0 +1,15 @@
+.is-invisible {
+  visibility: hidden !important;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.has-transition {
+/*   transition: visibility 2s linear 0; */
+}
+
+.has-transition.visibility {
+  visibility: visible !important;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}

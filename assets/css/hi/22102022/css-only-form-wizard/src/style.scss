@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+$screen-count: 5;
+
+$wrapper-background-color: #eaeaf2;
+
+$window-padding: 50px;
+$windows-transition: 500ms margin-left ease-out;
+
+$controls-background-color: #d2d2f2;
+$controls-height: 80px;
+$controls-padding: 20px;
+$controls-box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.3);
+
+$button-prev-font-color: #ffffff;
+$button-next-font-color: #ffffff;
+$button-prev-background-color: #94b6df;
+$button-next-background-color: #2f42ff;
+$button-width: 130px;
+$button-margin-left: 10px;
+$button-border: solid 2px black;
+$button-transition:
+	100ms background-color ease,
+	100ms transform        ease-out;
+
+$input-background-color: white;
+$input-padding: 10px;
+$input-border: solid 2px #525252;
+$input-border-active: solid 2px black;
+$input-transition: 250ms border ease-out;
+
+html, body {
+	font-family: Raleway, sans-serif;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+.window-switch {
+	display: none;
+}
+@for $i from 1 through $screen-count {
+	#switch#{$i}:checked ~ .wrapper > .windows {
+		margin-left: -100vw * ($i - 1);
+	}
+	#switch#{$i}:checked ~ .wrapper > .controls > .buttons label[for="switch#{$i - 1}"] {
+		color: $button-prev-font-color;
+		background-color: $button-prev-background-color;
+		display: flex;
+		&:hover {
+			background-color: lighten($button-prev-background-color, 5%);
+		}
+		&:focus, &:active {
+			background-color: lighten($button-prev-background-color, 10%);
+		}
+		&:after {
+			content: "Previous";
+		}
+	}
+	#switch#{$i}:checked ~ .wrapper > .controls > .buttons label[for="switch#{$i + 1}"],
+	#switch#{$i}:checked ~ .wrapper > .controls > .buttons input[type="submit"][for="switch#{$i + 1}"] {
+		color: $button-next-font-color;
+		background-color: $button-next-background-color;
+		display: flex;
+		&:hover {
+			background-color: lighten($button-next-background-color, 5%);
+		}
+		&:focus, &:active {
+			background-color: lighten($button-next-background-color, 10%);
+		}
+		&:after {
+			@if ($i + 1 <= $screen-count) {
+				content: "Next";
+			}
+			@else {
+				content: "Submit";
+			}
+		}
+	}
+	.window:nth-child(#{$i}) {
+		// background-image:
+		// 	linear-gradient(rgba(#ffffff, 0.7), rgba(#ffffff, 0.7)),
+		// 	url("http://lorempixel.com/960/540/city/#{random(5) + $i}");
+		// background-attachment: fixed;
+		// background-position: center;
+		// background-repeat: no-repeat;
+		// background-size: cover;
+	}
+}
+.wrapper {
+	background-color: $wrapper-background-color;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	.windows {
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+		transition: $windows-transition;
+		.window {
+			width: 100vw;
+			height: 100%;
+			padding: $window-padding;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			flex-shrink: 0;
+			flex-grow: 0;
+			box-sizing: border-box;
+		}
+	}
+	.controls {
+		background-color: $controls-background-color;
+		height: $controls-height;
+		padding: $controls-padding;
+		display: flex;
+		justify-content: flex-end;
+		box-sizing: border-box;
+		flex-grow: 0;
+		flex-shrink: 0;
+		box-shadow: $controls-box-shadow;
+		.buttons {
+			width: ($button-width * 2) + ($button-margin-left * 2);
+			display: flex;
+			justify-content: flex-end;
+			flex-grow: 0;
+			flex-shrink: 0;
+			label, input[type="submit"] {
+				font-weight: bold;
+				width: $button-width;
+				height: 100%;
+				margin-left: $button-margin-left;
+				border: $button-border;
+				display: none;
+				justify-content: center;
+				align-items: center;
+				box-sizing: border-box;
+				transition: $button-transition;
+			}
+		}
+	}
+}
+.input {
+	font-family: inherit;
+	background-color: $input-background-color;
+	width: 100%;
+	padding: $input-padding;
+	display: block;
+	border: $input-border;
+	box-sizing: border-box;
+	transition: $input-transition;
+	&:focus {
+		border: $input-border-active;
+	}
+}

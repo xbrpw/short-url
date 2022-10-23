@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Ek+Mukta:700|Muli:200,300,400");
+html,
+body {
+  height: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.btn {
+  position: relative;
+  padding: 0 15px;
+  border-width: 2px;
+  height: 40px;
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  font-size: 16px;
+  line-height: 38px;
+  border-radius: 0;
+  transition: ease-in-out 0.3s;
+}
+.btn .fa {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  right: 15px;
+  top: 50%;
+  width: 0;
+  vertical-align: top;
+  opacity: 0;
+  box-shadow: none;
+  transform: translateY(-50%);
+  transition: ease-in-out 0.3s;
+}
+
+.btn-primary, .btn-primary:link, .btn-primary:visited {
+  border-color: #fc0;
+  background-color: #fc0;
+  color: #000;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+  padding-right: 40px;
+  border-color: #fc0;
+  background-color: #fc0;
+  color: #000;
+  box-shadow: none;
+}
+.btn-primary:hover:hover, .btn-primary:hover:focus, .btn-primary:hover:active, .btn-primary:hover.active, .btn-primary:focus:hover, .btn-primary:focus:focus, .btn-primary:focus:active, .btn-primary:focus.active, .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active:active, .btn-primary:active.active, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active:active, .btn-primary.active.active {
+  border-color: #fc0;
+  background-color: #fc0;
+  color: #000;
+  box-shadow: none;
+}
+.btn-primary:hover .fa, .btn-primary:focus .fa, .btn-primary:active .fa, .btn-primary.active .fa {
+  width: 15px;
+  opacity: 1;
+}
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: inherit;
+  color: #fff;
+}
+.jumbotron::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.jumbotron h1 {
+  font-size: inherit;
+}
+.jumbotron p {
+  margin-bottom: 0;
+}
+
+.jumbotronContainer {
+  position: absolute;
+  z-index: 10;
+  left: 60px;
+  right: 60px;
+  top: 50%;
+  padding: 30px 30px 30px 35px;
+  transform: translateY(-50%);
+}
+
+.jumbotronContainerBefore {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: #fc0;
+}
+
+.js .jumbotronContainerBefore {
+  width: 0;
+  opacity: 0;
+}
+
+.no-js .jumbotronContainerBefore {
+  width: 5px;
+  opacity: 1;
+}
+
+.jumbotronFigure {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.jumbotronFigure img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.js .jumbotronFigure {
+  opacity: 0;
+}
+
+.no-js .jumbotronFigure {
+  opacity: 1;
+}
+
+@-webkit-keyframes jumbotronFigureVisible {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes jumbotronFigureVisible {
+  100% {
+    transform: scale(1.1);
+  }
+}
+.jumbotronFigure.visible {
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: jumbotronFigureVisible;
+          animation-name: jumbotronFigureVisible;
+}
+
+.jumbotronHeader {
+  margin-bottom: 15px;
+}
+
+.jumbotronCategory {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  font-family: "Muli", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+.jumbotronCategory::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 15px;
+  height: 2px;
+  background-color: #fc0;
+}
+
+.js .jumbotronCategory {
+  left: -15px;
+  opacity: 0;
+}
+
+.no-js .jumbotronCategory {
+  left: 0;
+  opacity: 1;
+}
+
+.jumbotronTitle,
+.jumbotron h1 {
+  position: relative;
+  margin-top: 3px;
+  font-weight: 700;
+  font-family: "Ek Mukta", sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #fc0;
+}
+
+.js .jumbotronTitle {
+  left: -15px;
+  opacity: 0;
+}
+
+.no-js .jumbotronTitle {
+  left: 0;
+  opacity: 1;
+}
+
+.jumbotronBody {
+  position: relative;
+  margin-bottom: 30px;
+  font-weight: 200;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+.jumbotronBody p {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.js .jumbotronBody {
+  left: -15px;
+  opacity: 0;
+}
+
+.no-js .jumbotronBody {
+  left: 0;
+  opacity: 1;
+}
+
+.js .jumbotronFooter {
+  opacity: 0;
+}
+
+.no-js .jumbotronFooter {
+  opacity: 1;
+}
+
+@media (max-width: 991px) and (orientation: portrait) {
+  .jumbotronFigure img {
+    max-width: none;
+    max-height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .btn {
+    height: 34px;
+    font-size: 14px;
+    line-height: 31px;
+  }
+
+  .jumbotronContainer {
+    left: 30px;
+    right: 30px;
+    padding: 15px 15px 15px 20px;
+  }
+
+  .jumbotronHeader {
+    margin-bottom: 5px;
+  }
+
+  .jumbotronCategory {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .jumbotronTitle,
+.jumbotron h1 {
+    margin-top: 0;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .jumbotronBody {
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 19px;
+  }
+}

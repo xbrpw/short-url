@@ -1,0 +1,38 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body{
+  background:#314FAA;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+}
+#countdown{
+  margin:100px auto;
+  width:800px;
+}
+.circle{
+  width:170px;
+  display:inline-block;
+/*   border:1px solid #000; */
+  margin:10px;
+  min-height:170px;
+  border-radius:100%;
+  box-shadow: 3px 3px 2px #fff,3px 3px 2px  #293F84 inset;
+}
+.value{
+  width:170px;
+  text-align:center;
+  margin:60px auto;
+  color:#fff;
+  text-shadow: 2px 2px #333;
+  font-size:24px;
+  
+}
+canvas{  
+  border-radius:100%;
+/*   box-shadow: -3px 3px #aaa , 2px 2px #aaa; */
+  position:absolute;
+  transform: rotate(-90deg);
+}

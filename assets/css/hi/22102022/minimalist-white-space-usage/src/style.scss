@@ -1,0 +1,103 @@
+.product-wrapper {
+  max-width: 900px;
+  margin: 2% auto;
+  padding: 16px;
+  .product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .image-section {
+      max-width: 40%;
+      position: relative;
+      z-index: 1;
+      .product-image {
+        position: relative;
+        width: 180px;
+        height: 375px;
+        overflow: hidden;
+        img {
+          margin: 0 -170px;
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: calc(100% + 50px);
+        background-color: #fff;
+        z-index: 0;
+      }
+    }
+    .info-section {
+      border: 3px solid #373739;
+      min-height: 400px;
+      padding: 12% 4% 4% 12%;
+      // padding-bottom: 0;
+      position: relative;
+      .info-wrapper {
+        background: #fff;
+        .info-title {
+          font-size: 56px;
+          color: #373739;
+          font-family: 'Playfair Display', serif;
+          padding-bottom: 24px;
+        }
+        .info-desc-wrapper {
+          color: #BAB7D4;
+          padding-bottom: 24px;
+          font-family: "Roboto Mono";
+          letter-spacing: 0.02px;
+        }
+        .action-button {
+          input[type="submit"] {
+            background: #373739;
+            color: #fff;
+            border: 0;
+            padding: 8px 32px;
+            border-radius: 2em;
+            font-family: 'Roboto Mono', monospace;
+            text-transform: uppercase;
+            transition: 0.3s;
+            outline: none;
+            &:hover {
+              background: rgba(55,55,57,0.91);
+              cursor: pointer;
+              box-shadow: 0 4px 8px #b1b1b1;
+            }
+          }
+        }
+      }
+      &:before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 3px solid #DAD9E7;
+        top: 6px;
+        left: 6px;
+      }
+    }
+  }
+}
+.mobile-message{
+  display: none;
+  margin:50% auto;
+  max-width: 70%;
+  text-align: center;
+  font-size: 18px;
+  i{
+    font-size: 42px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (max-width: 500px){
+  .product-wrapper{
+    display: none;
+  }
+  .mobile-message{
+    display: block;
+  }
+}

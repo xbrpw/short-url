@@ -1,0 +1,41 @@
+/*
+Powered by:
+- https://github.com/tonystar/bootstrap-float-label
+- https://github.com/tonystar/float-label-css
+- https://v4-alpha.getbootstrap.com/
+*/
+
+body {
+  position: relative;
+  max-width: 25rem;
+  margin: 2rem auto;
+}
+
+.poweredByxBr {
+  display: block;
+  padding: 10px;
+  position: absolute;
+  z-index: -1;
+  top: 1rem;
+  left: 100%;
+  margin-left: -62px;
+  transition: all .2s;
+}
+.poweredByxBr:hover {
+  margin-left: 0;
+}
+
+
+.poweredBy {
+  display: block;
+  padding: 10px;
+  position: absolute;
+  z-index: -1;
+  top: 2.5rem;
+  left: 100%;
+  margin-left: -92px;
+  transition: all .2s;
+}
+.poweredBy:hover {
+  margin-left: 0;
+}

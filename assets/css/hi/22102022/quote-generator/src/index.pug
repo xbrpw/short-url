@@ -1,0 +1,15 @@
+#app
+  figure
+    blockquote
+      p(v-html='splitQuote')
+      span.quote__before “
+      span.quote__after ”
+
+    figcaption
+      span.caption__line
+      p {{ quoteAuthor }}
+  
+  button(@click='newQuote') New Quote
+    
+footer
+  p Quotes using #[a(href='https://forismatic.com/en/' target='_blank') Forismatic] API

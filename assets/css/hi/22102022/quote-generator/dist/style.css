@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo|Lekton|Signika");
+:root {
+  font-size: 20px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2A2A2A;
+  overflow: hidden;
+}
+
+footer {
+  position: absolute;
+  bottom: 1em;
+  color: #1A1A1A;
+}
+
+a {
+  color: white;
+  opacity: 0.1;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+button {
+  display: block;
+  margin: 4em auto 0;
+  padding: 0.25em 0;
+  font-family: "Lekton";
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: none;
+  border-bottom: 1px solid #BF9F00;
+  color: #BF9F00;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.4s, border-color 0.4s;
+}
+button:hover {
+  color: #735f00;
+  border-color: #735f00;
+}
+button:focus {
+  outline: 0;
+}
+
+blockquote {
+  font-size: 2.25em;
+  font-family: "Cardo";
+  line-height: 1.4;
+  color: #E8E8E8;
+  max-width: 750px;
+  position: relative;
+}
+
+span {
+  display: inline-block;
+}
+
+figcaption {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  font-family: "Lekton";
+  font-size: 1.4em;
+  color: #BF9F00;
+  overflow: hidden;
+}
+
+.quote__before, .quote__after {
+  position: absolute;
+  font-family: "Signika";
+  font-size: 9.4em;
+  line-height: 0;
+  color: #202020;
+  z-index: -10;
+}
+
+.quote__before {
+  top: 0.3em;
+  left: -0.2em;
+}
+
+.quote__after {
+  top: 0.45em;
+  right: -0.2em;
+}
+
+.caption__line {
+  width: 1em;
+  height: 1px;
+  margin-right: 0.75em;
+  background: white;
+  opacity: 0.25;
+}

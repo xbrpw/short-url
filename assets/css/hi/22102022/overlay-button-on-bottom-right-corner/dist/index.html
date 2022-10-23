@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Overlay Button On Bottom Right Corner</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+<div class="bottom-buttons" onclick="openCloseButtonsContainer()">
+        <i class='bx bx-plus'></i>
+    </div>
+
+   <div id="bottom-buttons-container" class="hidden-buttons">
+       <a href="#" target="__blank">
+        <div class="bottom-buttons bottom-button whatsapp">
+            <i class='bx bxl-whatsapp' ></i>
+            <span class="tooltip">Contactez moi sur whatsapp</span>
+        </div>
+       </a>
+       <a href="#" attributes-list target="__blank">
+        <div class="bottom-buttons bottom-button pdf">
+            <i class='bx bx-download'></i>
+            <span class="tooltip">Télechargez mon resume (pdf)</span>
+        </div>
+       </a>
+       
+   </div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

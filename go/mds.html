@@ -166,9 +166,33 @@ $("#myInput").on("keyup", function() {
 
  -->
 
+<a href="#elFin" id="elInicio">Ir al final</a>
 
- <div class="container">
 
+<div class="container w3-container"><br><br>
+  <input class="form-control" id="myInput" type="text" placeholder=" Buscar..." class="list-group list-group-item" ><br><br>
+  <table class="w3-table-all w3-large">   
+    <tr>
+      <td>
+        <ul class="list-group" id="myList">
+        <ul id="idFilter" style="list-style: none; margin-left: 0%; padding-left: 0%;"  >
+        <ul id="cssFAV" style="  list-style-type: none;margin: 0;padding: 0;" >
+            <li  w3-repeat="snipdoradafav" style="list-style-type: none;margin: 0;padding: 0;" >
+              <a href={{url}} class="list-group-item"> {{fav}}    
+            <i class="fas fa-external-link-alt" style="float: right;"  onclick="document.location='{{url}}'">  </i></a>           
+            </li>       
+        </ul>
+        </ul>
+        </ul>
+    </td>
+      <td><!-- Por agregar la dlove --></td>
+      <td><!-- Por agregar la de fav --></td>
+    </tr>    
+  </table>
+</div>
+
+<!-- ya no es solicitado para esta busqueda, gracias -->
+ <div class="container" hidden>
  <br><br>
   <input class="form-control" id="myInput" type="text" placeholder=" Buscar..." class="list-group list-group-item" >
   <br>
@@ -182,7 +206,7 @@ $("#myInput").on("keyup", function() {
   </ul>
   </ul>
   </ul>
-  </div>
+</div>
 
 
 
@@ -1087,7 +1111,54 @@ $("#myInput").on("keyup", function() {
 {"fav" : "templete-modal-levantamiento.html","url" : "https://www.xbr.pw/assets/css/hi/16102022/templete-modal-levantamiento.html"},
 {"fav" : "sheetsu-monkey.html","url" : "https://www.xbr.pw/assets/css/hi/22102022/form/index.html"},
 {"fav" : "starts.html","url" : "https://www.xbr.pw/assets/css/hi/22102022/bdmenu.html"},
-{"fav" : "templete-modal-levantamiento.html","url" : "https://www.xbr.pw/assets/css/hi/22102022/tipoapp.html"}
+{"fav" : "templete-modal-levantamiento.html","url" : "https://www.xbr.pw/assets/css/hi/22102022/tipoapp.html"},
+{"fav" : "animated-toast-snackbar-with-progressbar/","url" : "./hi/22102022/animated-toast-snackbar-with-progressbar/dist/index.html"},
+{"fav" : "back-to-home/","url" : "./hi/22102022/back-to-home/dist/index.html"},
+{"fav" : "bootstrap-cardexpandable-information/","url" : "./hi/22102022/bootstrap-cardexpandable-information/dist/index.html"},
+{"fav" : "button-hover/","url" : "./hi/22102022/button-hover/dist/index.html"},
+{"fav" : "canvas-flame/","url" : "./hi/22102022/canvas-flame/dist/index.html"},
+{"fav" : "carousel-with-progress-bar/","url" : "./hi/22102022/carousel-with-progress-bar/dist/index.html"},
+{"fav" : "codepen-challengepumpkins/","url" : "./hi/22102022/codepen-challengepumpkins/dist/index.html"},
+{"fav" : "codepenchallenge-ghostsloader-animation-gengar/","url" : "./hi/22102022/codepenchallenge-ghostsloader-animation-gengar/dist/index.html"},
+{"fav" : "construction-scene/","url" : "./hi/22102022/construction-scene/dist/index.html"},
+{"fav" : "countdown/","url" : "./hi/22102022/countdown/dist/index.html"},
+{"fav" : "creative-menu-hover-effects-html-css/","url" : "./hi/22102022/creative-menu-hover-effects-html-css/dist/index.html"},
+{"fav" : "css-only-form-wizard/","url" : "./hi/22102022/css-only-form-wizard/dist/index.html"},
+{"fav" : "css-rate-your-experience/","url" : "./hi/22102022/css-rate-your-experience/dist/index.html"},
+{"fav" : "css-transition-visibility/","url" : "./hi/22102022/css-transition-visibility/dist/index.html"},
+{"fav" : "daily-ui-016/","url" : "./hi/22102022/daily-ui-016/dist/index.html"},
+{"fav" : "details-summary-demo/","url" : "./hi/22102022/details-summary-demo/dist/index.html"},
+{"fav" : "dynamic-image-sizing-optimization/","url" : "./hi/22102022/dynamic-image-sizing-optimization/dist/index.html"},
+{"fav" : "etiqueta/","url" : "./hi/22102022/etiqueta/dist/index.html"},
+{"fav" : "event-calendar-widget/","url" : "./hi/22102022/event-calendar-widget/dist/index.html"},
+{"fav" : "event-calendar-widget-non-demo/","url" : "./hi/22102022/event-calendar-widget-non-demo/dist/index.html"},
+{"fav" : "font-generator/","url" : "./hi/22102022/font-generator/dist/index.html"},
+{"fav" : "form-creator-4-sortablejs-and-jodit/","url" : "./hi/22102022/form-creator-4-sortablejs-and-jodit/dist/index.html"},
+{"fav" : "jumbotron/","url" : "./hi/22102022/jumbotron/dist/index.html"},
+{"fav" : "just-text-utilities/","url" : "./hi/22102022/just-text-utilities/dist/index.html"},
+{"fav" : "minimalist-white-space-usage/","url" : "./hi/22102022/minimalist-white-space-usage/dist/index.html"},
+{"fav" : "multiline-button/","url" : "./hi/22102022/multiline-button/dist/index.html"},
+{"fav" : "overlay-button-on-bottom-right-corner/","url" : "./hi/22102022/overlay-button-on-bottom-right-corner/dist/index.html"},
+{"fav" : "password-toggle-microinteraction/","url" : "./hi/22102022/password-toggle-microinteraction/dist/index.html"},
+{"fav" : "pen-export-abGLjvL/","url" : "./hi/22102022/pen-export-abGLjvL/dist/index.html"},
+{"fav" : "pen-export-mdXgZqL/","url" : "./hi/22102022/pen-export-mdXgZqL/dist/index.html"},
+{"fav" : "pen-export-NWymZXJ/","url" : "./hi/22102022/pen-export-NWymZXJ/dist/index.html"},
+{"fav" : "pen-export-WNJNZpj/","url" : "./hi/22102022/pen-export-WNJNZpj/dist/index.html"},
+{"fav" : "pen-export-XWqyvgB/","url" : "./hi/22102022/pen-export-XWqyvgB/dist/index.html"},
+{"fav" : "pokerangers-app-ringtone-pokemon-power-rangers/","url" : "./hi/22102022/pokerangers-app-ringtone-pokemon-power-rangers/dist/index.html"},
+{"fav" : "pure-css-and-has-button-bar/","url" : "./hi/22102022/pure-css-and-has-button-bar/dist/index.html"},
+{"fav" : "quote-generator/","url" : "./hi/22102022/quote-generator/dist/index.html"},
+{"fav" : "react-drawer-with-css-controls/","url" : "./hi/22102022/react-drawer-with-css-controls/dist/index.html"},
+{"fav" : "responsive-nft-dashboard-with-tailwind-css/","url" : "./hi/22102022/responsive-nft-dashboard-with-tailwind-css/dist/index.html"},
+{"fav" : "v-calendar-master/","url" : "./hi/22102022/v-calendar-master/dist/index.html"},
+{"fav" : "veiviser/","url" : "./hi/22102022/veiviser/dist/index.html"},
+{"fav" : "descarga.jpg","url" : "./hi/22102022/descarga.jpg"},
+{"fav" : "desktop.ini","url" : "./hi/22102022/desktop.ini"},
+{"fav" : "il_340x270.759148802_5tkz.jpg","url" : "./hi/22102022/il_340x270.759148802_5tkz.jpg"},
+{"fav" : "logos1.jpg","url" : "./hi/22102022/logos1.jpg"},
+{"fav" : "mozilla.html","url" : "./hi/22102022/mozilla.html"},
+{"fav" : "my-new-file.txt","url" : "./hi/22102022/my-new-file.txt"},
+{"fav" : "propy.txt","url" : "./hi/22102022/propy.txt"}
 
 
 
@@ -1162,7 +1233,8 @@ $("#myInput").on("keyup", function() {
 <iframe  id="DemoShow" class="city"  src="{{url}}" name="copy" height="580px " width="100% " title="Copy" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>          
 </div> -->
 <script>w3.displayObject("cssFAV", myObject);</script> 
-
+<div id="elFin"></div>
+<a href="#elInicio">El inicio</a>
 <!-- ༼ つ ◕_◕ ༽つ Please share ༼ つ ◕_◕ ༽つ Please share  ༼ つ ◕_◕ ༽つ Please share <div class="offcanvas offcanvas-start" id="demo">
 <div class="offcanvas-header">
   <h1 class="offcanvas-title">Heading</h1>

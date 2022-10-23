@@ -1,0 +1,106 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: flex-start;
+  
+  padding: 1rem;
+  height: 100vh;
+  overflow: hidden;
+  background: #E2EFF9;
+}
+
+.input {
+  width: 100%;
+  max-width: 260px;
+  
+  background: white;
+  border: 1px solid #D3D9E8;
+  border-radius: 4px;
+  transition: border 0.2s;
+  
+  position: relative;
+  
+  &:focus-within {
+    border-color: #60C1F8;
+    outline: none;
+  }
+  
+  &__password {
+    width: 100%;
+    padding: 0.8em;
+    padding-right: 2.6em;
+    
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background: none;
+    border: none;
+    border-radius: inherit;
+    outline: none;
+    
+    &:hover, &:focus {
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+    
+    &::placeholder {
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+  }
+  
+  &__text {
+    @extend .input__password;
+    transform: scaleY(0);
+      
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0;
+  }
+  
+  &__icon {
+    position: absolute;
+    top: 33%; right: 0.7em;
+  }
+}
+
+#eye {
+  width: 20px;
+  cursor: none;
+  overflow: visible;
+}
+
+#hover {
+  display: inline-block;
+  cursor: none;
+  
+  &:hover {
+    #cursor { display: block; }
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -3em; bottom: -3em;
+    left: -2.5em; right: -4em;
+  }
+}
+
+#cursor {
+  display: none;
+  width: 38px;
+  height: 38px;
+  
+  position: fixed;
+  left: -8px;
+  top: -6px;
+  
+  pointer-events: none;
+  user-select: none;
+}

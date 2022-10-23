@@ -1,0 +1,41 @@
+.row-pic
+  z-index: 1
+  overflow: hidden
+
+.picture
+  height: 200px
+  width: 100%
+  position: relative
+  margin-bottom: 20px
+  &:before
+    background: aquamarine
+    content: ''
+    position: absolute
+    height: 100%
+    width: 100%
+    transform: skewX(10deg)
+    transform-origin: 100% 100%
+    opacity: .8
+  
+.description
+  background: gold
+  margin-top: 20px
+  height: 100%
+  display: flex
+  align-items: center
+  margin-left: -40px
+  position: relative
+  z-index: 0
+  &:before
+    position: absolute
+    content: ''
+    height: 100%
+    width: 100%
+    background: gold
+    z-index: -1
+    transform: skewX(10deg)
+    transform-origin: 100% 100%
+
+  p
+    margin: 0
+    padding: 50px

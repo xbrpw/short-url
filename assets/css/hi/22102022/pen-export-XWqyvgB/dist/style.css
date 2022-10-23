@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: url("https://images.unsplash.com/photo-1574097161485-19ba062d62f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.shape-wrap {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.shape {
+  width: 500px;
+  height: 200px;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 85% 41%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 85% 41%, 100% 0%);
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+}
+.shape h1 {
+  width: 67%;
+  color: white;
+  font-family: kepler-std;
+  font-weight: 400;
+  font-size: 2.4em;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.weird-shape__wrap {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.weird-shape {
+  background: #c8102e;
+  background: linear-gradient(90deg, #c8102e 0%, tomato 91%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 200px;
+  width: 500px;
+  -webkit-clip-path: polygon(100% 0%, 80% 60%, 50% 55%, 10% 75%, 0% 55%, 0% 0%);
+          clip-path: polygon(100% 0%, 80% 60%, 50% 55%, 10% 75%, 0% 55%, 0% 0%);
+}
+.weird-shape h1,
+.weird-shape h2 {
+  margin: 0 0 0 20px;
+  padding: 0;
+  color: white;
+}
+.weird-shape h1 {
+  font-family: kepler-std;
+  font-weight: 400;
+  font-size: 2.4em;
+  margin-top: 20px;
+}
+.weird-shape h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: brandon-grotesque;
+  font-weight: 400;
+}

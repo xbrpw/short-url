@@ -1,0 +1,105 @@
+:root {
+	--bg: #f4f4f4;
+	--fg: #262626;
+	--ff: -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+}
+
+
+html {
+	font-family: var(--ff);
+	font-size: 100%;
+	block-size: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	text-rendering: optimizeSpeed;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	block-size: 100%;
+	font-size: 1rem;
+	font-weight: 400;
+	background-color: var(--bg);
+	color: var(--fg);
+}
+
+/*--------------------------
+	Some global flow defaults
+---------------------------*/
+
+body {
+	padding-inline: 5vmin
+}
+
+body > * {
+	padding-block: 5vmin
+}
+
+* > * { 
+	margin-block-end: 1em;
+}
+
+:is(p, ul ,ol, dl) {
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+:is(p, ul, ol, dl) + :where(h2, h3, h4) {
+	margin-block-start: 1em;
+}
+
+:is(ul, ol, dd):not(.list) {
+	margin-inline-start: 1rem;
+}
+
+/*--------------------------
+	JTU (Just Text Utilities)
+---------------------------*/
+
+.fs0 { font-size: clamp(3.05rem, calc(-0.20rem + 16.27vw), 11.39rem) }
+.fs1 { font-size: clamp(2.44rem, calc(0.43rem + 10.05vw), 7.59rem) }
+.fs2 { font-size: clamp(1.95rem, calc(0.74rem + 6.07vw), 5.06rem) }
+.fs3 { font-size: clamp(1.56rem, calc(0.86rem + 3.54vw), 3.38rem) }
+.fs4 { font-size: clamp(1.25rem, calc(0.86rem + 1.95vw), 2.25rem) }
+.fs5 { font-size: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem) }
+.fs6 { font-size: clamp(0.80rem, calc(0.72rem + 0.39vw), 1.00rem) }
+
+.fw1 { font-weight: 100 }
+.fw2 { font-weight: 200 }
+.fw3 { font-weight: 300 }
+.fw4 { font-weight: 400 }
+.fw5 { font-weight: 500 }
+.fw6 { font-weight: 600 }
+.fw7 { font-weight: 700 }
+.fw8 { font-weight: 800 }
+.fw9 { font-weight: 900 }
+
+.lh-copy { line-height: calc(0.5rem + 1em) }
+.lh-title { line-height: calc(0.2rem + 1em) }
+
+.ttu { text-transform: uppercase }
+.tc { text-align: center }
+
+.ls-tight { letter-spacing: -.05em }
+.ls-loose { letter-spacing: .5em }
+
+.m { max-inline-size: 45ch }
+.m-wide { max-inline-size: 55ch }
+.m-short { max-inline-size: 20ch }
+
+.list { list-style: none }
+
+.col {
+	display: grid;
+	grid-gap: 0 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), max-content));
+}

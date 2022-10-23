@@ -1,0 +1,64 @@
+.bottom-buttons{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 9999;
+    background: black;
+    height: 50px;
+    width: 50px;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+.bottom-button .tooltip{
+    position: absolute !important;
+    top: -20px !important;
+    right: calc(100% + 15px) !important;
+    z-index: 3 !important;
+    background: #fff !important;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    opacity: 0 !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
+    transition: 0s !important;
+    color: black;
+}
+.bottom-button:hover .tooltip{
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: all 0.4s ease !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.whatsapp  {
+    bottom: 110px;
+    font-size: 30px;
+    background: #00E676;
+}
+
+
+.pdf{
+    bottom: 170px;
+    font-size: 30px;
+    background: #a00c0c;
+}
+
+.hidden-buttons{
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+.show-bottom-fixed-buttons{
+    opacity: 1;
+    height: auto;
+}

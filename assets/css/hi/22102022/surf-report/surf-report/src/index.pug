@@ -1,0 +1,68 @@
+#report(v-bind:class="{ 'is-active': isActive, 'is-loading': isLoading }")
+  header.header
+    .header__container
+      h1.header__title SURF REPORT
+      h2.header__subtitle {{ subtitle }}
+  .locations
+    .locations__container
+      .locations__option(v-for="surfBreak in surfBreaks")
+        input(type="radio" name="breaks" v-model="current" v-bind:value="surfBreak" v-bind:id="surfBreak.id" v-bind:class="{ 'surfbreak': true, 'surfbreak--is-active': surfBreak.id === activeSurfBreak.id }")
+        label(v-bind:for="surfBreak.id")
+          span {{ surfBreak.name }}
+  .components
+    .components__row.components__row--2-1
+      .component.component--red.component--big(data-type="surf-height")
+        header.component__title
+          h4 SURF HEIGHT
+        main.component__main
+          span.txt-large(v-if="surfRange !== ' - <span>ft</span>'" v-html="surfRange")
+          ul.column-breakdown.column-breakdown--swell
+            li(v-for="swell in swells")
+              | {{ swell.height }}&rsquo; <span>{{swell.period}}sec {{ swell.direction }}</span>
+
+      .component.component--blue.component--small(data-type="temperature")
+        header.component__title
+          h4 SWELL MAP
+        main.component__main
+          .map
+          .compass
+            .compass__dir(v-for="swell in swells")
+              div(:style="'transform: rotate(' + swell.angle + 'deg)'")
+                svg(xmlns="http://www.w3.org/2000/svg" width="156.1" height="405.1" viewBox="0 0 156.1 405.1")
+                  g(fill="#fff")
+                    path(d="M131.7 130.3c-34.4-6.9-70.7-7.2-107.3.1l-9.8-49c43.2-8.6 86.1-8.2 126.8-.1l-9.7 49z")
+                    path(d="M146.3 56.7c-43.8-8.7-90-9.2-136.6.1L0 7.8C53.2-2.8 106-2.3 156.1 7.7l-9.8 49z")
+                    //- circle(cx="78.1" cy="400.1" r="5")
+
+    .components__row.components__row--2-1
+      .component.component--blue.component--big(data-type="tide")
+        header.component__title
+          h4 TIDE
+        main.component__main
+          #tide-graph
+          ul.column-breakdown.column-breakdown--tide(:data-count="tide.extremes.length")
+            li(v-for="extreme in tide.extremes")
+              h4 {{ extreme.height }}&rsquo;
+                span {{ extreme.type }}
+                span {{ extreme.time }}
+
+      .component.component--blue.component--small(data-type="wind")
+        header.component__title
+          h4 WIND
+        main.component__main
+          span.txt-large(v-if="wind.speed !== ''") {{wind.speed}} <span>kts</span>
+          span {{wind.direction}}
+
+    .components__row.components__row--1-1
+      .component.component--blue(data-type="sun")
+        header.component__title
+          h4 SUNSET/SUNRISE
+        main.component__main
+          span.txt-medium(v-if="sunRange !== ' - '" v-html="sunRange")
+
+      .component.component--blue.component--big(data-type="temperature")
+        header.component__title
+          h4 TEMPERATURE
+        main.component__main
+          span.txt-large(v-if="tempRange !== ' - '") {{temperature.min}} - {{temperature.max}}º
+          span(v-if="tempRange !== ' - '") farenheit

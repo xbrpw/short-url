@@ -1,0 +1,12 @@
+<form>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}" id="email" required type="email" title="must be a valid email address">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input title="Must be at least 8 characters" pattern="[a-zA-Z0-9]{8,}" id="password" required type="password">
+    <p class="input-hint">Must be at least 8 characters</p>
+  </div>
+  <button>Submit</button>
+</form>

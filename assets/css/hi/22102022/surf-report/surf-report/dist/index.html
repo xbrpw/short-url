@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Surf Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="report" v-bind:class="{ 'is-active': isActive, 'is-loading': isLoading }">
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title">SURF REPORT</h1>
+      <h2 class="header__subtitle">{{ subtitle }}</h2>
+    </div>
+  </header>
+  <div class="locations">
+    <div class="locations__container">
+      <div class="locations__option" v-for="surfBreak in surfBreaks">
+        <input type="radio" name="breaks" v-model="current" v-bind:value="surfBreak" v-bind:id="surfBreak.id" v-bind:class="{ 'surfbreak': true, 'surfbreak--is-active': surfBreak.id === activeSurfBreak.id }"/>
+        <label v-bind:for="surfBreak.id"><span>{{ surfBreak.name }}</span></label>
+      </div>
+    </div>
+  </div>
+  <div class="components">
+    <div class="components__row components__row--2-1">
+      <div class="component component--red component--big" data-type="surf-height">
+        <header class="component__title">
+          <h4>SURF HEIGHT</h4>
+        </header>
+        <main class="component__main"><span class="txt-large" v-if="surfRange !== ' - &lt;span&gt;ft&lt;/span&gt;'" v-html="surfRange"></span>
+          <ul class="column-breakdown column-breakdown--swell">
+            <li v-for="swell in swells">{{ swell.height }}&rsquo; <span>{{swell.period}}sec {{ swell.direction }}</span></li>
+          </ul>
+        </main>
+      </div>
+      <div class="component component--blue component--small" data-type="temperature">
+        <header class="component__title">
+          <h4>SWELL MAP</h4>
+        </header>
+        <main class="component__main">
+          <div class="map"></div>
+          <div class="compass">
+            <div class="compass__dir" v-for="swell in swells">
+              <div :style="'transform: rotate(' + swell.angle + 'deg)'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="156.1" height="405.1" viewBox="0 0 156.1 405.1">
+                  <g fill="#fff">
+                    <path d="M131.7 130.3c-34.4-6.9-70.7-7.2-107.3.1l-9.8-49c43.2-8.6 86.1-8.2 126.8-.1l-9.7 49z"></path>
+                    <path d="M146.3 56.7c-43.8-8.7-90-9.2-136.6.1L0 7.8C53.2-2.8 106-2.3 156.1 7.7l-9.8 49z"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="components__row components__row--2-1">
+      <div class="component component--blue component--big" data-type="tide">
+        <header class="component__title">
+          <h4>TIDE</h4>
+        </header>
+        <main class="component__main">
+          <div id="tide-graph"></div>
+          <ul class="column-breakdown column-breakdown--tide" :data-count="tide.extremes.length">
+            <li v-for="extreme in tide.extremes">
+              <h4>{{ extreme.height }}&rsquo;<span>{{ extreme.type }}</span><span>{{ extreme.time }}</span></h4>
+            </li>
+          </ul>
+        </main>
+      </div>
+      <div class="component component--blue component--small" data-type="wind">
+        <header class="component__title">
+          <h4>WIND</h4>
+        </header>
+        <main class="component__main"><span class="txt-large" v-if="wind.speed !== ''">{{wind.speed}} <span>kts</span></span><span>{{wind.direction}}</span></main>
+      </div>
+    </div>
+    <div class="components__row components__row--1-1">
+      <div class="component component--blue" data-type="sun">
+        <header class="component__title">
+          <h4>SUNSET/SUNRISE</h4>
+        </header>
+        <main class="component__main"><span class="txt-medium" v-if="sunRange !== ' - '" v-html="sunRange"></span></main>
+      </div>
+      <div class="component component--blue component--big" data-type="temperature">
+        <header class="component__title">
+          <h4>TEMPERATURE</h4>
+        </header>
+        <main class="component__main"><span class="txt-large" v-if="tempRange !== ' - '">{{temperature.min}} - {{temperature.max}}º</span><span v-if="tempRange !== ' - '">farenheit</span></main>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.4/Tween.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

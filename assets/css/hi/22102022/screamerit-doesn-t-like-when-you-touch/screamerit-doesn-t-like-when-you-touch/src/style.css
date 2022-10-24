@@ -1,0 +1,148 @@
+html{
+  background: rgba(30,30,30,1);
+  height: 100%;
+  min-height: 100%;
+  transition: all 1s ease;
+}
+.hot {
+  background: rgba(60,30,30,1);
+}
+.screamer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20vw;
+  height: 20vw;
+  background: rgba(60,180,255,1);
+  border-radius: 50%;
+  margin: -10vw -10vw;
+  transition: all 1s ease, height .5s ease, background 1.5s ease;
+}
+.screamer:hover {
+  width: 40vw;
+  height: 40vw;
+  margin: -20vw -20vw;
+  background: rgba(255,100,60,1);
+  animation: shake .15s infinite;
+}
+@keyframes "shake" {
+  0% {
+  top: 50%;
+  left: 50%;
+  }
+  25% {
+  top: 50%;
+  left: 49%;
+  }
+  50% {
+  top: 50%;
+  left: 50%;
+  }
+  75% {
+  top: 50%;
+  left: 51%;
+  }
+  100% {
+  top: 50%;
+  left: 50%;
+  }
+}
+.lefteye,.righteye {
+  z-index: 999;
+  background: rgba(20,120,200,1);
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  top: 25%;
+  transition: all 1s ease;
+}
+.lefteye {
+  left: 25%;
+}
+.righteye {
+  right: 25%;
+}
+.screamer:hover .lefteye {
+  top: 15%;
+  left: 15%;
+  width: 3vw;
+  transform: rotate(-45deg);
+  background: rgba(20,0,0,1);
+}
+.screamer:hover .righteye {
+  top: 15%;
+  right: 15%;
+  width: 3vw;
+  transform: rotate(45deg);
+  background: rgba(20,0,0,1);
+}
+.mouth {
+  z-index: 999;
+  background: rgba(20,120,200,1);
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 10vw;
+  height: .5vw;
+  margin-left: -5vw;
+  border-radius: 50%;
+  transition: all 1s ease;
+}
+.screamer:hover .mouth {
+  height: 16vw;
+  width: 16vw;
+  margin-left: -8vw;
+  border-radius: 50% 50% 10% 10%;
+  animation: wiggle .25s infinite;
+  background: rgba(20,0,0,1);
+}
+@keyframes "wiggle" {
+  0% {
+    left: 48%;
+    bottom: 22%;
+  }
+  25% {
+    left: 50%;
+    bottom: 18%;
+  }
+  50% {
+    left: 52%;
+    bottom: 22%;
+  }
+  75% {
+    left: 50%;
+    bottom: 18%;
+  }
+  100% {
+    left: 48%;
+    bottom: 22%;
+  }
+}
+.leftear,.rightear {
+  z-index: 0;
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  background: rgba(60,180,255,1);
+  top: 40%;
+  transition: all 1.5s ease;
+}
+.leftear {
+  border-radius: 50% 0 0 50%;
+  left: -1.5vw;
+}
+.rightear {
+  border-radius: 0 50% 50% 0;
+  right: -1.5vw;
+}
+.screamer:hover .leftear {
+  background: rgba(255,100,60,1);
+  left: -2vw;
+  height: 7vw;
+}
+.screamer:hover .rightear {
+  background: rgba(255,100,60,1);
+  right: -2vw;
+  height: 7vw;
+}

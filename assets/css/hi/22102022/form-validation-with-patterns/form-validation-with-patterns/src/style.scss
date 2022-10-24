@@ -1,0 +1,45 @@
+form {
+  display: grid;
+  gap: 1.5rem;
+  width: min(20rem, 100%);
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.input-hint {
+  margin: 0;
+  font-size: 1rem;
+  color: hsl(0 0% 70%);
+}
+
+/* general styling */
+html {
+  color-scheme: dark light;
+}
+
+body {
+  font-size: 1.5rem;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+input,
+button {
+  padding: 0.5rem 0.75rem;
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: hsl(175 60% 40%);
+  border: 0;
+  border-radius: 0.25rem;
+}

@@ -180,13 +180,13 @@ body {
   display: block;
   position: relative;
   padding-top: 150%;
-  background-image: url("./c.png");
+  background-image: url("./d.png");
   background-size: calc(var(--card-width) * 5);
   transition: opacity 0.3s;
 }
 
 .special .card__front::after {
-  background-image: url("./d.png");
+  background-image: url("./c.png");
 }
 
 .card-0 .card__front::after {

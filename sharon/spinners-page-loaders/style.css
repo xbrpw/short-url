@@ -7,7 +7,7 @@
     }
     
     body {
-        background: black;
+        background: #010102;
     }
     
     .container {
@@ -18,18 +18,26 @@
         width: 30%;
         display: inline-block;
         text-align: center;
-        min-height: 215px;
+        min-height: 107.5px;
         vertical-align: top;
         margin: 1%;
-        background: #080915;
+        background: #04050c;
         border-radius: 5px;
-        box-shadow: 0px 0px 30px 1px #103136 inset;
+        box-shadow: 0px 0px 30px 1px #000000 inset;
     }
 
 @media only screen and (max-width: 600px) {
-  section {
-    min-width: 350px;
-  }
+    section {
+        width: 44%;
+        display: inline-block;
+        text-align: center;
+        min-height: 107.5px;
+        vertical-align: top;
+        margin: 1%;  
+        background: #04050c;
+        border-radius: 5px;
+        box-shadow: 0px 0px 15px 1px #000000 inset;
+    }
 }
     
     .loader {

@@ -1,0 +1,73 @@
+/* 
+Built By Vets 
+  Carla Kroll https://codepen.io/ckroll17/
+  Jacob Oakley https://codepen.io/jacoboakley/ 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+/* 
+- CSS for the page. Components styles are inline 
+- Set the size of the font to 3 vmin to creat a responsive h1 that shrinks and expands based on the viewport. 
+*/
+html, body {
+  background: radial-gradient(ellipse at center, #89e1c9 0%,#6eba9e 91%);
+  color: white;
+  font-family: 'Sacramento', cursive;
+  font-size: 3vmin;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
+}
+
+#Gift{
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+#giftTag, #notYet{
+	font-family: 'Playfair Display', serif;
+	margin-top: -5px;
+}
+
+.hide{
+	display:none
+}
+
+svg {
+	position:relative;
+}
+
+.lid{
+/* 	position:relative; */
+	animation: move2 750ms linear forwards;
+}
+
+.pup, .hat{
+	animation: pupOut 1500ms linear forwards;
+}
+
+@keyframes move2 {
+  0% { transform: translateY(0px);
+  }
+	10% { transform: translateY(30px);
+  }
+	21% { transform: translateY(30px);
+  }
+  100%   { transform: translateY(-320px);
+  }
+}
+	
+	@keyframes pupOut {
+		0% { transform: translateY(0px);
+		}
+		22% { transform: translateY(0px);
+		}
+		45%   { transform: translateY(-50px);
+		}
+		65%   { transform: translateY(-50px);
+		}
+		100%   { transform: translateY(-128px);
+		}
+	}

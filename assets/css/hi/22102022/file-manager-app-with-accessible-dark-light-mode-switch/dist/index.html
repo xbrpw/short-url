@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - File manager app (with accessible dark/ light mode switch)</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body class="ini--bg ini--fg" style="--mode: 0; --ssum: 256; --unit: 'gb'; --used: 154; --perc: 60; --col0: #feb95a; --col1: #f2c8ee; --col2: #20bfa9; --col3: #ee786c">
+  <svg width="0" height="0">
+    <symbol id="f0" viewBox="0 0 90 80" fill="currentcolor" stroke="currentcolor" stroke-linejoin="round">
+      <rect id="r" x="20" y="15" width="50" height="30" rx="5"></rect>
+      <use xlink:href="#r" style="color: rgba(0, 0, 0, .5)"></use>
+      <path d="M20 26v38h50v-26h-25l-10-12z" stroke-width="10"></path>
+    </symbol>
+  </svg>
+  <div id="app">
+    <div class="view view--main sec--bg">
+      <header>
+        <nav class="ctrl">
+          <button aria-label="no fucking idea what this button is supposed to do"></button>
+          <button aria-haspopup="true" aria-expanded="false" aria-controls="pop-opts-main">general options</button>
+          <form class="popup ini--bg" id="pop-opts-main">
+            <ul>
+              <li class="wrap wrap--mode">
+                <input id="mode-dark" type="radio" name="mode" value="0" checked="checked"/>
+                <label for="mode-dark" style="--idx: 0">switch to dark mode</label>
+                <input id="mode-lght" type="radio" name="mode" value="1"/>
+                <label for="mode-lght" style="--idx: 1">switch to light mode</label>
+              </li>
+            </ul>
+          </form>
+        </nav>
+      </header>
+      <div class="main">
+        <div class="wrap wrap--slides">
+          <div class="slide ini--bg dummy">fuck knows what you're supposed to have here</div>
+          <div class="slide ini--bg dummy">fuck knows what you're supposed to have here</div>
+          <div class="slide ini--bg ini--fg">
+            <div class="chart">
+              <div class="arc" style="--cum: 0.1875; --rel: 0.1875; --col: #feb95a"></div>
+              <div class="arc" style="--cum: 0.25; --rel: 0.0625; --col: #f2c8ee"></div>
+              <div class="arc" style="--cum: 0.4625; --rel: 0.2125; --col: #20bfa9"></div>
+              <div class="arc" style="--cum: 0.6; --rel: 0.1375; --col: #ee786c"></div>
+            </div>
+            <div class="total"></div>
+            <div class="used"></div>
+          </div>
+        </div>
+        <div class="wrap wrap--types">
+          <article class="tile ftyp ini--bg songs" style="--col: #feb95a">
+            <header>
+              <svg class="ico">
+                <use xlink:href="#f0"></use>
+              </svg>
+              <h3>songs</h3>
+              <nav class="ctrl">
+                <button class="sec--fg" aria-haspopup="true" aria-expanded="false" aria-controls="pop-opts-songs">songs options</button>
+                <form class="popup sec--bg dummy" id="pop-opts-songs">here you'd have some options to do some stuff</form>
+              </nav>
+            </header>
+            <div class="info">
+              <div class="info__num sec--fg">250</div>
+              <div class="info__rel">75</div>
+              <meter class="sec--bg" max="100" value="75"></meter>
+            </div>
+          </article>
+          <article class="tile ftyp ini--bg photos" style="--col: #f2c8ee">
+            <header>
+              <svg class="ico">
+                <use xlink:href="#f0"></use>
+              </svg>
+              <h3>photos</h3>
+              <nav class="ctrl">
+                <button class="sec--fg" aria-haspopup="true" aria-expanded="false" aria-controls="pop-opts-photos">photos options</button>
+                <form class="popup sec--bg dummy" id="pop-opts-photos">here you'd have some options to do some stuff</form>
+              </nav>
+            </header>
+            <div class="info">
+              <div class="info__num sec--fg">4524</div>
+              <div class="info__rel">25</div>
+              <meter class="sec--bg" max="100" value="25"></meter>
+            </div>
+          </article>
+          <article class="tile ftyp ini--bg videos" style="--col: #20bfa9">
+            <header>
+              <svg class="ico">
+                <use xlink:href="#f0"></use>
+              </svg>
+              <h3>videos</h3>
+              <nav class="ctrl">
+                <button class="sec--fg" aria-haspopup="true" aria-expanded="false" aria-controls="pop-opts-videos">videos options</button>
+                <form class="popup sec--bg dummy" id="pop-opts-videos">here you'd have some options to do some stuff</form>
+              </nav>
+            </header>
+            <div class="info">
+              <div class="info__num sec--fg">320</div>
+              <div class="info__rel">85</div>
+              <meter class="sec--bg" max="100" value="85"></meter>
+            </div>
+          </article>
+          <article class="tile ftyp ini--bg documents" style="--col: #ee786c">
+            <header>
+              <svg class="ico">
+                <use xlink:href="#f0"></use>
+              </svg>
+              <h3>documents</h3>
+              <nav class="ctrl">
+                <button class="sec--fg" aria-haspopup="true" aria-expanded="false" aria-controls="pop-opts-documents">documents options</button>
+                <form class="popup sec--bg dummy" id="pop-opts-documents">here you'd have some options to do some stuff</form>
+              </nav>
+            </header>
+            <div class="info">
+              <div class="info__num sec--fg">1200</div>
+              <div class="info__rel">55</div>
+              <meter class="sec--bg" max="100" value="55"></meter>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!--.view.view--favs.sec--bgheader
+    -->
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

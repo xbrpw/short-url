@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - dragging elements with JavaScript (mouse events)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="pin" class="pin"></div>
+<h1>Dragging HTML elements with JavaScript</h1>
+<p>on mousedown:</p>
+<ul>
+  <li>store element start position</li>
+  <li>store mouse start position</li>
+</ul>
+<p>on mousemove:</p>
+<ul>
+  <li>element position = element start position + (current mouse position - mouse start position)</li>
+</ul>
+<p>on mouseup:</p>
+<ul>
+  <li>stop updating element position</li>
+</ul>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+- let data = {
+- 	unit: 'gb', 
+- 	total: 256, 
+- 	types: [
+- 		{ name: 'songs', num: 250, fav: 210, rel: 75, col: '#feb95a' }, 
+- 		{ name: 'photos', num: 4524, fav: 4524, rel: 25, col: '#f2c8ee' }, 
+- 		{ name: 'videos', num: 320, fav: 190, rel: 85, col: '#20bfa9' }, 
+- 		{ name: 'documents', num: 1200, fav: 900, rel: 55, col: '#ee786c' }
+- 	]
+- }
+- data.n = data.types.length;
+- data.types.forEach((c, i) => { c.cum = .01*data.types.map(c => c.rel).slice(0, i + 1).reduce((a, k) => a + k, 0)/data.n });
+
+body.ini--bg.ini--fg(style=`--mode: 0; --ssum: ${data.total}; --unit: '${data.unit}'; --used: ${Math.round(data.types[data.n - 1].cum*data.total)}; --perc: ${Math.round(data.types[data.n - 1].cum*100)}; ${data.types.map((c, i) => `--col${i}: ${c.col}`).join('; ')}`)
+	svg(width='0' height='0')
+		symbol#f0(viewBox='0 0 90 80' fill='currentcolor' stroke='currentcolor' stroke-linejoin='round')
+			rect#r(x='20' y='15' width='50' height='30' rx='5')
+			use(xlink:href='#r' style='color: rgba(0, 0, 0, .5)')
+			path(d='M20 26v38h50v-26h-25l-10-12z' stroke-width='10')
+
+	#app
+		.view.view--main.sec--bg
+			header
+				nav.ctrl
+					button(aria-label='no fucking idea what this button is supposed to do')
+					button(aria-haspopup='true' aria-expanded='false' aria-controls='pop-opts-main') general options
+					form#pop-opts-main.popup.ini--bg
+						ul
+							li.wrap.wrap--mode
+								input#mode-dark(type='radio' name='mode' value='0' checked)
+								label(for='mode-dark' style='--idx: 0') switch to dark mode
+								input#mode-lght(type='radio' name='mode' value='1')
+								label(for='mode-lght' style='--idx: 1') switch to light mode
+			.main
+				.wrap.wrap--slides
+					.slide.ini--bg.dummy fuck knows what you're supposed to have here
+					.slide.ini--bg.dummy fuck knows what you're supposed to have here
+					.slide.ini--bg.ini--fg
+						.chart
+							- for(let i = 0; i < data.n; i++)
+								- let c = data.types[i];
+								.arc(style=`--cum: ${+(c.cum).toFixed(4)}; --rel: ${.01*c.rel/data.n}; --col: ${c.col}`)
+						.total
+						.used
+				.wrap.wrap--types
+					- for(let i = 0; i < data.n; i++)
+						- let c = data.types[i];
+						article.tile.ftyp.ini--bg(class=`${c.name}` style=`--col: ${c.col}`)
+							header
+								svg.ico: use(xlink:href='#f0')
+								h3 #{c.name}
+								nav.ctrl
+									button.sec--fg(aria-haspopup='true' aria-expanded='false' aria-controls=`pop-opts-${c.name}`) #{c.name} options
+									form.popup.sec--bg.dummy(id=`pop-opts-${c.name}`) here you'd have some options to do some stuff
+							.info
+								.info__num.sec--fg #{c.num}
+								.info__rel #{c.rel}
+								meter.sec--bg(max='100' value=c.rel)
+		//.view.view--favs.sec--bg
+			header

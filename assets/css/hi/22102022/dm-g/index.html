@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+  <style>
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+     body  .grey {color:#989898;}
+
+    body .blue {color:#095890;}
+    
+    .dark-mode {
+      background-color: #000000;
+      color: white;
+    }
+
+ /*.dark-mode    .grey {color:#989898;}*/
+    .blue {color:#095890;}
+   
+    </style>
+    
+ 
+    
+    <h2 class="grey">Toggle Dark/Light Mode</h2>
+    <p >Click the button to toggle between dark and light mode for this page.</p>
+    
+    <img src="./goku.svg" class="w3-responsive w3-image" onclick="myFunction()" >
+    <img src="./black.svg" class="w3-responsive w3-image" onclick="myFunction()" >
+    
+    
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+ 
+
+    
+<div class="">
+  
+
+  <button onclick="document.getElementById('id01eso').style.display='block'" class="w3-button w3-black">id01eso</button>
+
+  <div id="id01eso" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01eso').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Modal Header</h2>
+      </header>
+      <div class="w3-container">
+        <p>You have two options to close this modal:</p>
+        <p>Click on the "x" or click anywhere outside of the modal!</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal Footer</p>
+      </footer>
+    </div>
+  </div>
+  
+  
+  <script>
+// Get the modal
+var modal = document.getElementById('id01eso');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</div>
+
+
+<div class="">
+
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-teal" onclick="openCity(event,'London')">London</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Paris</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Tokyo</button>
+  </div>
+  
+  <div id="London" class="w3-container  city" >
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="Paris" class="w3-container  city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p> 
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-teal";
+}
+</script>
+
+</body>
+</html>

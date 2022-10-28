@@ -188,11 +188,67 @@
         background-color: #666;
         color: white;
     }
+
+    .containerNoDownload {
+      position: relative;
+      width: 50%;
+    }
+    
+    .imageNoDownload {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    
+    .overlayNoDownload {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #ffffff;
+    }
+    
+    .containerNoDownload:hover .overlayNoDownload {
+      opacity: 0.01;
+    }
+    </style>
+
+ <style>
+
+
+.overlayd {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 500%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffff;
+}
+
+.containerd:hover .overlayd {
+  opacity: 0.01;
+}
+
+
 </style>
-<script src="https://luisangelmaciel.github.io/js/lazysizes.min.js" rel="preload " as="script " async charset="utf-8 "></script>
 
-<body>
 
+
+  <img src="https://www.luisangelmaciel.one/img/avatar-esfera-4-estrellas.svg" alt="Avatar" class=" w3-image">
+  <div class="overlayd"> <div > <img src="https://www.luisangelmaciel.one/img/avatar-hi-hello-monster.webp" alt="Avatar" class="w3-image"></div>
+  </div>
+
+
+    
 
     <!-- Header -->
     <div class="header" id="myHeader">
@@ -205,11 +261,14 @@
         <button class="btn active" onclick="cinco()">5</button>
     </div>
 
-    <!-- Photo Grid -->
+    <!-- Photo Grid width="165px" height="273.5px"  -->
 
     <div class="row">
-        <div class="column">
-            <img src="https://www.xiiber.com/img/photo-preview-01.webp" style="width:100%" onclick="openModal();currentSlide(1)">
+        <div class="column"  onclick="openModal();currentSlide(1)">            
+                <img src="https://www.luisangelmaciel.one/img/avatar-esfera-4-estrellas.svg" style="width:100%"  title="Imagen Avatar" alt="Avatar" class=" w3-image w3-responsive">                
+                <div class="overlayd">                
+                        <img src="https://www.xiiber.com/img/photo-preview-01.webp" style="width:100%"  alt="Avatar" class="w3-image w3-responsive">                 
+                </div>            
         </div>
         <div class="column">
             <img src="https://www.xiiber.com/img/photo-preview-01.webp" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">

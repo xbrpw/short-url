@@ -1,127 +1,414 @@
-<!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
 
+<!doctype html>
+<html class="no-js" lang="es-MX"><!--!
+    Oh so you're an inspector?
+    View the source here: https://github.com/luisangelmaciel
+  -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <link rel="preload" href="https://mxb.dev/assets/fonts/noe-display-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- <link rel="preconnect" href="https://webmention.io"> -->
+    <link rel="stylesheet" href="./css/main.css"><link rel="stylesheet" href="./css/themes.css">
+    <meta name="description" content="">
+    <meta name="image" content="cover.jpg">
+    <meta property="og:title" content="Multicolores">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://www.xbr.pw">
+    <meta property="og:image" content="og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2022-10-27T00:00:00"><meta name="author" content="Luis Angel Maciel :P">
+    <meta property="og:site_name" content="Luis Angel Maciel :P"><meta property="og:locale" content="en_MX">
+    <meta name="twitter:site" content="@luisangelmaciel"><meta name="twitter:creator" content="@luisangelmaciel">
+    <link rel="canonical" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        (function() {
+          var theme = localStorage.getItem('theme');
+          window.metaColors = {'default':'#f7f7f9','dark':'#252526','beach':'#e3f6f5','choco':'#41312E','moomoo':'#f3e1d8','bowser':'#29293e','yoshi':'#f2ede9','rainbow':'#311b46','lobster':'#ffb9ad','hackernews':'#F8F8EC'};
+          if (theme) {
+              document.documentElement.setAttribute('data-theme', theme);
+              document.querySelector('meta[name="theme-color"]').setAttribute('content', window.metaColors[theme]);
+          }
+      })();
+    </script>
   <style>
     body {
-      padding: 25px;
-      background-color: white;
-      color: black;
-      font-size: 25px;
-    }
-     body  .grey {color:#989898;}
+      /*color: black; */
+      /*background-color: white;*/
+      font-family: "Lato", sans-serif;
+      transition: background-color .5s;}
+    body.dark {     color: white; background-color:  #000000;}
+  
+   
+    .grey {color:#989898;}
 
-    body .blue {color:#095890;}
-    
-    .dark-mode {
-      background-color: #000000;
-      color: white;
-    }
-
- /*.dark-mode    .grey {color:#989898;}*/
     .blue {color:#095890;}
    
-    </style>
-    
- 
-    
-    <h2 class="grey">Toggle Dark/Light Mode</h2>
-    <p >Click the button to toggle between dark and light mode for this page.</p>
-    
-    <img src="./goku.svg" class="w3-responsive w3-image" onclick="myFunction()" >
-    <img src="./black.svg" class="w3-responsive w3-image" onclick="myFunction()" >
-    
-    
-    <script>
-    function myFunction() {
-       var element = document.body;
-       element.classList.toggle("dark-mode");
+      
+    .sidenav {
+      height: 140%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: -5;
+      background-color: #111;   
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
     }
-    </script>
- 
-
     
-<div class="">
-  
-
-  <button onclick="document.getElementById('id01eso').style.display='block'" class="w3-button w3-black">id01eso</button>
-
-  <div id="id01eso" class="w3-modal">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container w3-teal"> 
-        <span onclick="document.getElementById('id01eso').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Modal Header</h2>
-      </header>
-      <div class="w3-container">
-        <p>You have two options to close this modal:</p>
-        <p>Click on the "x" or click anywhere outside of the modal!</p>
-      </div>
-      <footer class="w3-container w3-teal">
-        <p>Modal Footer</p>
-      </footer>
+    .sidenav a, p, ul, li, .divsidenav {
+      padding: 8px 8px 8px 15px;
+      text-decoration: none;
+            
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a, p, ul, li, .divsidenav hover {
+      text-decoration: none;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0px;
+    right: 5px;
+      font-size: 18px;
+      margin-left: 50px;
+      background-color: #111;
+      color:white;
+    }
+    
+    #main {
+      transition: margin-left .5s;
+      padding: 25px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    .w3-card-2-white {box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.16), 0 2px 10px 0 rgba(255, 255, 255, 0.12)}
+    .w3-modal-negro {z-index: 9999;display: none;padding-top: 100px;position: fixed;left: 0;top: 0;width: 100%;height: 100%;overflow: auto;background-color: rgb(0, 0, 0);background-color: rgb(0, 0, 0)}</style>
+    <!-- style=" padding-left: 32px;" -->
+</head>
+  <!-- ESCRITORIO -->
+    <div class="w3-bar w3-light-grey w3-card-2 w3-hide-large w3-hide-medium">   
+      <a href="#" class="w3-bar-item w3-button" onclick="openNav()" >&#9776; &nbsp; </a>    
+      <a href="#" class="w3-bar-item w3-button" onclick="openCity('about')"> Home</a>    
+                  
+      <button class="w3-bar-item w3-button w3-green   w3-right  w3-padding ">Go!</button>
+      <input type="text" class="w3-bar-item w3-input w3-white  w3-right  w3-padding " placeholder="Buscar...">            
+      <!-- <a href="#" class="w3-bar-item w3-button " title="Darkmode: Ultra Instinto" id="theme-toggle"><b>UI</b> </a>       -->
+      <a href="#ModeColor" class="w3-bar-item w3-button header__themebtn js-themepicker-toggle" aria-expanded="false" aria-controls="theme-menu"  title="Darkmode">
+        <span class="sr-only">toggle theme panel</span> 
+          <svg class="icon icon--theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true">
+            <path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></svg>
+      </a>
+      <!-- 
+              <a href="#" class="w3-bar-item w3-button " onclick="document.getElementById('id01eso').style.display='block'">M</a>             
+        <div class="w3-dropdown-hover ">
+        <a class=" w3-button">Editor <i class="fa fa-caret-down"></i></a>
+        <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+          <a href="#" class="w3-bar-item w3-button ">Link 3</a>        
+        </div>
+      </div> -->
     </div>
-  </div>
+   
+    <!-- NAV -->
+    <div style="line-height: 22px; margin-left: 0%; left: 0px;" class=" container w3-card-2-white">  
+      <div id="mySidenav" class="sidenav   w3-card-2-white">
+
+          <a href="javascript:void(0)" class="closebtn " onclick="closeNav()">&nbsp;  X</a>             
+      
+            
+            <div class="divsidenav w3-bar"onclick="openCity('content')">
+              <img src="https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon-negra.svg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+              <div class="" onclick="openabreElTab(event,'myHome')">
+                <span class="w3-large">Multimedia</span><br>
+                <span>Designer</span>
+              </div>
+            </div>
+        
+            <div class="divsidenav w3-bar" onclick="openCity('assets')">     
+              <img src="https://www.xbr.pw/go/icon-xbrpw/esfera-del-dragon.svg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+              <div class="">
+                <span class="w3-large">Snippes</span><br>
+                <span>HTML, CSS; JS</span>
+              </div>
+            </div>
+            <hr>
+            <div class="divsidenav w3-bar" id="theme-toggle">
+              <img src="./black.svg" class="w3-bar-item w3-circle  w3-responsive w3-image"  id="theme-togglexxx" width="65px" height="65px" >
+              <div class="" >                 
+                <span class="w3-large"><b style="font-size: 14px; font-weight:900;" >DARKMODE</b></span><br>
+                <span>Ultra Instinto </span>
+              </div>
+            </div>  
+            
+       
+      </div>
+    </div>
+    <a href="#main" class="sr-skip-link">skip to main content</a>
+    <div class="titlebar"><div class="titlebar__inner"></div></div>
+  <div class="hfeed layout" role="document">
+    <div class="themepicker js-themepicker" data-nosnippet hidden>
   
-  
-  <script>
-// Get the modal
-var modal = document.getElementById('id01eso');
+    <p class="themepicker__title w3-large w3-margin-top"><br>Seleccionar estilo</p>
+    <ul class="themepicker__list" id="theme-menu"><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Classic'" data-theme="default"><span class="themepicker__name">Classic</span> 
+      <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> 
+      <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> 
+      <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Dark'" data-theme="dark"><span class="themepicker__name">Dark</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+      <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Koopa Beach'" data-theme="beach">
+        <span class="themepicker__name">Tolula</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> 
+        <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span>
+         <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item">
+        <button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Choco Mountain'" data-theme="choco">
+          <span class="themepicker__name">Chocolate Eevee </span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li><li class="themepicker__item">
+            <button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Moo Moo Farm'" data-theme="moomoo">
+        <span class="themepicker__name">Moo Moo Phiphi</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> 
+        <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> 
+        <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+        <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Bowser&#39;s Castle'" data-theme="bowser">
+          <span class="themepicker__name">Hachi&#39;s gost</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> 
+          <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> 
+          <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+          <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Yoshi Valley'" data-theme="yoshi">
+            <span class="themepicker__name">Tony Valley</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> 
+            <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> 
+            <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+            <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Rainbow Road'" data-theme="rainbow">
+              <span class="themepicker__name">Nesquick Road</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary">
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-
+              </span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> 
+              <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+              <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Lobster Life'" data-theme="lobster">
+                <span class="themepicker__name">Mokona Life</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> 
+                <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span>
+                 <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+                 <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Hacker News'" data-theme="hackernews">
+                  <span class="themepicker__name">Sharon News</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+                  <li class="themepicker__item"><button class="themepicker__btn js-themepicker-themeselect" aria-label="select color theme 'Hacker News'" data-theme="hackernews">
+                    <span class="themepicker__name">DB</span> <span class="themepicker__palette"><span class="themepicker__hue themepicker__hue--primary"></span> <span class="themepicker__hue themepicker__hue--secondary"></span> <span class="themepicker__hue themepicker__hue--border"></span> <span class="themepicker__hue themepicker__hue--textoffset"></span> <span class="themepicker__hue themepicker__hue--text"></span></span></button></li>
+                </ul><button class="iconbtn themepicker__close js-themepicker-close">
+                  <span class="sr-only">close themepicker</span> 
+                    <svg class="icon icon--close" role="img" aria-hidden="true" width="24" height="24">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-close"></use></svg></button>
 </div>
 
+<header class="header w3-hide-medium w3-hide-small" role="banner"><div class="header__inner container">
+  <a class="header__brand" href="#" rel="home" aria-label="Go To Homepage" onclick="openNav()" onclick="openCity('about')">
+    <span  class="w3-hide-large w3-hide-medium"> &#9776; &nbsp; </span>
+    <img class="header__brand__avatar w3-hide-small w3-hide-medium" src="https://www.xbr.pw/go/icon-xbrpw/goku.svg" width="48" height="48" alt="avatar" >        
+    <span class="header__brand__text"   onclick="openCity('about')">lam<b>:p</b>Xar</span>
+  </a>
+    <div class="header__nav">
+        <nav class="nav js-nav" role="navigation" tabindex="-1">
+        
+        <div class="nav__content">
+          <ul class="nav__menu js-nav-menu" id="nav-menu">
+            <li class="nav__item"onclick="openCity('about')" ><a href="#home" class="nav__link" ><span class="nav__num" aria-hidden="true">01</span> Home</a></li>
+            <li class="nav__item "  onclick="document.getElementById('id01eso').style.display='block'"><a href="#elModal" class="nav__link"><span class="nav__num" aria-hidden="true">02</span> Modal</a></li>
+            <li class="nav__item" onclick="openCity('assets')"><a href="#assets" class="nav__link" ><span class="nav__num" aria-hidden="true">03</span> Assets</a></li>
+            <li class="nav__item w3-dropdown-hover w3-mobile"><a href="#about" class="nav__link"><span class="nav__num" aria-hidden="true">04</span> About<i class="fa fa-caret-down"></i></a>
+              <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+                <a href="#MapaDeSitio" class="w3-bar-item w3-button w3-mobile" onclick="openCity('content')">Mapa de sitio</a>        
+              </div>
+            </li>                             
+         <li class="nav__menu js-nav-menu" id="nav-menu">
+          <a href="#ModeColor" class="w3-bar-item w3-button header__themebtn js-themepicker-toggle" aria-expanded="false" aria-controls="theme-menu"  title="Darkmode">
+            <span class="sr-only">toggle theme panel</span> 
+              <svg class="icon icon--theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M18 4V3c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V6h1v4H9v11c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-9h8V4h-3z"/></svg>
+          </a>
+         </li>
+          </ul>
+          </div><div class="nav__bg"><div class="nav__bg__circle"></div></div></nav>
+      </div>
+    </div>
+</header>    
 
-<div class="">
+  
+<div id="main" onclick="closeNav()">      
+  
+  <div id="about" class="w3-container city">
+    <main class="main container" role="main" id="main" tabindex="-1">
+      <article id="offline-friendly-forms" class="post h-entry" role="article" itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="offline-friendly-forms-title">
+      <header class="post__header">
+          <h1 id="offline-friendly-forms-title" class="post__title p-name title" itemprop="headline">Offline-Friendly Forms</h1>
+      <div class="post__meta"><p><time class="post__date dt-published" itemprop="datePublished" datetime="2017-08-23T00:00:00">23 Aug 2017</time> <span aria-label="in category">&sdot;</span> <span class="post__tags p-category">code</span></p></div></header><div class="post__content e-content markdown" itemprop="articleBody"><p class="lead"></p><p><small>TL;DR: Here’s the <a href="https://codepen.io/mxbck/pen/ayYGGO/" target="_blank">CodePen Demo</a> of this post.</small></p><p>With the introduction of Service Workers, developers are now able to supply experiences on the web that will work even without an internet connection. While it’s relatively easy to cache static resources, things like forms that require server interaction are harder to optimize. It is possible to provide a somewhat useful offline fallback though.</p>
+              
+        
+        <div class="extend" id="codepen-demo">
+                  
+                
+                  </div>
+              </div>
+              
+              <div class="post__footer">
+                  
+                  <div hidden>            
+                      <a class="u-url" href="">My templete w3, i fell good, very very good!</a><p class="h-card p-author">
+                        <a class="p-name u-url" rel="author" href="https://www.luisangelmaciel.github.io"><b>lam:p</b>Xar!</p></a>
+                      
+                      <img class="u-photo" src="https://www.xbr.pw/go/icon-xbrpw/i%20am%20developer%20designer.svg"></p>
+              </div>
+      
+      <p class="post__footer__info">Published in [code] &sdot; 23 Aug 2017<br><a href="https://github.com/maxboeck/mxb/tree/master/./src/posts/offline-forms/2017-08-23-index.md" title="suggest a change to this post by submitting a PR">Edit this Post</a></p>
+      <a href="https://twitter.com/intent/follow?screen_name=luisangelmaciel target="_blank" rel="noopener noreferrer" title="Follow Luis Angel Maciel on Twitter" class="btn btn--twitter"><svg class="icon icon--twitter" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-twitter"></use></svg> Follow @luisangelmaciel</a></div></article>
+      
+      
+      <div class="postsection"><div class="postsection__header">
+          <h3 class="postsection__title u-mb0">Webmentions</h3><a href="https://indieweb.org/Webmention" class="postsection__info" target="_blank" rel="noopener noreferrer"><svg class="icon icon--question" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-question"></use></svg> What’s this?</a></div>
+          <div class="webmentions" id="webmentions" data-url="" data-last-fetched="2022-09-06T06:53:46.483Z"><div data-render-root><div class="webmentions__preview"><ol class="webmentions__list">
+          
+          <li class="webmentions__item">
+              <div class="webmention" id="webmention-674496"><div class="webmention__meta"><a class="webmention__author h-card u-url" href="https://twitter.com/vick_OnRails/status/1164848818195697664" target="_blank" rel="ugc nofollow"><img class="webmention__author__photo u-photo" src="https://webmention.io/avatar/pbs.twimg.com/c9154ba331fe188961f5969b61d5815e4dd64835e9528ad689b6bc353b477600.jpg" alt="" width="48" height="48" loading="lazy"> <strong class="p-name">Victor Ofoegbu</strong> </a><span class="webmention__meta__divider" aria-hidden="true">&sdot;</span> <time class="webmention__pubdate dt-published" datetime="2019-08-23T10:36:14+00:00">23 Aug 2019</time></div><div class="webmention__content p-content">
+  <a href="https://twitter.com/mxbck">@mxbck</a>'s blog is a great resource for frontend web development. I've specifically enjoyed this article on offline friendly forms. It makes a whole lot of sense to do things this way. <a href="">mxb.dev/blog/offline-f…</a></div></div></li></ol></div></div></div></div>
 
-  <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button tablink w3-teal" onclick="openCity(event,'London')">London</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Paris</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Tokyo</button>
+  <div class="postsection"><h3 class="postsection__title">Other things I've written</h3>
+      <ol class="otherposts">            
+      <li class="otherposts__item"><a href="/blog/make-free-stuff/" class="otherposts__link"><span class="otherposts__title">Make Free Stuff</span> <time class="otherposts__date" datetime="2022-01-25T00:00:00" aria-label=", written 25 Jan 2022">25 Jan 2022</time></a></li>
+      
+      <li class="otherposts__item"><a href="/blog/media-queries-in-times-of-container-queries/" class="otherposts__link"><span class="otherposts__title">Media Queries in Times of @container</span> <time class="otherposts__date" datetime="2021-06-11T00:00:00" aria-label=", written 11 Jun 2021">11 Jun 2021</time></a></li>
+      <li class="otherposts__item"><a href="/blog/the-whimsical-web/" class="otherposts__link"><span class="otherposts__title">Whimsical Website Club</span> <time class="otherposts__date" datetime="2020-06-30T00:00:00" aria-label=", written 30 Jun 2020">30 Jun 2020</time></a></li></ol></div>
+  </main>
+    <footer class="footer h-card" role="contentinfo"><div class="footer__inner container"><p class="footer__item"><strong>&copy; 2012&ndash;2022</strong><br><a class="p-name u-url" rel="me" href="https://mxb.dev">Max Böck</a></p><p class="footer__item"><strong>Subscribe</strong><br><a href="/mailinglist">Mailing List</a></p><p class="footer__item"><strong>Social</strong><br><a href="https://twitter.com/mxbck" title="Twitter" rel="me">Twitter</a> / <a href="https://github.com/maxboeck" title="Github" rel="me">Github</a></p><p class="footer__item"><strong>Legal</strong><br><a href="/privacy/">Privacy Policy</a></p><p class="footer__item"><strong>Links</strong><br><a href="/blogroll/">Blogroll</a></p>
+          
+          <p class="footer__item footer__item--right u-desktop-only">
+              <a href="https://speedlify.mxb.dev/mxb.dev/" class="footer__speedlify">
+                  <speedlify-score speedlify-url="https://speedlify.mxb.dev" hash="7dda0135" score weight> </speedlify-score>
+              </a>
+          </p>
+
+          <p class="footer__item footer__item--right"><a href="https://github.com/maxboeck/mxb/tree/master/./src/posts/offline-forms/2017-08-23-index.md" class="footer__icon" title="Edit this page on Github"><span class="sr-only">Edit this page on Github</span> 
+              <svg class="icon icon--github" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-github"></use></svg> </a><a href="/feed.xml" class="footer__icon" title="RSS Feed">
+              <span class="sr-only">RSS Feed</span> <svg class="icon icon--feed" role="img" aria-hidden="true" width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://mxb.dev/assets/icons/icons.sprite.svg#icon-feed"></use></svg></a></p></div></footer>
   </div>
   
-  <div id="London" class="w3-container  city" >
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
-  </div>
-
-  <div id="Paris" class="w3-container  city" style="display:none">
+  <div id="assets" class="w3-container city" style="display:none">
     <h2>Paris</h2>
     <p>Paris is the capital of France.</p> 
   </div>
-
-  <div id="Tokyo" class="w3-container city" style="display:none">
+  
+  <div id="content" class="w3-container city" style="display:none">
     <h2>Tokyo</h2>
     <p>Tokyo is the capital of Japan.</p>
   </div>
+
+  
+
+
+
+
+</div>
+    
+<div class=" w3-container "    >  
+  <!-- <button onclick="document.getElementById('id01eso').style.display='block'" class="w3-button w3-black">id01eso</button> -->
+  <div id="id01eso" class="w3-modal-negro w3-card-2-white "  >   <span onclick="document.getElementById('id01eso').style.display='none'" 
+    class=" w3-display-topright w3-margin-top w3-text-grey w3-xxlarge ">&times; &nbsp; &nbsp;    </span>
+    <div class="w3-modal-content   w3-card-2-white "  style="border-radius: 15px 15px 15px 15px" style="box-shadow: 0 2px 5px 0 rgb(0, 0, 0), 0 2px 10px 0 rgba(22, 22, 22, 0.829)">
+      <header class="w3-container w3-black w3-padding w3-margin-top w3-card-2-white "  style="border-radius:  10px 10px 0px 0px"> 
+     
+        <h2 class="w3-text-white">Modal Header</h2>
+      </header>
+      <div class="w3-container w3-text-black w3-round-xlarge">
+        <p>You have two options to close this modal:</p>
+        <p>Click on the "x" or click anywhere outside of the modal!</p>
+      </div>
+      <footer class="w3-container w3-black" style="border-radius:  0px 0px 10px 10px">
+        <p class="w3-text-white">Modal Footer</p>
+      </footer>
+    </div>
+  </div>
 </div>
 
-<script>
-function openCity(evt, cityName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " w3-teal";
-}
-</script>
+<script src="https://mxb.dev/assets/scripts/main.js" defer="defer"></script>
+<script> 
+  var darkMode = false;
 
+  // default to system setting
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkMode = true;
+  }
+  
+  // preference from localStorage should overwrite
+  if (localStorage.getItem('theme') === 'dark') {
+    darkMode = true;
+  } else if (localStorage.getItem('theme') === 'light') {
+    darkMode = false;
+  }
+  
+  if (darkMode) {
+    document.body.classList.toggle('dark');
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+  
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  
+  }); 
+</script>
+<script>
+  function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+  }
+  </script>
+<script>
+
+
+  // Get the modal
+  var modal = document.getElementById('id01eso');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+// sidenav
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "280px";
+    document.getElementById("main").style.marginLeft = "280px";
+    //document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    //document.body.style.backgroundColor = "white";
+  }
+
+
+  // el movimiento ripple en todo el html
+  (function() {
+    $("html").on("mousedown", function(e) {
+        $("i").addClass("active").css("left", e.pageX).css("top", e.pageY);
+        return $("span.animate").html("X:" + e.pageX + "px  Y:" + e.pageY);
+    });
+
+    $("i").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+        return $("i").removeClass("active");
+    });
+  
+    $('.link').on('mousedown', function(e) {
+      e.stopPropagation();
+    });
+
+}).call(this);
+</script>
 </body>
 </html>

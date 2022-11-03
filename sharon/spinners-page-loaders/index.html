@@ -10,7 +10,7 @@
  <html lang="es-MX" >  
  <head>  
  <meta charset="UTF-8">
- <title> 18 Spinners &amp; Page Loaders Pure CSS 🥴</title>
+ <title> 19 Spinners &amp; Page Loaders Pure CSS 🥴</title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="title" content="18 Spinners &amp; Page Loaders Pure CSS">
  <meta name="description" content="18 Spinners &amp; Page Loaders Pure CSS. Don't Open Until Christmas!">
@@ -53,6 +53,109 @@
 <body>
 <div class="w3-auto"> 
 <div class="container">
+  <!-- 0 x -->
+  <section>
+    <style>
+      .pokeball {
+        position: relative;
+        width: 1em;
+        font-size: 6em;
+        border-radius: 50%;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        -webkit-animation: moving 1s infinite ease-in-out alternate;
+                animation: moving 1s infinite ease-in-out alternate;
+      }
+      @-webkit-keyframes moving {
+        from {
+          transform: translate3d(0.05em, 0, 0);
+        }
+        to {
+          transform: translate3d(-0.05em, 0, 0);
+        }
+      }
+      @keyframes moving {
+        from {
+          transform: translate3d(0.05em, 0, 0);
+        }
+        to {
+          transform: translate3d(-0.05em, 0, 0);
+        }
+      }
+      .pokeball::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        font-size: 9%;
+        width: 1em;
+        height: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+        border-radius: inherit;
+        transform-origin: 50% 300%;
+        background-color: #fff;
+        background-image: radial-gradient(circle at 30% 30%, #fff, #fff 30%, rgba(0, 0, 0, 0.3));
+        -webkit-animation: wiggle 1s infinite ease-in-out alternate;
+                animation: wiggle 1s infinite ease-in-out alternate;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0.05em 0.05em 0.3em rgba(0, 0, 0, 0.5), 0 0 0 0.4em #fff, 0 0 0 0.8em #000, 0 -8.6em 0 8em #b71c1c, 0 -8.6em 0 8.4em #000, 0 0 0 10em #fff;
+      }
+      @-webkit-keyframes wiggle {
+        0% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(-10deg);
+        }
+      }
+      @keyframes wiggle {
+        0% {
+          transform: rotate(10deg);
+        }
+        100% {
+          transform: rotate(-10deg);
+        }
+      }
+      .pokeball::after {
+        content: "";
+        position: relative;
+        display: block;
+        padding-bottom: 100%;
+        border-radius: inherit;
+        background-image: radial-gradient(circle 0.2em at 25% 30%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.3) 20%, transparent 50%);
+        box-shadow: inset 0 0 0 0.04  em #000, inset -0.075em -0.075em 0.3em rgba(0, 0, 0, 0.5), inset -0.05em -0.05em 0.1em -0.01em rgba(0, 0, 0, 0.6);
+        
+      }
+      .pokeball:hover, .pokeball:hover::before, .pokeball:hover + .pokeball-shadow {
+        -webkit-animation-play-state: paused;
+                animation-play-state: paused;
+      }
+      .pokeball:active, .pokeball:active::before, .pokeball:active + .pokeball-shadow {
+        -webkit-animation-play-state: running;
+                animation-play-state: running;
+      }
+      
+      .pokeball-shadow {
+        position: relative;
+        z-index: -1;
+        font-size: 5em;
+        width: 1em;
+        height: 0.2em;
+        margin-top: -0.12em;
+        margin-left: 0.15em;
+        border-radius: 50%;
+        background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5) 30%, transparent 70%);
+        -webkit-animation: moving 1s infinite ease-in-out alternate;
+                animation: moving 1s infinite ease-in-out alternate;
+      }
+      
+      
+      </style>    
+    <div class="loader">
+      <div class="pokeball"></div>
+      <div class="pokeball-shadow"></div>
+    </div>
+  </section>
   <!-- 1 x -->
   <section>
     <div class="loader loader-4"></div>

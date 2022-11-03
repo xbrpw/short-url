@@ -83,7 +83,144 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <style>  @keyframes flex {
+        from {
+          font-style: normal;
+          font-size: xx-large;
+          filter: hue-rotate(0deg);
+        }
+        to {
+          font-style: italic;
+          font-size: xx-large;
+          filter: hue-rotate(360deg);
+        }
+      }
+      
+      
+      
+      
+      .flex {
+        animation: flex 1s ease-in-out infinite;
+      }
+      
+      
+      @keyframes flexi {
+        from {
+          font-style: normal;
+          font-size:xx-large;
+          filter: hue-rotate(5deg);
+        }
+        to {
+            font-style: normal;
+          font-size:xx-large;
+          filter: hue-rotate(360deg);
+        }
+      }
+      
+      
+      
+      
+      .flexi {
+        animation: flexi 40s    ease-in-out infinite;
+      }
+      </style>
+      <style>
+        .pokeball {
+          position: relative;
+          width: 1em;
+          font-size: 6em;
+          border-radius: 50%;
+          overflow: hidden;
+          transform-style: preserve-3d;
+          -webkit-animation: moving 1s infinite ease-in-out alternate;
+                  animation: moving 1s infinite ease-in-out alternate;
+        }
+        @-webkit-keyframes moving {
+          from {
+            transform: translate3d(0.05em, 0, 0);
+          }
+          to {
+            transform: translate3d(-0.05em, 0, 0);
+          }
+        }
+        @keyframes moving {
+          from {
+            transform: translate3d(0.05em, 0, 0);
+          }
+          to {
+            transform: translate3d(-0.05em, 0, 0);
+          }
+        }
+        .pokeball::before {
+          content: "";
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          font-size: 9%;
+          width: 1em;
+          height: 1em;
+          margin-top: -0.5em;
+          margin-left: -0.5em;
+          border-radius: inherit;
+          transform-origin: 50% 300%;
+          background-color: #fff;
+          background-image: radial-gradient(circle at 30% 30%, #fff, #fff 30%, rgba(0, 0, 0, 0.3));
+          -webkit-animation: wiggle 1s infinite ease-in-out alternate;
+                  animation: wiggle 1s infinite ease-in-out alternate;
+          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0.05em 0.05em 0.3em rgba(0, 0, 0, 0.5), 0 0 0 0.4em #fff, 0 0 0 0.8em #000, 0 -8.6em 0 8em #b71c1c, 0 -8.6em 0 8.4em #000, 0 0 0 10em #fff;
+        }
+        @-webkit-keyframes wiggle {
+          0% {
+            transform: rotate(10deg);
+          }
+          100% {
+            transform: rotate(-10deg);
+          }
+        }
+        @keyframes wiggle {
+          0% {
+            transform: rotate(10deg);
+          }
+          100% {
+            transform: rotate(-10deg);
+          }
+        }
+        .pokeball::after {
+          content: "";
+          position: relative;
+          display: block;
+          padding-bottom: 100%;
+          border-radius: inherit;
+          background-image: radial-gradient(circle 0.2em at 25% 30%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.3) 20%, transparent 50%);
+          box-shadow: inset 0 0 0 0.04  em #000, inset -0.075em -0.075em 0.3em rgba(0, 0, 0, 0.5), inset -0.05em -0.05em 0.1em -0.01em rgba(0, 0, 0, 0.6);
+          
+        }
+        .pokeball:hover, .pokeball:hover::before, .pokeball:hover + .pokeball-shadow {
+          -webkit-animation-play-state: paused;
+                  animation-play-state: paused;
+        }
+        .pokeball:active, .pokeball:active::before, .pokeball:active + .pokeball-shadow {
+          -webkit-animation-play-state: running;
+                  animation-play-state: running;
+        }
+        
+        .pokeball-shadow {
+          position: relative;
+          z-index: -1;
+          font-size: 5em;
+          width: 1em;
+          height: 0.2em;
+          margin-top: -0.12em;
+          margin-left: 0.15em;
+          border-radius: 50%;
+          background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5) 30%, transparent 70%);
+          -webkit-animation: moving 1s infinite ease-in-out alternate;
+                  animation: moving 1s infinite ease-in-out alternate;
+        }
+        
+        
+        </style>
+      
 </head>
 
 <body class=" font-sans">
@@ -230,9 +367,13 @@
 
 
                     <br>
-                    <div class="btn-xiib " style="background-color: #1B1C24; color:rgb(236, 221, 221) ">
-                        <a href="https://www.xiiber.com " target="_blank "><i class="fa fa-suitcase" aria-hidden="true"></i> Vámonos de viaje con Xiiber </a>
-                    </div>
+                    <a href="https://www.xiiber.com" target="_blank">
+                        <div class="btn-xiib " style="   background: linear-gradient(to right, #070707, #060124, #0d053b, #090329, #000000); color:rgb(236, 221, 221) ">
+                            <i class="fa fa-suitcase" aria-hidden="true"></i> Vámonos de viaje con Xiiber 
+                        </div>
+                    </a> 
+
+                  
 
                     <br>
                     <div class="btn-xiib " data-toggle="modal" data-target="#modal-fullscreen" style="background-color: #1B1C24; color:rgb(236, 221, 221) ">
@@ -247,56 +388,24 @@
                         </div>
                     </a>
                     <br>
-                    <a href="https://twitter.com/messages/compose?recipient_id=54042586&text=Hola%20Luis%20Ángel,%20El%20motivo%20de%20mi%20mensaje%20es%20para..." class="twitter-dm-button " data-screen-name="@luisangelmaciel " data-size="large ">
-                        <div class="btn-xiib " style="   background: linear-gradient(to right, #070707, #060124, #0d053b, #090329, #000000); color:rgb(236, 221, 221) ">
-                            ¿Tienes un proyecto? ¡Conéctemos! <i class="fas fa-comment-dollar" aria-hidden="true"></i>
-                        </div>
-                    </a>                    
-                    <br><style>  @keyframes flex {
-                        from {
-                          font-style: normal;
-                          font-size: xx-large;
-                          filter: hue-rotate(0deg);
-                        }
-                        to {
-                          font-style: italic;
-                          font-size: xx-large;
-                          filter: hue-rotate(360deg);
-                        }
-                      }
-                      
-                      
-                      
-                      
-                      .flex {
-                        animation: flex 1s ease-in-out infinite;
-                      }
-                      
-                      
-                      @keyframes flexi {
-                        from {
-                          font-style: normal;
-                          font-size:xx-large;
-                          filter: hue-rotate(5deg);
-                        }
-                        to {
-                            font-style: normal;
-                          font-size:xx-large;
-                          filter: hue-rotate(360deg);
-                        }
-                      }
-                      
-                      
-                      
-                      
-                      .flexi {
-                        animation: flexi 40s    ease-in-out infinite;
-                      }</style>
+                    <!--  <a href="https://twitter.com/messages/compose?recipient_id=54042586&text=Hola%20Luis%20Ángel,%20El%20motivo%20de%20mi%20mensaje%20es%20para..." class="twitter-dm-button " data-screen-name="@luisangelmaciel " data-size="large ">
+                            <div class="btn-xiib " style="   background: linear-gradient(to right, #070707, #060124, #0d053b, #090329, #000000); color:rgb(236, 221, 221) ">
+                                ¿Tienes un proyecto? ¡Conéctemos! <i class="fas fa-comment-dollar" aria-hidden="true"></i>
+                            </div>
+                        </a>   
+                    -->                  
+                    <br>
                     <span class="flex" >💪</span><span class="flexi">😀</span> </div>
-
+                    <br>
+                    <!-- La Pokebola-->
+                            <div class="pokeball"></div>
+                            <div class="pokeball-shadow"></div>
+                    </div>
+                    <!-- /La Pokebola-->
 
             </center>
             <br>
+            
         </div>
         <div class="w3-col m3  susan-storm-small ">
             <br>

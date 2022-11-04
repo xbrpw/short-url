@@ -4,7 +4,7 @@
   padding: 0px;
 }
 
-body {
+.bodyBubble {
   background-color: #0099ff;
   background: linear-gradient(to bottom, #0099ff 0%, #0066cc 100%);
   width: 100%;

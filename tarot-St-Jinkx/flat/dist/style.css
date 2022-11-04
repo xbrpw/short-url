@@ -1,0 +1,79 @@
+body {
+	width: 80%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+h1, h2, h3, h4, h5 {
+	font-size: 68px;
+	font-family: 'Amatic SC', cursive;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-size: 28px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	width: 100%;
+}
+
+.img-ctr {
+	display: block;
+	margin: 0 auto;
+}
+
+.text {
+	font-size: 2em;
+}
+
+.tarot {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.question {
+	width:80%;
+	height: auto;
+	opacity: 1;
+	margin: 0 auto;
+}
+.question-fates{
+	margin: 150px 0 35px 0;
+}
+
+.your-question{
+	outline: none;
+	display: block;
+	margin: 0 auto;
+	border: none;
+	border-bottom: 1px solid rgb(50,50,50);
+	text-align: center;
+	font-size: 28px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	width: 100%;
+	margin: 0 0 50px 0;
+}
+
+.submit {
+	display: block;
+	margin: 0 auto 150px auto;
+	font-size: 28px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	border: none;
+	background-color: transparent;
+	transition: font-size .3s;
+}
+
+.submit:focus{
+	outline: none;
+}
+
+.submit:hover{
+	cursor: pointer;
+	font-size: 30px;
+}

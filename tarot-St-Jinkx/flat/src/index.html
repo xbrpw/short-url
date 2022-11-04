@@ -1,0 +1,19 @@
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300" rel="stylesheet">
+
+<header class="header">
+	<h1>Tarot Reader</h1>
+	<hr>
+</header>
+
+<div class="card-reader" ng-app="tarot" ng-controller="tarotCtrl">
+	<div class="question">
+		<p class="question-fates">What do you wish to ask the Fates?</p>
+		<input class="your-question" type="text">
+		<button id="submit" class="submit">Submit to the Fates</button>
+	</div>
+	<div class="tarot">
+		<tarot-card id="tarot-card"></tarot-card>
+		<button id="refresh" class="submit">Ask Another question</button>
+	</div>
+</div>
+<hr>

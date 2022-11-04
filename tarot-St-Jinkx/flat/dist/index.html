@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tarot</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300" rel="stylesheet">
+
+<header class="header">
+	<h1>Tarot Reader</h1>
+	<hr>
+</header>
+
+<div class="card-reader" ng-app="tarot" ng-controller="tarotCtrl">
+	<div class="question">
+		<p class="question-fates">What do you wish to ask the Fates?</p>
+		<input class="your-question" type="text">
+		<button id="submit" class="submit">Submit to the Fates</button>
+	</div>
+	<div class="tarot">
+		<tarot-card id="tarot-card"></tarot-card>
+		<button id="refresh" class="submit">Responder otra pregunta</button>
+	</div>
+</div>
+<hr>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/983395/flowtype.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pokédex in CSS grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="https://i.imgur.com/X5Zjce3.png" itemprop="thumbnailUrl" /><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app">
+  <main class="wall">
+    <div class="scroll-indicator"></div>
+    <div class="close-btn"></div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 0%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 45.45454545454546% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 0%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 63.63636363636364% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 72.72727272727273% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 0%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 90.90909090909092% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 0%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 63.63636363636364% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 72.72727272727273% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 90.90909090909092% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 100.00000000000001% 8.333333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 18.181818181818183% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 27.272727272727273% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 54.54545454545455% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 63.63636363636364% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 72.72727272727273% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 81.81818181818183% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 16.666666666666668%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 0% 25%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 25%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 18.181818181818183% 25%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 25%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 36.36363636363637% 25%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 25%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 25%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 63.63636363636364% 25%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 72.72727272727273% 25%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 81.81818181818183% 25%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 25%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 100.00000000000001% 25%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 36.36363636363637% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 54.54545454545455% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 63.63636363636364% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 72.72727272727273% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 33.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 0% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 27.272727272727273% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 63.63636363636364% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 72.72727272727273% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 100.00000000000001% 41.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 50%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 50%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 50%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 27.272727272727273% 50%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 36.36363636363637% 50%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 45.45454545454546% 50%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 50%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 63.63636363636364% 50%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 72.72727272727273% 50%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 81.81818181818183% 50%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 90.90909090909092% 50%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 50%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 0% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 9.090909090909092% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 27.272727272727273% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 63.63636363636364% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 72.72727272727273% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 90.90909090909092% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 58.333333333333336%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 36.36363636363637% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 63.63636363636364% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 72.72727272727273% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 66.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 75%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 9.090909090909092% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 75%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 27.272727272727273% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 75%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 45.45454545454546% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 63.63636363636364% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 72.72727272727273% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 75%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 9.090909090909092% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 45.45454545454546% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 63.63636363636364% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 72.72727272727273% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 100.00000000000001% 83.33333333333334%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 0% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 36.36363636363637% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="unknown">
+      <div class="pm" style="--bgp: 45.45454545454546% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 54.54545454545455% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 63.63636363636364% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 72.72727272727273% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 81.81818181818183% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 90.90909090909092% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 100.00000000000001% 91.66666666666667%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 0% 100%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 9.090909090909092% 100%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 18.181818181818183% 100%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 27.272727272727273% 100%"></div>
+    </div>
+    <div class="tile" data-state="seen">
+      <div class="pm" style="--bgp: 36.36363636363637% 100%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 45.45454545454546% 100%"></div>
+    </div>
+    <div class="tile" data-state="caught">
+      <div class="pm" style="--bgp: 54.54545454545455% 100%"></div>
+    </div>
+    <header class="header">
+      <h1 class="title">Pokédex</h1>
+      <h2 class="subtitle"></h2>
+    </header>
+  </main>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

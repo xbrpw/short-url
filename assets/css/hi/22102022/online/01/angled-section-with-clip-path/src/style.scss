@@ -1,0 +1,43 @@
+/*
+Learn more about this technique and using custom properties for numeric values:
+https://twitter.com/5t3ph/status/1525666700728868864
+*/
+
+.section--angled {
+  --section-padding: 10vh;
+  --clip-point: calc(var(--section-padding) / 2);
+
+  padding-block: var(--section-padding);
+  clip-path: polygon(
+    0 var(--clip-point),
+    /* top left */ 100% 0%,
+    /* top right */ 100% calc(100% - var(--clip-point)),
+    /* bottom right */ 0% 100% /* bottom left */
+  );
+  background-color: thistle;
+  color: rebeccapurple;
+}
+
+/* demo styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  align-items: center;
+  font-family: system-ui;
+  line-height: 1.5;
+  background-color: rebeccapurple;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(80ch, 100vw - 3rem);
+}

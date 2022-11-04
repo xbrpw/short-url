@@ -1,0 +1,173 @@
+@import url('https://rsms.me/inter/inter.css');
+
+
+:root {
+	--h: 226;
+  --s: 100%;
+  --size: clamp(14rem, -0.4000rem + 64.0000vw, 18rem);
+	
+	--tz: calc(var(--size) / 2);
+  
+  --shade-light: hsl(var(--h) var(--s) 96%);
+  --shade-mid: hsl(var(--h) var(--s) 94%);
+  --shade-dark: hsl(var(--h) var(--s) 92%);
+	
+	--text: #323232;
+}
+
+html { 
+	height: 100%;
+	font-family: 'Inter', sans-serif; 
+}
+
+@supports (font-variation-settings: normal) {
+  html { 
+		font-family: 'Inter var', sans-serif; 
+	}
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+svg {
+  max-height: 100%;
+  pointer-events: none;   
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	height: 100vh;
+	display: grid;
+	place-content: center;
+	background: hsl(var(--h), var(--s), 88%);
+	color: var(--text);
+}
+
+.b{
+	width: var(--size);
+	height: var(--size);
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotate3d(-.1, .2, -.035, 45deg);
+}
+
+
+.b--top, .b--right, .b--bottom, .b--left {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: inherit;
+}
+
+
+.b--top {
+	background-color: var(--shade-light);
+	transform: rotateX(90deg) translateZ(var(--tz));
+}
+
+.b--right {
+	background-color: var(--shade-dark);
+	transform: translateZ(var(--tz));
+}
+
+.b--bottom {
+	transform: rotateX(-90deg) translateZ(var(--tz));
+	box-shadow: 6px -16px 25px 12px hsla(var(--h) var(--s) 36% / 25%);
+}
+
+.b--left {
+	background-color: var(--shade-mid);
+	transform: rotateY(-90deg) translateZ(var(--tz));
+}
+
+
+.b--right, .b--left {
+	height: 120%;
+}
+.b--bottom {
+	bottom: -20%;
+}
+
+/*--Labels--*/
+
+.label--top {
+	display: grid;
+	place-content: center;
+	height: 100%;
+	box-shadow: inset 0 -2rem 0 var(--shade-mid), 
+		inset 0 -4rem 0 -1px hsl(var(--h), var(--s), 60%);
+}
+
+.label--right, .label--left {
+	height: 100%;
+	padding-inline: 1rem;
+	padding-block: 2rem;
+}
+
+.label--right {
+	opacity: .8;
+}
+
+.label--left {
+	box-shadow: inset -2rem 0 0 var(--shade-mid), 
+		inset -4rem 0 0 -1px hsl(var(--h), var(--s), 60%);
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+h1 span {
+	display: block;
+	font-size: 4rem;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background-color: var(--text);
+	margin-block: .5rem;
+}
+
+ul {
+	list-style: none;
+	font-size: .875rem;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+p {
+	font-size: .75rem;
+	padding: .5rem;
+	margin-block-end: .5rem;
+	border: 1px solid var(--text);
+	border-radius: .5rem;
+}
+
+.dose, .icons {
+	font-size: 1.75rem;
+	display: block;
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+.dose {
+	background-color: var(--shade-mid)
+}
+
+.icons {
+	display: flex;
+	gap: .5rem;
+	align-items: center;
+}

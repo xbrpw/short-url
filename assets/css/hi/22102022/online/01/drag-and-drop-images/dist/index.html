@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Drag and drop images</title>
+  <link rel='stylesheet' href='//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Drag and drop</h1>
+<p>Drag and drop, and sort your favourite images on the 2nd column and click on download to generate PDF</p>
+<div>
+  <ul id="sortable1" class="connectedSortable">
+    <li class="ui-state-default">
+      <a href="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" data-lightbox="image-1"><img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="tosort" id="img1"></a></li>
+
+    <li class="ui-state-default"><a href="https://images.unsplash.com/photo-1505159940484-eb2b9f2588e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" data-lightbox="image-2"><img src="https://images.unsplash.com/photo-1505159940484-eb2b9f2588e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" class="tosort" id="img2"></a></li>
+    <li class="ui-state-default"><a href="https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" data-lightbox="image-3"><img src="https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" class="tosort" id="img3"></a></li>
+    <li class="ui-state-default"><a href="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" data-lightbox="image-4"><img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" class="tosort" id="img4"></a></li>
+    <li class="ui-state-default"><a href="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" data-lightbox="image-5"><img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" class="tosort" id="img5"></a></li>
+  </ul>
+
+  <ul id="sortable2" class="connectedSortable">
+
+  </ul>
+</div>
+<div class="clearspace">
+  <button id="download">Download PDF</button>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js'></script>
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script src='https://code.jquery.com/ui/1.13.2/jquery-ui.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+// No JS. This is not a functional CMS, only a concept

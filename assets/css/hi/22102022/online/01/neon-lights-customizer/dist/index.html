@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Neon Lights Customizer</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+	<div class="columns is-8 is-multiline">
+		<div class="column is-three-fourth">
+			<div id="neon_container">
+				<div id="neon_text">
+					<h1  class="title is-2 neonText" id="custom_neon_text_value">Custom Neon Signs</h1>
+				</div>
+			</div>
+			<div class="spacer"></div>
+			<p class="option_title">Choose Your Background</p>
+			<div class="spacer"></div>
+			<div class="columns is-multiline">
+				<div class="column is-one-fifth" >
+					<div class="background_option" id="bg_1" onclick="change_bg('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80','0')"></div>
+				</div>
+				<div class="column is-one-fifth">
+					<div class="background_option" id="bg_2" onclick="change_bg('https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80','1')"></div>
+				</div>
+				<div class="column is-one-fifth">
+					<div class="background_option" id="bg_3" onclick="change_bg('https://images.unsplash.com/photo-1592247350271-c5efb34dd967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80','2')"></div>
+				</div>
+				<div class="column is-one-fifth">
+					<div class="background_option" id="bg_4" onclick="change_bg('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80','3')"></div>
+				</div>
+				<div class="column is-one-fifth">
+					<div class="background_option" id="bg_5" onclick="change_bg('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80','4')"></div>
+				</div>
+			</div>
+		</div>
+		<div class="column is-one-third" style="padding-left: 40px;">
+			<p class="option_title">Toggle Mode</p>
+			<div class="spacer"></div>
+			<input type="checkbox" class="toggle" id="toggle" name="toggle">
+			<label for="toggle" id="toggle_label"></label>
+			<div class="spacer"></div>
+			<p class="option_title">Write Your Text</p>
+			<div class="spacer"></div>
+			<textarea id="custom_neon_text"></textarea>
+			<div class="spacer"></div>
+			<div class="font_option">
+				<p class="option_title">Choose Your Font</p>
+				<div class="spacer"></div>
+				<input type="button" value="Adamina" class="fontBtn" onclick="change_font(this.value,'serif','0');">
+				<input type="button" value="Aladin" class="fontBtn" onclick="change_font(this.value,'cursive','1');">
+				<input type="button" value="Amatic SC" class="fontBtn" onclick="change_font(this.value,'cursive','2');">
+				<input type="button" value="Amiri" class="fontBtn" onclick="change_font(this.value,'serif','3');">
+				<input type="button" value="Arimo" class="fontBtn" onclick="change_font(this.value,'sans-serif','4');">
+				<input type="button" value="Arizonia" class="fontBtn" onclick="change_font(this.value,'cursive','5');">
+				<input type="button" value="Berkshire Swash" class="fontBtn" onclick="change_font(this.value,'cursive','6');">
+				<input type="button" value="Cairo" class="fontBtn" onclick="change_font(this.value,'sans-serif','7');">
+				<input type="button" value="Condiment" class="fontBtn" onclick="change_font(this.value,'cursive','8');">
+				<input type="button" value="Cookie" class="fontBtn" onclick="change_font(this.value,'cursive','9');"> 
+				<input type="button" value="Damion" class="fontBtn" onclick="change_font(this.value,'cursive','10');">
+				<input type="button" value="EB Garamond" class="fontBtn" onclick="change_font(this.value,'serif','11');">
+				<input type="button" value="Fondamento" class="fontBtn" onclick="change_font(this.value,'cursive','12');">
+				<input type="button" value="Gloria Hallelujah" class="fontBtn" onclick="change_font(this.value,'cursive','13');">
+				<input type="button" value="IM FELL English" class="fontBtn" onclick="change_font(this.value,'serif','14');">
+				<input type="button" value="Indie Flower" class="fontBtn" onclick="change_font(this.value,'cursive','15');">
+				<input type="button" value="Kaushan Script" class="fontBtn" onclick="change_font(this.value,'cursive','16');">
+				<input type="button" value="Kirang Haerang" class="fontBtn" onclick="change_font(this.value,'cursive','17');">
+				<input type="button" value="Leckerli One" class="fontBtn" onclick="change_font(this.value,'cursive','18');">
+				<input type="button" value="Long Cang" class="fontBtn" onclick="change_font(this.value,'cursive','19');">
+				<input type="button" value="Mada" class="fontBtn" onclick="change_font(this.value,'sans-serif','20');">
+				<input type="button" value="Merienda One" class="fontBtn" onclick="change_font(this.value,'cursive','21');">
+				<input type="button" value="Nanum Gothic" class="fontBtn" onclick="change_font(this.value,'sans-serif','22');">
+				<input type="button" value="Noto Sans SC" class="fontBtn" onclick="change_font(this.value,'sans-serif','23');">
+				<input type="button" value="Pacifico" class="fontBtn" onclick="change_font(this.value,'cursive','24');">
+				<input type="button" value="Patrick Hand" class="fontBtn" onclick="change_font(this.value,'cursive','25');">
+				<input type="button" value="Permanent Marker" class="fontBtn" onclick="change_font(this.value,'cursive','26');">
+				<input type="button" value="Ramaraja" class="fontBtn" onclick="change_font(this.value,'serif','27');">
+				<input type="button" value="Rubik" class="fontBtn" onclick="change_font(this.value,'sans-serif','28');">
+				<input type="button" value="Shippori Mincho" class="fontBtn" onclick="change_font(this.value,'serif','29');">
+				<input type="button" value="Tinos" class="fontBtn" onclick="change_font(this.value,'serif','30');">
+				<input type="button" value="Train One" class="fontBtn" onclick="change_font(this.value,'cursive','31');">
+				<input type="button" value="ZCOOL XiaoWei" class="fontBtn" onclick="change_font(this.value,'serif','32');">
+			</div> <!-- font option -->
+			<div class="spacer"></div>
+			<div class="color_option">
+				<p class="option_title">Choose Your Color</p>
+				<div class="spacer"></div>
+				<span class="color cold_white" onclick="change_color('0','#fff');"></span>
+				<span class="color warm_white" onclick="change_color('1','#FCE4B4');"></span>
+				<span class="color lemon" onclick="change_color('2','#F1E92E');"></span>
+				<span class="color white_yellow" onclick="change_color('3','#FFD677');"></span>
+				<span class="color white_yellow" onclick="change_color('4','#FFD573');"></span>
+				<span class="color white_orange" onclick="change_color('5','#FF814F');"></span>
+				<span class="color orange" onclick="change_color('6','#FF5F07');"></span>
+
+				<span class="color white_red" onclick="change_color('7','#D53F40');"></span>
+				<span class="color red" onclick="change_color('8','#EC292D');"></span>
+				<span class="color white_pink" onclick="change_color('9','#F748A7');"></span>
+				<span class="color soft_pink" onclick="change_color('10','#FFC0D5');"></span>
+				<span class="color hot_pink" onclick="change_color('11','#DD1860');"></span>
+				<span class="color purple" onclick="change_color('12','#9D61D3');"></span>
+				<span class="color ice_blue" onclick="change_color('13','#27A7C0');"></span>
+
+				<span class="color white_blue" onclick="change_color('14','#3F72CB');"></span>
+				<span class="color blue" onclick="change_color('15','#1F53C9');"></span>
+				<span class="color teal" onclick="change_color('16','#D3F8FF');"></span>
+				<span class="color white_green" onclick="change_color('17','#03DC73');"></span>
+
+				<span class="color green" onclick="change_color('18','#10AE63');"></span>
+			</div>
+			<div class="spacer" style="clear: both;"></div>
+			<div class="download_image">
+				<button id="download_image_btn" class="button is-primary" onclick="DownloadAsImage()">Download Custom Neon</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://html2canvas.hertzen.com/dist/html2canvas.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

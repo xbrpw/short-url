@@ -1,0 +1,75 @@
+html {
+    background:#fdfdfd;
+    color:#2d2d2d;
+    /*overflow-y:scroll;*/
+}
+body {
+    height:100%;
+    font:arial, sans-serif;
+}
+h1, h2 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+a {
+    text-decoration:none;
+    background:#2d2d2d;
+    color:#D94736;
+    padding:.5em;
+    margin:.2em;
+}
+a:hover {
+    color:#fdfdfd;
+    background:#D94736;
+}
+/*--------HEADER------------*/
+ #home {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#2d2d2d;
+    color:#fdfdfd;
+    z-index:1;
+}
+header {
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:15em;
+    height:17.5em;
+    text-align:center;
+    margin-top:-8.75em;
+    margin-left:-7.5em;
+}
+header h1 {
+    font-size:2.2em;
+    font-style:italic;
+}
+/*--------CONTENT-------------*/
+ .content {
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:#fdfdfd;
+    overflow:hidden;
+    z-index:2;
+    -webkit-transition: all .8s cubic-bezier(0.880, 0.040, 0.045, 0.990);
+    -moz-transition: all .8s cubic-bezier(0.880, 0.040, 0.045, 0.990);
+    -o-transition: all .8s cubic-bezier(0.880, 0.040, 0.045, 0.990);
+    -ms-transition:all .8s cubic-bezier(0.880, 0.040, 0.045, 0.990);
+    transition: all .8s cubic-bezier(0.880, 0.040, 0.045, 0.990);
+}
+#one:target, #two:target, #three:target {
+    left:0;
+    overflow:visible;
+}
+article {
+    position:relative;
+    max-width:42em;
+    background:#fdfdfd;
+    padding:1em;
+    margin:0 auto;
+}

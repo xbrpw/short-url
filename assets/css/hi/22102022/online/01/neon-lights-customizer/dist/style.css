@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Aladin&family=Amatic+SC&family=Amiri&family=Arimo&family=Arizonia&family=Berkshire+Swash&family=Cairo&family=Condiment&family=Cookie&family=Damion&family=EB+Garamond&family=Fondamento&family=Gloria+Hallelujah&family=IM+Fell+English&family=Indie+Flower&family=Kaushan+Script&family=Kirang+Haerang&family=Leckerli+One&family=Long+Cang&family=Mada&family=Merienda+One&family=Nanum+Gothic&family=Noto+Sans&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Ramaraja&family=Rock+Salt&family=Rubik&family=Shippori+Mincho&family=Tinos&family=Train+One&family=ZCOOL+XiaoWei&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+		body{
+			background: #fff;
+			padding-top: 3rem;
+			transition: 0.5s;
+		}
+		p{
+			font-family: 'Oswald', sans-serif;
+			font-size: 18px;
+			color: #000;
+		}
+		.spacer{
+			height: 20px;
+		}
+		#neon_container{
+			background:url(https://images.unsplash.com/photo-1513694203232-719a280e022f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+			background-size: cover;
+			height: 500px;
+			position: relative;
+		}
+		#neon_text{
+			position: absolute;
+			width: 100%;
+			height: 100px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.background_option{
+			height: 100px;
+		}
+  .option_title{
+    font-size:32px;
+    font-weight:200 !important;
+  }
+		.background_option:hover{
+			border: 2px solid #000 !important;
+		}
+		#bg_1{
+			background:url(https://images.unsplash.com/photo-1513694203232-719a280e022f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+			background-size: cover;
+		}
+		#bg_2{
+			background:url(https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+			background-size: cover;
+		}
+		#bg_3{
+			background:url(https://images.unsplash.com/photo-1592247350271-c5efb34dd967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80);
+			background-size: cover;
+		}
+		#bg_4{
+			background:url(https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80);
+			background-size: cover;
+		}
+		#bg_5{
+			background:url(https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+			background-size: cover;
+		}
+		#toggle_label{
+			display: block;
+		}
+		textarea{
+			width: 100%;
+			height: 100px;
+			padding: 20px;
+			font-size: 16px;
+		}
+		input[type=button]{
+			font-size: 16px;
+			background: transparent;
+			border: none;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+		.fontBtn{
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+		}
+		.fontBtn:hover{
+			background: #000 !important;
+			color: #fff !important;
+		}
+		.color{
+			float: left;
+    		width: 35px;
+    		height: 35px;
+    		border-radius: 100%;
+    		border: 3px solid #dddddd;
+    		margin-right: 10px;
+    		margin-bottom: 10px;
+    		-webkit-transition: 0.5s;
+    		-o-transition: 0.5s;
+    		transition: 0.5s;
+		}
+		.color:hover{
+			border: 3px solid #000;
+		}
+		.cold_white{
+			background: #fff;
+		}
+		.warm_white{
+			background:#FCE4B4;
+		}
+		.lemon{
+			background: #F1E92E;
+		}
+		.white_yellow{
+			background:#FFD677;
+		}
+		.yellow{
+			background: #FFD573;
+		}
+		.white_orange{
+			background:#FF814F;
+		}
+		.orange{
+			background:#FF5F07;
+		}
+		.white_red{
+			background:#D53F40;
+		}
+		.red{
+			background:#EC292D;
+		}
+		.white_pink{
+			background:#F748A7;
+		}
+		.soft_pink{
+			background:#FFC0D5;
+		}
+		.hot_pink{
+			background:#DD1860;
+		}
+		.purple{
+			background:#9D61D3;
+		}
+		.ice_blue{
+			background:#27A7C0;
+		}
+		.white_blue{
+			background:#3F72CB;
+		}
+		.blue{
+			background:#1F53C9;
+		}
+		.teal{
+			background:#D3F8FF;
+		}
+		.white_green{
+			background:#03DC73;
+		}
+		.green{
+			background:#10AE63;
+		}
+		.neonText {
+		  color: #fff;
+		  font-weight:lighter;
+		  text-shadow:
+		    0 0 7px #9D61D3,
+		    0 0 10px #9D61D3,
+		    0 0 21px #9D61D3,
+		    0 0 42px #9D61D3,
+		    0 0 82px #9D61D3,
+		    0 0 92px #9D61D3,
+		    0 0 102px #9D61D3,
+		    0 0 151px #9D61D3;
+		}
+
+		@media(max-width:768px){
+		    .container{
+		        padding:20px;
+		    }
+		    #neon_container{
+		        height:400px !important;
+		    }
+		    .is-one-fifth{
+		        width:20% !important;
+		        float:left
+		    }
+		    .background_option{
+		        height:100px !important
+		    }
+		}
+		@media(max-width:481px){
+		    #neon_container{
+		        height:300px !important;
+		    }
+		    .background_option{
+		        height:50px !important
+		    }
+		    #custom_neon_text_value{
+		        font-size:26px;
+		    }
+		    .column.is-one-third {
+		        padding-left:10px !important;
+		    }
+		    button#download_image_btn {
+		    	width:100%
+			}
+		}
+
+		input[type=checkbox] {
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  appearance: none;
+		  -webkit-tap-highlight-color: transparent;
+		  cursor: pointer;
+		}
+		input[type=checkbox]:focus {
+		  outline: 0;
+		}
+
+		.toggle {
+		  height: 32px;
+		  width: 52px;
+		  border-radius: 16px;
+		  display: inline-block;
+		  position: relative;
+		  margin: 0;
+		  border: 2px solid #474755;
+		  background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
+		  transition: all 0.2s ease;
+		}
+		.toggle:after {
+		  content: "";
+		  position: absolute;
+		  top: 2px;
+		  left: 2px;
+		  width: 24px;
+		  height: 24px;
+		  border-radius: 50%;
+		  background: white;
+		  box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+		  transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+		}
+		.toggle:checked {
+		  border-color: #654FEC;
+		}
+		.toggle:checked:after {
+		  transform: translatex(20px);
+		}

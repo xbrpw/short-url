@@ -1,0 +1,32 @@
+-
+  var states = (() => {
+    var stateMap = {
+      'unknown': 1,
+      'seen': 2,
+      'caught': 7
+    };
+    return Object.keys(stateMap).reduce(
+      (summary, curState) => summary.concat(new Array(stateMap[curState]).fill(curState)),
+      []
+    );
+  })();
+  var randomState = () => states[~~(Math.random() * states.length)];
+  var getXY = function (idx) {
+    var cellInRow = 13;
+    var cellInCol = 12;
+    var row = ~~(idx / (cellInRow - 1));
+    var col = idx - row * (cellInRow - 1);
+    return `${(100 / (cellInCol - 1)) * col}% ${(100 / (cellInRow - 1)) * row}%`;
+  };
+
+.app
+  main.wall
+    .scroll-indicator
+    .close-btn
+    each $, i in Array(151)
+      .tile(data-state=`${randomState()}`)
+        .pm(style=`--bgp: ${getXY(i)}`)
+
+    header.header
+      h1.title Pokédex
+      h2.subtitle

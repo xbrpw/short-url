@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 100vh;
+}
+.form_container {
+	-webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	border-radius: 20px;
+}
+.input_container {
+	padding: 4em;
+	position: relative;
+}
+#input {
+	padding: 10px 30px;
+	background: rgba(255, 255, 255, 0.6);
+	width: 100%;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 2px solid #ed399a;
+}
+
+.submit {
+	background: #ed399a;
+	padding: 10px 30px;
+	color: #fff;
+	border: 2px solid #ed399a;
+	font-size: 16px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom-left-radius: 20px;
+	position: absolute;
+	right: 2em;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.spooky_bg {
+	background: url(https://cdn.thetealmango.com/wp-content/uploads/2021/10/squiddd.jpg);
+	background-size: cover;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	-webkit-clip-path: polygon(
+		100% 0%,
+		99% 50%,
+		100% 100%,
+		23% 100%,
+		11% 51%,
+		0 0
+	);
+	clip-path: polygon(100% 0%, 99% 50%, 100% 100%, 23% 100%, 11% 51%, 0 0);
+}
+.spooky_bg2 {
+	display: none;
+	background: url(https://cdn.thetealmango.com/wp-content/uploads/2021/10/squiddd.jpg);
+	background-size: cover;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+#error {
+	color: #35b7a4;
+}
+@media (max-width: 768px) {
+	.spooky_bg {
+		display: none;
+	}
+	.spooky_bg2 {
+		display: block !important;
+		height: 300px;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+	}
+}

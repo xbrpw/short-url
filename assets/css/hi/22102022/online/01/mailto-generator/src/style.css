@@ -1,0 +1,33 @@
+pre {
+  transition: opacity .2s ease-in-out;
+}
+pre:empty {
+  opacity: 0;
+}
+[data-button] {
+  display: block;
+  margin: 0 auto;
+  width: auto !important;
+}
+[type="text"],
+[type="email"],
+[data-theme=dark] form textarea {
+  padding: .5em .6em;
+  width: 100%;
+  margin: 0 0 .5em 0;
+  font-size: 12pt;
+  border: 1px solid rgba(0,0,0,.25);
+  border-radius: 2px;
+  background: rgba(0,0,0,.3);
+  box-shadow: rgba(0,0,0,.15) 0 1px 0;
+  color: rgba(255,255,255,.8);
+}
+[type="text"]:focus,
+[type="email"]:focus,
+textarea:focus {
+  border-color: #6c71c4;
+  box-shadow: #6c71c4 0 0 3px;
+}
+.error {
+  border-color: indianred !important;
+}

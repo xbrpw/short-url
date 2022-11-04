@@ -1,0 +1,98 @@
+:root {
+  --bg-color: #ff3c41;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg-color);
+  min-height: 100vh;
+  background: linear-gradient(80deg, var(--bg-color) 53%, #a21d20 100%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  background: url(https://beginnerjavascript.com/images/BJS/pattern.svg);
+  box-sizing: border-box;
+}
+.container .search-box {
+  position: relative;
+  display: flex;
+  background: #fff;
+  border-radius: 25px;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  width: 50vw;
+  height: 3.25rem;
+  --sh-padding: 1.5rem;
+  box-shadow: 0 10px 25px -20px rgba(0, 0, 0, 0.9);
+}
+.container .search-box::after, .container .search-box::before {
+  position: absolute;
+  content: "";
+  background: #222;
+  width: 50%;
+  height: 100%;
+  background: #222;
+  z-index: -1;
+  top: 0.25rem;
+  filter: blur(0.8rem);
+}
+.container .search-box::after {
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  left: var(--sh-padding);
+  transform: rotate(-5deg);
+  transform-origin: right top;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+}
+.container .search-box::before {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  right: var(--sh-padding);
+  transform: rotate(5deg);
+  transform-origin: left top;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+.container .search-box input {
+  border: none;
+  flex-grow: 2;
+  outline: none;
+}
+.container .search-box button {
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 25px;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  outline: none;
+  cursor: pointer;
+  line-height: 1;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  text-shadow: 0 2px #000;
+}
+.container .search-box button:hover, .container .search-box button:focus {
+  background: #444857;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Timetable Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="add-module">
+  <h1>Module Name</h1>
+  <input type="text" placeholder="Module Name.. ex. Computer Science">
+  <h1>Module Code</h1>
+  <input type="text" placeholder="Module Code.. ex. CS101">
+  <div class="half">
+    <h1>Start Time</h1>
+    <input type="time" value="09:00">
+  </div>
+  <div class="half">
+    <h1>End Time</h1>
+    <input type="time" value="10:00">
+  </div>  
+   
+  <h1>location</h1>
+  <input type="text" placeholder="Location.. ex. CS Building">
+  <h1>Day</h1>
+  <ul class="day-picker">
+    <li>Mon</li><li class="day-selected">Tue</li><li>Wed</li><li>Thu</li><li>Fri</li>
+  </ul>
+  
+  <h1>Color</h1>
+  <ul class="color-picker">
+    <li class="blue"></li>
+    <li class="red color-selected"></li>
+    <li class="yellow"></li>
+    <li class="purple"></li>
+    <li class="green"></li>
+    <li class="orange"></li>
+    <li class="gray"></li>
+    
+  </ul>
+  <form>
+    <input type="submit" value="Add to Timetable">
+  </form>
+</div>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

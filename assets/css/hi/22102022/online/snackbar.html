@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+
+}
+
+.div {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+}
+
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+    margin-bottom: 15px;
+  padding: 4px 12px;
+}
+
+.success {
+  background-color: #ddffdd;
+  border-left: 6px solid #04AA6D;
+}
+
+.info {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+}
+
+
+.warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 1s, fadeout 1s 4s;
+  animation: fadein 1s, fadeout 1s 4s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+</head>
+<body>
+
+<h2>Notes</h2>
+<div class="div danger">
+  <p><strong>Danger!</strong> Some text...</p>
+</div>
+
+<div class="div success">
+  <p><strong>Success!</strong> Some text...</p>
+</div>
+
+<div class="div info">
+  <p><strong>Info!</strong> Some text...</p>
+</div>
+
+<div class="div warning">
+  <p><strong>Warning!</strong> Some text...</p>
+</div>
+
+
+
+
+<button onclick="myFunctionSnackbar()">Show Snackbar</button>
+
+<div id="snackbar"><div class="div info">
+  <p><strong>Info!</strong> Some text...</p>
+</div>
+</div>
+
+<script>
+function myFunctionSnackbar() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 12000);
+}
+</script>
+
+</body>
+</html>

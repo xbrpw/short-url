@@ -1,0 +1,183 @@
+.like {
+  --color: #000;
+  --background: #fff;
+  --stroke: #6b7280;
+  --border-color: #e5e7eb;
+  --fill: #e5e7eb;
+  --a-color: #10b981;
+  --a-background: #ecfdf5;
+  --a-stroke: #10b981;
+  --a-border-color: #a7f3d0;
+  --a-fill: #a7f3d0;
+  --height: 66px;
+  --width: 66px;
+  --radius: 6px;
+  --duration: 0.3s;
+  --function: cubic-bezier(0, 0.88, 0.46, 1.36);
+  --shadow: rgba(0, 0, 0, 0.05);
+  position: relative;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: var(--height);
+  width: var(--width);
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.like:hover:before {
+  --b-shadow: 0 0 4px 1px var(--shadow);
+}
+.like:hover .icon {
+  --i-bottom: 3px;
+}
+.like:hover .shadow {
+  --s-opacity: 1;
+}
+.like:active:before {
+  --b-height: calc(var(--height) + 2px);
+  --b-radius: calc(var(--radius) * 5) calc(var(--radius) * 5) var(--radius)
+     var(--radius) / calc(var(--radius) * 1.6) calc(var(--radius) * 1.6)
+     var(--radius) var(--radius);
+}
+.like:active .icon {
+  --i-bottom: 17px;
+}
+.like:active .shadow {
+  --s-width: 20px;
+}
+.like:active .number {
+  --n-top: 2px;
+}
+.like.active:before {
+  --background: var(--a-background);
+  --border: var(--a-border-color);
+}
+.like.active .icon {
+  --fill: var(--a-border-color);
+  --stroke: var(--a-stroke);
+}
+.like.active .number {
+  --color: var(--a-color);
+}
+.like:before {
+  --delay: 50ms;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  background: var(--background);
+  border: 1px solid var(--border, var(--border-color));
+  height: var(--b-height, calc(100% - 2px));
+  width: var(--b-width, calc(100% - 2px));
+  box-shadow: var(--b-shadow, none);
+  border-radius: var(--b-radius, var(--radius));
+  transition: border-radius var(--duration) var(--function) var(--delay), height var(--duration) var(--function) var(--delay);
+}
+.like .icon {
+  --size: 24px;
+  position: relative;
+  display: flex;
+  bottom: var(--i-bottom, 0);
+  transition: bottom var(--duration) var(--function);
+}
+.like .icon svg {
+  fill: var(--fill);
+  stroke: var(--stroke);
+  width: var(--size);
+  height: var(--size);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.like .shadow {
+  position: absolute;
+  background: var(--shadow);
+  top: calc(var(--height) - 45%);
+  border-radius: 50%;
+  height: 2px;
+  width: var(--s-width, 14px);
+  opacity: var(--s-opacity, 0);
+  filter: blur(1px);
+  transition: width var(--duration) var(--function), opacity var(--duration) var(--function);
+}
+.like .number {
+  color: var(--color);
+  position: relative;
+  font-weight: 500;
+  margin-top: 3px;
+  top: var(--n-top, 0);
+  transition: top var(--duration) var(--function);
+}
+
+article {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  padding: 10px;
+  width: 666px;
+}
+article .content {
+  box-shadow: 0px 1px 0px #e5e7eb;
+}
+article .content h1 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0.4em;
+  line-height: 1.4;
+}
+article .content span {
+  color: #6b7280;
+  font-size: 14px;
+}
+article .content p {
+  margin-top: 0.7em;
+  margin-bottom: 1.25em;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  display: grid;
+  place-content: center;
+}
+body .socials {
+  position: fixed;
+  display: flex;
+  right: 20px;
+  bottom: 20px;
+}
+body .socials > a {
+  display: block;
+  height: 28px;
+  margin-left: 15px;
+}
+body .socials > a.dribbble img {
+  height: 28px;
+}
+body .socials > a.twitter svg {
+  width: 32px;
+  height: 32px;
+  fill: #1da1f2;
+}

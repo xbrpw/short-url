@@ -1,0 +1,97 @@
+body {
+  position: relative;
+  background-color: #e10065;
+}
+
+#sd-container {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  position: relative;
+  width: 42px;
+  height: 16px;
+  opacity: 0;
+}
+.arrow::before, .arrow::after {
+  content: "";
+  width: 21px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  display: inline-block;
+}
+.arrow::before {
+  transform: rotate(45deg) translateX(25%);
+}
+.arrow::after {
+  transform: rotate(-45deg) translateX(-25%);
+}
+.arrow:nth-child(1) {
+  top: -50px;
+  opacity: 1;
+  -webkit-animation: arrow2 1s ease 0s infinite;
+          animation: arrow2 1s ease 0s infinite;
+}
+.arrow:nth-child(2) {
+  top: -25px;
+  -webkit-animation: arrow1 1s ease 0.25s infinite;
+          animation: arrow1 1s ease 0.25s infinite;
+}
+
+@-webkit-keyframes arrow1 {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+  to {
+    opacity: 0;
+    top: 0px;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow1 {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+  to {
+    opacity: 0;
+    top: 0px;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes arrow2 {
+  from {
+    opacity: 0;
+    top: -35px;
+  }
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes arrow2 {
+  from {
+    opacity: 0;
+    top: -35px;
+  }
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+  50% {
+    opacity: 1;
+  }
+}

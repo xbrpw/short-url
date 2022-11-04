@@ -1,0 +1,43 @@
+.pokeball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  font-size: 150px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at 80% 10%, transparent 0, transparent 50%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.8) 90%), radial-gradient(6% 8% at 75% 25%, rgba(255, 255, 255, 0.5) 30%, transparent);
+  box-shadow: inset -0.05em 0.05em 0.15em rgba(255, 255, 255, 0.5);
+}
+.pokeball::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: #f00;
+  background-image: linear-gradient(to bottom, #EE4035 42%, #1d1f20 42%, #1d1f20 44%, #58585A 44%, #58585A 56%, #1d1f20 56%, #1d1f20 58%, #ffffff 58%);
+  transition: transform 0.5s;
+  will-change: transform;
+}
+.pokeball::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10%;
+  height: 10%;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3), 0.01em 0.01em 0.03em 0 rgba(0, 0, 0, 0.5), 0 0 0 0.1em #fff, 0 0 0 0.12em #000;
+  transform: translate(-50%, -50%);
+}
+.pokeball:hover::before {
+  transform: rotate(360deg);
+}

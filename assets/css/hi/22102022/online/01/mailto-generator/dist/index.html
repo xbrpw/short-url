@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Mailto: Generator 📬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  document.documentElement.setAttribute('data-theme','dark')
+</script><link rel='stylesheet' href='//fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic'>
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic'>
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700,900'>
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic'>
+<link rel='stylesheet' href='//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic'>
+<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/67439/basic.css'>
+<link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/67439/data-buttons.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Mailto Generator</h1>
+<div data-wrapper></div>
+<form>
+  <input type=email id=to placeholder=To required>
+  <input type=text id=subject placeholder=Subject>
+  <textarea id=body placeholder=Body></textarea>
+  <input type=button data-button=outline value="Generate Mailto" onclick=buildString()>
+</form>
+<pre id=link></pre>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/eqcss/1.2.1/EQCSS.min.js'></script>
+<script src='//staticresource.s3.amazonaws.com/template/plugins/notifications/notifications.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

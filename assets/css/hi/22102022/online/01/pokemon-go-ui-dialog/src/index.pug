@@ -1,0 +1,22 @@
+-
+  var state = {
+    themeColor: '#66c',
+    introItem: {
+      imgSrc: 'https://images.weserv.nl/?url=//rawgit.com/Superviral/Pokemon-GO-App-Assets-and-Images/master/App%20Converted%20Images/pokestop_near.png&il',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio nemo ea pariatur, explicabo voluptatem architecto nulla omnis, aut possimus!'
+    },
+    introducer: {
+      imgSrc: 'https://images.weserv.nl/?url=//rawgit.com/Superviral/Pokemon-GO-App-Assets-and-Images/master/App%20Converted%20Images/Professor.png&il'
+    }
+  };
+
+.app
+.dialog(style=`
+  --dialog-themeColor: ${state.themeColor};
+  --introducer-imgSrc: url(${state.introducer.imgSrc})
+`)
+  article.intro
+    .intro__item
+      if (state.introItem.imgSrc)
+        img(src=state.introItem.imgSrc)
+    .intro__content= state.introItem.description

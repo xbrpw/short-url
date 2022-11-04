@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png"),
+    radial-gradient(circle, rgb(243, 243, 243) 50%, rgb(182, 179, 179));
+}
+
+section {
+  padding: 1em;
+  max-width: 500px;
+  height: min-content;
+  display: grid;
+  align-items: center;
+}
+section p {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  font-family: "Roboto Slab", serif;
+}
+
+.button {
+  width: 150px;
+  height: min-content;
+  display: grid;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  --dur: 0.3s;
+  --grey: #a7a7a7;
+  --accent: #df0aa9;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0px, -50%);
+  stroke: black;
+  stroke-width: 50;
+  width: 50px;
+  height: auto;
+  fill: none;
+}
+
+.bumps {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  transform-origin: 100% 100%;
+  color: var(--grey);
+}
+
+.bars {
+  position: absolute;
+  left: 43%;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  transform-origin: 0% 50%;
+  transform: scale(0.3);
+  opacity: 0;
+}
+.bars div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(38deg * var(--i)));
+}
+.bars div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.active svg {
+  animation: moveFist var(--dur) ease-out forwards;
+}
+@keyframes moveFist {
+  0%,
+  100% {
+    transform: translate(0px, -50%);
+  }
+  60% {
+    transform: translate(20px, -50%);
+  }
+}
+
+.active .bars {
+  animation: scaleDots var(--dur) 0.1s ease-in-out;
+}
+@keyframes scaleDots {
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.active .bumps {
+  animation: bumpText var(--dur) 0.2s ease forwards;
+}
+@keyframes bumpText {
+  0% {
+    transform: translate(0px, -50%) rotate(0deg);
+  }
+  60% {
+    transform: translate(3px, -50%) rotate(7deg);
+    /* color: var(--accent); */
+  }
+  100% {
+    transform: translate(0px, -50%) rotate(0deg);
+    color: var(--accent);
+  }
+}

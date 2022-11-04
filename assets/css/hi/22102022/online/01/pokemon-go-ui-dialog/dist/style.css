@@ -1,0 +1,112 @@
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(transparent 15%, var(--dialog-themeColor, gray));
+}
+.dialog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--introducer-imgSrc);
+  background-repeat: no-repeat;
+  background-position: 25vw 50vh;
+  background-size: 140vmin;
+}
+@supports (background-position: right 1px top 1px) {
+  .dialog::before {
+    background-position: left calc(45vw - 35vmin) top calc(90vh - 70vmin);
+  }
+}
+
+.intro {
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
+  font-size: calc(1.5vmin + .5em);
+}
+
+.intro__item > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.intro__item:not(:empty) {
+  position: absolute;
+  left: 2.5em;
+  bottom: calc(100% + 10vmin);
+  width: 28vmin;
+  height: 28vmin;
+  padding: 1em;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.intro__item:not(:empty)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -5vmin;
+  border-radius: inherit;
+  border: 2.5vmin solid transparent;
+  opacity: 0.75;
+  box-shadow: inset 0 0 0 0.8vmin rgba(255, 255, 255, 0.5), 0 0 0 1vmin rgba(255, 255, 255, 0.75);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.intro__item:not(:empty):hover::before {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.intro__content {
+  position: relative;
+  padding: 1em 1.5em;
+  border-radius: 0.4em;
+  background-color: #fff;
+  line-height: 1.5;
+  color: #404040;
+  font-family: sans-serif;
+  box-shadow: 0 0 0.25em;
+}
+.intro__content::before {
+  content: "";
+  position: absolute;
+  left: calc(45vw - 35vmin + 50vmin);
+  bottom: 100%;
+  border-bottom: 1em solid;
+  border-left: 0.65em solid transparent;
+  border-right: 0.65em solid transparent;
+  font-size: smaller;
+  color: #fff;
+  filter: drop-shadow(0 -0.125em 0.125em rgba(0, 0, 0, 0.3));
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}

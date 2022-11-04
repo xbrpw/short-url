@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;900&subset=latin&display=swap');
+
+:root {
+	--hs: 38 47%;
+	
+	--black: #32302f;
+	--red: #ea6962;
+	--orange: #e78a4e;
+	--yellow: #d8a657;
+	--green: #a9b665;
+	--aqua: #89b482;
+	
+  --size: clamp(10rem, 7.091rem + 14.55vw, 18rem);
+	
+	--tz: calc(var(--size) / 2);
+  
+  --shade-mid: hsl(var(--hs) 75%);
+  --shade-dark: hsl(var(--hs) 73%);
+}
+
+html { 
+  height: 100%;
+  font-family: "Rubik", sans-serif; 
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+svg {
+	max-block-size: 100%;
+	pointer-events: none;
+}
+
+body {
+	height: 100vh;
+	display: grid;
+	place-content: center;
+	background: hsl(var(--hs) 70%);
+	color: var(--black);
+}
+
+.b{
+	font-size: clamp(0.55rem, 0.386rem + 0.82vw, 1rem);
+	width: calc(var(--size) / 2);
+	height: calc(var(--size) * 2);
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotate3d(-.1, .2, -.035, 45deg);
+}
+
+
+.b--top, .b--right, .b--bottom, .b--left {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: inherit;
+}
+
+.b--top {
+	background-color: var(--yellow);
+	transform: rotateX(90deg) translateZ(calc(var(--tz) * 2));
+	filter: brightness(1.05);
+}
+
+.b--left {
+	display: grid;
+	width: calc(var(--size) * 2);
+	background-color: var(--shade-mid);
+	border-bottom: 1px solid hsl(var(--hs) 44%);
+	transform: rotateY(-90deg) translateZ(calc(var(--tz) * 2));
+}
+
+
+.b--right {
+	background-color: var(--shade-dark);
+	transform: translateZ(calc(var(--tz) * 2));
+	border-bottom: 1px solid hsl(var(--hs) 48%);
+}
+
+.b--bottom {
+	transform: rotateX(-90deg) translateZ(calc(var(--tz) * 2));
+	box-shadow: 20px -10px 40px 20px hsl(38 47% 58%);
+}
+
+.left-face, .right-face {
+	display: grid;
+	background: linear-gradient(to top, var(--aqua), 
+		var(--aqua) 2em, 
+		var(--green) 2em, 
+		var(--green) 4em,
+		var(--yellow) 4em,
+		var(--yellow) 6em,
+		var(--orange) 6em,
+		var(--orange) 8em,
+		var(--red) 8em,
+		var(--red) 10em,
+		#0000 10em);
+}
+
+/*------------------
+	LEFT FACE
+-------------------*/
+
+.left-face > * {
+	padding: 1em;
+}
+
+h1 {
+	align-self: start;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	display: grid;
+	position: relative;
+	isolation: isolate;
+	background: linear-gradient(to right, var(--black), var(--black) 14em, var(--yellow) 14em);
+	color: var(--yellow);
+}
+
+h1 span {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+h1::before, h1::after {
+	content: "";
+	position: absolute;
+	width: 4em;
+	height: 100%;
+	top: 0;
+}
+
+h1::before {
+	background-color: var(--red);
+	left: 12em;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%);
+	
+}
+
+h1::after {
+	background-color: var(--orange);
+	left: 14em;
+	clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 50% 50%);
+}
+
+h2 {
+	align-self: center;
+	font-size: 1em;
+	font-weight: 500;
+	line-height: 1;
+	text-transform: uppercase;
+	display: grid;
+	padding-block: 10vh 20vh;
+}
+
+h2 span:first-child {
+	font-size: 7.5em;
+	font-weight: 900;
+}
+
+h2 span:last-child {
+	font-size: 1.5em;
+	max-inline-size: 10ch
+}
+
+h2 + p {
+	align-self: end;
+	font-size: .875em;
+	font-weight: 500;
+	line-height: 1.1;
+	max-inline-size: 28ch;
+	position: relative;
+	isolation: isolate;
+	background-color: var(--aqua);
+}
+
+h2 + p::before {
+	content: "";
+	position: absolute;
+	width: 4em;
+	height: 100%;
+	top: 0;
+	left: 17em;
+	background-color: inherit;
+	clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%);
+	z-index: -1;
+}
+
+/*------------------
+	RIGHT FACE
+-------------------*/
+
+.right-face {
+	height: 100%;
+	filter: contrast(90%);
+}
+
+h3 {
+	align-self: start;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	padding: 1em;
+	background-color: var(--yellow);
+}
+
+h3 span {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+h4 {
+	font-weight: 500;
+	line-height: 1;
+	text-transform: uppercase;
+	display: grid;
+	grid-template-columns: 40% 30%;
+	align-items: center;
+	padding: 2em;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}
+
+h4 span:first-child {
+	font-size: 3.5em;
+	font-weight: 900;
+}
+
+h4 span:last-child {
+	font-size: .75em
+}
+
+.quantity {
+	line-height: .9;
+	font-weight: 500;
+	padding: 1em;
+	display: flex;
+	gap: .25em;
+	align-items: center;
+	justify-content: center;
+}
+
+.quantity p:first-child {
+	font-size: 3em;
+	font-weight: 900;
+}
+
+.quantity sup {
+	font-size: .5em;
+}
+
+.quantity p:last-child {
+	font-size: .5em;
+}

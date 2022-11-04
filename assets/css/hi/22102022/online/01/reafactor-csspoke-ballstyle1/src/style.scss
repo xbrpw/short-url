@@ -1,0 +1,78 @@
+$btn-size: 10%;
+$btn-bd-size: .02em;
+
+$gap-size: 6%;
+$gap-bd-size: 2%;
+
+.pokeball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  font-size: 150px;
+  border-radius: 50%;
+  background-image:
+    radial-gradient(
+      circle at 80% 10%,
+      transparent 0,
+      transparent 50%,
+      rgba( 0,0,0,.5) 80%,
+      rgba(0,0,0,.8) 90%
+    ),
+    radial-gradient(
+      6% 8% at 75% 25%,
+      rgba(#fff, .5) 30%,
+      transparent
+    );
+  box-shadow: inset -.05em .05em .15em rgba(#fff, .5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: #f00;
+    background-image: 
+      linear-gradient(to bottom,
+        #EE4035 (50% - $gap-size - $gap-bd-size),
+        #1d1f20 (50% - $gap-size - $gap-bd-size),
+        #1d1f20 (50% - $gap-size),
+        #58585A (50% - $gap-size),
+        #58585A (50% + $gap-size),
+        #1d1f20 (50% + $gap-size),
+        #1d1f20 (50% + $gap-size + $gap-bd-size),
+        #ffffff (50% + $gap-size + $gap-bd-size)
+      );
+    transition: transform .5s;
+    will-change: transform;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $btn-size;
+    height: $btn-size;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow:
+      0 0 .3em rgba(#000, .3),
+      .01em .01em .03em 0 rgba(#000, .5),
+      0 0 0 .1em #fff,
+      0 0 0 (.1em + $btn-bd-size) #000;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover::before {
+    transform: rotate(360deg);
+  }
+}

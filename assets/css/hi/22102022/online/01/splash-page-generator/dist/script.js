@@ -10,7 +10,6 @@ var fonts = ['Droid-Sans','Arvo','Corben','Lobster','Droid-Serif','Raleway','Gou
 var randHeading = fonts[Math.floor(Math.random() * fonts.length)];
 var randStrapline = fonts[Math.floor(Math.random() * fonts.length)];
 var randImage = "https://unsplash.it/1200/800/?image=" + Math.floor(100 + Math.random() * 900);
-var randImage = "https://unsplash.it/1200/800/?image=" + Math.floor(100 + Math.random() * 900);
 
 
 // Apply random styles

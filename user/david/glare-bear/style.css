@@ -1,15 +1,20 @@
-* {
-  box-sizing: border-box;
-}
+
 body {
-  background-color: #1b525a;
-  min-height: 100vh;
+  background: rgb(18,69,77);
+background: linear-gradient(0deg, rgba(18,69,77,1) 28%, rgba(0,167,195,1) 83%, rgba(0,167,195,0.01) 100%);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  align-items: center;
+ 
 }
 .bear {
   height: 50vmin;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
 .glare {
   -webkit-animation: glare 2s both ease-in-out infinite;

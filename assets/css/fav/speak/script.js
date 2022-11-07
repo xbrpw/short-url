@@ -69,6 +69,6 @@ function runSpeechRecognition() {
 document.querySelector("#aux").addEventListener("click", function() {
   let speech = new SpeechSynthesisUtterance();
   speech.lang = "es";
-  speech.text = "¿Dónde están Sofía y mamá?";
+  speech.text = "Holi, holi, holi";
   window.speechSynthesis.speak(speech);
 })

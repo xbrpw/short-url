@@ -1,20 +1,293 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es-MX" >
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - A Pen by Alvaro Montoro</title>
-  <link rel="stylesheet" href="./style.css">
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+      <meta name="wechat-enable-text-zoom-em" content="true">
+      <title>weui.io</title>
+      <link rel="stylesheet" href="https://weui.io/style/weui.css">
+      <link rel="stylesheet" href="https://weui.io/example.css">        
+      <link href='https://xbrpw.github.io/assets/fontawesome/css/all.min.css' rel='stylesheet'>
+    <link href='https://xbrpw.github.io/assets/fontawesome/css/regular.min.css' rel='stylesheet'>    
+    <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>   
+    <!-- <script src='https://kit.fontawesome.com/944eb371a4.js'></script> -->
+      <script src="https://www.luisangelmaciel.one/js/fontawesome-1d9115e34a.js"></script>   
+  <link rel="stylesheet" href="./style.csxs">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.02.0/css/all.min.css'> 
+  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free  -->
+  <link rel="stylesheet" href="https://xbrpw.github.io/w/weui.css">           <link rel="stylesheet" href="https://weui.io/style/weui.css">
+  <link rel="stylesheet" href="https://weui.io/example.css">      <script src="https://xbrpw.github.io/weui.min.js"></script>   <script src="https://xbrpw.github.io/w/weui.js"></script>
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<h2>JavaScript Speech to Text</h2>
-<p>Click on the below button and speak something...</p>
-<p><button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span></p>
-<div id="output" class="hide"></div>
-<button id="aux">Speak</button>
-<!-- partial -->
-  <script  src="./script.js"></script>
+<body ontouchstart>
+
+
+ 
+
+       
+
+
+
+
+
+
+<div class="weui-tab" >
+  <div id="panel1" role="tabpanel" aria-labelledby="tab1" class="weui-tab__panel">
+    <p>
+      Lorem repellat eius consectetur ab pariatur! Facere cum dignissimos sequi error perferendis quis Ipsa reiciendis earum cumque reprehenderit tenetur ab vero modi. Soluta tempore minima tempora quae voluptate! Sunt delectus?
+
+
+<div id="panel2" role="tabpanel" aria-labelledby="tab2" class="weui-tab__panel" style="display: none;">Dolor eum rerum magnam voluptatem omnis fuga, dolore libero quibusdam cupiditate Sequi vero rem corrupti hic veritatis Atque exercitationem odit odit ducimus esse, sapiente laborum inventore! Ipsum harum quo minus</div>
+<div id="panel3" role="tabpanel" aria-labelledby="tab3" class="weui-tab__panel" style="display: none;">Elit deserunt dolore nemo harum neque libero numquam, minima nam Atque nesciunt iusto aperiam eligendi praesentium ratione? Quasi iste odio itaque doloribus hic? Est aliquam recusandae dolore ratione quos. Saepe</div>
+<div id="panel4" role="tabpanel" aria-labelledby="tab4" class="weui-tab__panel" style="display: none;">Amet dignissimos doloribus voluptate maxime dolorem quia Deleniti eligendi similique nisi corrupti eius aut Unde nesciunt quos quos sapiente dolorem? Odit soluta repudiandae accusantium ducimus totam accusamus. Rem ad numquam</div>
+<div role="tablist" aria-label="选项卡标题" class="weui-tabbar">
+    <div id="tab1" role="tab" aria-labelledby="t1_title" aria-describedby="t1_tips" aria-selected="true" aria-controls="panel1" class="weui-tabbar__item weui-bar__item_on">
+        <div id="t1_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+            <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+            <span class="weui-badge" style="position: absolute; top: -2px; right: -13px;">8</span>
+        </div>
+        <p id="t1_title" aria-hidden="true" class="weui-tabbar__label">微信</p>
+    </div>
+    <div id="tab2" role="tab" aria-labelledby="t2_title" aria-selected="false" aria-controls="panel2" class="weui-tabbar__item">
+        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+        <p aria-hidden="true" id="t2_title" class="weui-tabbar__label">通讯录</p>
+    </div>
+    <div id="tab3" role="tab" aria-labelledby="t3_title" aria-describedby="t3_tips" aria-selected="false" aria-controls="panel3" class="weui-tabbar__item">
+        <div id="t3_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+            <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+            <span class="weui-badge weui-badge_dot" role="img" alt="new" style="position: absolute; top: 0; right: -6px;"></span>
+        </div>
+        <p id="t3_title" aria-hidden="true" class="weui-tabbar__label">发现</p>
+    </div>
+    <div id="tab4" role="tab" aria-labelledby="t4_title" aria-selected="false" aria-controls="panel4" class="weui-tabbar__item">
+        <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+        <p class="weui-tabbar__label" aria-hidden="true" id="t4_title">我</p>
+    </div>
+</div>
+</div>                              
+<div class="weui-msg">
+    <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+    <div class="weui-msg__text-area">
+        <h2 class="weui-msg__title">Xiiber Power</h2>
+        <p class="weui-msg__desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
+          <button type="button" onclick="runSpeechRecognition()">Speech to Text</button> &nbsp; <span id="action"></span></p>
+    <div id="output" class="hide">
+      
+    </div>
+    <br>
+    <button id="aux"> <i class="fa-solid fa-microphone-slash"></i> &nbsp; Speak</button>
+    <br><br>
+
+    
+      <i class="fa-solid fa-volume-low"></i>  <i class="fa-solid fa-volume-xmark"></i> 
+      <i class="fa-solid fa-microphone-slash"></i> <i class="fa-solid fa-microphone"></i> 
+      <i class="fa-solid fa-pencil"></i>
+      <i class="fa-solid fa-eraser"></i>
+      <i class="fa-solid fa-trash-can"></i>
+      <i class="fa-solid fa-circle-plus"></i>
+      <i class="fa-solid fa-paper-plane"></i>
+      <i class="fa-regular fa-envelope-open"></i> 
+      <i class="fa-solid fa-copy"></i>
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-music"></i>
+      <i class="fa-regular fa-envelope"></i>
+      <i class="fa-solid fa-list"></i> 
+
+      <a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
+    </div>
+    <div class="weui-msg__opr-area">
+        <p class="weui-btn-area">
+            <a href="javascript:history.back();" role="button" class="weui-btn weui-btn_primary">推荐操作</a>
+        </p>
+    </div>
+    <div class="weui-msg__tips-area">
+      <p class="weui-msg__tips">提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
+    </div>
+    <div class="weui-msg__extra-area">
+        <div class="weui-footer">
+            <p class="weui-footer__links">
+                <a href="javascript:" class="weui-wa-hotarea weui-footer__link">底部链接文本</a>
+            </p>
+            <p class="weui-footer__text">Copyright &copy; 2008-2016 weui.io</p>
+        </div>
+    </div>
+</div>
+<div class="weui-msg">
+  <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+  <div class="weui-msg__text-area">
+      <h2 class="weui-msg__title">操作成功</h2>
+      <p class="weui-msg__desc">内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
+  </div>
+  <div class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+          <a href="javascript:history.back();" role="button" class="weui-btn weui-btn_primary">推荐操作</a>
+      </p>
+  </div>
+  <div class="weui-msg__tips-area">
+    <p class="weui-msg__tips">提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a class="weui-wa-hotarea weui-link" href="javascript:">文字链接</a></p>
+  </div>
+  <div class="weui-msg__extra-area">
+      <div class="weui-footer">
+          <p class="weui-footer__links">
+              <a href="javascript:" class="weui-wa-hotarea weui-footer__link">底部链接文本</a>
+          </p>
+          <p class="weui-footer__text">Copyright &copy; 2008-2016 weui.io</p>
+      </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+      $('.weui-navbar__item').on('click', function () {
+          $(this).attr('aria-selected','true').addClass('weui-bar__item_on');
+          $(this).siblings('.weui-bar__item_on').removeClass('weui-bar__item_on').attr('aria-selected','false');
+          var panelId = '#' + $(this).attr('aria-controls');
+          $(panelId).css('display','block');
+          $(panelId).siblings('.weui-tab__panel').css('display','none');
+      });
+  });
+</script>
+
+
+  
+  <div class="page__bd" style="height: 100%;" id="tpl_tabbar">
+      <div class="weui-tab">
+          <div id="panel1" role="tabpanel" aria-labelledby="tab1" class="weui-tab__panel">     Lorem repellat eius consectetur ab pariatur! Facere cum dignissimos sequi error perferendis quis Ipsa reiciendis earum cumque reprehenderit tenetur ab vero modi. Soluta tempore minima tempora quae voluptate! Sunt delectus?</div>
+          <div id="panel2" role="tabpanel" aria-labelledby="tab2" class="weui-tab__panel" style="display: none;">Dolor eum rerum magnam voluptatem omnis fuga, dolore libero quibusdam cupiditate Sequi vero rem corrupti hic veritatis Atque exercitationem odit odit ducimus esse, sapiente laborum inventore! Ipsum harum quo minus</div>
+          <div id="panel3" role="tabpanel" aria-labelledby="tab3" class="weui-tab__panel" style="display: none;">Elit deserunt dolore nemo harum neque libero numquam, minima nam Atque nesciunt iusto aperiam eligendi praesentium ratione? Quasi iste odio itaque doloribus hic? Est aliquam recusandae dolore ratione quos. Saepe</div>
+          <div id="panel4" role="tabpanel" aria-labelledby="tab4" class="weui-tab__panel" style="display: none;">Amet dignissimos doloribus voluptate maxime dolorem quia Deleniti eligendi similique nisi corrupti eius aut Unde nesciunt quos quos sapiente dolorem? Odit soluta repudiandae accusantium ducimus totam accusamus. Rem ad numquam</div>
+          <div role="tablist" aria-label="选项卡标题" class="weui-tabbar">
+              <div id="tab1" role="tab" aria-labelledby="t1_title" aria-describedby="t1_tips" aria-selected="true" aria-controls="panel1" class="weui-tabbar__item weui-bar__item_on">
+                  <div id="t1_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+                      <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                      <span class="weui-badge" style="position: absolute; top: -2px; right: -13px;">8</span>
+                  </div>
+                  <p id="t1_title" aria-hidden="true" class="weui-tabbar__label">微信</p>
+              </div>
+              <div id="tab2" role="tab" aria-labelledby="t2_title" aria-selected="false" aria-controls="panel2" class="weui-tabbar__item">
+                  <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                  <p aria-hidden="true" id="t2_title" class="weui-tabbar__label">通讯录</p>
+              </div>
+              <div id="tab3" role="tab" aria-labelledby="t3_title" aria-describedby="t3_tips" aria-selected="false" aria-controls="panel3" class="weui-tabbar__item">
+                  <div id="t3_tips" aria-hidden="true" style="display: inline-block; position: relative;">
+                      <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                      <span class="weui-badge weui-badge_dot" role="img" alt="new" style="position: absolute; top: 0; right: -6px;"></span>
+                  </div>
+                  <p id="t3_title" aria-hidden="true" class="weui-tabbar__label">发现</p>
+              </div>
+              <div id="tab4" role="tab" aria-labelledby="t4_title" aria-selected="false" aria-controls="panel4" class="weui-tabbar__item">
+                  <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                  <p class="weui-tabbar__label" aria-hidden="true" id="t4_title">我</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<script type="text/javascript">
+  $(function(){
+      $('.weui-tabbar__item').on('click', function () {
+          $(this).attr('aria-selected','true').addClass('weui-bar__item_on');
+          $(this).siblings('.weui-bar__item_on').removeClass('weui-bar__item_on').attr('aria-selected','false');
+          var panelId = '#' + $(this).attr('aria-controls');
+          $(panelId).css('display','block');
+          $(panelId).siblings('.weui-tab__panel').css('display','none');
+      });
+  });
+</script>
+
+
+      <div class="weui-panel weui-panel_access">
+          <div class="weui-panel__hd">图文组合列表</div>
+          <div class="weui-panel__bd">
+              <a aria-labelledby="js_p1m1_bd" href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div aria-hidden="true" class="weui-media-box__hd">
+                      <img class="weui-media-box__thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg==" alt="">
+                  </div>
+                  <div aria-hidden="true" id="js_p1m1_bd" class="weui-media-box__bd">
+                      <strong class="weui-media-box__title">标题一</strong>
+                      <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                      
+                  </div>
+              </a>
+              <a aria-labelledby="js_p1m2_bd" href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div aria-hidden="true" class="weui-media-box__hd">
+                      <img class="weui-media-box__thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg==" alt="">
+                  </div>
+                  <div aria-hidden="true" id="js_p1m2_bd" class="weui-media-box__bd">
+                      <strong class="weui-media-box__title">标题二</strong>
+                      <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+              </a>
+          </div>
+          <div class="weui-panel__ft">
+              <a href="javascript:" class="weui-cell weui-cell_active weui-cell_access weui-cell_link">
+                  <span class="weui-cell__bd">查看更多</span>
+                  <span class="weui-cell__ft"></span>
+              </a>    
+          </div>
+      </div>
+      <div class="weui-panel weui-panel_access">
+          <div class="weui-panel__hd">文字组合列表</div>
+          <div class="weui-panel__bd">
+              <div role="option" class="weui-media-box weui-media-box_text">
+                  <strong class="weui-media-box__title">标题一</strong>
+                  <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+              </div>
+              <div role="option" class="weui-media-box weui-media-box_text">
+                  <strong class="weui-media-box__title">标题二</strong>
+                  <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+              </div>
+          </div>
+          <div class="weui-panel__ft">
+              <a href="javascript:" class="weui-cell weui-cell_active weui-cell_access weui-cell_link">
+                  <span class="weui-cell__bd">查看更多</span>
+                  <span class="weui-cell__ft"></span>
+              </a>    
+          </div>
+      </div>
+      <div class="weui-panel">
+          <div class="weui-panel__hd">小图文组合列表</div>
+          <div class="weui-panel__bd">
+              <div class="weui-media-box weui-media-box_small-appmsg">
+                  <div class="weui-cells">
+                      <a aria-labelledby="t1 t2" class="weui-cell weui-cell_active weui-cell_access weui-cell_example" href="javascript:">
+                          <div aria-hidden="true" id="t1" class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt=""></div>
+                          <div aria-hidden="true" id="t2" class="weui-cell__bd weui-cell_primary">
+                              <p>文字标题</p>
+                          </div>
+                          <div class="weui-cell__ft"></div>
+                      </a>
+                      <a aria-labelledby="t3 t4" class="weui-cell weui-cell_active weui-cell_access weui-cell_example" href="javascript:">
+                          <div aria-hidden="true" id="t3" class="weui-cell__hd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" alt=""></div>
+                          <div aria-hidden="true" id="t4" class="weui-cell__bd weui-cell_primary">
+                              <p>文字标题</p>
+                          </div>
+                          <div class="weui-cell__ft"></div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="weui-panel">
+          <div class="weui-panel__hd">文字列表附来源</div>
+          <div class="weui-panel__bd">
+              <div role="link" aria-labelledby="js_p4m1_title js_a11y_comma js_p4m1_desc" aria-describedby="js_p4m1_source js_a11y_comma js_p4m1_time js_a11y_comma js_p4m1_extra" class="weui-media-box weui-media-box_text">
+                  <strong aria-hidden="true" class="weui-media-box__title" id="js_p4m1_title">标题一</strong>
+                  <p class="weui-media-box__desc" aria-hidden="true" id="js_p4m1_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  <ul class="weui-media-box__info" aria-hidden="true">
+                      <li class="weui-media-box__info__meta" aria-hidden="true" id="js_p4m1_source">文字来源</li>
+                      <li class="weui-media-box__info__meta" aria-hidden="true" id="js_p4m1_time">时间</li>
+                      <li class="weui-media-box__info__meta weui-media-box__info__meta_extra" aria-hidden="true" id="js_p4m1_extra">其它信息</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+
+
+
+<script  src="./script.js"></script>
 
 </body>
 </html>

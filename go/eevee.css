@@ -5,7 +5,7 @@
 * Licensed under MIT (https://github.com/twbs/wEeveestrap/blob/main/LICENSE)
 * Extract from Bootstrap & W3; extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize
 */:root {
-    --font-family-wEevee: font-family: "Lato",Verdana, Helvetica, "Roboto","Effra", "Calibri", Arial,sans-serif;
+    --font-family-wEevee: font-family: "Lato",Verdana, Helvetica, "Roboto","Effra", "Calibri", Arial, "Ubuntu". sans-serif;
     --bg-color-initial: rgb(20, 20, 20); 
     --card-color-initial: rgb(23, 23, 23);}/*  azul #18487D; */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
@@ -52,6 +52,16 @@ img {vertical-align: middle;border-style:none}/* End extract & Start Eevee*/
 /* New  */ 
 @keyframes w3-spin {0% {transform: rotate(0deg)}100% {transform: rotate(359deg)}}.w3-animate-fadingx5 {animation: fading 50s infinite}
 @keyframes fading {0% {opacity: 0}80% {opacity: 1}100% {opacity: 0}}.w3-animate-opacity {animation: opac 0.8s}
+.visually-hidden {
+    position:absolute;
+    opacity:0;
+  }
+  
+  .without-pointer-events {
+    position:absolute;
+    opacity:0;
+    pointer-events: none;
+  } /* se usa en a para que no se redireccione */
 
 /* Preloder */ #preloder {position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 999999;justify-content: center;gap: 2rem;padding: 3rem;background-color: #02251288;align-items: center;text-align: center;/*min-height: 80vh;*/}
 .loader {width: 40px;height: 40px;position: absolute;top: 50%;left: 50%;margin-top: -13px;margin-left: -13px;border-radius: 60px;animation: loader 0.8s linear infinite;-webkit-animation: loader 0.8s linear infinite;}

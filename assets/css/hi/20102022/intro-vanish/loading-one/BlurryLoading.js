@@ -1,5 +1,5 @@
-const loadText = document.querySelector('.loading-text')
-const bg = document.querySelector('.bg')
+const loadText = document.querySelector('.loading-text-BlurryLoading')
+const bg = document.querySelector('.bg-BlurryLoading')
 
 let load = 0
 

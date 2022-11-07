@@ -1,20 +1,19 @@
-<div id="placaName">
+<body>   
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
     <style>
         @import url(https://fonts.googleapis.com/css?family=Raleway:500);
         @import url(https://fonts.googleapis.com/css?family=Teko:700);
         .placaName {
             font-family: 'Raleway', Arial, sans-serif;
-            position: relative;
+            position: absolute;
+            top: 50%;left: 50%;transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);
             display: inline-block;
-            color: #bdbdbd;
-            margin: 60px 20px;
-            max-width: 285px;
-            width: 100%;
+            color: #bdbdbd;        
+            max-width: 285px;         
             text-align: center;
-            font-size: 16px;
-            -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+            font-size: 16px;     
             line-height: 30px;
+            
         }
         
         .placaName h1,
@@ -31,6 +30,8 @@
             text-align: center;
             margin: 0;
             line-height: 27px;
+          
+            text-shadow: 2px 2px 4px #000000;
         }
         
         .placaName h2 {
@@ -42,6 +43,7 @@
             line-height: 18px;
             padding: 0 20px;
             position: relative;
+            
         }
         
         .placaName h2:before,
@@ -70,7 +72,7 @@
             margin: 0;
             display: inline-block;
             position: relative;
-            text-transform: uppercase;
+            text-transform: uppercase;text-shadow: 2px 2px 4px #000000;
         }
         
         .placaName p:before,
@@ -84,7 +86,7 @@
             border-bottom: 2px solid #bdbdbd;
             -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-            line-height: 20px;
+            line-height: 20px;text-shadow: 2px 2px 4px #000000;
         }
         
         .placaName p:before {
@@ -99,19 +101,333 @@
             font-size: 22px;
             line-height: 36px;
         }
-        /* Demo purposes only */
-        
+        .con-una-sombra-negra-en-el-texto {color: white;text-shadow: 2px 2px 4px #000000;}
+    </style>
+    <style>
+                :root{
+        --toggle-size:2rem;
+        --background-color:#1d1f21;
+        --accent:#de935f;
+        --text-color:#c5c8c6;
+        --focus:#81a2be;
+        }
+
+        *{
+        transition: background 500ms ease, color 500ms ease, left 250ms ease;
+        }
+
         body {
-            background-color: #212121;
-            text-align: center;
+        display:flex;
+        justify-content:center;
+        padding-top:5rem;
+        
+        font-size:20px;
+        font-family: 'Roboto Mono', monospace;;
+        
+        background:var(--background-color);
+        color:var(--text-color);
+        }
+
+        input, .toggle, .toggle:before{
+        width:var(--toggle-size);
+        height:var(--toggle-size);
+        }
+
+        input{
+        opacity:0;
+        cursor:pointer;
+        }
+
+        .toggleplacer{
+        position:absolute;
+        top:3rem;
+        right:3rem;
+        
+        width:calc(var(--toggle-size)*2);
+        height:calc(var(--toggle-size)*2);
+        border-radius:10rem;
+        }
+
+        .toggleplacer:hover{
+        background: hsla(0,0%,50%,.2)
+        }
+
+        .toggle{
+        background:var(--text-color);
+        position:relative;
+        }
+        .toggle:before, .toggle:after{
+        
+        content:"";
+        position:absolute;
+        left:0;
+        top:0;
+        }
+
+        .toggle::before{
+        background:var(--text-color);
+        transform: rotate(45deg)
+        }
+
+        .toggle::after{
+        background:var(--background-color);
+        border-radius:10rem;
+        transform:translate(10%,10%);
+        
+        width:calc(var(--toggle-size)/1.2);
+        height:calc(var(--toggle-size)/1.2);
+        pointer-events:none;
+        }
+
+        .sun{
+        position:absolute;
+        left:19%;
+        width:calc(var(--toggle-size)/1.6);
+        height:calc(var(--toggle-size)/1.6);
+        
+        transform: "";
+        border-radius:10rem;
+        z-index:2;
+        background:var(--text-color);
+        pointer-events:none;
+        }
+        /*  */
+
+        /* Setup example */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+        .container{
+        flex-direction:column;
+        width:25rem;
+        }
+
+        .center{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        }
+
+        .sampletext{
+        margin-top:2rem;
+        text-align:center;
+        }
+
+        .accent{
+        color:var(--accent)
+        }
+
+        .focus{
+        color:var(--focus)
+        }
+
+    </style>
+    <style>
+         /* The Modal (background) */
+         .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: inherit;
+          padding-top: 50px;
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: inherit;
+          margin: 2.5% auto 7.5% auto; /* 5% from the top, 15% from the bottom and centered */
+          border: 0px solid #888;
+          width: 100%; /* Could be more or less, depending on screen size */
+          border-radius:  10px 10px 0px 0px;
+          
+        }
+        
+        
+      
+        /* The Modal Close Button (x) */
+        .close {
+          position: absolute;
+          right: 35px;
+          top: 55px;
+          font-size: 40px;
+          font-weight: bold;
+          color: #9c9c9c;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: teal;
+          cursor: pointer;
+        }
+        
+        /*modalblog*/
+
+         /* The Modal (background) */
+         .modalBlog {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: inherit;
+          padding-top: 0px;
+        }
+        
+        /* Modal Content/Box */
+        .modal-contentBlog {
+          background-color: inherit;
+          margin: 2.5% auto 7.5% auto; /* 5% from the top, 15% from the bottom and centered */
+          border: 0px solid #888;
+          width: 100%; /* Could be more or less, depending on screen size */
+          border-radius:  10px 10px 0px 0px;
+          
+        }
+        
+        
+      
+        /* The Modal Close Button (x) */
+        .closeBlog {
+          position: absolute;
+          right: 45px;
+          top: 13px;
+          font-size: 30px;
+        }
+        
+        .closeBlog:hover,
+        .closeBlog:focus {
+          color: teal;
+          cursor: pointer;
+        }
+        
+
+        /* Clear floats */
+
+      
+
+        .clearfix::after {
+          content: "";
+          clear: both;
+          box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.16), 0 2px 8px 0 rgba(255, 255, 255, 0.12);border-radius: 15px 15px 15px 15px
+        }
+        
+        /* Change styles for cancel button and delete button on extra small screens */
+        @media screen and (max-width: 300px) {
+          .cancelbtn, .deletebtn {
+            width: 100%;
+          }
         }
     </style>
-
-    <div class="placaName">
-        <h1>Luis Angel</h1>
-        <p>Maciel Padilla</p><br/>
-        <h2>Est. 1987</h2><br/><i class="ion-star"></i>
-    </div>
-
-    <!-- partial -->
+  
+  
+  
+  <div class="container center">
+<div class="toggleplacer center">
+  <div class="toggle center">
+    <div class="sun"></div>
+    <input type="checkbox" />
+  </div>
 </div>
+       <div id="content">  
+            <div class="placaName">
+                <h1  contenteditable="true" >Luis Angel</h1>
+                <p  contenteditable="true">Maciel Padilla</p><br/>
+                <h2  contenteditable="true">Est. 1987</h2><br/>
+            </div>
+        </div>      
+</div>
+  
+  <div  class="w3-display-bottomright">
+  <button onclick="document.getElementById('id02retro').style.display='block'">x</button> 
+   <button id="download-page-as-image">D</button>
+</div>
+   <script src='https://html2canvas.hertzen.com/dist/html2canvas.min.js'></script>
+    <script>
+        setUpDownloadPageAsImage();
+        
+        function setUpDownloadPageAsImage() {
+          document.getElementById("download-page-as-image").addEventListener("click", function() {
+            html2canvas(document.body).then(function(canvas) {
+              console.log(canvas);
+              simulateDownloadImageClick(canvas.toDataURL(), 'file-name.png');
+            });
+          });
+        }
+        
+        function simulateDownloadImageClick(uri, filename) {
+          var link = document.createElement('a');
+          if (typeof link.download !== 'string') {
+            window.open(uri);
+          } else {
+            link.href = uri;
+            link.download = filename;
+            accountForFirefox(clickLink, link);
+          }
+        }
+        
+        function clickLink(link) {
+          link.click();
+        }
+        
+        function accountForFirefox(click) { // wrapper function
+          let link = arguments[1];
+          document.body.appendChild(link);
+          click(link);
+          document.body.removeChild(link);
+        }
+    </script>
+    <script>
+            var checkbox = document.querySelector('input'),
+            sun = document.querySelector('.sun'),
+            root = document.querySelector(':root'),
+            darkmode = true,
+            styleVars = ['--background-color','--accent','--text-color','--focus'],
+            colors = {
+                darkmode:['#1d1f21','#de935f','#c5c8c6','#81a2be'],
+                lightmode:['#f5e7de','#a67c53','#4c4742','#5986b2']
+            };
+        const toggle = function(){
+        /* color switch */
+        let switchTo = (darkmode) ? colors.lightmode :colors.darkmode;
+        styleVars.forEach((p, i) => {root.style.setProperty(styleVars[i], switchTo[i])})
+        /*transform sun */
+        if(darkmode){sun.style.setProperty('left', '0')} 
+        else {sun.style.setProperty('left', '19%')}
+        
+        darkmode = !darkmode
+        }
+
+        /* not vue needed */
+        checkbox.addEventListener("click", toggle);
+    </script>
+</body>
+ <div id="id02retro" class="modal ">
+        <span onclick="document.getElementById('id02retro').style.display='none'" class="close" title="Close Modal">×</span><br><br>
+
+        <div class="w3-modal-content   w3-card-2-black   "  style="border-radius: 15px 15px 15px 15px"   >   
+            <div class="w3-card-2-white-15">
+                    <header class="w3-container w3-teal-opacity w3-padding  "  style="border-radius:  10px 10px 0px 0px; z-index: 1;">                 
+                            <h2 class="w3-text-white"><i class="fa-duotone fa-comments w3-ripple"></i> Retroalimentación</h2>                    
+                        </header>
+                <div class="w3-container w3-text-black w3-round-xlarge ">  
+                  <div class="sampletext"><span class="accent">Lorem ipsum</span> dolor sit, amet consectetur adipisicing elit. Earum dolore, voluptas consectetur non quo, quaerat quod doloribus, <span class="focus"> officiis natus</span> delectus a! Ipsa libero quod sed consequuntur a enim maiores aliquam? Hello
+                  </div> <br><br>  <br><br>  <br><br> 
+                </div>
+           </div>                       
+         </div>                       
+    </div>
+                                                                     
+  </div>
+                <footer class="w3-container w3-teal-opacity w3-center" style="border-radius:  0px 0px 10px 10px">                  
+                </footer>
+            </div>  
+        </div>           
+ </div> 
+
+     

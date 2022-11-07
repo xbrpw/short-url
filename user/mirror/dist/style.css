@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@font-face {
+  font-family: "Ascii Organic";
+  src: url("https://assets.codepen.io/450456/ascii-font--circles.woff2") format("woff2");
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  background: #7e00ff;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.title {
+  user-select: none;
+  position: absolute;
+  font-family: "Major Mono Display", monospace;
+  color: white;
+  top: 16px;
+  left: 16px;
+  right: 100px;
+  font-size: 28px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-spacing: -5px;
+  letter-spacing: -1.5px;
+  padding-bottom: 15px;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);z-index: -1;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  opacity: 0.25;
+  left: 0px;
+  height: 3px;
+  width: 87px;
+  background: white;
+}
+.title small {
+  font-size: 16px;
+  position: absolute;
+  top: 120%;
+  left: 0;
+}
+.title span {
+  color: #81ff00;
+  text-shadow: 0px 0px 10px #81ff00;
+}
+
+.container {
+  /*margin: 0px auto;*/
+  /*flex: 0 0 50%;*/
+  /*padding-top: 26.8%;*/
+  position: relative;
+}
+.container--hide {
+  position: absolute;
+  top: -9999px;
+  let: -9999px;/*para quitarle el efecto es aquí*/
+  width: 100%;
+}
+
+.container--show {
+  position: absolute;
+  top: -9999px;
+  let: -9999px;/*para quitarle el efecto es aquí*/
+  width: 100%;
+}
+
+
+.container--ascii {
+  /*flex: 0 0 100%;*/
+  padding-top: 0;
+  position: absolute;
+  /*top: 55%;
+  left: 50%;*/
+  transform: translate(-50%, -50%);
+  /*background: #7100e6;*/
+}
+
+#asciiElem {
+  max-height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  /*margin-top: 40px;*/
+  bottom: 0;
+  font: 400 2vw/0.8 "Ascii Organic", "Major Mono Display", monospace;
+  font-size: 12px;
+  white-space: pre;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: column;*/
+  z-index: 2;
+  
+  /*border: 10px solid #4c0099;*/
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px 2px rgba(76, 0, 153, 0.5);
+  background: linear-gradient(130deg, #81ff00, white, #81ff00);
+  background-size: 50% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(129, 255, 0, 0.2);
+  animation: Animation 5s ease infinite;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.075);
+}
+#asciiElem span {
+  padding: 30px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  color:#81ff00;
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}

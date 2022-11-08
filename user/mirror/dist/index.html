@@ -62,6 +62,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
 <style>
+  @media (-webkit-min-device-pixel-ratio: 1) and (-webkit-max-device-pixel-ratio: 1.99) ,
+       (min-resolution: 1dppx) and (max-resolution:1.99dppx) { 
+
+         html{background:inherit;}
+         body::before{content:""}
+
+}
+@media (-webkit-min-device-pixel-ratio: 2) ,
+       (min-resolution: 2dppx) { 
+
+         html{background:inherit;}
+         body::before{content:"";}
+
+}
+
+/*layout styles*/
+
+body{display:flex; min-height:100vh; margin:0;}
+body::before{margin:auto;}
+
   /* Safari syntax */
   :-webkit-full-screen {
     background-color: ;

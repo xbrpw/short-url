@@ -1,0 +1,348 @@
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+
+html, body {
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.ag-case-block {
+  height: 850px;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/case-diamond/images/bg.jpg) no-repeat scroll 50% 0;
+
+  position: relative;
+}
+.ag-lamps {
+  height: 318px;
+  width: 1920px;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/case-diamond/images/lamps.png) no-repeat 50% 0;
+
+  position: absolute;
+  top: 5%;
+  left: 50%;
+
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  -webkit-animation: an-illum 4s linear infinite;
+  -moz-animation: an-illum 4s linear infinite;
+  -o-animation: an-illum 4s linear infinite;
+  animation: an-illum 4s linear infinite;
+}
+.ag-case_box {
+  white-space: nowrap;
+  text-align: center;
+}
+.ag-case_box__top {
+  padding: 225px 0 35px;
+}
+.ag-case_item {
+  display: inline-block;
+  height: 148px;
+  width: 165px;
+  margin: 0 15px;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/case-diamond/images/case.png) no-repeat scroll 50% 0;
+}
+.ag-case_item__empty {
+  height: 140px;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/case-diamond/images/case-empty.png) no-repeat scroll 50% 0;
+  background-size: 100% auto;
+}
+.ag-case_item__diamond {
+  height: 140px;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/case-diamond/images/case-diamond.png) no-repeat scroll 50% 0;
+  background-size: 100% auto;
+
+  position: relative;
+}
+.ag-case_item__diamond:before,
+.ag-case_item__diamond:after {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.ag-case_item__diamond:before {
+  content: "";
+  height: 148px;
+  width: 165px;
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/case-diamond/images/case-diamond-light.png);
+
+  position: absolute;
+  top: -14%;
+  left: -10%;
+
+  -webkit-animation: an-diamond-light 4s ease infinite;
+  -moz-animation: an-diamond-light 4s ease infinite;
+  -o-animation: an-diamond-light 4s ease infinite;
+  animation: an-diamond-light 4s ease infinite;
+}
+.ag-case_item__diamond:after {
+  content: "";
+  height: 33px;
+  width: 33px;
+  background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/case-diamond/images/glare.png);
+
+  position: absolute;
+  top: 52%;
+  left: 47%;
+
+  -webkit-animation: an-glare 3s linear infinite;
+  -moz-animation: an-glare 3s linear infinite;
+  -o-animation: an-glare 3s linear infinite;
+  animation: an-glare 3s linear infinite;
+}
+
+@-webkit-keyframes an-illum {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+@-moz-keyframes an-illum {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+@-o-keyframes an-illum {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+@keyframes an-illum {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@-webkit-keyframes an-diamond-light {
+  0% {
+    opacity: .4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .4;
+  }
+}
+@-moz-keyframes an-diamond-light {
+  0% {
+    opacity: .4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .4;
+  }
+}
+@-o-keyframes an-diamond-light {
+  0% {
+    opacity: .4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .4;
+  }
+}
+@keyframes an-diamond-light {
+  0% {
+    opacity: .4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .4;
+  }
+}
+
+@-webkit-keyframes an-glare {
+  0% {
+    opacity: 0;
+
+    top: 46%;
+    left: 20%;
+  }
+  5% {
+    opacity: .7;
+
+    top: 46%;
+    left: 20%;
+  }
+  50% {
+    opacity: 1;
+
+    top: 53%;
+    left: 47%;
+  }
+  65% {
+    opacity: .5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .1;
+
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes an-glare {
+  0% {
+    opacity: 0;
+
+    top: 46%;
+    left: 20%;
+  }
+  5% {
+    opacity: .7;
+
+    top: 46%;
+    left: 20%;
+  }
+  50% {
+    opacity: 1;
+
+    top: 53%;
+    left: 47%;
+  }
+  65% {
+    opacity: .5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .1;
+
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes an-glare {
+  0% {
+    opacity: 0;
+
+    top: 46%;
+    left: 20%;
+  }
+  5% {
+    opacity: .7;
+
+    top: 46%;
+    left: 20%;
+  }
+  50% {
+    opacity: 1;
+
+    top: 53%;
+    left: 47%;
+  }
+  65% {
+    opacity: .5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .1;
+
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes an-glare {
+  0% {
+    opacity: 0;
+
+    top: 46%;
+    left: 20%;
+  }
+  5% {
+    opacity: .7;
+
+    top: 46%;
+    left: 20%;
+  }
+  50% {
+    opacity: 1;
+
+    top: 53%;
+    left: 47%;
+  }
+  65% {
+    opacity: .5;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .1;
+
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+}
+
+@media only screen and (max-width: 639px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+  .ag-format-container {
+    width: 960px;
+  }
+
+}

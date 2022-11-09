@@ -52,6 +52,8 @@ img {vertical-align: middle;border-style:none}/* End extract & Start Eevee*/
 /* New  */ 
 @keyframes w3-spin {0% {transform: rotate(0deg)}100% {transform: rotate(359deg)}}.w3-animate-fadingx5 {animation: fading 50s infinite}
 @keyframes fading {0% {opacity: 0}80% {opacity: 1}100% {opacity: 0}}.w3-animate-opacity {animation: opac 0.8s}
+.display-middle {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%); text-align: center;text-align: center!important}
+
 .visually-hidden {
     position:absolute;
     opacity:0;

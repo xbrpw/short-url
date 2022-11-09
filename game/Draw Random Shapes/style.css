@@ -1,0 +1,51 @@
+#canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+form {
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:10;
+  padding:0.2em;
+  text-align:right;
+  background:white;
+}
+
+p {
+  margin-top:4em;
+}
+
+@use postcss-preset-env {
+  stage: 0;
+  features: {
+    "logical-properties-and-values": false
+  }
+} 
+
+.animation5s {
+  animation: 
+    fade-in .5s ease,
+    slide-in .5s ease,
+    fade-out .5s ease 5s forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0}
+}
+
+@keyframes fade-out {
+  to { opacity: 0}
+}
+
+@keyframes slide-in {
+  from { transform: translateY(10px) }
+}
+
+
+.display-middle {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%); text-align: center;text-align: center!important}

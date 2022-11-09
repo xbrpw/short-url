@@ -3,13 +3,13 @@
   /* -- SETTINGS -- */
   /* -- Board Settings -- */
   --board-desktop-width: 80vmin;
-  --board-mobile-width: 95vmin;
-  --cols-desktop: 8;
+  --board-mobile-width: 100vmin;
+  --cols-desktop: 11;
   --cols-mobile: 6;
   --column-gap: .4vmin;
   --row-gap: .4vmin;
   --board-padding-horizontal: 2vmin;
-  --board-padding-b: 4vmin;
+  --board-padding-b: 9vmin;
   /* -- Card Settings -- */
   --card-padding: 0.3vmin;
   --card-padding-top: 1.6vmin;
@@ -52,6 +52,7 @@ body {
 .container {
   position: fixed;
   width: 100vw;
+  /*height: 100vh;;*/
   z-index: 2;
 }
 
@@ -61,7 +62,8 @@ body {
   padding: var(--board-padding-horizontal);
   background: linear-gradient(45deg, #f65030 0%, #f65030 45%, #fe6b48);
   border-radius: calc(var(--board-width) / 100);
-  margin: 2vmin auto;
+  margin: 0vmin auto;
+  align-items: center;
 }
 
 .slots {
@@ -135,7 +137,7 @@ body {
   box-sizing: border-box;
   display: block;
   cursor: pointer;
-  margin: calc(var(--slot-inset) / 1.5);
+  margin: calc(var(--slot-inset) / 1);
   border-radius: var(--card-border-radius);
   background-color: #fff;
   -webkit-backface-visibility: visible;
@@ -169,8 +171,9 @@ body {
 .card--assigned {
   position: absolute;
   width: var(--card-holder-width);
-  top: 96%;
+  top: 80%;
   left: 44%;
+  z-index: 3;
 }
 
 .card__front {
@@ -364,7 +367,7 @@ body {
   }
 
   .container {
-    perspective: 2000px;
+    perspective: 1000px;
   }
 
   .board {
@@ -374,7 +377,7 @@ body {
             backface-visibility: hidden;
     box-shadow: 0px 20px 60px 10px rgba(0, 0, 0, 0.5);
     position: relative;
-    top: calc(var(--board-width) / 10);
+    top: calc(var(--board-width) / 5);
     border-bottom: 0.6vmin solid #c92100;
   }
 
@@ -385,7 +388,7 @@ body {
   .card {
     transform: rotateX(-30deg) translate3d(0, 1px, 0);
     top: calc(-100% + var(--slot-inset));
-    left: -0.1vmin;
+  
     box-shadow: 0px -30px 50px rgba(0, 0, 0, 0.2);
   }
   .card__front::after {

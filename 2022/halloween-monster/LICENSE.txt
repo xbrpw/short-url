@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2022 Miguel (https://codepen.io/ruidovisual/pen/KoRgGR)
+Copyright (c) 2022 @BrawadaCom (https://codepen.io/Anna_Batura/pen/eYKpvWv)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

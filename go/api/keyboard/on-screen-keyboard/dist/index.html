@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - on screen keyboard</title>
+  <link rel='stylesheet' href='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/css/jquery-ui.min.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/Mottie/Keyboard/master/css/keyboard.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/css/demo.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/css/tipsy.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/css/prettify.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="page-wrap">
+
+	<h1>
+		<a href="https://github.com/Mottie/Keyboard">Virtual Keyboard</a><br>
+		<small class="version">(v1.28.8)</small>
+	</h1>
+	
+	
+	
+
+	
+
+	<h5>
+		Click inside the input or textarea to open the keyboard<br>
+		Click on the keyboard title, then scroll down to see its code
+	</h5>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: Contenteditable</span>
+		</h2>
+		<div id="contenteditable" contenteditable="true" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">This
+is a <em>content editable</em> div with a custom keyboard
+<strong>layout</strong>. Press <kbd>Enter</kbd> to add new lines.</div>
+		<br>
+		<small>
+			* Contenteditable support (v1.27.0-beta).<br>
+			* <code>usePreview</code> disabled.<br>
+			* Custom layout used.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"contenteditable"</span><span class="pln"> </span><span class="atn">contenteditable</span><span class="pun">=</span><span class="atv">"true"</span><span class="tag">&gt;</span><span class="pln">This
+is a </span><span class="tag">&lt;em&gt;</span><span class="pln">content editable</span><span class="tag">&lt;/em&gt;</span><span class="pln"> div with a custom keyboard
+</span><span class="tag">&lt;strong&gt;</span><span class="pln">layout</span><span class="tag">&lt;/strong&gt;</span><span class="pln">. Press </span><span class="tag">&lt;kbd&gt;</span><span class="pln">Enter</span><span class="tag">&lt;/kbd&gt;</span><span class="pln"> to add new lines.</span><span class="tag">&lt;/div&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">.</span><span class="pln">keyaction</span><span class="pun">.</span><span class="pln">undo </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">base</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	base</span><span class="pun">.</span><span class="pln">execCommand</span><span class="pun">(</span><span class="str">'undo'</span><span class="pun">);</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+$</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">.</span><span class="pln">keyaction</span><span class="pun">.</span><span class="pln">redo </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">base</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+	base</span><span class="pun">.</span><span class="pln">execCommand</span><span class="pun">(</span><span class="str">'redo'</span><span class="pun">);</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+$</span><span class="pun">(</span><span class="str">'#contenteditable'</span><span class="pun">).</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+	usePreview</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// disabled for contenteditable</span><span class="pln">
+	useCombos</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+	autoAccept</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+	layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+	customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="str">'normal'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'` 1 2 3 4 5 6 7 8 9 0 - = {del} {b}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{tab} q w e r t y u i o p [ ] \\'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'a s d f g h j k l ; \' {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{shift} z x c v b n m , . / {shift}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{accept} {space} {left} {right} {undo:Undo} {redo:Redo}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'shift'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'~ ! @ # $ % ^ &amp; * ( ) _ + {del} {b}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{tab} Q W E R T Y U I O P { } |'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'A S D F G H J K L : " {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{shift} Z X C V B N M &lt; &gt; ? {shift}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{accept} {space} {left} {right} {undo:Undo} {redo:Redo}'</span><span class="pln">
+		</span><span class="pun">]</span><span class="pln">
+	</span><span class="pun">},</span><span class="pln">
+	display</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		del</span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u2326:Delete'</span><span class="pun">,</span><span class="pln">
+		redo</span><span class="pun">:</span><span class="pln"> </span><span class="str">'↻'</span><span class="pun">,</span><span class="pln">
+		undo</span><span class="pun">:</span><span class="pln"> </span><span class="str">'↺'</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block" id="autocomplete">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">QWERTY Text</span>
+		</h2>
+		<input id="text" type="text" placeholder=" Enter something..." class="ui-keyboard-input ui-widget-content ui-corner-all ui-autocomplete-input" aria-haspopup="true" role="textbox" autocomplete="off">
+		<br>
+		<small>
+			* Placeholder (watermark).<br>
+			* <a href="https://github.com/Mottie/Keyboard/wiki/Extension-Autocomplete">Autocomplete</a> extension.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">placeholder</span><span class="pun">=</span><span class="atv">" Enter something..."</span><span class="tag">&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="com">// Autocomplete demo</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> availableTags </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"ActionScript"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"AppleScript"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Asp"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"BASIC"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"C"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"C++"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Clojure"</span><span class="pun">,</span><span class="pln">
+	</span><span class="str">"COBOL"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"ColdFusion"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Erlang"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Fortran"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Groovy"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Haskell"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Java"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"JavaScript"</span><span class="pun">,</span><span class="pln">
+	</span><span class="str">"Lisp"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Perl"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"PHP"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Python"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Ruby"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Scala"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Scheme"</span><span class="pln"> </span><span class="pun">];</span><span class="pln">
+
+$</span><span class="pun">(</span><span class="str">'#text'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln"> layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'qwerty'</span><span class="pln"> </span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">autocomplete</span><span class="pun">({</span><span class="pln">
+		source</span><span class="pun">:</span><span class="pln"> availableTags
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="com">// position options added after v1.23.4</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addAutocomplete</span><span class="pun">({</span><span class="pln">
+		position </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			of </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">        </span><span class="com">// when null, element will default to kb.$keyboard</span><span class="pln">
+			my </span><span class="pun">:</span><span class="pln"> </span><span class="str">'right top'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// 'center top', (position under keyboard)</span><span class="pln">
+			at </span><span class="pun">:</span><span class="pln"> </span><span class="str">'left top'</span><span class="pun">,</span><span class="pln">  </span><span class="com">// 'center bottom',</span><span class="pln">
+			collision</span><span class="pun">:</span><span class="pln"> </span><span class="str">'flip'</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">QWERTY Password</span>
+			<img id="password-opener" class="tooltip-tipsy" src="https://mottie.github.io/Keyboard/css/images/keyboard.svg" original-title="Click to open the virtual keyboard">
+		</h2>
+		<input id="password" type="password" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">
+		<br>
+		<small>
+			* Click icon to open keyboard.<br>
+			* Stay open until accept/cancel/esc.<br>
+			* Key hover disabled in this type.<br>
+			* Demo: Reveal letters with <a class="external" href="https://jsfiddle.net/Mottie/24n8wsak/">Caret extension</a>.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"passwd"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tooltip-tipsy"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"Click to open the virtual keyboard"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"css/images/keyboard.svg"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"password"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"password"</span><span class="tag">&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#password'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		openOn </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+		stayOpen </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+		layout </span><span class="pun">:</span><span class="pln"> </span><span class="str">'qwerty'</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span><span class="pln">
+
+$</span><span class="pun">(</span><span class="str">'#password-opener'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+	</span><span class="kwd">var</span><span class="pln"> kb </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#password'</span><span class="pun">).</span><span class="pln">getkeyboard</span><span class="pun">();</span><span class="pln">
+	</span><span class="com">// close the keyboard if the keyboard is visible and the button is clicked a second time</span><span class="pln">
+	</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> kb</span><span class="pun">.</span><span class="pln">isOpen </span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		kb</span><span class="pun">.</span><span class="pln">close</span><span class="pun">();</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		kb</span><span class="pun">.</span><span class="pln">reveal</span><span class="pun">();</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">});</span></pre>
+		</div>
+	</div>
+
+	<div class="block" id="caret">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">QWERTY (mod) Text Area</span>
+		</h2>
+		<textarea id="qwerty-mod" class="ui-keyboard-input ui-widget-content ui-corner-all ui-keyboard-lockedinput" aria-haspopup="true" role="textbox" readonly="readonly"></textarea>
+		<br>
+		<small>
+			* Locked input (no manual input).<br>
+			* Known readonly bug in Safari.<br>
+			* <a href="https://github.com/Mottie/Keyboard/wiki/Extension-Caret">Caret</a> extension.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"qwerty-mod"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#qwerty-mod'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		lockInput</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// prevent manual keyboard entry</span><span class="pln">
+		layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+		customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="str">'normal'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'` 1 2 3 4 5 6 7 8 9 0 - = {bksp}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{tab} q w e r t y u i o p [ ] \\'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'a s d f g h j k l ; \' {enter}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{shift} z x c v b n m , . / {shift}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{accept} {space} {left} {right}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'shift'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'~ ! @ # $ % ^ &amp; * ( ) _ + {bksp}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{tab} Q W E R T Y U I O P { } |'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'A S D F G H J K L : " {enter}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{shift} Z X C V B N M &lt; &gt; ? {shift}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{accept} {space} {left} {right}'</span><span class="pln">
+			</span><span class="pun">]</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addCaret</span><span class="pun">({</span><span class="pln">
+		</span><span class="com">// extra class name added to the caret</span><span class="pln">
+		</span><span class="com">// "ui-keyboard-caret" class is always added</span><span class="pln">
+		caretClass </span><span class="pun">:</span><span class="pln"> </span><span class="str">''</span><span class="pun">,</span><span class="pln">
+		</span><span class="com">// *** for future use ***</span><span class="pln">
+		</span><span class="com">// data-attribute containing the character(s) next to the caret</span><span class="pln">
+		charAttr   </span><span class="pun">:</span><span class="pln"> </span><span class="str">'data-character'</span><span class="pun">,</span><span class="pln">
+		</span><span class="com">// # character(s) next to the caret (can be negative for RTL)</span><span class="pln">
+		charIndex  </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+		</span><span class="com">// caret position adjustments</span><span class="pln">
+		offsetX    </span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln">
+		offsetY    </span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		<h4>CSS</h4>
+		<pre class="prettyprint lang-css prettyprinted" style=""><span class="pun">.</span><span class="pln">ui</span><span class="pun">-</span><span class="pln">keyboard</span><span class="pun">-</span><span class="pln">caret </span><span class="pun">{</span><span class="pln">
+	background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#c00;</span><span class="pln">
+	width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1px</span><span class="pun">;</span><span class="pln">
+	margin</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3px</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+		</div>
+	</div>
+
+	<div class="block" id="typing">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">International</span>
+			<img id="inter-type" class="tooltip-tipsy" src="https://mottie.github.io/Keyboard/css/images/keyboard.svg" original-title="Try out the typing extension!">
+		</h2>
+		<textarea id="inter" class="ui-keyboard-input form-control input-sm dark" aria-haspopup="true" role="textbox"></textarea>
+		<br>
+		<small>
+			* <a class="external" href="https://bootswatch.com/darkly/">Bootswatch Darkly</a> theme.<br>
+			* <a href="https://github.com/Mottie/Keyboard/wiki/Extension-Typing">Typing</a> extension.<br>
+			* See basic non-library <a class="external" href="https://jsfiddle.net/Mottie/jsh0377k/">theme</a>.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"inter-type"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"tooltip-tipsy"</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">"Try out the typing extension!"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"css/images/keyboard.svg"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"inter"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>CSS</h4>
+			<pre class="prettyprint lang-css prettyprinted" style=""><span class="com">/* override bootstrap active state */</span><span class="pln">
+button</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="kwd">default</span><span class="pun">:</span><span class="pln">active </span><span class="pun">{</span><span class="pln">
+	background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#FFF;</span><span class="pln">
+	</span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+	box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+button</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="kwd">default</span><span class="pun">:</span><span class="pln">active</span><span class="pun">:</span><span class="pln">hover </span><span class="pun">{</span><span class="pln">
+	background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#3276B1;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="com">/* override Bootstrap excessive button padding */</span><span class="pln">
+button</span><span class="pun">.</span><span class="pln">ui</span><span class="pun">-</span><span class="pln">keyboard</span><span class="pun">-</span><span class="pln">button</span><span class="pun">.</span><span class="pln">btn </span><span class="pun">{</span><span class="pln">
+	padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1px</span><span class="pln"> </span><span class="lit">6px</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="com">/* Bootswatch Darkly input is too bright */</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">ui</span><span class="pun">-</span><span class="pln">keyboard</span><span class="pun">-</span><span class="pln">input</span><span class="pun">.</span><span class="pln">light</span><span class="pun">,</span><span class="pln"> </span><span class="pun">.</span><span class="pln">ui</span><span class="pun">-</span><span class="pln">keyboard</span><span class="pun">-</span><span class="pln">preview</span><span class="pun">.</span><span class="pln">light </span><span class="pun">{</span><span class="pln"> color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#222; background: #ddd; }</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">ui</span><span class="pun">-</span><span class="pln">keyboard</span><span class="pun">-</span><span class="pln">input</span><span class="pun">.</span><span class="pln">dark</span><span class="pun">,</span><span class="pln"> </span><span class="pun">.</span><span class="pln">ui</span><span class="pun">-</span><span class="pln">keyboard</span><span class="pun">-</span><span class="pln">preview</span><span class="pun">.</span><span class="pln">dark </span><span class="pun">{</span><span class="pln"> color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#ddd; background: #222; }</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#inter'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'international'</span><span class="pun">,</span><span class="pln">
+		css</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="com">// input &amp; preview</span><span class="pln">
+			</span><span class="com">// "label-default" for a darker background</span><span class="pln">
+			</span><span class="com">// "light" for white text</span><span class="pln">
+			input</span><span class="pun">:</span><span class="pln"> </span><span class="str">'form-control input-sm dark'</span><span class="pun">,</span><span class="pln">
+			</span><span class="com">// keyboard container</span><span class="pln">
+			container</span><span class="pun">:</span><span class="pln"> </span><span class="str">'center-block well'</span><span class="pun">,</span><span class="pln">
+			</span><span class="com">// default state</span><span class="pln">
+			buttonDefault</span><span class="pun">:</span><span class="pln"> </span><span class="str">'btn btn-default'</span><span class="pun">,</span><span class="pln">
+			</span><span class="com">// hovered button</span><span class="pln">
+			buttonHover</span><span class="pun">:</span><span class="pln"> </span><span class="str">'btn-primary'</span><span class="pun">,</span><span class="pln">
+			</span><span class="com">// Action keys (e.g. Accept, Cancel, Tab, etc);</span><span class="pln">
+			</span><span class="com">// this replaces "actionClass" option</span><span class="pln">
+			buttonAction</span><span class="pun">:</span><span class="pln"> </span><span class="str">'active'</span><span class="pun">,</span><span class="pln">
+			</span><span class="com">// used when disabling the decimal button {dec}</span><span class="pln">
+			</span><span class="com">// when a decimal exists in the input area</span><span class="pln">
+			buttonDisabled</span><span class="pun">:</span><span class="pln"> </span><span class="str">'disabled'</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span><span class="pln">
+
+</span><span class="com">// Script - typing extension</span><span class="pln">
+</span><span class="com">// simulate typing into the keyboard, use:</span><span class="pln">
+</span><span class="com">// \t or {t} = tab, \b or {b} = backspace, \r or \n or {e} = enter</span><span class="pln">
+</span><span class="com">// added {l} = caret left, {r} = caret right &amp; {d} = delete</span><span class="pln">
+$</span><span class="pun">(</span><span class="str">'#inter-type'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+	$</span><span class="pun">(</span><span class="str">'#inter'</span><span class="pun">).</span><span class="pln">getkeyboard</span><span class="pun">().</span><span class="pln">reveal</span><span class="pun">().</span><span class="pln">typeIn</span><span class="pun">(</span><span class="str">"{t}Hal{l}{l}{d}e{r}{r}l'o{b}o {e}{t}World"</span><span class="pun">,</span><span class="pln"> </span><span class="lit">500</span><span class="pun">);</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">});</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Alphabetical</span>
+		</h2>
+		<textarea id="alpha" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"alpha"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#alpha'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln"> layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'alpha'</span><span class="pln"> </span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Colemak</span>
+		</h2>
+		<textarea id="colemak" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"colemak"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#colemak'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln"> layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'colemak'</span><span class="pln"> </span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Dvorak</span>
+		</h2>
+		<textarea id="dvorak" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"dvorak"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#dvorak'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln"> layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'dvorak'</span><span class="pln"> </span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Num Pad</span>
+		</h2>
+		<input id="num" class="alignRight ui-keyboard-input ui-widget-content ui-corner-all" type="text" aria-haspopup="true" role="textbox">
+		<br>
+		<small>
+			* Input restricted.<br>
+			* Pasting (ctrl-v) not allowed.<br>
+			* Auto accept content.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"num"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"alignRight"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="tag">&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#num'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		layout </span><span class="pun">:</span><span class="pln"> </span><span class="str">'num'</span><span class="pun">,</span><span class="pln">
+		restrictInput </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// Prevent keys not in the displayed keyboard from being typed in</span><span class="pln">
+		preventPaste </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">  </span><span class="com">// prevent ctrl-v and right click</span><span class="pln">
+		autoAccept </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: Hex</span>
+		</h2>
+		<input id="hex" type="text" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">
+		<br>
+		<small>
+			* maxLength = 6.<br>
+			* Input restricted.<br>
+			* Lowercase included.<br>
+			* Valid @ length = 6.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"hex"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="tag">&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#hex'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+		customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="str">'normal'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'C D E F'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'8 9 A B'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'4 5 6 7'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'0 1 2 3'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {a} {c}'</span><span class="pln">
+			</span><span class="pun">]</span><span class="pln">
+		</span><span class="pun">},</span><span class="pln">
+		maxLength </span><span class="pun">:</span><span class="pln"> </span><span class="lit">6</span><span class="pun">,</span><span class="pln">
+		</span><span class="com">// Prevent keys not in the displayed keyboard from being typed in</span><span class="pln">
+		restrictInput </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+		</span><span class="com">// include lower case characters (added v1.25.7)</span><span class="pln">
+		restrictInclude </span><span class="pun">:</span><span class="pln"> </span><span class="str">'a b c d e f'</span><span class="pun">,</span><span class="pln">
+		</span><span class="com">// don't use combos or A+E could become a ligature</span><span class="pln">
+		useCombos </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+		</span><span class="com">// activate the "validate" callback function</span><span class="pln">
+		acceptValid </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+		validate </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">keyboard</span><span class="pun">,</span><span class="pln"> value</span><span class="pun">,</span><span class="pln"> isClosing</span><span class="pun">){</span><span class="pln">
+			</span><span class="com">// only make valid if input is 6 characters in length</span><span class="pln">
+			</span><span class="kwd">return</span><span class="pln"> value</span><span class="pun">.</span><span class="pln">length </span><span class="pun">===</span><span class="pln"> </span><span class="lit">6</span><span class="pun">;</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: Meta Sets</span>
+			<img id="meta-type" class="tooltip-tipsy" src="https://mottie.github.io/Keyboard/css/images/keyboard.svg" original-title="Try out the typing extension!">
+		</h2>
+		<textarea id="meta" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<br>
+		<small>
+			* <a href="https://github.com/Mottie/Keyboard/wiki/Extension-Typing">Typing</a> extension.<br>
+			* Keyboard opens showing last keyset.<br>
+			* userClosed set (accept/cancel to close).
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"meta"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#meta'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		</span><span class="com">// keyboard will open showing last key set used</span><span class="pln">
+		resetDefault</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln">
+		userClosed</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// keyboard open until user closes with accept or cancel</span><span class="pln">
+		autoAccept</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// required for userClosed: true</span><span class="pln">
+		layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+		display</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="str">'alt'</span><span class="pln">    </span><span class="pun">:</span><span class="pln"> </span><span class="str">'AltGr:It\'s all Greek to me'</span><span class="pun">,</span><span class="pln">
+			</span><span class="com">// in v1.26.8, meta keys can be named `meta` followed by any letter, underscore or dash.</span><span class="pln">
+			</span><span class="com">// older versions would only allow the name `meta` followed by a number, then any letter or underscore</span><span class="pln">
+			</span><span class="com">// see https://github.com/Mottie/Keyboard/issues/504</span><span class="pln">
+			</span><span class="str">'meta1'</span><span class="pln">  </span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u2666:end of alphabet'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// Diamond with label that shows in the title (spaces are okay here)</span><span class="pln">
+			</span><span class="str">'meta-2'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u2665:Russian'</span><span class="pun">,</span><span class="pln">         </span><span class="com">// Heart</span><span class="pln">
+			</span><span class="str">'meta3'</span><span class="pln">  </span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u2663:zodiac'</span><span class="pun">,</span><span class="pln">          </span><span class="com">// Club</span><span class="pln">
+			</span><span class="str">'meta_9'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u2660:numbers'</span><span class="pln">          </span><span class="com">// Spade</span><span class="pln">
+		</span><span class="pun">},</span><span class="pln">
+		customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="str">'normal'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="com">// Add labels using a ":" after the key's name and replace spaces with "_"</span><span class="pln">
+				</span><span class="com">// without the labels this line is just 'a b c d e f g'</span><span class="pln">
+				</span><span class="str">'a:a_letter,_that_sounds_like_"ey" b:a_bug_that_makes_honey c:is_when_I_look_around d:a_grade,_I_never_got e:is_what_girls_say_when_they_run_away_from_me f:u,_is_what_I_say_to_those_screaming_girls! g:gee,_is_that_the_end_of_my_wittiness?'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'shift'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'A B C D E F G'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'alt'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'\u03b1 \u03b2 \u03b3 \u03b4 \u03b5 \u03b6 \u03b7'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// lower case Greek</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'alt-shift'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'\u0391 \u0392 \u0393 \u0394 \u0395 \u0396 \u0397'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// upper case Greek</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta1'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'t u v w x y z'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// lower case end of alphabet</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta1-shift'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'T U V W X Y Z'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// upper case</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta1-alt'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'0 9 8 7 6 5 4'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// numbers</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta1-alt-shift'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">') ( * &amp; ^ % $'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// shifted numbers</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta-2'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'\u0430 \u0431 \u0432 \u0433 \u0434 \u0435 \u0436'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// lower case Russian</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta-2-shift'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'\u0410 \u0411 \u0412 \u0413 \u0414 \u0415 \u0416'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// upper case Russian</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta3'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'\u2648 \u2649 \u264A \u264B \u264C \u264D \u264E'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// Zodiac</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'meta_9'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'1 2 3 4 5 6 7'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// only because I ran out of ideas</span><span class="pln">
+				</span><span class="str">'{shift} {alt} {meta1} {meta-2} {meta3} {meta_9}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{bksp} {sp:1} {accept} {cancel}'</span><span class="pln">
+			</span><span class="pun">]</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span><span class="pln">
+
+</span><span class="com">// Script - typing extension</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> meta </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'#meta'</span><span class="pun">).</span><span class="pln">getkeyboard</span><span class="pun">();</span><span class="pln">
+meta
+	</span><span class="pun">.</span><span class="pln">reveal</span><span class="pun">()</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">typeIn</span><span class="pun">(</span><span class="str">'aBcD1112389\u0411\u2648\u2649'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">700</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+		meta</span><span class="pun">.</span><span class="pln">accept</span><span class="pun">();</span><span class="pln">
+		alert</span><span class="pun">(</span><span class="str">'all done!'</span><span class="pun">);</span><span class="pln">
+	</span><span class="pun">});</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: Junk</span>
+		</h2>
+		<textarea id="junk" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<br>
+		<small>
+			* Use shift key - see action key sizes.<br>
+			* Use the decimal - only one allowed.<br>
+			* Toggle combo key included.<br>
+			* Type in 'ae' and other combo keys.<br>
+			* Accept content to see the callback.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"junk"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#junk'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+		customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="str">'normal'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'a e i o u y c'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'` \' " ~ ^ {dec} {combo}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{tab} {enter} {bksp}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{space}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{accept} {cancel} {shift}'</span><span class="pln">
+			</span><span class="pun">],</span><span class="pln">
+			</span><span class="str">'shift'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+				</span><span class="str">'A E I O U Y C'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'` \' " ~ ^ {dec} {combo}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{t} {sp:1} {e} {sp:1} {b}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{space}'</span><span class="pun">,</span><span class="pln">
+				</span><span class="str">'{a} {sp:1} {c} {sp:1} {s}'</span><span class="pln">
+			</span><span class="pun">]</span><span class="pln">
+		</span><span class="pun">},</span><span class="pln">
+		</span><span class="com">// Added here as an example on how to add combos</span><span class="pln">
+		combos </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			</span><span class="str">'a'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> e</span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u00e6'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+			</span><span class="str">'A'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> E</span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u00c6'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+		</span><span class="pun">},</span><span class="pln">
+		</span><span class="com">// example callback function</span><span class="pln">
+		accepted </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">e</span><span class="pun">,</span><span class="pln"> keyboard</span><span class="pun">,</span><span class="pln"> el</span><span class="pun">){</span><span class="pln"> alert</span><span class="pun">(</span><span class="str">'The content "'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> el</span><span class="pun">.</span><span class="pln">value </span><span class="pun">+</span><span class="pln"> </span><span class="str">'" was accepted!'</span><span class="pun">);</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: Mapped Keys</span>
+		</h2>
+		<textarea id="map" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<br>
+		<small>
+			* No preview window.<br>
+			* Type in a-g.<br>
+			* Type in A-G (shifted).<br>
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"map"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="com">// *** Mapped keys ***</span><span class="pln">
+$</span><span class="pun">(</span><span class="str">'#map'</span><span class="pun">).</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+	layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+	customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="str">'normal'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="com">// "n(a):title_or_tooltip"; n = new key, (a) = actual key, ":label" = title_or_tooltip (use an underscore "_" in place of a space " ")</span><span class="pln">
+			</span><span class="str">'\u03b1(a):lower_case_alpha_(type_a) \u03b2(b):lower_case_beta_(type_b) \u03b3(c):lower_case_gamma_(type_c) \u03b4(d):lower_case_delta_(type_d) \u03b5(e):lower_case_epsilon_(type_e) \u03b6(f):lower_case_zeta_(type_f) \u03b7(g):lower_case_eta_(type_g)'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// lower case Greek</span><span class="pln">
+			</span><span class="str">'{shift} {accept} {cancel}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'shift'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'\u0391(A) \u0392(B) \u0393(C) \u0394(D) \u0395(E) \u0396(F) \u0397(G)'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// upper case Greek</span><span class="pln">
+			</span><span class="str">'{shift} {accept} {cancel}'</span><span class="pln">
+		</span><span class="pun">]</span><span class="pln">
+	</span><span class="pun">},</span><span class="pln">
+	usePreview</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="com">// no preveiw</span><span class="pln">
+</span><span class="pun">});</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: Hidden</span>
+		</h2>
+		<a href="#" class="hiddenInput">Hidden input</a>
+		<!-- DON'T use type="hidden" because IE doesn't like hidden inputs -->
+		<input id="hidden" type="text" style="display:none;" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"hiddenInput"</span><span class="tag">&gt;</span><span class="pln">Hidden input</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+</span><span class="com">&lt;!-- DON'T use type="hidden" because IE doesn't like hidden inputs --&gt;</span><span class="pln">
+</span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"hidden"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln">none</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="com">// *** Hidden input example ***</span><span class="pln">
+</span><span class="com">// click on a link - add focus to hidden input</span><span class="pln">
+$</span><span class="pun">(</span><span class="str">'.hiddenInput'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+	$</span><span class="pun">(</span><span class="str">'#hidden'</span><span class="pun">).</span><span class="pln">data</span><span class="pun">(</span><span class="str">'keyboard'</span><span class="pun">).</span><span class="pln">reveal</span><span class="pun">();</span><span class="pln">
+	</span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+</span><span class="com">// Initialize keyboard script on hidden input</span><span class="pln">
+</span><span class="com">// set "position.of" to the same link as above</span><span class="pln">
+$</span><span class="pun">(</span><span class="str">'#hidden'</span><span class="pun">)</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+		layout   </span><span class="pun">:</span><span class="pln"> </span><span class="str">'qwerty'</span><span class="pun">,</span><span class="pln">
+		position </span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+			of </span><span class="pun">:</span><span class="pln"> $</span><span class="pun">(</span><span class="str">'.hiddenInput'</span><span class="pun">),</span><span class="pln">
+			my </span><span class="pun">:</span><span class="pln"> </span><span class="str">'center top'</span><span class="pun">,</span><span class="pln">
+			at </span><span class="pun">:</span><span class="pln"> </span><span class="str">'center top'</span><span class="pln">
+		</span><span class="pun">}</span><span class="pln">
+	</span><span class="pun">})</span><span class="pln">
+	</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: iPad</span>
+		</h2>
+		<textarea id="ipad" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<br>
+		<small>
+			* Thanks to <a class="external" href="https://github.com/gitaarik">gitaarik</a> for sharing!.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"ipad"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#ipad'</span><span class="pun">).</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+
+	display</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="str">'bksp'</span><span class="pln">   </span><span class="pun">:</span><span class="pln">  </span><span class="str">"\u2190"</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'accept'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'return'</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'normal'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'ABC'</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'meta1'</span><span class="pln">  </span><span class="pun">:</span><span class="pln"> </span><span class="str">'.?123'</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'meta2'</span><span class="pln">  </span><span class="pun">:</span><span class="pln"> </span><span class="str">'#+='</span><span class="pln">
+	</span><span class="pun">},</span><span class="pln">
+
+	layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+	customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="str">'normal'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'q w e r t y u i o p {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'a s d f g h j k l {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{s} z x c v b n m , . {s}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta1} {space} {meta1} {accept}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'shift'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'Q W E R T Y U I O P {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'A S D F G H J K L {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{s} Z X C V B N M ! ? {s}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta1} {space} {meta1} {accept}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'meta1'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'1 2 3 4 5 6 7 8 9 0 {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'- / : ; ( ) \u20ac &amp; @ {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta2} . , ? ! \' " {meta2}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{normal} {space} {normal} {accept}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'meta2'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'[ ] { } # % ^ * + = {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'_ \\ | ~ &lt; &gt; $ \u00a3 \u00a5 {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta1} . , ? ! \' " {meta1}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{normal} {space} {normal} {accept}'</span><span class="pln">
+		</span><span class="pun">]</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">});</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: iPad email</span>
+		</h2>
+		<textarea id="ipad-email" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox"></textarea>
+		<br>
+		<small>
+			* Thanks to <a class="external" href="https://github.com/gitaarik">gitaarik</a> for sharing!.
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"ipad-email"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#ipad-email'</span><span class="pun">).</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+
+	display</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="str">'bksp'</span><span class="pln">   </span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u2190'</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'enter'</span><span class="pln">  </span><span class="pun">:</span><span class="pln"> </span><span class="str">'return'</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'normal'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'ABC'</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'meta1'</span><span class="pln">  </span><span class="pun">:</span><span class="pln"> </span><span class="str">'.?123'</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'meta2'</span><span class="pln">  </span><span class="pun">:</span><span class="pln"> </span><span class="str">'#+='</span><span class="pun">,</span><span class="pln">
+		</span><span class="str">'accept'</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="str">'\u21d3'</span><span class="pln">
+	</span><span class="pun">},</span><span class="pln">
+
+	layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+	customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="str">'normal'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'q w e r t y u i o p {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'a s d f g h j k l {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{s} z x c v b n m @ . {s}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta1} {space} _ - {accept}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'shift'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'Q W E R T Y U I O P {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'A S D F G H J K L {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{s} Z X C V B N M @ . {s}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta1} {space} _ - {accept}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'meta1'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'1 2 3 4 5 6 7 8 9 0 {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'` | { } % ^ * / \' {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta2} $ &amp; ~ # = + . {meta2}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{normal} {space} ! ? {accept}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'meta2'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'[ ] { } \u2039 \u203a ^ * " , {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'\\ | / &lt; &gt; $ \u00a3 \u00a5 \u2022 {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{meta1} \u20ac &amp; ~ # = + . {meta1}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{normal} {space} ! ? {accept}'</span><span class="pln">
+		</span><span class="pun">]</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">});</span></pre>
+		</div>
+	</div>
+
+	<div class="block">
+		<h2>
+			<span class="tooltip-tipsy" original-title="Click, then scroll down to see this code">Custom: Lockable</span>
+		</h2>
+		<input id="lockable" type="text" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox">
+		<br>
+		<small>
+			* cursor arrow keys.<br>
+			* keyboard enable/disable toggle.<br>
+			* include {del} key (opposite of {bksp})
+		</small>
+		<div class="code ui-corner-all">
+			<h4>HTML</h4>
+			<pre class="prettyprint lang-html prettyprinted" style=""><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"lockable"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="tag">&gt;</span></pre>
+			<h4>Script</h4>
+			<pre class="prettyprint lang-js prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="str">'#lockable'</span><span class="pun">).</span><span class="pln">keyboard</span><span class="pun">({</span><span class="pln">
+	layout</span><span class="pun">:</span><span class="pln"> </span><span class="str">'custom'</span><span class="pun">,</span><span class="pln">
+	customLayout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="str">'normal'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'` 1 2 3 4 5 6 7 8 9 0 - = {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{tab} q w e r t y u i o p [ ] \\'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'a s d f g h j k l ; \' {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{shift} z x c v b n m , . / {shift}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{accept} {space} {left} {right} {sp:.2} {del} {toggle}'</span><span class="pln">
+		</span><span class="pun">],</span><span class="pln">
+		</span><span class="str">'shift'</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+			</span><span class="str">'~ ! @ # $ % ^ &amp; * ( ) _ + {bksp}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{tab} Q W E R T Y U I O P { } |'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'A S D F G H J K L : " {enter}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{shift} Z X C V B N M &lt; &gt; ? {shift}'</span><span class="pun">,</span><span class="pln">
+			</span><span class="str">'{accept} {space} {left} {right} {sp:.2} {del} {toggle}'</span><span class="pln">
+		</span><span class="pun">]</span><span class="pln">
+	</span><span class="pun">},</span><span class="pln">
+	css</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+		</span><span class="com">// add dark themed class to keyboard popup</span><span class="pln">
+		</span><span class="com">// to use bright svg padlock icon</span><span class="pln">
+		popup </span><span class="pun">:</span><span class="pln"> </span><span class="str">'ui-keyboard-dark-theme'</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">})</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">addTyping</span><span class="pun">();</span></pre>
+		</div>
+	</div>
+  <input id="keyboard"></input>
+
+	<div id="showcode"></div>
+
+	<div id="footer"></div>
+
+</div>
+<!-- partial -->
+  <script src='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/js/jquery-latest.min.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/js/jquery-ui.min.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/js/jquery.keyboard.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/js/jquery.mousewheel.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/js/jquery.keyboard.extension-typing.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/js/jquery.keyboard.extension-autocomplete.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/js/jquery.keyboard.extension-caret.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/js/bootstrap.min.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/js/demo.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/js/jquery.tipsy.min.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/docs/js/prettify.js'></script>
+<script src='https://cdn.rawgit.com/Mottie/Keyboard/master/layouts/ms-Icelandic.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

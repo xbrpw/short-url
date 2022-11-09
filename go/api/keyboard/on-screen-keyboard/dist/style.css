@@ -1,0 +1,15 @@
+#keyboard_keyboard {
+    bottom: 0;
+    left: 0;
+    top: 6d5%;
+    position: absolute;
+    height: 233px;
+    width: 100%;
+}
+
+#keyboard_keyboard .ui-keyboard-button {
+    font-size:2em;
+    height: 2em;
+    min-width: 2em;
+    font-weight: 100;
+}

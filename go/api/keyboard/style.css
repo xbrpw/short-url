@@ -1,0 +1,129 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300";
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "HelveticaNeue-UltraLight", "Open Sans";
+  color:#222;
+}
+body{
+  background:#f4f4f4;
+}
+#content{
+  margin:0 auto;
+  width:475px;
+}
+h1, h3{
+  text-align:center;
+  font-family: "HelveticaNeue-UltraLight", "Open Sans";
+  font-weight:300;
+}
+#keyboard{
+  background:#e5e6e8;
+  width:475px;
+  height:380px;
+  font-size:24px;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+}
+.lightgrey{
+  background:#fafafa;
+  height:50px;
+}
+#camera{
+  background:#bfc2c6;
+  margin:4px 8px 0;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+}
+.input{
+  background:#fff;
+  float:left;
+  width:320px;
+  height:40px;
+  padding-left:5px;
+  font-family: "Open Sans";
+  border:1px solid #ccc;
+  font-size:20px;
+  border-radius:7px;
+  -moz-border-radius:7px;
+  -webkit-border-radius:7px;
+}
+.photo::before{
+  content:'';
+  display:block;
+  position:relative;
+  background:#bfc2c6;
+  left:19px;
+  top:7px;  
+  height:6px;
+  width:15px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+.photo{
+  float:left;
+  padding:0 6px;
+  cursor:pointer;
+}
+.send{
+  color:#63adf0;
+  margin-top:5px;
+  cursor:pointer;
+}
+.button{
+  margin:0 auto;
+  background:#FCFCFC;
+  height:56px;
+  width:38px;
+  margin: 10px 1px;
+  padding:7px 0;
+  font-size:32px;
+  display:inline-block;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  box-shadow: 0px 2px 1px #aaa;
+  -moz-box-shadow: 0px 2px 1px #aaa;
+  -webkit-box-shadow: 0px 2px 1px #aaa;
+}
+.button:hover{
+  background:#f4f4f4;
+  cursor:pointer;
+}
+.button:active{
+  background:#ccc;
+}
+.grey{
+  background:#bfc2c6;
+  font-size:22px;
+}
+.arrow{
+  width:56px;
+  background:#bfc2c6;
+}
+#shift{
+  padding-left:5px;
+}
+.section{
+  margin:0 auto;
+  width:475px;
+  padding-top:3px;
+  text-align: center;
+}
+#number{
+  width:107px;
+  padding:12px 0;
+}
+#space{
+  width:235px;
+  font-size:22px;
+  padding:12px 0;
+}
+#return{
+  width:107px;
+  padding:12px 0;
+}

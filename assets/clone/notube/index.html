@@ -1,0 +1,704 @@
+
+<!-- /* ⊙⩌⨀ 2006 - 2022  http://twitter.com/luisangelmaciel  */ -->  
+<!DOCTYPE html><!-- ⊙⩌⨀ 2006 - 2022 © LuisAngelMaciel :P! -->
+<html lang="es-MX" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#" >  
+<head>
+<meta charset="UTF-8">
+<title>NoTube </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="title" content="NoTube ">
+<meta name="description" content="NoTube ">
+<meta name="keywords" content="NoTube">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="7 days">
+<meta name="author" content="@LuisAngelMaciel">
+<meta name="generator" content="xbr.pw">
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+<link rel="icon" type="image/x-icon" href="./favicon.svg" sizes="192x192" id="favicon" />
+<meta name="MobileOptimized" content="width" />     
+<meta property="og:locale" content="es_MX">
+<meta property="og:type" content="website">
+<meta property="og:type" content="club" />
+<meta property="og:title" content=" NoTube ">
+<meta property='og:description ' content='NoTube  '>
+<meta property="og:url" content="">
+<meta property="og:site_name" content="NoTube "> 
+<meta property="og:image" content="https://www.xbr.pw//og-image.webp" />
+<meta property="og:image:secure_url" content="https://www.xbr.pw/og-image.webp" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="400" />
+<meta property="og:image:alt" content="NoTube" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:video" content="og-video.swf" />
+<meta property="og:video:secure_url" content="og-videoSecure.swf" />
+<meta property="og:video:type" content="website" />
+<meta property="og:video:width" content="400" />
+<meta property="og:video:height" content="300" />
+<meta name="title" content="NoTube ">
+<meta name="description" content="NoTube ">
+<meta name="keywords" content="">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="7 days">
+<meta name="author" content="@LuisAngelMaciel">
+<meta property="og:url" content="https://xbrpw.github.io/">
+<meta property="og:site_name" content="NoTube ">
+<!--  size="1080x400" -->
+<meta property="og:image" content="./og-image.webp" />
+<meta property="og:image:secure_url" content="./og-image.webp" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="400" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='wrapper'>
+  <header class='sticky top-0 flex justify-between w-full bg-white items-center z-10'>
+    <div class='logoDiv flex font-black cursor-pointer'><i class="material-icons mx-6">menu</i><i class="material-icons text-red-500">play_circle</i>NoTube</div>
+    <div class='flex justify-end items-center w-1/3 xl:justify-start lg:justify-start md:justify-start'><input type='search' placeholder='Search' class='searchField' /><button class='toolTip noTrans flex border-gray-300 bg-trabparent border-0 px-2 py-1 -ml-px xl:border xl:bg-gray-100 lg:border lg:bg-gray-100 md:border md:bg-gray-100 hover:bg-gray-200' tooltip='Search'><i class="material-icons mx-4">search</i></button>
+      <div class="toolTip noMobile" tooltip="Search with your voice"><i class="material-icons ml-4">keyboard_voice</i></div>
+    </div>
+    <div class='flex items-center'>
+      <div class="toolTip noMobile" tooltip="NoTube apps"><i class="material-icons mx-4">apps</i></div>
+      <div class="toolTip" tooltip="Settings"><i class="material-icons mx-4">more_vert</i></div><button class='signBtn'><i class="material-icons transform scale-125 mr-2">account_circle</i>Sign in</button>
+    </div>
+  </header>
+  <aside class='hidden fixed w-60 pb-16 h-full bg-white flex flex-col items-start text-sm md:block md:w-20 lg:w-20 xl:w-60'>
+    <button class="sideButton xl:bg-gray-300 xl:font-semibold"><i class="material-icons text-red-500">home</i>Home</button>
+    <button class="sideButton"><i class="material-icons">local_fire_department</i>Trending</button>
+    <button class="sideButton"><i class="material-icons">subscriptions</i>Subscriptions</button>
+    <div class='sideDiv'></div>
+    <button class="sideButton"><i class="material-icons">video_library</i>Library</button>
+    <button class="sideButton"><i class="material-icons">history</i>History</button>
+    <div class='sideDiv'></div>
+    <div class="w-3/4 ml-4 my-4 pl-3 invisible xl:visible">Sign in to like videos, comment, and subscribe.<button class='signBtn'><i class="material-icons transform scale-125 text-blue-600 mr-2">account_circle</i>Sign in</button></div>
+    <div class='sideDiv'></div>
+    <div class="sideTitle">Best of Notube</div>
+    <button class="circleButton"><i class="material-icons">music_note</i>Music</button>
+    <button class="circleButton"><i class="material-icons">gamepad</i>Gaming</button>
+    <button class="circleButton"><i class="material-icons">radio</i>News</button>
+    <button class="circleButton"><i class="material-icons">wifi_tethering</i>Live</button>
+    <button class="circleButton"><i class="material-icons">360</i>360° Video</button>
+    <div class='sideDiv'></div>
+    <div class="sideTitle">Subscriptions</div>
+    <button class="moreButton"><img src='https://yt3.ggpht.com/ytc/AAUvwnhmtSFqHaFg7QFumWIO9aFVRP0WFriSV1-W774s=s88-c-k-c0x00ffffff-no-rj' />CSS Masters</button>
+    <button class="moreButton"><img src='https://yt3.ggpht.com/ytc/AAUvwniBsQ2-4KQfl-yhypy68NtPPdzR5kDdT5CNat3xSA=s176-c-k-c0x00ffffff-no-rj-mo' />DesignCourse</button>
+    <div class='sideDiv'></div>
+    <div class="sideTitle">More from NoTube</div>
+    <button class="moreButton"><i class="material-icons">play_circle</i>NoTube Premium</button>
+    <button class="moreButton"><i class="material-icons">wifi_tethering</i>Live</button>
+    <div class='sideDiv'></div>
+    <button class="moreButton"><i class="material-icons">settings</i>Settings</button>
+    <button class="moreButton"><i class="material-icons">flag</i>Report History</button>
+    <button class="moreButton"><i class="material-icons">help</i>Help</button>
+    <button class="moreButton"><i class="material-icons">feedback</i>Send Feedback</button>
+    <div class='sideDiv'></div>
+    <div class="w-3/4 ml-4 my-4 invisible xl:visible">This is a demo page just to learn about Tailwind CSS, it is a clone of YouTube and in no way ment for more than studying CSS.<br /><br />Made by <a href='https://twitter.com/adircode' target='_blank' class='text-blue-600'>@AdirCode</a></div>
+  </aside>
+  <div class='videoWrapper grid gap-4 bg-gray-100 pr-6 pl-6 py-6 xl:grid-cols-4 xl:pl-72 lg:grid-cols-3 lg:pl-32 md:grid-cols-2 md:pl-32 md:pr-12 sm:grid-cols-1'>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/cuweqZyiyjE/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD2igpXqO3skPciEikiDArWsIshyg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhmtSFqHaFg7QFumWIO9aFVRP0WFriSV1-W774s=s88-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">The secret superpowers of CSS</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters</div>
+          <div class='views'>
+            <div class='viewCount'>622 views</div>
+            <div class='uploadDate'>2 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/-FwCzUrn0h0/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwngB_2rpWjae5Yzeif6gFxWReSbZNvX1U34fAXCc=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Sass for Beginners (Hebrew) - by Elad Shechter</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters Israel</div>
+          <div class='views'>
+            <div class='viewCount'>469 views</div>
+            <div class='uploadDate'>1 month ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/cbP2N1BQdYc/maxresdefault.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnia1Mvs7Hy5Kcjg-ZVB0FzcIJWyOBD2yTaTJvU5=s176-c-k-c0xffffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Funny Cats ✪ Cute and Baby Cats Videos Compilation #105</div>
+          <div class='userOrigin hover:text-gray-500'>Funny cats</div>
+          <div class='views'>
+            <div class='viewCount'>19M views</div>
+            <div class='uploadDate'>3 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/v74SZBVMPa0/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwniitqKeRm3CPMl0hTnHEb0z8Dwxzlsvdi_CB1xP=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Rebuilding the Instagram Stories UI with Tailwind CSS</div>
+          <div class='userOrigin hover:text-gray-500'>Tailwind Labs</div>
+          <div class='views'>
+            <div class='viewCount'>18K views</div>
+            <div class='uploadDate'>3 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/Qu59cLEA4HQ/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhcS0dAmFhjX6U77P6cfypQMilBWFcrIzUuZs4cIA=s68-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Most Adorable Red Panda - CUTEST Compilation</div>
+          <div class='userOrigin hover:text-gray-500'>AnimalTV</div>
+          <div class='views'>
+            <div class='viewCount'>1.3M views</div>
+            <div class='uploadDate'>3 years ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/roywYSEPSvc/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwniBsQ2-4KQfl-yhypy68NtPPdzR5kDdT5CNat3xSA=s176-c-k-c0x00ffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Learn Sass in this Free Crash Course - Give your CSS Superpowers!</div>
+          <div class='userOrigin hover:text-gray-500'>DesignCourse</div>
+          <div class='views'>
+            <div class='viewCount'>365K views</div>
+            <div class='uploadDate'>2 years ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/lU_UTTNrDJY/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDkAMilTJ9axy27Zbflh9D49zQyaQ' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwngB_2rpWjae5Yzeif6gFxWReSbZNvX1U34fAXCc=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">CSS Live #1 - Build a dodecahedron.</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters Israel</div>
+          <div class='views'>
+            <div class='viewCount'>243 views</div>
+            <div class='uploadDate'>1 week ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/zOZju-Z6J2M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBA2ArzEOhqcXASN-iGwh6X1SuxKQ' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhmtSFqHaFg7QFumWIO9aFVRP0WFriSV1-W774s=s88-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">CSS Masters Talk - Adam Argyle</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters</div>
+          <div class='views'>
+            <div class='viewCount'>417 views</div>
+            <div class='uploadDate'>5 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/3u_vIdnJYLc/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwniitqKeRm3CPMl0hTnHEb0z8Dwxzlsvdi_CB1xP=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Announcing Tailwind CSS v2.0</div>
+          <div class='userOrigin hover:text-gray-500'>Tailwind Labs</div>
+          <div class='views'>
+            <div class='viewCount'>46K views</div>
+            <div class='uploadDate'>2 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/_AXx2XSI4Kw/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnh3QH3UYxKLoz4S9dRE9dDo_nhqE6cUZYASHYTJQQ=s176-c-k-c0xffffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Unboxing the Apple Mask</div>
+          <div class='userOrigin hover:text-gray-500'>Unbox Therapy</div>
+          <div class='views'>
+            <div class='viewCount'>11M views</div>
+            <div class='uploadDate'>4 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/5GkHGj6dAsM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4C1npCl8OTzu4oS32UlUlRXUs8Q' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhmtSFqHaFg7QFumWIO9aFVRP0WFriSV1-W774s=s88-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">How to Create the Best CSS Practices for Responsive Design Websites</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters</div>
+          <div class='views'>
+            <div class='viewCount'>67 views</div>
+            <div class='uploadDate'>2 weeks ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/z7rFrc5kqOk/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnj7UJXT_6G0tsvO8rJ3MUcUSUeCrWID9-TgXJ5iug=s176-c-k-c0xffffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Otter Kotaro&Hana So Comfy</div>
+          <div class='userOrigin hover:text-gray-500'>KOTSUMET</div>
+          <div class='views'>
+            <div class='viewCount'>17M views</div>
+            <div class='uploadDate'>1 year ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/7EopRI1ITXI/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwngB_2rpWjae5Yzeif6gFxWReSbZNvX1U34fAXCc=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">CSS Counters (in Hebrew) - Michal Porag</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters Israel</div>
+          <div class='views'>
+            <div class='viewCount'>222 views</div>
+            <div class='uploadDate'>1 year ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/Kua9cY8q_EI/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwngMoCZOFlIayfY36XYmXMFkvEfaX-U2om851XTxoA=s68-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Linus builds Linus’ new PC!</div>
+          <div class='userOrigin hover:text-gray-500'>Linus Tech Tips</div>
+          <div class='views'>
+            <div class='viewCount'>2.5M views</div>
+            <div class='uploadDate'>6 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/cuweqZyiyjE/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLD2igpXqO3skPciEikiDArWsIshyg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhmtSFqHaFg7QFumWIO9aFVRP0WFriSV1-W774s=s88-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">The secret superpowers of CSS</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters</div>
+          <div class='views'>
+            <div class='viewCount'>622 views</div>
+            <div class='uploadDate'>2 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/-FwCzUrn0h0/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwngB_2rpWjae5Yzeif6gFxWReSbZNvX1U34fAXCc=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Sass for Beginners (Hebrew) - by Elad Shechter</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters Israel</div>
+          <div class='views'>
+            <div class='viewCount'>469 views</div>
+            <div class='uploadDate'>1 month ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/cbP2N1BQdYc/maxresdefault.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnia1Mvs7Hy5Kcjg-ZVB0FzcIJWyOBD2yTaTJvU5=s176-c-k-c0xffffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Funny Cats ✪ Cute and Baby Cats Videos Compilation #105</div>
+          <div class='userOrigin hover:text-gray-500'>Funny cats</div>
+          <div class='views'>
+            <div class='viewCount'>19M views</div>
+            <div class='uploadDate'>3 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/v74SZBVMPa0/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwniitqKeRm3CPMl0hTnHEb0z8Dwxzlsvdi_CB1xP=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Rebuilding the Instagram Stories UI with Tailwind CSS</div>
+          <div class='userOrigin hover:text-gray-500'>Tailwind Labs</div>
+          <div class='views'>
+            <div class='viewCount'>18K views</div>
+            <div class='uploadDate'>3 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/Qu59cLEA4HQ/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhcS0dAmFhjX6U77P6cfypQMilBWFcrIzUuZs4cIA=s68-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Most Adorable Red Panda - CUTEST Compilation</div>
+          <div class='userOrigin hover:text-gray-500'>AnimalTV</div>
+          <div class='views'>
+            <div class='viewCount'>1.3M views</div>
+            <div class='uploadDate'>3 years ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/roywYSEPSvc/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwniBsQ2-4KQfl-yhypy68NtPPdzR5kDdT5CNat3xSA=s176-c-k-c0x00ffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Learn Sass in this Free Crash Course - Give your CSS Superpowers!</div>
+          <div class='userOrigin hover:text-gray-500'>DesignCourse</div>
+          <div class='views'>
+            <div class='viewCount'>365K views</div>
+            <div class='uploadDate'>2 years ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/lU_UTTNrDJY/hqdefault.jpg?sqp=-oaymwEZCOADEI4CSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDkAMilTJ9axy27Zbflh9D49zQyaQ' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwngB_2rpWjae5Yzeif6gFxWReSbZNvX1U34fAXCc=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">CSS Live #1 - Build a dodecahedron.</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters Israel</div>
+          <div class='views'>
+            <div class='viewCount'>243 views</div>
+            <div class='uploadDate'>1 week ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/zOZju-Z6J2M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBA2ArzEOhqcXASN-iGwh6X1SuxKQ' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhmtSFqHaFg7QFumWIO9aFVRP0WFriSV1-W774s=s88-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">CSS Masters Talk - Adam Argyle</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters</div>
+          <div class='views'>
+            <div class='viewCount'>417 views</div>
+            <div class='uploadDate'>5 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/3u_vIdnJYLc/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwniitqKeRm3CPMl0hTnHEb0z8Dwxzlsvdi_CB1xP=s176-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">Announcing Tailwind CSS v2.0</div>
+          <div class='userOrigin hover:text-gray-500'>Tailwind Labs</div>
+          <div class='views'>
+            <div class='viewCount'>46K views</div>
+            <div class='uploadDate'>2 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/_AXx2XSI4Kw/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnh3QH3UYxKLoz4S9dRE9dDo_nhqE6cUZYASHYTJQQ=s176-c-k-c0xffffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Unboxing the Apple Mask</div>
+          <div class='userOrigin hover:text-gray-500'>Unbox Therapy</div>
+          <div class='views'>
+            <div class='viewCount'>11M views</div>
+            <div class='uploadDate'>4 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/5GkHGj6dAsM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4C1npCl8OTzu4oS32UlUlRXUs8Q' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnhmtSFqHaFg7QFumWIO9aFVRP0WFriSV1-W774s=s88-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">How to Create the Best CSS Practices for Responsive Design Websites</div>
+          <div class='userOrigin hover:text-gray-500'>CSS Masters</div>
+          <div class='views'>
+            <div class='viewCount'>67 views</div>
+            <div class='uploadDate'>2 weeks ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/z7rFrc5kqOk/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnj7UJXT_6G0tsvO8rJ3MUcUSUeCrWID9-TgXJ5iug=s176-c-k-c0xffffffff-no-rj-mo' class='userImage' />
+        <div>
+          <div class="titleDiv">Otter Kotaro&Hana So Comfy</div>
+          <div class='userOrigin hover:text-gray-500'>KOTSUMET</div>
+          <div class='views'>
+            <div class='viewCount'>17M views</div>
+            <div class='uploadDate'>1 year ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+
+    <div class='videoDiv'>
+      <div class="hoverMenu">
+        <div class="menuItem">
+          <div data="Watch Later"></div><i class="material-icons">watch_later</i>
+        </div>
+        <div class="menuItem">
+          <div data="Add to queue"></div><i class="material-icons">playlist_play</i>
+        </div>
+      </div><img src='https://i.ytimg.com/vi/N1AL2EMvVy0/hq720.jpg' class='video' />
+      <div class="videoFlex flex items-start pt-3"><img src='https://yt3.ggpht.com/ytc/AAUvwnjbd2Tj3GfDTKw1rkfF29rWSIdymLy3VHZveq91gw=s68-c-k-c0x00ffffff-no-rj' class='userImage' />
+        <div>
+          <div class="titleDiv">It’s pronounced GIF.</div>
+          <div class='userOrigin hover:text-gray-500'>Tom Scott</div>
+          <div class='views'>
+            <div class='viewCount'>1.7M views</div>
+            <div class='uploadDate'>3 months ago</div>
+          </div>
+        </div>
+        <div class="text-right flex-grow"><i class="material-icons cursor-pointer hover:text-gray-500">more_vert</i></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://adir-sl.github.io/TailwindApply/tailwindApply.js'></script>
+</body>
+</html>

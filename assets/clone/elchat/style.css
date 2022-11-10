@@ -1,0 +1,105 @@
+html {
+  font-family: arial;
+}
+
+/*messanger comp*/
+.messanger {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.messanger-header {
+  height: 40px;
+  padding: 10px 16px;
+  background-color: #ededed;
+}
+.messanger-mesages {
+  flex: 1;
+  background-color: #e5ddd5;
+  padding: 20px;
+}
+.messanger-mesages-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/*messanger-mesages*/
+.messanger-mesage {
+  position: relative;
+  background-color: #fff;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.messanger-mesage::before {
+  position: absolute;
+  left: -12px;
+  top: 0;
+  content: "";
+  display: block;
+  border: solid;
+  border-width: 0px 16px 16px 0px;
+  border-color: transparent #fff transparent transparent;
+}
+.messanger-mesage.is-self {
+  align-self: flex-end;
+  background-color: #cfe9ba;
+}
+.messanger-mesage.is-self::before {
+  left: auto;
+  right: -28px;
+  border-width: 0px 16px 16px 16px;
+  border-color: transparent transparent transparent #cfe9ba;
+}
+
+/*message Box*/
+.message-box {
+  background-color: #ededed;
+  display: flex;
+  padding: 10px;
+}
+.message-box-input {
+  flex: 1;
+  padding: 10px;
+  max-height: 100px;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.message-box-button {
+  background-color: transparent;
+  border-width: 0;
+  padding: 10px;
+}
+.message-box-button::before {
+  content: "";
+  display: block;
+  border: solid 10px transparent;
+  border-width: 9px 0 9px 20px;
+  border-color: transparent transparent transparent #9ea4a5;
+}
+
+/*profile */
+.profile {
+  display: flex;
+  margin-bottom: 10px;
+}
+.profile-image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  background-color: #000;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.profile-name {
+  align-self: center;
+  font-weight: bold;
+  color: #c90379;
+}

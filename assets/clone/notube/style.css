@@ -1,0 +1,116 @@
+.videoDiv{
+  --apply: cursor-pointer;
+}
+.video{
+  --apply: w-full bg-blue-300;
+}
+.videoDiv .titleDiv{
+  --apply: w-full font-semibold;
+}
+.uploadDate{
+  --apply: ml-2;
+}
+.uploadDate::before{
+  content: '• ';
+}
+.userOrigin, .views{
+  --apply: flex text-gray-400 text-sm;
+}
+.signBtn{
+  --apply: flex items-center w-10 overflow-hidden p-2 px-3 my-2 mr-2 border-blue-600 text-blue-600 uppercase text-sm font-semibold hover:border-blue-800 hover:text-blue-800 md:w-max md:border;
+}
+.signBtn .material-icons{
+  color: inherit;
+}
+.searchField{
+  --apply: hidden border-gray-300 border px-3 py-1 w-5/6 xl:block lg:block md:block;
+}
+.material-icons{
+  --apply: text-gray-600;
+}
+.sideButton{
+  --apply: flex items-center px-5 py-2 pb-6 w-full text-xs text-left hover:bg-gray-200 flex-col xl:flex-row xl:text-sm xl:pb-2;
+}
+.moreButton{
+  --apply: items-center px-5 py-2 w-full text-xs text-left hover:bg-gray-200 flex-col xl:flex-row xl:text-sm hidden xl:flex;
+}
+.circleButton{
+  --apply: items-center px-5 py-1 w-full text-left hover:bg-gray-200 hidden xl:flex;
+}
+.sideButton .material-icons{
+  --apply: p-0 text-gray-500 xl:pr-5;
+}
+.sideButton img, .moreButton img{
+  --apply: rounded-full h-6 mx-2 mr-3;
+}
+.videoDiv .userImage{
+  --apply: rounded-full h-9 mx-2 mr-3;
+}
+.circleButton .material-icons, .moreButton .material-icons{
+  --apply: bg-gray-600 text-white rounded-full p-1 mr-2 transform scale-75;
+}
+.sideDiv{
+  --apply: px-5 border-b border-gray-200 w-full py-1 mb-2 hidden xl:block;
+}
+.sideTitle{
+  --apply: px-5 my-2 uppercase font-semibold text-gray-600 hidden xl:block;
+}
+aside{
+  overflow: hidden;
+}
+aside:hover{
+  overflow-y: auto;
+}
+.videoFlex .material-icons{
+  --apply: text-gray-400;
+}
+.hoverMenu{
+  --apply: invisible relative h-0 text-right;
+}
+.hoverMenu .material-icons{
+  --apply: bg-black bg-opacity-75 text-right p-1 mr-1 mt-1 rounded cursor-pointer text-white;
+}
+.videoDiv:hover .hoverMenu{
+  /* should be .videoDiv:hover .hoverMenu */
+  visibility: visible;
+}
+.hoverMenu .menuItem{
+  --apply: flex items-center justify-end;
+}
+.menuItem div{
+  --apply: flex items-center text-white bg-black bg-opacity-75 text-right mt-1 rounded-l cursor-pointer uppercase;
+  max-width: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 400ms linear 0s;
+}
+.menuItem:hover div::before{
+  content: attr(data);
+  padding: .25rem;
+}
+.menuItem:hover .material-icons{
+  border-radius: 0 .25rem .25rem 0;
+}
+.menuItem:hover div{
+  width: fit-content;
+  max-width: 100%;
+}
+.noMobile{
+  --apply: hidden md:block;
+}
+.toolTip{
+  cursor: pointer;
+}
+.toolTip:hover::before{
+  content: attr(tooltip);
+  position: absolute;
+  bottom: -65%;
+  border-radius: .25rem;
+  background-color: rgba(55, 65, 81, .8);
+  color: white;
+  padding: .5rem;
+  transform: scale(.85) translateX(-30%);
+}
+.noTrans:hover::before{
+  transform: scale(.85);
+}

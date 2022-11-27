@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,400,600,700,800");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+*{box-sizing:border-box}
+*::before, *::after{box-sizing:border-box}
+body,html{color:#20303c;width:100%;height:100%;margin:0;padding:0;font-weight:400;letter-spacing:0.4px;font-family:Nunito,sans-serif;font-size:1rem;line-height:1.5;background-color:#f9fafa}
+a{color:inherit;text-decoration:none;margin:0;padding:0}
+::selection{background:#47a5de;color:#fff}
+::-moz-selection{background:#47a5de;color:#fff}
+
+
+#logo{display:block;padding:0 22px;float:left}
+#logo a{color:#20303c;font-weight:800;letter-spacing:2px;font-size:20px}
+
+
+
+nav{position:fixed;left:0;top:0;right:0;background-color:#f9fafa;z-index:10;-webkit-box-shadow:0 0 50px 0 rgba(0,0,0,0.2);
+-moz-box-shadow:0 0 50px 0 rgba(0,0,0,0.2);
+box-shadow:0 0 50px 0 rgba(0,0,0,0.2)}
+.main-nav{position:relative;display:flex;justify-content:space-between;align-items:center;max-width:88rem;margin:0 auto;padding:0}
+.toggle,
+[id^=drop]{display:none;cursor:pointer}
+nav:after{content:"";display:table;clear:both}
+nav ul{float:right;padding:0;margin:0;list-style:none;position:relative}
+nav ul li{margin:0;display:inline-block;float:left;background-color:#f9fafa}
+nav ul a{display:block;padding:14px 20px;text-decoration:none;color:#20303c;transition:color 0.4s ease 0s,background-color 0.4s ease 0s}
+nav ul li ul li:hover{background:#fdc902}
+nav ul a:hover{color:black;background:#fdc902}
+nav ul ul{display:none;position:absolute;top:52px}
+nav ul li:hover > ul{display:inherit}
+nav ul ul li{width:170px;float:none;display:list-item;position:relative}
+nav ul ul ul li {position:relative;top:-52px;left:170px}
+nav li > a:after{content:' +'}
+nav li > a:only-child:after{content:''}
+
+@media all and (max-width:768px){
+	#logo{display:inline-block;padding:11px;max-width:100%;text-align:center;float:none}
+	nav{position:relative}
+  .main-nav{position:relative;display:block;width:100%;margin:0;padding:0}
+	.toggle + a,
+	.menu{display:none;text-align:center}
+	.toggle{display:block;padding:14px 20px;text-decoration:none;border:none}
+	.toggle:hover{background-color:#fdc902}
+  .ico-menu{display:inline-block;float:right}
+	[id^=drop]:checked + ul{display:block;float:left;width:100%}
+	nav ul li{display:block;width:100%}
+	nav ul ul .toggle,
+	nav ul ul a{padding:0 40px}
+	nav ul ul ul a{padding:0 80px}
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  nav ul ul ul a{padding:14px 20px}
+	nav ul li ul li .toggle,
+	nav ul ul a{background-color:#ebeeee}
+	nav ul ul{float:none;position:static}
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul{display:none}
+	nav ul ul li{display:block;width:100%}
+	nav ul ul ul li{position:static}
+  nav ul ul ul a{background-color:#e0e5e5}
+  nav ul ul ul ul a{background-color:#d5dcdc}
+}
+@media all and (max-width:330px){
+	#logo{width:100%}
+  .main-nav,
+  .ico-menu{display:inline-block;float:none;margin:0 auto;text-align:center;width:100%}
+  nav ul li{display:block}
+}
+
+
+
+header{padding:10rem 0 15rem;background:#f8f4ed url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/toys.png) no-repeat center}
+.container{margin:0 auto;padding:0 22px;max-width:88rem;width:100%}
+header h1{font-weight:800;font-size:3.5rem;margin:0 0 0.5rem}
+header p.lead{font-size:1.25rem;margin:0 0 2.5rem}
+
+
+main{max-width:88rem;margin:0 auto}
+main .trees{margin:22px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr 1fr;grid-gap:22px}
+main .trees div, main .trees a{padding:22px}
+[class*="card"]{position:relative;background-size:cover;background-position:center;background-repeat:no-repeat}
+.card1{background-image:url(https://static.wixstatic.com/media/ea26fd_d6d73744d2d8482695fdd417001ddd5f~mv2_d_3161_2000_s_2.jpg);grid-column:1/3;grid-row:1/3;min-height:250px}
+.card0{background-image:url(https://static.wixstatic.com/media/ea26fd_d6707452dba0495a8a6d57650c358dbf~mv2_d_2000_1265_s_2.jpg);grid-column:1/3;grid-row:1/3;min-height:250px}
+.card2{background-image:url(https://static.wixstatic.com/media/ea26fd_28f3dfe8832f4ac1a2fc0f21095e5d3d~mv2_d_2000_1887_s_2.jpg);grid-column:3/4;grid-row:1;min-height:250px}
+.card3{background-image:url(https://static.wixstatic.com/media/ea26fd_d9cc0e15ec5e4360a0497d8bd1123d31~mv2_d_2000_2000_s_2.jpg);grid-column:1;grid-row:3;min-height:250px}
+.card4{background-image:url(https://static.wixstatic.com/media/ea26fd_5bad1846a1934c63a36fd7e3af0c10c3~mv2_d_2000_2000_s_2.jpg);grid-column:3/4;grid-row:2;min-height:250px}
+.card5{background-image:url(https://static.wixstatic.com/media/ea26fd_6bced28aa460434dbf4a50f7e847d646~mv2_d_3632_4826_s_4_2.jpg);grid-column:2/4;grid-row:3;min-height:300px}
+.card-title{margin:0;font-weight:800;font-size:2rem;color:#40404c;letter-spacing:0;transition:color 0.2s ease 0s;z-index:3}
+.card-title.h1{font-size:3rem;letter-spacing:0.2rem;z-index:3}
+.card-content{margin:0;margin-top:0.5rem;font-weight:200;font-size:1.3rem;z-index:3}
+.card1 .card-title{margin-top:120px}
+
+
+.btn{background-color:transparent;transition:border-color 0.4s ease 0s,color 0.4s ease 0s,background-color 0.4s ease 0s;position:relative;display:inline-block;color:#fff;border:none;border-radius:2rem;outline:0;padding:1.125rem 3rem;font-family:inherit;font-size:0.875rem;font-weight:700;text-align:center;cursor:pointer;letter-spacing:0.0625rem;border:2px solid #20303c}
+.btn:hover{color:#fff;background-color:#20303c}
+.btn.fill{color:#fff;background-color:#20303c}
+.btn.fill:hover{color:#20303c;background-color:transparent;border-color:#20303c}
+.btn.fill.red{color:#fff;background-color:#f55c4a;border-color:#f55c4a}
+.btn.fill.red:hover{color:#f55c4a;background-color:transparent;border-color:#f55c4a}
+.btn.fill.blue{color:#fff;background-color:#47a5de;border-color:#47a5de}
+.btn.fill.blue:hover{color:#47a5de;background-color:transparent;border-color:#47a5de}
+.btn.fill.yellow{color:#fff;background-color:#fdc902;border-color:#fdc902}
+.btn.fill.yellow:hover{color:#fdc902;background-color:transparent;border-color:#fdc902}
+.btn.red{color:#f55c4a;background-color:transparent;border-color:#f55c4a}
+.btn.blue{color:#47a5de;background-color:transparent;border-color:#47a5de}
+.btn.red:hover{color:#fff;background-color:#f55c4a;border-color:#f55c4a}
+.btn.blue:hover{color:#fff;background-color:#47a5de;border-color:#47a5de}
+.btn.yellow{color:#fdc902;background-color:transparent;border-color:#fdc902}
+.btn.yellow:hover{color:#fff;background-color:#fdc902;border-color:#fdc902}
+[class*="card"] .btn{margin-top:1rem;padding:11px 18px;font-size:12px;font-weight:700;letter-spacing:1.2px}
+a[class*="card"] .card-title{position:relative;display:inline-block}
+a[class*="card"] .card-title::before{content:"";position:absolute;bottom:0;left:0;right:0;border-bottom:2px solid;transform: scaleX(0);transform-origin:100% 50%;transition:transform 0.4s}
+a[class*="card"]:hover .card-title::before{transform:scaleX(1);transform-origin:0 50%}
+a[class*="card"]::after{content:"";border:2px solid #40404c;top:12px;left:12px;bottom:12px;right:12px;position:absolute;z-index:2}
+a[class*="card"]::before{content:"";background:#fff;top:0;left:0;bottom:0;right:0;position:absolute;z-index:1;transition:opacity 0.2s;opacity:0}
+a[class*="card"]:hover::before{opacity:0.9}
+a[class*="card"] .card-content{transition:opacity 0.2s;opacity:0}
+a[class*="card"]:hover .card-content{opacity:1}
+
+footer{max-width:88rem;margin:0 auto;background:#f55c4a;color:#fff}
+footer .container{padding:22px 0}
+footer .trees{margin:2px 80px;padding:0;list-style:none;display:grid;grid-template-columns:auto auto;grid-gap:20px}
+footer .trees li{padding:5px;margin:0}
+footer .trees li span{font-weight:200;margin:0;padding:0;border:0;outline:0}
+footer .trees li a:hover{color:#20303c}
+footer .copy{text-align:right;margin:auto 0!important}
+.maps{max-width:100%;max-height:200px;border:6px solid rgba(0,0,0,0.2);background-image:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/22567/map.png") no-repeat center center cover}
+
+
+ul.social-icons{list-style:none;margin:0;padding:0}
+.social-icons li{display:inline-block!important;padding:0!important;margin:0!important;border:none!important}
+.social-icons li a{vertical-align:top;display:inline-block;text-align:center;background-color:rgba(0,0,0,0.15);cursor:pointer;padding:5px;margin:0px;color:#fff;text-decoration:none;transition:color 0.2s ease 0s,background-color 0.2s ease 0s}
+.social-icons li a:hover{background-color:rgba(0,0,0,0.1);color:#fff}
+.social-icons a i{width:25px;padding:0;margin:0;text-decoration:none}
+
+
+@media(max-width:900px){
+  body{font-size:1rem}
+  header{padding:10rem 0 10rem}
+  header h1{font-size:2.5rem;margin:0}
+  header p.lead{font-size:1.1rem;margin:0.5rem 0 1.5rem}
+  main .trees{margin:5px 0;grid-template-columns:2fr 1fr 2fr;grid-gap:5px}
+  .card1{grid-column:1/3;grid-row:1/3;min-height:220px}
+  .card2{grid-column:3/4;grid-row:1;min-height:220px}
+  .card3{grid-column:1/1;grid-row:3;min-height:220px}
+  .card4{grid-column:3/4;grid-row:2;min-height:220px}
+  .card5{grid-column:2/4;grid-row:3;min-height:250px}
+  a .card-title{font-size:1.3rem}
+  .card-title{font-size:1.2rem}
+  .card-title.h1{font-size:2rem;letter-spacing:0;line-height:1.1}
+  .card-content{margin-top:0.2rem;font-size:1rem}
+  .card1 .card-title{margin-top:70px}
+  footer .copy{text-align:rigth}
+}
+@media(max-width:768px){
+  a[class*="card"]::after{border:0}
+  footer .trees li{padding:0}
+}
+@media(max-width:600px){
+  #logo{font-weight:700;letter-spacing:0;font-size:18px}
+  header{padding:10rem 0 5rem}
+  main .trees{grid-template-columns:auto}
+  [class*="card"]{grid-column:1;grid-row:auto}
+  .card1 .card-title{margin-top:0}
+  footer .trees{text-align:center;margin:22px;grid-template-columns:auto}
+  footer .copy{text-align:center}
+}

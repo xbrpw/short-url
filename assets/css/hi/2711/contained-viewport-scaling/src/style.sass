@@ -1,0 +1,140 @@
+// go ahead, give that browser window a nice drag to see
+// the text/padding resize
+
+// function source: https://bit.ly/1Fe6nRf
+@function strip-units($value)
+  @return $value / ( $value * 0 + 1 )
+
+// property is the property you want to set
+// scale is your ideal value in a viewport unit of vw/vh
+// min and max are the bounds you want to contain the
+// scale in. set them to less than 0 to not have any bounds.
+=contain( $property , $scale , $min: -1px , $max: -1px )
+  
+  // default scaling of property using your viewport unit
+  #{$property}: #{$scale}
+  
+  // get units of each
+  $viewport-unit: unit( $scale )
+  $min-unit: unit( $min )
+  $max-unit: unit( $max )
+  
+  // turn our vars into integers for math
+  $min: strip-units( $min )
+  $max: strip-units( $max )
+  $scale: strip-units( $scale )
+
+  // set the property to query based on the viewport unit used
+  $query-property: width
+  @if $viewport-unit == vh
+    $query-property: height
+  
+  // only apply the media query when a lower bound is defined
+  @if $min > 0
+  
+    // when the window width will result in a scale greater than
+    // or equal to the specified minimum font size in pixels
+    @media screen and ( max-#{$query-property}: #{$min * ( 100 / $scale )}#{$min-unit} )
+      #{$property}: #{$min}#{$min-unit}
+  
+  // only apply the media query when an upper bound is defined
+  @if $max > 0
+  
+    // when the window width will result in a scale less than
+    // or equal to the specified maximum font size in pixels
+    @media screen and ( min-#{$query-property}: #{$max * ( 100 / $scale )}#{$max-unit} )
+      #{$property}: #{$max}#{$max-unit}
+
+// some font scaling examples
+// look at these in the compiled css to get a good
+// idea of what exactly the mixin outputs
+
+$black: rgba(	 29,	 37,	 40,	1.0 )
+$white: rgba(	248,	253,	255,	1.0 )
+$red: rgba(	250,	 66,	 72,	1.0 )
+
+h1
+  @include contain( font-size , 5vw , 22px , 74px )
+  text-shadow: 1px 1px 0 $white , 2px 2px 0 rgba( $black , 0.1 )
+  color: $red
+  font-weight: 900
+  line-height: 95%
+    
+h2
+  @include contain( font-size , 3.5vw , 16px , 32px )
+  background-color: rgba( $black , 0.02 )
+  color: $red
+  font-weight: 100
+  
+h3
+  @include contain( font-size , 3.5vw , 15px , 24px )
+  position: relative
+  margin: 0 -15px
+  font-weight: 100
+  background-color: $red
+  color: $white
+  text-align: center
+  
+  &:before , &:after
+    content: ""
+    position: absolute
+  
+  &:before
+    border-right: 15px solid shade( $red , 20% )
+    border-top: 10px solid transparent
+    left: 0  
+    top: -10px
+  
+  &:after
+    border-left: 15px solid shade( $red , 20% )
+    border-bottom: 10px solid transparent
+    right: 0  
+    bottom: -10px
+    
+    
+p
+  @include contain( font-size , 2vw , 14px , 21px )
+  color: $black
+  font-weight: 400
+  text-align: left
+  
+h1 , h2
+  text-align: center
+  
+h1 , h2 , h3 , p
+  letter-spacing: 0.03em
+  font-family: "Roboto"
+  
+  // can be applied to any property that uses single values
+  @include contain( padding , 3vw , 15px , 30px )
+  
+h2 , h3 , p
+  line-height: 145%
+  
+h2 , h3
+  text-transform: uppercase
+  
+// this is all just to make the containers for the text
+html
+  @include contain( padding , 3vw , 10px , 40px )
+  box-sizing: border-box
+  text-align: center
+  background-color: $black
+  overflow-x: hidden
+  position: absolute
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
+  
+body
+  @include contain( margin-bottom , 3vw , 10px , 40px )
+  box-shadow: 10px 10px 0 0 shade( $black , 33% )
+  background-color: $white
+  position: relative
+  display: inline-block
+  box-sizing: border-box
+  min-height: 100vh
+  max-width: 900px
+  width: 100%
+  height: auto

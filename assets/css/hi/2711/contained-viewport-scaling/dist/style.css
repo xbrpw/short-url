@@ -1,0 +1,161 @@
+h1 {
+  font-size: 5vw;
+  text-shadow: 1px 1px 0 #f8fdff, 2px 2px 0 rgba(29, 37, 40, 0.1);
+  color: #fa4248;
+  font-weight: 900;
+  line-height: 95%;
+}
+@media screen and (max-width: 440px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1480px) {
+  h1 {
+    font-size: 74px;
+  }
+}
+
+h2 {
+  font-size: 3.5vw;
+  background-color: rgba(29, 37, 40, 0.02);
+  color: #fa4248;
+  font-weight: 100;
+}
+@media screen and (max-width: 457.1428571429px) {
+  h2 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 914.2857142857px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  font-size: 3.5vw;
+  position: relative;
+  margin: 0 -15px;
+  font-weight: 100;
+  background-color: #fa4248;
+  color: #f8fdff;
+  text-align: center;
+}
+@media screen and (max-width: 428.5714285714px) {
+  h3 {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 685.7142857143px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+h3:before, h3:after {
+  content: "";
+  position: absolute;
+}
+h3:before {
+  border-right: 15px solid shade(#fa4248, 20%);
+  border-top: 10px solid transparent;
+  left: 0;
+  top: -10px;
+}
+h3:after {
+  border-left: 15px solid shade(#fa4248, 20%);
+  border-bottom: 10px solid transparent;
+  right: 0;
+  bottom: -10px;
+}
+
+p {
+  font-size: 2vw;
+  color: #1d2528;
+  font-weight: 400;
+  text-align: left;
+}
+@media screen and (max-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  p {
+    font-size: 21px;
+  }
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1, h2, h3, p {
+  letter-spacing: 0.03em;
+  font-family: "Roboto";
+  padding: 3vw;
+}
+@media screen and (max-width: 500px) {
+  h1, h2, h3, p {
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  h1, h2, h3, p {
+    padding: 30px;
+  }
+}
+
+h2, h3, p {
+  line-height: 145%;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+}
+
+html {
+  padding: 3vw;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #1d2528;
+  overflow-x: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+@media screen and (max-width: 333.3333333333px) {
+  html {
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 1333.3333333333px) {
+  html {
+    padding: 40px;
+  }
+}
+
+body {
+  margin-bottom: 3vw;
+  box-shadow: 10px 10px 0 0 shade(#1d2528, 33%);
+  background-color: #f8fdff;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 333.3333333333px) {
+  body {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1333.3333333333px) {
+  body {
+    margin-bottom: 40px;
+  }
+}

@@ -60,6 +60,48 @@
 <body>
 <!-- partial:index.partial.html -->
 
+
+<div class="w3-hide">
+
+  <div class="w3-bar w3-black ">
+    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('eso')">Eso</button>
+  </div>
+  
+  <div id="London" class=" w3-display-container city">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-display-topright">&times;</span>
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
+  
+  <div id="Paris" class=" w3-display-container city" style="display:none">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-display-topright">&times;</span>
+    <div sheetsu="https://sheetsu.com/apis/v1.0lh/020b2c0f" sheetsu-search='{"score": "42"}'>
+      <p>Name: {{name}}, score: {{score}}</p>
+    </div>
+  </div>
+  
+  <div id="eso" class=" w3-display-container city" style="display:none">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button w3-large w3-display-topright">&times;</span>
+    <h2>ESO</h2>    
+  </div>
+  
+  <script>
+  function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+  }
+  </script>
+  </div>
+
 <div class="common-structure">
   <header class="main-header u-flex">
     <div class="start u-flex">
@@ -91,8 +133,8 @@
           <a class="user">
             <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" height="28" width="28" alt="ESO-0514 | Sor Juana Inés de la Cruz">
             <span class="user-name">Sor Juana Inés de la Cruz </span>
-          </a>
-        </li>
+        
+             
         <li class="user-nav-item" onclick="openCity(event,'publicar')">
           <button class="icon-button alt-text" aria-label="Publicar"><span class="icon" aria-hidden="true">📓</span></button>
         </li>
@@ -132,7 +174,7 @@
       </script>
       <ul class="common-list">
         <li class="common-list-item" >
-          <a href="" target="_blank" class="common-list-button">
+          <a href="#Ciencia"  class="common-list-button">
             <span class="icon">
               <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" height="36" width="36" alt="">
             </span>
@@ -140,7 +182,7 @@
           </a>
         </li>
         <li class="common-list-item" >
-          <a href="" target="_blank" class="common-list-button">
+          <a href="#Tecnología"  class="common-list-button">
             <span class="icon">
               <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-rojo.svg" height="36" width="36" alt="">
             </span>
@@ -148,7 +190,7 @@
           </a>
         </li>
         <li class="common-list-item" >
-          <a href="" target="_blank" class="common-list-button">
+          <a href="#Ingeniería"  class="common-list-button">
             <span class="icon">
               <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-gay-pride.svg" height="36" width="36" alt="">
             </span>
@@ -156,7 +198,7 @@
           </a>
         </li>
         <li class="common-list-item" >
-          <a href="" target="_blank" class="common-list-button">
+          <a href="#Matemáticas"  class="common-list-button">
             <span class="icon">
               <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-rojo.svg" height="36" width="36" alt="">
             </span>
@@ -164,7 +206,7 @@
           </a>
         </li>
         <li class="common-list-item" >
-          <a href="" target="_blank" class="common-list-button">
+          <a href="#Creatividad"  class="common-list-button">
             <span class="icon">
               <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-rojo.svg" height="36" width="36" alt="">
             </span>
@@ -172,7 +214,7 @@
           </a>
         </li>
          <li class="common-list-item" >
-          <a href="" target="_blank" class="common-list-button">
+          <a href="#Directivos"  class="common-list-button">
             <span class="icon">
               <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-rojo.svg" height="36" width="36" alt="">
             </span>
@@ -180,13 +222,18 @@
           </a>
         </li>
          <li class="common-list-item" >
-          <a href="" target="_blank" class="common-list-button">
+          <a href="#Valores" class="common-list-button">
             <span class="icon">
               <img class="user-image" src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-rojo.svg" height="36" width="36" alt="">
             </span>
             <span class="text">Valores</span>
           </a>
         </li>
+
+        
+
+
+
         <li class="common-list-item" style="display:none">
           <a class="common-list-button">
 <span class="icon" aria-hidden="true">💬</span>
@@ -218,6 +265,32 @@
       </button>
     </section>
 
+  
+
+
+    <section class="common-section" style="display:none">
+      <h2 class="section-title">Ejes y objetivos</h2>
+      <ul class="common-list">
+        <li class="common-list-item">
+          <a href="#" target="_blank" class="common-list-button">
+            <span class="icon">
+              <img src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-0/cp0/c40.0.50.50a/p50x50/96018871_10156797924731933_8952430699365793792_n.jpg?_nc_cat=105&_nc_sid=ca434c&_nc_ohc=IeqrI6DbUWkAX8FXQs7&_nc_ht=scontent.ftlv1-1.fna&oh=370e999a657281ecbaf5237802520a2a&oe=5F0102F9" alt="">
+            </span>
+            <span class="text">Ciencia</span>
+          </a>
+        </li>
+       
+              
+      </ul>
+      <button class="common-more" style="display:none" >
+        <span class="text">See More</span>
+        <span class="icon">🔻</span>
+      </button>
+    </section>
+  </aside>
+
+
+  <main class="main-feed ">
     <style>
       .filterDiv {
         display: none;
@@ -247,75 +320,112 @@
         color: white;
       }
       </style>
+<style>
+  div.scrollmenu {
+    /*background-color: #333;*/
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu .ascroll {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+  </style>
+  
+ 
+  
 
-
-
+            
 
           <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')"> Mostrar todo</button>
-            <button class="btn" onclick="filterSelection('ciencia')"> Ciencia</button>
-            <button class="btn" onclick="filterSelection('quimica')"> Quimica</button>
-            <button class="btn" onclick="filterSelection('biologia')"> Biología</button>
-            <button class="btn" onclick="filterSelection('vidaSaludable')"> Vida Saludable</button>
-            <button class="btn" onclick="filterSelection('Tecnología ')"> Tecnología  </button>
-            <button class="btn" onclick="filterSelection('Talleres')">Talleres </button>
-            <button class="btn" onclick="filterSelection('Ingeniería  ')">Ingeniería </button>
-            <button class="btn" onclick="filterSelection('Física')"> Física</button>
-            <button class="btn" onclick="filterSelection('Geografía')"> Geografía</button>
-            <button class="btn" onclick="filterSelection('Matemáticas')"> Matemáticas</button>
-            <button class="btn" onclick="filterSelection('valores')">Valores  </button>
-            <button class="btn" onclick="filterSelection('Creatividad')">Creatividad </button>
-            <button class="btn" onclick="filterSelection('EducaciónFísica')">Educación Física </button>
-            <button class="btn" onclick="filterSelection('Historia')">Historia</button>
-            <button class="btn" onclick="filterSelection('FormaciónCívicayÉtica')">Formación Cívica y Ética </button>
-            <button class="btn" onclick="filterSelection('Espaol')">Español </button>
-            <button class="btn" onclick="filterSelection('Inglés')">Inglés </button>
-            <button class="btn" onclick="filterSelection('Artes')">Artes </button>
-            <button class="btn" onclick="filterSelection('Orientación')">Orientación </button>              
-            <button class="btn" onclick="filterSelection('Directivos')">Directivos </button>
-            <button class="btn" onclick="filterSelection('eso')">ESO 0154</button>
-          <pre style="display:none" >
-            all
-          ciencia
-          quimica
-          biologia
-          vidSaludable
-          Tecnología
-          Talleres
-          Ingeniería
-          Física
-          Georafía
-          Matemáticas
-          valores
-          Creatividad
-          EducaciónFísica
-          Historia
-          FormaciónCívicayÉtica
-          Espaol
-          Inglés
-          Artes
-          Orientación
-          Directivos
-          eso
-
-          </pre>
-            
-            
+            <div class="scrollmenu">
+              <button class="btn active" onclick="filterSelection('all')"> Mostrar todo</button>
+              <button class="btn" onclick="filterSelection('ciencia')"> Ciencia</button>
+              <button class="btn" onclick="filterSelection('biologia')"> Biología</button>
+              <button class="btn" onclick="filterSelection('quimica')"> Quimica</button>
+              <button class="btn" onclick="filterSelection('vidaSaludable')"> Vida Saludable</button>
+              <button class="btn" onclick="filterSelection('Tecnología ')"> Tecnología  </button>
+              <button class="btn" onclick="filterSelection('Talleres')">Talleres </button>
+              <button class="btn" onclick="filterSelection('Ingeniería  ')">Ingeniería </button>
+              <button class="btn" onclick="filterSelection('Física')"> Física</button>
+              <button class="btn" onclick="filterSelection('Geografía')"> Geografía</button>
+              <button class="btn" onclick="filterSelection('Matemáticas')"> Matemáticas</button>
+              <button class="btn" onclick="filterSelection('valores')">Valores  </button>
+              <button class="btn" onclick="filterSelection('Creatividad')">Creatividad </button>
+              <button class="btn" onclick="filterSelection('EducaciónFísica')">Educación Física </button>
+              <button class="btn" onclick="filterSelection('Historia')">Historia</button>
+              <button class="btn" onclick="filterSelection('FormaciónCívicayÉtica')">Formación Cívica y Ética </button>
+              <button class="btn" onclick="filterSelection('Espaol')">Español </button>
+              <button class="btn" onclick="filterSelection('Inglés')">Inglés </button>
+              <button class="btn" onclick="filterSelection('Artes')">Artes </button>
+              <button class="btn" onclick="filterSelection('Orientación')">Orientación </button>              
+              <button class="btn" onclick="filterSelection('Directivos')">Directivos </button>
+              <button class="btn" onclick="filterSelection('eso')">ESO 0154</button>
+            </div>
           </div>
 
-          <div class="container">
-            <div class="filterDiv ciencia quimica biologia vidaSaludable">ciencia quimica biologia vidaSaludable</div>
-            <div class="filterDiv ciencia ">Ciencia</div>
-            <div class="filterDiv tecnologia  Talleres ">Tecnología asignaturaTecnologia Talleres</div>
-            <div class="filterDiv tecnologia">Tecnología </div>
-            <div class="filterDiv Ingeniería Física Geografía ">Ingeniería Física Geografía </div>
-            <div class="filterDiv Ingeniería">Ingeniería</div>
-            <div class="filterDiv Matemáticas">Matemáticas</div>
-            <div class="filterDiv valores  FormaciónCívicayÉtica  Espaol  Inglés ">Valores   Formación Cívica y Ética,  Español,  Inglés </div>
-            <div class="filterDiv valores">Valores </div>
-            <div class="filterDiv Creatividad EducaciónFísica  Historia  Artes Orientación">Creatividad EducaciónFísica  Historia  Artes Orientación</div>
-            <div class="filterDiv Creatividad">Creatividad</div>
-            <div class="filterDiv Directivos">Directivos</div>
+          <div class="container" sheetsu="https://sheetsu.com/apis/v1.0bu/0a97d2c109a3">           
+            
+         
+              <li class="main-feed-item  filterDiv all {{etiquetaciencia}} 	{{etiquetaquimica}}	{{etiquetabiologia}}	{{etiquetavidSaludable}}	{{etiquetaTecnología}}	{{etiquetaTalleres}}	{{etiquetaIngeniería}} {{etiquetaFísica}}	{{etiquetaGeorafía}}	{{etiquetaMatemáticas}}	{{etiquetavalores}}	{{etiquetaCreatividad}}	{{etiquetaEducaciónFísica}}	{{etiquetaHistoria}}	{{etiquetaFormaciónCívicayÉtica}}	{{etiquetaEspaol}}	{{etiquetaInglés}}	{{etiquetaArtes}}	{{etiquetaOrientación}}	{{etiquetaDirectivos}}	{{etiquetaeso}} " >
+                <article class="common-post">
+                  <header class="common-post-header u-flex">
+                    <img src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" class="user-image" width="40" height="40" alt="{{Eje}}">
+                    <div class="common-post-info">
+                      <div class="user-and-group u-flex">
+                        <a href="#User" target="_blank" style="display:none">{{Eje}}</a>
+                        {{Eje}}
+                      </div>
+                      <div class="time-and-privacy"> <time datetime="">{{Marca temporal}}  {{hora}}</time><span class="icon icon-privacy">🌎</span></div>
+                    </div>
+                    <button class="icon-button-2 u-margin-inline-start" aria-label="more options" style="display:none"><span class="icon-menu"></span>{{Dirección de correo electrónico}}</button>
+                  </header>
+                  <div class="common-post-content common-content">
+                    <p><b>{{Titulo}}</b></p>
+                    <p>{{Evidencia}}</p>         
+                    <div class="embed-content" >
+                      <img class="embed-content-image" src="https://drive.google.com/uc?export=view&id={{urlRecortada}}" alt="{{Descripción de la foto}}">     
+                      <img class="embed-content-image" src="{{URL de la imágen}}" alt="{{Descripción de la imágen}}">  
+                  
+        
+                      <div class="embed-content-text">
+                        <aside class="embed-content-info"><span class="text"><b>{{Eje}}</b></span> <span class="text">{{CVCiencia}}	{{CVTecnología}}	{{CVIngeniería}}	{{CVMatemáticas}}	{{CVValores}}	{{CVCreatividad}}	{{CVDirectivos}}</span></aside>
+                        <h2 class="embed-content-title" >{{ODSCiencia}}	{{ODSTecnología}}	{{ODSIngeniería}}	{{ODSMatemáticas}}	{{ODSValores}}	{{ODSCreatividad}}	{{ODSDirectivos}} </h2>
+                        <h2 class="embed-content-title" >{{Descripción de la foto}} {{Descripción de la imágen}} </h2>
+                        <p class="embed-content-paragraph" >{{AsignaturasCiencia}}	{{AsignaturasTecnología}}	{{AsignaturasIngeniería}}	{{AsignaturasMatemáticas}}	{{AsignaturasValores}}	{{AsignaturasCreatividad}}	{{AsignaturasDirectivos}}</p>
+                        
+                      </div>
+                    </div>           
+                  </div>
+                  
+        
+        
+        
+                  <div class="summary u-flex"  style="display:none">
+                    <div class="reactions"  style="display:none">❤️</div>
+                    <div class="reactions-total"  style="display:none">28</div>
+                    <div class="total-comments u-margin-inline-start"  style="display:none">
+                      <a  style="display:none">12 Shares</a>
+                    </div>
+                  </div>
+                  <section class="actions-buttons"  style="display:none" >
+                    <ul class="actions-buttons-list u-flex">
+                      <li class="actions-buttons-item"><button class="actions-buttons-button"><span class="icon">👍</span><span class="text">Like</span></button></li>
+                      <li class="actions-buttons-item"><button class="actions-buttons-button"><span class="icon">💬</span><span class="text">Comment</span></button></li>
+                      <li class="actions-buttons-item"><button class="actions-buttons-button"><span class="icon">💌</span><span class="text">Share</span></button></li>
+                    </ul>
+                  </section>
+                </article>
+              </li>
+           
           </div>
 
           <script>
@@ -364,36 +474,12 @@
           </script>
 
 
-
-    <section class="common-section" style="display:none">
-      <h2 class="section-title">Ejes y objetivos</h2>
-      <ul class="common-list">
-        <li class="common-list-item">
-          <a href="#" target="_blank" class="common-list-button">
-            <span class="icon">
-              <img src="https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-0/cp0/c40.0.50.50a/p50x50/96018871_10156797924731933_8952430699365793792_n.jpg?_nc_cat=105&_nc_sid=ca434c&_nc_ohc=IeqrI6DbUWkAX8FXQs7&_nc_ht=scontent.ftlv1-1.fna&oh=370e999a657281ecbaf5237802520a2a&oe=5F0102F9" alt="">
-            </span>
-            <span class="text">Ciencia</span>
-          </a>
-        </li>
-       
-              
-      </ul>
-      <button class="common-more" style="display:none" >
-        <span class="text">See More</span>
-        <span class="icon">🔻</span>
-      </button>
-    </section>
-  </aside>
-  <main class="main-feed">
-    
-
     <img src="https://s3.amazonaws.com/formaloo-en/s/2022/12/1/Ca9cQEq37k7I2vmr_cCWfSV24IMG_20221201_141818.jpg"  style="display:none">
-    <img src="https://drive.google.com/uc?export=view&id=1FsqFJWds-zZ5Qa34JKrZuZvo1OJeXvaj"  style="display:none">
+    <img src="https://drive.google.com/uc?export=view&id=1CSJA97ejNp1cmIxS7nz2dBqgZZ9LttJ6"  style="display:none">
     <iframe src="https://drive.google.com/file/d/1FsqFJWds-zZ5Qa34JKrZuZvo1OJeXvaj/preview" width="100%" height="100%" alt="img" title="img" loading="lazy" style="display:none"></iframe>
-     
 
-    <ul class="main-feed-list">
+
+    <ul class="main-feed-list container">
 
       <div style="display:none" >
         <div class="visually-hidden"></div>
@@ -419,50 +505,7 @@
 
      
 
-       <li class="main-feed-item" sheetsu="https://sheetsu.com/apis/v1.0bu/0a97d2c109a3">
-        <article class="common-post">
-          <header class="common-post-header u-flex">
-            <img src="https://xbrpw.github.io/eso/img/sor-juana-ines-de-la-cruz-verde.svg" class="user-image" width="40" height="40" alt="{{Eje}}">
-            <div class="common-post-info">
-              <div class="user-and-group u-flex">
-                <a href="#User" target="_blank" style="display:none">{{Eje}}</a>
-                {{Eje}}
-              </div>
-              <div class="time-and-privacy"> <time datetime="">{{Marca temporal}}</time><span class="icon icon-privacy">🌎</span></div>
-            </div>
-            <button class="icon-button-2 u-margin-inline-start" aria-label="more options" style="display:none"><span class="icon-menu"></span></button>
-          </header>
-          <div class="common-post-content common-content">
-            <p><b>{{Titulo}}</b></p>
-            <p>{{Evidencia}}</p>         
-            <div class="embed-content" >
-              <img class="embed-content-image" src="https://drive.google.com/uc?export=view&id={{urlRecortada}}" alt="{{Descripción de la foto}}">  
-              <img src="{{Imágen}}" alt="{{Descripción de la foto}}">             
-
-              <div class="embed-content-text">
-                <aside class="embed-content-info"><span class="text">{{Eje}}.</span> <span>{{CV}}.</span></aside>
-                <h2 class="embed-content-title" >{{ODS}} </h2>
-                <h2 class="embed-content-title" >{{Descripción de la foto}} {{Descripción de la imágen}} </h2>
-                <p class="embed-content-paragraph" >{{Asignaturas}}</p>
-              </div>
-            </div>           
-          </div>
-          <div class="summary u-flex"  style="display:none">
-            <div class="reactions"  style="display:none">❤️</div>
-            <div class="reactions-total"  style="display:none">28</div>
-            <div class="total-comments u-margin-inline-start"  style="display:none">
-              <a  style="display:none">12 Shares</a>
-            </div>
-          </div>
-          <section class="actions-buttons"  style="display:none" >
-            <ul class="actions-buttons-list u-flex">
-              <li class="actions-buttons-item"><button class="actions-buttons-button"><span class="icon">👍</span><span class="text">Like</span></button></li>
-              <li class="actions-buttons-item"><button class="actions-buttons-button"><span class="icon">💬</span><span class="text">Comment</span></button></li>
-              <li class="actions-buttons-item"><button class="actions-buttons-button"><span class="icon">💌</span><span class="text">Share</span></button></li>
-            </ul>
-          </section>
-        </article>
-      </li>
+   
 
       <li class="main-feed-item" style="display:none" SI >
         <article class="common-post">
@@ -781,6 +824,20 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
   <script src="https://load.sheetsu.com"></script>
   <script  src="./script.js"></script>
+
+  
+<div>
+  <script>
+    const elements = document.getElementsByTagName("p");
+    document.getElementById("publicaciones-totales").innerHTML = elements.length;
+    </script>
+  <p id="publicaciones-totales"></p> 
+</div> 
+
+ 
+
+
+
 
 </body>
 </html>

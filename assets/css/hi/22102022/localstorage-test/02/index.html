@@ -5,15 +5,15 @@
 
     
         <form action="#" >
-          <input type="text" name="save" id="text" class="form-control" placeholder="Materia">      
-          <button id="set" >Guardar</button>
+          <input type="text" name="save" id="text2" class="form-control" placeholder="Materia">      
+          <button id="set2" >Guardar</button>
         </form>
 
       
    
-        <div  id="val"><i>Nickname</i></div>
-        <button id="get" >Guardar</button>
-        <button id="remove">Cambiar</button>
+        <div  id="val2"><i>Nickname</i></div>
+        <button id="get2" >Guardar</button>
+        <button id="remove2">Cambiar</button>
      
 
  
@@ -23,25 +23,25 @@
   <script>
         
       /* set it */
-      $('#set').click(function() {
-        var test = $('#text').val();
-        localStorage.setItem("test", test);
+      $('#set2').click(function() {
+        var test = $('#text2').val();
+        localStorage.setItem("test2", test);
       });
 
       /* get it */
-      $('#get').click(function() {
-          $('#val').text(localStorage.getItem("test"));
+      $('#get2').click(function() {
+          $('#val2').text(localStorage.getItem("test2"));
       });
 
       /* remove it */
-      $('#remove').click(function() {
-          localStorage.removeItem("test");
-          $('#val').html("<i>nothing saved...</i>");
+      $('#remove2').click(function() {
+          localStorage.removeItem("test2");
+          $('#val2').html("<i>nothing saved...</i>");
       });
 
       /* on pageload, if key/value is found get it*/
-      if (localStorage.getItem("test") !== null) {
-        $('#val').text(localStorage.getItem("test"));
+      if (localStorage.getItem("test2") !== null) {
+        $('#val2').text(localStorage.getItem("test2"));
       }
 
 

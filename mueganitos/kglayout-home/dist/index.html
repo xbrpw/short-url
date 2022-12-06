@@ -2,75 +2,184 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - KGLayout-home</title>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <nav>
   <div class="main-nav">
-  <div id="logo"><a href="#">KINDE<span style="color:#47a5de">R</span>GARDE<span style="color:#f55c4a">N</span></a></div>
+  <div id="logo" onclick="openCity(event,'London')"><a href="#">Muega<span style="color:#47a5de">n</span>it<span style="color:#f55c4a">os</span></a></div>
         <label for="drop" class="toggle ico-menu">Menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="#">Inicio</a></li>
                 <li>
-                <label for="drop-1" class="toggle">About +</label>
-                <a href="#">About</a>
+                <label for="drop-1" class="toggle">Sobre Mueganitos</label>
+                <a href="#SobreMueganitos" onclick="openCity(event,'Tokyo')">Sobre Mueganitos</a>
                 <input type="checkbox" id="drop-1"/>
                 <ul>
-                    <li><a href="#">News</a></li>
+                    <li><a href="#Noticias">Noticias</a></li>
                     <li>    
-                    <label for="drop-2" class="toggle">Gallery +</label>
-                    <a href="#">Gallery</a>
+                    <label for="drop-2" class="toggle">Galleria</label>
+                    <a href="#Galleria">Galleria</a>
                     <input type="checkbox" id="drop-2"/>
                     <ul>
-                        <li><a href="https://codepen.io/poziomq/pen/ZEQqzyx" target="_blank">Rooms</a></li>
-                        <li><a href="https://codepen.io/poziomq/pen/ZEQqzyx" target="_blank">Place</a></li>
-                        <li><a href="https://codepen.io/poziomq/pen/ZEQqzyx" target="_blank">Other</a></li>
+                        <li><a href="#Mueganitos-1" target="_blank">Bolsitas de bautizo</a></li>
+                        <li><a href="#Mueganitos-2" target="_blank">Bolsas de primera comunión</a></li>
+                        <li><a href="#Mueganitos-3" target="_blank">Adornos navideños</a></li>
                     </ul>
                     </li>
                 </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Headquarters</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#EnviaUnRegalo" >Envía un regalo</a></li>
             </ul>
   </div>
 </nav>
 
-<header>
-  <div class="container">
-    <h1>Award winning toys for children</h1>
-    <p class="lead">Creative, timeless toys for children of all ages!</p>
-    <a class="btn fill yellow" href="#">Join now</a>
-  </div>
-</header>
 
-<main>
-<div class="trees">
-  <div class="card1">
-    <h3 class="card-title h1">WATCH THEM GROW</h3>
-		<p class="card-content">With our developmental wooden toys</p>
-    <a class="btn red" href="#">Read More</a>
+
+
+
+<div class="">
+  
+
+
+
+  <div id="id01eso" class="w3-modal"  style="z-index: 10;">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01eso').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Info</h2>
+      </header>
+      <div class="w3-container">
+       
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Mueganitos</p>
+      </footer>
+    </div>
   </div>
-  <div class="card2">
-    <h3 class="card-title">About the Playground</h3>
-    <a class="btn blue" href="#">Our Story</a>
+  <div id="id02eso" class="w3-modal" style="z-index: 10;">
+
+    <div class="w3-modal-content   w3-card-2-white "  style="border-radius: 15px 15px 15px 15px" style="box-shadow: 0 2px 5px 0 rgb(0, 0, 0), 0 2px 10px 0 rgba(22, 22, 22, 0.829)">
+             <header class="w3-container w3-black w3-padding w3-margin-top w3-card-2-white "  style="border-radius:  10px 10px 0px 0px"> 
+            
+               <h2 class="w3-text-white">Modal Header  <span onclick="document.getElementById('id01eso').style.display='none'" 
+       class=" w3-right w3-xlarge">&times;&nbsp;&nbsp;</span></h2>
+                
+             </header>
+             <div class="w3-container w3-text-black w3-round-xlarge">
+               <p>You have two options to close this modal:</p>
+               <p>Click on the "x" or click anywhere outside of the modal!</p>
+             </div>
+             <footer class="w3-container w3-black" style="border-radius:  0px 0px 10px 10px">
+               <p class="w3-text-white">Modal Footer</p>
+             </footer>
+           </div>
+         </div>
+   </div>
+  
+  <script>
+// Get the modal
+var modal = document.getElementById('id01eso');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</div>
+
+
+<div class="">
+
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-teal" >London</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Paris</button>
+    <button class="w3-bar-item w3-button tablink" >Tokyo</button>
   </div>
-  <a class="card3" href="#">
-    <h3 class="card-title">News</h3>
-    <p class="card-content">I'm a great place to add more details about your product such as sizing, material, care instructions and cleaning instructions.</p>
-  </a>
-  <a class="card4" href="#">
-    <h3 class="card-title">Gallery</h3>
-  </a>
-  <div class="card5">
-    <h3 class="card-title">20% Discount on</br>All Toy Trains</h3>
-    <a class="btn blue" href="#">Shop Now</a>
+
+  <iframe  src="https://www.xbr.pw/assets/css/hi/22102022/online/01/splash-page-generator/dist/index.html" name="mueganitos-view" height="710px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>                    
+  
+  
+
+  <div id="London" class="w3-container  city" >
+    <header>
+      <div class="container">
+        <h1>Un regalo</h1>
+        <p class="lead">Ideal para los niños de 2 a 3 años</p>
+        <a class="btn fill yellow" href="#">Boletin</a>
+      </div>
+    </header>
+    
+    <main>
+    <div class="trees">
+      <div class="card1">
+        <h3 class="card-title h1">Libros didacticos</h3>
+        <p class="card-content">Un regalo que perdurara</p>
+        <a class="btn red" href="#">Leer más</a>
+      </div>
+      <div class="card2">
+        <h3 class="card-title">El es Nesquick</h3>
+        <a class="btn blue" href="https://www.xbr.pw/mueganitos/oso-curioso/index.html" target="mueganitos-view">Juega</a>
+      </div>
+      <a class="card3" href="#Noticias">
+        <h3 class="card-title">Noticias</h3>
+        <p class="card-content">Sabias que...</p>
+      </a>
+      <a class="card4" href="#Galleria">
+        <h3 class="card-title">Galleria</h3>
+      </a>
+      <div class="card5">
+        <h3 class="card-title">20% de descuento</br>en libros</h3>
+        <a class="btn blue" href="#">¿A dondé te lo enviamos?</a>
+      </div>
+    </div>
+    </main>
+    
+  </div>
+
+  <div id="Paris" class="w3-container  city" style="display:none">
+    <iframe  src="https://www.xbr.pw/mueganitos/oso-curioso/index.html" name="mueganitos-view" height="710px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>                    
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <iframe  src="https://www.xbr.pw/mueganitos/oso-curioso/index.html" name="mueganitos-view" height="710px" width="100%" title="ESO-0514" style="border:none; border:0; overflow:hidden" allowfullscreen="" frameborder="0 " scrolling="true" loading="lazy"></iframe>                    
   </div>
 </div>
-</main>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-teal";
+}
+</script>
+
+
+
+
+
+
+
 
 <footer>
 <div class="container">
@@ -80,11 +189,11 @@
         <li><a href="" class="social-icon"><i class="fa fa-facebook"></i></a></li>
         <li><a href="" class="social-icon"><i class="fa fa-twitter"></i></a></li>
         <li><a href="" class="social-icon"><i class="fa fa-skype"></i></a></li>
-        <li><a href="" class="social-icon"><i class="fa fa-youtube"></i></a></li>
+        <li class="social-icon" onclick="document.getElementById('id02eso').style.display='block'"><i class="fa fa-youtube"></i></li>
     </ul>
   </li>
   <li class="copy">
-    <span>© Kindergarden 2020</span>
+    <button onclick="document.getElementById('id01eso').style.display='block'" class="w3-button w3-black">© Mueganitos 2022</button>
   </li>
 </div>
 </footer>

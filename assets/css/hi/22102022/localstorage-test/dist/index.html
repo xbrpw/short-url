@@ -25,6 +25,8 @@
         </div>
         <button id="set" class="btn btn-primary">save</button>
       </form>
+
+    
       <hr>
       <h3>read the value</h3>
       <div class="alert alert-info" id="val"><i>nothing saved...</i></div>
@@ -51,7 +53,42 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+          /* Detect browser can use local storage */
+      if (typeof(Storage) !== 'undefined') {
+        $('#yay').fadeIn('slow');
+      } else {
+        $('#ooh').fadeIn('slow');
+      }
+
+      /* set it */
+      $('#set').click(function() {
+        var test = $('#text').val();
+        localStorage.setItem("test", test);
+      });
+
+      /* get it */
+      $('#get').click(function() {
+          $('#val').text(localStorage.getItem("test"));
+      });
+
+      /* remove it */
+      $('#remove').click(function() {
+          localStorage.removeItem("test");
+          $('#val').html("<i>nothing saved...</i>");
+      });
+
+      /* on pageload, if key/value is found get it*/
+      if (localStorage.getItem("test") !== null) {
+        $('#val').text(localStorage.getItem("test"));
+      }
+
+
+
+
+
+  </script>
 
 </body>
 </html>

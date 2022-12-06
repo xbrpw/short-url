@@ -26,3 +26,8 @@ $('#remove').click(function() {
 if (localStorage.getItem("test") !== null) {
   $('#val').text(localStorage.getItem("test"));
 }
+
+
+
+
+

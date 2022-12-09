@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
     <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>    
 
@@ -390,8 +391,155 @@ a::hover {
         xbr.pw
     </h1>
 </div>
-           
-     
+
+
+
+
+
+
+<div>
+
+  <div class="w3-bar w3-black w3-hide" >
+    <button class="w3-bar-item w3-button tablink w3-red" onclick="opentab(event,'1')">1</button>
+    <button class="w3-bar-item w3-button tablink" onclick="opentab(event,'more')">2</button>
+    <button class="w3-bar-item w3-button tablink" onclick="opentab(event,'one')">3</button>
+  </div>
+  
+  <div id="1" class="w3-container  tab">
+   
+  </div>
+
+  <div id="more" class="w3-container tab" style="display:none">
+    <span id="visitorcounter" ></span>
+
+
+    <script>
+    (function(){
+    var site_visit = 0; // need to assign data from database
+    var post_visit = 0; // need to assign data from database
+    var values = [];
+    var now = new Date();
+    var isExpired = now.setHours(now.getHours() + 24); //one day from now
+    var post_id = 0; //need to assign post id for post detail page
+
+    if (typeof Storage !== "undefined") {
+    if (!localStorage.setTime) {
+        localStorage.setTime = isExpired;
+    }
+    
+    // localStorage.post_view_count;
+    if(localStorage.post_view_count){
+        values = localStorage.getItem('post_view_count').split(",");
+    }
+    
+    
+    // for website visit counter
+    if (!localStorage.visited) {
+        localStorage.setItem('siteVisitCount', site_visit + 1);
+        // set update to DOM element
+        document.getElementById("visitorcounter").innerHTML = 'Visita número '+ localStorage.siteVisitCount + ' en está página';
+        // need to send updated value to database 
+        localStorage.visited = true;
+    }else{
+        document.getElementById("visitorcounter").innerHTML = 'Ha visitado  ' + localStorage.siteVisitCount + ' en 24 horas';
+    }
+    
+    
+    console.log(localStorage.siteVisitCount)
+
+    
+    // for post counter
+    
+    if(values.length){
+    for(var i =0; i< values.length; i++){
+        if(values[i] != post_id){
+            values.push(post_id);
+            localStorage.setItem('post_view_count', values);
+            // send post count update to database.......
+            post_visit = post_visit + 1;
+        }
+        
+    }
+    }else{
+        values.push(post_id);
+        localStorage.setItem('post_view_count', values);
+        // send post count update to database here.......
+        post_visit = post_visit + 1;
+
+        
+    }
+
+
+    //check if expired
+
+    if (Number(localStorage.setTime) < new Date()) {
+        localStorage.removeItem('visited');
+    localStorage.removeItem('post_view_count');
+    }
+
+
+    
+
+    }
+
+
+    })()
+    </script>
+
+
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-cda2395a-41aa-4b6c-a49a-c79e4c1f5fbc"></div>
+    <div id="visits">...</div>
+    <script>
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/www.xbr.pw/visits?callback=cb"></script>
+    <script>$.getJSON("https://api.countapi.xyz/hit/www.xbr.pw/visits", function(response) {
+        $("#visits").text(response.value);
+    });</script>
+
+    <button onclick="clicked()">Eso</button> 
+    <script>
+    function clicked() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.countapi.xyz/hit/www.xbr.pw/eso");
+        xhr.responseType = "json";
+        xhr.onload = function() {
+            alert(`This button has been clicked ${this.response.value} times!`);
+        }
+        xhr.send();
+    }
+    </script>
+    <br><br><br>
+  </div>
+
+  <div id="one" class="w3-container  tab" style="display:none">
+ 
+  </div>
+</div>
+
+<script>
+function opentab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
+
+
+
+
 	
   <script src='js/swiper.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -404,8 +552,8 @@ a::hover {
             location.href = window
         }
         setTimeout("redireccionar()", 955500);
-    </script>
-    <script type="text/javascript">
+  </script>
+  <script type="text/javascript">
         var pagina = 'https://www.luisangelmaciel.one';
         var segundos = 955500;
 
@@ -413,7 +561,7 @@ a::hover {
             document.location.href = pagina;
         }
         setTimeout("redireccion()", segundos);
-    </script>
+  </script>
 
 </body>
 

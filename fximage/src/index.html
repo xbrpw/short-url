@@ -1,0 +1,1082 @@
+<header class="header">
+  <h1 class="title">Image Effects <span class="tag-line">are implemented by <a href="http://bennettfeely.com/image-effects">@bennettfeely</a></span></h1>        
+  <div class="icon-menu">
+    <button class="label download-btn fa fa-download js-download" title="Download you pretty photo"></button>
+    <button class="label reset-btn   fa fa-trash js-reset" title="Reset"></button>
+    <input class="input" type="file" id="imageInput" />
+    <label class="fa fa-upload label image-icon" for="imageInput" title="Upload your photo"></label>
+    <a class="fa fa-github label image-icon" href="https://github.com/seyedi/image-effects"></a>
+  </div>
+</header>
+<main class="main">
+  <div class="effects">
+    <figure class="effects__item selected" data-name="none-effect">
+      <div class="effects__img none-effect"></div>
+      <figcaption class="effects__name">none</figcaption>
+    </figure>        
+    <figure class="effects__item" data-name="pencil-effect">
+      <div class="effects__img pencil-effect"></div>
+      <figcaption class="effects__name">pencil</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="watercolor-effect">
+      <div class="effects__img watercolor-effect"></div>
+      <figcaption class="effects__name">watercolor</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="emboss-effect">
+      <div class="effects__img emboss-effect"></div>
+      <figcaption class="effects__name">emboss</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="colored-pencil-effect">
+      <div class="effects__img colored-pencil-effect"></div>
+      <figcaption class="effects__name">colored pencil</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="chalkboard-effect">
+      <div class="effects__img chalkboard-effect"></div>
+      <figcaption class="effects__name">chalkboard</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="colored-chalkboard-effect">
+      <div class="effects__img colored-chalkboard-effect"></div>
+      <figcaption class="effects__name">colored chalkboard</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="airbrush-effect">
+      <div class="effects__img airbrush-effect"></div>
+      <figcaption class="effects__name">airbrush</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="hallucination-effect">
+      <div class="effects__img hallucination-effect"></div>
+      <figcaption class="effects__name">hallucination</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="flannel-effect">
+      <div class="effects__img flannel-effect"></div>
+      <figcaption class="effects__name">flannel</figcaption>
+    </figure>    
+    <figure class="effects__item" data-name="low-ink-x-effect">
+      <div class="effects__img low-ink-x-effect"></div>
+      <figcaption class="effects__name">Low Ink (horizontal)</figcaption>
+    </figure>    
+    <figure class="effects__item" data-name="low-ink-y-effect">
+      <div class="effects__img low-ink-y-effect"></div>
+      <figcaption class="effects__name">Low Ink (vertical)</figcaption>
+    </figure>    
+    <figure class="effects__item" data-name="collage-effect">
+      <div class="effects__img collage-effect"></div>
+      <figcaption class="effects__name">collage</figcaption>
+    </figure>    
+    <figure class="effects__item" data-name="mosaic-effect">
+      <div class="effects__img mosaic-effect"></div>
+      <figcaption class="effects__name">mosaic</figcaption>
+    </figure>    
+    <figure class="effects__item" data-name="photo-border-effect">
+      <div class="effects__img photo-border-effect"></div>
+      <figcaption class="effects__name">photo border</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="infrared-effect">
+      <div class="effects__img infrared-effect"></div>
+      <figcaption class="effects__name">infrared</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="night-vision-effect">
+      <div class="effects__img night-vision-effect"></div>
+      <figcaption class="effects__name">night vision</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="warhol-effect">
+      <div class="effects__img warhol-effect"></div>
+      <figcaption class="effects__name">warhol</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="selective-color-effect">
+      <div class="effects__img selective-color-effect"></div>
+      <figcaption class="effects__name">selective color</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="mirror-x-effect">
+      <div class="effects__img mirror-x-effect"></div>
+      <figcaption class="effects__name">Mirror (horizontal)</figcaption>
+    </figure>
+    <figure class="effects__item" data-name="mirror-y-effect">
+      <div class="effects__img mirror-y-effect"></div>
+      <figcaption class="effects__name">Mirror (vertical)</figcaption>
+    </figure>
+  </div>
+  <figure class="preview">
+    <div class="photo none-effect">
+      <img src="http://tools.css-tricks.ir/image-effects/img/bg.jpg" class="placeholder" alt="">
+    </div>          
+    <figcaption class="code">
+
+      <menu class="code__menu">
+        <button class="code__btn js-css is-selected">CSS</button>
+        <button class="code__btn js-scss">SCSS</button>
+        <button class="code__btn js-copy" data-clipboard-target=""><i class="fa fa-files-o" aria-hidden="true"></i> <span class="js-copy-text">Copy</span></button>
+      </menu>
+
+      <div class="effect-code-wrapper">
+
+        <div class="effect-code" id="none">
+        </div>
+
+
+
+        <div class="effect-code" id="pencil">
+          <pre class="css" id="pencil_css"><code class="language-css">.pencil-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: invert(1)) and (background-blend-mode: difference) {
+  .pencil-effect {
+    background-image: url(photo.jpg), url(photo.jpg);
+    background-blend-mode: difference;
+    background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+    filter: brightness(2) invert(1) grayscale(1);
+    box-shadow: inset 0 0 0 1px black;
+  }
+}
+</code></pre>
+
+          <pre class="scss" id="pencil_scss"><code class="language-scss">.pencil-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: invert(1)) and (background-blend-mode: difference) {
+    background-image: $url, $url;
+    background-blend-mode: difference;
+    background-position:
+      calc(50% - 1px) calc(50% - 1px),
+      calc(50% + 1px) calc(50% + 1px);
+    filter: brightness(2) invert(1) grayscale(1);
+    box-shadow: inset 0 0 0 1px black;
+  }
+}</code></pre>  
+        </div>
+
+        <div class="effect-code" id="watercolor">
+          <pre class="css" id="watercolor_css"><code class="language-css">.watercolor-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: blur(2px)) and (mix-blend-mode: multiply) {
+  .watercolor-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  .watercolor-effect:before, .watercolor-effect:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+  }
+  .watercolor-effect:before {
+    background-image: url(photo.jpg), url(photo.jpg);
+    background-blend-mode: difference;
+    background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+    filter: brightness(2) invert(1) grayscale(1);
+    box-shadow: inset 0 0 0 1px black;
+  }
+  .watercolor-effect:after {
+    background-image: url(photo.jpg);
+    background-position: center;
+    mix-blend-mode: multiply;
+    filter: brightness(1.3) blur(2px) contrast(2);
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="watercolor_scss"><code class="language-scss">.watercolor-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: blur(2px)) and (mix-blend-mode: multiply) {
+    position: relative;
+    overflow: hidden;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+    }
+
+    &:before {
+      background-image: $url, $url;
+      background-blend-mode: difference;
+      background-position:
+        calc(50% - 1px) calc(50% - 1px),
+        calc(50% + 1px) calc(50% + 1px);
+      filter: brightness(2) invert(1) grayscale(1);
+      box-shadow: inset 0 0 0 1px black;
+    }
+
+    &:after {
+      background-image: $url;
+      background-position: center;
+      mix-blend-mode: multiply;
+      filter: brightness(1.3) blur(2px) contrast(2);
+    }
+  }
+}</code></pre>
+        </div>
+
+
+        <div class="effect-code" id="emboss">
+          <pre class="css" id="emboss_css"><code class="language-css">.emboss-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: invert(1)) and (background-blend-mode: difference, screen) {
+  .emboss-effect {
+    background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg);
+    background-blend-mode: difference, screen;
+    background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+    filter: brightness(2) invert(1) grayscale(1);
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="emboss_scss"><code class="language-scss">.emboss-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: invert(1)) and (background-blend-mode: difference, screen) {
+    background-image: $url, $url, $url;
+    background-blend-mode: difference, screen;
+    background-position:
+      calc(50% - 1px) calc(50% - 1px),
+      calc(50% + 1px) calc(50% + 1px),
+      center;
+    filter: brightness(2) invert(1) grayscale(1);
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="colored-pencil">
+          <pre class="css" id="colored-pencil_css"><code class="language-css">.colored-pencil-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: invert(1)) and (mix-blend-mode: color) {
+  .colored-pencil-effect {
+    position: relative;
+  }
+  .colored-pencil-effect:before, .colored-pencil-effect:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1px black;
+  }
+  .colored-pencil-effect:before {
+    background-image: url(photo.jpg), url(photo.jpg);
+    background-blend-mode: difference;
+    background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+    filter: brightness(2) invert(1) grayscale(1);
+  }
+  .colored-pencil-effect:after {
+    background: inherit;
+    mix-blend-mode: color;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="colored-pencil_scss"><code class="language-scss">.colored-pencil-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: invert(1)) and (mix-blend-mode: color) {
+    position: relative;
+
+    &:before,
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      box-shadow: inset 0 0 0 1px black;
+    }
+
+    &:before {
+      background-image: $url, $url;
+      background-blend-mode: difference;
+      background-position:
+        calc(50% - 1px) calc(50% - 1px),
+        calc(50% + 1px) calc(50% + 1px);
+      filter: brightness(2) invert(1) grayscale(1);
+    }
+
+    &:after {
+      background: inherit;
+      mix-blend-mode: color;
+    }
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="chalkboard">
+          <pre class="css" id="chalkboard_css"><code class="language-css">.chalkboard-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: grayscale(1)) and (background-blend-mode: difference) {
+  .chalkboard-effect {
+    background-image: url(photo.jpg), url(photo.jpg);
+    background-blend-mode: difference;
+    background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px);
+    filter: brightness(1.5) grayscale(1);
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="chalkboard_scss"><code class="language-scss">.chalkboard-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: grayscale(1)) and (background-blend-mode: difference) {
+    background-image: $url, $url;
+    background-blend-mode: difference;
+    background-position:
+      calc(50% - 1px) calc(50% - 1px),
+      calc(50% + 1px) calc(50% + 1px);
+    filter: brightness(1.5) grayscale(1);
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="colored-chalkboard">
+          <pre class="css" id="colored-chalkboard_css"><code class="language-css">.colored-chalkboard-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: brightness(2)) and (background-blend-mode: color, difference) {
+  .colored-chalkboard-effect {
+    background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg);
+    background-size: cover;
+    background-position: calc(50% - 1px) calc(50% - 1px), calc(50% + 1px) calc(50% + 1px), center;
+    background-blend-mode: color, difference;
+    filter: brightness(2);
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="colored-chalkboard_scss"><code class="language-scss">.colored-chalkboard-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: brightness(2)) and (background-blend-mode: color, difference) {
+    background-image: $url, $url, $url;
+    background-size: cover;
+    background-position:
+      calc(50% - 1px) calc(50% - 1px),
+      calc(50% + 1px) calc(50% + 1px),
+      center;
+    background-blend-mode: color, difference;
+    filter: brightness(2);
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="airbrush">
+          <pre class="css" id="airbrush_css"><code class="language-css">.airbrush-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: blur(5px) contrast(5)) and (mix-blend-mode: multiply) {
+  .airbrush-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  .airbrush-effect:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: brightness(1.5) saturate(100) blur(5px) contrast(5);
+    mix-blend-mode: multiply;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="airbrush_scss"><code class="language-scss">.airbrush-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: blur(5px) contrast(5)) and (mix-blend-mode: multiply) {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      filter: brightness(1.5) saturate(100) blur(5px) contrast(5);
+      mix-blend-mode: multiply;
+    }
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="hallucination">
+          <pre class="css" id="hallucination_css"><code class="language-css">.hallucination-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (mix-blend-mode: multiply) {
+  .hallucination-effect {
+    position: relative;
+    overflow: hidden;
+    background-color: magenta;
+    background-blend-mode: screen;
+  }
+  .hallucination-effect:before, .hallucination-effect:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    mix-blend-mode: multiply;
+    transform: scale(1.05);
+  }
+  .hallucination-effect:before {
+    background-color: yellow;
+    background-blend-mode: screen;
+    transform-origin: top left;
+  }
+  .hallucination-effect:after {
+    background-color: cyan;
+    background-blend-mode: screen;
+    transform-origin: bottom right;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="hallucination_scss"><code class="language-scss">.hallucination-effect {
+  $url : url(photo.jpg);
+  $offset : 5px;
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (mix-blend-mode: multiply) {
+    position: relative;
+    overflow: hidden;
+    background-color: magenta;
+    background-blend-mode: screen;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      mix-blend-mode: multiply;
+      transform: scale(1.05);
+    }
+
+    &:before {
+      background-color: yellow;
+      background-blend-mode: screen;
+      transform-origin: top left;
+    }
+
+    &:after {
+      background-color: cyan;
+      background-blend-mode: screen;
+      transform-origin: bottom right;
+    }
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="flannel">
+          <pre class="css" id="flannel_css"><code class="language-css">.flannel-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (background-blend-mode: overlay) {
+  .flannel-effect {
+    background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg);
+    background-position: center;
+    background-size: 100%, 100000% 100%, 100% 100000%;
+    background-blend-mode: overlay;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="flannel_scss"><code class="language-scss">.flannel-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (background-blend-mode: overlay) {
+    background-image: $url, $url, $url;
+    background-position: center;
+    background-size: 100%, 100000% 100%, 100% 100000%;
+    background-blend-mode: overlay;
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="low-ink-x">
+          <pre class="css" id="low-ink-x_css"><code class="language-css">.low-ink-x-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (background-blend-mode: screen, overlay) {
+  .low-ink-x-effect {
+    background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg);
+    background-size: 100% 100%, 10000% 100%;
+    background-blend-mode: screen, overlay;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="low-ink-x_scss"><code class="language-scss">.low-ink-x-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (background-blend-mode: screen, overlay) {
+    background-image:  $url, $url, $url;
+    background-size: 100% 100%, 10000% 100%;
+    background-blend-mode: screen, overlay;
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="low-ink-y">
+          <pre class="css" id="low-ink-y_css"><code class="language-css">.low-ink-y-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (background-blend-mode: screen, overlay) {
+  .low-ink-y-effect {
+    background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg);
+    background-size: 100% 100%, 100% 1000%;
+    background-blend-mode: screen, overlay;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="low-ink-y_scss"><code class="language-scss">.low-ink-y-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (background-blend-mode: screen, overlay) {
+    background-image:  $url, $url, $url;
+    background-size: 100% 100%, 100% 1000%;
+    background-blend-mode: screen, overlay;
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="collage">
+          <pre class="css" id="collage_css"><code class="language-css">.collage-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (background-blend-mode: overlay) {
+  .collage-effect {
+    background-image: url(photo.jpg), url(photo.jpg), url(photo.jpg), url(photo.jpg), url(photo.jpg), url(photo.jpg);
+    background-size: 200%, 80%, 60%, 50%, 40%, 100%;
+    background-position: 50%, 80%, 30%, 0;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="collage_scss"><code class="language-scss">.collage-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (background-blend-mode: overlay) {
+    background-image: $url, $url, $url, $url, $url, $url;
+    background-size: 200%, 80%, 60%, 50%, 40%, 100%;
+    background-position: 50%, 80%, 30%, 0;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="mosaic">
+          <pre class="css" id="mosaic_css"><code class="language-css">.mosaic-effect {
+  background-image: url(photo.jpg), url(photo.jpg);
+  background-size: cover, 5% 5%;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="mosaic_scss"><code class="language-scss">.mosaic-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url, $url;
+  background-size: cover, 5% 5%;
+  background-position: center;
+  background-blend-mode: overlay;
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="photo-border">
+          <pre class="css" id="photo-border_css"><code class="language-css">.photo-border-effect {
+  background-image: url(photo.jpg), url(photo.jpg);
+  background-position: center;
+  background-size: 60%, 20%;
+  background-repeat: no-repeat, repeat;
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="photo-border_scss"><code class="language-scss">.photo-border-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url, $url;
+  background-position: center;
+  background-size: 60%, 20%;
+  background-repeat: no-repeat, repeat;
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="infrared">
+          <pre class="css" id="infrared_css"><code class="language-css">.infrared-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: hue-rotate(180deg) saturate(2);
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="infrared_scss"><code class="language-scss">.infrared-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+  filter: hue-rotate(180deg) saturate(2);
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="night-vision">
+          <pre class="css" id="night-vision_css"><code class="language-css">.night-vision-effect {
+  background-image: url(photo.jpg), radial-gradient(#0F0, #000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="night-vision_scss"><code class="language-scss">.night-vision-effect {
+  $url : url(photo.jpg);
+  $line-width: 5px;
+
+  background-image:
+    $url,
+    radial-gradient(
+      #0F0,
+      #000
+    ),
+    repeating-linear-gradient(
+      transparent 0,
+      rgba(0,0,0,0.1) $line-width/2,
+      transparent $line-width
+    );
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="warhol">
+          <pre class="css" id="warhol_css"><code class="language-css">.warhol-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (background-blend-mode: color) {
+  .warhol-effect {
+    background-image: linear-gradient(#14EBFF 0, #14EBFF 50%, #FFFF70 50%, #FFFF70 100%), linear-gradient(#FF85DA 0, #FF85DA 50%, #AAA 50%, #AAA 100%), url(photo.jpg);
+    background-size: 50% 100%, 50% 100%, 50% 50%;
+    background-position: top left, top right;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-blend-mode: color;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="warhol_scss"><code class="language-scss">.warhol-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (background-blend-mode: color) {
+    background-image:
+      linear-gradient(
+        #14EBFF 0,
+        #14EBFF 50%,
+        #FFFF70 50%,
+        #FFFF70 100%
+      ),
+      linear-gradient(
+        #FF85DA 0,
+        #FF85DA 50%,
+        #AAA 50%,
+        #AAA 100%
+      ),
+      $url;
+    background-size: 50% 100%, 50% 100%, 50% 50%;
+    background-position: top left, top right;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-blend-mode: color;
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="selective-color">
+          <pre class="css" id="selective-color_css"><code class="language-css">.selective-color-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (filter: brightness(3)) and (mix-blend-mode: color) {
+  .selective-color-effect {
+    position: relative;
+  }
+  .selective-color-effect:before, .selective-color-effect:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-color: red;
+    background-blend-mode: screen;
+    mix-blend-mode: color;
+    filter: brightness(3);
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="selective-color_scss"><code class="language-scss">.selective-color-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (filter: brightness(3)) and (mix-blend-mode: color) {
+    position: relative;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      background-color: red;
+      background-blend-mode: screen;
+      mix-blend-mode: color;
+      filter: brightness(3);
+    }
+  }
+}</code></pre>  
+        </div>
+
+
+        <div class="effect-code" id="mirror-x">
+          <pre class="css" id="mirror-x_css"><code class="language-css">.mirror-x-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (transform: scaleX(-1)) {
+  .mirror-x-effect {
+    position: relative;
+  }
+  .mirror-x-effect:before, .mirror-x-effect:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: inherit;
+  }
+  .mirror-x-effect:before {
+    left: 0;
+    right: 50%;
+    transform: scaleX(-1);
+  }
+  .mirror-x-effect:after {
+    left: 50%;
+    right: 0;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="mirror-x_scss"><code class="language-scss">.mirror-x-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (transform: scaleX(-1)) {
+    position: relative;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: inherit;
+    }
+
+    &:before {
+      left: 0;
+      right: 50%;
+      transform: scaleX(-1);
+    }
+
+    &:after {
+      left: 50%;
+      right: 0;
+    }
+  }
+}</code></pre>
+
+        </div>
+
+
+        <div class="effect-code" id="mirror-y">
+          <pre class="css" id="mirror-y_css"><code class="language-css">.mirror-y-effect {
+  background-image: url(photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports (transform: scaleY(-1)) {
+  .mirror-y-effect {
+    position: relative;
+  }
+  .mirror-y-effect:before, .mirror-y-effect:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: inherit;
+  }
+  .mirror-y-effect:before {
+    top: 0;
+    bottom: 50%;
+    transform: scaleY(-1);
+  }
+  .mirror-y-effect:after {
+    top: 50%;
+    bottom: 0;
+  }
+}
+</code></pre>
+
+
+
+
+          <pre class="scss" id="mirror-y_scss"><code class="language-scss">.mirror-y-effect {
+  $url : url(photo.jpg);
+
+  background-image: $url;
+  background-size: cover;
+  background-position: center;
+
+  @supports (transform: scaleY(-1)) {
+    position: relative;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      background: inherit;
+    }
+
+    &:before {
+      top: 0;
+      bottom: 50%;
+      transform: scaleY(-1);
+    }
+
+    &:after {
+      top: 50%;
+      bottom: 0;
+    }
+  }
+}</code></pre>  
+        </div>
+      </div>
+
+
+    </figcaption>
+  </figure>
+</main>    

@@ -1,0 +1,75 @@
+@import "https://unpkg.com/transition-style/transition.hackpack.min.css";
+
+@keyframes swoopy {
+  from {
+    clip-path: var(--circle-top-right-out);
+  }
+  to {
+    clip-path: var(--circle-bottom-right-in);
+  }
+}
+
+[transition-style="in:custom:swoopy"] {
+  --transition__duration: 10s;
+  animation-name: swoopy;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div {
+  width: 100%;
+  background: hsl(200 50% 80%);
+  padding: 2ch;
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  font-size: 15vmin;
+  font-weight: lighter;
+  margin: 0;
+}
+
+a {
+  color: deeppink;
+}
+
+html {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  text-align: end;
+  font-family: system-ui, sans-serif;
+}

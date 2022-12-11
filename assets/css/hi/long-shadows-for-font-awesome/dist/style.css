@@ -1,0 +1,40 @@
+/* -- Variables -- */
+/* icon color       */
+/* shadow color     */
+/* background color */
+/* bg border radius */
+/* box length       */
+@import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+#icon-box span {
+  display: block;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  color: #fff;
+  text-shadow: #12664b 1px 1px, #12664b 2px 2px, #12664b 3px 3px, #12664b 4px 4px, #12664b 5px 5px, #12664b 6px 6px, #12664b 7px 7px, #12664b 8px 8px, #12664b 9px 9px, #12664b 10px 10px, #12664b 11px 11px, #12664b 12px 12px, #12664b 13px 13px, #12664b 14px 14px, #12664b 15px 15px, #12664b 16px 16px, #12664b 17px 17px, #12664b 18px 18px, #12664b 19px 19px, #12664b 20px 20px, #12664b 21px 21px, #12664b 22px 22px, #12664b 23px 23px, #12664b 24px 24px, #12664b 25px 25px, #12664b 26px 26px, #12664b 27px 27px, #12664b 28px 28px, #12664b 29px 29px, #12664b 30px 30px, #12664b 31px 31px, #12664b 32px 32px, #12664b 33px 33px, #12664b 34px 34px, #12664b 35px 35px, #12664b 36px 36px, #12664b 37px 37px, #12664b 38px 38px, #12664b 39px 39px, #12664b 40px 40px, #12664b 41px 41px, #12664b 42px 42px, #12664b 43px 43px, #12664b 44px 44px, #12664b 45px 45px, #12664b 46px 46px, #12664b 47px 47px, #12664b 48px 48px, #12664b 49px 49px, #12664b 50px 50px, #12664b 51px 51px, #12664b 52px 52px, #12664b 53px 53px, #12664b 54px 54px, #12664b 55px 55px, #12664b 56px 56px, #12664b 57px 57px, #12664b 58px 58px, #12664b 59px 59px, #12664b 60px 60px, #12664b 61px 61px, #12664b 62px 62px, #12664b 63px 63px, #12664b 64px 64px, #12664b 65px 65px, #12664b 66px 66px, #12664b 67px 67px, #12664b 68px 68px, #12664b 69px 69px, #12664b 70px 70px, #12664b 71px 71px, #12664b 72px 72px, #12664b 73px 73px, #12664b 74px 74px, #12664b 75px 75px, #12664b 76px 76px, #12664b 77px 77px, #12664b 78px 78px, #12664b 79px 79px, #12664b 80px 80px, #12664b 81px 81px, #12664b 82px 82px, #12664b 83px 83px, #12664b 84px 84px, #12664b 85px 85px, #12664b 86px 86px, #12664b 87px 87px, #12664b 88px 88px, #12664b 89px 89px, #12664b 90px 90px, #12664b 91px 91px, #12664b 92px 92px, #12664b 93px 93px, #12664b 94px 94px, #12664b 95px 95px, #12664b 96px 96px, #12664b 97px 97px, #12664b 98px 98px, #12664b 99px 99px, #12664b 100px 100px, #12664b 101px 101px, #12664b 102px 102px, #12664b 103px 103px, #12664b 104px 104px, #12664b 105px 105px, #12664b 106px 106px, #12664b 107px 107px, #12664b 108px 108px, #12664b 109px 109px, #12664b 110px 110px, #12664b 111px 111px, #12664b 112px 112px, #12664b 113px 113px, #12664b 114px 114px, #12664b 115px 115px, #12664b 116px 116px, #12664b 117px 117px, #12664b 118px 118px, #12664b 119px 119px, #12664b 120px 120px, #12664b 121px 121px, #12664b 122px 122px, #12664b 123px 123px, #12664b 124px 124px, #12664b 125px 125px, #12664b 126px 126px, #12664b 127px 127px, #12664b 128px 128px, #12664b 129px 129px, #12664b 130px 130px, #12664b 131px 131px, #12664b 132px 132px, #12664b 133px 133px, #12664b 134px 134px, #12664b 135px 135px, #12664b 136px 136px, #12664b 137px 137px, #12664b 138px 138px, #12664b 139px 139px, #12664b 140px 140px, #12664b 141px 141px, #12664b 142px 142px, #12664b 143px 143px, #12664b 144px 144px, #12664b 145px 145px, #12664b 146px 146px, #12664b 147px 147px, #12664b 148px 148px, #12664b 149px 149px, #12664b 150px 150px;
+}
+
+#icon-box {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  font-size: 75px;
+  line-height: 150px;
+  background-color: #1b926c;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* Help Styles */
+#container {
+  text-align: center;
+}
+
+#container div {
+  display: inline-block;
+  margin: 0.5em;
+}

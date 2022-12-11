@@ -1,0 +1,91 @@
+/* The demo styles: */
+html, body {
+  font: 100%/1.3 system-ui;
+  background: #e5e0ef;
+  margin: 0;
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+main {
+  padding: 3em 1.5em;
+}
+h1 {
+  font-size: 200%;
+  font-weight: normal;
+  color: rebeccapurple;
+}
+
+/* The menu styles: */
+nav {
+  display: flex;
+  background: #fff;
+  padding: 5px;
+}
+nav a {
+  flex: 0;
+  padding: 10px 20px;
+  color: rebeccapurple;
+  text-decoration: none;
+  border-radius: 5px;
+}
+nav a:focus {
+  background: #eee;
+  outline: none;
+}
+nav a:focus-visible {
+  box-shadow: inset 0 0 0 2px rebeccapurple;
+}
+nav > .menu {
+  position: relative;
+  flex: 0;
+  display: flex;
+  white-space: nowrap;
+  overflow: visible;
+}
+nav > .menu > nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  min-width: 15em;
+  max-width: 20em;
+  margin: 10px 0 0 -10px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  border-radius: 7px;
+  transform: translateY(-10px);
+  z-index: 100;
+  opacity: 0;
+  transition: all 300ms ease;
+  pointer-events: none;
+}
+nav > .menu > a:focus,
+nav > .menu > nav:focus-within {
+  opacity: 1;
+  transform: none;
+  pointer-events: all;
+}
+nav > .menu > a:after {
+  content: '▶';
+  color: #aaa;
+  font-size: 80%;
+  display: inline-block;
+  margin-left: .5em;
+  transition: transform 300ms ease;
+}
+nav > .menu:focus-within > a:after {
+  transform: rotate(90deg);
+}
+.menu nav {
+  flex-direction: column;
+}
+a .desc {
+  display: block;
+  padding: 5px 0 0;
+  color: #777;
+  font-size: 85%;
+}

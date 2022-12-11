@@ -346,7 +346,119 @@
     background-color: #777;
   }
   </style>
-  
+  <style>
+    /* layout */
+.mural-card {
+  display: grid;
+  align-items: flex-end
+}
+.mural-card > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+.mural-card picture, .mural-card img {
+    width: 100%;
+    height: 100%;
+  }
+.mural-card > figcaption {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-end;
+    grid-gap: 1rem;
+    gap: 1rem
+  }
+.mural-card > figcaption > h3 {
+      display: grid;
+      grid-gap: .25rem;
+      gap: .25rem;
+    }
+.mural-card > figcaption > p {
+      grid-column: 2;
+      justify-self: flex-end;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+
+      display: inline-grid;
+      grid-gap: .5rem;
+      gap: .5rem;
+      grid-auto-flow: column;
+      align-items: flex-end;
+    }
+
+/* paint */
+.mural-card {
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative
+}
+.mural-card > figcaption {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+    color: white;
+    background: linear-gradient(to top, 
+      hsla(0, 0%, 0%, 0.9), 
+      75%, 
+      hsla(0, 0%, 0%, 0)
+    );
+    background: linear-gradient(to top, 
+      hsla(0, 0%, 0%, 0.9), 
+      var(--slider-hint, 75%), 
+      hsla(0, 0%, 0%, 0)
+    )
+  }
+@media (max-width: 479px) {
+.mural-card > figcaption {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem
+  }
+    }
+.mural-card > figcaption > h3 > small {
+      font-weight: normal;
+    }
+.mural-card > figcaption > h3, .mural-card > figcaption > p {
+      margin: 0;
+    }
+.mural-card > figcaption > p {
+      font-size: 1.4rem;
+      line-height: 1.1
+    }
+.mural-card > figcaption > p > svg {
+        fill: white;
+        height: 2rem;
+      }
+.mural-card.fixed > figcaption {
+    background: linear-gradient(to top, 
+      hsla(0, 0%, 0%, 0.9), 
+      hsla(0, 0%, 0%, 0)
+    );
+  }
+
+.demo {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: hsl(0, 0%, 97%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: .5rem 1rem;
+  border-radius: 0 2rem 2rem 0;
+  display: flex;
+  grid-gap: .25rem;
+  gap: .25rem;
+  flex-direction: column;
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.4);
+}
+
+
+  </style>
  
   
 
@@ -657,8 +769,33 @@
                     <p><b>{{Titulo}}</b></p>
                     <p>{{Evidencia}}</p>         
                     <div class="embed-content" >
-                      <img class="embed-content-image "  src="https://drive.google.com/uc?export=view&id={{urlRecortada}}" alt="{{Descripción de la foto}}">     
+                      <img class="embed-content-image w3-hide "  src="https://drive.google.com/uc?export=view&id={{urlRecortada}}" alt="{{Descripción de la foto}}">     
                       <img class="embed-content-image "  src="{{URL de la imágen}}" alt="{{Descripción de la imágen}}">  
+                       <figure class="mural-card">
+                        <picture>
+                          <img src="https://drive.google.com/uc?export=view&id={{urlRecortada}}" alt="{{Descripción de la foto}}"  loading="lazy" intrinsicsize>
+                        </picture>
+                        <figcaption>
+                          <h3 style="color:transparent">
+                            {{Descripción de la foto}}
+                          </h3>
+                        </figcaption>
+                        
+                       
+                      </figure>
+                      <script>
+                          document.
+                            querySelectorAll('input').
+                            forEach(input => {
+                              input.addEventListener('input', (e) =>
+                              document.body.style.setProperty(
+                              '--' + e.target.id,
+                              e.target.value + '%'));
+
+                            });
+                      </script>
+
+
                       <div style=" background-color: transparent;overflow: auto; white-space: nowrap; margin-left: 2.5rem; " class="w3-hide">
                         <img style="display: inline-block; color: transparent; " class="hover-shadow cursor " src="https://drive.google.com/uc?export=view&id={{urlRecortada}}"  loading="lazy " class="lazy loading " alt=" " onclick="openModal();currentSlide(1) ">
                         <img style=" display: inline-block; color: transparent; " class="hover-shadow cursor " src="https://drive.google.com/uc?export=view&id={{urlRecortada}}"  loading="lazy " class="lazy loading " alt="
@@ -774,6 +911,7 @@
                       
                       
                       <img id="myImgLAMP" class="embed-content-image "  src="https://drive.google.com/uc?export=view&id={{urlRecortada}}" alt="{{Descripción de la foto}}" style="width:100%;max-width:300px">                            
+                     
                       
                       <!-- The Modal -->
                       <div id="myModalLAMP" class="modal-Photo">

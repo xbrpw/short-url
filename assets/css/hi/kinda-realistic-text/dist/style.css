@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+
+.realistic {
+  color: #222;
+  font-family: Georgia, Baskerville, serif;
+  font-size: 30px;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  opacity: 0.25;
+  transform-origin: 50% 600px;
+  max-width: 900px;
+  transform: scale(0.75, 0.75) perspective(1200px) rotateY(8deg) rotateX(45deg);
+  text-shadow: 0 0 3px rgba(34, 34, 34, 0.6), 0 0 1px rgba(34, 34, 34, 0.2);
+  text-align: justify;
+}
+
+p {
+  text-indent: 60px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 100px;
+  text-align: center;
+}
+
+.realistic.blur {
+  pointer-events: none;
+}
+
+.realistic.blur-top:nth-child(1) {
+  transform: scale(0.75, 0.75) perspective(1200px) rotateY(8.2deg) rotateX(45.2deg);
+}
+
+.realistic.blur-bottom:nth-child(1) {
+  transform: scale(0.75, 0.75) perspective(1200px) rotateY(7.8deg) rotateX(44.8deg);
+}
+
+.realistic.blur-top:nth-child(2) {
+  transform: scale(0.75, 0.75) perspective(1200px) rotateY(8.4deg) rotateX(45.4deg);
+}
+
+.realistic.blur-bottom:nth-child(2) {
+  transform: scale(0.75, 0.75) perspective(1200px) rotateY(7.6deg) rotateX(44.6deg);
+}
+
+.realistic.blur1 {
+  transform: scale(0.75, 0.75) perspective(1200px) rotateY(8.4deg) rotateX(45.4deg);
+}
+
+.realistic.blur2 {
+  transform: scale(0.75, 0.75) perspective(1200px) rotateY(7.6deg) rotateX(44.6deg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(238, 238, 238, 0.3), rgba(238, 238, 238, 0));
+  z-index: 99;
+  pointer-events: none;
+}

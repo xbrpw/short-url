@@ -1,0 +1,21 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+  min-height: 100vh;
+}
+
+.post-card{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+#post-title{
+  text-transform: capitalize;
+}
+
+#post-body{
+  line-height: 1.5;
+}

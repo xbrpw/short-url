@@ -1,0 +1,42 @@
+@use postcss-preset-env {
+  stage: 0;
+  features: {
+    "logical-properties-and-values": false
+  }
+} 
+
+.animation9s {
+  animation: 
+    fade-in .9s ease,
+    slide-in .9s ease,
+    fade-out .9s ease 9s forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0}
+}
+
+@keyframes fade-out {
+  to { opacity: 0}
+}
+
+@keyframes slide-in {
+  from { transform: translateY(10px) }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  min-block-size: 100%;
+  font-family: system-ui, sans-serif;
+  
+  display: grid;
+  place-content: center;
+}

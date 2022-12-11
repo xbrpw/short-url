@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Organigrama</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+ 
+
+<div class="container" contenteditable="true">
+  <h1 class="level-1 rectangle" contenteditable="true">Dirección</h1>
+  <ol class="level-2-wrapper">
+    <li>
+      <h2 class="level-2 rectangle" contenteditable="true">Subdirección Matutino</h2>
+      <ol class="level-3-wrapper">
+        <li>
+          <h3 class="level-3 rectangle" contenteditable="true">Manager A</h3>
+          <ol class="level-4-wrapper">
+            <li>
+              <h4 class="level-4 rectangle" contenteditable="true">Person A</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle" contenteditable="true">Person B</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle" contenteditable="true">Person C</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle" contenteditable="true">Person D</h4>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h3 class="level-3 rectangle">Manager B</h3>
+          <ol class="level-4-wrapper">
+            <li>
+              <h4 class="level-4 rectangle">Person A</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person B</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person C</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person D</h4>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h2 class="level-2 rectangle">Subdirección Vespertino</h2>
+      <ol class="level-3-wrapper">
+        <li>
+          <h3 class="level-3 rectangle">Manager C</h3>
+          <ol class="level-4-wrapper">
+            <li>
+              <h4 class="level-4 rectangle">Person A</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person B</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person C</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person D</h4>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h3 class="level-3 rectangle">Manager D</h3>
+          <ol class="level-4-wrapper">
+            <li>
+              <h4 class="level-4 rectangle">Person A</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person B</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person C</h4>
+            </li>
+            <li>
+              <h4 class="level-4 rectangle">Person D</h4>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</div>
+
+<script src='https://html2canvas.hertzen.com/dist/html2canvas.min.js'></script>
+<script>
+    setUpDownloadPageAsImage();
+    
+    function setUpDownloadPageAsImage() {
+      document.getElementById("download-page-as-image").addEventListener("click", function() {
+        html2canvas(document.body).then(function(canvas) {
+          console.log(canvas);
+          simulateDownloadImageClick(canvas.toDataURL(), 'file-name.png');
+        });
+      });
+    }
+    
+    function simulateDownloadImageClick(uri, filename) {
+      var link = document.createElement('a');
+      if (typeof link.download !== 'string') {
+        window.open(uri);
+      } else {
+        link.href = uri;
+        link.download = filename;
+        accountForFirefox(clickLink, link);
+      }
+    }
+    
+    function clickLink(link) {
+      link.click();
+    }
+    
+    function accountForFirefox(click) { // wrapper function
+      let link = arguments[1];
+      document.body.appendChild(link);
+      click(link);
+      document.body.removeChild(link);
+    }
+</script>
+ <button id="download-page-as-image" style="display: none;">Download</button>
+
+
+
+<footer class="page-footer" style="display:none">
+  <span>made by </span>
+  <a href="https://www.luisangelmaciel.one/" target="_blank">
+    <img width="24" height="24" src="" alt="pxar">
+  </a>
+</footer>
+<!-- partial -->
+  
+</body>
+</html>

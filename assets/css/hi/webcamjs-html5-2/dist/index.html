@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - WebcamJS 使用HTML5拍照2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>WebcamJS Test Page</title>
+	
+</head>
+<body>
+	
+	<h1>WebcamJS Test Page</h1>
+	<h3>Demonstrates all features at once</h3>
+	<div style="margin-top:5px; margin-bottom:20px;">Captures large 480x480 cropped image while displaying live 240x240 preview, flipped horizontally (mirrored), and allows preview before save.</div>
+	
+	<div id="my_photo_booth">
+		<div id="my_camera"></div>
+		
+		<!-- A button for taking snaps -->
+		<form>
+			<div id="pre_take_buttons">
+				<!-- This button is shown before the user takes a snapshot -->
+				<input type=button value="Take Snapshot" onClick="preview_snapshot()">
+			</div>
+			<div id="post_take_buttons" style="display:none">
+				<!-- These buttons are shown after a snapshot is taken -->
+				<input type=button value="&lt; Take Another" onClick="cancel_preview()">
+				<input type=button value="Save Photo &gt;" onClick="save_photo()" style="font-weight:bold;">
+			</div>
+		</form>
+	</div>
+	
+	<div id="results" style="display:none">
+		<!-- Your captured image will appear here... -->
+  </div>
+	
+
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

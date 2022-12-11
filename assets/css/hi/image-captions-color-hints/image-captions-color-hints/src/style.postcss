@@ -1,0 +1,115 @@
+@use postcss-preset-env {
+  stage: 0;
+}
+
+/* layout */
+.mural-card {
+  display: grid;
+  align-items: flex-end;
+
+  & > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  & :matches(picture, img) {
+    width: 100%;
+    height: 100%;
+  }
+
+  & > figcaption {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: flex-end;
+    gap: 1rem;
+
+    & > h3 {
+      display: grid;
+      gap: .25rem;
+    }
+
+    & > p {
+      grid-column: 2;
+      justify-self: flex-end;
+      width: max-content;
+
+      display: inline-grid;
+      gap: .5rem;
+      grid-auto-flow: column;
+      align-items: flex-end;
+    }
+  }
+}
+
+/* paint */
+.mural-card {
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+
+  & > figcaption {
+    padding-inline: 2rem;
+    padding-block: 4rem 1.5rem;
+    color: white;
+    background: linear-gradient(to top, 
+      hsla(0 0% 0% / 90%), 
+      var(--slider-hint, 75%), 
+      hsla(0 0% 0% / 0)
+    );
+
+    @media (width < 480px) {
+      padding-inline: 1rem;
+      padding-block-end: 1rem;
+    }
+
+    & > h3 > small {
+      font-weight: normal;
+    }
+
+    & > :matches(h3,p) {
+      margin: 0;
+    }
+
+    & > p {
+      font-size: 1.4rem;
+      line-height: 1.1;
+
+      & > svg {
+        fill: white;
+        height: 2rem;
+      }
+    }
+  }
+  
+  &.fixed > figcaption {
+    background: linear-gradient(to top, 
+      hsla(0 0% 0% / 90%), 
+      hsla(0 0% 0% / 0)
+    );
+  }
+}
+
+.demo {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  margin-inline: auto;
+  background: hsl(0 0% 97%);
+  width: fit-content;
+  padding: .5rem 1rem;
+  border-radius: 0 2rem 2rem 0;
+  display: flex;
+  gap: .25rem;
+  flex-direction: column;
+  box-shadow: 0 2px 5px hsl(0 0% 0% / 40%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 5vmin;
+  gap: 25vmin;
+  background: hsl(0 0% 97%);
+}

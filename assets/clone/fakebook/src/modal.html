@@ -64,14 +64,14 @@
 <div class="">
 
   <div class="w3-bar w3-black ">
-    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('eso')">Eso</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('sor')">Eso</button>
+    <button class="w3-bar-item w3-button" onclick="opentab('London')">London</button>
+    <button class="w3-bar-item w3-button" onclick="opentab('Paris')">Paris</button>
+    <button class="w3-bar-item w3-button" onclick="opentab('eso')">Eso</button>
+    <button class="w3-bar-item w3-button" onclick="opentab('sor')">Eso</button>
 
   </div>
   
-  <div id="London" class=" common-structure city">
+  <div id="London" class=" common-structure tab">
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
   
@@ -389,7 +389,7 @@
      
   </div>
   
-  <div id="Paris" class=" common-structure city" style="display:none">
+  <div id="Paris" class=" common-structure tab" style="display:none">
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
     <div sheetsu="https://sheetsu.com/apis/v1.0bu/0a97d2c109a3" sheetsu-search='{"Eje": "Tecnología"}'>
@@ -413,13 +413,13 @@
     </div>
   </div>
   
-  <div id="eso" class=" common-structure city" style="display:none">
+  <div id="eso" class=" common-structure tab" style="display:none">
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
     <h2>ESO</h2>    
   </div>
 
-  <div id="sor" class=" common-structure city" style="display:none">
+  <div id="sor" class=" common-structure tab" style="display:none">
     <span onclick="this.parentElement.style.display='none'"
     class="w3-button w3-large w3-display-topright">&times;</span>
     <div sheetsu="https://sheetsu.com/apis/v1.0bu/0a97d2c109a3" sheetsu-search='{"Eje": "Tecnología"}'>
@@ -444,13 +444,13 @@
   </div>
   
   <script>
-  function openCity(cityName) {
+  function opentab(tabName) {
     var i;
-    var x = document.getElementsByClassName("city");
+    var x = document.getElementsByClassName("tab");
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";  
     }
-    document.getElementById(cityName).style.display = "block";  
+    document.getElementById(tabName).style.display = "block";  
   }
   </script>
 </div>

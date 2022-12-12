@@ -1,7 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2022 luis (https://codepen.io/helloluis/pen/PoeByyM)
-Fork of an original work xbr.pw / Gradient text fun (https://codepen.io/helloluis/pen/PoeByyM)
+Copyright (c) 2022 Mohamed Mustafa Ali (https://codepen.io/mohamedmustafaali/pen/OZWBdM)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

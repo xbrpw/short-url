@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+.small {
+  -webkit-animation: linear 15s rotate infinite;
+          animation: linear 15s rotate infinite;
+}
+
+.medium {
+  animation: linear 30s rotate reverse infinite;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

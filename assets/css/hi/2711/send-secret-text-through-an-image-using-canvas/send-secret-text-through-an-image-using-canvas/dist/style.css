@@ -1,0 +1,78 @@
+body {
+  background: url(http://www.zhereicome.com/experiments/statics/mix/debut_dark.png);
+  font-family: Helvetica Neue, Helvetica, Arial, Verdana;
+  font-weight: 400;
+}
+body * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+.container {
+  width: 640px;
+  margin: 0 auto;
+  padding: 20px;
+  margin: 10px auto;
+  background: #dadada;
+  text-align: center;
+}
+.container h1, .container h2, .container h3 {
+  color: rgba(0, 0, 0, 0.8);
+}
+.container textarea, .container #output-text {
+  width: 100%;
+  height: 300px;
+  background-color: #333;
+  -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  font-size: inherit;
+  border: 0;
+  overflow-y: scroll;
+  text-align: left;
+}
+.container #go, .container #download, .container #sample-title {
+  -webkit-appearance: none;
+  width: 200px;
+  padding: 10px 0;
+  margin: 10px auto;
+  display: block;
+  border-radius: 0;
+  background: #bf3b3b;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  color: white;
+  font-size: inherit;
+  text-decoration: none;
+}
+.container #go:hover, .container #download:hover, .container #sample-title:hover {
+  cursor: pointer;
+  -moz-box-shadow: 0 0 2px 0 #333, 0 0 3px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 2px 0 #333, 0 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px 0 #333, 0 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+.container #go.inactive, .container #download.inactive, .container #sample-title.inactive {
+  display: none;
+}
+.container #go span, .container #download span, .container #sample-title span {
+  display: block;
+  font-size: 14px;
+}
+.container img {
+  padding: 10px;
+  border: 2px solid black;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+.container canvas {
+  display: none;
+}
+.container ol {
+  text-align: left;
+}

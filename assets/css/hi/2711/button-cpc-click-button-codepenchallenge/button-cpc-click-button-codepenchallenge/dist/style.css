@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap");
+:root {
+  --mouse-x: -50px;
+  --mouse-y: -50px;
+  --mouse-btn-x: -50px;
+  --mouse-btn-y: -50px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Comfortaa", cursive;
+  background-color: #A8CAF5;
+  font-weight: 400;
+}
+
+.svg-background {
+  position: absolute;
+  left: -20vw;
+  right: -20vw;
+  bottom: 0;
+  width: 140vw;
+}
+
+a {
+  color: #7f71fe;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn {
+  appearance: none;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  letter-spacing: 3px;
+  line-height: 80px;
+  height: 80px;
+  width: 300px;
+  padding: 0 30px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1A1D2C;
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+}
+.btn_text {
+  position: relative;
+  z-index: 2;
+}
+.btn:hover {
+  background-color: #262c48;
+}
+
+.link {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+}
+.link svg {
+  position: relative;
+  top: 5px;
+  margin: 0 4px;
+}
+
+.mover {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.5);
+  transition: all 0.1s ease-out;
+  z-index: 1;
+}
+.mover.active {
+  transform: scale(0.8);
+}
+
+.mouse {
+  pointer-events: none;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: var(--mouse-btn-x);
+  top: var(--mouse-btn-y);
+}
+.mouse .svg {
+  position: absolute;
+  width: 160px;
+  height: 180px;
+  top: -110px;
+  left: -80px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - KozmicLuis Redesign - Post/Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Serif+Pro&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="columns col-gapless">
+  <!-- Fixed Sidebar -->
+  <div class="column col-4 col-md-12 sidebar">
+    <div class="sidebarlay"></div>
+
+    <header class="blog-menu">
+      <section class="navbar-section">
+        <a href="#" class="btn btn-link">About</a>
+        <a href="#" class="btn btn-link">Contact</a>
+      </section>
+    </header>
+
+    <div class="container blog-info">
+      <h1>
+        <figure class="avatar avatar-lg">
+          <img src="https://pbs.twimg.com/profile_images/684112082917167104/R9M-Xlkj_400x400.jpg" alt="...">
+        </figure> KozmicLuis</h1>
+      <p>My opinions, thoughts, efforts, newly-found resources, tutorials and roudups as a noob in various topics.</p>
+
+      <div class="divider"></div>
+
+      <section class="social">
+        <a class="btn btn-primary btn-action"><i class="fas fa-envelope"></i></a>
+        <a class="btn btn-primary btn-action"><i class="fab fa-youtube"></i></a>
+        <a class="btn btn-primary btn-action"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-primary btn-action"><i class="fas fa-rss"></i></a>
+        <a class="btn btn-primary btn-action"><i class="fab fa-github"></i></a>
+      </section>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="column col-8 col-md-12 col-ml-auto blog-content">
+    <div class="container">
+      <article class="post">
+        <h1 class="post-title">Supercharge Your Workflow With Grunt</h1>
+
+        <span class="post-meta">
+          Posted on <a href="#">Category</a> · Published in <em>2019/07/19</em>
+        </span>
+        
+        <div class="post-content">
+          <p>Last semester at my uni I had a subject called Object Oriented Programming where our teacher told us we were going to be using C# (C Sharp) as our language for the class. It meant that we had to find a way to <strong>install Visual Studio</strong> and get things done but the main problem was with those who had a Mac or me, the only one who dared to have a fresh Elementary OS installation (dual booted with Windows 10) into class. For the Mac people, it meant that they didn’t know how what tool to use apart from X-Code which of course didn’t work (but it did for C++) and me, it meant that I had to find a way to <strong>compile my code written in mere text editors like Atom or Sublime</strong>.</p>
+          <p>Thankfully I found three ways I could catch up with my classmates during our lab classes: <strong>REPL.it</strong> (an <a href="https://repl.it/languages/csharp" target="_blank" rel="noopener">online tool</a> for writing in a plethora of languages and seeing the STDOUT result), the <strong>CSC</strong> (<strong>C-Sharp compiler</strong>) command line tool in Windows and <strong>Mono</strong> (compiled from the Terminal or with <strong>MonoDevelop</strong> which is a cross-platform IDE).</p>
+          <blockquote>
+<p>Sponsored by Microsoft, Mono is an open-source implementation of Microsoft’s .NET Framework based on the ECMA standards for C# and the Common Language Runtime. A growing family of solutions and an active and enthusiastic contributing community is helping position Mono to become the leading choice for development of cross platform applications. - <strong>Mono’s Website</strong></p>
+</blockquote>
+          
+          <h3 id="Step-1-Install-Mono"><a href="#Step-1-Install-Mono" class="headerlink" title="Step 1: Install Mono"></a>Step 1: Install Mono</h3><p>For <strong>Mac users</strong>, I won’t say more than this: all you have to do is <a href="http://www.mono-project.com/download/#download-mac" target="_blank" rel="noopener">download the .pkg</a> file, skip to the next step and get going. Now, for the Linux users, you can <a href="http://www.mono-project.com/download/#download-lin" target="_blank" rel="noopener">go here</a> and follow the instructions which I’m going to mention next anyway. Note that the instructions I’ll paste are <strong>valid for Ubuntu and Debian based distros</strong> (I’m using Elementary OS so, I had to choose this) but if you’re running CentOS, Fedora (or any of its derivatives) or OpenSUSE and SLES <strong>you better click on the link I mentioned a couple of sentences ago</strong>.</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF</span><br></pre></td></tr></tbody></table></figure>
+        </div>
+        
+        <section class="post-tags">
+          <span class="chip">
+            <i class="fas fa-tag"></i>
+            Build
+          </span>
+          
+          <span class="chip">
+            <i class="fas fa-tag"></i>
+            Tools
+          </span>
+          
+          <span class="chip">
+            <i class="fas fa-tag"></i>
+            Frontend
+          </span>
+        </section>
+      </article>
+    </div>
+    <section class="related">
+      <div class="columns">
+        <div class="column col-4 col-xs-12 related-post">
+          <div class="sidebarlay"></div>
+          <img src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-responsive img-fit-cover" alt="...">
+          <div class="related-caption">
+            <h3>Supercharge Your Workflow With Grunt</h3>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+        <div class="column col-4 col-xs-12 related-post">
+          <div class="sidebarlay"></div>
+          <img src="https://picturepan2.github.io/spectre/img/osx-yosemite.jpg" class="img-responsive img-fit-cover" alt="...">
+          <div class="related-caption">
+            <h3>Observe your web design changes in real time with BrowserSync</h3>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+        <div class="column col-4 col-xs-12 related-post">
+          <div class="sidebarlay"></div>
+          <img src="https://images.unsplash.com/photo-1562886929-ea04b6ff8d70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="img-responsive img-fit-cover" alt="...">
+          <div class="related-caption">
+            <h3>Install a free SSL Certificate with LetsEncrypt and Nginx</h3>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <span class="copyright">© <strong>KozmicLuis</strong> (Luis Lopez). All rights reserved 2019</span>
+      </div>
+    </footer>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

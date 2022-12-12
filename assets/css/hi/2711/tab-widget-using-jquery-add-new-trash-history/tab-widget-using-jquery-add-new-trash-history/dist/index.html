@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Tab Widget Using Jquery (Add New, Trash, History)</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://code.jquery.com/jquery-2.1.4.js" type="application/javascript" ></script>
+<!------------// TOP MENU SECTION --------->
+<div class="top-menu-section cl">
+     <ul>
+        <li class="add-new-menu"><img src="images/add.png" />Add New Tab</li>
+        <li class="trash"><img src="images/garbage.png" />Trash</li>
+        <li class="history"><img src="images/history-clock-button.png" />History</li>
+     </ul>
+
+</div>
+<!-------------/// TOP MENU SECTION END ---->
+<div class="clearfix"></div>
+<!-------------/// INNER CONTNET(MAIN TAB VIEW)  display-none ------------>
+<!-------//------>
+<div class="inner-content">
+     
+     <!------------/// TAB HEADING ------>
+     <ul class="tab-heading">
+       <li class="tab-section-heading-1 tab-heading-active"><span> Tab 1</span></li>
+
+       <div class="clearfix"></div>
+     </ul>
+     <!-------------/// TAB HEADING END ---->
+     <div class="clearfix"></div>
+     <!--------------// TAB CONTENT -------->
+     <div class="tab-content-div">
+         <!---------// TAB CONTENT ------>
+         <div class="tab-section-heading-1-content tab-content-default tab-content-active">
+         <ul class="tab-edit-section">
+            <li class="edit-the-tab-content">Edit</li>
+            <li class="delete-the-tab-content">Delete</li>
+         </ul>
+         <div class="clearfix"></div>
+         <div class="tab-inner-content">
+         <h1>Heading 1</h1>
+       <p>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+       <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div> 
+         
+         </div>
+         <!----------/// TAB CONTNET --->
+         <!---------// TAB CONTENT ------>
+         
+         <!----------/// TAB CONTNET --->
+         <!---------// TAB CONTENT ------>
+         
+         <!----------/// TAB CONTNET --->
+         <!---------// TAB CONTENT ------>
+         <div class="tab-section-heading-4-content tab-content-default">
+          <ul class="tab-edit-section">
+           <li class="edit-the-tab-content">Edit</li>
+            <li class="delete-the-tab-content">Delete</li>
+         </ul>
+         <div class="clearfix"></div>
+         <div class="tab-inner-content">
+         <h1>Heading 4</h1>
+           <p>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+       <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+       </div>
+         
+         </div>
+         <!----------/// TAB CONTNET --->
+     
+     </div>
+     <!--------------/// TAB CONTENT END ------>
+
+
+    
+</div>
+<!---------------/// INNER CONTENT (MAIN TAB VIEW) END  ---------->
+<!------------/// ADD NEW TAB POP -------->
+<div class="add-new-tab-pop">
+      <div class="add-new-tab-pop-inner">
+          <h1>Add New Tab</h1>
+          <div class="inner-row">
+          <label><span>Tab Heading:-</span> <input type="text" class="new-tab-heading"/></label>
+           <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="inner-row">
+               <label><span>Tab Content:-</span>
+               
+                <textarea class="new-tab-content"></textarea></label>
+                <div class="clearfix"></div>
+           </div>
+               
+               <div class="new-tab-cancel new-tab-button">Cancel</div>
+               <div class="new-tab-save new-tab-button">Save</div>
+                <div class="clearfix"></div>
+      </div>
+
+
+</div>
+<!-----------// ADD NEW TAB POP END ---------------->
+<!------------/// ADD NEW TAB POP -------->
+<div class="edit-new-tab-pop">
+      <div class="edit-new-tab-pop-inner">
+          <h1>Edit The Tab</h1>
+          <div class="inner-row">
+          <label><span>Tab Heading:-</span> <input type="text" class="edit-tab-heading"/></label>
+           <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="inner-row">
+               <label><span>Tab Content:-</span> <textarea class="edit-tab-content"></textarea></label>
+                <div class="clearfix"></div>
+           </div>
+               
+               <div class="edit-tab-cancel new-tab-button">Cancel</div>
+               <div class="edit-tab-save new-tab-button">Save</div>
+                <div class="clearfix"></div>
+      </div>
+
+
+</div>
+<!-----------// ADD NEW TAB POP END ---------------->
+
+<!-----------/// TRASH SECTION START --------->
+<div class="trash-section">
+    <div class="trash-section-inner">
+     <div class="cancel-trash-popup">X</div>
+    <div class="clearfix"></div>
+       <!---------/// HISTORY START HERE ------->
+    <table class="trash-table">
+       <tr class="table-heading-section">
+          <td class="tab-heading-table table-heading">Tab Heading</td>
+          <td class="tab-content-table table-heading">Tab Content</td>
+          <td class="tab-date-time-table table-heading">Tab Create Date/Time</td>
+          <td class="tab-delete-table table-heading">Delet</td>
+           <td class="tab-delete-table table-heading">Restore</td>
+       </tr>
+       <!---------/// INNER CONTENT START ------->
+   
+       <!-----------------INNER CO NTNET END ------>
+       
+       <!-----------/// CLEAR HISTORY ------>
+
+       <!-----------/// CLEAR HISTORY END ---->
+    </table>
+     <h1 class="text-center clearTheTrash">Clear The Trash</h1>
+    <!---------// HISTORY END HERE ------->
+    
+    
+    
+    </div>
+
+</div>
+<!-------------/// TRASH SECTION END HERE ----->
+<!------------/// HISTORY SECTION START -------->
+<div class="history-section">
+    <div class="history-section-inner-section">
+    
+    <div class="cancel-history-popup">X</div>
+    <div class="clearfix"></div>
+    <!---------/// HISTORY START HERE ------->
+    <table class="history-table">
+       <tr class="table-heading-section">
+          <td class="tab-heading-table table-heading">Tab Heading</td>
+          <td class="tab-content-table table-heading">Tab Content</td>
+          <td class="tab-date-time-table table-heading">Tab Create Date/Time</td>
+          <td class="tab-delete-table table-heading">Status</td>
+          <td class="tab-delete-table table-heading">Delet</td>
+       </tr>
+       <!---------/// INNER CONTENT START ------->
+   
+       <!-----------------INNER CO NTNET END ------>
+       
+       <!-----------/// CLEAR HISTORY ------>
+
+       <!-----------/// CLEAR HISTORY END ---->
+    </table>
+     <h1 class="text-center clearTheHistory">Clear The History</h1>
+    <!---------// HISTORY END HERE ------->
+    
+    
+    
+    </div>
+
+</div>
+<!------------// HISTORY SECTION END HERE -------->
+
+<!-----------/// OVERRELAY ------>
+<div class="overrelay"></div>
+<!------------// OVERRELAY END ------>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+html {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #222;
+  --tile_size: 32px;
+  image-rendering: pixelated;
+}
+
+p {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: gray;
+  font-family: system-ui;
+}
+
+#start_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: system-ui;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 
+    0 2px red,
+    0 -2px red;
+}
+#start_btn span {
+  padding: .5rem 1rem;
+  border-radius: 3rem;
+  background: red;
+  color: white;
+  margin: 1rem auto 0 auto;
+  display: block;
+}
+
+#game_box {
+  height: calc(var(--tile_size) * 18);
+  aspect-ratio: 16/9; /* 540px */
+  outline: 1px solid #333;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+#game_box:after {
+  content:'';
+  position:absolute;
+  inset: 0;
+  pointer-events: none;
+  background:    url('http://schools.stlucie.k12.fl.us/swc/files/2014/12/blue-christmas-snow-fall-animation.gif');
+  background-size: 450px auto;
+  mix-blend-mode: overlay;
+  opacity: .5;
+}
+
+#timer {
+  font-family: system-ui;
+  font-size: 2rem;
+  position: absolute;
+  top: .5rem;
+  left: 1rem;
+  line-height: 100%;
+  color: white;
+  text-shadow: 1px 1px rgba(0,0,0,.25);
+}
+#timer:after {
+  content: 'secs';
+  font-size: .8rem;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  text-align: center;
+  line-height: 70%;
+}
+
+#level_box {
+  width: calc(32px * 96);
+  aspect-ratio: 96/18;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: 
+    linear-gradient(to top, royalblue, skyblue);
+/*   background: skyblue; */
+  background-size: 100% 100%;
+  background-blend-mode: color-burn;
+}
+
+*:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+#player {
+  position: absolute;
+  width: 32px;
+  aspect-ratio: 1/1;
+  /*   background: blue; */
+  pointer-events: none;
+}
+#player:after {
+  width: 32px;
+  height: 40px;
+  top: auto !important;
+  bottom: 0;
+  left: 0;
+  background: 
+    var(--sprite);
+  background-size: 128px 40px;
+  background-position: -32px 0;
+}
+
+.moving_left:after, 
+.moving_right:after {
+  animation: run .3s steps(3) alternate infinite;
+}
+@keyframes run {
+  0% { background-position: 0 0; }
+  100% { background-position: -96px 0px; }
+}
+.jumping:after {
+  background-position: -96px 0px !important;
+}
+.jumping.moving_left:after,
+.jumping.moving_right:after {
+  animation: none;  
+}
+
+#player[dir="looking_left"] {
+  background-position: -32px 0;
+  transform: scaleX(-1);
+}
+#player[dir="looking_right"] {
+  background-position: -32px 0;
+  transform: scaleX(1);
+}
+
+.tile {
+  width: 32px;
+  aspect-ratio: 1/1;
+  float: left;
+  position: relative;
+}
+
+.solid {
+  background: lightsteelblue;
+  box-shadow: inset 0 0 8px white;
+  background-size: 32px 32px;
+  border-radius: 4px 4px;
+}
+
+.collect {
+
+}
+.collect:after {
+  background: var(--coins);
+  background-size: 96px 32px;
+  background-position: 0 0;
+  pointer-events: none;
+  animation: coins .5s steps(3) alternate infinite;
+}
+@keyframes coins {
+  100% {
+    background-position: -96px 0;
+  }
+}
+
+:root {
+  --sprite: url('data:image/gif;base64,R0lGODlhgAAoAKIHAOFkZEUKCp0AAOjDw////wAAAP8AAAAAACH5BAEAAAcALAAAAACAACgAAAP/eLps/tCxSVW8puqJ4/4aBI5HJ5KL+aCUA7xwzFYdMMw0oe+8Phu9IAFnEfaIpYhtwEOmjE0WEOojGphUq2uA5d2clikBg3PsyEizDl0GBAcvCTh5dhQKcqn4cc+X93Z4GUhuOwAOAgF+aYAGfYN6dY6CTmpjDgGKkH+GgQKLM2udHiyiOoekOKYEqCdaWK2foKVDO3CpJD62rbMjuoYxAJVXOgNKwnMHWUTLTs04XIUEcFzFyco8vEg92mDcrqq13Khzlqe4KN8r3l4xm8zZLjaM5kHrI/U9vR/5PPc/XYr5ewciAhVwIfpJ0qNwzT98Lg4+TAhB4sQGDyzuS1ER/wq6DQY9IqShxAivXiWFnCyoJGCxkwRbhHwDk5+KmzFxqrCpswNLCNKimeDZkw3HohcoIv2IEQNMnySXJm0q9WKSqlbDYEW59WFXrl9Bho3alcPXnGeVlqVwp63btwVcuqW6dkKmu3jzBuDCFwBeDQICCx5MWEAwAIIDVIDL+A6ctgTmLmjcmJvkCZThErjL5TLmzG4DsHrxuO1i0G1LF4hsejJqyG1feHb9mnUBG7NpoxadGkDuA68d+75ju8Dn2rGH3zmN/A7u1sxB8xYOne1rvtWqKwi+Orl23aBHL/nOILhozso3FF7/KZhg67WxpwfMnvDhwIo36N2fCTucu9FELUVffYIFY0BgAQr4U1XlkYWUWgqKxeCCUrkGIU4J9kTChNEVIIuAb0mIIUQPolCiBnBpspQAIS6m4k4mFqXFTSCkWBWLv7WlIl2OxKgTEpl8iEh+Nb71YlE4fmckQRAEQJ5ZXo00QmgPJDnlkmx0kORy5cGVkJNedmgceGPOsOSWvwEXJhEtklkmBWCuedxljOHA3Ztd4nkNfE+qKeec0NVp52sfcLnnBmmSWeiagg66XKOHgtGnbkWG2RgSrbUZ6RyGLnqlpZCaWeakm1KQAAA7');
+  --coins: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAgCAMAAADaHo1mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRFvwAAAAAA/wAAAAAA11dazwAAAAR0Uk5T////AEAqqfQAAAC0SURBVHja7NaNCoAgDARgr97/nfsZKynbTYcUoRCl0b5zBJXmziMN4G8AgP3oA0hlPdqAe8JZa+pqACgmzO54gPqE2ZO3cQWaEurqpAPbpUyhQCShC/AkTGeB9VKmeAREQN4iljAKPG6xDIhAAPQE1hOsHZxbNABYAGkRBbaECfZLBgbAAq4BaoGjh6xAa4vcCd0AK8Ba9D7AWjSAzwP0ixYG2H8RA9j3Ig6E/+xaE7KxCDAAWKMckPycuIUAAAAASUVORK5CYII=');
+  --floor-tile: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5T/wDltzBKAAAASklEQVR42uzLQQrAMAgEwMz/P10IhC5NQj3kVLoeRB1be4s60OvuXwQkUATMgCKQgC3oYwA1YAbxOQBPEKfTIDYWOQv8YJ9LgAEAo4cCiQ12rVkAAAAASUVORK5CYII=');
+  --floor-tile-wht: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////AAAAVcLTfgAAAAJ0Uk5T/wDltzBKAAAAT0lEQVR42uzMWQoAIAhAQd/9L13RgpFiQV+RIoiOikSBQK7ao+Zl2PJVwArQAB8wAQzQPxEAdgEmIAAYQJ2O/QLU7W2ABzgGhIAP/EgCDACQ9gLUokSe7QAAAABJRU5ErkJggg==');
+}

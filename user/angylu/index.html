@@ -52,7 +52,9 @@
 <meta property="og:image:secure_url" content="./og-image.jpg" />
 <meta property="og:image:width" content="1080" />
 <meta property="og:image:height" content="400" />
-
+<link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet"> 
+<link href="https://xbrpw.github.io/assets/fontawesome/css/regular.min.css" rel="stylesheet">  <!-- Catálogo de iconos Fontawesome https://fontawesome.com/v6/search?o=r&m=free 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">    -->  
 <style>
    body {background-color: white; }
 
@@ -122,36 +124,215 @@
 
 
 
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-   <img src="./img/wanted01.svg" class="w3-image w3-center w3-centered w3-responsive animation9s" width="100%" heigth="100vh;" style="z-index:999" >
+    
+   <div id="random" class="w3-container tab">
+     
+      <iframe class="responsive-iframe" src="./random/index.html" height="650px" width="100%"   style="z-index:0"
+      title="" allowfullscreen=" " frameborder="0 " style="border:0; " style="overflow:hidden"></iframe>
+        
+      
+      
 
-<div >
-   <iframe class="responsive-iframe" src="./random/index.html" height="650px" width="100%"   style="z-index:0"
-   title="" allowfullscreen=" " frameborder="0 " style="border:0; " style="overflow:hidden"></iframe>
-</div>
+   </div>
+   
+   <div id="sudoku" class="w3-container tab" style="display:none">
+      <iframe class="responsive-iframe" src="https://www.xbr.pw/game/sudoku/index.html " height="650px" width="100%"   style="z-index:0"
+      title="" allowfullscreen=" " frameborder="0 " style="border:0; " style="overflow:hidden"></iframe>
+   </div>
 
-<!-- partial:index.partial.html -->
-<div class="container">
-	
-	<h1>HTML Vibrate API</h1>
-	<p>Requires browser support and a device with vibrate (turned on!)</p>
-	<div class="button-container">
-		
-		<a class="button button--normal" href="#">Normal</a>
-		<a class="button button--phone-call" href="#">Phone Call</a>
-		<a class="button button--power-rangers" href="#">Power Rangers</a>
-		<a class="button button--mario" href="#">Super Mario</a>
-		<a class="button button--star-wars" href="#">Star Wars</a>
-		<a class="button button--turtles" href="#">TMNT</a>
-		<a class="button button--bond" href="#">007</a>
-		
-	</div>
-	
-	
-</div>
+   
+   <div id="puzzle" class="w3-container tab" style="display:none">
+      <iframe class="responsive-iframe" src=" https://www.xbr.pw/game/puzzle/index.html" height="650px" width="100%"   style="z-index:0"
+      title="" allowfullscreen=" " frameborder="0 " style="border:0; " style="overflow:hidden"></iframe>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="https://www.xbr.pw/assets/css/hi/vibrate-api/script.js"></script>
+
+      
+
+            <!-- partial:index.partial.html -->
+            <div class="container w3-hide">
+               
+               <h1>HTML Vibrate API</h1>
+               <p>Requires browser support and a device with vibrate (turned on!)</p>
+               <div class="button-container">
+                  
+                  <a class="button button--normal" href="#">Normal</a>
+                  <a class="button button--phone-call" href="#">Phone Call</a>
+                  <a class="button button--power-rangers" href="#">Power Rangers</a>
+                  <a class="button button--mario" href="#">Super Mario</a>
+                  <a class="button button--star-wars" href="#">Star Wars</a>
+                  <a class="button button--turtles" href="#">TMNT</a>
+                  <a class="button button--bond" href="#">007</a>
+                  
+               </div>
+               
+               
+            </div>
+
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="https://www.xbr.pw/assets/css/hi/vibrate-api/script.js"></script>
  
+
+   </div>
+   
+   <div id="spin" class="w3-container tab" style="display:none; background-color: white;">
+     
+ 
+      <iframe class="responsive-iframe" src="https://www.xbr.pw/user/angylu/spin/index.html" height="650px" width="100%"   style="z-index:0"
+      title="" allowfullscreen=" " frameborder="0 " style="border:0; " style="overflow:hidden"></iframe>
+
+      
+
+   </div>
+
+   <img src="./img/wanted01.svg" class="w3-image w3-center w3-centered w3-responsive animation9s w3-hide" width="100%" heigth="100vh;" style="z-index:999" >
+   <script>
+   function opentab(tabName) {
+     var i;
+     var x = document.getElementsByClassName("tab");
+     for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+     }
+     document.getElementById(tabName).style.display = "block";  
+   }
+   </script>
+   
+
+   
+       <style>
+           @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+           * {
+               transition: 0.33s ease;
+           }
+           
+           .body-bar {
+               font-family: "Raleway";
+               font-size: 16px;
+               line-height: 24px;
+               font-weight: 300;
+               letter-spacing: 4px;
+           }
+           
+           .abs-center {
+               position: absolute;
+               width: 65%;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               text-align: center;
+           }
+           
+           .bar-container {
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               right: 0;
+               height: 45px;
+               overflow: hidden;
+               font-family: "Raleway";
+               font-size: 14px;
+               line-height: 18px;
+               font-weight: 200;
+               letter-spacing: 3px;
+           }
+           
+           .button-container {
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               height: 45px;
+           }
+           
+           .bar-button {
+               position: relative;
+               float: left;
+               height: 100%;
+               width: 25%;
+               box-sizing: border-box;
+               color: rgb(255, 255, 255);
+               background-color: rgb(0, 0, 0);
+               font-size: 26px;
+               line-height: 45px;
+               text-align: center;
+               transition: 0.33s ease;
+               text-decoration: none;
+               border-right: 1px solid rgb(0, 0, 0);
+               text-transform: uppercase;
+           }
+           
+           .bar-button:last-child {
+               border-right: none;
+           }
+           
+           .bar-button:hover {
+               background-color: rgb(12, 12, 12);
+               color: #fff;
+           }
+           
+           .white-bar {
+               position: absolute;
+               bottom: 0;
+               width: 25%;
+               height: 3px;
+               left: -25%;
+               background-color: #fff;
+           }
+       </style>
+   
+ 
+       <!-- partial:index.partial.html -->
+       <div class="bar-container body-bar"> 
+           <div class="button-container "> 
+               <a class="bar-button one " > <i class="fa-regular fa-image  hi-hover-opacity" onclick="opentab('random')" id="defaultOpen"> </i>Random</a>
+               <a class="bar-button two " > <i class="fa-solid fa-pencil hi-hover-opacity" onclick="opentab('sudoku')"> </i>Sudoku</a>
+               <a class="bar-button three " > <i class="fa-solid fa-brain hi-hover-opacity" onclick="opentab('puzzle')"> </i>Puzzle</a>
+               <a class="bar-button four " > <i class="fa-solid fa-gear hi-hover-opacity"onclick="opentab('spin')" > </i>Configuración</a>
+   
+           </div>
+           <div class="white-bar "></div>
+       </div>
+       <!-- partial -->
+   
+       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+       <script>
+           $(document).ready(function() {
+   
+               // Function for nav bar
+               // It sets the size of the hovered link and the links around it
+               // It also moves the white-bar around.
+               $('.bar-button').hover(function() {
+                   $('.bar-button').css('width', '25%');
+                   $(this).css('width', '25%');
+                   if ($(this).hasClass('one')) {
+                       $('.white-bar').css('left', '0%')
+                   } else if ($(this).hasClass('two')) {
+                       $('.white-bar').css('left', '25%')
+                   } else if ($(this).hasClass('three')) {
+                       $('.white-bar').css('left', '50%')
+                   } else if ($(this).hasClass('four')) {
+                       $('.white-bar').css('left', '75%')
+                   };
+               }, function() {
+                   $('.white-bar').css('left', '25%');
+                   $('.bar-button').css('width', '25%');
+               });
+   
+           });
+       </script>
+   
+
+
+
+
+
+
+
+
+
+   
+
+
 
 </body>
 </html>

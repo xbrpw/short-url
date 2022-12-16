@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  background: #00101a;
+}
+body {
+  font-family: fino-sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+  font-style: normal;
+}
+.webgl {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+button {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-appearance: none;
+  background: crimson;
+  color: white;
+  font: inherit;
+  font-size: 1.5rem;
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 1.75rem;
+  cursor: pointer;
+}
+
+h1 {
+  position: absolute;
+  color: white;
+  top: 3rem;
+  left: 3rem;
+  right: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+footer {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+}

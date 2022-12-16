@@ -1,0 +1,7 @@
+.has-shadow {
+  filter: drop-shadow( 0px 6px 3px rgba(0,0,0, 0.20) );
+}
+
+.has-blue-shadow {
+  filter: drop-shadow( 0px 6px 3px rgba(167, 217, 253, 1.0) );
+}

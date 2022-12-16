@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - SVG Barcode Generator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div>
+    <p>Find a product in your house and enter the full UPC (the 12 digit number under the barcode),</br>or enter 652810119337 if you are to lazy to find something in your house.</br>Press the <span style="font-weight:bold;">Generate Barcode</span> button.</br>To test, scan the barcode with a barcode scanner app on your phone.</p>
+</div>
+<div>
+    <FORM NAME="UPC">
+        <P><span style="font-weight:bold;">Enter UPC-A:</span> 
+            <INPUT TYPE="TEXT" id="upcnumber" value="652810119337">
+            <INPUT TYPE="Button" Value="Generate Barcode" id="clear" onClick="generateBarcode();">
+        </P>
+    </FORM>
+</div>
+
+<div id="container" style="margin:30px,0,0,0;">
+<svg id="upcCode"></svg>
+</div>
+<button value="" onclick="download()">Save as SVG</button><br><br>
+<!-- partial -->
+  <script src='https://d3js.org/d3.v3.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

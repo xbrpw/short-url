@@ -1,0 +1,22 @@
+html {
+	height: 100%;
+}
+
+body {
+	align-items: center;
+	background-color: #202124;
+	color: white;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+}
+
+h1 {
+	font-family: Oswald, san-serif;
+	font-weight: 200;
+	letter-spacing: .02em;
+	text-transform: uppercase;
+	strong {
+		font-weight: 600;
+	}
+}

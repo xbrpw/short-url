@@ -1,0 +1,11 @@
+- var bubbles = 59;
+
+form(id="bw",class="bw")
+	.bw__bubbles
+		- for (let b = 1;b <= bubbles;++b) {
+			.bw__bubble
+				input(class="bw__input",id="b"+b,type="checkbox",name="b"+b,value=b)
+				label(class="bw__label",for="b"+b)="Bubble "+b
+				span(class="bw__cover")
+		- }
+	button(class="bw__btn",type="reset")="New Sheet"

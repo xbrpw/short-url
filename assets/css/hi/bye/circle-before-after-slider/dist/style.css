@@ -1,0 +1,8 @@
+.beer-slider {
+  display: block;
+  margin:  3rem auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}

@@ -3,38 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+  <style>           
+    #home {position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;}        
+    .content {position:absolute;top:0;left:-100%;width:100%;height:100%;background:#fdfdfd;overflow:hidden;z-index:2;}
+    #one:target, #two:target, #three:target, #cuatro:target  {left:0;overflow:visible;}
+    article {position:relative;background:#fdfdfd;margin:0 auto;}
+    .responsive-iframe {position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;height: 100%;border: none;}
+</style>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div id="home">
-    <header>
-      <h1>Onepage Website</h1>
-      <a href="#one">Go to one</a>
-    </header>
+
+<div id="home" >
+  <article  style="z-index:1" >
+    <h1>home</h1>
+    <a href="#home">Home</a>
+    <a href="#one">1</a>
+    <a href="#two">2</a>
+    <a href="#three">3</a>
+    <a href="#cuatro">4</a>
+
+    <script>/**
+      * Return time elapsed since a given UNIX Epoch time.
+      * @param {number} time
+      * @returns {string}
+      */
+     const timeAgo = (time) => {
+       const between = Date.now() / 1000 - Number(time)
+       return between < 3600
+         ? pluralize(~~(between / 60), ' minute')
+         : between < 86400
+         ? pluralize(~~(between / 3600), ' hour')
+         : pluralize(~~(between / 86400), ' day')
+     }
+     
+     const pluralize = (time, label) => {
+       if (time === 1) {
+         return time + label
+       }
+       return time + label + 's'
+     }
+     </script>
+  </article>
+  
+  <iframe class="responsive-iframe" src="https://www.xbr.pw/assets/css/hi/skeleton-screen-for-sns/dist/perfil.html" height="650px" width="100%"   style="z-index:0"
+  title="" allowfullscreen=" " frameborder="0 " style="border:0; " style="overflow:hidden"></iframe>
+
 </div>
 <div id="one" class="content">
+  <h1>1</h1>
   <article>
-    <h2>Section one</h2>
-
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>	<a href="#home">Home</a><a href="#two">Go to two</a>
+      <a href="#home">Home</a>
+      <a href="#one">1</a>
+      <a href="#two">2</a>
+      <a href="#three">3</a>
+      <a href="#cuatro">4</a>
   </article>
 </div>
 <div id="two" class="content">
+  <h1>2</h1>
   <article>
-    <h2>Section Two</h2>
-
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>	<a href="#one">Back to one</a><a href="#home">Home</a><a href="#three">Go to three</a>
-
+    <a href="#home">Home</a>
+    <a href="#one">1</a>
+    <a href="#two">2</a>
+    <a href="#three">3</a>
+    <a href="#cuatro">4</a>
   </article>
 </div>
 <div id="three" class="content">
+  <h1>3</h1>
   <article>
-    <h2>Section Three</h2>
+    <a href="#home">Home</a>
+    <a href="#one">1</a>
+    <a href="#two">2</a>
+    <a href="#three">3</a>
+    <a href="#cuatro">4</a>
+  </article>
+</div>
+<div id="cuatro" class="content" >
+  <article class="responsive-iframe">
+    <h1>4</h1>
+    <a href="#home">Home</a>
+    <a href="#one">1</a>
+    <a href="#two">2</a>
+    <a href="#three">3</a>
+    <a href="#cuatro">4</a>
 
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>	<a href="#two">Back to two</a><a href="#home">Home</a><a href="#one">Go to one</a>
+    <div>                  
+      <span class="w3-hide  button--normal" > Normal</span>
+      <span class="w3-hide  button--phone-call" >Phone Call</span>
+      <span class="w3-hide  button--power-rangers" >Power Rangers</span>
+      <span class="w3-hide  button--mario" >Super Mario</span>
+      <span class="w3-hide  button--star-wars" >Star Wars</span>
+      <span class="w3-hide  button--turtles" >TMNT</span>
+      <span class="w3-hide  button--bond" >007</span>      
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+      <script  src="https://www.xbr.pw/assets/css/hi/vibrate-api/script.js"></script>
+   </div>
+   
+   
+
+
+
+
+
   </article>
 </div>
 <!-- partial -->

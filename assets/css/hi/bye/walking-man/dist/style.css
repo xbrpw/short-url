@@ -1,0 +1,52 @@
+.human {
+  animation: walking 6s infinite linear;
+}
+
+@keyframes walking {
+  0% {
+    translate: 0 0;
+  }
+
+  100% {
+    translate: 100vw 0;
+  }
+
+  0%,
+  40% {
+    rotate: 0deg;
+  }
+
+  60%,
+  100% {
+    rotate: 360deg;
+  }
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  align-content: center;
+}
+
+.container {
+  position: relative;
+}
+
+.human {
+  font-size: 80px;
+  transform: rotateY(180deg);
+  width: 80px;
+  height: 80px;
+}
+
+.rock {
+  position: absolute;
+  font-size: 40px;
+  top: calc(50% + 10px);
+  left: calc(50% - 25px);
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Dark</title>
+  <meta name="viewport" content="width=device-width"><link rel='stylesheet' href='http://photoswipe.com/site-assets/site.css?v=4.0.7-1.0.4'>
+<link rel='stylesheet' href='http://photoswipe.com/dist/default-skin/default-skin.css?v=4.0.7-1.0.4'>
+<link rel='stylesheet' href='http://photoswipe.com/dist/photoswipe.css?v=4.0.7-1.0.4'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="section section--head">
+  <div class="row row--heading">
+    <h1>PhotoSwipe<a href="https://github.com/dimsemenov/PhotoSwipe/releases"> v4.0.7</a></h1>
+    <p>JavaScript gallery, no dependencies.</p>
+  </div>
+
+  <div class="row">
+    <div id="demo-test-gallery" class="demo-gallery">
+      <a href="https://farm4.staticflickr.com/3894/15008518202_c265dfa55f_h.jpg" data-size="1600x1600" data-med="https://farm4.staticflickr.com/3894/15008518202_b016d7d289_b.jpg" data-med-size="1024x1024" data-author="Folkert Gorter" class="demo-gallery__img--main">
+        <img src="https://farm4.staticflickr.com/3894/15008518202_b016d7d289_m.jpg" alt="" />
+        <figure>This is dummy caption.</figure>
+      </a>
+
+      <a href="https://farm6.staticflickr.com/5591/15008867125_b61960af01_h.jpg" data-size="1600x1068" data-med="https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_b.jpg" data-med-size="1024x683" data-author="Samuel Rohl">
+        <img src="https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg" alt="" />
+        <figure>This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text.</figure>
+      </a>
+
+      <a href="https://farm4.staticflickr.com/3902/14985871946_24f47d4b53_h.jpg" data-size="1600x1067" data-med="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_b.jpg" data-med-size="1024x683" data-author="Ales Krivec">
+        <img src="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_m.jpg" alt="" />
+        <figure>This is dummy caption. It is not meant to be read.</figure>
+      </a>
+
+      <a href="https://farm6.staticflickr.com/5584/14985868676_b51baa4071_h.jpg" data-size="1600x1067" data-med="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_b.jpg" data-med-size="1024x683" data-author="Michael Hull">
+        <img src="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_m.jpg" alt="" />
+        <figure>Dummy caption. It's Greek to you. Unless, of course, you're Greek, in which case, it really makes no sense.</figure>
+      </a>
+
+      <a href="https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg" data-size="1600x1067" data-med="https://farm4.staticflickr.com/3920/15008465772_383e697089_b.jpg" data-med-size="1024x683" data-author="Thomas Lefebvre">
+        <img src="https://farm4.staticflickr.com/3920/15008465772_383e697089_m.jpg" alt="" />
+        <figure>It's a dummy caption. He who searches for meaning here will be sorely disappointed.</figure>
+      </a>
+    </div>
+    
+  </div>
+    
+    <!-- PSWP template -->
+    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+
+        <div class="pswp__scroll-wrap">
+
+          <div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+          </div>
+
+          <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+				<div class="pswp__counter"></div>
+
+				<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+				<button class="pswp__button pswp__button--share" title="Share"></button>
+
+				<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+					  <div class="pswp__preloader__cut">
+					    <div class="pswp__preloader__donut"></div>
+					  </div>
+					</div>
+				</div>
+            </div>
+
+
+			<!-- <div class="pswp__loading-indicator"><div class="pswp__loading-indicator__line"></div></div> -->
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+	            <div class="pswp__share-tooltip">
+					<!-- <a href="#" class="pswp__share--facebook"></a>
+					<a href="#" class="pswp__share--twitter"></a>
+					<a href="#" class="pswp__share--pinterest"></a>
+					<a href="#" download class="pswp__share--download"></a> -->
+	            </div>
+	        </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+              <div class="pswp__caption__center">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+    </div>
+<!-- partial -->
+  <script src='http://photoswipe.com/dist/photoswipe.min.js?v=4.0.7-1.0.4'></script>
+<script src='http://photoswipe.com/dist/photoswipe-ui-default.min.js?v=4.0.7-1.0.4'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2022 by Kasper De Bruyne (https://codepen.io/kdbkapsere/pen/YzKMqQa)
+Copyright (c) 2022 Dark (https://codepen.io/Darkbbeider/pen/BaVXrZY)
+Fork of an original work React Confetti (https://codepen.io/Darkbbeider/pen/BaVXrZY)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,0 +1,66 @@
+body, html, .app {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app .particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.app .particles .particle {
+  position: absolute;
+  transition: all 5s ease-out;
+}
+.app .particles .particle.circular {
+  background-color: var(--color);
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  transform: translate(var(--x), var(--y));
+}
+.app .particles .particle.rectangular {
+  background-color: var(--color);
+  width: var(--size);
+  height: var(--size);
+  transform: translate(var(--x), var(--y)) rotateX(var(--rotate)) rotateY(var(--rotate));
+}
+.app .particles .particle.squiggle {
+  stroke: var(--color);
+  stroke-width: 15px;
+  stroke-linecap: round;
+  overflow: visible;
+  width: var(--size);
+  height: var(--size);
+  transform: translate(var(--x), var(--y)) rotateY(var(--rotate));
+}
+.app .button {
+  height: 40px;
+  width: 200px;
+  font-family: Roboto;
+  background-color: #34495e;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  user-select: none;
+}
+.app .button:hover {
+  background-color: #8e44ad;
+}
+.app .button .popper {
+  margin-right: 20px;
+  margin-left: -20px;
+  width: 64px;
+  height: 64px;
+  background-image: url("https://cdn.yoavik.com/codepen/react-confetti/confetti.png");
+}

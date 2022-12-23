@@ -1,0 +1,115 @@
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    
+</style>
+<!-- Incluye tab, contador de visitas, iframe, preloader, -->
+
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" onclick="opentab('Inicio')">1</button>
+  <button class="w3-bar-item w3-button" onclick="opentab('About')">2</button>
+  <button class="w3-bar-item w3-button" onclick="opentab('Tenks')">3</button>
+</div>
+
+<div id="Inicio" class=" tab">
+
+    <h2>Iframe - Target for a Link</h2>
+
+    <iframe src="https://www.xbr.pw//assets/css/hi/run-dmc-starter/run-dmc-starter/dist/index.html" 
+    name="iframe_a" height="360px" width="100%" title="Iframe Example" style="border:none;" allowfullscreen ></iframe>
+    
+    <p><a href="https://xbrpw.github.io/1596/dist/index.html" target="iframe_a">W3Schools.com</a></p>
+    <p><a href="https://www.xbr.pw//go/api/pw/meme/index.html" target="iframe_a" onclick="opentab('Tenks')">Meme</a></p>
+
+</div>
+
+<div id="About" class=" tab" style="display:none">
+<!-- Contador de visitas -->
+    <script>
+            function nameDefined(ckie,nme)
+            {
+            var splitValues
+            var i
+            for (i=0;i<ckie.length;++i)
+            {
+                splitValues=ckie[i].split("=")
+                if (splitValues[0]==nme) return true
+            }
+            return false
+            }
+
+            function delBlanks(strng)
+            {
+            var result=""
+            var i
+            var chrn
+            for (i=0;i<strng.length;++i) {
+                chrn=strng.charAt(i)
+                if (chrn!=" ") result += chrn
+            }
+            return result
+            }
+            function getCookieValue(ckie,nme)
+            {
+            var splitValues
+            var i
+            for(i=0;i<ckie.length;++i) {
+                splitValues=ckie[i].split("=")
+                if(splitValues[0]==nme) return splitValues[1]
+            }
+            return ""
+            }
+            function insertCounter() {
+            readCookie()
+            displayCounter()
+            }
+            function displayCounter() {
+            document.write('<span ALIGN="CENTER">')
+            document.write("Has visitado esta página  ")
+            if(counter==1) document.write("por primera vez.")
+            else document.write(counter+" veces ")
+            document.writeln('</span>')
+            }
+            function readCookie() {
+            var cookie=document.cookie
+            counter=0
+            var chkdCookie=delBlanks(cookie)  //are on the client computer
+            var nvpair=chkdCookie.split(";")
+            if(nameDefined(nvpair,"pageCount"))
+            counter=parseInt(getCookieValue(nvpair,"pageCount"))
+            ++counter
+            var futdate = new Date()
+            var expdate = futdate.getTime()
+            expdate += 3600000 * 24 *30  //expires in 1 hour
+            futdate.setTime(expdate)
+
+            var newCookie="pageCount="+counter
+            newCookie += "; expires=" + futdate.toGMTString()
+            window.document.cookie=newCookie
+            }
+            insertCounter();
+    </script>
+<!-- Contador de visitas -->
+</div>
+
+<div id="Tenks" class=" tab" style="display:none">
+    <iframe src="https://www.xbr.pw//assets/css/hi/run-dmc-starter/run-dmc-starter/dist/index.html" 
+    name="iframe_a" height="360px" width="100%" title="Iframe Example" style="border:none;"></iframe>
+    <img src="https://www.xbr.pw/sharon/spinners-page-loaders/favico-bd-dark.svg">
+    <img src="https://www.xbr.pw/sharon/spinners-page-loaders/favico-bd-white.svg">
+    <img src="https://www.xbr.pw/sharon/spinners-page-loaders/favicon.svg">
+    <img src="https://www.xbr.pw/sharon/spinners-page-loaders/box.svg">
+    
+</div>
+
+<script>
+function opentab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";  
+}
+</script>

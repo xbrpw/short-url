@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Lizzi Maciel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <meta property="og:locale" content="es_MX">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lizzi Maciel">
+<meta property='og:description ' content=' Lizzi Maciel'>
+<meta property="og:url" content="https://xbrpw.github.io/user/lizzi">
+<meta property="og:site_name" content="Lizzi Maciel">
+<!--  size="1080x400" -->
+<meta property="og:image" content="./og-image.webp" />
+<meta property="og:image:secure_url" content="./og-image.webp" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="400" />
+<meta property="og:image:alt" content="Lizzi Maciel" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:video" content="og-video.swf" />
+<meta property="og:video:secure_url" content="og-videoSecure.swf" />
+<meta property="og:video:type" content="website" />
+<meta property="og:video:width" content="400" />
+<meta property="og:video:height" content="300" />
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script>
+	THREE.ShapeUtils.triangulateShape = (function () {
+	        var pnlTriangulator = new PNLTRI.Triangulator();
+	        return function triangulateShape(contour, holes) {
+	            return pnlTriangulator.triangulate_polygon([contour].concat(holes));
+	        };
+	    })();
+</script>
+
+<div id="three-container"></div>
+
+<div id="instructions" style="display:none">
+	click and drag to control the animation
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js'></script>
+  <script src='three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/TextGeometry.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/FontUtils.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/pnltri.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/droid_sans_bold.typeface.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/bas.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

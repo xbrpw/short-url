@@ -45,378 +45,464 @@
  <meta name="MobileOptimized" content="320" /> 
  <meta name="ResourceLoaderDynamicStyles" content=""/>
  <meta name="apple-mobile-web-app-capable" content="yes"/> 
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"
  
-
-<link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
-<div class="w3-auto"> 
-<div class="container">
-  <!-- 0 x -->
-  <section>
-    <style>
-      .pokeball {
-        position: relative;
-        width: 1em;
-        font-size: 6em;
-        border-radius: 50%;
-        overflow: hidden;
-        transform-style: preserve-3d;
-        -webkit-animation: moving 1s infinite ease-in-out alternate;
-                animation: moving 1s infinite ease-in-out alternate;
-      }
-      @-webkit-keyframes moving {
-        from {
-          transform: translate3d(0.05em, 0, 0);
-        }
-        to {
-          transform: translate3d(-0.05em, 0, 0);
-        }
-      }
-      @keyframes moving {
-        from {
-          transform: translate3d(0.05em, 0, 0);
-        }
-        to {
-          transform: translate3d(-0.05em, 0, 0);
-        }
-      }
-      .pokeball::before {
-        content: "";
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        font-size: 9%;
-        width: 1em;
-        height: 1em;
-        margin-top: -0.5em;
-        margin-left: -0.5em;
-        border-radius: inherit;
-        transform-origin: 50% 300%;
-        background-color: #fff;
-        background-image: radial-gradient(circle at 30% 30%, #fff, #fff 30%, rgba(0, 0, 0, 0.3));
-        -webkit-animation: wiggle 1s infinite ease-in-out alternate;
-                animation: wiggle 1s infinite ease-in-out alternate;
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0.05em 0.05em 0.3em rgba(0, 0, 0, 0.5), 0 0 0 0.4em #fff, 0 0 0 0.8em #000, 0 -8.6em 0 8em #b71c1c, 0 -8.6em 0 8.4em #000, 0 0 0 10em #fff;
-      }
-      @-webkit-keyframes wiggle {
-        0% {
-          transform: rotate(10deg);
-        }
-        100% {
-          transform: rotate(-10deg);
-        }
-      }
-      @keyframes wiggle {
-        0% {
-          transform: rotate(10deg);
-        }
-        100% {
-          transform: rotate(-10deg);
-        }
-      }
-      .pokeball::after {
-        content: "";
-        position: relative;
-        display: block;
-        padding-bottom: 100%;
-        border-radius: inherit;
-        background-image: radial-gradient(circle 0.2em at 25% 30%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.3) 20%, transparent 50%);
-        box-shadow: inset 0 0 0 0.04  em #000, inset -0.075em -0.075em 0.3em rgba(0, 0, 0, 0.5), inset -0.05em -0.05em 0.1em -0.01em rgba(0, 0, 0, 0.6);
-        
-      }
-      .pokeball:hover, .pokeball:hover::before, .pokeball:hover + .pokeball-shadow {
-        -webkit-animation-play-state: paused;
-                animation-play-state: paused;
-      }
-      .pokeball:active, .pokeball:active::before, .pokeball:active + .pokeball-shadow {
-        -webkit-animation-play-state: running;
-                animation-play-state: running;
-      }
-      
-      .pokeball-shadow {
-        position: relative;
-        z-index: -1;
-        font-size: 5em;
-        width: 1em;
-        height: 0.2em;
-        margin-top: -0.12em;
-        margin-left: 0.15em;
-        border-radius: 50%;
-        background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5) 30%, transparent 70%);
-        -webkit-animation: moving 1s infinite ease-in-out alternate;
-                animation: moving 1s infinite ease-in-out alternate;
-      }
-      
-      
-      </style>    
-    <div class="loader">
-      <div class="pokeball"></div>
-      <div class="pokeball-shadow"></div>
-    </div>
-  </section>
-  <!-- 1 x -->
-  <section>
-    <div class="loader loader-4"></div>
-  </section>
-  <!-- 2 x -->
-  <section>
-    <div class="loader loader-1">
-      <div class="loader-outter"></div>
-      <div class="loader-inner"></div>
-    </div>
-  </section>
-  <!-- 3 x -->
-  <section>
-    <div id="elspinner-1">
-      <div class="spinner spinner-1"></div>
-      <style>
-        .spinner {
-        width: 100px;
-        height: 100px;
-        background: rgba(238, 238, 238, 0.322);
-        border-radius: 50%;
-        position: relative;
-        margin: 50px;
-        display: inline-block;
-      }
-      .spinner:after, .spinner:before {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-      }
-      
-      .spinner-1:after {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        border: 4px solid transparent;
-        border-top-color: rgb(199, 59, 8);
-        border-bottom-color: orangered;
-        -webkit-animation: spinny 1s linear infinite;
-                animation: spinny 1s linear infinite;
-      }
-      
-      @keyframes spinny{
-        0%{
-          transform: rotate(0deg) scale(1);
-        }
-        50%{
-          transform: rotate(45deg) scale(1.3);
-        }
-        100%{
-          transform: rotate(360deg) scale(1);
-        }
-      }
-      
-      
-      
-      </style>
+
+
+
+  
+
+    <link rel="stylesheet" href="../title-animation/style.css">  
+    <section	class="introAnimation"><br>
+        <div	class="Block_ATF">
+    
+        <h1	class="ATF_Title"><span class="ttlTxt ch0">S</span><span class="ttlTxt ch1">H</span><span class="ttlTxt ch2">AR</span><span class="ttlTxt ch3">O</span><span class="ttlTxt ch4">N</span></h1>
+        <div	class="Dots_sB"><span class="LogoDot drkOrng"></span><span class="LogoDot ltOrng"></span><span class="LogoDot ylw"></span><span class="LogoDot grn"></span><span class="LogoDot blu"></span></div>
+        <h2	class="Airtime_Station_sB">Spinners & page loaders Collection </h2><br>
       </div>
-      
-  </section> 
-  <!-- 4 x -->
-  <section>
-    <div class="loader loader-2">
-      <svg class="loader-star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-            <polygon points="29.8 0.3 22.8 21.8 0 21.8 18.5 35.2 11.5 56.7 29.8 43.4 48.2 56.7 41.2 35.1 59.6 21.8 36.8 21.8 " fill="#18ffff" />
-         </svg>
-      <div class="loader-circles"></div>
-    </div>
-  </section>  
-  <!-- 5 x-->
-  <section>
-    <div class="loader loader-6">
-      <div class="loader-inner"></div>
-    </div>
-  </section>
-  <!-- 6 x-->
-  <section>
-    <div class="loader loader-18">
-      <div class="css-star star1"></div>
-      <div class="css-star star2"></div>
-      <div class="css-star star3"></div>
-      <div class="css-star star4"></div>
-      <div class="css-star star5"></div>
-      <div class="css-star star6"></div>
-      <div class="css-star star7"></div>
-      <div class="css-star star8"></div>
-    </div>
-  </section>
-  <!-- 7 x-->
-  <section>
-    <div class="loader loader-5">
-      <div class="loader-pacman"></div>
-    </div>
-  </section>
-  <!-- 8 x -->
-  <section>
-    <div class="loader loader-9">
-      <svg class="loader-star star1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon fill="#c6ff00" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
-         </svg>
-      <svg class="loader-star star2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon fill="#c6ff00" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  " />
-         </svg>
-      <svg class="loader-star star3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon fill="#c6ff00" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  " />
-         </svg>
-    </div>
-  </section>
-  <!-- 9 -->
-  <section>
-    <div class="loader loader-12">
-      <svg class="loader-star star1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
-         </svg>
-      <svg class="loader-star star2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
-         </svg>
-      <svg class="loader-star star3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
-         </svg>
-      <svg class="loader-star star4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
-         </svg>
-      <svg class="loader-star star5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
-         </svg>
-      <svg class="loader-star star6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
-         </svg>
-    </div>
-  </section>
-  <!-- 10 -->
-  <section>
-    <div class="loader loader-7">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-    </div>
-  </section>
-  <!-- 11 -->
-  <section>
-    <div class="loader loader-14">
-      <svg class="loader-star star-small" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon fill="#01579b" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
-         </svg>
-      <svg class="loader-star star-big" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-            <polygon fill="#40c4ff" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
-         </svg>
-    </div>
-  </section>
-  <!-- 12 -->
-  <section>
-    <div class="loader loader-3">
-      <div class="dot dot1"></div>
-      <div class="dot dot2"></div>
-      <div class="dot dot3"></div>
-    </div>
-  </section>
-  <!-- 13 -->  
-  <section>
-    <div class="loader loader-20">    
-    </div>
-  </section>
-  <!-- 14 x -->  
-  <section>
-    <div class="loader loader-17">
-      <div class="css-square square1"></div>
-      <div class="css-square square2"></div>
-      <div class="css-square square3"></div>
-      <div class="css-square square4"></div>
-      <div class="css-square square5"></div>
-      <div class="css-square square6"></div>
-      <div class="css-square square7"></div>
-      <div class="css-square square8"></div>
-    </div>
-  </section>
-  <!-- 15  x -->  
-  <section>
-    <div class="loader loader-13">
-      <div class="css-heart heart1"></div>
-      <div class="css-heart heart2"></div>
-      <div class="css-heart heart3"></div>
-      <div class="css-heart heart4"></div>
-    </div>
-  </section>
-  <!-- 16 x -->  
-  <section>
-    <div class="loader loader-21">
-      <div class="css-times times1"></div>
-      <div class="css-times times2"></div>
-      <div class="css-times times3"></div>
-    </div>
-  </section>
-  <!-- 17 x -->
-  <section>
-    <div id="elspinner-2">
-      <div class=" spinner-2">
+    </section>    
+    <script  src="../title-animation/script.js"></script>
+   
+
+    
+    <div class="w3-auto" > 
+    <link rel="stylesheet" href="./style.css">
+    <div >
+      <!-- 0 x -->
+      <section >
+        <style>
+          .pokeball {
+            position: relative;
+            width: 1em;
+            font-size: 6em;
+            border-radius: 50%;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            -webkit-animation: moving 1s infinite ease-in-out alternate;
+                    animation: moving 1s infinite ease-in-out alternate;
+          }
+          @-webkit-keyframes moving {
+            from {
+              transform: translate3d(0.05em, 0, 0);
+            }
+            to {
+              transform: translate3d(-0.05em, 0, 0);
+            }
+          }
+          @keyframes moving {
+            from {
+              transform: translate3d(0.05em, 0, 0);
+            }
+            to {
+              transform: translate3d(-0.05em, 0, 0);
+            }
+          }
+          .pokeball::before {
+            content: "";
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            font-size: 9%;
+            width: 1em;
+            height: 1em;
+            margin-top: -0.5em;
+            margin-left: -0.5em;
+            border-radius: inherit;
+            transform-origin: 50% 300%;
+            background-color: #fff;
+            background-image: radial-gradient(circle at 30% 30%, #fff, #fff 30%, rgba(0, 0, 0, 0.3));
+            -webkit-animation: wiggle 1s infinite ease-in-out alternate;
+                    animation: wiggle 1s infinite ease-in-out alternate;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0.05em 0.05em 0.3em rgba(0, 0, 0, 0.5), 0 0 0 0.4em #fff, 0 0 0 0.8em #000, 0 -8.6em 0 8em #b71c1c, 0 -8.6em 0 8.4em #000, 0 0 0 10em #fff;
+          }
+          @-webkit-keyframes wiggle {
+            0% {
+              transform: rotate(10deg);
+            }
+            100% {
+              transform: rotate(-10deg);
+            }
+          }
+          @keyframes wiggle {
+            0% {
+              transform: rotate(10deg);
+            }
+            100% {
+              transform: rotate(-10deg);
+            }
+          }
+          .pokeball::after {
+            content: "";
+            position: relative;
+            display: block;
+            padding-bottom: 100%;
+            border-radius: inherit;
+            background-image: radial-gradient(circle 0.2em at 25% 30%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.3) 20%, transparent 50%);
+            box-shadow: inset 0 0 0 0.04  em #000, inset -0.075em -0.075em 0.3em rgba(0, 0, 0, 0.5), inset -0.05em -0.05em 0.1em -0.01em rgba(0, 0, 0, 0.6);
+            
+          }
+          .pokeball:hover, .pokeball:hover::before, .pokeball:hover + .pokeball-shadow {
+            -webkit-animation-play-state: paused;
+                    animation-play-state: paused;
+          }
+          .pokeball:active, .pokeball:active::before, .pokeball:active + .pokeball-shadow {
+            -webkit-animation-play-state: running;
+                    animation-play-state: running;
+          }
+          
+          .pokeball-shadow {
+            position: relative;
+            z-index: -1;
+            font-size: 5em;
+            width: 1em;
+            height: 0.2em;
+            margin-top: -0.12em;
+            margin-left: 0.15em;
+            border-radius: 50%;
+            background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5) 30%, transparent 70%);
+            -webkit-animation: moving 1s infinite ease-in-out alternate;
+                    animation: moving 1s infinite ease-in-out alternate;
+          }
+          
+          
+          </style>    
+        <div class="loader" >
+          <div class="pokeball"></div>
+          <div class="pokeball-shadow"></div>
+        </div>
+      </section>
+       <!-- 01 x -->
+       <section >
           <style>
-       
-        .spinner-2{
-          width: 100px;
+              /* Preloder */
+          
+          .sharon {
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              z-index: 999999;
+              justify-content: center;
+              gap: 2rem;
+              padding: 3rem;
+              min-height: 80vh;
+              align-items: center;
+              text-align: center;
+          }
+          
+        
+          
+          @keyframes loader {
+              0% {
+                  -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg);
+                  border: 4px solid #f44336;
+                  border-left-color: transparent;
+              }
+              50% {
+                  -webkit-transform: rotate(180deg);
+                  transform: rotate(180deg);
+                  border: 4px solid #673ab7;
+                  border-left-color: transparent;
+              }
+              100% {
+                  -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+                  border: 4px solid #f44336;
+                  border-left-color: transparent;
+              }
+          }
+          
+          @-webkit-keyframes loader {
+              0% {
+                  -webkit-transform: rotate(0deg);
+                  border: 4px solid #f44336;
+                  border-left-color: transparent;
+              }
+              50% {
+                  -webkit-transform: rotate(180deg);
+                  border: 4px solid #673ab7;
+                  border-left-color: transparent;
+              }
+              100% {
+                  -webkit-transform: rotate(360deg);
+                  border: 4px solid #f44336;
+                  border-left-color: transparent;
+              }
+          }
+            </style>    
+          <div class="loader" >
+            <div class="sharon"></div>      
+          </div>
+      </section>
+      <!-- 1 x -->
+      <section>
+        <div class="loader loader-4"></div>
+      </section>
+      <!-- 2 x -->
+      <section>
+        <div class="loader loader-1">
+          <div class="loader-outter"></div>
+          <div class="loader-inner"></div>
+        </div>
+      </section>
+      <!-- 3 x -->
+      <section>
+        <div id="elspinner-1">
+          <div class="spinner spinner-1"></div>
+          <style>
+            .spinner {
+            width: 100px;
             height: 100px;
-            background: rgb(177, 8, 8);
+            background: rgba(238, 238, 238, 0.322);
             border-radius: 50%;
             position: relative;
             margin: 50px;
             display: inline-block;
-            animation: spin 2s linear infinite;
           }
-          
-          .spinner-2:after, .spinner-2:before{
-            height: 20px;
-            width: 20px;
-            background: rgb(0, 4, 255);
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            margin-left: -25px;
-            animation: bouncy 1s ease-in infinite;
+          .spinner:after, .spinner:before {
             content: "";
             display: block;
-        
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
           }
-          .spinner-2:after{
-            top: auto;
-            bottom: -10px;
-            animation: bouncy 0.5s ease-in infinite;
+          
+          .spinner-1:after {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border: 4px solid transparent;
+            border-top-color: rgb(199, 59, 8);
+            border-bottom-color: orangered;
+            -webkit-animation: spinny 1s linear infinite;
+                    animation: spinny 1s linear infinite;
           }
           
-          @keyframes bouncy{
-            0%, 100%{
-              transform: translateY(0px);
+          @keyframes spinny{
+            0%{
+              transform: rotate(0deg) scale(1);
             }
             50%{
-              transform: translateY(30px);
-            }
-          }
-          @keyframes spin{
-            0%{
-              transform: rotate(0deg);
+              transform: rotate(45deg) scale(1.3);
             }
             100%{
-              transform: rotate(360deg);
+              transform: rotate(360deg) scale(1);
             }
           }
           
+          
+          
           </style>
-      </div>
-      </div>
-  </section>
-  <!-- 18 -->
-  <section>
-    <div class="loader loader-20">
-      <div class="css-diamond"></div>
+          </div>
+          
+      </section> 
+      <!-- 4 x -->
+      <section>
+        <div class="loader loader-2">
+          <svg class="loader-star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <polygon points="29.8 0.3 22.8 21.8 0 21.8 18.5 35.2 11.5 56.7 29.8 43.4 48.2 56.7 41.2 35.1 59.6 21.8 36.8 21.8 " fill="#18ffff" />
+             </svg>
+          <div class="loader-circles"></div>
+        </div>
+      </section>  
+      <!-- 5 x-->
+      <section>
+        <div class="loader loader-6">
+          <div class="loader-inner"></div>
+        </div>
+      </section>
+      <!-- 6 x-->
+      <section>
+        <div class="loader loader-18">
+          <div class="css-star star1"></div>
+          <div class="css-star star2"></div>
+          <div class="css-star star3"></div>
+          <div class="css-star star4"></div>
+          <div class="css-star star5"></div>
+          <div class="css-star star6"></div>
+          <div class="css-star star7"></div>
+          <div class="css-star star8"></div>
+        </div>
+      </section>
+      <!-- 7 x-->
+      <section>
+        <div class="loader loader-5">
+          <div class="loader-pacman"></div>
+        </div>
+      </section>
+      <!-- 8 x -->
+      <section>
+        <div class="loader loader-9">
+          <svg class="loader-star star1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon fill="#c6ff00" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
+             </svg>
+          <svg class="loader-star star2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon fill="#c6ff00" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  " />
+             </svg>
+          <svg class="loader-star star3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon fill="#c6ff00" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  " />
+             </svg>
+        </div>
+      </section>
+      <!-- 9 -->
+      <section>
+        <div class="loader loader-12">
+          <svg class="loader-star star1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
+             </svg>
+          <svg class="loader-star star2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
+             </svg>
+          <svg class="loader-star star3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
+             </svg>
+          <svg class="loader-star star4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
+             </svg>
+          <svg class="loader-star star5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
+             </svg>
+          <svg class="loader-star star6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9" />
+             </svg>
+        </div>
+      </section>
+      <!-- 10 -->
+      <section>
+        <div class="loader loader-7">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </div>
+      </section>
+      <!-- 11 -->
+      <section>
+        <div class="loader loader-14">
+          <svg class="loader-star star-small" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon fill="#01579b" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
+             </svg>
+          <svg class="loader-star star-big" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                <polygon fill="#40c4ff" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
+             </svg>
+        </div>
+      </section>
+      <!-- 12 -->
+      <section>
+        <div class="loader loader-3">
+          <div class="dot dot1"></div>
+          <div class="dot dot2"></div>
+          <div class="dot dot3"></div>
+        </div>
+      </section>
+      <!-- 13 -->  
+      <section>
+        <div class="loader loader-20">    
+        </div>
+      </section>
+      <!-- 14 x -->  
+      <section>
+        <div class="loader loader-17">
+          <div class="css-square square1"></div>
+          <div class="css-square square2"></div>
+          <div class="css-square square3"></div>
+          <div class="css-square square4"></div>
+          <div class="css-square square5"></div>
+          <div class="css-square square6"></div>
+          <div class="css-square square7"></div>
+          <div class="css-square square8"></div>
+        </div>
+      </section>
+      <!-- 15  x -->  
+      <section>
+        <div class="loader loader-13">
+          <div class="css-heart heart1"></div>
+          <div class="css-heart heart2"></div>
+          <div class="css-heart heart3"></div>
+          <div class="css-heart heart4"></div>
+        </div>
+      </section>
+      <!-- 16 x -->  
+      <section>
+        <div class="loader loader-21">
+          <div class="css-times times1"></div>
+          <div class="css-times times2"></div>
+          <div class="css-times times3"></div>
+        </div>
+      </section>
+      <!-- 17 x -->
+      <section>
+        <div id="elspinner-2">
+          <div class=" spinner-2">
+              <style>
+           
+            .spinner-2{
+              width: 100px;
+                height: 100px;
+                background: rgb(177, 8, 8);
+                border-radius: 50%;
+                position: relative;
+                margin: 50px;
+                display: inline-block;
+                animation: spin 2s linear infinite;
+              }
+              
+              .spinner-2:after, .spinner-2:before{
+                height: 20px;
+                width: 20px;
+                background: rgb(0, 4, 255);
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                margin-left: -25px;
+                animation: bouncy 1s ease-in infinite;
+                content: "";
+                display: block;
+            
+                border-radius: 50%;
+              }
+              .spinner-2:after{
+                top: auto;
+                bottom: -10px;
+                animation: bouncy 0.5s ease-in infinite;
+              }
+              
+              @keyframes bouncy{
+                0%, 100%{
+                  transform: translateY(0px);
+                }
+                50%{
+                  transform: translateY(30px);
+                }
+              }
+              @keyframes spin{
+                0%{
+                  transform: rotate(0deg);
+                }
+                100%{
+                  transform: rotate(360deg);
+                }
+              }
+              
+              </style>
+          </div>
+          </div>
+      </section>
+      <!-- 18 -->
+      <section>
+        <div class="loader loader-20">
+          <div class="css-diamond"></div>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
-</div>
+    </div>
+
   
+
+ 
+
 </body>
 </html>

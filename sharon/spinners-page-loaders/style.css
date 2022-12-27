@@ -16,7 +16,7 @@
        
     }
     
-    section {
+    .sectionLoader {
         width: 30%;
         display: inline-block;
         text-align: center;
@@ -30,7 +30,7 @@
     }
 
 @media only screen and (max-width: 600px) {
-    section {
+    .sectionLoader {
         width: 44%;
         display: inline-block;
         text-align: center;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rise</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" id="app">
+
+  <div class="leaders">
+    <h2>Grumpy Cat Rankings 2023</h2>
+    <ul>
+      <li v-for="(cat, i) in topThreeCats">
+        <div class="lead-cats">
+          <img class="lead-cats__photo" :src="`https://www.sicontis.com/codepen/cpc-rising/${cat.photo}.svg`" :class="{ active: cat.name === newLeader }">
+          <div class="podium" :class="`pod-${i + 1}`">
+            <div class="ranking-lead" :style="{ backgroundColor: catRank[i].c }">{{ catRank[i].r + 1 }}</div>
+            <h4>{{ cat.name }}</h4>
+            <p>{{ cat.points }} points</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="board">
+    <h2>Leaderboard</h2>
+
+    <transition-group name="slide" tag="ul" appear>
+      <cat-list-item v-for="(cat, i) in allCats" :cat="cat" :rank="i" :key="cat.name">
+      </cat-list-item>
+    </transition-group>
+
+  </div>
+</div>
+
+<template id="cat-list-item">
+  <li class="cat-item">
+    <div class="cat-item__photo">
+      <div class="ranking" :style="{ backgroundColor: colorOrder }">{{ rankOrder }}</div>
+      <img :src="`https://www.sicontis.com/codepen/cpc-rising/heads/${cat.photo}.svg`">
+    </div>
+    <div class="cat-item__info">
+      <h4>{{ cat.name }}</h4>
+    </div>
+    <div class="cat-item__points">
+      <img src="https://www.sicontis.com/codepen/cpc-rising/chevron.svg" @click="pointIncrement">
+      <p>{{ cat.points }}</p>
+      <img src="https://www.sicontis.com/codepen/cpc-rising/chevron.svg" @click="pointDecrement">
+    </div>
+
+  </li>
+</template>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

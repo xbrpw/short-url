@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+body * {
+  margin: 0;
+  padding: 0;
+  color: #1c1c1c;
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+}
+body * li, body * ul {
+  list-style-type: none;
+}
+body * a {
+  text-decoration: none;
+}
+
+.galeria {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #1c1c1c;
+  overflow: hidden;
+}
+.galeria.vis .container h1, .galeria.vis .container h2 {
+  opacity: 1;
+  transform: none;
+}
+.galeria.vis .container .h2 {
+  transition-delay: 0.2s;
+}
+.galeria.vis .container .contenedorImgs .imagen {
+  opacity: 1;
+  transform: none;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(6) {
+  transition-delay: 0.6s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(7) {
+  transition-delay: 0.7s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(8) {
+  transition-delay: 0.8s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(9) {
+  transition-delay: 0.9s;
+}
+.galeria.vis .container .contenedorImgs .imagen:nth-child(10) {
+  transition-delay: 1s;
+}
+.galeria.scale .container {
+  opacity: 0;
+  transform: scale(1.2);
+}
+.galeria .container {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 50px 0;
+  transition: ease all 0.5s;
+}
+.galeria .container h1, .galeria .container h2 {
+  opacity: 0;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transform: translateY(-30px);
+  transition: ease all 0.5s;
+}
+.galeria .container h1 {
+  font-size: 60px;
+}
+.galeria .container .contenedorImgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.galeria .container .contenedorImgs .imagen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc((100% / 3) - 20px);
+  height: 250px;
+  margin: 10px;
+  opacity: 0;
+  transform: translateX(-50px);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: ease all 0.5s;
+}
+.galeria .container .contenedorImgs .imagen:hover:before {
+  opacity: 1;
+}
+.galeria .container .contenedorImgs .imagen:hover .nombre {
+  transform: none;
+}
+.galeria .container .contenedorImgs .imagen:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(transparent, #fff);
+  transition: ease all 0.5s;
+}
+.galeria .container .contenedorImgs .imagen .nombre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  transform: translateY(100%);
+  text-shadow: -2px -2px 5px #1c1c1c;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.5s;
+}
+
+.fullPreview {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 28, 28, 0.9);
+  z-index: 100;
+}
+.fullPreview.anim .wrapper .titulo {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition-delay: 0s;
+}
+.fullPreview.anim .wrapper img {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.fullPreview.anim .wrapper .desc {
+  opacity: 0;
+  transform: translateY(100px);
+  transition-delay: 0s;
+}
+.fullPreview .cerrarModal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  transition: ease all 0.3s;
+}
+.fullPreview .cerrarModal:hover {
+  transform: rotate(90deg);
+}
+.fullPreview .cerrarModal:before, .fullPreview .cerrarModal:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #1c1c1c;
+}
+.fullPreview .cerrarModal:before {
+  transform: rotate(45deg);
+}
+.fullPreview .cerrarModal:after {
+  transform: rotate(-45deg);
+}
+.fullPreview .wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+.fullPreview .wrapper .blur {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(40px);
+  transition: ease all 0.5s;
+}
+.fullPreview .wrapper .titulo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  font-size: 100px;
+  -webkit-text-stroke: 1px #fff;
+  z-index: 1;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.5s 0.3s;
+}
+.fullPreview .wrapper img {
+  max-width: 90%;
+  max-height: 80%;
+  position: relative;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.5s;
+}
+.fullPreview .wrapper .desc {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.5s 0.5s;
+}
+.fullPreview .controles {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.fullPreview .controles .control {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 50px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) all 0.5s;
+}
+.fullPreview .controles .control:hover {
+  width: 70px;
+}
+.fullPreview .controles .control.av {
+  margin-left: auto;
+}
+.fullPreview .controles .control.ret {
+  margin: 10px 30px 0 0;
+  transform: rotate(180deg);
+}
+.fullPreview .controles .control:before, .fullPreview .controles .control:after {
+  content: "";
+  position: absolute;
+}
+.fullPreview .controles .control:before {
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background-color: #fff;
+}
+.fullPreview .controles .control:after {
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-bottom: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+}

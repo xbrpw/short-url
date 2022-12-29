@@ -69,16 +69,19 @@
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<div class="w3-bar btn--rematch">
-  <button class=" btn--rematch-front" onclick="opentab('home')">Original</button>
-  <button class=" btn--rematch-front w3-hide" onclick="opentab('about')" >2</button>
+<div class="w3-bar " style="background: linear-gradient(#fffc00, #fc9010);
+background: linear-gradient(179deg, #d64646 49.16%, #c82c07 88.24%);
+color: #4d1105;">
+  <button class="w3-bar-item w3-button " onclick="opentab('about')" >=</button>
+  <button class="w3-bar-item w3-button" onclick="opentab('home')" style="">Original</button>
+  
 
-  <button class=" btn--rematch-front w3-hide" onclick="opentab('home')" id='btn-rematchxxx' type='reset' >Jugar de nuevo</button>
-  <button class=" btn--rematch-front" id='btn-mode' onclick="opentab('home')">Los Simpson</button>
-  <button class=" btn--rematch-front" onclick="opentab('lamp')">Ganaste</button>
+  
+  <button class="w3-bar-item w3-button" id='btn-mode' onclick="opentab('home')">Los Simpson</button>
+  <button class="w3-bar-item w3-button" onclick="opentab('lamp')">Ganaste</button>
  
   <span onclick="opentab('home')">
-    <button class='  btn--rematchxxx '  id='btn-rematch' type='reset' >
+    <button class='w3-bar-item w3-button btn--rematch '  id='btn-rematch' type='reset' >
       <span class='btn--rematch-front' ></span>
         Jugar de nuevo
       </span>    

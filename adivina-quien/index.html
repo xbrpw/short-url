@@ -52,7 +52,7 @@
 <meta property="og:image:secure_url" content="https://www.xbr.pw/og-image.webp" />
 <meta property="og:image:width" content="1080" />
 <meta property="og:image:height" content="400" />
-<link rel="stylesheet" href="https://xbrpw.github.io/w/weui.css">
+<!-- <link rel="stylesheet" href="https://xbrpw.github.io/w/weui.css"> -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
 <link href="https://xbrpw.github.io/assets/fontawesome/css/all.min.css" rel="stylesheet"> 
 <link href="https://xbrpw.github.io/assets/fontawesome/css/regular.min.css" rel="stylesheet">
@@ -64,6 +64,30 @@
 
 </head>
 <body>
+  
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-bar btn--rematch">
+  <button class=" btn--rematch-front" onclick="opentab('home')">Original</button>
+  <button class=" btn--rematch-front w3-hide" onclick="opentab('about')" >2</button>
+
+  <button class=" btn--rematch-front w3-hide" onclick="opentab('home')" id='btn-rematchxxx' type='reset' >Jugar de nuevo</button>
+  <button class=" btn--rematch-front" id='btn-mode' onclick="opentab('home')">Los Simpson</button>
+  <button class=" btn--rematch-front" onclick="opentab('lamp')">Ganaste</button>
+ 
+  <span onclick="opentab('home')">
+    <button class='  btn--rematchxxx '  id='btn-rematch' type='reset' >
+      <span class='btn--rematch-front' ></span>
+        Jugar de nuevo
+      </span>    
+    </button>
+  </span>
+
+</div>
+
+<div id="home" class=" tab">
 <!-- partial:index.partial.html -->
 <div class='container'>
   <form class='board  ' id='board'>
@@ -247,7 +271,7 @@
           Interact with people on the same room… while on keyboard :v
         </small>
       </h1> -->
-      <button class='btn--rematch' id='btn-rematch' type='reset'>
+      <button class='btn--rematch w3-hide' id='btn-rematchxxx' type='reset'>
         <span class='btn--rematch-front'>
           Jugar de nuevo
         </span>
@@ -255,14 +279,34 @@
     </footer>
   </form>
 </div>
-<div class=' w3-display-topmiddle' style="z-index:3">
-  <input class='btn--mode__input' id='btn-mode' type='checkbox'>
-  <label class='btn--mode__label w3-text-white' for='btn-mode'>
-    Special Mode
-    <i aria-hidden='true'></i>
-  </label>
-</div>
+
 <!-- partial -->
+</div>
+
+<div id="about" class="tab" style="display:none">
+
+</div>
+
+<div id="lamp" class=" tab" style="display:none">
+  <iframe src="./has-ganado/index.html" 
+  name="iframe_b" height="676px" width="650px" title="Iframe Example" style="border:none;" allowfullscreen ></iframe>
+  <p><a href="./has-ganado/index.html" target="iframe_b" class="w3-hide">Notas</a></p>
+  <a href="./react-confetti/index.html" target="iframe_b" class="w3-hide">Siteoly Hihello.monster</a><br>
+</div>
+
+<script>
+function opentab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";  
+}
+</script>
+
+
+
   <script  src="./script.js"></script>
 
 </body>

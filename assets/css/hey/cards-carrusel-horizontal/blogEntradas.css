@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:400,600,700');
+/*@import url('https://fonts.googleapis.com/css?family=Hind:400,600,700');*/
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -22,8 +24,9 @@
   min-height: 100vh;
   margin: 0;
   font-family: 'Hind', sans-serif;
+  /*font-family: "Lora", serif;*/
   font-weight: 400;
-  background: #f7f6fe;
+  /*background: #f7f6fe;*/
   -webkit-font-smoothing: antialiased;
 }
 
@@ -40,7 +43,7 @@
 }
 
 .header-title-entrada {
-  color: #343538;
+  color: #071e63;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 15px 0;

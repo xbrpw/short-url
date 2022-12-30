@@ -44,6 +44,7 @@ function createTextAnimation() {
     bevelSize:2,
     bevelThickness:2,
     bevelEnabled:true,
+    contenteditable:true,
     anchor:{x:0.5, y:0.5, z:0.0}
   });
 

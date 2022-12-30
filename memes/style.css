@@ -32,7 +32,7 @@
   }
 }
 .hero {
-  background-image: url("//i.imgur.com/plKLFPb.jpg");
+  /*background-image: url("//i.imgur.com/plKLFPb.jpg");*/
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -41,16 +41,15 @@
   text-align: center;
 }
 .hero img {
-  border: 2px solid #000;
+  /*border: 2px solid #000;*/
   max-height: 30vh;
   max-width: 70vw;
 }
 .hero h1,
 h2 {
-  font-size: 5vw;
-  color: #fff;
+  font-size: 5vw;  
   font-family: arial;
-  text-shadow: 2px 2px 10px #000;
+  /*text-shadow: 2px 2px 10px #000;*/
   margin-bottom: 0;
 }
 .hero h2 {

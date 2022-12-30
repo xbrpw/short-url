@@ -9,8 +9,9 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFC568;
-  font-size: 62.5%;
+  /*background-color: #FFC568;
+  background: linear-gradient(45deg, #042461 0%, rgba(225, 5, 34, 0) 70%), linear-gradient(135deg, #340447 10%, rgba(49, 5, 209, 0) 80%), linear-gradient(225deg, #0f053a 10%, rgba(10, 219, 216, 0) 80%), linear-gradient(315deg, #050813 100%, rgba(9, 245, 5, 0) 70%);/*/
+  font-size: 52.5%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media screen and (max-width: 520px) {
@@ -37,19 +38,20 @@ html, body {
 
 .line {
   fill: none;
-  stroke: #FFFFFF;
+  /*stroke: #ffffff;*/
+  stroke:#a30101; 
   stroke-width: 8;
   stroke-linecap: round;
   stroke-miterlimit: 10;
 }
 
 .lttr {
-  fill: #763C8C;
+  fill: #7a6481;
 }
 
 .sound {
   position: fixed;
-  color: #763C8C;
+  color: #ffffff;
   font-size: 1.6rem;
   bottom: 1rem;
   right: 1rem;

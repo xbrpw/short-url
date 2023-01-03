@@ -1,0 +1,112 @@
+html {
+  font-size: 14px;
+  font-family: "Transpass", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: gold;
+}
+
+.timer, .pts {
+  position: absolute;
+  left: 0;
+  margin: 0.5rem;
+}
+
+.pts {
+  opacity: 0.6;
+  line-height: 1;
+  font-size: 4rem;
+  font-weight: bold;
+  left: auto;
+  right: 0;
+}
+
+circle {
+  stroke: gold;
+  stroke-width: 2;
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray 100ms linear;
+}
+
+svg {
+  transform: rotate(-90deg);
+  fill: red;
+  border-radius: 50%;
+  display: block;
+  width: 5rem;
+  height: 5rem;
+}
+
+.fullScreen {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.gameScreen {
+  font-size: 4rem;
+}
+
+button {
+  font-size: 4rem;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  border-radius: 0.2rem;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 20vw;
+  box-sizing: border-box;
+}
+button:focus-within, button:focus {
+  background: #fff;
+}
+
+.question {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+.question div {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+  flex: 0 1 auto;
+}
+.question div.questionNbr {
+  font-size: 4rem;
+}
+.question div:last-child {
+  flex: 0 0 100%;
+}
+
+.answers {
+  margin-top: 2rem;
+}
+
+.startScreen button {
+  font-size: 2rem;
+}
+
+.waitScreen {
+  background: red;
+}
+
+.content {
+  margin: auto;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+  visibility: none;
+}

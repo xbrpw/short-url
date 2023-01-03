@@ -1,0 +1,115 @@
+#circles {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+}
+
+#circles div {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #269911;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  -webkit-animation-name: growCircles;
+  -moz-animation-name: growCircles;
+  animation-name: growCircles;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+#circles div:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#circles div:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+#circles div:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+#circles div:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+#circles div:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+@-webkit-keyframes growCircles {
+  0% {
+    top: 50px;
+    left: 50px;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes growCircles {
+  0% {
+    top: 50px;
+    left: 50px;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes growCircles {
+  0% {
+    top: 50px;
+    left: 50px;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    opacity: 0;
+  }
+}

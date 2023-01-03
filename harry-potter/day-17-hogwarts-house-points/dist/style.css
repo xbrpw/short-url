@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  background-color: #1f1f1f;
+  font-family: 'IM Fell Great Primer', serif;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+	justify-content: space-evenly;
+  height: 60%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.banner-one, .banner-two, .banner-three, .banner-four {
+  -webkit-clip-path: polygon(100% 0, 100% 58%, 100% 83%, 50% 67%, 0 83%, 0% 0%);
+  clip-path: polygon(100% 0, 100% 58%, 100% 83%, 50% 67%, 0 83%, 0% 0%);
+  height: 400px;
+  width: 200px;
+}
+
+.banner-one {background-color: #891204;}
+.banner-two {background-color: #1D3666;}
+.banner-three {background-color: #DC9915;}
+.banner-four {background-color: #135035;}
+
+p {
+  text-align: center;
+  font-size: 5em;
+}
+
+.banner-one > p {color: #DC9915;}
+.banner-two > p {color: #A06020;}
+.banner-four > p {color: #847062;}
+
+.description {
+  text-align: center;
+  color: #5f5f5f;
+  font-size: 1.75em;
+}
+
+/*******************
+ * Counter Buttons *
+ *******************/
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+	justify-content: space-evenly;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+button {
+  color: #5e5e5e;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 3%;
+  font-size: 1.5em;
+  transition: all 300ms ease;
+}
+
+#gryffindor {
+  border: solid #891204 2px;
+  color: #891204;
+}
+#gryffindor:hover {
+  background-color: #891204;
+  transition: all 300ms ease;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+
+#ravenclaw {
+  border: solid #1D3666 2px;
+  color: #1D3666;
+}
+
+#ravenclaw:hover {
+  background-color: #1D3666;
+  transition: all 300ms ease;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+
+#hufflepuff {
+  border: solid #DC9915 2px;
+  color: #DC9915;
+}
+
+#hufflepuff:hover {
+  background-color: #DC9915;
+  transition: all 300ms ease;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+
+#slytherin {
+  border: solid #135035 2px;
+  color: #135035;
+}
+
+#slytherin:hover {
+  background-color: #135035;
+  transition: all 300ms ease;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+
+button:focus {
+  outline: 0;
+}

@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url("https://user-images.githubusercontent.com/26748614/112761429-96882480-8ffb-11eb-8c45-3be3fa1a41f2.jpg");
+    background-color:white;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* === Button === */
+.btn {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn .spinningColors {
+    width: 130px;
+    height: 130px;
+    -webkit-animation: rotate 1s infinite linear;
+            animation: rotate 1s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn .spinningColors span {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    background: linear-gradient(to right, #f7ff00, #c92470);
+}
+
+.btn .spinningColors span:nth-child(1) {
+    filter: blur(5px);
+}
+
+.btn .spinningColors span:nth-child(2) {
+    filter: blur(10px);
+}
+
+.btn .spinningColors span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.btn .spinningColors span:nth-child(4) {
+    filter: blur(50px);
+}
+
+.btn .badge {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    background-color: #fae0e9;
+}
+
+.btn .badge:hover,
+.btn .badge:active {
+    /*the duration of this animation is determined dynamically in js*/
+    -webkit-animation: btnScale var(--timeOffset) infinite;
+            animation: btnScale var(--timeOffset) infinite;
+}
+
+@-webkit-keyframes btnScale {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes btnScale {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.btn .btnText {
+    font-family: 'Carter One', cursive;
+    font-size: 32px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+
+/* === Gradien === */
+.gradient {
+    height: 100vh;
+    width: 100%;
+}
+
+/* === Info Panel === */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #21201f;
+    color: #ffffff;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 17px;
+    padding: 6px 0;
+}
+
+footer div {
+    width: 790px;
+    margin: 0 auto;
+}
+
+footer p {
+    float: left;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+footer ul li a {
+    display: block;
+    text-decoration: none;
+    color: #d9a20e;
+    font-size: 25px;
+    font-family: 'Kaushan Script', cursive;
+    transition: color .5s;
+}
+
+footer ul li a:hover {
+    color: #98570c;
+}

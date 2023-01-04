@@ -5,38 +5,27 @@
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+  -webkit-text-size-adjust: 100%;}
 
-body {
-  margin: 0;
-}
+body {margin: 0;}
 
-footer {
-  display: block;
-}
+footer {display: block;}
 
 a {
-  background: transparent;
-}
+  background: transparent;}
 
 a:active, a:hover {
-  outline: 0;
-}
+  outline: 0;}
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+h1 {font-size: 2em;margin: 0.67em 0;}
 
 img {
-  border: 0;
-}
+  border: 0;}
 
 @media print {
   * {
     text-shadow: none !important;
-    color: #000 !important;
+    color: rgb(0, 0, 0) !important;
     background: transparent !important;
     box-shadow: none !important;
   }
@@ -57,11 +46,7 @@ img {
     max-width: 100% !important;
   }
 }
-@font-face {
-  font-family: "Glyphicons Halflings";
-  src: url("./glyphicons-halflings-regular.eot");
-  src: url("./glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("./glyphicons-halflings-regular.woff") format("woff"), url("./glyphicons-halflings-regular.ttf") format("truetype"), url("./glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
-}
+
 
 * {
   box-sizing: border-box;
@@ -80,17 +65,14 @@ body {
   font-family: benton-sans, "Helvetica Neue", helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #3f3f44;
+  background-color: black;
 
 }
 
-a {
-  color: #79589f;
-  text-decoration: none;
-}
+a {text-decoration: none;}
 
 a:hover, a:focus {
-  color: #5f467e;
+
   text-decoration: underline;
 }
 
@@ -108,7 +90,6 @@ h1 {
   font-family: inherit;
   font-weight: 200;
   line-height: 1.1;
-  color: #79589f;
 }
 
 h1 {
@@ -129,7 +110,7 @@ ul {
 
 .dot {
   animation:yellowWipeDown 5s ease-out;
-  background-color:#1a0541;
+  background-color:white;
   box-shadow:none;
   height:100vh;
   left:0;
@@ -142,11 +123,11 @@ ul {
 
 @keyframes yellowWipeDown {
   0% {
-    box-shadow:0 0 1vmin 1vmin #1d0250;
+    box-shadow:0 0 1vmin 1vmin rgba(212, 200, 200, 0.884); 
     height:1vmin;
   }
   100% {
-    box-shadow:0 0 10vmin 10vmin #1a0541;
+    box-shadow:0 0 10vmin 10vmin rgba(255, 255, 255, 0.774);
     height:100vh;
   }
 }
@@ -193,26 +174,13 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: "benton-sans";
-  font-weight: 200;
-  font-style: normal;
-  src: url("//www.herokucdn.com/fonts/bentonsans-book.eot");
-  src: url("//www.herokucdn.com/fonts/bentonsans-book.eot?#iefix") format("embedded-opentype"), url("//www.herokucdn.com/fonts/bentonsans-book.woff") format("woff"), url("//www.herokucdn.com/fonts/bentonsans-book.ttf") format("truetype"), url("//www.herokucdn.com/fonts/bentonsans-book.svg#benton-sans") format("svg");
-}
+
 @font-face {
   font-family: "benton-sans";
   font-weight: normal;
   font-style: normal;
   src: url("//www.herokucdn.com/fonts/bentonsans-regular.eot");
   src: url("//www.herokucdn.com/fonts/bentonsans-regular.eot?#iefix") format("embedded-opentype"), url("//www.herokucdn.com/fonts/bentonsans-regular.woff") format("woff"), url("//www.herokucdn.com/fonts/bentonsans-regular.ttf") format("truetype"), url("//www.herokucdn.com/fonts/bentonsans-regular.svg#benton-sans") format("svg");
-}
-@font-face {
-  font-family: "benton-sans";
-  font-weight: bold;
-  font-style: normal;
-  src: url("//www.herokucdn.com/fonts/bentonsans-medium.eot");
-  src: url("//www.herokucdn.com/fonts/bentonsans-medium.eot?#iefix") format("embedded-opentype"), url("//www.herokucdn.com/fonts/bentonsans-medium.woff") format("woff"), url("//www.herokucdn.com/fonts/bentonsans-medium.ttf") format("truetype"), url("//www.herokucdn.com/fonts/bentonsans-medium.svg#benton-sans") format("svg");
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
@@ -245,7 +213,6 @@ html, body {
 
 .container .content {
   margin-bottom: 90px;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 h1.logo {
@@ -283,19 +250,18 @@ h1.logo a:before {
   height: 170px;
   padding: 26.66667px 0;
   text-align: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.514) 0, rgba(5, 35, 165, 0.2) 50%, rgba(255, 255, 255, 0.514) 100%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
 }
 
 .logo-sfdc a {
   display: block;
-  color: #9e93ab;
-  color: rgba(255, 255, 255, 0.4);
+
   text-decoration: none;
-  
+  color: black;
   letter-spacing: 0.05em;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .logo-sfdc a span {
@@ -339,10 +305,9 @@ h1.logo a:before {
   font-size: 12px;
   font-weight: bold;
   text-transform: none;
-  letter-spacing: 0;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0;  color: black;
 }
 
 .legal a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: black;
 }

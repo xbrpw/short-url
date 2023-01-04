@@ -44,7 +44,7 @@ function updateDOM() {
 		if (distance <= 0) {
 			countdownEl.hidden = true;
 			clearInterval(countdownActive);
-			completeElInfo.textContent = `${countdownTitle} was finished on ${countdownDate}`;
+			completeElInfo.textContent = `${countdownTitle} - ${countdownDate}`;
 			completeEl.hidden = false;
 		} else {
 			// show countdown in progress
@@ -72,7 +72,7 @@ function updateCountdown(e) {
 	localStorage.setItem("countdown", JSON.stringify(savedCountdown));
 	// check for validate
 	if (countdownDate === "" || countdownTitle === "") {
-		alert("incomplete form");
+		alert("Formato incompleto");
 	} else {
 		//   Get Number version of current date, update DOM
 		countdownValue = new Date(countdownDate).getTime();

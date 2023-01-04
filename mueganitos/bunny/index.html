@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bunny</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+  background: #F9C2D1;
+  overflow: hidden; display: flex;
+                    justify-content: center;
+                    align-items: center;
+}
+
+.box {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 420px;
+}
+
+.head {
+  position: absolute;
+  width: 33%;
+  height: 40%;
+  background: #F6E8E6;
+  left: 30%;
+  top: 35%;
+  border-radius: 50%;
+}
+
+.ear-left {
+  position: absolute;
+  background: #F6E8E6;
+  width: 33%;
+  height: 80%;
+  bottom: 80%;
+  left: 10%;
+  border-radius: 50% 50% 0% 0%;
+  animation: moveLeft 2s infinite;
+}
+
+.ear-right {
+  position: absolute;
+  background: #F6E8E6;
+  width: 33%;
+  height: 80%;
+  bottom: 80%;
+  right: 10%;
+  border-radius: 50% 50% 0% 0%;
+  animation: moveRight 2s infinite;
+}
+
+.inner-ear {
+  position: absolute;
+  background: #FFDDE2;
+  width: 70%;
+  height: 77%;
+  left: 15%;
+  top: 12%;
+  border-radius: 50% 50% 10% 10%;
+}
+
+.eye-left {
+  position: absolute;
+  background: #818181;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 20%;
+  z-index: 3;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.eye-right {
+  position: absolute;
+  background: #818181;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  right: 20%;
+  z-index: 3;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.pupil {
+  position: absolute;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  left: 23%;
+  top: 15%;
+  background: #ffffff;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.nose {
+  position: absolute;
+  background: #818181;
+  width: 15px;
+  height: 10px;
+  top: 60%;
+  left: 46%;
+  border-radius: 50%;
+}
+
+.line {
+  position: absolute;
+  border-left: solid 4px #818181;
+  height: 200%;
+  top: 20%;
+  left: 37%;
+  border-radius: 20%;
+}
+
+.blush-right {
+  position: absolute;
+  background: #FFDDE2;
+  width: 15%;
+  height: 14%;
+  border-radius: 50%;
+  top: 59%;
+  right: 13%;
+}
+
+.blush-left {
+  position: absolute;
+  background: #FFDDE2;
+  width: 15%;
+  height: 14%;
+  border-radius: 50%;
+  top: 59%;
+  left: 13%;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: rotate(20deg);
+    transform-origin: bottom right;
+  }
+  50% {
+    transform: rotate(25deg);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(20deg);
+    transform-origin: bottom right;
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: rotate(-20deg);
+    transform-origin: bottom left;
+  }
+  50% {
+    transform: rotate(-25deg);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(-20deg);
+    transform-origin: bottom left;
+  }
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="box">
+  <div class="head">
+    <div class="ear-left">
+      <div class="inner-ear"></div>
+    </div>
+    <div class="ear-right">
+      <div class="inner-ear"></div>
+    </div>
+    <div class="eye-left animated pulse">
+      <div class="pupil animated pulse"></div>
+    </div>
+    <div class="eye-right animated pulse">
+      <div class="pupil animated pulse"></div>
+    </div>
+    <div class="nose">
+      <div class="line"></div>
+    </div>
+    <div class="blush-left"></div>
+    <div class="blush-right"></div>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

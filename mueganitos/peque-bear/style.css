@@ -1,0 +1,179 @@
+html {
+  display: grid;
+  overflow: hidden; 
+}
+
+
+
+.container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 600px;
+  height: 550px;
+}
+
+.head {
+  position: absolute;
+  width: 30%;
+  height: 32%;
+  top: 15%;
+  left: 35%;
+  background: #936951;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.head-copy {
+  position: absolute;
+  width: 30%;
+  height: 32%;
+  top: 15%;
+  left: 35%;
+  background: #936951;
+  border-radius: 50%;
+}
+
+.ear {
+  position: absolute;
+  background: #936951;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.left {
+  left: -15px;
+}
+
+.right {
+  right: -15px;
+}
+
+.inner-ear {
+  position: absolute;
+  background: #EACEB4;
+  height: 25px;
+  width: 40px;
+  border-radius: 40px 40px 0 0;
+}
+
+.rotateleft {
+  transform: rotate(-40deg);
+  top: 15px;
+  left: 10px;
+}
+
+.rotateright {
+  transform: rotate(40deg);
+  top: 15px;
+  right: 10px;
+}
+
+.eyes {
+  position: absolute;
+  background: #000000;
+  z-index: 3;
+  width: 15px;
+  height: 15px;
+  top: 45%;
+  border-radius: 50%;
+}
+
+.eye-left {
+  left: 49px;
+}
+
+.eye-right {
+  right: 49px;
+}
+
+.inner-eye {
+  background: #FFF1E4;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  left: 6px;
+  top: 6px;
+}
+
+.mouth-area {
+  position: absolute;
+  background: #EACEB4;
+  width: 60%;
+  height: 45%;
+  left: 20%;
+  top: 48%;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.blush {
+  position: absolute;
+  background: #F2BFC7;
+  width: 17%;
+  height: 16%;
+  border-radius: 50%;
+  top: 13%;
+  opacity: 0.7;
+}
+
+.blush-left {
+  left: -5px;
+}
+
+.blush-right {
+  right: -5px;
+}
+
+.nose {
+  position: absolute;
+  height: 14px;
+  width: 19px;
+  background: #000000;
+  border-radius: 50%;
+  left: 41%;
+}
+
+.inner-nose {
+  background: #FFF1E4;
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  left: 5px;
+  top: 2px;
+  border-radius: 50%;
+}
+
+.smile {
+  position: absolute;
+  top: 22%;
+  left: 46px;
+  width: 10px;
+  height: 10px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: transparent #000000 #000000 transparent;
+  transform: rotate(45deg);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 0.7em;
+}
+footer p {
+  letter-spacing: 3px;
+}
+footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #7d7d7d;
+}

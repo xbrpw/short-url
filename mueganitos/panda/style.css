@@ -1,0 +1,152 @@
+body {
+  background-color: #FF9F9E;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 10%;
+  width: 600px;
+  height: 420px;
+}
+
+.head, .head-copy, .ears-left, .ears-right, .patch-left, .patch-right, .blush-left, .blush-right, .eye-left, .eye-right, .nose, .mouth, .mouth2 {
+  position: absolute;
+}
+
+.head {
+  top: 10%;
+  left: 32.5%;
+  background: #FAF3DD;
+  width: 35%;
+  height: 45%;
+  border-radius: 60% 60% 90px 90px;
+}
+
+.head-copy {
+  width: 100%;
+  height: 100%;
+  background: #FAF3DD;
+  border-radius: 60% 60% 90px 90px;
+  z-index: 1;
+}
+
+.ears-left {
+  top: -1%;
+  left: -10%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: #000000;
+}
+
+.ears-right {
+  top: -1%;
+  right: -10%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: #000000;
+}
+
+.patch-left {
+  top: 43%;
+  left: 8%;
+  width: 32%;
+  height: 40%;
+  border-radius: 50% 50% 30px 30px;
+  transform: rotate(35deg);
+  background: #000000;
+  z-index: 2;
+}
+
+.patch-right {
+  top: 43%;
+  right: 8%;
+  width: 32%;
+  height: 40%;
+  border-radius: 50% 50% 30px 30px;
+  transform: rotate(-35deg);
+  background: #000000;
+  z-index: 2;
+}
+
+.blush-left {
+  top: 93%;
+  left: 23%;
+  width: 35%;
+  height: 20%;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  background: #FF9F9E;
+  opacity: 0.8;
+}
+
+.blush-right {
+  top: 93%;
+  right: 23%;
+  width: 35%;
+  height: 20%;
+  border-radius: 50%;
+  transform: rotate(30deg);
+  background: #FF9F9E;
+  opacity: 0.8;
+}
+
+.eye-left {
+  top: 30%;
+  left: 22%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: #FAF3DD transparent transparent #FAF3DD;
+  transform: rotate(15deg);
+}
+
+.eye-right {
+  top: 30%;
+  left: 22%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: #FAF3DD transparent transparent #FAF3DD;
+  transform: rotate(75deg);
+}
+
+.nose {
+  top: 70%;
+  left: 46%;
+  width: 18px;
+  background: #000000;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.mouth {
+  top: 78%;
+  left: 45%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: transparent #000000 #000000 transparent;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.mouth2 {
+  top: 78%;
+  left: 51%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: transparent #000000 #000000 transparent;
+  transform: rotate(45deg);
+  z-index: 2;
+}

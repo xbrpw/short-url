@@ -215,7 +215,58 @@
     <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
         <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
         <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Image Grid</a>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">About me</a>
+        <div id="DarkMode-Localstorage" class="w3-bar-item w3-button w3-center w3-padding-16">
+            <style>
+              body {
+                color: black; 
+                background-color: white;
+              }
+              body.dark {
+                color: white; 
+                background-color: black;
+              }
+            </style>
+          
+            <span id="theme-toggle">Dark Mode</span>
+          
+            <script>
+              var darkMode = false;
+          
+              // default to system setting
+              if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                darkMode = true;
+              }
+          
+              // preference from localStorage should overwrite
+              if (localStorage.getItem('theme') === 'dark') {
+                darkMode = true;
+              } else if (localStorage.getItem('theme') === 'light') {
+                darkMode = false;
+              }
+          
+              if (darkMode) {
+                document.body.classList.toggle('dark');
+              }
+          
+              document.addEventListener('DOMContentLoaded', () => {
+          
+                  document.getElementById('theme-toggle').addEventListener('click', () => {
+                  document.body.classList.toggle('dark');
+                    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+                });
+          
+              });  
+            </script>
+          
+          </div>
+        <div class="w3-bar-item w3-button w3-center w3-padding-16" id="myHeader">
+            <span>Click on the buttons to change the grid view.</span><br><br>
+            <span class="btn" onclick="one()" >1</span>
+            <span class="btn " onclick="two()">2</span>
+            <span class="btn active" onclick="four()">4</span>
+        </div>
+     
     </nav>
 
     <!-- Top menu on small screens -->
@@ -240,7 +291,6 @@
         
         .header {
             text-align: center;
-            padding: 32px;
         }
         
         .row {
@@ -250,20 +300,20 @@
             -ms-flex-wrap: wrap;
             /* IE 10 */
             flex-wrap: wrap;
-            padding: 0 4px;
+            padding: 2px 2px 2px 2px;
             overflow: hidden;
         }
         /* Create two equal columns that sits next to each other */
         
         .column {
-            -ms-flex: 50%;
+            -ms-flex: 25%;
             /* IE 10 */
-            flex: 50%;
-            padding: 0 4px;
+            flex: 25%;
+            padding: 2px 2px 2px 2px;
         }
         
         .column img {
-            margin-top: 8px;
+            margin-top: 6px;
             vertical-align: middle;
         }
         /* Style the buttons */
@@ -271,14 +321,13 @@
         .btn {
             border: none;
             outline: none;
-            padding: 10px 16px;
-            background-color: #f1f1f1;
+            padding: 14px 14px;            
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px;
         }
         
         .btn:hover {
-            background-color: #ddd;
+            background-color: #f1f1f1;
         }
         
         .btn.active {
@@ -405,1010 +454,286 @@
         }
     </style>
 
-    <!-- Header --><br><br><br><br><br>
-    <div class="header" id="myHeader">
-        <p>Click on the buttons to change the grid view.</p>
-        <button class="btn" onclick="one()">1</button>
-        <button class="btn " onclick="two()">2</button>
-        <button class="btn active" onclick="four()">4</button>
-    </div>
+    <br><br><br><br><br>
+   
 
 <div class="row">
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (1)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (2)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (2).png	" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (29).jpeg	" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (3) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (3)-vectormaker-co (1).svg	" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (3)-vectormaker-co (2).svg	" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (3)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (3).png	" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (31).jpeg	" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (32).jpeg	" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (4)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (45).jpeg	" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (46).jpeg	" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (47).jpeg	" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (48).jpeg	" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (49).jpeg	" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (5) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (6) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/_ (8) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/#dbz #naruto #university #iphone wallpaper #android wallpaper.jpeg	" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/01223c231f8a1f3a5a9f85404e3df97d.jpg	" style="width:100%" onclick="openModal();currentSlide(22)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/05ece1a99e4d9dd9283fe211bd309cb3.jpg	" style="width:100%" onclick="openModal();currentSlide(23)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/15b52d7081fa101825b47facf28931c1.jpg	" style="width:100%" onclick="openModal();currentSlide(24)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1671405464414.png	" style="width:100%" onclick="openModal();currentSlide(25)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672194128157.png	" style="width:100%" onclick="openModal();currentSlide(26)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672207639362.png	" style="width:100%" onclick="openModal();currentSlide(27)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672207822176.png	" style="width:100%" onclick="openModal();currentSlide(28)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208048836.png	" style="width:100%" onclick="openModal();currentSlide(29)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208085221.png	" style="width:100%" onclick="openModal();currentSlide(30)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208146332.png	" style="width:100%" onclick="openModal();currentSlide(31)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208217398.png	" style="width:100%" onclick="openModal();currentSlide(32)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208358503.png	" style="width:100%" onclick="openModal();currentSlide(33)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208449610.png	" style="width:100%" onclick="openModal();currentSlide(34)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208561439.png	" style="width:100%" onclick="openModal();currentSlide(35)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208775461.png	" style="width:100%" onclick="openModal();currentSlide(36)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672208944379.png	" style="width:100%" onclick="openModal();currentSlide(37)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672212752205.png	" style="width:100%" onclick="openModal();currentSlide(38)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672279748829.png	" style="width:100%" onclick="openModal();currentSlide(39)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672279830754.png	" style="width:100%" onclick="openModal();currentSlide(40)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672279917404.png	" style="width:100%" onclick="openModal();currentSlide(41)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672279971062.png	" style="width:100%" onclick="openModal();currentSlide(42)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672280174879.png	" style="width:100%" onclick="openModal();currentSlide(43)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672316688752.png	" style="width:100%" onclick="openModal();currentSlide(44)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672316723499.png	" style="width:100%" onclick="openModal();currentSlide(45)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672316874892.png	" style="width:100%" onclick="openModal();currentSlide(46)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672365424709.png	" style="width:100%" onclick="openModal();currentSlide(47)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672691044217.png	" style="width:100%" onclick="openModal();currentSlide(48)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672723268463.png	" style="width:100%" onclick="openModal();currentSlide(49)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672784839470.png	" style="width:100%" onclick="openModal();currentSlide(50)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672789649481.png	" style="width:100%" onclick="openModal();currentSlide(51)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672790628216.png	" style="width:100%" onclick="openModal();currentSlide(52)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672791156126.png	" style="width:100%" onclick="openModal();currentSlide(53)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672795273920.png	" style="width:100%" onclick="openModal();currentSlide(54)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672796090086.png	" style="width:100%" onclick="openModal();currentSlide(55)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672796214687.png	" style="width:100%" onclick="openModal();currentSlide(56)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672796265318.png	" style="width:100%" onclick="openModal();currentSlide(57)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672796346886.png	" style="width:100%" onclick="openModal();currentSlide(58)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/1672796522352.png	" style="width:100%" onclick="openModal();currentSlide(59)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/18bb9391e1ff81e6dc48329038d4c11d.jpg	" style="width:100%" onclick="openModal();currentSlide(60)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/33a55646b7110c8caf00cf80ca613080.jpg	" style="width:100%" onclick="openModal();currentSlide(61)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/3798c94c779a461281d3b62926bd9abb.jpg	" style="width:100%" onclick="openModal();currentSlide(62)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/3d630fbe9d5771f7d3967f11eed746b9.jpg	" style="width:100%" onclick="openModal();currentSlide(63)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/42d56c0864bad050be089e13584989db.jpg	" style="width:100%" onclick="openModal();currentSlide(64)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/474230f53e6b4ff5c5689de209e99a55.jpg	" style="width:100%" onclick="openModal();currentSlide(65)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/5dcbacc68e4f02462d98894a1e67e980.jpg	" style="width:100%" onclick="openModal();currentSlide(66)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/6723a54c4bd80a42f8702dcab4ee60b3.jpg	" style="width:100%" onclick="openModal();currentSlide(67)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/67d77f87859ab71fe6f8314b977065e6.jpg	" style="width:100%" onclick="openModal();currentSlide(68)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/72214f8f278927c99ed593e43e547bd6 (1).jpg	" style="width:100%" onclick="openModal();currentSlide(69)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/72214f8f278927c99ed593e43e547bd6.jpg	" style="width:100%" onclick="openModal();currentSlide(70)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/780483e73fe14833544a137f32090e38.jpg	" style="width:100%" onclick="openModal();currentSlide(71)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/7e7f97fa485a3271531aaf13cdedd8a7.jpg	" style="width:100%" onclick="openModal();currentSlide(72)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/7fb240893d782e0cb80b2daaa2d1d591.jpg	" style="width:100%" onclick="openModal();currentSlide(73)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/845bb5326ba1e56471f34dd7302c7c3a.jpg	" style="width:100%" onclick="openModal();currentSlide(74)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/87dc822c6cc537d7aedcffad8c3a9896.jpg	" style="width:100%" onclick="openModal();currentSlide(75)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/90s Stickers for Sale.jpeg	" style="width:100%" onclick="openModal();currentSlide(76)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/972f4bbde86550b61e042c3df17474fc (1).jpg	" style="width:100%" onclick="openModal();currentSlide(77)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/991851432f877d409b8fe28ded66ac5f.jpg	" style="width:100%" onclick="openModal();currentSlide(78)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/9fedea57d82d5b3e1e114b98dca52d7c.jpg	" style="width:100%" onclick="openModal();currentSlide(79)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/ace-tired.svg	" style="width:100%" onclick="openModal();currentSlide(80)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/ad9dd1312f77ca052d0972e6551e1154.jpg	" style="width:100%" onclick="openModal();currentSlide(81)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/albbura.jpg	" style="width:100%" onclick="openModal();currentSlide(82)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/b70ea13cbef605af5526e9ff3bcb53c4.jpg	" style="width:100%" onclick="openModal();currentSlide(83)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/ba09d816909ec7227d92e2788ec9b554.jpg	" style="width:100%" onclick="openModal();currentSlide(84)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/BackgroundEraser_20221221_181406523.png	" style="width:100%" onclick="openModal();currentSlide(85)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/BackgroundEraser_20221221_185208818.png	" style="width:100%" onclick="openModal();currentSlide(86)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/BackgroundEraser_20221230_082004080.png	" style="width:100%" onclick="openModal();currentSlide(87)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/BackgroundEraser_20230102_221111617.png	" style="width:100%" onclick="openModal();currentSlide(88)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/badyear.jpg	" style="width:100%" onclick="openModal();currentSlide(89)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/bb-pig.jpg	" style="width:100%" onclick="openModal();currentSlide(90)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/beb11783f8691d75fd62846481722dba.jpg	" style="width:100%" onclick="openModal();currentSlide(91)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/Beethoven.jpg	" style="width:100%" onclick="openModal();currentSlide(92)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/bf48e9a1-9db3-400f-9920-c719e766fe85.jpeg	" style="width:100%" onclick="openModal();currentSlide(93)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/BONESTUDIO_NET _ Custom T Shirts Store.png	" style="width:100%" onclick="openModal();currentSlide(94)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/butnam.png	" style="width:100%" onclick="openModal();currentSlide(95)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/calvin-Klain-logo.svg	" style="width:100%" onclick="openModal();currentSlide(96)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/cfa6600e0b8c4de16e23c316b8a1e504.jpg	" style="width:100%" onclick="openModal();currentSlide(97)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/channel.jpg	" style="width:100%" onclick="openModal();currentSlide(98)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/Cómo se pronuncian algunas de las marcas que más conocemos.jpeg	" style="width:100%" onclick="openModal();currentSlide(99)" class="hover-shadow cursor" alt="alt"></div>
-<div class="column"><img src="https://xbrpw.github.io/img/marcas/pw.github.io/img/marcas/condones-rolex.jpeg	" style="width:100%" onclick="openModal();currentSlide(100)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (1)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	1	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (2)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	2	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (2).png	" style="width:100%" onclick="openModal();currentSlide(	3	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (29).jpeg	" style="width:100%" onclick="openModal();currentSlide(	4	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (3) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(	5	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (3)-vectormaker-co (1).svg	" style="width:100%" onclick="openModal();currentSlide(	6	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (3)-vectormaker-co (2).svg	" style="width:100%" onclick="openModal();currentSlide(	7	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (3)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	8	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (3).png	" style="width:100%" onclick="openModal();currentSlide(	9	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (30).jpeg	" style="width:100%" onclick="openModal();currentSlide(	10	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (31).jpeg	" style="width:100%" onclick="openModal();currentSlide(	11	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (32).jpeg	" style="width:100%" onclick="openModal();currentSlide(	12	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (4)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	13	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (45).jpeg	" style="width:100%" onclick="openModal();currentSlide(	14	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (46).jpeg	" style="width:100%" onclick="openModal();currentSlide(	15	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (47).jpeg	" style="width:100%" onclick="openModal();currentSlide(	16	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (48).jpeg	" style="width:100%" onclick="openModal();currentSlide(	17	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (49).jpeg	" style="width:100%" onclick="openModal();currentSlide(	18	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (5) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(	19	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (6) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(	20	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/_ (8) (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(	21	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/#dbz #naruto #university #iphone wallpaper #android wallpaper.jpeg	" style="width:100%" onclick="openModal();currentSlide(	22	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/01223c231f8a1f3a5a9f85404e3df97d.jpg	" style="width:100%" onclick="openModal();currentSlide(	23	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/05ece1a99e4d9dd9283fe211bd309cb3.jpg	" style="width:100%" onclick="openModal();currentSlide(	24	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/15b52d7081fa101825b47facf28931c1.jpg	" style="width:100%" onclick="openModal();currentSlide(	25	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1671405464414.png	" style="width:100%" onclick="openModal();currentSlide(	26	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672194128157.png	" style="width:100%" onclick="openModal();currentSlide(	27	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672207639362.png	" style="width:100%" onclick="openModal();currentSlide(	28	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672207822176.png	" style="width:100%" onclick="openModal();currentSlide(	29	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208048836.png	" style="width:100%" onclick="openModal();currentSlide(	30	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208085221.png	" style="width:100%" onclick="openModal();currentSlide(	31	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208146332.png	" style="width:100%" onclick="openModal();currentSlide(	32	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208217398.png	" style="width:100%" onclick="openModal();currentSlide(	33	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208358503.png	" style="width:100%" onclick="openModal();currentSlide(	34	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208449610.png	" style="width:100%" onclick="openModal();currentSlide(	35	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208561439.png	" style="width:100%" onclick="openModal();currentSlide(	36	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208775461.png	" style="width:100%" onclick="openModal();currentSlide(	37	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672208944379.png	" style="width:100%" onclick="openModal();currentSlide(	38	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672212752205.png	" style="width:100%" onclick="openModal();currentSlide(	39	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672279748829.png	" style="width:100%" onclick="openModal();currentSlide(	40	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672279830754.png	" style="width:100%" onclick="openModal();currentSlide(	41	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672279917404.png	" style="width:100%" onclick="openModal();currentSlide(	42	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672279971062.png	" style="width:100%" onclick="openModal();currentSlide(	43	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672280174879.png	" style="width:100%" onclick="openModal();currentSlide(	44	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672316688752.png	" style="width:100%" onclick="openModal();currentSlide(	45	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672316723499.png	" style="width:100%" onclick="openModal();currentSlide(	46	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672316874892.png	" style="width:100%" onclick="openModal();currentSlide(	47	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672365424709.png	" style="width:100%" onclick="openModal();currentSlide(	48	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672691044217.png	" style="width:100%" onclick="openModal();currentSlide(	49	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672723268463.png	" style="width:100%" onclick="openModal();currentSlide(	50	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672784839470.png	" style="width:100%" onclick="openModal();currentSlide(	51	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672789649481.png	" style="width:100%" onclick="openModal();currentSlide(	52	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672790628216.png	" style="width:100%" onclick="openModal();currentSlide(	53	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672791156126.png	" style="width:100%" onclick="openModal();currentSlide(	54	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672795273920.png	" style="width:100%" onclick="openModal();currentSlide(	55	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672796090086.png	" style="width:100%" onclick="openModal();currentSlide(	56	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672796214687.png	" style="width:100%" onclick="openModal();currentSlide(	57	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672796265318.png	" style="width:100%" onclick="openModal();currentSlide(	58	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672796346886.png	" style="width:100%" onclick="openModal();currentSlide(	59	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/1672796522352.png	" style="width:100%" onclick="openModal();currentSlide(	60	)" class="hover-shadow cursor" alt="alt"></div>
+<!--     <div class="column"><img src="	https://xbrpw.github.io/img/marcas/18bb9391e1ff81e6dc48329038d4c11d.jpg	" style="width:100%" onclick="openModal();currentSlide(	61	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/33a55646b7110c8caf00cf80ca613080.jpg	" style="width:100%" onclick="openModal();currentSlide(	62	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/3798c94c779a461281d3b62926bd9abb.jpg	" style="width:100%" onclick="openModal();currentSlide(	63	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/3d630fbe9d5771f7d3967f11eed746b9.jpg	" style="width:100%" onclick="openModal();currentSlide(	64	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/42d56c0864bad050be089e13584989db.jpg	" style="width:100%" onclick="openModal();currentSlide(	65	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/474230f53e6b4ff5c5689de209e99a55.jpg	" style="width:100%" onclick="openModal();currentSlide(	66	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/5dcbacc68e4f02462d98894a1e67e980.jpg	" style="width:100%" onclick="openModal();currentSlide(	67	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/6723a54c4bd80a42f8702dcab4ee60b3.jpg	" style="width:100%" onclick="openModal();currentSlide(	68	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/67d77f87859ab71fe6f8314b977065e6.jpg	" style="width:100%" onclick="openModal();currentSlide(	69	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/72214f8f278927c99ed593e43e547bd6 (1).jpg	" style="width:100%" onclick="openModal();currentSlide(	70	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/72214f8f278927c99ed593e43e547bd6.jpg	" style="width:100%" onclick="openModal();currentSlide(	71	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/780483e73fe14833544a137f32090e38.jpg	" style="width:100%" onclick="openModal();currentSlide(	72	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/7e7f97fa485a3271531aaf13cdedd8a7.jpg	" style="width:100%" onclick="openModal();currentSlide(	73	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/7fb240893d782e0cb80b2daaa2d1d591.jpg	" style="width:100%" onclick="openModal();currentSlide(	74	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/845bb5326ba1e56471f34dd7302c7c3a.jpg	" style="width:100%" onclick="openModal();currentSlide(	75	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/87dc822c6cc537d7aedcffad8c3a9896.jpg	" style="width:100%" onclick="openModal();currentSlide(	76	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/90s Stickers for Sale.jpeg	" style="width:100%" onclick="openModal();currentSlide(	77	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/972f4bbde86550b61e042c3df17474fc (1).jpg	" style="width:100%" onclick="openModal();currentSlide(	78	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/991851432f877d409b8fe28ded66ac5f.jpg	" style="width:100%" onclick="openModal();currentSlide(	79	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/9fedea57d82d5b3e1e114b98dca52d7c.jpg	" style="width:100%" onclick="openModal();currentSlide(	80	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/ace-tired.svg	" style="width:100%" onclick="openModal();currentSlide(	81	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/ad9dd1312f77ca052d0972e6551e1154.jpg	" style="width:100%" onclick="openModal();currentSlide(	82	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/albbura.jpg	" style="width:100%" onclick="openModal();currentSlide(	83	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/b70ea13cbef605af5526e9ff3bcb53c4.jpg	" style="width:100%" onclick="openModal();currentSlide(	84	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/ba09d816909ec7227d92e2788ec9b554.jpg	" style="width:100%" onclick="openModal();currentSlide(	85	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/BackgroundEraser_20221221_181406523.png	" style="width:100%" onclick="openModal();currentSlide(	86	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/BackgroundEraser_20221221_185208818.png	" style="width:100%" onclick="openModal();currentSlide(	87	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/BackgroundEraser_20221230_082004080.png	" style="width:100%" onclick="openModal();currentSlide(	88	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/BackgroundEraser_20230102_221111617.png	" style="width:100%" onclick="openModal();currentSlide(	89	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/badyear.jpg	" style="width:100%" onclick="openModal();currentSlide(	90	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/bb-pig.jpg	" style="width:100%" onclick="openModal();currentSlide(	91	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/beb11783f8691d75fd62846481722dba.jpg	" style="width:100%" onclick="openModal();currentSlide(	92	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Beethoven.jpg	" style="width:100%" onclick="openModal();currentSlide(	93	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/bf48e9a1-9db3-400f-9920-c719e766fe85.jpeg	" style="width:100%" onclick="openModal();currentSlide(	94	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/BONESTUDIO_NET _ Custom T Shirts Store.png	" style="width:100%" onclick="openModal();currentSlide(	95	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/butnam.png	" style="width:100%" onclick="openModal();currentSlide(	96	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/calvin-Klain-logo.svg	" style="width:100%" onclick="openModal();currentSlide(	97	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/cfa6600e0b8c4de16e23c316b8a1e504.jpg	" style="width:100%" onclick="openModal();currentSlide(	98	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/channel.jpg	" style="width:100%" onclick="openModal();currentSlide(	99	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Cómo se pronuncian algunas de las marcas que más conocemos.jpeg	" style="width:100%" onclick="openModal();currentSlide(	100	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/condones-rolex.jpeg	" style="width:100%" onclick="openModal();currentSlide(	101	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/condones-rolex.svg	" style="width:100%" onclick="openModal();currentSlide(	102	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/d2fe2845f711e91aaa1bd2991f99c824 (1).jpg	" style="width:100%" onclick="openModal();currentSlide(	103	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/d2fe2845f711e91aaa1bd2991f99c824.jpg	" style="width:100%" onclick="openModal();currentSlide(	104	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Do It Today.jpeg	" style="width:100%" onclick="openModal();currentSlide(	105	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/duff.png	" style="width:100%" onclick="openModal();currentSlide(	106	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/dunkindonyuts.png	" style="width:100%" onclick="openModal();currentSlide(	107	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/f5c8dda59d6ce553c0091681bf8955f9.jpg	" style="width:100%" onclick="openModal();currentSlide(	108	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/fd9de1076e8dedaa0be5ddaab26970b7.jpg	" style="width:100%" onclick="openModal();currentSlide(	109	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/feisbuk.jpg	" style="width:100%" onclick="openModal();currentSlide(	110	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Ferrari.jpeg	" style="width:100%" onclick="openModal();currentSlide(	111	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Flower Rat by psitta.jpeg	" style="width:100%" onclick="openModal();currentSlide(	112	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Goku Migatte No Gokui Perfect.jpeg	" style="width:100%" onclick="openModal();currentSlide(	113	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/goku-black.png	" style="width:100%" onclick="openModal();currentSlide(	114	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/grinchmas.png	" style="width:100%" onclick="openModal();currentSlide(	115	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/guasap-bro.jpg	" style="width:100%" onclick="openModal();currentSlide(	116	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/guatsap-bro.png	" style="width:100%" onclick="openModal();currentSlide(	117	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/hoxwwagen.webp	" style="width:100%" onclick="openModal();currentSlide(	118	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/i share needles.jpg	" style="width:100%" onclick="openModal();currentSlide(	119	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (143).svg	" style="width:100%" onclick="openModal();currentSlide(	120	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (144).svg	" style="width:100%" onclick="openModal();currentSlide(	121	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (155).svg	" style="width:100%" onclick="openModal();currentSlide(	122	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (163).svg	" style="width:100%" onclick="openModal();currentSlide(	123	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (171).svg	" style="width:100%" onclick="openModal();currentSlide(	124	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (179).svg	" style="width:100%" onclick="openModal();currentSlide(	125	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (85).svg	" style="width:100%" onclick="openModal();currentSlide(	126	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/image (86).svg	" style="width:100%" onclick="openModal();currentSlide(	127	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/IMG_20190824_100122.jpg	" style="width:100%" onclick="openModal();currentSlide(	128	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/IMG_20190929_150359.jpg	" style="width:100%" onclick="openModal();currentSlide(	129	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/IMG_20230103_193143.jpg	" style="width:100%" onclick="openModal();currentSlide(	130	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/kame-house.png	" style="width:100%" onclick="openModal();currentSlide(	131	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/La marca que uso! 🥲 (2).jpeg	" style="width:100%" onclick="openModal();currentSlide(	132	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/logo-pizza-planet.jpg	" style="width:100%" onclick="openModal();currentSlide(	133	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/lord of the drinks.jpg	" style="width:100%" onclick="openModal();currentSlide(	134	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/lost-it.png	" style="width:100%" onclick="openModal();currentSlide(	135	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/low-cost.svg	" style="width:100%" onclick="openModal();currentSlide(	136	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/luis_ (9).webp	" style="width:100%" onclick="openModal();currentSlide(	137	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (10).svg	" style="width:100%" onclick="openModal();currentSlide(	138	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (11).svg	" style="width:100%" onclick="openModal();currentSlide(	139	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (12).svg	" style="width:100%" onclick="openModal();currentSlide(	140	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (13).svg	" style="width:100%" onclick="openModal();currentSlide(	141	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (14).svg	" style="width:100%" onclick="openModal();currentSlide(	142	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (15).svg	" style="width:100%" onclick="openModal();currentSlide(	143	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (16).svg	" style="width:100%" onclick="openModal();currentSlide(	144	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (17).svg	" style="width:100%" onclick="openModal();currentSlide(	145	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (18).svg	" style="width:100%" onclick="openModal();currentSlide(	146	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (19).svg	" style="width:100%" onclick="openModal();currentSlide(	147	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (2).svg	" style="width:100%" onclick="openModal();currentSlide(	148	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (20).svg	" style="width:100%" onclick="openModal();currentSlide(	149	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (21).svg	" style="width:100%" onclick="openModal();currentSlide(	150	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (22).svg	" style="width:100%" onclick="openModal();currentSlide(	151	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (23).svg	" style="width:100%" onclick="openModal();currentSlide(	152	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (24).svg	" style="width:100%" onclick="openModal();currentSlide(	153	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (25).svg	" style="width:100%" onclick="openModal();currentSlide(	154	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (26).svg	" style="width:100%" onclick="openModal();currentSlide(	155	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (27).svg	" style="width:100%" onclick="openModal();currentSlide(	156	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (28).svg	" style="width:100%" onclick="openModal();currentSlide(	157	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (29).svg	" style="width:100%" onclick="openModal();currentSlide(	158	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (3).svg	" style="width:100%" onclick="openModal();currentSlide(	159	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (30).svg	" style="width:100%" onclick="openModal();currentSlide(	160	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (31).svg	" style="width:100%" onclick="openModal();currentSlide(	161	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (32).svg	" style="width:100%" onclick="openModal();currentSlide(	162	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (33).svg	" style="width:100%" onclick="openModal();currentSlide(	163	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (34).svg	" style="width:100%" onclick="openModal();currentSlide(	164	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (35).svg	" style="width:100%" onclick="openModal();currentSlide(	165	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (36).svg	" style="width:100%" onclick="openModal();currentSlide(	166	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (37).svg	" style="width:100%" onclick="openModal();currentSlide(	167	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (38).svg	" style="width:100%" onclick="openModal();currentSlide(	168	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (39).svg	" style="width:100%" onclick="openModal();currentSlide(	169	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (4).svg	" style="width:100%" onclick="openModal();currentSlide(	170	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (40).svg	" style="width:100%" onclick="openModal();currentSlide(	171	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (41).svg	" style="width:100%" onclick="openModal();currentSlide(	172	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (42).svg	" style="width:100%" onclick="openModal();currentSlide(	173	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (43).svg	" style="width:100%" onclick="openModal();currentSlide(	174	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (44).svg	" style="width:100%" onclick="openModal();currentSlide(	175	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (45).svg	" style="width:100%" onclick="openModal();currentSlide(	176	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (46).svg	" style="width:100%" onclick="openModal();currentSlide(	177	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (47).svg	" style="width:100%" onclick="openModal();currentSlide(	178	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (48).svg	" style="width:100%" onclick="openModal();currentSlide(	179	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (49).svg	" style="width:100%" onclick="openModal();currentSlide(	180	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (5).svg	" style="width:100%" onclick="openModal();currentSlide(	181	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (50).svg	" style="width:100%" onclick="openModal();currentSlide(	182	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (51).svg	" style="width:100%" onclick="openModal();currentSlide(	183	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (52).svg	" style="width:100%" onclick="openModal();currentSlide(	184	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (53).svg	" style="width:100%" onclick="openModal();currentSlide(	185	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (54).svg	" style="width:100%" onclick="openModal();currentSlide(	186	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (55).svg	" style="width:100%" onclick="openModal();currentSlide(	187	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (56).svg	" style="width:100%" onclick="openModal();currentSlide(	188	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (57).svg	" style="width:100%" onclick="openModal();currentSlide(	189	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (58).svg	" style="width:100%" onclick="openModal();currentSlide(	190	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (59).svg	" style="width:100%" onclick="openModal();currentSlide(	191	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (6).svg	" style="width:100%" onclick="openModal();currentSlide(	192	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (60).svg	" style="width:100%" onclick="openModal();currentSlide(	193	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (61).svg	" style="width:100%" onclick="openModal();currentSlide(	194	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (62).svg	" style="width:100%" onclick="openModal();currentSlide(	195	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (63).svg	" style="width:100%" onclick="openModal();currentSlide(	196	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (64).svg	" style="width:100%" onclick="openModal();currentSlide(	197	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (65).svg	" style="width:100%" onclick="openModal();currentSlide(	198	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (66).svg	" style="width:100%" onclick="openModal();currentSlide(	199	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (67).svg	" style="width:100%" onclick="openModal();currentSlide(	200	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (68).svg	" style="width:100%" onclick="openModal();currentSlide(	201	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (69).svg	" style="width:100%" onclick="openModal();currentSlide(	202	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (7).svg	" style="width:100%" onclick="openModal();currentSlide(	203	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (70).svg	" style="width:100%" onclick="openModal();currentSlide(	204	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (71).svg	" style="width:100%" onclick="openModal();currentSlide(	205	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (72).svg	" style="width:100%" onclick="openModal();currentSlide(	206	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (73).svg	" style="width:100%" onclick="openModal();currentSlide(	207	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (74).svg	" style="width:100%" onclick="openModal();currentSlide(	208	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (75).svg	" style="width:100%" onclick="openModal();currentSlide(	209	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (76).svg	" style="width:100%" onclick="openModal();currentSlide(	210	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (77).svg	" style="width:100%" onclick="openModal();currentSlide(	211	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (78).svg	" style="width:100%" onclick="openModal();currentSlide(	212	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (79).svg	" style="width:100%" onclick="openModal();currentSlide(	213	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (8).svg	" style="width:100%" onclick="openModal();currentSlide(	214	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (80).svg	" style="width:100%" onclick="openModal();currentSlide(	215	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (81).svg	" style="width:100%" onclick="openModal();currentSlide(	216	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (82).svg	" style="width:100%" onclick="openModal();currentSlide(	217	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (83).svg	" style="width:100%" onclick="openModal();currentSlide(	218	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (84).svg	" style="width:100%" onclick="openModal();currentSlide(	219	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (85).svg	" style="width:100%" onclick="openModal();currentSlide(	220	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (86).svg	" style="width:100%" onclick="openModal();currentSlide(	221	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (87).svg	" style="width:100%" onclick="openModal();currentSlide(	222	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca (9).svg	" style="width:100%" onclick="openModal();currentSlide(	223	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/marca.svg	" style="width:100%" onclick="openModal();currentSlide(	224	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/meth-cristal-art (1).png	" style="width:100%" onclick="openModal();currentSlide(	225	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/meth-cristal-art (14).jpg	" style="width:100%" onclick="openModal();currentSlide(	226	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/meth-cristal-art (2).png	" style="width:100%" onclick="openModal();currentSlide(	227	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/moneyzone.jpg	" style="width:100%" onclick="openModal();currentSlide(	228	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/nete-nestle.jpeg	" style="width:100%" onclick="openModal();currentSlide(	229	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/nete-nestle.svg	" style="width:100%" onclick="openModal();currentSlide(	230	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/nintendo-nothintTodo.svg	" style="width:100%" onclick="openModal();currentSlide(	231	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/no-entiendo.png	" style="width:100%" onclick="openModal();currentSlide(	232	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/payforboobs.jpg	" style="width:100%" onclick="openModal();currentSlide(	233	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/pepsi-tommy-hilgfigter.svg	" style="width:100%" onclick="openModal();currentSlide(	234	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/picsa-hot.jpg	" style="width:100%" onclick="openModal();currentSlide(	235	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/pigboy.jpg	" style="width:100%" onclick="openModal();currentSlide(	236	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/pilas-energon.jpeg	" style="width:100%" onclick="openModal();currentSlide(	237	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/pilas-energon.svg	" style="width:100%" onclick="openModal();currentSlide(	238	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/pizza-christian-Dior.jpeg	" style="width:100%" onclick="openModal();currentSlide(	239	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/pizza-christian-Dior.svg	" style="width:100%" onclick="openModal();currentSlide(	240	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/rapidash.png	" style="width:100%" onclick="openModal();currentSlide(	241	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/saiyan-warrior.png	" style="width:100%" onclick="openModal();currentSlide(	242	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/sayayin.png	" style="width:100%" onclick="openModal();currentSlide(	243	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Screenshot_20221227_235619_removebackground.erasebackground.background.remover.jpg	" style="width:100%" onclick="openModal();currentSlide(	244	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Screenshot_20230103_205447.jpg	" style="width:100%" onclick="openModal();currentSlide(	245	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Screenshot_20230103_205457 (2).jpg	" style="width:100%" onclick="openModal();currentSlide(	246	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Screenshot_20230103_205457.jpg	" style="width:100%" onclick="openModal();currentSlide(	247	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/senzubucks-coffee.jpg	" style="width:100%" onclick="openModal();currentSlide(	248	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/senzubucks-coffee.svg	" style="width:100%" onclick="openModal();currentSlide(	249	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/sexy Pepsi logo.jpg	" style="width:100%" onclick="openModal();currentSlide(	250	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/shellder.png	" style="width:100%" onclick="openModal();currentSlide(	251	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/shit-refresco.jpg	" style="width:100%" onclick="openModal();currentSlide(	252	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/signal-haciendo-el-delicioso (1).svg	" style="width:100%" onclick="openModal();currentSlide(	253	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/sonGoku-vectormaker-co (1).svg	" style="width:100%" onclick="openModal();currentSlide(	254	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/sonGoku-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	255	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/sonGoku.png	" style="width:100%" onclick="openModal();currentSlide(	256	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/tarjeta-veronica.jpg	" style="width:100%" onclick="openModal();currentSlide(	257	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/thanos-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	258	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/thanos.png	" style="width:100%" onclick="openModal();currentSlide(	259	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Tired Tide Logo Sticker (2)-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	260	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Tired Tide Logo Sticker (2).png	" style="width:100%" onclick="openModal();currentSlide(	261	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/Tired Tide Logo Sticker-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	262	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/unicorn-vectormaker-co.svg	" style="width:100%" onclick="openModal();currentSlide(	263	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/unicorn.png	" style="width:100%" onclick="openModal();currentSlide(	264	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/users.svg	" style="width:100%" onclick="openModal();currentSlide(	265	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/vegeta.png	" style="width:100%" onclick="openModal();currentSlide(	266	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/very-cheesy.jpg	" style="width:100%" onclick="openModal();currentSlide(	267	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/victribell.png	" style="width:100%" onclick="openModal();currentSlide(	268	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/vodka-conecting-people.png	" style="width:100%" onclick="openModal();currentSlide(	269	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/vodka-conecting-people.svg	" style="width:100%" onclick="openModal();currentSlide(	270	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/voodka-conecting-people.svg	" style="width:100%" onclick="openModal();currentSlide(	271	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/vulva.jpg	" style="width:100%" onclick="openModal();currentSlide(	272	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/yajult.jpg	" style="width:100%" onclick="openModal();currentSlide(	273	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/yajult.svg	" style="width:100%" onclick="openModal();currentSlide(	274	)" class="hover-shadow cursor" alt="alt"></div>
+    <div class="column"><img src="	https://xbrpw.github.io/img/marcas/youtube-tomford.jpg	" style="width:100%" onclick="openModal();currentSlide(	275	)" class="hover-shadow cursor" alt="alt"></div> -->                                                                           
 </div>		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
@@ -1427,16 +752,296 @@
 
    
 
-    <div id="myModal" class="modal" sheetsu="https://sheetsu.com/apis/v1.0bu/e7f95800fa22"  sheetsu-sheet="marcas">
+    <div id="myModal" class="modal" >
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
-            <center>
-                <div class="mySlides">
+         <!--    <center>
+                <div class="mySlides" sheetsu="https://sheetsu.com/apis/v1.0bu/e7f95800fa22"  sheetsu-sheet="marcas">
                     <div class="numbertext">{{alt}}</div>
                     <img src="{{url-marca}}" style="width:100%" loading="lazy" alt="{{alt}}">
+                    <script src="https://load.sheetsu.com"></script>
+                </div>
+            </center> -->
+            <center>
+                <div class="mySlides" >
+                    <div class="numbertext"></div>
+                    <img src="https://xbrpw.github.io/img/marcas/_ (1)-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (2)-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (2).png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (29).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (3) (2).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (3)-vectormaker-co (1).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (3)-vectormaker-co (2).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (3)-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (3).png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (30).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (31).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (32).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (4)-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (45).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (46).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (47).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (48).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (49).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (5) (2).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (6) (2).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/_ (8) (2).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/#dbz #naruto #university #iphone wallpaper #android wallpaper.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/01223c231f8a1f3a5a9f85404e3df97d.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/05ece1a99e4d9dd9283fe211bd309cb3.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/15b52d7081fa101825b47facf28931c1.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1671405464414.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672194128157.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672207639362.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672207822176.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208048836.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208085221.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208146332.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208217398.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208358503.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208449610.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208561439.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208775461.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672208944379.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672212752205.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672279748829.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672279830754.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672279917404.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672279971062.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672280174879.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672316688752.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672316723499.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672316874892.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672365424709.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672691044217.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672723268463.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672784839470.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672789649481.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672790628216.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672791156126.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672795273920.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672796090086.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672796214687.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672796265318.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672796346886.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/1672796522352.png" style="width:100%" loading="lazy" alt="alt">
+<!-- <img src="https://xbrpw.github.io/img/marcas/18bb9391e1ff81e6dc48329038d4c11d.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/33a55646b7110c8caf00cf80ca613080.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/3798c94c779a461281d3b62926bd9abb.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/3d630fbe9d5771f7d3967f11eed746b9.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/42d56c0864bad050be089e13584989db.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/474230f53e6b4ff5c5689de209e99a55.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/5dcbacc68e4f02462d98894a1e67e980.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/6723a54c4bd80a42f8702dcab4ee60b3.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/67d77f87859ab71fe6f8314b977065e6.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/72214f8f278927c99ed593e43e547bd6 (1).jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/72214f8f278927c99ed593e43e547bd6.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/780483e73fe14833544a137f32090e38.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/7e7f97fa485a3271531aaf13cdedd8a7.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/7fb240893d782e0cb80b2daaa2d1d591.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/845bb5326ba1e56471f34dd7302c7c3a.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/87dc822c6cc537d7aedcffad8c3a9896.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/90s Stickers for Sale.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/972f4bbde86550b61e042c3df17474fc (1).jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/991851432f877d409b8fe28ded66ac5f.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/9fedea57d82d5b3e1e114b98dca52d7c.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/ace-tired.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/ad9dd1312f77ca052d0972e6551e1154.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/albbura.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/b70ea13cbef605af5526e9ff3bcb53c4.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/ba09d816909ec7227d92e2788ec9b554.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/BackgroundEraser_20221221_181406523.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/BackgroundEraser_20221221_185208818.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/BackgroundEraser_20221230_082004080.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/BackgroundEraser_20230102_221111617.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/badyear.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/bb-pig.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/beb11783f8691d75fd62846481722dba.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Beethoven.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/bf48e9a1-9db3-400f-9920-c719e766fe85.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/BONESTUDIO_NET _ Custom T Shirts Store.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/butnam.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/calvin-Klain-logo.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/cfa6600e0b8c4de16e23c316b8a1e504.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/channel.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Cómo se pronuncian algunas de las marcas que más conocemos.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/condones-rolex.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/condones-rolex.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/d2fe2845f711e91aaa1bd2991f99c824 (1).jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/d2fe2845f711e91aaa1bd2991f99c824.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Do It Today.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/duff.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/dunkindonyuts.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/f5c8dda59d6ce553c0091681bf8955f9.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/fd9de1076e8dedaa0be5ddaab26970b7.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/feisbuk.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Ferrari.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Flower Rat by psitta.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Goku Migatte No Gokui Perfect.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/goku-black.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/grinchmas.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/guasap-bro.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/guatsap-bro.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/hoxwwagen.webp" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/i share needles.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (143).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (144).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (155).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (163).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (171).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (179).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (85).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/image (86).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/IMG_20190824_100122.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/IMG_20190929_150359.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/IMG_20230103_193143.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/kame-house.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/La marca que uso! 🥲 (2).jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/logo-pizza-planet.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/lord of the drinks.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/lost-it.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/low-cost.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/luis_ (9).webp" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (10).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (11).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (12).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (13).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (14).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (15).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (16).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (17).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (18).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (19).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (2).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (20).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (21).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (22).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (23).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (24).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (25).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (26).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (27).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (28).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (29).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (3).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (30).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (31).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (32).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (33).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (34).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (35).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (36).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (37).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (38).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (39).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (4).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (40).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (41).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (42).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (43).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (44).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (45).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (46).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (47).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (48).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (49).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (5).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (50).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (51).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (52).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (53).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (54).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (55).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (56).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (57).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (58).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (59).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (6).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (60).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (61).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (62).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (63).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (64).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (65).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (66).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (67).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (68).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (69).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (7).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (70).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (71).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (72).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (73).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (74).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (75).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (76).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (77).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (78).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (79).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (8).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (80).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (81).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (82).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (83).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (84).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (85).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (86).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (87).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca (9).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/marca.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/meth-cristal-art (1).png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/meth-cristal-art (14).jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/meth-cristal-art (2).png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/moneyzone.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/nete-nestle.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/nete-nestle.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/nintendo-nothintTodo.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/no-entiendo.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/payforboobs.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/pepsi-tommy-hilgfigter.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/picsa-hot.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/pigboy.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/pilas-energon.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/pilas-energon.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/pizza-christian-Dior.jpeg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/pizza-christian-Dior.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/rapidash.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/saiyan-warrior.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/sayayin.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Screenshot_20221227_235619_removebackground.erasebackground.background.remover.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Screenshot_20230103_205447.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Screenshot_20230103_205457 (2).jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Screenshot_20230103_205457.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/senzubucks-coffee.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/senzubucks-coffee.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/sexy Pepsi logo.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/shellder.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/shit-refresco.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/signal-haciendo-el-delicioso (1).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/sonGoku-vectormaker-co (1).svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/sonGoku-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/sonGoku.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/tarjeta-veronica.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/thanos-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/thanos.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Tired Tide Logo Sticker (2)-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Tired Tide Logo Sticker (2).png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/Tired Tide Logo Sticker-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/unicorn-vectormaker-co.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/unicorn.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/users.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/vegeta.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/very-cheesy.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/victribell.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/vodka-conecting-people.png" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/vodka-conecting-people.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/voodka-conecting-people.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/vulva.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/yajult.jpg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/yajult.svg" style="width:100%" loading="lazy" alt="alt">
+<img src="https://xbrpw.github.io/img/marcas/youtube-tomford.jpg" style="width:100%" loading="lazy" alt="alt"> -->
                 </div>
             </center>
-
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -1447,7 +1052,7 @@
 
         </div>
 
-        <script src="https://load.sheetsu.com"></script>
+     
         
         <script>
             function openModal() {
@@ -1535,6 +1140,184 @@
             }
         </script>
 
+<div id="el-tab-nav">
+    <style>
+      :root {		
+      --scale: 1;
+      --icon-size: 24px;}
+  
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;}
+  
+      nav {
+      position: relative;
+      width: 350px;
+      height: 80px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-radius: 10px;
+      padding: 0 15px;
+      background: black;
+      box-shadow: 0 6.7px 5.3px rgba(0, 0, 0, 0.12), 0 22.3px 17.9px rgba(0, 0, 0, 0.08), 0 100px 80px rgba(0, 0, 0, 0.04);
+      overflow: hidden;}
+      nav ul {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      }
+      nav ul li {
+      list-style: none;
+      width: var(--icon-size);
+      height: var(--icon-size);
+      }
+      nav ul li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      }
+      nav ul li a svg {
+      fill: #fff;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      transition: opacity 100ms ease;
+      pointer-events: none;
+      }
+      nav ul li a.active svg {
+      opacity: 1;
+      }
+      nav .tubelight {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      transform: translateX(-50%);
+      width: 45px;
+      height: 5px;
+      border-radius: 5px;
+      background: #ffffff;
+      transition: left 400ms ease;
+      z-index: 10;
+      }
+      nav .tubelight .light-ray {
+      position: absolute;
+      left: -30%;
+      top: 5px;
+      width: 160%;
+      height: 80px;
+      clip-path: polygon(5% 100%, 25% 0px, 75% 0px, 95% 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) -50%, rgba(255, 255, 255, 0) 90%);
+      pointer-events: none;}
+    </style>
+  
+    <nav>
+      <ul>
+        <li>
+          <a class="active">
+            <svg><use xlink:href="#home-icon"></use></svg>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a>
+            <svg><use xlink:href="#bookmark-icon"></use></svg>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a>
+            <svg><use xlink:href="#plus-icon"></use></svg>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a>
+            <svg><use xlink:href="#user-icon"></use></svg>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a>
+            <svg><use xlink:href="#settings-icon"></use></svg>
+          </a>
+        </li>
+      </ul>
+  
+      <div class="tubelight">
+        <div class="light-ray"></div>
+      </div>
+    </nav>
+  
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="home-icon">
+        <path
+            d="M13.1428571,14.5 C13.6571429,14.5 14,14.175507 14,13.6887676 L14,6.38767551 C14,6.14430577 13.9142857,5.90093604 13.6571429,5.73868955 L8.51428571,1.6825273 C8.17142857,1.43915757 7.74285714,1.43915757 7.4,1.6825273 L2.25714286,5.73868955 C2.08571429,5.90093604 2,6.14430577 2,6.38767551 L2,13.6887676 C2,14.175507 2.34285714,14.5 2.85714286,14.5 L13.1428571,14.5 Z M5.42857143,12.8775351 L3.71428571,12.8775351 L3.71428571,6.79329173 L8,3.38611544 L12.2857143,6.79329173 L12.2857143,12.8775351 L10.5714286,12.8775351 L5.42857143,12.8775351 Z">
+        </path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="favorites-icon">
+        <path
+            d="M7.5125,14.3196446 C6.8625,13.7292662 1.5,9.09057902 1.5,5.54830881 C1.5,3.27113511 3.2875,1.5 5.4,1.5 C6.375,1.5 7.26875,1.92169883 8,2.5120772 C8.73125,1.83735907 9.625,1.5 10.6,1.5 C12.79375,1.5 14.5,3.35547487 14.5,5.54830881 C14.5,9.09057902 9.1375,13.7292662 8.4875,14.2353048 C8.24375,14.5726639 7.75625,14.5726639 7.5125,14.3196446 Z M5.4,3.18679534 C4.18125,3.18679534 3.125,4.28321231 3.125,5.54830881 C3.125,7.40378368 5.96875,10.6086948 8,12.4641697 C9.70625,10.8617141 12.875,7.57246322 12.875,5.54830881 C12.875,4.19887254 11.81875,3.18679534 10.6,3.18679534 C9.86875,3.18679534 9.1375,3.60849417 8.73125,4.28321231 C8.40625,4.78925091 7.675,4.78925091 7.35,4.28321231 C6.8625,3.60849417 6.2125,3.18679534 5.4,3.18679534 Z">
+        </path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 568" id="settings-icon">
+        <path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus-icon">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12 2C6.48 2 2 6.48001 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48001 17.52 2 12 2ZM11 7V11H7V13H11V17H13V13H17V11H13V7H11ZM4 12C4 16.41 7.59 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4C7.59 4 4 7.59 4 12Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="bookmark-icon">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M7 3H17C18.1 3 19 3.89999 19 5V21L12 18L5 21V5C5 3.89999 5.90002 3 7 3ZM12 15.82L17 18V5H7V18L12 15.82Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 570" id="user-icon">
+        <path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z" />
+      </symbol>
+    </svg>
+  
+    <script>
+      console.clear();
+  
+      const uls = document.querySelectorAll("nav ul");
+      const links = [...document.querySelectorAll("nav a")];
+      const light = document.querySelector("nav .tubelight");
+  
+      let activeIndex = 0;
+      let currentIndex = 0;
+      let increment = 1;
+      links.forEach((link, index) => {
+        if (links[index].classList.contains("active")) {
+          light.style.left = `${links[index].offsetLeft + light.offsetWidth / 4}px`;
+        }
+  
+        link.addEventListener("click", e => {
+          activeIndex = index;
+          let t = setInterval(() => {
+            if (activeIndex > currentIndex) increment = 1;
+            else if (activeIndex < currentIndex) increment = -1;
+            currentIndex += increment;
+  
+            links[currentIndex].classList.add("active");
+            if (currentIndex != -1) links[currentIndex - increment].classList.remove("active");
+  
+            if (currentIndex == activeIndex) {
+              e.target.classList.add("active");
+              increment = 0;
+              clearInterval(t);
+            }
+          }, 50);
+          light.style.left = `${e.target.offsetLeft + light.offsetWidth / 4}px`;
+        });
+      });	
+    </script>
+  </div> 
 
 
 

@@ -1,0 +1,93 @@
+<div id="DarkMode-Localstorage">
+  <style>
+    body {
+      color: black; 
+      background-color: rgb(255, 255, 255);
+    }
+
+    body.space    {
+      color: rgb(0, 0, 0); 
+      background-color: rgba(255, 255, 255, 0.637);
+    }
+
+    body.dark {
+      color: white; 
+      background-color: rgba(0, 0, 0, 0.651);
+    }
+    body.dark.space {
+      color: white; 
+      background-color: rgba(0, 0, 0, 0.651);
+    }
+  </style>
+
+  <p id="theme-toggle">Dark Mode</p>
+<div class="space">
+  <div class="searchable">
+    <input type="text" autofocus 
+           style="display: block;width: 99%;padding: 0.5em;outline: none;" 
+           placeholder="🔍 Buscar..."/>
+    <!-- Loop through your blog posts -->
+    <div class="searchable-item">
+      <h1>JavaScript search</h1>
+      <p>some description</a>
+    </div>
+    <div class="searchable-item">
+      <h1>Another JavaScript library</h1>
+      <p>some other description</p>
+    </div>
+    <div class="searchable-item">
+      <h1>Design resources</h1>
+      <p>description about design resources</p>
+    </div>
+    <div class="searchable-item">
+      <h1>Other topic</h1>
+      <p>some other topic description</p>
+    </div>
+    <script>
+    ;(function search () {
+      ;[...document.querySelectorAll('.searchable')].forEach(makeSearchable)
+      function makeSearchable ($searchable) {
+        const $searchableItems = [...$searchable.querySelectorAll('.searchable-item')]
+        const $search = $searchable.querySelector('input')
+        $search.addEventListener('keyup', (e) => {
+          $searchableItems.forEach(function ($el) {
+            const text = $el.getAttribute('data-search') || $el.innerText
+            const show = new RegExp(e.target.value, 'i').test(text)
+            $el.style.display = show ? '' : 'none'
+          })
+        })
+      }
+    })()
+  </script>
+  </div>
+</div>
+  <script>
+    var darkMode = false;
+
+    // default to system setting
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      darkMode = true;
+    }
+
+    // preference from localStorage should overwrite
+    if (localStorage.getItem('theme') === 'dark') {
+      darkMode = true;
+    } else if (localStorage.getItem('theme') === 'light') {
+      darkMode = false;
+    }
+
+    if (darkMode) {
+      document.body.classList.toggle('dark');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+          localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      });
+
+    });  
+  </script>
+
+</div>

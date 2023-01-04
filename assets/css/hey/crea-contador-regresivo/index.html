@@ -1,66 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Countdown w/ localStorage | jS</title>
+  <title>Contador de tiempo ¡El día ha llegado!</title>
   <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Custom Countdown</title>
-	<link rel="icon" type="image/png" href="favicon.png" />
-	<link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-	<a href="https://www.instagram.com/tellesiivan/" target="_blank" class="ig">follow me</a>
-	<!-- video background -->
+		<!-- Countdown w/ localStorage | jS  -->
 	<!-- <video src="time.mp4" class="video-background" loop muted autoplay></video>
     <div class="video-overlay"></div> -->
 	<!-- container -->
 	<div class="container">
 		<!-- input  -->
 		<div class="input-container" id="input-container">
-			<h1>Create your custom countdown!</h1>
+			<!-- <h1>Create your custom countdown!</h1> -->
+			<h1>¡Crea tu cuenta regresiva personalizada!</h1><br><br>
 			<form action="" class="form" id="countdownForm">
-				<label for="title">Title</label>
-				<input type="text" id="title" placeholder="What are you counting down for?" />
-				<label for="date-picker">Select a date</label>
+				<label for="title">Titulo</label>
+				<input type="text" id="title" placeholder="¿Para que estas contando?" />
+				<!-- <input type="text" id="title" placeholder="What are you counting down for?" /> -->
+				<label for="date-picker">Seleccione una fecha</label>
+				<!-- <label for="date-picker">Select a date</label> -->
 				<input type="date" id="date-picker" />
-				<button class="submit">Submit</button>
+				<button class="submit">Empezar</button>
 			</form>
 		</div>
 		<!-- countdown -->
 		<div class="countdown" id="countdown" hidden>
 			<h1 class="countdown-title" id="countdown-title"></h1>
 			<ul>
-				<li><span></span>Days</li>
-				<li><span></span>Hours</li>
-				<li><span></span>Minutes</li>
-				<li><span></span>Seconds</li>
+				<li><span></span>Dias</li>
+				<li><span></span>Horas</li>
+				<li><span></span>Minutos</li>
+				<li><span></span>Segundos</li>
 			</ul>
 			<button class="countdown-button" id="countdown-button">Reset</button>
 		</div>
 		<!-- complete -->
 		<div class="complete" id="complete" hidden>
-			<h1 class="complete-title">Countdown Title</h1>
-			<h1 id="complete-info">Countdown Finished on 05-05-2021</h1>
-			<button id="complete-button">New countdown</button>
+			<h1 class="complete-title">¡El día llego!</h1>
+			<h1 id="complete-info"></h1>
+			<button id="complete-button">Nuevo contador</button>
 		</div>
 	</div>
 	<!-- Script -->
 	<script src="script.js"></script>
-</body>
 
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+
 
 </body>
 </html>

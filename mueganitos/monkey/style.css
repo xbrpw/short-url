@@ -1,0 +1,307 @@
+body {
+  background: #EFF492;
+  overflow: hidden;
+  background-image: url("https://illustimage.com/en/photo/thum/4058.png");
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 10%;
+  width: 600px;
+  height: 420px;
+}
+
+.head {
+  position: absolute;
+  width: 28%;
+  height: 38%;
+  left: 36%;
+  top: 20%;
+  background: #B69068;
+  border: 3px solid #675340;
+  border-radius: 50% 50% 70px 70px;
+  z-index: 1;
+}
+
+.head-copy {
+  position: absolute;
+  width: 28%;
+  height: 38%;
+  left: 36%;
+  top: 20%;
+  background: #B69068;
+  border: 3px solid #675340;
+  border-radius: 50% 50% 70px 70px;
+}
+
+.face {
+  position: absolute;
+  bottom: 0;
+  left: 6%;
+  width: 88%;
+  height: 55%;
+  border-radius: 50% 50% 70px 70px;
+  background: #E8CCC1;
+  z-index: 2;
+}
+
+.face-left, .face-right {
+  background: #E8CCC1;
+  border-radius: 60% 60% 0% 0%;
+  position: absolute;
+  top: 28%;
+  width: 37%;
+  height: 45%;
+  z-index: 1;
+}
+
+.face-left {
+  transform: rotate(-30deg);
+  left: 13%;
+}
+
+.face-right {
+  transform: rotate(30deg);
+  right: 13%;
+}
+
+.eyes {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  background: #000000;
+  border-radius: 50%;
+  z-index: 3;
+  right: 22%;
+  top: 37%;
+  animation: pulse 1s infinite;
+}
+
+.pupil {
+  width: 40%;
+  height: 40%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 15%;
+  top: 4%;
+}
+
+.left {
+  left: 22%;
+}
+
+.blush, .blush-right {
+  width: 20px;
+  height: 17px;
+  opacity: 0.8;
+  position: absolute;
+  background: #ED99A9;
+  border-radius: 50%;
+  z-index: 2;
+  top: 45%;
+}
+
+.blush {
+  left: 12%;
+}
+
+.blush-right {
+  right: 13%;
+}
+
+.ears-left, .ears-right {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #675340;
+  background: #B69068;
+  top: 25%;
+  position: absolute;
+  z-index: -1;
+  animation: wiggle 2s infinite;
+}
+
+.ears-left {
+  left: -20%;
+}
+
+.ears-right {
+  right: -20%;
+}
+
+.inner-ear {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  left: 15%;
+  top: 15%;
+  background: #ED99A9;
+  border-radius: 50%;
+}
+
+.right {
+  right: 15%;
+}
+
+.nose {
+  position: absolute;
+  top: 60%;
+  left: 47%;
+  width: 11px;
+  background: #000000;
+  height: 6px;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.line {
+  position: absolute;
+  height: 200%;
+  border-left: 3px solid #000000;
+  top: 20%;
+  left: 40%;
+  z-index: 4;
+}
+
+.mouth, .mouth2 {
+  position: absolute;
+  top: 65%;
+  left: 44%;
+  width: 8px;
+  height: 8px;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: transparent #000 #000 transparent;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+
+.mouth2 {
+  left: 51%;
+}
+
+/*animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes wiggle {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.85, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.35, 1, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*body
+
+.monkey-body {
+  position: absolute;
+  height: 23%;
+  width: 17%;
+  background: $brown;
+  border-radius: 0 50% 50% 50%;
+  border: 3px solid $dark;
+  left: 41.5%;
+  top: 55%;
+  transform: rotate(45deg);
+  z-index: -2;
+}
+.monkey-body-copy {
+  position: absolute;
+  height: 23%;
+  width: 17%;
+  background: $brown;
+  border-radius: 0 50% 50% 50%;
+  border: 3px solid $dark;
+  left: 41.5%;
+  top: 55%;
+  transform: rotate(45deg);
+}
+.belly {
+  position: absolute;
+  width: 80%;
+  height: 87%;
+  background: $tan;
+  border-radius: 0 50% 50% 50%;
+  left: 7%;
+  top: 3%;
+}
+.arm-left, .arm-right {
+  width: 17%;
+  height: 30%;
+  border-radius: 50%;
+  position: absolute;
+  background: $brown;
+  border: 3px solid $dark;
+}
+
+.arm-left {
+  left: -15%;
+  top: 55%;
+  transform: rotate(20deg);
+}
+
+.arm-right {
+  right: 14%;
+  top: -18%;
+  transform: rotate(70deg);
+}
+
+.leg-left, .leg-right {
+  position: absolute;
+  width: 30%;
+  height: 17%;
+  background: $brown;
+  border-radius: 50%;
+  border: 3px solid $dark;
+  z-index: -3;
+}
+.leg-left {
+  top: 98%;
+  left: 33%;
+  transform: rotate(-50deg);
+}
+.leg-right {
+  top: 48%;
+  right: -22%;
+  transform: rotate(-40deg);
+}
+
+*/

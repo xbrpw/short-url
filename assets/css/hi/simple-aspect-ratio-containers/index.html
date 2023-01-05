@@ -1,11 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Simple Aspect Ratio Containers</title>
+  <title>Simple Aspect Ratio Containers</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<style>
+  /* **********
+ Common Aspect Ratio Containers
+************************************************* */
+
+.ratio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.ratio::before {
+  display: block;
+  width: 100%;
+  content: "";
+}
+
+.ratio-1\:1::before {
+  padding-bottom: 100%;
+}
+
+.ratio-2\:1::before {
+  padding-bottom: 50%;
+}
+
+.ratio-2\:3::before {
+  padding-bottom: 150%;
+}
+
+.ratio-3\:2::before {
+  padding-bottom: 66.66667%;
+}
+
+.ratio-3\:4::before {
+  padding-bottom: 133.33333%;
+}
+
+/*.ratio-4\:3::before {
+  padding-bottom: 75%;
+}
+*/
+.ratio-4\:3::before {
+  padding-bottom: 60%;
+}
+
+.ratio-16\:9::before {
+  padding-bottom: 56.25%;
+}
+
+/* **********
+ Demo Styling
+************************************************* */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+
+  /*line-height: 1.5;*/
+  /*color:white;*/
+}
+
+/* Two column grid container */
+
+section {
+  display: grid;
+  grid-template-columns: repeat(5, 0.25fr);
+  column-gap: 0em;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 5px;
+   padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+/* Remove grid container on small screens */
+
+@media (max-width: 980px) {
+  section {
+    display:inherit;   
+  }
+}
+
+figure {
+  background-color: #333;
+  border: 1px solid grey;
+  font-size: 21px;
+  width: 100%;
+  margin-top:10px;
+}
+figcaption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+body {
+  /*background: #212121;*/
+}
+
+</style>
 
 </head>
 <body>
@@ -13,6 +147,72 @@
 <h1>Common Aspect Ratio Containers</h1>
 
 <section>
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+  <div>
+    <figure class="ratio ratio-4:3">
+      <figcaption>ratio 4:3</figcaption>
+    </figure>
+  </div>
+
+</section>
+
+<section style="display: none;">
   <div>
     <figure class="ratio ratio-2:1">
       <figcaption>ratio 2:1</figcaption>

@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #59a;
+  background:
+    linear-gradient(#fff7, #fff0),
+    radial-gradient(at 80% -20%, #59a0, #59a),
+    conic-gradient(at 80% -20%, #0000 60%, #fff1 0 63%, #0000 0 66%, #fff1 0 68%, #0000 0),
+    #59a;
+}
+
+.canvas {
+  --skin: #568; #369;
+  --skin-light: #679; #47a;
+  --skin-dark: #258;
+  width: 60vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at 10% 20%, #fff3 4%, #fff0 0),
+    radial-gradient(circle at 11% 7%, #fff3 3.25%, #fff0 0),
+    radial-gradient(circle at 5% 12.5%, #fff3 2%, #fff0 0)
+}
+
+.canvas * {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 80%;
+  height: 60%;
+  background: 
+    radial-gradient(170% 70% at 30% 99%, #fff4 20%, #0000 20.1%),
+    radial-gradient(100% 100% at 60% 0, var(--skin-light) 15%, var(--skin) 50%);
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  filter: drop-shadow(-1vmin 0vmin) drop-shadow(0.7vmin 0vmin) drop-shadow(0 0.75vmin) drop-shadow(0 -0.5vmin);
+  box-shadow: 
+    inset 0 1vmin 0 -0.25vmin #fff3,
+    inset -0.25vmin -1vmin 0 -0.25vmin #0001
+}
+
+.fin {
+  border-radius: 100% 0 0 0;
+  background: var(--skin-light);
+  width: 25%;
+  height: 35%;
+  transform: translate(-50%, -90%) skew(-10deg) rotate(4deg);
+  top: 0;
+  left: 60%;
+  box-shadow: inset 1vmin 1vmin 0 -0.5vmin #fff3;
+}
+
+.tail {
+  border-radius: 100% 0 0 0;
+  background: var(--skin);
+  width: 14%;
+  height: 40%;
+  transform: translate(0, -90%) skew(-10deg) rotate(10deg);
+  top: 50%;
+  left: 99%;
+  box-shadow: inset 0.5vmin 1.25vmin 0 -0.75vmin #fff3;
+}
+
+.tail-bottom {
+  width: 12%;
+  height: 30%;
+  transform: scaleY(-1) skew(-10deg) rotate(10deg);
+  box-shadow: inset 0 1vmin 0 -0.25vmin #0002;
+}
+
+.flipper {
+  border-radius: 0 0 0 100%;
+  background: var(--skin);
+  width: 18%;
+  height: 22%;
+  transform: skew(10deg) rotate(-16deg);
+  top: 70%;
+  left: 50%;
+  filter: drop-shadow(-1vmin 0vmin) drop-shadow(0.7vmin 0vmin) drop-shadow(0 0.75vmin);
+   box-shadow: inset 1vmin -1vmin 0 -0.5vmin #00000018;
+}
+
+.flipper-bottom {
+  background: var(--skin-dark);
+  background: var(--skin);
+  box-shadow: inset 0 0 0 10in #0003;
+  left: 15%;
+  top: 65%;
+  transform: skew(10deg) rotate(30deg);
+}
+
+.eye {
+  width: 8%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 45%;
+  left: 4%;
+  background: radial-gradient(circle at 32% 32%, white 14%, black 0);
+}
+
+.eye + .eye {
+  left: 35%;
+}
+
+.mouth {
+  border-radius: 50%;
+  border: 0.5vmin solid #0000;
+  border-bottom: 0.75vmin solid #000;
+  border-left: 0.75vmin solid #000;
+  width: 10%;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 18%;
+  transform: rotate(-45deg);
+}
+
+.gills {
+  width: 7%;
+  height: 14%;
+  border-radius: 50%;
+  border: 0.25vmin solid #0000;
+  border-right: 0.75vmin solid;
+  top: 45%;
+  left: 60%;
+  filter: drop-shadow(1.5vmin 0) drop-shadow(1.5vmin 0)
+}
+
+.cheek {
+  width: 10%;
+  height: 7%;
+  background: 
+    repeating-linear-gradient(-55deg, #0000 0 19%, #6006 0 28%),
+    #fcc6;
+  background-clip: content-box;
+  border-radius: 50%;
+  left: 3%;
+  top: 57%;
+  border: 0.75vmin solid #fcc6;
+  border-right-width: 1vmin;
+  border-left-width: 1vmin;
+}
+
+.cheek + .cheek {
+  left: 34.5%;
+}

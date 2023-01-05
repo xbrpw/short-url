@@ -6,17 +6,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <link rel="stylesheet" href="https://use.typekit.net/ybf2qfq.css">
 
-<link rel="stylesheet" href="./style.css">
+<style>
+    * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    background: #F1EDF5;
+    font-family: mr-eaves-xl-modern, sans-serif;
+    padding: 10px;
+  }
+
+  .card {
+    background: linear-gradient(to right, #6c419a 0%, #582a82 59.5%);
+    color: white;
+    padding: 20px;
+    width: calc(100% - 2rem);
+    max-width: 900px;
+    margin: 0.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 30px 60px -30px #745E88;
+    border-left: 12px solid #582A82;
+    position: relative;
+    overflow: hidden;
+  /*  font-weight:bold;*/
+  }
+
+  .card__hed {
+    font-size: 47.7px;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .card__deck {
+    max-width: 400px;
+    color: #DDD4E6;
+    line-height: 22.4px;
+    z-index: 10;
+    word-wrap: break-word;
+  }
+
+  .card__btn {
+    margin-top: 18px;
+    display: inline-block;
+    background: linear-gradient(to bottom, #FEC834 0%, #FFB607 100%);
+    text-decoration: none;
+    color: #582A82;
+    border-radius: 6px;
+    padding: 0.75em 1em;
+    font-weight: 700;
+    box-shadow: 0px 8px 16px -8px #371861;
+  }
+
+  .card__fig {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30.5%;
+    height: 100%;
+    background-image: url("https://luisangelmaciel.github.io/img/desing%20power%20top%20gay.svg");
+    /*background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/78060/pep-bg.jpghttps://www.luisangelmaciel.one/img/desing%20power%20top%20gay.svg");*/
+    background-color: #582A82;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+  }
+
+  .card__fig:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 68%;
+    height: 100%;
+    background:  #582A82;
+    background: linear-gradient(to right, #582A82 0%, rgba(88, 42, 130, 0) 100%);
+    z-index: 2;
+  }
+
+  .card__img {
+    width: 50%;
+    height: auto;
+  }
+
+  /* small */
+          
+  @media (max-width:600px) {
+    .card__deck  {
+      max-width: 250px;
+    }
+  }
+  /* medium */
+
+  @media (max-width:992px) and (min-width:601px) {
+    .card__deck  {
+      max-width: 600px;
+    }
+  }
+  /* large */
+
+  @media (min-width:993px) {
+    .card__deck  {
+      max-width: 700px;
+    }
+  }
+</style>
+
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
 <div class="card">
   <div class="card__hed">
     Power Top
   </div>
   <div class="card__deck">
-    Diseño de @luisangelmaciel para Xiiber Travel.
+    Diseño de @luisangelmaciel para Xiiber Travel. This input needs to be at least <br>
+    3 characters long Only letters and numbers are allowed
   </div>
   <a href="#" class="card__btn">
     Read Drew's Story
@@ -25,7 +135,7 @@
 
   </div>
 </div>
-<!-- partial -->
+
   
 </body>
 </html>

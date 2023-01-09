@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Adivina Quién</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <meta name="title" content="Adivina Quién">
 <meta name="description" content="Adivina Quién">
 <meta name="keywords" content="Guess Who">
@@ -78,10 +78,23 @@ color: #4d1105;">
 
   
   <button class="w3-bar-item w3-button" id='btn-mode' onclick="opentab('home')">Los Simpson</button>
+    <button class="w3-bar-item w3-button" id='btn-mode' onclick="opentab('home')">Original</button>
+  <button class="w3-bar-item w3-button" >Rugrats</button>
+  <div id='btn-mode' onclick="opentab('home')">
+    <input type="radio" name="radio" id="radio1" onclick="opentab('home')"/>
+    <label for="radio1">Los Simpson</label>
+    <input type="radio" name="radio" id="radio2" onclick="opentab('home')"/>
+    <label for="radio1">Rugrats</label>
+  </div>
+  <div id='btn-mode' onclick="opentab('home')">
+    <input type="radio" name="radio" id="radio1" onclick="opentab('home')"/>
+    <label for="radio1">Los Simpson</label>
+  </div>
 
 
  
-  <span onclick="opentab('home')">
+ 
+
     <button class='w3-bar-item w3-button btn--rematch '  id='btn-rematch' type='reset' >
       <span class='btn--rematch-front' ></span>
         Jugar de nuevo
@@ -241,6 +254,65 @@ color: #4d1105;">
     </style>
 
 </div>
+
+
+<div id="DarkMode-Localstorage">
+  <style>
+    body {
+      color: black; 
+      background-color: rgb(255, 255, 255);
+    }
+
+    body.space    {
+      color: rgb(0, 0, 0); 
+      background-color: rgba(255, 255, 255, 0.637);
+    }
+
+    body.dark {
+      color: white; 
+      background-color: rgba(0, 0, 0, 0.651);
+    }
+    body.dark.space {
+      color: white; 
+      background-color: rgba(0, 0, 0, 0.651);
+    }
+  </style>
+
+
+  <button class="w3-bar-item w3-button"  id="theme-toggle">Dark Mode</button>
+
+  <script>
+    var darkMode = false;
+
+    // default to system setting
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      darkMode = true;
+    }
+
+    // preference from localStorage should overwrite
+    if (localStorage.getItem('theme') === 'dark') {
+      darkMode = true;
+    } else if (localStorage.getItem('theme') === 'light') {
+      darkMode = false;
+    }
+
+    if (darkMode) {
+      document.body.classList.toggle('dark');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+          localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      });
+
+    });  
+  </script>
+
+</div>
+
+
 
 <div id="home" class=" tab">
 
@@ -912,30 +984,191 @@ color: #4d1105;">
     });
       </script>
     
-    </div> 
+  </div> 
+  
+ 
+  <div>
+    <div class="w3-container">
+      <p class="title" contenteditable spellcheck="false">Nombre...</p>
+      <p class="body" contenteditable spellcheck="false">Email...</p>
+    </div>
+    
+    <script>
+    // If local storage hasn't been set, set it with the hardcoded content
+    if (!localStorage.getItem('Tinynote:Title')) {
+      localStorage.setItem('Tinynote:Title', document.title)
+    } else if (!localStorage.getItem('Tinynote:Body')) {
+      localStorage.setItem('Tinynote:Body', document.querySelector('.body').textContent)
+    } else {
+      document.title = document.querySelector('.title').textContent = localStorage.getItem('Tinynote:Title')
+      document.querySelector('.body').textContent = localStorage.getItem('Tinynote:Body')
+    }
+    
+    // Watch all elements with contenteditable attribute
+    let elementsToWatch = document.querySelectorAll('[contenteditable]')
+    elementsToWatch.forEach(element => {
+      let observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          if (element.className === 'title') {
+            document.title = mutation.target.textContent
+            localStorage.setItem('Tinynote:Title', mutation.target.textContent)
+          } else {
+            localStorage.setItem('Tinynote:Body', mutation.target.textContent)
+          }
+        })
+      })
+      observer.observe(element, {
+        childList: true,
+        subtree: true,
+        characterData: true
+      })
+    })
+    </script>
+    
+    <style>
+    
+    
+    [contenteditable]:hover,
+    [contenteditable]:focus {
+      background: whitesmoke;
+      outline-color: whitesmoke;
+      outline-style: solid;
+      outline-width: 10px;
+    }
+    </style>
+    
+        
+      </div>
+
+
+    <div class="column red">
+      <a href="#" class="button red">Push</a>
+      <a href="#" class="button red alt">Push</a>
+</div>
+
+<style>
+/*
+ * Copyright (c) 2012 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * https://www.opensource.org/licenses/mit-license.php
+ *
+ * View the Sass/SCSS source at:
+ * http://www.cssflow.com/snippets/multi-colored-push-buttons/demo/scss
+ *
+ * Original PSD by Marian Mraz: https://goo.gl/9Il5d
+ */
+
+
+
+.button {
+  display: inline-block;
+  position: relative;
+  height: 33px;
+  line-height: 33px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  border: 2px solid;
+  border-radius: 7px;
+  outline: 0;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.button:before, .button:after {
+  content: '';
+  position: absolute;
+}
+
+.button:before {
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  z-index: -1;
+  border-radius: 9px;
+}
+
+.button:after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0;
+  border-radius: 7px;
+}
+
+.button.alt {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.button.alt:before {
+  display: none;
+}
+
+body {
+  background: #d04022;
+}
+
+.button.red {
+  background: #d02e17;
+  border-color: #942110 #902010 #741a0d;
+  background-image: -webkit-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+  background-image: -moz-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+  background-image: -o-linear-gradient(top, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+  background-image: linear-gradient(to bottom, #e74a29 0%, #e6451b 50%, #d02e17 50%, #b3150b 100%);
+}
+
+.button.red:before {
+  background: #ee442c;
+  background-image: -webkit-linear-gradient(top, #b32511, #f3533c);
+  background-image: -moz-linear-gradient(top, #b32511, #f3533c);
+  background-image: -o-linear-gradient(top, #b32511, #f3533c);
+  background-image: linear-gradient(to bottom, #b32511, #f3533c);
+}
+
+.button.red:active {
+  background: #e63b1b;
+  background-image: -webkit-linear-gradient(top, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+  background-image: -moz-linear-gradient(top, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+  background-image: -o-linear-gradient(top, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+  background-image: linear-gradient(to bottom, #a9110b 0%, #de3819 60%, #e63b1b 100%);
+}
+
+.button.red:active:after {
+  border-color: #e63b1b;
+}
+
+</style>
+
+
 </div>
 
 <div id="lamp" class=" tab" style="display:none">
   <iframe src="./has-ganado/index.html" 
-  name="iframe_b" height="676px" width="650px" title="Iframe Example" style="border:none;" allowfullscreen ></iframe>
-
-           
+  name="iframe_b" height="676px" width="650px" title="Iframe Example" style="border:none;" allowfullscreen ></iframe>         
 </div>
 
 <script>
-function opentab(tabName) {
-  var i;
-  var x = document.getElementsByClassName("tab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  function opentab(tabName) {
+    var i;
+    var x = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(tabName).style.display = "block";  
   }
-  document.getElementById(tabName).style.display = "block";  
-}
 </script>
 
 
 
-  <script  src="./script.js"></script>
+<script  src="./script.js"></script>
 
 </body>
 </html>

@@ -192,7 +192,7 @@ body {
 }
 
 .special .card__front::after {
-  background-image: url("./d.png");
+  background-image: url("./b.png");
 }
 
 .card-0 .card__front::after {

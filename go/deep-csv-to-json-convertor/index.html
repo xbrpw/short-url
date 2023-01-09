@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Deep CSV to JSON convertor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<input id="fromJSON" type="checkbox" class="hidden">
+<input type="checkbox" id="toggle-info" class="hidden">
+<header>
+  <h1>Deep <label for="fromJSON"></label> to <label for="fromJSON"></label></h1>
+  <p>Convert CSV/JSON to fully compliant JSON/CSV and back again.</p>
+  <aside class="info">
+    <label for="toggle-info">Toggle Info</label>
+    <ul>
+      <li>Import/export fully compliant JSON/CSV, maintaining full JSON structure
+        <ul>
+          <li><strong>Tested with Google Sheets / MS Excel import + export</strong></li>
+          <li><strike>#TODO: support cell new-lines!</strike> <strong>Update: new-lines now work as expected</strong></li>
+          <li><strong>#TODO: test everything else / check the actual spec</strong></li>
+          <li><strong>#TODO: refactor / optimise into a library</strong></li>
+        </ul>
+      </li>
+      <li>Standard CSV formatting applies (e.g. double-double quotes inside a cell in raw CSV)</li>
+      <li>CSV format has been extended to allow for JSON data types: <strong>array/object/number/boolean</strong>
+        <ul>
+          <li>Arrays/{key:value pairs} are <strong>(enclosed)</strong> and can be <strong>((nested))</strong> == ['enclosed'], [['nested']]</li>
+          <li>Simple arrays can also be encoded unenclosed with newlines (currently a one-way encoding): <strong>a\nb\nc</strong> == ['a','b','c'] <input type="checkbox" checked id="simple-arrays"></li>
+          <li>{key:value pairs} are delimited by a colon: <strong>(key:val)</strong> == { key: 'val' }</li>
+          <li>Objects are made of repeated {key:value pairs}: <strong>(a:val)(b:val)</strong> == { a: 'val', b: 'val' }</li>
+          <li>Content with commas inside of an array/object <strong>(is, "double-quoted, like this")</strong> == ['is', 'doubled-quoted, like this']</li>
+          <li>Booleans are (strings:<strong>true</strong>) with (quotes:<strong>false</strong>) == { strings: true, quotes: false }</li>
+          <li>Numbers are unquoted: <strong>(answer: 42)</strong> == { answer: 42 }</li>
+        </ul>
+      </li>
+      <li>This is a first attempt, coded from scratch in codepen. Feel free to fork and fix.</li>
+    </ul>
+  </aside>
+</header>
+<nav class="nav">
+  <label for="fromJSON" class="button"></label>
+  <button class="button-sample">Sample</button>
+  <input type=file id="upload" accept=".csv,.json" class="hidden">
+  <label for="upload" class="button button-upload">Upload</label>
+  <button class="button-download">Download</button>
+</nav>
+<section class="csv-json">
+  <textarea id="input"></textarea>
+  <output id="output" for="input"></output>
+</section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

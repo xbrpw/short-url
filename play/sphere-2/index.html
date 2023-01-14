@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>La burbuja del poder (Sphere #2)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    overflow: hidden;
+    }
+    .canvas-container {
+    height: 100%;
+    width: 100%;
+    }    
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='canvas-container'></div>
+
+<script src='https://unpkg.com/three@0.99.0/build/three.min.js'></script>
+<script src='https://unpkg.com/three@0.99.0/examples/js/controls/OrbitControls.js'></script>
+<script src='https://unpkg.com/three@0.99.0/examples/js/postprocessing/EffectComposer.js'></script>
+<script src='https://unpkg.com/three@0.99.0/examples/js/postprocessing/RenderPass.js'></script>
+<script src='https://unpkg.com/three@0.99.0/examples/js/postprocessing/ShaderPass.js'></script>
+<script src='https://unpkg.com/three@0.99.0/examples/js/shaders/CopyShader.js'></script>
+<script src='https://unpkg.com/three@0.99.0/examples/js/shaders/LuminosityHighPassShader.js'></script>
+<script src='https://unpkg.com/three@0.99.0/examples/js/postprocessing/UnrealBloomPass.js'></script>
+
+
+<script id='sphere-vertex-shader' type='x-shader/x-vertex'>
+    uniform float uTime;
+
+    varying vec2 vUv;
+
+    void main() {
+        vUv = uv;
+
+        vec3 delta = normal * sin(position.x * position.y * uTime / 10.0);
+        vec3 newPosition = position + delta;
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
+    }
+</script>
+
+
+<script id='sphere-fragment-shader' type='x-shader/x-fragment'>
+    uniform float uTime;
+
+    varying vec2 vUv;
+
+    float rand(vec2 seed);
+    float noise(vec2 position);
+
+    void main() {
+        vec2 position1 = vec2(vUv.x * 4.0, vUv.y - uTime);
+        vec2 position2 = vec2(vUv.x * 4.0, vUv.y - uTime * 2.0);
+        vec2 position3 = vec2(vUv.x * 4.0, vUv.y - uTime * 3.0);
+
+        float color = (
+            noise(position1 * 5.0)
+            + noise(position2 * 10.0)
+            + noise(position3 * 15.0)) / 3.0;
+
+        gl_FragColor = vec4(0.0, 0.0, 0.0, color - smoothstep(0.1, 1.3, vUv.y));
+    }
+
+    float rand(vec2 seed) {
+        return fract(sin(dot(seed, vec2(12.9898,78.233))) * 43758.5453123);
+    }
+
+    float noise(vec2 position) {
+        vec2 blockPosition = floor(position);
+
+        float topLeftValue     = rand(blockPosition);
+        float topRightValue    = rand(blockPosition + vec2(1.0, 0.0));
+        float bottomLeftValue  = rand(blockPosition + vec2(0.0, 1.0));
+        float bottomRightValue = rand(blockPosition + vec2(1.0, 1.0));
+
+        vec2 computedValue = smoothstep(0.0, 1.0, fract(position));
+
+        return mix(topLeftValue, topRightValue, computedValue.x)
+            + (bottomLeftValue  - topLeftValue)  * computedValue.y * (1.0 - computedValue.x)
+            + (bottomRightValue - topRightValue) * computedValue.x * computedValue.y;
+    }
+</script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

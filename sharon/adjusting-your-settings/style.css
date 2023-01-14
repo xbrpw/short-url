@@ -1,0 +1,117 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: -100px auto 0;
+  font-size: 1em;
+  line-height: 1.125em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#bolt {
+  position: absolute;
+  background: #191924;
+  animation: bolt 2s infinite cubic-bezier(0.47, 1.47, 0.31, 1.03);
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 28.8675px;
+  margin: -14.43375px 0 0 -25px;
+}
+#bolt:before, #bolt:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50px;
+  height: 14.43375px;
+  border-style: solid;
+  border-color: #191924 transparent transparent;
+  border-width: 14.43375px 25px 0;
+}
+#bolt:after {
+  top: auto;
+  bottom: 100%;
+  border-top: solid transparent 0;
+  border-bottom: solid #191924 14.43375px;
+}
+
+#wrench {
+  position: absolute;
+  background: #9595a0;
+  animation: wrench 2s infinite cubic-bezier(0.47, 1.47, 0.31, 1.03);
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 200px;
+  margin: 9px 0 0 -25px;
+  border-radius: 0 0 25px 25px;
+  transform-origin: 50% -9px;
+}
+#wrench:before, #wrench:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+#wrench:before {
+  top: -50px;
+  left: -50%;
+  width: 200%;
+  height: 100px;
+  border-style: solid;
+  border-color: transparent #9595a0 #9595a0;
+  border-width: 25px;
+  border-radius: 50%;
+}
+#wrench:after {
+  top: 5px;
+  width: 50px;
+  height: 14.43375px;
+  border-style: solid;
+  border-color: white transparent transparent;
+  border-width: 14.43375px 25px 0;
+  box-shadow: white 0 -10px 0 0, white 0 -20px 0 0, white 0 -30px 0 0;
+}
+
+@keyframes bolt {
+  20% {
+    transform: rotateZ(0);
+  }
+  40% {
+    transform: rotateZ(120deg);
+  }
+  100% {
+    transform: rotateZ(120deg);
+  }
+}
+@keyframes wrench {
+  0% {
+    transform: rotateZ(300deg) translateY(60px);
+  }
+  20% {
+    transform: rotateZ(300deg) translateY(0);
+  }
+  40% {
+    transform: rotateZ(60deg);
+  }
+  50% {
+    transform: rotateZ(60deg) translateY(60px);
+  }
+  90% {
+    transform: rotateZ(-60deg) translateY(60px);
+  }
+  100% {
+    transform: rotateZ(-60deg) translateY(60px);
+  }
+}

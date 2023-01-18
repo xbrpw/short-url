@@ -1,0 +1,92 @@
+body {margin: 0px;padding: 0px;}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container-sharon {
+	margin: 0 auto;
+	padding: 0px;
+	font-family: sans-serif;}
+
+.nav {
+	width: 100%;
+	background-color: #E1E1E1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	height: 40px;
+}
+
+
+.nav a {
+	font-size: 1em;
+	text-decoration: none;
+	margin: 0px 10px 0px 10px;
+	color: gray;
+}
+
+.nav a:hover {
+	text-decoration: underline;
+}
+
+.sectionHow {
+	border-bottom: 1px solid #E1E1E1;
+	margin: 0px;
+	padding: 20px;
+}
+
+.sectionHow{
+	margin: 5px 0px;
+}
+
+.sectionHow p:last-child {
+	margin: 0px 0px 5px 0px;
+}
+
+.sectionHow h2 {
+	margin: 0px 0px 10px 0px;
+}
+
+.sectionHow h3 {
+	margin: 0px 0px 10px 0px;
+	position: relative;
+	padding: 5px 0px 5px 0px;
+}
+
+.sectionHow.inlineview {
+	margin: 10px 0px 20px 0px;
+	background-color: #000000;
+	color: white;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	padding: 10px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.sectionHow pre {
+	margin: 10px 0px 40px 0px;
+	background-color: #000000;
+	color: white;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	padding: 10px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+
+.green {color:green;}
+.grey {color:grey;}
+
+@media only screen and (max-width: 450px) {
+	.container-sharon {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0px;
+		font-family: sans-serif;
+	}
+}

@@ -186,7 +186,7 @@ body {
   display: block;
   position: relative;
   padding-top: 150%;
-  background-image: url("./a.png");
+  background-image: url("./rugrats poster.webp");
   background-size: calc(var(--card-width) * 5);
   transition: opacity 0.3s;
 }

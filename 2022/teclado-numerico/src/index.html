@@ -1,0 +1,79 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="">  
+  <div id="Home" class="Tab">
+
+    <h1 class="titulo ">Los últimos 2 dígitos <br>de tu número celular depará tu 2023</h1>
+
+    <div class="keys">
+      <div data-key="65" class="key">
+        <kbd>1</kbd><span class="sound">Sexo</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>2</kbd><span class="sound">Problemas</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>3</kbd><span class="sound">Alcohol</span>
+      </div>
+    </div>
+    <div class="keys">
+      <div data-key="70" class="key">
+        <kbd>4</kbd><span class="sound">Viajes</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>5</kbd> <span class="sound">Puteria</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>6</kbd><span class="sound">Cuernos</span>
+      </div>
+    </div>
+    <div class="keys">
+      <div data-key="74" class="key">
+        <kbd>7</kbd><span class="sound">Salud</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>0</kbd><span class="sound">Dinero</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>9</kbd><span class="sound">Éxitos</span>
+      </div>
+    </div>
+    <div class="keys">
+      <div data-key="74" class="key" onclick="openTab(event,'More')">
+        <kbd>*</kbd><span class="sound"></span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>8</kbd><span class="sound">Deudas</span>
+      </div>
+      <div data-key="76" class="key" onclick="openTab(event,'About')">
+        <kbd>#</kbd><span class="sound"></span>
+      </div>
+    </div>
+
+    <audio data-key="65" src=".drumKit/clap.wav"></audio>
+    <audio data-key="83" src=".drumKit/hihat.wav"></audio>
+    <audio data-key="68" src=".drumKit/kick.wav"></audio>
+    <audio data-key="70" src=".drumKit/openhat.wav"></audio>
+    <audio data-key="71" src=".drumKit/boom.wav"></audio>
+    <audio data-key="72" src=".drumKit/ride.wav"></audio>
+    <audio data-key="74" src=".drumKit/snare.wav"></audio>
+    <audio data-key="75" src=".drumKit/tom.wav"></audio>
+    <audio data-key="76" src=".drumKit/tink.wav"></audio>
+  </div>
+
+  <div id="About" class="Tab" style="display:none">
+    <button class="tablink" onclick="openTab(event,'Home')">Home</button>
+    <button class="tablink" onclick="openTab(event,'More')">More</button>
+  </div>
+
+  <div id="More" class="Tab" style="display:none">  
+    <div class="status__light">
+      <div class="status__light__ring"></div>
+      <div class="status__light__led"></div>
+    </div>
+    <div class="status__message">En progreso</div>
+
+
+    <button class="tablink" onclick="openTab(event,'Home')">Home</button>
+    <button class="tablink" onclick="openTab(event,'About')">About</button>
+  </div>
+</div>

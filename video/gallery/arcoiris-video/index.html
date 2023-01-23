@@ -2,16 +2,96 @@
 <html lang="es-MX" >
 <head>
   <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="./style.css">
+  <title>.container-rainbow</title>
+  <style>
+    .container-rainbow {
+      position: relative;
+      overflow: hidden;
+    }
+    .container-rainbow::after {
+      content: "";
+      background: linear-gradient(to right, lightblue, hotpink);
+      filter: grayscale(1);
+      width: 560px;
+      height: 315px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;border-radius: 10px;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition-duration: 1s;
+    }
+    .container-rainbow:hover::after {
+      filter: grayscale(0);
+      animation: rainbow 2s linear infinite;
+    }
+
+    @keyframes rainbow {
+      from {
+        filter: hue-rotate(0);
+      }
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .container-rainbow iframe {border-radius: 10px;}    
+  </style>
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="vid-container">
-  <iframe width="1000" height="700" src="https://www.youtube.com/embed/g8SMIiQZUcs?ecver=1" frameborder="0" allowfullscreen></iframe>
-</div>
-<!-- partial -->
+
+  <h2>.container-rainbow</h2>
+  <div class="container-rainbow">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/nrPKohTWF2Y" title="Responsitranity con Jurado y Elenco Dragvesti All Stars" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <p>HTML</p>
+  <pre>
+  &lt;div class="container-rainbow">
+      &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/nrPKohTWF2Y" 
+      title="Responsitranity con Jurado y Elenco Dragvesti All Stars" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+      picture-in-picture; web-share" allowfullscreen> &lt;/iframe>
+  &lt;/div>  
+  </pre>
+  <p>CSS</p>
+  <pre>
+    .container-rainbow {
+      position: relative;
+      overflow: hidden;
+    }
+    .container-rainbow::after {
+      content: "";
+      background: linear-gradient(to right, lightblue, hotpink);
+      filter: grayscale(1);
+      width: 560px;
+      height: 315px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;border-radius: 10px;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      transition-duration: 1s;
+    }
+    .container-rainbow:hover::after {
+      filter: grayscale(0);
+      animation: rainbow 2s linear infinite;
+    }
   
+    @keyframes rainbow {
+      from {
+        filter: hue-rotate(0);
+      }
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+  
+    .container-rainbow iframe {border-radius: 10px;}  
+  </pre>
+
 </body>
 </html>
+

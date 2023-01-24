@@ -1,0 +1,151 @@
+html {
+  height: 100%;
+  font-family: 'source-sans-pro', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .005em;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100%;
+  font-size: 60vmin;
+  margin: 0;
+}
+
+.view {
+  height: 100%;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+  animation: color 15s ease infinite;
+}
+
+@keyframes color {
+	0% { background-position: 0% 50% }
+	50% { background-position: 100% 50% }
+	100% { background-position: 0% 50% }
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  mix-blend-mode: screen;
+}
+
+.logo-wrapper::before {
+  position: absolute;
+  top: 6%;
+  font-size: 13px;
+  font-weight: 600;
+  
+}
+
+.logo {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  color: #000;
+  font-weight: 900;
+}
+
+.logo::before,
+.logo::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  transition: .4s;
+  pointer-events: none;
+}
+
+.logo::before {
+  left: .115em;
+  bottom: 0;
+  width: .84em;
+  height: .84em;
+  border: .08em solid;
+  transform-origin: .5em .34em;
+}
+
+.logo::after {
+  right: 0.4em;
+  border: .28em solid;
+  background: #000;
+  transform: rotate(45deg) scale(1.3);
+  transform-origin: .06em .5em;
+}
+
+.logo span {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  font-size: .11em;
+  line-height: 1em;
+  margin-top: -.5em;
+  opacity: 0;
+  transition: .4s;
+  pointer-events: none;
+}
+
+.logo span:first-child {
+  left: .25em;
+}
+
+.logo span:last-child {
+  color: #fff;
+  left: 1.8em;
+}
+
+@media (hover: hover) {
+  
+  .logo-wrapper::before {
+    content: 'hazlo playera en';
+  }
+  
+  .logo:hover::before {
+    left: 0;
+  }
+
+  .logo:hover::after {
+    right: 0;
+    transform: rotate(45deg) scale(1);
+  }
+
+  .logo:hover span:first-child {
+    left: -.08em;
+    opacity: 1;
+  }
+
+  .logo:hover span:last-child {
+    left: 2.95em;
+    opacity: 1;
+  }
+
+}
+
+@media (hover: none) {
+  
+  .logo::before {
+    left: 0;
+  }
+
+  .logo::after {
+    right: 0;
+    transform: rotate(45deg) scale(1);
+  }
+
+  .logo span:first-child {
+    left: -.08em;
+    opacity: 1;
+  }
+
+  .logo span:last-child {
+    left: 3em;
+    opacity: 1;
+  }
+
+}

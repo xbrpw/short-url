@@ -7,7 +7,7 @@
 const profileEl = document.querySelector('.profile')
 const starsEl = document.querySelector('.stars')
 
-fetch('https://api.github.com/users/jamiewilson')
+fetch('https://api.github.com/users/luisangelmaciel')
   .then(profile => profile.json())
   .then(profile => {
     profileEl.innerHTML += `
@@ -18,7 +18,7 @@ fetch('https://api.github.com/users/jamiewilson')
     `
   })
 
-fetch('https://api.github.com/users/jamiewilson/starred?per_page=20')
+fetch('https://api.github.com/users/luisangelmaciel/starred?per_page=100')
   .then(stars => stars.json())
   .then(stars => {
     stars.forEach(star => {
@@ -44,4 +44,25 @@ fetch('https://api.github.com/users/jamiewilson/starred?per_page=20')
   padding: 0;
   columns: 3;
 }
+
+
+
 </style>
+<script>
+
+</script>
+
+<span class="theYear"></span>
+<script>
+    var elements = {
+        theYear: document.querySelector('.theYear')
+    };
+    var onlyyear = [
+         + new Date().getFullYear(),            
+    ];
+    var rand = Math.floor(Math.random() * onl.length);
+    elements.theYear.innerHTML += onlyyear[rand];
+
+    reset();
+</script>
+

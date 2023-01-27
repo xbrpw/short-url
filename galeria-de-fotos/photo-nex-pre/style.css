@@ -1,0 +1,63 @@
+.container {
+  height: 667px;
+  width: 375px;
+  position: absolute;
+}
+.canvas-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.text {
+  position: absolute;
+  top: 200px;
+  color: white;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.two {
+  transform: translateX(100%);
+}
+.surf {
+  z-index: 1;
+  font-family: sans-serif;
+  top: 180px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.nav {
+  position: absolute;
+  bottom: 0;
+  background: #141F2C;
+  height: 70px;
+  width: 100%;
+  z-index: 2;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: lighter;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+.nav-child {
+  width: 49%;
+  display: inline-block;
+  line-height: 70px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+.nav-child:hover {
+  opacity: 0.7;
+  transition: opacity 0.4s ease;
+}
+.nav-child.prev {
+  padding-left: 30px;
+}
+.nav-child.next {
+  text-align: right;
+  padding-right: 30px;
+}

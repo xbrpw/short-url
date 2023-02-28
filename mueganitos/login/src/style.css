@@ -1,0 +1,427 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+/*	==================================================
+			Estilos globais (global styles)
+			================================================== */
+		* { box-sizing: border-box; }
+		html { font-size: 62.5%; }
+		html, body { margin: 0; height: 100%; }
+		body { background-color: #3498DB; overflow:hidden;}
+		ul { margin: 0; list-style: none; }
+		a, input, button { outline: 0; }
+
+		/*	======================================================
+			Título e créditos (title and credits)
+			====================================================== */
+		h1 {
+			font-size: 2.3em;
+			text-align: center;
+			padding: 10px 0;
+			color: #FFF;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+
+			-webkit-font-smoothing: antialiased;
+					font-smoothing: antialiased;
+		}
+
+		h1 a {
+			color: #FFF;
+			display: inline-block;
+			text-decoration: none;
+			position: relative;
+		}
+
+		h1 a::before {
+			content: " ";
+			height: 3px;
+			background-color: rgba(0,0,0,0.15);
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			z-index: -1;
+
+			transition: all 0.15s ease;
+		}
+
+		h1 a:hover::before { height: 100%; }
+
+		/*	======================================================
+			Mensagem de aviso
+			====================================================== */
+		.aviso {
+			text-align: center;
+			color: #FFEB3B;
+			background-color: rgba(0,0,0,0.1);
+			border-radius: 3px;
+			padding: 10px;
+			display: table;
+			margin: 50px auto 0 auto;
+			font-size: 1.4em;
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+		}
+
+		/*	======================================================
+			Formulário (form)
+			====================================================== */
+		.form {
+			width: 400px;
+			margin: 150px auto 0 auto;
+			background-color: #FFF;
+			border-radius: 3px;
+			position: relative;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.25);
+			font-size: 1.4em;
+		}
+
+		.campos-form { padding: 25px 30px; }
+
+		.campos-form .item-list {
+			position: relative;
+			margin-bottom: 5px;
+		}
+
+		.campos .item-list:last-child { margin-bottom: 0; }
+
+		.item-list label {
+			color: #A9A9A9;
+			position: absolute;
+			text-indent: -99999px;
+			top: 50%;
+			left: 10px;
+
+			transform: translateY(-50%);
+
+			transition: all 0.2s linear;
+		}
+
+		.item-list label::before {
+			content: " ";
+			display: block;
+			text-indent: 0;
+			font-family: "FontAwesome";
+			position: absolute;
+		}
+
+		.item-list label[for="email"]::before { content: "\f0e0"; }
+		.item-list label[for="senha"]::before { content: "\f13e"; }
+
+		.item-list input {
+			padding: 10px 10px 10px 30px;
+			border: 1px solid #A9A9A9;
+			border-radius: 3px;
+			width: 100%;
+			color: #3F3F3F;
+		}
+
+		.item-list input:focus { border-color: #3498DB; }
+
+		/**
+		* Muda a cor das placeholder quando os campos estão com focus
+		*/
+		.item-list input:focus::-webkit-input-placeholder { color: #3498DB; }
+		.item-list input:focus::-moz-placeholder { color: #3498DB; }
+		.item-list input:focus:-ms-input-placeholder { color: #3498DB; }
+
+		.item-list input:focus + label { color: #3498DB; }
+
+		/* ===== Validação visual para os campos (Visual validate - en) ===== */
+
+		/* Estilos para campos inválidos */
+		.validacao input:invalid, .validacao input:focus:invalid { border-color: #FF433C; }
+		.validacao input:invalid + label, .validacao input:focus:invalid + label  { color: #FF433C; }
+
+		.validacao input:focus:invalid::-webkit-input-placeholder { color: #FF433C; }
+		.validacao input:focus:invalid::-moz-placeholder { color: #FF433C; }
+		.validacao input:focus:invalid:-ms-input-placeholder { color: #FF433C; }
+
+		/* Estilos para campos válidos */
+		.validacao input:valid, .validacao input:focus:valid { border-color: #3498DB; }
+		.validacao input:valid + label, .validacao input:focus:valid + label  { color: #3498DB; }
+
+		/**
+		*1- Quando uma senha "válida" for inserida, o ícone de cadeado aberto é
+		*	trocado por um ícone de cadeado fechado.
+		*/
+		.item-list input:valid + label[for="senha"]::before,
+		.validacao input:valid + label[for="senha"]::before { content: "\f023"; }	/* 1 */
+
+		/* ===== Botões de ação (actions buttons) ===== */
+		/**
+		*1- O "font-size: 0" é uma técnica para tirar o espaçamento natural
+			que existe em elementos com "display: inline-block", nesse caso,
+			estamos tirando o espaçamentos dos filhos de da ".acoes".
+		*2- Depois de tirar o espaçamento natural dos ".button-acoes"
+			atráves do pai, podemos colocar o tamanho da fonte que queremos.
+		*/
+		.acoes {
+			font-size: 0;	/* 1 */
+			padding: 10px 30px;
+		}
+
+		.button-acoes {
+			display: inline-block;
+			font-size: 14px;	/* 2 */
+			margin-right: 135px;
+			vertical-align: middle;
+		}
+
+		.button-acoes:last-child { margin-right: 0;  }
+
+		.button-acoes a {
+			text-decoration: none;
+			color: #A0A0A0;
+		}
+
+		.button-acoes a:hover { color: #3498DB; }
+		.button-acoes a:hover { color: #3498DB; }
+
+		.button-acoes button {
+			background-color: #3498DB;
+			color: #FFF;
+			font-size: 16px;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+		}
+
+		.button-acoes button:hover { background-color: #0099FF; }
+
+		.button-acoes button:active {
+			background-color: #308DCC;
+			box-shadow: inset 0 3px 3px rgba(0,0,0,0.2);
+		}
+
+		/*	================================================================
+			Avatar
+			================================================================ */
+
+		/**
+		* As palavras "-esq" e "-dir" depois das classes significam:
+		* -esq: esquerda (left);
+		* -dir: direita (right).
+		*
+		* Os estilos para cada parte do avatar estão separados da seginte forma:
+		* ===== Parte do avatar (Part of avatar - en) =====
+		* Onde a primeira palavra indica a parte do avatar, e as palavras
+		* dentro dos parenteses, são as suas respectivas traduções para o
+		* inglês (en).
+		*/
+
+		/**
+		*1- A propriedade "user-select: none" faz com que nenhum elemento
+			seja selecionado.
+		*/
+		.avatar {
+			width: 100%;
+			/*background-color: #FFF;*/
+			position: absolute;
+			top: -100px;
+
+			-webkit-user-select: none;	/* 1 */
+			   -moz-user-select: none;	/* 1 */
+				-ms-user-select: none;	/* 1 */
+				 -o-user-select: none;	/* 1 */
+					user-select: none;	/* 1 */
+		}
+
+		/* ===== Cabeça (Head - en) ===== */
+		.cabeca {
+			background-color: #E35C49;
+			height: 100px;
+			width: 130px;
+			margin: 0 auto;
+
+			border-radius: 50% 50% 0 0;
+			position: relative;
+		}
+
+		.orelha, .olhos, .narinas, .dentes { position: absolute; }
+
+		/* ===== Orelhas (Ears - en) ===== */
+		.orelha {
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background-color: #E25441;
+			top: 0;
+			z-index: -1;
+
+			transform: translateY(-25%);
+		}
+
+		.orelha-esq {
+			left: 10px;
+			box-shadow: inset 3px 5px 0 #E35C49;
+		}
+
+		.orelha-dir {
+			right: 10px;
+			box-shadow: inset -3px 5px 0 #E35C49;
+		}
+
+		/* ===== Olhos (Eyes - en) ===== */
+		.olhos {
+			width: 35px;
+			height: 35px;
+			background-color: #FFF;
+			border-radius: 50%;
+			top: 30px;
+			overflow: hidden;
+
+			box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
+
+			transition: all 0.05s ease;
+		}
+
+		.olhos .palpebra {
+			background-color: #E25441;
+			position: absolute;
+			width: 100%;
+			z-index: 2;
+			border-radius: 50%;
+
+			-webkit-animation: piscar 1.5s linear infinite alternate;
+					animation: piscar 1.5s linear infinite alternate;
+		}
+
+		/**
+		* Esse @keyframe tem a função de piscar os olhos do avata. Quando
+		* está com "height: 0", a palpebra não aparece, quando colocamos
+		* "height: 100%" último frame, o avatar pisca os olhos rapidamente.
+		*/
+		@-webkit-keyframes piscar {
+			0% { height: 0; }
+			95% { height: 0; }
+			100% { height: 100%; }
+		}
+
+		@keyframes piscar {
+			0% { height: 0; }
+			95% { height: 0; }
+			100% { height: 100%; }
+		}
+
+		/**
+		* A regra ".olhos.fechar .palpebra" tem a função de parar a piscada
+		* do avatar. A class .fechar é adicionada com JQuery quando o campo
+		* "password" está com focus.
+		*
+		* 1- Pausa a animação "piscar"
+		*/
+		.olhos.fechar .palpebra {
+			-webkit-animation: paused;	/*1*/
+					animation: paused;	/*1*/
+		}
+
+		.olho-esq { left: 25px; }
+		.olho-dir { right: 25px; }
+
+		.olhos::before,
+		.olhos::after {
+			content: " ";
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		.olhos::before {
+			bottom: 1px;
+			background-color: #000;
+			width: 10px;
+			height: 10px;
+			left: 50%;
+
+			transform: translateX(-50%);
+		}
+
+		.olhos::after {
+			width: 5px;
+			height: 5px;
+			background-color: #FFF;
+			bottom: 7px;
+			left: 18px;
+		}
+
+		/* ===== Nariz (Nose - en) ===== */
+		.narinas {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.2);
+			border-radius: 50%;
+			box-shadow: inset 0 2px 2px rgba(0,0,0,0.3);
+			top: 70px;
+		}
+
+		.narina-esq { left: 50px; }
+		.narina-dir { right: 50px; }
+
+		/* ===== Dentes (Tooth - en) ===== */
+		.dentes {
+			width: 25px;
+			height: 20px;
+			background-color: #EAEAEA;
+			border-radius: 0 0 3px 3px;
+			bottom: -20px;
+		}
+
+		.dente-esq { left: 30px; }
+		.dente-dir { right: 30px; }
+
+		/* ===== Braços, mãos e unhas (Arms, hands and nails - en) ===== */
+		.bracos {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+		.bracos .mao {
+			width: 50px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: #E25441;
+			position: absolute;
+			bottom: 0;
+			overflow: hidden;
+			z-index: 5;
+
+			box-shadow: 0 2px 0 rgba(0,0,0,0.2), inset 0 2px 0 rgba(0,0,0,0.1);
+
+			transform: translateY(50%);
+
+			transition: all 0.3s ease-out;
+		}
+
+		.bracos .mao-esq { left: 80px; }
+		.bracos .mao-dir { right: 80px; }
+
+		.mao .unha {
+			background-color: rgba(255,255,255,0.2);
+			width: 10px;
+			height: 10px;
+			border-radius: 50% 50% 0 0;
+			position: absolute;
+			bottom: 0;
+			left: 10px;
+
+			box-shadow: 20px 0 0 rgba(255,255,255,0.2);
+		}
+
+		/* ===== Tapar os olhos (Cover eyes - en) ===== */
+		.esconder .mao {
+			height: 75px;
+			bottom: 30px;
+			box-shadow: 0 0 0 rgba(0,0,0,0), inset 0 2px 0 rgba(0,0,0,0.1);
+		}
+
+		.esconder .mao-esq {
+			left: 125px;
+			transform: translateY(50%) rotate(-125deg);
+		}
+
+		.esconder .mao-dir {
+			right: 125px;
+			transform: translateY(50%) rotate(125deg);
+		}

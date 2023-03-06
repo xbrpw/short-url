@@ -1,0 +1,127 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #000;
+	overflow: hidden;
+}
+.earth, .line {
+	position: absolute;
+	bottom: 0;
+	height: 296px;
+	width: 100vw;
+	z-index: 0;
+
+}
+.line {
+	background: url(https://cdn.josetxu.com/img/sunrise-line.png) no-repeat center top transparent;	
+	animation: shining 60s linear 1s infinite alternate;
+	z-index: 1;
+	opacity: 0;
+	filter: hue-rotate(-333deg) blur(1px);
+	background-size: cover;
+}
+.surface {
+	background: url(https://cdn.josetxu.com/img/sunrise-earth.png) no-repeat center top transparent;
+	background-size: cover;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.shadow {
+	float: left;
+	width: 150vw;
+	height: 600px;
+	background: radial-gradient(#000 0%, #000 50%, transparent 70%, transparent 90%, transparent 100%);
+	animation: shading 60s linear 0s infinite alternate;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	bottom: -222px;
+	left: -25vw;
+	opacity: 0;
+}
+.sun {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background: #ff9800;
+	box-shadow: 0 0 5px 3px #f60;
+	left: calc(50% - 10px);
+	bottom: 260px;
+	z-index: -1;
+	animation: suntrack 60s linear 1s infinite alternate;
+	transform: scale(2.5);
+	opacity: 0;
+}
+.sun:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #ff98007a;
+	position: absolute;
+	border-radius: 100%;
+	box-shadow: 0 0 25px 5px #ff9800;
+}
+.shine {
+	position: absolute;
+	box-shadow: 0 0 110px 110px #fff;
+	border-radius: 100%;
+	bottom: 264px;
+	left: calc(50% - 25px);
+	width: 50px;
+	height: 50px;
+	background: #ffffff;
+	animation: flash 60s ease-in 1s infinite alternate; 
+	opacity: 0; 
+	z-index: 4;
+}
+.shine:before {
+	content: "";
+	float: left;
+	height: 60px;
+	width: 60px;
+	background: #ffffff75;
+	margin-left: -5px;
+	border-radius: 100%;
+	margin-top: -5px;
+	box-shadow: 0 0 10px 0 #fff;
+	opacity: 0;
+	box-shadow: 0 0 30px 10px #fff, 0 0 50px 50px #fff;
+}
+
+
+
+
+@keyframes shining {
+	0% { opacity: 0;    filter: hue-rotate(-333deg) blur(1px) brightness(0); }
+	5% { opacity: 0.25; filter: hue-rotate(-333deg) blur(1px) brightness(10); }
+	15% { opacity: 0.15; filter: hue-rotate(-333deg) blur(1px) brightness(1); }
+	25% { opacity: 0.1;  filter: hue-rotate(-333deg) blur(1px) brightness(7.15); }
+	35% { opacity: 0.05; filter: hue-rotate(-333deg) blur(1px) brightness(5.25); }
+	60% { opacity: 0;    filter: hue-rotate(-333deg) blur(1px) brightness(6.50); }	 
+	75% { opacity: 0;    filter: hue-rotate(-333deg) blur(1px) brightness(7.75); }
+	100% { opacity: 0;    filter: hue-rotate(-333deg) blur(1px) brightness(10); }
+}
+@keyframes shading {
+	0% { bottom: -222px; opacity: 1; }
+	99% { bottom: -600px; opacity: 1; }
+	100% { bottom: -600px; opacity: 0; }
+}
+@keyframes suntrack {
+	0% { opacity:0; transform: scale(2.5)  rotate(0deg);   bottom: 260px; filter: blur(1); }
+	1% { opacity:1; transform: scale(2.5); background: #ff9800; box-shadow: 0 0 5px 3px #ff6600; filter: blur(0); }
+	1.5% { opacity:1; transform: scale(2.5); background: #ffc776; box-shadow: 0 0 5px 3px #ffc776; filter: blur(1) brightness(5); }
+	2% { opacity:1; transform: scale(2.5); background: #fff6e8; box-shadow: 0 0 5px 3px #fff2e0; filter: blur(0); }
+	100% { opacity:1; transform: scale(2.5)  rotate(360deg); bottom: 110vh; filter: blur(1); }
+}
+@keyframes flash {
+	0% { opacity: 0; }
+	1% { opacity: 0;    transform: scale(0.15); }
+	2% { opacity: 0.25; transform: scale(0.75); }
+	2.1% { opacity: 0.5;  transform: scale(1); }
+	2.2% { opacity: 0.25; transform: scale(0.25); }
+	2.5% { opacity: 0;    transform: scale(0); }
+	3% { opacity: 0; }
+	100% { opacity: 0; }
+}

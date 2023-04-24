@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Gallery w/ mouse follower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div id="container">
+  <svg width="100%" height="100%">
+    <mask id="m">
+      <circle id="c1" cx="40" cy="40" r="0" fill="#fff"/>
+      <circle id="c0" cx="40" cy="40" r="0" fill="#fff" opacity="0.5"/>      
+    </mask>
+    
+    <g id="imgFg"></g>    
+    <g id="imgBg" mask="url(#m)"></g>
+    
+  </svg>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

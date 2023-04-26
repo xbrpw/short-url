@@ -1,0 +1,23 @@
+%h1 
+	Any Image to CSS converter
+.container
+	.config
+		%label Choose Image:
+		%input#upload{:type=>"file"}
+		%label PixelSize:
+		%input#size{:type=>"number",:value=>"1"}
+		%label Space:
+		%input#space{:type=>"number",:value=>"0"}
+		%label Alpha:
+		%select#alpha
+			%option{:value=>"yes"} Yes
+			%option{:value=>"no"} No
+		%label Pixel Roundess:
+		%input#roundness{:type=>"number",:value=>"0"} 
+		.actions
+			%button#convert Convert
+		.css
+			%textarea
+	.results
+		.pixelsCont
+			.pixels

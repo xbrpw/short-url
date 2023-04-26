@@ -1,0 +1,91 @@
+*, *::before, *::after  {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #303033; 
+    font-family: "Poppins", sans-serif;
+}
+
+.conteiner {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 5px;
+    padding: 0 1rem 0 1rem;
+} 
+
+.conteiner > button {
+    font-size: 3rem;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    outline: none;
+    color: white; 
+    font-weight: 900;
+    background-image: linear-gradient(to top, #242424 0%, #303030 100%);
+    border-radius: 10px;
+    
+}
+
+.conteiner > button:hover {
+    box-shadow: inset 0 20px 4px -21px rgba(255,255,255,0.4), 0 19px 13px 0 rgba(0,0,0,0.3);
+    color: white; 
+    text-shadow: 5px 5px 10px #015c8b; 
+    background-image: linear-gradient(to top, #242424 0%, #303030 100%);
+    border: 4px solid rgb(0, 0, 0);
+    
+}
+
+.conteiner > button::before{
+    background-image: radial-gradient(circle 30px at center, #ebf7ff 0%, #b3e1ff 47%, #b3e1ff 100%);
+    border: 4px solid rgb(0, 0, 0);
+    
+}
+
+
+.operationbtn {
+    background-color: #f27a23;
+}
+
+.deletebtn {
+    background-color: rgb(245, 94, 94);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(10, 172, 184);
+    background-image: linear-gradient(to top, rgb(10, 172, 184) 0%, rgb(6, 102, 109) 100%);
+    background-image: linear-gradient(to top, #000000 0%, #110f0f 50%, #181717 100%);
+    border: 4px solid rgb(17, 17, 17);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: rgb(255, 255, 255); 
+    text-shadow: 5px 5px 10px #015c8b; 
+}
+
+.output .previous-operand {
+    font-size: 1rem;
+margin-left: 5px;
+}
+
+.output .current-operand {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 5px;
+    padding: 5px;
+}

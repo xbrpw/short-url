@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+<meta charset="UTF-8">
+<title>Any Image To CSS</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="description" content="Any Image To CSS">
+<meta property="og:title" content="Any Image To CSS">
+<meta property="og:description" content="Any Image To CSS" ">
+<meta property="og:url" content="">
+<meta property="og:image" content="https://xbrpw.github.io/og-image.webp"> 
+<link rel="icon" href="https://xbrpw.github.io/favicon.svg" type="image/x-icon">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<style>
+  
+  </style>
+</head>
+<body>
+
+  <div id="TabName-Tab">
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button w3-hide" onclick="openTab('Home')" >Home</button> 
+  <button class="w3-bar-item w3-button w3-hide" onclick="openTab('Settings')"></button>
+  <button class="w3-bar-item w3-button w3-hide" onclick="openTab('Resultado')">Resultado</button>
+</div>
+
+<div id="Home" class="w3-container Tab">
+<!-- portada -->
+<div class='container w3-center'>
+  <h1><small>Lleva tus fotos al siguiente nivel con </small><b>Anymagecss Converter</b></h1><br><br><br>
+  <button onclick="openTab('Settings')">Empezar</button><br>
+  <p><small>Al continuar, aceptas nuestras <a href="#CondicionesDeServicio" target="_blank" title="Condiciones de Servicio">Condiciones de Servicio</a> y acuse de recibido de <a href="#PoliticaDePrivacidad" target="_blank" title="Politica de Privacidad">Politica de Privacidad</a></small></p>
+</div>
+<!-- /portada -->
+</div>
+
+<div id="Settings" class="w3-container Tab" style="display:none">
+<!-- partial:index.partial.html -->
+<div class='container'>
+  <p style="font-size: x-large;">
+    Any Image to CSS converter
+  </p>
+  <div class='config'>
+    <label>Choose Image:</label>
+    <input id='upload' type='file'>
+    <label>PixelSize:</label>
+    <input id='size' type='number' value='1'>
+    <label>Space:</label>
+    <input id='space' type='number' value='0'>
+    <label>Alpha:</label>
+    <select id='alpha'>
+      <option value='yes'>Yes</option>
+      <option value='no'>No</option>
+    </select>
+    <label>Pixel Roundess:</label>
+    <input id='roundness' type='number' value='0'>
+    <div class='actions'>
+      <button id='convert' onclick="openTab('Resultado')">Convert</button>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+</div>
+
+<div id="Resultado" class="w3-container Tab" style="display:none">
+  <div class='results'>
+    <div class='pixelsCont'>
+      <div class='pixels'></div>
+    </div>
+  </div>
+  <div class='css'>
+    <textarea></textarea>
+  </div>
+  <button onclick="openTab('Settings')">Nuevo</button>
+</div>
+
+<script>
+function openTab(TabName) {
+  var i;
+  var x = document.getElementsByClassName("Tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(TabName).style.display = "block";  
+}
+</script>
+</div>
+
+
+<script src='./jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

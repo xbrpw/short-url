@@ -4,13 +4,8 @@ self.addEventListener('install', e => {
       {
         return cache.addAll([
           './index.html',
-          './og-image.webp',
-          './favicon-super-calculadora-con-almacenamiento.svg',
-          './jquery_2.1.3_jquery.min.js',
-          './favicon.svg',
-          './lighthouse-100.png',
-          './lighthouse-al-100.png',
-          './calculadora-con-almacenamiento.png'
+          './og-image.webp',          
+          './favicon.svg'
         ])
       })
   );

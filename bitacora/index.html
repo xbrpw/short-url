@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bitacora</title>  
+  <link rel="manifest" href="./manifest.json">
+  <link rel="canonical" href="https://www.xbr.pw/bitacora">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+  <meta name="description" content="bitacora-how-to-snippes.glitch.me">
+  <meta property="og:title" content="bitacora-how-to-snippes.glitch.me">
+  <meta property="og:description" content="bitacora-how-to-snippes.glitch.me">
+  <meta property="og:url" content="https://www.xbr.pw/bitacora">
+  <meta property="og:image" content="./og-image.webp"> 
+  <meta name="theme-color" content="#015c8b">  
+  
+  <script>    
+    if(location.protocol == 'http:') location.protocol = 'https:';
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('Service Worker registered', reg))
+        .catch(err => console.error('Service Worker **not** registered', err));
+    }
+    else {
+      console.warn('Service Worker not supported in this browser');
+    }    
+  </script>
+
+  <style>
+    html,
+    html * {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  
+    body {
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
+      background-color: var(--panel-bg);
+    }
+  
+    iframe {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      text-align: center;
+      /*background: #fff;*/
+    }
+  
+    main {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      text-align: center;
+      /*background: #fff;*/
+    }
+  
+    @media only screen and (max-width: 360px) {
+      html {
+        font-size: 14px;
+      }
+    }
+  
+    @media only screen and (min-width: 600px) {
+      body {
+        /*background-color: #fff;*/
+        padding: 4vh 2rem;
+      }
+  
+      main {
+        max-width: 380px;
+        border: 1px solid var(--panel-bg);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+    }
+  </style>
+  <body>
+  <main>
+    <iframe src="https://bitacora-how-to-snippes.glitch.me/" name="Hi" height="780px" width="100% " title="Hi, estos son algunos de mis proyectos en la creación de apps" allowfullscreen=" " frameborder="0 " style="border:0;"></iframe>
+  </main>
+  </body>

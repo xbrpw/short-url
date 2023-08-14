@@ -1,7 +1,7 @@
 {
-    "name": "Calculeitor",
-    "short_name": "Calculeitor",
-    "description": "Super calculeitor. Con registro de memoria. Para que no se te pase la operaión. Save Calculator",
+    "name": "Bitacora",
+    "short_name": "Bitacora",
+    "description": "",
     "icons": [
       {
         "sizes": "192x192",

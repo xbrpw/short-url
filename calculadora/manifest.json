@@ -11,7 +11,8 @@
       {
         "sizes": "512x512",
         "type": "image/png",
-        "src": "./favicon.svg"
+        "src": "./favicon.svg",
+        "purpose": "any maskable"
       }
     ],
     "display": "standalone",

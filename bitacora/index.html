@@ -1,84 +1,306 @@
 <!DOCTYPE html>
-<html lang="es-MX" >
-<head>
-  <meta charset="UTF-8">
-  <title>Bitacora</title>  
-  <link rel="manifest" href="./manifest.json">
-  <link rel="canonical" href="https://www.xbr.pw/bitacora">
-  <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-  <meta name="description" content="bitacora-how-to-snippes.glitch.me">
-  <meta property="og:title" content="bitacora-how-to-snippes.glitch.me">
-  <meta property="og:description" content="bitacora-how-to-snippes.glitch.me">
-  <meta property="og:url" content="https://www.xbr.pw/bitacora">
-  <meta property="og:image" content="./og-image.webp"> 
-  <meta name="theme-color" content="#015c8b">  
-  
-  <script>    
-    if(location.protocol == 'http:') location.protocol = 'https:';
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => console.log('Service Worker registered', reg))
-        .catch(err => console.error('Service Worker **not** registered', err));
-    }
-    else {
-      console.warn('Service Worker not supported in this browser');
-    }    
-  </script>
+<html lang="es-MX" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-js">
 
-  <style>
-    html,
-    html * {
-      touch-action: manipulation;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-  
-    body {
-      font-size: 16px;
-      padding: 0;
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
-      background-color: var(--panel-bg);
-    }
-  
-    iframe {
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      text-align: center;
-      /*background: #fff;*/
-    }
-  
-    main {
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      text-align: center;
-      /*background: #fff;*/
-    }
-  
-    @media only screen and (max-width: 360px) {
-      html {
-        font-size: 14px;
-      }
-    }
-  
-    @media only screen and (min-width: 600px) {
-      body {
-        /*background-color: #fff;*/
-        padding: 4vh 2rem;
-      }
-  
-      main {
-        max-width: 380px;
-        border: 1px solid var(--panel-bg);
-        border-radius: 1.5rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-      }
-    }
-  </style>
-  <body>
-  <main>
-    <iframe src="https://bitacora-how-to-snippes.glitch.me/" name="Hi" height="780px" width="100% " title="Hi, estos son algunos de mis proyectos en la creación de apps" allowfullscreen=" " frameborder="0 " style="border:0;"></iframe>
-  </main>
-  </body>
+<head itemscope itemtype="https://schema.org/WebSite">
+	<meta charset="UTF-8">
+	<title>Bitacora</title>
+	<link rel="manifest" href="./manifest.json">
+	<link rel="canonical" href="https://www.xbr.pw/bitacora">
+	<link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+	<meta name="description" content="bitacora-how-to-snippes.glitch.me">
+	<meta property="og:title" content="bitacora-how-to-snippes.glitch.me">
+	<meta property="og:description" content="bitacora-how-to-snippes.glitch.me">
+	<meta property="og:url" content="https://www.xbr.pw/bitacora">
+	<meta property="og:image" content="./og-image.webp">
+	<meta name="theme-color" content="#015c8b">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://www.google-analytics.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" as="font" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" crossorigin>
+
+	<!-- Splash Screen for iPhone X (1125px x 2436px) <link rel="https://api.w.org/" href="wp-json/" /> -->
+	<link rel="apple-touch-startup-image" type="image/png" href="https://luisangelmaciel.github.io/img/apple-touch-startup-image.png">
+	<link rel="apple-touch-icon-precomposed" type="image/png" sizes="180x180" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" type="image/png" sizes="1125x2436" href="https://luisangelmaciel.github.io/icon/apple-touch-startup-image.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://luisangelmaciel.github.io/icon/apple-touch-icon-180x180.png">
+	<link rel="shortcut icon" type="image/x-icon" sizes="192x192" href="https://luisangelmaciel.github.io/favicon.png">
+	<link rel="icon" type="image/x-icon" sizes="192x192" href="https://luisangelmaciel.github.io/favicon.sgv" id="favicon" />
+	<link rel="icon" type="image/png" sizes="114x114" href="https://luisangelmaciel.github.io/icon/maskable_icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://luisangelmaciel.github.io/icon/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://luisangelmaciel.github.io/icon/icon-32x32.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="https://luisangelmaciel.github.io/icon/icon64x64.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://luisangelmaciel.github.io/icon/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="https://luisangelmaciel.github.io/icon/icon128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="https://luisangelmaciel.github.io/icon/icon144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="https://luisangelmaciel.github.io/icon/icon152x152.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="https://luisangelmaciel.github.io/icon/icon512x512.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://luisangelmaciel.github.io/icon/icon192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="https://luisangelmaciel.github.io/icon/icon256x256.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="application-name" content="lamp.martech!">
+	<meta name="theme-color" content="white" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="@luisangelmaciel">
+	<meta name="msapplication-navbutton-color" content="#017dbb">
+
+	<!-- color="#017dbb Azul Goku" -->
+	<meta name="msapplication-TileImage" content="https://luisangelmaciel.github.io/ico/msapplication-TileImage.jpg">
+	<meta name="msapplication-TileColor" content="white">
+	<meta name="msapplication-starturl" content="https://luisangelmaciel.github.io/index.html">
+	<meta name="msapplication-allowDomainMetaTags" content="true">
+	<meta name="msapplication-config" content="https://luisangelmaciel.github.io" />
+	<meta name="msapplication-navbutton-color" content="#017dbb">
+	<meta name="msapplication-square70x70logo" content="https://luisangelmaciel.github.io/ico/msapplication-square70x70logo.png" />
+	<meta name="msapplication-square150x150logo" content="https://luisangelmaciel.github.io/ico/msapplication-square150x150logo.png" />
+	<meta name="msapplication-wide310x150logo" content="https://luisangelmaciel.github.io/ico/msapplication-wide310x150logo.png" />
+	<meta name="msapplication-square310x310logo" content="https://luisangelmaciel.github.io/ico/msapplication-square310x310logo" />
+	<meta name="msapplication-badge" content="frequency=1440; polling-uri=https://luisangelmaciel.github.io/polling.xml">
+	<meta name="msapplication-notification" content="frequency=1440;polling-uri=https://luisangelmaciel.github.io/polling.xml; cycle=1" />
+	<meta name="msapplication-tooltip" content="LuisAngelMaciel Love 's Professional Web Development Blog">
+	<meta name="msapplication-task" content="name=Tags;action-uri=#!tags;icon-uri=./favicon.png">
+	<meta name="msapplication-task" content="name=Calendar;action-uri=#!calendar;icon-uri=./favicon.png">
+	<meta name="msapplication-task" content="name=Libraries;action-uri=#!libraries;icon-uri=./favicon.png">
+	<meta name="msapplication-task" content="name=Presentations;action-uri=#!presentations;icon-uri=./favicon.png">
+	<!-- Link, Facebook and Twitter integration -->
+	<meta name="generator" content="@LuisAngelMaciel">
+	<meta name="rights" content="®@LuisAngelMaciel">
+	<meta name="description" content="Mercadologo, Comercializador, diseñador y desarrollador web.  Entusiasta en temas de emprendimiento, sexualidad, viajes, arte drag, investigación de mercados, interfaz y experiencias de usuario.
+  ¿Qué quieres construir hoy? Un Sitio de negocios, una tienda de comercio electrónico, un portafolio, blog">
+	<meta name="keywords" content="portafolio, cv, desarrollador y mercadologo, curriculum vitae, luis angel maciel padilla, Desarrollador y diseñador web, diseñador de producto, Comercializador">
+
+	<meta property="og:locale" content="es_MX">
+	<meta property="og:type" content="website">
+	<meta property="og:type" content="club" />
+	<meta property="og:title" content=" Luis Angel Maciel">
+	<meta property='og:description ' content='Entusiasta en temas de emprendimiento, sexualidad, viajes, arte drag, investigación de mercados, interfaz y experiencias de usuario. Mercadologo, diseñador y desarrollador web. ¿Qué quieres construir hoy?
+      Un Sitio de negocios, una tienda de comercio electrónico, un portafolio, blog '>
+	<meta property="og:url" content="https://luisangelmaciel.github.io">
+	<meta property="og:site_name" content="Luis Angel Maciel Padilla">
+	<meta property="og:image" content="https://luisangelmaciel.github.io/img/og-image.png" /> <!--  size="1080x400" -->
+	<meta property="og:image:secure_url" content="https://luisangelmaciel.github.io/img/og-imageSecureUrl.png" />
+	<meta property="og:image:width" content="1080" />
+	<meta property="og:image:height" content="400" />
+	<meta property="og:image:alt" content="Desarrollador y diseñador web, diseñador de producto, Comercializador" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:video" content="https://luisangelmaciel.github.io/video/og-video.swf" />
+	<meta property="og:video:secure_url" content="https://luisangelmaciel.github.io/video/og-videoSecure.swf" />
+	<meta property="og:video:type" content="website" />
+	<meta property="og:video:width" content="400" />
+	<meta property="og:video:height" content="300" />
+
+	<!-- Twitt card -->
+	<link rel="me" href="https://twitter.com/luisangelmaciel">
+	<meta property="twitter:card" content="summary">
+	<meta property="twitter:site" content="@luisangelmaciel">
+	<meta property="twitter:domain" content="https://www.luisangelmaciel.one">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@luisangelmaciel" />
+	<meta name="twitter:title" content="@luisangelmaciel" />
+	<meta name="twitter:image" content="https://luisangelmaciel.github.io/img/twitterimage.png" />
+	<meta name='twitter:description ' content=' Desarrollador y diseñador web, diseñador de producto, Comercializador '>
+	<meta name="twitter:url" content="https://twitter.com/luisangelmaciel">
+	<meta name="twitter:widgets:autoload" content="off">
+	<meta name="twitter:widgets:border-color" content="#ff00ff">
+	<meta name="twitter:widgets:theme" content="dark">
+	<meta name="twitter:dnt" content="on">
+	<meta name="twitter:label1" content="Desarrollador y diseñador web, diseñador de producto, Comercializador">
+	<meta name="twitter:data1" content="Trabajemos juntos.">
+	<!-- si es que es artycle y estuvo publicado previamente, si no pase hasta name="twitter:card" 
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Duplika"> article basic fin property
+    <meta property="article:publisher" content="">
+    <meta property="article:author" content="">
+    <meta property="article:section" content="Marketing">
+    <meta property="og:updated_time" content="2021-05-11T09:47:56-03:00">
+    <meta property="fb:app_id" content=""> article advaned fin property
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@luisangelmaciel" />
+    <meta name="twitter:title" content="Templete HTML5 hiHello.monster">
+    <meta name="twitter:description" content="Templete HTML5 hiHello.monster con un 100% Score en lighthouse, desarrollado por @luisangelmaciel. Todas las hacks incluidos metas y el manifest para WPA">
+    <meta name="twitter:site" content="@hiHello_monster">
+    <meta name="twitter:creator" content="@hiHello_monster">-->
+
+	<!-- <script src="https://luisangelmaciel.github.io/js/w3.js"async ></script> así se usa-->
+
+	<meta name="twitter:player" content="https://luisangelmaciel.github.io/video/twitter_player.webp" />
+	<meta name="twitter:player:width" content="480" />
+	<meta name="twitter:player:height" content="480" />
+	<meta name="twitter:player:stream" content="https://luisangelmaciel.github.io/video/twitter_player_stream.webm" />
+	<meta name="twitter:player:stream:content_type" content="video/mp4" />
+
+	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="@LuisAngelMaciel">
+	<meta name="googlebot" content="max-snippet:[0],max-image-preview:[standard]" />
+	<meta name="googlebot" content="index, follow">
+	<meta name="googlebot-video" content="index" />
+	<meta name="googlebot-image" content="index" />
+	<meta name="googlebot-news" content="index, follow">
+	<meta name="google" content="nositelinkssearchbox" /> 
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KDD26NF');
+	</script>
+	<!-- End Google Tag Manager * Pntst -->
+	<meta name="p:domain_verify" content="1ccb70a44d7509dd6e6cad4538b2b9e2" />
+	<!-- End Pntst -->
+	<!-- <script src="https://luisangelmaciel.github.io/js/fontawesome-1d9115e34a.js"></script> -->
+	<!-- Catálogo de iconos Fontawesome https://fontawesome.com/v5.15/icons?d=gallery&p=2&s=regular&m=free    -->
+	<!-- <link rel="stylesheet" href="https://luisangelmaciel.github.io/css/style.css" media="all">-->
+
+	<script src="https://luisangelmaciel.github.io/js/lazysizes.min.js" async></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js" async></script>
+	<!-- <script src="https://luisangelmaciel.github.io/js/compressed.js"></script> <script src="https://luisangelmaciel.github.io/preloader.js"></script> -->
+
+	<script>
+		if (location.protocol == 'http:') location.protocol = 'https:';
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./sw.js')
+				.then(reg => console.log('Service Worker registered', reg))
+				.catch(err => console.error('Service Worker **not** registered', err));
+		} else {
+			console.warn('Service Worker not supported in this browser');
+		}
+	</script>
+
+	<style>
+		html,
+		html * {
+			touch-action: manipulation;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+
+		body {
+			font-size: 16px;
+			padding: 0;
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
+			background-color: var(--panel-bg);
+		}
+
+		iframe {
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			text-align: center;
+			/*background: #fff;*/
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			text-align: center;
+			/*background: #fff;*/
+		}
+
+		@media only screen and (max-width: 360px) {
+			html {
+				font-size: 14px;
+			}
+		}
+
+		@media only screen and (min-width: 600px) {
+			body {
+				/*background-color: #fff;*/
+				padding: 4vh 2rem;
+			}
+
+			main {
+				max-width: 380px;
+				border: 1px solid var(--panel-bg);
+				border-radius: 1.5rem;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+			}
+		}
+	</style>
+	<style media="screen">
+		/* 
+  ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮
+  ┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃
+  ┃┃╭╮╭┳┳━━┳━━┳━╮╭━━┳━━┫┃╱╭╮╭┳━━┳━━┳┳━━┫┃
+  ┃┃┃┃┃┣┫━━┫╭╮┃╭╮┫╭╮┃┃━┫┃╱┃╰╯┃╭╮┃╭━╋┫┃━┫┃
+  ┃╰┫╰╯┃┣━━┃╭╮┃┃┃┃╰╯┃┃━┫╰┳┫┃┃┃╭╮┃╰━┫┃┃━┫╰╮
+  ╰━┻━━┻┻━━┻╯╰┻╯╰┻━╮┣━━┻━┻┻┻┻┻╯╰┻━━┻┻━━┻━╯
+  ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+  ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯ code & travel */
+		body {
+			color: black;
+			background-color: rgb(255, 255, 255);
+		}
+
+		body.space {
+			color: rgb(0, 0, 0);
+			background-color: rgba(255, 255, 255, 0.637);
+		}
+
+		body.dark {
+			color: white;
+			background-color: rgba(0, 0, 0, 0.651);
+		}
+
+		body.dark.space {
+			color: white;
+			background-color: rgba(0, 0, 0, 0.651);
+		}
+	</style>
+
+<body>
+
+	<main>
+		<p id="theme-toggle">Dark Mode</p>
+		<iframe src="https://bitacora-how-to-snippes.glitch.me/" name="Hi" height="780px" width="100% " title="Hi, estos son algunos de mis proyectos en la creación de apps" allowfullscreen=" " frameborder="0 " style="border:0;"></iframe>
+	</main>
+	<script>
+		var darkMode = false;
+		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			darkMode = true;
+		}
+		if (localStorage.getItem('theme') === 'dark') {
+			darkMode = true;
+		} else if (localStorage.getItem('theme') === 'light') {
+			darkMode = false;
+		}
+		if (darkMode) {
+			document.body.classList.toggle('dark');
+		}
+		document.addEventListener('DOMContentLoaded', () => {
+			document.getElementById('theme-toggle').addEventListener('click', () => {
+				document.body.classList.toggle('dark');
+				localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+			});
+		});
+	</script>
+</body>

@@ -4,14 +4,14 @@
     "description": "Super calculeitor. Con registro de memoria. Para que no se te pase la operaión. Save Calculator",
     "icons": [
       {
-        "sizes": "192x192",
+        "sizes": "180x180",
         "type": "image/png",
-        "src": "/favicon.svg"
+        "src": "./favicon-180x180.svg"
       },
       {
         "sizes": "512x512",
         "type": "image/png",
-        "src": "./favicon.svg"
+        "src": "./favicon-512x512.svg"
       }
     ],
     "display": "standalone",

@@ -1,5 +1,5 @@
 // creating my image link
-// <script src="firma-abajo-derecha.js"></script> 
+// <script src="https://www.xbr.pw/assets/css/fav/firma-abajo-derecha.html"></script> 
 
 var link = document.createElement("a");
 document.body.appendChild(link);

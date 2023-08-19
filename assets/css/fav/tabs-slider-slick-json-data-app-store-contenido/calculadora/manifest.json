@@ -1,0 +1,21 @@
+{
+    "name": "Calculeitor",
+    "short_name": "Calculeitor",
+    "description": "Super calculeitor. Con registro de memoria. Para que no se te pase la operaión. Save Calculator",
+    "icons": [
+      {
+        "sizes": "180x180",
+        "type": "image/png",
+        "src": "./favicon-180x180.svg"
+      },
+      {
+        "sizes": "512x512",
+        "type": "image/png",
+        "src": "./favicon-512x512.svg"
+      }
+    ],
+    "display": "standalone",
+    "background_color": "#015c8b;",
+    "theme_color": "#015c8b;",
+    "start_url": "./index.html"
+  }

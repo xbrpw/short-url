@@ -2,18 +2,78 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Dark Mode: Combining Everything</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Dark Mode: Combining Everything</title>
+<style>
+  body {
+  --text-color: #222;
+  --bkg-color: #fff;
+}
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #121212;
+}
+
+body.dark-theme.space {
+  --text-color: #a32424;
+  --bkg-color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --text-color: #eee;
+    --bkg-color: #121212;
+  }
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+  }
+  body.light-theme.space {
+    --text-color: #801414;
+    --bkg-color: #1a9e16;
+  }
+}
+
+body {
+  background: var(--bkg-color);
+  color: var(--text-color);
+}
+</style>
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
+
 <button class="btn-toggle">Toggle Dark-Mode</button>
 <h1>Hey there! This is just a title</h2>
   <p>I am just a boring text, existing here solely for the purpose of this demo</p>
   <p>And I am just another one like the one above me, because two is better than having only one</p>
-<!-- partial -->
-  <script  src="./script.js"></script>
+
+  <script>
+    const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+  document.body.classList.toggle("dark-theme");
+} else if (currentTheme == "light") {
+  document.body.classList.toggle("light-theme");
+}
+
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+  </script>
 
 </body>
 </html>
